@@ -12,6 +12,8 @@ The Diachronic Spanish Sonnet Corpus (DISCO) currently contains 19th-century son
      * [Why Sonnets?](#why-sonnets)
      * [Corpus Design](#corpus-design)
      * [Encoding](#encoding)
+       * [TEI](#tei)
+       * [Plain-text](#plain-text)
      * [Metadata](#metadata)
        * [Authors' biographical metadata](#authors-biographical-metadata)
        * [VIAF IDs](#viaf-ids)
@@ -56,22 +58,53 @@ The corpus is based on [texts](http://www.cervantesvirtual.com/obra/sonetos-del-
 
 ## Encoding
 
-The corpus is encoded in two different ways. First, all texts for each author have been collected in a single file (**per-author** encoding). Second, each sonnet has been encoded in a single file (**per-poem** encoding). Depending on the purpose of the research, one format or the other will be more useful. For example, for stylometric methods or to compare the works of the same author in different genres, the researcher would prefer to work with the per-author files; but to analyse features in each poem, they would prefer the per-poem files. The files' structure differs very little across both flavours: the title and identification of the digital work are different, and in the per-author files there is an *lg type="sonnet"* element absent in the per-poem files. The rest of the elements and structure are shared.
+The corpus is offfered as TEI-encoded files (*tei* directory) and as plain-text files (*txt* directory). In either case, poems are grouped by author (**per-author** mode), besides being represented as a single file per poem (**per-poem** mode). In the plain-text version, in order to group poems per author, a directory for each author was created, which contains each of that author's poems as single files. In the TEI version, the way to group an author's poems was to create a single TEI file for the author, containing all of that author's poems in the corpus.
+
+Depending on the purpose of the research, the *per-author* or the *per-poem* mode will be more useful. For example, for stylometric methods or to compare the works of the same author in different genres, the researcher would prefer to work with the per-author files; but to analyse features in each poem, they would prefer the per-poem files. 
+
+### TEI
+
+The files' structure differs very little between the *per-author* and the *per-poem* modes: the title and identification of the digital work are different, and in the per-author files there is an *lg type="sonnet"* element absent in the per-poem files. The rest of the elements and structure are shared.
 
 Each poem is identified using ID-strings created by the project (since single sonnets are not the focus of identification projects such as VIAF). Inside a sonnet, the following information has been encoded explicitly: 
 * Headings
-* Number and type (*cuarteto, terceto*) of the stanza
+* Stanza number and type (*cuarteto, terceto*)
 * Line numbers
 
 The **order of sonnets** in the source edition has been respected in the per-author files, and can be recovered from the numeric part of file-ids in the per-poem files. 
 
 In the source, sometimes there were **sonnet sequences**, i.e. when an author has written a series of sonnets about the same topic, under the same overall heading and with a separate heading for each sonnet in the sequence. In the per-author files, sequences have been encoded within an *lg="sonnet-sequence"* element comprising all sonnets in the sequence. In the per-poem files, sonnet-sequences can be recovered from the last numeric part of the file-ids.
 
+More information about the metadata encoded in our TEI files is [below](#metadata).
+
+### Plain-text
+
+A plain-text version is offered since some of our users are more comfortable with this format than with TEI. 
+
+Author metadata are available in an external author-metadata table, and partially encoded in the file names. Poem titles are encoded in the file names. 
+
+Here are some examples of the way file names encode metadata:
+
+```
+Template: LastName,_FirstName__AuthorID~~Title's_first_50_characters__PoemID.txt
+Example: Acuña,_Rosario_de__182n~~Soneto_escrito_para_ser_grabado_en_la_tumba_de_mi___0622.txt
+```
+For sonnets within a sonnet-sequence, an additional ID indicates the poem's position in the sequence:
+
+```
+Template: LastName,_FirstName__AuthorID~~SequenceTitle's_first_50_characters__PoemID__PoemTitle__IDInSequence.txt
+Example: Querolt,_Vicente_Wenceslao__263n~~La_fiesta_de_Venus__0853__I__01.txt
+```
+
+As the examples show, the \~\~ delimiter separates author from poem information. Double underscores separate metadata types (e.g. author name from its ID). 
+
 ## Metadata
 
-DISCO has collected several metadata about the texts and authors and made it explicit and accessible, using technologies like TEI and linked open data. The HTML sources contained relevant information for identifying author metadata, within a non-standardized text-string, which mentioned the author's place and year of birth and death, their profession etc.; the level of detail varied across authors. First, the project collected these data and made it explicit in the TEI structure. Second, missing information was inferred. For example, in some cases the original sources mentioned a city of birth, in other cases just the country. Countries and continents were added for all authors. Finally, VIAF IDs for authors were added (details below)
+DISCO has collected several metadata about the texts and authors and made it explicit and accessible, using technologies like TEI and linked open data. The HTML sources contained relevant information for identifying author metadata, within a non-standardized text-string, which mentioned the author's place and year of birth and death, their profession etc.; the level of detail varied across authors. First, the project collected these data and identified them explicitly. Second, missing information was inferred. For example, in some cases the original sources mentioned a city of birth, in other cases just the country. Countries and continents were added for all authors. Finally, VIAF IDs for authors were added (details below)
 
 **These metadata make it now possible for researchers to create their own subcorpora, for example *female authors from Cuba that were born between certain years in the 19th Century*.**
+
+In the **TEI** version of the corpus, the metadata was encoded in the TEI structure. In the **plain-text** version, an standoff [table](https://github.com/pruizf/disco/tree/master/txt/19th/author_metadata.tsv) was used for author-metadata. The file names encode authors' names and IDs, besides poems' titles and IDs (see [above](#plain-text)). 
 
 ### Authors' biographical metadata
 
