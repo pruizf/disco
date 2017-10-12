@@ -81,7 +81,7 @@ More information about the metadata encoded in our TEI files is [below](#metadat
 
 A plain-text version is offered since some of our users are more comfortable with this format than with TEI. 
 
-Author metadata are available in an external author-metadata table, and partially encoded in the file names. Poem titles are encoded in the file names. 
+Author metadata are available in an external author-metadata table (see [below](#metadata)), and partially encoded in the file names. Poem titles are encoded in the file names. 
 
 Here are some examples of the way file names encode metadata:
 
@@ -104,7 +104,7 @@ DISCO has collected several metadata about the texts and authors and made it exp
 
 **These metadata make it now possible for researchers to create their own subcorpora, for example *female authors from Cuba that were born between certain years in the 19th Century*.**
 
-In the **TEI** version of the corpus, the metadata was encoded in the TEI structure. In the **plain-text** version, an standoff [table](https://github.com/pruizf/disco/tree/master/txt/19th/author_metadata.tsv) was used for author-metadata. The file names encode authors' names and IDs, besides poems' titles and IDs (see [above](#plain-text)). 
+In the **TEI** version of the corpus, the metadata was encoded in the TEI structure. In the **plain-text** version, a standoff [table](https://github.com/pruizf/disco/tree/master/txt/19th/author_metadata.tsv) was used for author-metadata. The table's fields are explained [here](https://github.com/pruizf/disco/blob/master/txt/metadata_fields.md). The file names encode authors' names and IDs, besides poems' titles and IDs (see [above](#plain-text)). 
 
 ### Authors' biographical metadata
 
