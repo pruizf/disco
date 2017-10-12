@@ -22,7 +22,7 @@ The Diachronic Spanish Sonnet Corpus (DISCO) currently contains 19th-century son
    * [Publication and Preservation](#publication-and-preservation)
    * [Licence and Citation](#licence-and-citation)
    * [Future Steps](#future-steps)
-   * [Citations](#citations)
+   * [References](#references)
 <br><br>
 
 
@@ -81,22 +81,8 @@ More information about the metadata encoded in our TEI files is [below](#metadat
 
 A plain-text version is offered since some of our users are more comfortable with this format than with TEI. 
 
-Author metadata are available in an external author-metadata table (see [below](#metadata)), and partially encoded in the file names. Poem titles are encoded in the file names. 
+See [below](#metadata-in-the-plain-text-version) for details how author- and poem-metadata were made available in the plain-text version. 
 
-Here are some examples of the way file names encode metadata:
-
-```
-Template: LastName,_FirstName__AuthorID~~Title's_first_50_characters__PoemID.txt
-Example: Acuña,_Rosario_de__182n~~Soneto_escrito_para_ser_grabado_en_la_tumba_de_mi___0622.txt
-```
-For sonnets within a sonnet-sequence, an additional ID indicates the poem's position in the sequence:
-
-```
-Template: LastName,_FirstName__AuthorID~~SequenceTitle's_first_50_characters__PoemID__PoemTitle__IDInSequence.txt
-Example: Querolt,_Vicente_Wenceslao__263n~~La_fiesta_de_Venus__0853__I__01.txt
-```
-
-As the examples show, the \~\~ delimiter separates author from poem information. Double underscores separate metadata types (e.g. author name from its ID). 
 
 ## Metadata
 
@@ -104,11 +90,11 @@ DISCO has collected several metadata about the texts and authors and made it exp
 
 **These metadata make it now possible for researchers to create their own subcorpora, for example *female authors from Cuba that were born between certain years in the 19th Century*.**
 
-In the **TEI** version of the corpus, the metadata was encoded in the TEI structure. In the **plain-text** version, a standoff [table](https://github.com/pruizf/disco/blob/master/txt/author_metadata.tsv) was used for author-metadata. The table's fields are explained [here](https://github.com/pruizf/disco/blob/master/txt/metadata_fields.md). The file names encode authors' names and IDs, besides poems' titles and IDs (see [above](#plain-text)). 
+In the **TEI** version of the corpus, the metadata was encoded in the TEI structure, as explain in following. For details on how metadata were made available in the **plain-text** version, see further [below](#metadata-in-the-plain-text-version). 
 
 ### Authors' biographical metadata
 
-Biographical information about the author (whether it was found in the source or inferred) is now made explicit through a *person* element that bears a *role="author"* attribute. Inside this element, the following information can be found:
+In TEI, biographical information about the author (whether it was found in the source or inferred) is now made explicit through a *person* element that bears a *role="author"* attribute. Inside this element, the following information can be found:
 * gender
 * name
 * year, century, place, country and continent of birth
@@ -127,11 +113,31 @@ The name of the author was searched programmatically against [VIAF's REST API](h
 
 ### Other metadata
 
-Additional information, unavailable in the sources, was encoded in the TEIheader:
+The TEIheader also encodes additional information, unavailable in the sources:
 * number of sonnets containend in the file (in the per-author files this is the number of sonnets for the author in the corpus)
 * number of lines and tokens
 * reference to the source
 * language of the text
+
+### Metadata in the plain text version
+
+In the plain-text version, an external [table](https://github.com/pruizf/disco/blob/master/txt/author_metadata.tsv) can be used to access author-metadata (dates, origin, etc.). The table's fields are explained [here](https://github.com/pruizf/disco/blob/master/txt/metadata_fields.md). Poems' titles and IDs are encoded in the file names. The file names also encode the most basic author information: their name and author-ID in the corpus. The metadata table matches those authors' names and IDs, so that the file names can be crossed with the table. 
+
+Here are some examples of the way file names encode metadata:
+
+```
+Template: LastName,_FirstName__AuthorID~~Title's_first_50_characters__PoemID.txt
+Example: Acuña,_Rosario_de__182n~~Soneto_escrito_para_ser_grabado_en_la_tumba_de_mi___0622.txt
+```
+For sonnets within a sonnet-sequence, an additional ID indicates the poem's position in the sequence:
+
+```
+Template: LastName,_FirstName__AuthorID~~SequenceTitle's_first_50_characters__PoemID__PoemTitle__IDInSequence.txt
+Example: Querolt,_Vicente_Wenceslao__263n~~La_fiesta_de_Venus__0853__I__01.txt
+```
+
+As the examples show, the \~\~ delimiter separates author from poem information. Double underscores separate metadata types (e.g. author name from its ID).
+
 
 # Versions
 
