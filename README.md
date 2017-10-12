@@ -18,6 +18,7 @@ The Diachronic Spanish Sonnet Corpus (DISCO) currently contains 19th-century son
        * [Authors' biographical metadata](#authors-biographical-metadata)
        * [VIAF IDs](#viaf-ids)
        * [Other metadata](#other-metadata)
+       * [Metadata in the plain-text version](#metadata-in-the-plain-text-version)
    * [Versions](#versions)
    * [Publication and Preservation](#publication-and-preservation)
    * [Licence and Citation](#licence-and-citation)
@@ -119,7 +120,7 @@ The TEIheader also encodes additional information, unavailable in the sources:
 * reference to the source
 * language of the text
 
-### Metadata in the plain text version
+### Metadata in the plain-text version
 
 In the plain-text version, an external [table](https://github.com/pruizf/disco/blob/master/txt/author_metadata.tsv) can be used to access author-metadata (dates, origin, etc.). The table's fields are explained [here](https://github.com/pruizf/disco/blob/master/txt/metadata_fields.md). Poems' titles and IDs are encoded in the file names. The file names also encode the most basic author information: their name and author-ID in the corpus. The metadata table matches those authors' names and IDs, so that the file names can be crossed with the table. 
 
