@@ -122,7 +122,7 @@ The TEIheader also encodes additional information, unavailable in the sources:
 
 ### Metadata in the plain-text version
 
-In the plain-text version, an external [table](https://github.com/pruizf/disco/blob/master/txt/author_metadata.tsv) can be used to access author-metadata (dates, origin, etc.). The table's fields are explained [here](https://github.com/pruizf/disco/blob/master/txt/metadata_fields.md). Poems' titles and IDs are encoded in the file names. The file names also encode the most basic author information: their name and author-ID in the corpus. The metadata table matches those authors' names and IDs, so that the file names can be crossed with the table. 
+In the plain-text version, an external [table](https://github.com/pruizf/disco/blob/master/author_metadata.tsv) can be used to access author-metadata (dates, origin, etc.). The table's fields are explained [here](https://github.com/pruizf/disco/blob/master/metadata_fields.md). Poems' titles and IDs are encoded in the file names. The file names also encode the most basic author information: their name and author-ID in the corpus. The metadata table matches those authors' names and IDs, so that the file names can be crossed with the table. 
 
 Here are some examples of the way file names encode metadata:
 

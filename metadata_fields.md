@@ -1,4 +1,4 @@
-The fields in the [author-metadata table](https://github.com/pruizf/disco/blob/master/txt/author_metadata.tsv) mean the following:
+The fields in the [author-metadata table](https://github.com/pruizf/disco/blob/master/author_metadata.tsv) mean the following:
 
 | field name | value | comments |
 |---|---|---|
