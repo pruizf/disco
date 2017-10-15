@@ -154,7 +154,7 @@ The corpus has been published as a GitHub repository, which enables other resear
 The corpus is available under: CC-BY licence
 
 
-* Ruiz Fabo, Pablo, Clara Martínez Cantón, and José Calvo Tello. 2017. *Diachronic Spanish Sonnet Corpus* (DISCO). Madrid: UNED. <https://github.com/pruizf/disco>.
+* Ruiz Fabo, Pablo, Clara Martínez Cantón, and José Calvo Tello. 2017. *Diachronic Spanish Sonnet Corpus* (DISCO). Madrid: UNED. <https://github.com/pruizf/disco>. [![DOI](https://zenodo.org/badge/103841064.svg)](https://zenodo.org/badge/latestdoi/103841064)
 
 
 # Future Steps
