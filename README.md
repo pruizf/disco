@@ -1,4 +1,5 @@
 # DISCO: Diachronic Spanish Sonnet Corpus
+[![DOI](https://zenodo.org/badge/103841064.svg)](https://zenodo.org/badge/latestdoi/103841064)
 
 
 *Let's party*
@@ -146,7 +147,7 @@ DISCO published in October 2017 its version 1.0 containing texts from the 19th C
 
 # Publication and Preservation
 
-The corpus has been published as a GitHub repository, which enables other researchers to clone, fork and keep track of changes. The data has been also kept in the Zenodo project, with the DOI: tbd. 
+The corpus has been published as a GitHub repository, which enables other researchers to clone, fork and keep track of changes. The data is also stored in the Zenodo project, with DOI <https://doi.org/10.5281/zenodo.1012568> 
 
 # Licence and Citation
 
