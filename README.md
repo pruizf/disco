@@ -2,7 +2,7 @@
 [![DOI](https://zenodo.org/badge/103841064.svg)](https://zenodo.org/badge/latestdoi/103841064)
 
 
-*Let's party*
+**NOTE: SONNETS FROM THE 18th CENTURY AND GOLDEN AGE, IN TEI+RDFa, AND ANNOTATED WITH METRICS AND ENJAMBMENTS, WILL BE UPLOADED HERE SHORTLY**
 
 
 The Diachronic Spanish Sonnet Corpus (DISCO) currently contains 19th-century sonnets in Spanish in XML-TEI (685 authors, 2677 sonnets) from 21 different countries. It includes well-known authors, such as Bécquer, Delmira Agustini or “Clarín”, but also less canonized authors. Texts and authors are enriched with identifiers and metadata.
