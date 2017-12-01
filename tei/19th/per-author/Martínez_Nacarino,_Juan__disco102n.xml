@@ -1,271 +1,348 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Juan Martínez Nacarino</title>
-        <author>
-          <idno type="viaf" cert="high">63583321</idno>
-          <idno type="#disco" xml:id="disco_102n"/>
-          <name type="short">Martínez Nacarino</name>
-          <name type="full">
-            <name type="first-name">Juan</name>
-            <name type="second-name">Martínez Nacarino</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">8</measure>
-        <measure unit="tokens">745</measure>
-        <measure unit="line">112</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_102n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_102n" role="author" sex="M">
-            <persName>Juan Martínez Nacarino</persName>
-            <birth><placeName type="place">España</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Juan Martínez Nacarino</title>
+            <author corresp="#disco_102n">Juan Martínez Nacarino</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">8</measure>
+            <measure unit="tokens">745</measure>
+            <measure unit="line">112</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_102n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_102n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/63583321"/>
+                  <persName type="short">Martínez Nacarino</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan</forename>
+                     <surname property="foaf:familyName">Martínez Nacarino</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan Martínez Nacarino</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s102n_0343" about="dbpedia:Soneto">
+                        <title property="dc:title">Súplica</title>
+                        <title type="incipit" property="dc:alternative">Yo cifraba, mi Dios, todo mi anhelo</title>
+                     </bibl>
+                     <bibl resource="disco#s102n_0344" about="dbpedia:Soneto">
+                        <title property="dc:title">A mi virgen</title>
+                        <title type="incipit" property="dc:alternative">No me atrae hacia Ti mi hondo quebranto,</title>
+                     </bibl>
+                     <bibl resource="disco#s102n_0345" about="dbpedia:Soneto">
+                        <title property="dc:title">Como tú</title>
+                        <title type="incipit" property="dc:alternative">Juntó nuestras dos almas de tal suerte</title>
+                     </bibl>
+                     <bibl resource="disco#s102n_0346" about="dbpedia:Soneto">
+                        <title property="dc:title">Miserias</title>
+                        <title type="incipit" property="dc:alternative">Yo pienso como tú. Tampoco quiero</title>
+                     </bibl>
+                     <bibl resource="disco#s102n_0347" about="dbpedia:Soneto">
+                        <title property="dc:title">Fe y orgullo</title>
+                        <title type="incipit" property="dc:alternative">Precisamente Porque soy altivo</title>
+                     </bibl>
+                     <bibl resource="disco#s102n_0348" about="dbpedia:Soneto">
+                        <title property="dc:title">La última noche</title>
+                        <title type="incipit" property="dc:alternative">Inmóvil y entre luces y en el suelo,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Juan Martínez Nacarino</head>
-        <p>España. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s102n_0343">
-        <head>Súplica</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Yo cifraba, mi Dios, todo mi anhelo</l>
-          <l n="2">en aquella mujer que fue el bien mío</l>
-          <l n="3">y, muerta ya, mi hogar deshecho y frío</l>
-          <l n="4">sólo es morada de amargura y duelo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">No protesto ¡ay de mí! no me rebelo,</l>
-          <l n="6">ni en medio del dolor blasfemo impío;</l>
-          <l n="7">Tú, sumo Dios, en cuyo amor confío</l>
-          <l n="8">hiciste bien en reintegrarla al cielo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mas, pues la ves y pues me ves, Dios santo,</l>
-          <l n="10">dila que resignado con mi suerte</l>
-          <l n="11">te bendigo y te adoro en mi quebranto.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Que mi dolor inmenso se convierte</l>
-          <l n="13">en inmensa pasión; que la amo tanto</l>
-          <l n="14">que vivo de su amor, pese a la Muerte!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s102n_0344">
-        <head>A mi virgen</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">No me atrae hacia Ti mi hondo quebranto,</l>
-          <l n="2">ni el hallarme tan solo y abatido,</l>
-          <l n="3">que Tú, Virgen del Carmen, siempre has sido</l>
-          <l n="4">mi amor más puro y mi mayor encanto.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Mas si en horas felices te amé tanto,</l>
-          <l n="6">y tu divino amor busqué rendido,</l>
-          <l n="7">ahora que estoy tan triste y dolorido,</l>
-          <l n="8">¡cómo no he de acogerme a tu amor santo!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Y ya que tu hermosura me fascina,</l>
-          <l n="10">consérvame la vista y la memoria</l>
-          <l n="11">para llevar grabada en la retina,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">cuando deje esta vida transitoria,</l>
-          <l n="13">la dulce imagen de tu faz divina,</l>
-          <l n="14">celestial anticipo de la gloria!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s102n_0345">
-        <head>Como tú</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Juntó nuestras dos almas de tal suerte</l>
-          <l n="2">aquel inmenso amor que nos unía</l>
-          <l n="3">que Dios solo entre sí las distinguía:</l>
-          <l n="4">¡así fue nuestra unión de íntima y fuerte!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Pero la Muerte mísera no advierte</l>
-          <l n="6">cuál es el alma tuya y cuál la mía,</l>
-          <l n="7">¡y juntos padecimos la agonía,</l>
-          <l n="8">y de un golpe a los dos mató la Muerte!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Verdad que yo, que te adoraba tanto</l>
-          <l n="10">amortajé después tu cuerpo yerto</l>
-          <l n="11">y te enterré, ay de mí, bañado en llanto!</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Pero para mí el mundo es un desierto</l>
-          <l n="13">y a mí nadie me lleva al Camposanto,</l>
-          <l n="14">¡aunque también estoy, como tú muerto!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet-sequence">
-        <head>Miserias</head>
-        <lg type="sonnet" xml:id="s102n_0346_01">
-          <head>I</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Yo pienso como tú. Tampoco quiero</l>
-            <l n="2">a la hora de la muerte ver visiones</l>
-            <l n="3">que vengan ofreciéndome perdones</l>
-            <l n="4">por el buen parecer, cuando me muero.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Sólo el perdón de Dios busco y espero</l>
-            <l n="6">y el cariño de honrados corazones,</l>
-            <l n="7">que conviertan más tarde en oraciones</l>
-            <l n="8">lo que era afecto fiel o amor sincero.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Que la hora decisiva de la Muerte</l>
-            <l n="10">no es hora de visitas de cumplido,</l>
-            <l n="11">ni de cubrir menguadas apariencias,</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">ni momento de verme, ni de verte,</l>
-            <l n="13">quienes en la injusticia y el olvido</l>
-            <l n="14">aparentan tranquilas sus conciencias.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s102n_0346_02">
-          <head>II</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Pero aquella mujer inimitable,</l>
-            <l n="2">de inteligencia grande y poderosa,</l>
-            <l n="3">justa, noble, pacífica, amorosa,</l>
-            <l n="4">de conciencia cristiana insuperable;</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">mi Madre, en fin, la que encontró execrable</l>
-            <l n="6">la ingratitud y la llamaba odiosa,</l>
-            <l n="7">¡te hizo siempre justicia, y orgullosa,</l>
-            <l n="8">te quiso con ternura incomparable!</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Yo, ante esta ejecutoria, inmaculada</l>
-            <l n="10">por proceder de tan excelso origen,</l>
-            <l n="11">y cuya validez se te ha negado,</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">siento aliviarse el alma acongojada</l>
-            <l n="13">de todos los pesares que la afligen</l>
-            <l n="14">¡y doy gracias a Dios de haberte amado!</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s102n_0346_03">
-          <head>III</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Si pudiera arrancar de mi memoria</l>
-            <l n="2">las horas tristes que, por culpa ajena,</l>
-            <l n="3">han sido para ti de angustia y pena,</l>
-            <l n="4">las habría borrado de tu historia.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Y de recuerdos de ilusión y gloria</l>
-            <l n="6">teniendo sólo la existencia llena,</l>
-            <l n="7">no estaría sujeto a la cadena</l>
-            <l n="8">que me impone la línea divisoria.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">No ya amor para ti mendigué necio,</l>
-            <l n="10">pues sacié tu ambición de ser amada,</l>
-            <l n="11">ni a tu afán generoso puse precio;</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">ni aun justicia exigí, siendo obligada,</l>
-            <l n="13">pedí un poquito menos de desprecio</l>
-            <l n="14">¡y ni eso me otorgaron! Total... nada.</l>
-          </lg>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s102n_0347">
-        <head>Fe y orgullo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Precisamente Porque soy altivo</l>
-          <l n="2">creo en Dios y le adoro reverente,</l>
-          <l n="3">porque se cree en El o fatalmente</l>
-          <l n="4">de la propia impotencia se es cautivo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Y es más noble creer en un Dios vivo,</l>
-          <l n="6">sabio, justo inmortal, omnipotente,</l>
-          <l n="7">que a cada paso tropezar ruinmente</l>
-          <l n="8">por rechazar su eterno imperativo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿Y a qué no creer en Dios? Para ser luego</l>
-          <l n="10">sectario de otros hombres, mis iguales,</l>
-          <l n="11">aceptando su error como un borrego,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">para no hallar consuelos en mis males,</l>
-          <l n="13">para vivir esclavo y morir ciego</l>
-          <l n="14">y no gozar los bienes inmortales!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s102n_0348">
-        <head>La última noche</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Inmóvil y entre luces y en el suelo,</l>
-          <l n="2">con plácida expresión de paz bendita,</l>
-          <l n="3">eras como una virgen carmelita</l>
-          <l n="4">por un ángel audaz robada al cielo!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Sólo cuando, al besarte, sentí el hielo</l>
-          <l n="6">con que la Muerte halló tu faz marchita,</l>
-          <l n="7">advertí consternado la infinita</l>
-          <l n="8">bárbara pesadumbre de mi duelo!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Al contemplar las funerales galas</l>
-          <l n="10">al ver la Cruz entre tus manos yertas</l>
-          <l n="11">y pagada la lumbre de mis ojos,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">el Ángel del Amor plegó las alas,</l>
-          <l n="13">que un tiempo tuvo en nuestro hogar abiertas,</l>
-          <l n="14">y se dejó enterrar con tus despojos.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Juan Martínez Nacarino</head>
+            <p>España. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s102n_0343">
+            <head>Súplica</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--++--+-" enjamb="B-pb_noun_prep">Yo cifraba, mi Dios, todo mi anhelo</l>
+               <l n="2" met="--+--+-+++-" enjamb="B-pb_noun_prep I-pb_noun_prep">en aquella mujer que fue el bien mío</l>
+               <l n="3" met="-+-+-+-+-+-" enjamb="B-pb_adj_adv I-pb_noun_prep">y, muerta ya, mi hogar deshecho y frío</l>
+               <l n="4" met="++-+---+-+-" enjamb="I-pb_adj_adv">sólo es morada de amargura y duelo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+++-+-">No protesto ¡ay de mí! no me rebelo,</l>
+               <l n="6" met="-----+-+-+-">ni en medio del dolor blasfemo impío;</l>
+               <l n="7" met="++-+---+-+-" enjamb="B-ex_dobj_verb">Tú, sumo Dios, en cuyo amor confío</l>
+               <l n="8" met="-+-+---+++-" enjamb="I-ex_dobj_verb">hiciste bien en reintegrarla al cielo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+--++++-">Mas, pues la ves y pues me ves, Dios santo,</l>
+               <l n="10" met="++---+---+-">dila que resignado con mi suerte</l>
+               <l n="11" met="+-+-++---+-">te bendigo y te adoro en mi quebranto.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+---+-">Que mi dolor inmenso se convierte</l>
+               <l n="13" met="--+--+-+-+-" enjamb="B-ex_dobj_verb">en inmensa pasión; que la amo tanto</l>
+               <l n="14" met="-+---+---+-" enjamb="I-ex_dobj_verb">que vivo de su amor, pese a la Muerte!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s102n_0344">
+            <head>A mi virgen</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+++-+-+--+-">No me atrae hacia Ti mi hondo quebranto,</l>
+               <l n="2" met="--++++---+-">ni el hallarme tan solo y abatido,</l>
+               <l n="3" met="-+---+-+++-">que Tú, Virgen del Carmen, siempre has sido</l>
+               <l n="4" met="-+++---+-+-">mi amor más puro y mi mayor encanto.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+-+++-">Mas si en horas felices te amé tanto,</l>
+               <l n="6" met="---+-+-+-+-">y tu divino amor busqué rendido,</l>
+               <l n="7" met="+--+++---+-">ahora que estoy tan triste y dolorido,</l>
+               <l n="8" met="+-+--++-++-">¡cómo no he de acogerme a tu amor santo!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-----+-+-+-">¡Y ya que tu hermosura me fascina,</l>
+               <l n="10" met="-+-+-+---+-">consérvame la vista y la memoria</l>
+               <l n="11" met="---+-+---+-">para llevar grabada en la retina,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++-+---+-">cuando deje esta vida transitoria,</l>
+               <l n="13" met="-+-+---+-+-">la dulce imagen de tu faz divina,</l>
+               <l n="14" met="--+--+---+-">celestial anticipo de la gloria!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s102n_0345">
+            <head>Como tú</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+--++--++-">Juntó nuestras dos almas de tal suerte</l>
+               <l n="2" met="-+-+-+-+-+-" enjamb="B-ex_dobj_verb">aquel inmenso amor que nos unía</l>
+               <l n="3" met="-++--++--+-" enjamb="I-ex_dobj_verb">que Dios solo entre sí las distinguía:</l>
+               <l n="4" met="-++--++--+-">¡así fue nuestra unión de íntima y fuerte!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+--++-" enjamb="B-ex_dobj_verb">Pero la Muerte mísera no advierte</l>
+               <l n="6" met="++-+---+-+-" enjamb="I-ex_dobj_verb">cuál es el alma tuya y cuál la mía,</l>
+               <l n="7" met="-+---+---+-">¡y juntos padecimos la agonía,</l>
+               <l n="8" met="-++--+-+-+-">y de un golpe a los dos mató la Muerte!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+-+-+-">Verdad que yo, que te adoraba tanto</l>
+               <l n="10" met="---+-+-+-+-" enjamb="B-ex_subj_verb">amortajé después tu cuerpo yerto</l>
+               <l n="11" met="-+-+-+-+-+-" enjamb="I-ex_subj_verb">y te enterré, ay de mí, bañado en llanto!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="----++++-+-">Pero para mí el mundo es un desierto</l>
+               <l n="13" met="-++-++---+-">y a mí nadie me lleva al Camposanto,</l>
+               <l n="14" met="---+-+--++-">¡aunque también estoy, como tú muerto!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet-sequence" xml:id="s102n_0346">
+            <head>Miserias</head>
+            <lg type="sonnet" xml:id="s102n_0346_01">
+               <head>I</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+-+---+-+-" enjamb="B-ex_dobj_verb">Yo pienso como tú. Tampoco quiero</l>
+                  <l n="2" met="-+---+-+-+-" enjamb="B-cc_crossclause I-ex_dobj_verb">a la hora de la muerte ver visiones</l>
+                  <l n="3" met="-+---+-+-+-" enjamb="I-cc_crossclause">que vengan ofreciéndome perdones</l>
+                  <l n="4" met="--+--+--++-">por el buen parecer, cuando me muero.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="+--+-++--+-">Sólo el perdón de Dios busco y espero</l>
+                  <l n="6" met="--+--+---+-">y el cariño de honrados corazones,</l>
+                  <l n="7" met="--+-++---+-">que conviertan más tarde en oraciones</l>
+                  <l n="8" met="-+-+-+-+-+-">lo que era afecto fiel o amor sincero.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-+---+---+-" enjamb="B-ex_subj_verb">Que la hora decisiva de la Muerte</l>
+                  <l n="10" met="++---+---+-" enjamb="I-ex_subj_verb">no es hora de visitas de cumplido,</l>
+                  <l n="11" met="---+-+---+-">ni de cubrir menguadas apariencias,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="--+--++--+-">ni momento de verme, ni de verte,</l>
+                  <l n="13" met="-----+---+-" enjamb="B-ex_subj_verb">quienes en la injusticia y el olvido</l>
+                  <l n="14" met="--+--+---+-" enjamb="I-ex_subj_verb">aparentan tranquilas sus conciencias.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s102n_0346_02">
+               <head>II</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="--+--+---+-">Pero aquella mujer inimitable,</l>
+                  <l n="2" met="---+-+---+-">de inteligencia grande y poderosa,</l>
+                  <l n="3" met="+-+--+---+-">justa, noble, pacífica, amorosa,</l>
+                  <l n="4" met="--+--+---+-">de conciencia cristiana insuperable;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">mi Madre, en fin, la que encontró execrable</l>
+                  <l n="6" met="---+---+-+-" enjamb="I-ex_dobj_verb">la ingratitud y la llamaba odiosa,</l>
+                  <l n="7" met="+-+--+---+-">¡te hizo siempre justicia, y orgullosa,</l>
+                  <l n="8" met="++---+---+-">te quiso con ternura incomparable!</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="++---+---+-">Yo, ante esta ejecutoria, inmaculada</l>
+                  <l n="10" met="---+-+-+-+-">por proceder de tan excelso origen,</l>
+                  <l n="11" met="-----+-+-+-">y cuya validez se te ha negado,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+--+++---+-" enjamb="B-pb_noun_prep">siento aliviarse el alma acongojada</l>
+                  <l n="13" met="-+---+--++-" enjamb="I-pb_noun_prep">de todos los pesares que la afligen</l>
+                  <l n="14" met="-+--+-++-+-">¡y doy gracias a Dios de haberte amado!</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s102n_0346_03">
+               <head>III</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="--+--+---+-" enjamb="B-ex_dobj_verb">Si pudiera arrancar de mi memoria</l>
+                  <l n="2" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">las horas tristes que, por culpa ajena,</l>
+                  <l n="3" met="++---+-+-+-">han sido para ti de angustia y pena,</l>
+                  <l n="4" met="+-+-+----+-">las habría borrado de tu historia.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="---+---+-+-">Y de recuerdos de ilusión y gloria</l>
+                  <l n="6" met="-+-+---+-+-">teniendo sólo la existencia llena,</l>
+                  <l n="7" met="+-+-+----+-" enjamb="B-cc_crossclause">no estaría sujeto a la cadena</l>
+                  <l n="8" met="-++--+---+-" enjamb="I-cc_crossclause">que me impone la línea divisoria.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+++--+--++-">No ya amor para ti mendigué necio,</l>
+                  <l n="10" met="--+--+-+-+-">pues sacié tu ambición de ser amada,</l>
+                  <l n="11" met="--+--+-+-+-">ni a tu afán generoso puse precio;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+-+--++--+-">ni aun justicia exigí, siendo obligada,</l>
+                  <l n="13" met="-+-+-+---+-">pedí un poquito menos de desprecio</l>
+                  <l n="14" met="-+-+--+-+--">¡y ni eso me otorgaron! Total... nada.</l>
+               </lg>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s102n_0347">
+            <head>Fe y orgullo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+-+-+-">Precisamente Porque soy altivo</l>
+               <l n="2" met="++-+-+---+-">creo en Dios y le adoro reverente,</l>
+               <l n="3" met="---+-+--++-">porque se cree en El o fatalmente</l>
+               <l n="4" met="--+--+-+-+-">de la propia impotencia se es cautivo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+++--+-+++-">Y es más noble creer en un Dios vivo,</l>
+               <l n="6" met="+-+--+---+-">sabio, justo inmortal, omnipotente,</l>
+               <l n="7" met="---+---+++-">que a cada paso tropezar ruinmente</l>
+               <l n="8" met="---+-+---+-">por rechazar su eterno imperativo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--++-+-+++-">¿Y a qué no creer en Dios? Para ser luego</l>
+               <l n="10" met="-+-+-+---+-">sectario de otros hombres, mis iguales,</l>
+               <l n="11" met="--+--+-+-+-">aceptando su error como un borrego,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++-+---+-">para no hallar consuelos en mis males,</l>
+               <l n="13" met="---+-+--++-">para vivir esclavo y morir ciego</l>
+               <l n="14" met="-+-+-+---+-">y no gozar los bienes inmortales!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s102n_0348">
+            <head>La última noche</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">Inmóvil y entre luces y en el suelo,</l>
+               <l n="2" met="-+---+-+-+-">con plácida expresión de paz bendita,</l>
+               <l n="3" met="+--+-+---+-">eras como una virgen carmelita</l>
+               <l n="4" met="-++--+-+-+-">por un ángel audaz robada al cielo!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+----++-++-">Sólo cuando, al besarte, sentí el hielo</l>
+               <l n="6" met="---+-+-+-+-">con que la Muerte halló tu faz marchita,</l>
+               <l n="7" met="--+--+---+-" enjamb="B-pb_adj_noun">advertí consternado la infinita</l>
+               <l n="8" met="+----+---+-" enjamb="I-pb_adj_noun">bárbara pesadumbre de mi duelo!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">Al contemplar las funerales galas</l>
+               <l n="10" met="-+-+---+-+-">al ver la Cruz entre tus manos yertas</l>
+               <l n="11" met="--+--+---+-">y pagada la lumbre de mis ojos,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+----+-+-">el Ángel del Amor plegó las alas,</l>
+               <l n="13" met="++-+---+-+-">que un tiempo tuvo en nuestro hogar abiertas,</l>
+               <l n="14" met="---+-+---+-">y se dejó enterrar con tus despojos.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

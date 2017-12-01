@@ -1,219 +1,299 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de José de Diego</title>
-        <author>
-          <idno type="viaf" cert="high">32129256</idno>
-          <idno type="#disco" xml:id="disco_561n"/>
-          <name type="short">Diego</name>
-          <name type="full">
-            <name type="first-name">José</name>
-            <name type="preposition-name">de</name>
-            <name type="second-name">Diego</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">6</measure>
-        <measure unit="tokens">528</measure>
-        <measure unit="line">84</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_561n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_561n" role="author" sex="M">
-            <persName>José de Diego</persName>
-            <birth><placeName type="place">Aguadilla (Puerto Rico)</placeName>, <placeName type="country">Puerto Rico</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1866" cert="high">1866</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1918" cert="high">1918</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de José de Diego</title>
+            <author corresp="#disco_561n">José de Diego</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">6</measure>
+            <measure unit="tokens">528</measure>
+            <measure unit="line">84</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_561n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_561n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/32129256"/>
+                  <persName type="short">Diego</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">José</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Diego</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">José de Diego</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Aguadilla</settlement>
+                           <country>Puerto Rico</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1866" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1918" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s561n_2056" about="dbpedia:Soneto">
+                        <title property="dc:title">Ya viene</title>
+                        <title type="incipit" property="dc:alternative">La desterrada vuelve, porque anhelan</title>
+                     </bibl>
+                     <bibl resource="disco#s561n_2057" about="dbpedia:Soneto">
+                        <title property="dc:title">Pan y vino</title>
+                        <title type="incipit" property="dc:alternative">Surge, a un replique modulado en trino,</title>
+                     </bibl>
+                     <bibl resource="disco#s561n_2058" about="dbpedia:Soneto">
+                        <title property="dc:title">Dios y Satán</title>
+                        <title type="incipit" property="dc:alternative">Hace algún tiempo que Satán impío</title>
+                     </bibl>
+                     <bibl resource="disco#s561n_2059" about="dbpedia:Soneto">
+                        <title property="dc:title">Cosas divinas</title>
+                        <title type="incipit" property="dc:alternative">Según dicen, de Dios son las esposas</title>
+                     </bibl>
+                     <bibl resource="disco#s561n_2060" about="dbpedia:Soneto">
+                        <title property="dc:title">La confesión</title>
+                        <title type="incipit" property="dc:alternative">Llegó Purita, y al mirarse ufana</title>
+                     </bibl>
+                     <bibl resource="disco#s561n_2061" about="dbpedia:Soneto">
+                        <title property="dc:title">A un perseguido</title>
+                        <title type="incipit" property="dc:alternative">¡Ah, desgraciado si el dolor te abate,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>José de Diego</head>
-        <p>Aguadilla (Puerto Rico). 1866 - 1918</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s561n_2056">
-        <head>Ya viene</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">La desterrada vuelve, porque anhelan</l>
-          <l n="2">dar música solemne a sus oídos</l>
-          <l n="3">las tórtolas que vuelen de sus nidos</l>
-          <l n="4">y las ideas que del alma vuelan.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Las muchedumbres fieras se revelan,</l>
-          <l n="6">despiertan a su voz los oprimidos,</l>
-          <l n="7">¡y vencerán indómitos y unidos</l>
-          <l n="8">y los traerán los que por ella velan!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Con besos de oro y con fugaz sonrisa,</l>
-          <l n="10">que viera tras de sí la llamarada,</l>
-          <l n="11">la aurora de otro Siglo nos avisa:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">la mar está gimiendo alborotada...</l>
-          <l n="13">¡Libertad de mi alma!... ¡más aprisa!...</l>
-          <l n="14">¡cuánto tarda en morir la madrugada!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s561n_2057">
-        <head>Pan y vino</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Surge, a un replique modulado en trino,</l>
-          <l n="2">del misterio floral en que reposa,</l>
-          <l n="3">la blanca Eucaristía, blanca rosa</l>
-          <l n="4">emergente del cáliz purpurino.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La espiga recibió el Cuerpo Divino,</l>
-          <l n="6">pero la vid su sangre generosa...</l>
-          <l n="7">¡El trabajo y la lucha, en dolorosa</l>
-          <l n="8">íntima comunión de pan y vino!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">En el pecho del Cristo moribundo</l>
-          <l n="10">la férrea pica se bañó de lumbre</l>
-          <l n="11">y floreció como clavel de grana.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">El pan sagrado es la salud del mundo;</l>
-          <l n="13">pero, al subir del Gólgota a la cumbre...</l>
-          <l n="14">¡El vino es la redención humana!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s561n_2058">
-        <head>Dios y Satán</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Hace algún tiempo que Satán impío</l>
-          <l n="2">riñe con Dios en portentosa brega,</l>
-          <l n="3">y a cada instante oscila la refriega</l>
-          <l n="4">entre el uno y el otro poderío.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¡El globo -dice Dios- el globo es mío!</l>
-          <l n="6">y al globo el diablo su derecho alega...</l>
-          <l n="7">«¡Y el globo en tanto sin cesar navega</l>
-          <l n="8">por el piélago inmenso del vacío!»</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Sigan esos señores mis consejos;</l>
-          <l n="10">déjense de batallas y locuras,</l>
-          <l n="11">más propias de rapaces que de viejos.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y no olviden, haciendo travesuras,</l>
-          <l n="13">la fabulita de los dos conejos</l>
-          <l n="14">sorprendidos de pronto por los curas.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s561n_2059">
-        <head>Cosas divinas</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Según dicen, de Dios son las esposas</l>
-          <l n="2">las castísimas sores del convento,</l>
-          <l n="3">y, se lo digo a Dios como lo siento:</l>
-          <l n="4">¡tiene algunas esposas muy hermosas!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Pero suceden por desgracia cosas</l>
-          <l n="6">en tal o cual divino casamiento,</l>
-          <l n="7">que, francamente hablando, no las cuento</l>
-          <l n="8">por si las leen niñas ruborosas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">A las monjas bonitas, sus afanes</l>
-          <l n="10">consagra el capellán, y eso es un robo</l>
-          <l n="11">que Dios tolera a semejantes canes.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Dicho lo cual comprenderá el más bobo,</l>
-          <l n="13">que no dejan de ser los capellanes</l>
-          <l n="14">representantes de El en nuestro globo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s561n_2060">
-        <head>La confesión</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Llegó Purita, y al mirarse ufana</l>
-          <l n="2">junto al confesionario de rodillas,</l>
-          <l n="3">besó del armatoste la rejillas</l>
-          <l n="4">y los pliegues también de una sotana.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Aunque el frío tenaz de la mañana</l>
-          <l n="6">le dejó las mejillas amarillas,</l>
-          <l n="7">subieron, poco a poco, a sus mejillas</l>
-          <l n="8">candentes olas de color de grana.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Alguna cosa por demás oscura</l>
-          <l n="10">debió mediar en el sagrado nido</l>
-          <l n="11">entre el ministro y la inocente Pura,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">pues gritaron con tono enfurecido:</l>
-          <l n="13">-«¡Se lo diré al obispo, señor cura!»-</l>
-          <l n="14">-«¡También se lo diré yo a su marido!»-</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s561n_2061">
-        <head>A un perseguido</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Ah, desgraciado si el dolor te abate,</l>
-          <l n="2">si el cansancio tus miembros entumece:</l>
-          <l n="3">Haz como el árbol seco: reverdece;</l>
-          <l n="4">y como el germen enterrado: late!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Resurge, alienta, grita, anda, combate,</l>
-          <l n="6">vibra, ondula, retruena, resplandece...</l>
-          <l n="7">Haz como el río con la lluvia: ¡crece!</l>
-          <l n="8">y como el mar contra la roca: ¡abate!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De la tormenta al iracundo empuje,</l>
-          <l n="10">no has de balar como el cordero triste,</l>
-          <l n="11">sino rugir, como la fiera ruge.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¡Levántate! ¡revuélvete! ¡resiste!</l>
-          <l n="13">Haz como el toro acorralado: ¡muge!</l>
-          <l n="14">o como el toro que no muge: ¡embiste!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>José de Diego</head>
+            <p>Aguadilla (Puerto Rico). 1866 - 1918</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s561n_2056">
+            <head>Ya viene</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+---+-" enjamb="B-pb_verb_chain">La desterrada vuelve, porque anhelan</l>
+               <l n="2" met="++---+---+-" enjamb="B-ex_dobj_verb I-pb_verb_chain">dar música solemne a sus oídos</l>
+               <l n="3" met="-+---+---+-" enjamb="I-ex_dobj_verb">las tórtolas que vuelen de sus nidos</l>
+               <l n="4" met="---+---+-+-">y las ideas que del alma vuelan.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-">Las muchedumbres fieras se revelan,</l>
+               <l n="6" met="-+---+---+-">despiertan a su voz los oprimidos,</l>
+               <l n="7" met="---+-+---+-">¡y vencerán indómitos y unidos</l>
+               <l n="8" met="-+-+---+-+-">y los traerán los que por ella velan!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">Con besos de oro y con fugaz sonrisa,</l>
+               <l n="10" met="-+---+---+-">que viera tras de sí la llamarada,</l>
+               <l n="11" met="-+-+-+-+-+-">la aurora de otro Siglo nos avisa:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+---+-">la mar está gimiendo alborotada...</l>
+               <l n="13" met="--+--+-+-+-">¡Libertad de mi alma!... ¡más aprisa!...</l>
+               <l n="14" met="+-+--+---+-">¡cuánto tarda en morir la madrugada!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s561n_2057">
+            <head>Pan y vino</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+---+-+-">Surge, a un replique modulado en trino,</l>
+               <l n="2" met="--+--+---+-">del misterio floral en que reposa,</l>
+               <l n="3" met="-+---+-+-+-" enjamb="B-pb_adj_noun">la blanca Eucaristía, blanca rosa</l>
+               <l n="4" met="--+--+---+-" enjamb="I-pb_adj_noun">emergente del cáliz purpurino.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">La espiga recibió el Cuerpo Divino,</l>
+               <l n="6" met="---+-+---+-">pero la vid su sangre generosa...</l>
+               <l n="7" met="--+--+---+-">¡El trabajo y la lucha, en dolorosa</l>
+               <l n="8" met="+----+-+-+-">íntima comunión de pan y vino!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">En el pecho del Cristo moribundo</l>
+               <l n="10" met="-+-+---+-+-">la férrea pica se bañó de lumbre</l>
+               <l n="11" met="---+---+-+-">y floreció como clavel de grana.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-++--+-+-">El pan sagrado es la salud del mundo;</l>
+               <l n="13" met="---+-+---+-">pero, al subir del Gólgota a la cumbre...</l>
+               <l n="14" met="-+-+---+-+-">¡El vino es la redención humana!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s561n_2058">
+            <head>Dios y Satán</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-++---+-+-" enjamb="B-ex_dobj_verb">Hace algún tiempo que Satán impío</l>
+               <l n="2" met="+--+---+-+-" enjamb="I-ex_dobj_verb">riñe con Dios en portentosa brega,</l>
+               <l n="3" met="---+-+---+-">y a cada instante oscila la refriega</l>
+               <l n="4" met="--+--+---+-">entre el uno y el otro poderío.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+-+++-">¡El globo -dice Dios- el globo es mío!</l>
+               <l n="6" met="-+-+---+-+-">y al globo el diablo su derecho alega...</l>
+               <l n="7" met="-+-+---+-+-">«¡Y el globo en tanto sin cesar navega</l>
+               <l n="8" met="--+--+---+-">por el piélago inmenso del vacío!»</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+---+-">Sigan esos señores mis consejos;</l>
+               <l n="10" met="+-+--+---+-">déjense de batallas y locuras,</l>
+               <l n="11" met="++---+---+-">más propias de rapaces que de viejos.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+---+-">Y no olviden, haciendo travesuras,</l>
+               <l n="13" met="---+---+-+-" enjamb="B-pb_adj_noun">la fabulita de los dos conejos</l>
+               <l n="14" met="--+--+---+-" enjamb="I-pb_adj_noun">sorprendidos de pronto por los curas.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s561n_2059">
+            <head>Cosas divinas</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--++--+-">Según dicen, de Dios son las esposas</l>
+               <l n="2" met="--+--+---+-">las castísimas sores del convento,</l>
+               <l n="3" met="--++-+--++-">y, se lo digo a Dios como lo siento:</l>
+               <l n="4" met="+-+--+-+-+-">¡tiene algunas esposas muy hermosas!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+---+-+-" enjamb="B-pb_noun_prep">Pero suceden por desgracia cosas</l>
+               <l n="6" met="---+-+---+-" enjamb="I-pb_noun_prep">en tal o cual divino casamiento,</l>
+               <l n="7" met="-+-+-+-+-+-">que, francamente hablando, no las cuento</l>
+               <l n="8" met="--++-+---+-">por si las leen niñas ruborosas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">A las monjas bonitas, sus afanes</l>
+               <l n="10" met="-+---+++++-" enjamb="B-cc_crossclause">consagra el capellán, y eso es un robo</l>
+               <l n="11" met="-+-+---+-+-" enjamb="I-cc_crossclause">que Dios tolera a semejantes canes.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+------+++-">Dicho lo cual comprenderá el más bobo,</l>
+               <l n="13" met="-++--+---+-" enjamb="B-pb_adj_noun">que no dejan de ser los capellanes</l>
+               <l n="14" met="---+-+---+-" enjamb="I-pb_adj_noun">representantes de El en nuestro globo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s561n_2060">
+            <head>La confesión</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+--++-+-">Llegó Purita, y al mirarse ufana</l>
+               <l n="2" met="-----+---+-">junto al confesionario de rodillas,</l>
+               <l n="3" met="-+---+---+-">besó del armatoste la rejillas</l>
+               <l n="4" met="--+--++--+-">y los pliegues también de una sotana.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-" enjamb="B-ex_subj_verb">Aunque el frío tenaz de la mañana</l>
+               <l n="6" met="+-+--+---+-" enjamb="I-ex_subj_verb">le dejó las mejillas amarillas,</l>
+               <l n="7" met="-+---+---+-" enjamb="B-pb_adj_noun">subieron, poco a poco, a sus mejillas</l>
+               <l n="8" met="-+-+---+-+-" enjamb="I-pb_adj_noun">candentes olas de color de grana.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-" enjamb="B-pb_adj_prep">Alguna cosa por demás oscura</l>
+               <l n="10" met="-+-+---+-+-" enjamb="B-pb_noun_prep I-pb_adj_prep">debió mediar en el sagrado nido</l>
+               <l n="11" met="---+---+-+-" enjamb="I-pb_noun_prep">entre el ministro y la inocente Pura,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">pues gritaron con tono enfurecido:</l>
+               <l n="13" met="-+-+-+--++-">-«¡Se lo diré al obispo, señor cura!»-</l>
+               <l n="14" met="-+-+-++--+-">-«¡También se lo diré yo a su marido!»-</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s561n_2061">
+            <head>A un perseguido</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+---+++-">¡Ah, desgraciado si el dolor te abate,</l>
+               <l n="2" met="--+--+---+-">si el cansancio tus miembros entumece:</l>
+               <l n="3" met="+--+-+---+-">Haz como el árbol seco: reverdece;</l>
+               <l n="4" met="---+---+-+-">y como el germen enterrado: late!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-++--+-">Resurge, alienta, grita, anda, combate,</l>
+               <l n="6" met="+-+--+---+-">vibra, ondula, retruena, resplandece...</l>
+               <l n="7" met="+--+---+-+-">Haz como el río con la lluvia: ¡crece!</l>
+               <l n="8" met="---+---+-+-">y como el mar contra la roca: ¡abate!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">De la tormenta al iracundo empuje,</l>
+               <l n="10" met="+--+---+-+-">no has de balar como el cordero triste,</l>
+               <l n="11" met="---+---+-+-">sino rugir, como la fiera ruge.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-++-">¡Levántate! ¡revuélvete! ¡resiste!</l>
+               <l n="13" met="+--+---+-+-">Haz como el toro acorralado: ¡muge!</l>
+               <l n="14" met="---+--++-+-">o como el toro que no muge: ¡embiste!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

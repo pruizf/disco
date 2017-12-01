@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Cristóbal de Mesa</title>
+            <author corresp="#disco_410g">Cristóbal de Mesa</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">4</measure>
+            <measure unit="tokens">359</measure>
+            <measure unit="line">56</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_410g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_410g"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/50916652"/>
+                  <persName type="short">Mesa</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Cristóbal</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Mesa</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Cristóbal de Mesa</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Zafra (Badajoz)</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1562" cert="high"/>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1633" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s410g_0902" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">El que alaba la vida de la Corte</title>
+                     </bibl>
+                     <bibl resource="disco#s410g_0903" about="dbpedia:Soneto">
+                        <title property="dc:title">Al Duque de Béjar</title>
+                        <title type="incipit" property="dc:alternative">Gustad, señor, de aquesta vuestra villa,</title>
+                     </bibl>
+                     <bibl resource="disco#s410g_0904" about="dbpedia:Soneto">
+                        <title property="dc:title">Roma en ruinas</title>
+                        <title type="incipit" property="dc:alternative">Teatro, Capitolio, Coliseo,</title>
+                     </bibl>
+                     <bibl resource="disco#s410g_0905" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Con gran razón, Emperatriz del Cielo,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <div>
+            <head>Cristóbal de Mesa</head>
+            <p>Zafra (Badajoz). 1562 - 1633</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s410g_0902">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+---+-" enjamb="B-ex_subj_verb">El que alaba la vida de la Corte</l>
+               <l n="2" met="++-+-+---+-" enjamb="I-ex_subj_verb">no goce el bien del campo solitario,</l>
+               <l n="3" met="---+---+-+-">y su ambicioso pensamiento vario,</l>
+               <l n="4" met="+-+--+-+-+-">nunca sepa regir por firme norte.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+--++-">Con despachos y cartas de gran porte,</l>
+               <l n="6" met="---+-+---+-">desesperado espere al ordinario,</l>
+               <l n="7" met="+----+---+-">y ande de secretario en secretario,</l>
+               <l n="8" met="+-+--+-+-+-">dando en varios negocios vario corte.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+--+-">Procure ser privado del privado,</l>
+               <l n="10" met="-+---+---+-">adule por diversas pretensiones,</l>
+               <l n="11" met="-+---+---+-">a todos los que gozan el gobierno.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---++--+-">Afane por saber cosas de estado,</l>
+               <l n="13" met="--+--+---+-">de las llaves doradas y bastones,</l>
+               <l n="14" met="-+-+-+-+-+-">y tengan mal verano y mal invierno.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s410g_0903">
+            <head>Al Duque de Béjar</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+---+-">Gustad, señor, de aquesta vuestra villa,</l>
+               <l n="2" met="---+-+-+-+-">en la cual bien se vive y bien se bebe,</l>
+               <l n="3" met="--+--+-+-+-">porque falta el calor y sobra nieve</l>
+               <l n="4" met="+--+-+---+-">y hay las mejores frutas de Castilla.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-">Y si en el bosque, ameno a maravilla,</l>
+               <l n="6" met="+-++---+-+-">cansase el ocio de las musas nueve,</l>
+               <l n="7" met="---+---+++-" enjamb="B-pb_adj_adv">considerando que la vida es breve</l>
+               <l n="8" met="+++--+---+-" enjamb="I-pb_adj_adv">no está lejos la corte ni Sevilla.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-" enjamb="B-cc_crossclause">Procurad la salud y la alegría</l>
+               <l n="10" met="--+--+-+++-" enjamb="I-cc_crossclause">que la vida en el mundo no es más de una;</l>
+               <l n="11" met="---+-+-+-+-">y si dijese el vario vulgo, diga.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">Desterrad la mortal melancolía,</l>
+               <l n="13" met="--++-+-+-+-" enjamb="B-ex_subj_verb">que si está triste el ánimo, una higa</l>
+               <l n="14" met="+-+--+---+-" enjamb="I-ex_subj_verb">pasa toda la próspera fortuna.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s410g_0904">
+            <head>Roma en ruinas</head>
+            <lg n="1" type="unknown">
+               <l n="1" met="-+---+---+-">Teatro, Capitolio, Coliseo,</l>
+               <l n="2" met="-+-+-+---+-">columnas, arcos, mármoles, medallas,</l>
+               <l n="3" met="-+---+---+-">valijas, capiteles y quincallas,4</l>
+               <l n="4" met="+-+--+---+-">do vencieron las obras al deseo;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+-+-+-" enjamb="B-pb_noun_prep">templo, carros triunfales, gran trofeo</l>
+               <l n="6" met="-+---+---+-" enjamb="I-pb_noun_prep">de reino, de victorias, de batallas,</l>
+               <l n="7" met="-+---+---+-" enjamb="B-pb_noun_prep">colosos, epitafios, antiguallas</l>
+               <l n="8" met="---+---+-+-" enjamb="I-pb_noun_prep">de los sepulcros que desiertos veo;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+-+-+-">pirámides, pinturas, termas, baños,</l>
+               <l n="10" met="-+---+---+-" enjamb="B-pb_noun_prep">reliquias y ruinas de la pompa</l>
+               <l n="11" met="---+---+-+-" enjamb="I-pb_noun_prep">del edificio de la antigua Roma.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+---+-">Si puede tanto el curso de los años,</l>
+               <l n="13" met="-++--+-+-+-" enjamb="B-ex_dobj_verb">podrá ser que también el tiempo rompa</l>
+               <l n="14" met="-+-+-+-+-+-" enjamb="I-ex_dobj_verb">mi mal, pues toda cosa acaba y doma.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s410g_0905">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-----+-">Con gran razón, Emperatriz del Cielo,</l>
+               <l n="2" met="-+---+---+-">que excedes las supremas jerarquías,</l>
+               <l n="3" met="+++--+---+-">te dan, más que a Eliseo y que a Elías,</l>
+               <l n="4" met="+--+-+---+-">todo el honor del Líbano y Carmelo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+---+-+-">Tú diste al mundo su mayor consuelo,</l>
+               <l n="6" met="--+--+---+-">y tu parto cumplió las profecías,</l>
+               <l n="7" met="+-++-++--+-">dando el Bien, dando a Dios, dando el Mesías</l>
+               <l n="8" met="---+-+---+-">a los mortales míseros del suelo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+----+-+-+-">Tú, de la cual nació la Luz del mundo,</l>
+               <l n="10" met="-+---+-+-+-">de lágrimas en este oscuro valle</l>
+               <l n="11" met="++---+-+-+-">nos mira desde aquesa empírea corte.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+-+-+-">Y a buen puerto de aqueste mar profundo</l>
+               <l n="13" met="-+-+-+---+-">saldremos, si es tu mano el gobernalle,</l>
+               <l n="14" met="--+--+-+-+-">el piloto tu amor, tu vista el norte.</l>
+            </lg>
+         </lg>
+      </body>
+  </text>
+</TEI>

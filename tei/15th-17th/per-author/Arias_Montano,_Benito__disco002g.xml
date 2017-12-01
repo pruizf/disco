@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Benito Arias Montano</title>
+            <author corresp="#disco_002g">Benito Arias Montano</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">179</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_002g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_002g"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/7399844"/>
+                  <persName type="short">Arias Montano</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Benito</forename>
+                     <surname property="foaf:familyName">Arias Montano</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Benito Arias Montano</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Fregenal de la Sierra (Badajoz)</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1527" cert="high"/>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Sevilla</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1598" cert="high"/>
+                     <date type="century">16</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s002g_0002" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">¿Qué es esto Entendimiento? ¿Qué revuelta</title>
+                     </bibl>
+                     <bibl resource="disco#s002g_0003" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Quien las graves congojas huir desea,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <div>
+            <head>Benito Arias Montano</head>
+            <p>Fregenal de la Sierra (Badajoz). 1527 - 1598</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s002g_0002">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++----+--+-" enjamb="B-ex_subj_verb">¿Qué es esto Entendimiento? ¿Qué revuelta</l>
+               <l n="2" met="++---+---+-" enjamb="I-ex_subj_verb">te hace disparar de tu carrera,</l>
+               <l n="3" met="-+-+-+-+-+-" enjamb="B-ex_subj_verb">que aquello do menor razón se espera</l>
+               <l n="4" met="++---+---+-" enjamb="I-ex_subj_verb">te vas desatinando a rienda suelta?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+-+++-">Solías tú correr, parar, dar vuelta,</l>
+               <l n="6" met="-+---+-+-+-" enjamb="B-pb_adj_prep">movido de la mano más certera</l>
+               <l n="7" met="---+-+---+-" enjamb="B-ex_dobj_verb I-pb_adj_prep">de la razón, llevando por bandera</l>
+               <l n="8" met="-+---+-+-+-" enjamb="I-ex_dobj_verb">la vela que el sentido al viento suelta.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">Desesperado de mi luz avara,</l>
+               <l n="10" met="---+-++--+-">que, cuando más pensaba ir atinando,</l>
+               <l n="11" met="++-+-+-+-+-">muy más sin tino y ciego me llevaba,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+--+++-++-" enjamb="B-ex_dobj_verb">sentí, sin sentir cómo, otra tan clara</l>
+               <l n="13" met="--+---+-++-" enjamb="B-ex_dobj_verb I-ex_dobj_verb">que aquella que primero me guiaba</l>
+               <l n="14" met="++-+-+---+-" enjamb="I-ex_dobj_verb">me va tiniebla oscura remedando.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s002g_0003">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+-+-+-">Quien las graves congojas huir desea,</l>
+               <l n="2" met="--+--+-+-+-">de que está vuestra vida siempre llena,</l>
+               <l n="3" met="+----++--+-">ame la soledad quieta y amena,</l>
+               <l n="4" met="-----+-+-+-">donde las ocasiones nunca vea.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">En ella de paciencia se provea</l>
+               <l n="6" met="-----+--++-">contra los pensamientos que dan pena,</l>
+               <l n="7" met="---+---+++-" enjamb="B-pb_adj_prep">y de memoria del morir, que es buena</l>
+               <l n="8" met="---+---+-+-" enjamb="I-pb_adj_prep">para defensa de cualquier pelea.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+---+-">Mas el que está de amor apasionado,</l>
+               <l n="10" met="++-+-+---+-">no piense estando solo remediarse,</l>
+               <l n="11" met="---+---+-+-">ni con paciencia ni acordar de muerte;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+---+-">porque la causa trae de su cuidado</l>
+               <l n="13" met="+-+--++--+-">dentro en sí, y mientras más quiere alejarse,</l>
+               <l n="14" met="-+--++-+++-">la fuerza de amor siente muy más fuerte.</l>
+            </lg>
+         </lg>
+      </body>
+  </text>
+</TEI>

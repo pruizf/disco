@@ -1,118 +1,179 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Adelina («Yolanda») Mariño de Riverón</title>
-        <author>
-          <idno type="viaf" cert="medium"></idno>
-          <idno type="#disco" xml:id="disco_563n"/>
-          <name type="short">Mariño de Riverón</name>
-          <name type="full">
-            <name type="first-name">Adelina («Yolanda»)</name>
-            <name type="second-name">Mariño de Riverón</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">179</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_563n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_563n" role="author" sex="F">
-            <persName>Adelina («Yolanda») Mariño de Riverón</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"></placeName>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Adelina («Yolanda») Mariño de Riverón</title>
+            <author corresp="#disco_563n">Adelina («Yolanda») Mariño de Riverón</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">179</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_563n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_563n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Mariño de Riverón</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Adelina («Yolanda»)</forename>
+                     <surname property="foaf:familyName">Mariño de Riverón</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Adelina («Yolanda») Mariño de
+                  Riverón</persName>
+                  <sex property="foaf:gender" value="F"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s563n_2063" about="dbpedia:Soneto">
+                        <title property="dc:title">El sol</title>
+                        <title type="incipit" property="dc:alternative">Del Sol , bendigo el luminoso rayo,</title>
+                     </bibl>
+                     <bibl resource="disco#s563n_2064" about="dbpedia:Soneto">
+                        <title property="dc:title">La luna</title>
+                        <title type="incipit" property="dc:alternative">Princesa de los Cielos, caprichosa</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Adelina («Yolanda») Mariño de Riverón</head>
-        <p>Cuba. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s563n_2063">
-        <head>El sol</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Del Sol , bendigo el luminoso rayo,</l>
-          <l n="2">que quizá va marcando mi destino...</l>
-          <l n="3">Luz divina, que das al peregrino,</l>
-          <l n="4">pomas rosas en el fértil mayo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Quiero tu luz, para alumbrar mi senda</l>
-          <l n="6">cegada por el oro de la gloria...</l>
-          <l n="7">De tu gloria sin par, que abrió en la Historia</l>
-          <l n="8">un mundo generoso de leyenda.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Quiero envolverme en tu dorado manto,</l>
-          <l n="10">ofrendarte el lirismo de mi canto,</l>
-          <l n="11">y en el claro alborear de una mañana...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">si audaz te acercas a mi tibio nido,</l>
-          <l n="13">sentir que tu caricia me ha dormido,</l>
-          <l n="14">al penetrar sutil por mi ventana.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s563n_2064">
-        <head>La luna</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Princesa de los Cielos, caprichosa</l>
-          <l n="2">Margarita Gautier, pálida y bella,</l>
-          <l n="3">amiga del poeta que te glosa</l>
-          <l n="4">en estrofas azules su querella;</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">pizpireta feliz, que a los luceros</l>
-          <l n="6">flirteas, retadora entre el celaje,</l>
-          <l n="7">porque son tus galantes caballeros</l>
-          <l n="8">y uno muere de amor... ¡Tu rubio paje!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Soñadora romántica y divina</l>
-          <l n="10">que discurres cual maga peregrina,</l>
-          <l n="11">por un reino que te unge soberana...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">ríete de Pierrot que en vano insiste,</l>
-          <l n="13">vive en la noche que tu engaño viste,</l>
-          <l n="14">y hurta tu rostro blanco a la mañana.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Adelina («Yolanda») Mariño de Riverón</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s563n_2063">
+            <head>El sol</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-">Del Sol , bendigo el luminoso rayo,</l>
+               <l n="2" met="--++-+---+-">que quizá va marcando mi destino...</l>
+               <l n="3" met="+-+--+---+-">Luz divina, que das al peregrino,</l>
+               <l n="4" met="+-+---+-+-">pomas rosas en el fértil mayo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-" enjamb="B-pb_adj_noun">Quiero tu luz, para alumbrar mi senda</l>
+               <l n="6" met="-+---+---+-" enjamb="B-pb_adj_noun I-pb_adj_noun">cegada por el oro de la gloria...</l>
+               <l n="7" met="--+--+-+-+-" enjamb="B-ex_dobj_verb I-pb_adj_noun">De tu gloria sin par, que abrió en la Historia</l>
+               <l n="8" met="++---+---+-" enjamb="I-ex_dobj_verb">un mundo generoso de leyenda.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--++--+-+-">Quiero envolverme en tu dorado manto,</l>
+               <l n="10" met="--++-+---+-">ofrendarte el lirismo de mi canto,</l>
+               <l n="11" met="--+--++--+-">y en el claro alborear de una mañana...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+++---+-+-">si audaz te acercas a mi tibio nido,</l>
+               <l n="13" met="-+---+-+-+-">sentir que tu caricia me ha dormido,</l>
+               <l n="14" met="---+-+---+-">al penetrar sutil por mi ventana.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s563n_2064">
+            <head>La luna</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-----+---+-">Princesa de los Cielos, caprichosa</l>
+               <l n="2" met="-----++--+-">Margarita Gautier, pálida y bella,</l>
+               <l n="3" met="-+---+--++-" enjamb="B-ex_subj_verb">amiga del poeta que te glosa</l>
+               <l n="4" met="--+--+---+-" enjamb="I-ex_subj_verb">en estrofas azules su querella;</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="--+--+---+-" enjamb="B-pb_adj_noun">pizpireta feliz, que a los luceros</l>
+               <l n="6" met="-+--+----+-" enjamb="I-pb_adj_noun">flirteas, retadora entre el celaje,</l>
+               <l n="7" met="--+--+---+-">porque son tus galantes caballeros</l>
+               <l n="8" met="+-+--+-+-+-">y uno muere de amor... ¡Tu rubio paje!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-" enjamb="B-cc_crossclause">Soñadora romántica y divina</l>
+               <l n="10" met="--+-++---+-" enjamb="I-cc_crossclause">que discurres cual maga peregrina,</l>
+               <l n="11" met="-++--+---+-">por un reino que te unge soberana...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++--+-+--+-">ríete de Pierrot que en vano insiste,</l>
+               <l n="13" met="+--+---+-+-">vive en la noche que tu engaño viste,</l>
+               <l n="14" met="+--+-+---+-">y hurta tu rostro blanco a la mañana.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

@@ -1,118 +1,187 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Emilio Bobadilla</title>
-        <author>
-          <idno type="viaf" cert="high">86959601</idno>
-          <idno type="#disco" xml:id="disco_635n"/>
-          <name type="short">Bobadilla</name>
-          <name type="full">
-            <name type="first-name">Emilio</name>
-            <name type="second-name">Bobadilla</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">177</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_635n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_635n" role="author" sex="M">
-            <persName>Emilio Bobadilla</persName>
-            <birth><placeName type="place">Cárdenas (Cuba)</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1862" cert="high">1862</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Biarritz</placeName>, <date type="year" when="1921" cert="high">1921</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Emilio Bobadilla</title>
+            <author corresp="#disco_635n">Emilio Bobadilla</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">177</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_635n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_635n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/86959601"/>
+                  <persName type="short">Bobadilla</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Emilio</forename>
+                     <surname property="foaf:familyName">Bobadilla</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Emilio Bobadilla</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Cárdenas</settlement>
+                           <country>Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1862" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Biarritz</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1921" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s635n_2341" about="dbpedia:Soneto">
+                        <title property="dc:title">La piragua</title>
+                        <title type="incipit" property="dc:alternative">Barquera, ven: la noche está serena</title>
+                     </bibl>
+                     <bibl resource="disco#s635n_2342" about="dbpedia:Soneto">
+                        <title property="dc:title">Primavera</title>
+                        <title type="incipit" property="dc:alternative">Nieves, lluvias, heladas, ventoleras...</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Emilio Bobadilla</head>
-        <p>Cárdenas (Cuba). 1862 - 1921</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s635n_2341">
-        <head>La piragua</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Barquera, ven: la noche está serena</l>
-          <l n="2">cuajada hasta el confín de extrañas luces.</l>
-          <l n="3">Al son de tu doliente cantinela</l>
-          <l n="4">¡a cuánta gente anónima conduces!</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">El río blando, cadencioso rueda</l>
-          <l n="6">en el milagro de la noche de oro;</l>
-          <l n="7">se adormece al pasar por la arboleda</l>
-          <l n="8">y al volcarse en el mar, bulle sonoro.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Barquera, ven: ignotas suavidades</l>
-          <l n="10">mueven la fronda y tiemblan en el agua</l>
-          <l n="11">como caricias hechas claridades.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">En el éter azul la luna brilla.</l>
-          <l n="13">Barquera, ven: apresta la piragua</l>
-          <l n="14">y pásame en silencio a la otra orilla.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s635n_2342">
-        <head>Primavera</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Nieves, lluvias, heladas, ventoleras...</l>
-          <l n="2">y hoy reverdece el campo hasta ayer seco;</l>
-          <l n="3">las ramas son ruidosas pasajeras</l>
-          <l n="4">y nidos hay del árbol en el hueco.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Luz que es cristal de miel delicuescente,</l>
-          <l n="6">abrillanta el contorno de las cosas;</l>
-          <l n="7">canta el gallo y escuchan de la fuente</l>
-          <l n="8">el rumor, entreabriéndose, las rosas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Turquesa es hoy el cielo ayer plomizo,</l>
-          <l n="10">y en brisa y en rocío se revuelve</l>
-          <l n="11">lo que ayer era ráfaga y granizo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">-¡Aleluya, aleluya!- todo grita;</l>
-          <l n="13">pero al tumulto del vivir que vuelve</l>
-          <l n="14">sólo mi juventud no resucita.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Emilio Bobadilla</head>
+            <p>Cárdenas (Cuba). 1862 - 1921</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s635n_2341">
+            <head>La piragua</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="-+-+-+-+-+-" enjamb="B-pb_adj_noun">Barquera, ven: la noche está serena</l>
+               <l n="2" met="-+---+-+-+-" enjamb="I-pb_adj_noun">cuajada hasta el confín de extrañas luces.</l>
+               <l n="3" met="-+---+---+-">Al son de tu doliente cantinela</l>
+               <l n="4" met="-+-+-+---+-">¡a cuánta gente anónima conduces!</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="-+-+---+-+-">El río blando, cadencioso rueda</l>
+               <l n="6" met="---+---+-+-">en el milagro de la noche de oro;</l>
+               <l n="7" met="--+--+---+-">se adormece al pasar por la arboleda</l>
+               <l n="8" met="--++-++--+-">y al volcarse en el mar, bulle sonoro.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+---+-" enjamb="B-ex_subj_verb">Barquera, ven: ignotas suavidades</l>
+               <l n="10" met="+--+-+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">mueven la fronda y tiemblan en el agua</l>
+               <l n="11" met="---+-+---+-" enjamb="I-ex_subj_verb">como caricias hechas claridades.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+-+-+-">En el éter azul la luna brilla.</l>
+               <l n="13" met="-+-+-+---+-">Barquera, ven: apresta la piragua</l>
+               <l n="14" met="-+-+-+-+-+-">y pásame en silencio a la otra orilla.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s635n_2342">
+            <head>Primavera</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="+-+--+---+-">Nieves, lluvias, heladas, ventoleras...</l>
+               <l n="2" met="+--+-+--++-">y hoy reverdece el campo hasta ayer seco;</l>
+               <l n="3" met="-+-+-+---+-">las ramas son ruidosas pasajeras</l>
+               <l n="4" met="-+-+-+---+-">y nidos hay del árbol en el hueco.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="++-+-+---+-">Luz que es cristal de miel delicuescente,</l>
+               <l n="6" met="--+--+---+-">abrillanta el contorno de las cosas;</l>
+               <l n="7" met="+-+--+---+-" enjamb="B-ex_dobj_verb">canta el gallo y escuchan de la fuente</l>
+               <l n="8" met="--+--+-+-+-" enjamb="I-ex_dobj_verb">el rumor, entreabriéndose, las rosas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++++--+-+-">Turquesa es hoy el cielo ayer plomizo,</l>
+               <l n="10" met="-+---+---+-" enjamb="B-ex_dobj_verb">y en brisa y en rocío se revuelve</l>
+               <l n="11" met="--++-+---+-" enjamb="I-ex_dobj_verb">lo que ayer era ráfaga y granizo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-------+-+-">-¡Aleluya, aleluya!- todo grita;</l>
+               <l n="13" met="---+---+-+-" enjamb="B-pb_verb_adv">pero al tumulto del vivir que vuelve</l>
+               <l n="14" met="+----++--+-" enjamb="I-pb_verb_adv">sólo mi juventud no resucita.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

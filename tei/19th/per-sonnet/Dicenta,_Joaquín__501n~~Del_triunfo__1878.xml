@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Del triunfo</title>
+            <author corresp="#disco_501n">Joaquín Dicenta</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">94</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_po_501n1878"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_501n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/68949187"/>
+                  <persName type="short">Dicenta</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Joaquín</forename>
+                     <surname property="foaf:familyName">Dicenta</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Joaquín Dicenta</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Calatayud (Zaragoza)</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1863" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Alicante</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1917" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s501n1878" about="dbpedia:Soneto">
+                        <title property="dc:title">Del triunfo</title>
+                        <title type="incipit" property="dc:alternative">¡Cuánto sufrí y qué solo! Ni un amigo,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <head>Del triunfo</head>
+      </front>
+      <body>
+         <lg n="1" type="cuarteto">
+            <l n="1" met="+--+++-+-+-">¡Cuánto sufrí y qué solo! Ni un amigo,</l>
+            <l n="2" met="+-+--+---+-" enjamb="B-pb_verb_chain">ni una mano leal que se tendiera</l>
+            <l n="3" met="---+-----+-" enjamb="I-pb_verb_chain">para estrechar la mía, ni siquiera</l>
+            <l n="4" met="--+-+++--+-">el placer de crearme un enemigo.</l>
+         </lg>
+         <lg n="2" type="cuarteto">
+            <l n="5" met="---+---+-+-">De mi abandono y mi dolor testigo,</l>
+            <l n="6" met="---+-+---+-">de mi angustiosa vida compañera</l>
+            <l n="7" met="+-+--++--+-">fue una pobre mujer, una cualquiera,</l>
+            <l n="8" met="+-+--+-+-+-">que hambre, pena y dolor partió conmigo.</l>
+         </lg>
+         <lg n="3" type="terceto">
+            <l n="9" met="+--+---+-+-">Y hoy que mi triunfo asegurado se haya,</l>
+            <l n="10" met="++---+---+-">tú, amigo por el éxito ganado,</l>
+            <l n="11" met="++--++---+-">me dices que la arroje de mi lado,</l>
+         </lg>
+         <lg n="4" type="terceto">
+            <l n="12" met="+--+-+-+-+-">que una mujer así, denigra... ¡Calla!</l>
+            <l n="13" met="-++--+-+-+-">con ella he padecido y he gozado:</l>
+            <l n="14" met="-+-+-+-+-+-">El triunfo no autoriza a ser canalla.</l>
+         </lg>
+      </body>
+  </text>
+</TEI>

@@ -1,93 +1,152 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de José A. Soffia</title>
-        <author>
-          <idno type="viaf" cert="high">42635393</idno>
-          <idno type="#disco" xml:id="disco_016n"/>
-          <name type="short">Soffia</name>
-          <name type="full">
-            <name type="first-name">José A.</name>
-            <name type="second-name">Soffia</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">100</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_016n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_016n" role="author" sex="M">
-            <persName>José A. Soffia</persName>
-            <birth><placeName type="place">Chile</placeName>, <placeName type="country">Chile</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1843" cert="high">1843</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1886" cert="high">1886</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de José A. Soffia</title>
+            <author corresp="#disco_016n">José A. Soffia</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">100</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_016n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_016n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/42635393"/>
+                  <persName type="short">Soffia</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">José A.</forename>
+                     <surname property="foaf:familyName">Soffia</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">José A. Soffia</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Chile</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1843" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1886" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s016n_0038" about="dbpedia:Soneto">
+                        <title property="dc:title">Conformidad</title>
+                        <title type="incipit" property="dc:alternative">Por encontrar la dicha, que en el suelo</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>José A. Soffia</head>
-        <p>Chile. 1843 - 1886</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s016n_0038">
-        <head>Conformidad</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Por encontrar la dicha, que en el suelo</l>
-          <l n="2">tal como la soñó nadie ha encontrado,</l>
-          <l n="3">lucha el hombre en el mundo exasperado</l>
-          <l n="4">y empeña y gasta su incesante anhelo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Si algo logra alcanzar tras su desvelo,</l>
-          <l n="6">es hacerse a su vez más desgraciado,</l>
-          <l n="7">matar la fe, vivir desengañado</l>
-          <l n="8">y de inclemencia apostrofar al cielo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿Y qué es lo que pretende?... ¿En qué grandeza</l>
-          <l n="10">finca la dicha y sueña la fortuna?</l>
-          <l n="11">¿En el mando?... ¿en la gloria?... ¿en la riqueza?...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¡Oh triple agitación, lucha importuna!...</l>
-          <l n="13">¡Feliz aquel que sabe en la tristeza</l>
-          <l n="14">que no hay más dicha que no ansiar ninguna!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>José A. Soffia</head>
+            <p>Chile. 1843 - 1886</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s016n_0038">
+            <head>Conformidad</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+---+-" enjamb="B-ex_subj_verb">Por encontrar la dicha, que en el suelo</l>
+               <l n="2" met="---+-+++-+-" enjamb="I-ex_subj_verb">tal como la soñó nadie ha encontrado,</l>
+               <l n="3" met="+-+--+---+-">lucha el hombre en el mundo exasperado</l>
+               <l n="4" met="-+-+---+-+-">y empeña y gasta su incesante anhelo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-">Si algo logra alcanzar tras su desvelo,</l>
+               <l n="6" met="+-++-++--+-">es hacerse a su vez más desgraciado,</l>
+               <l n="7" met="-+-+-+---+-">matar la fe, vivir desengañado</l>
+               <l n="8" met="---+---+-+-">y de inclemencia apostrofar al cielo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+-+-+-">¿Y qué es lo que pretende?... ¿En qué grandeza</l>
+               <l n="10" met="+--+-+---+-">finca la dicha y sueña la fortuna?</l>
+               <l n="11" met="--+--+---+-">¿En el mando?... ¿en la gloria?... ¿en la riqueza?...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---++--+-">¡Oh triple agitación, lucha importuna!...</l>
+               <l n="13" met="-+-+-+---+-" enjamb="B-cc_crossclause">¡Feliz aquel que sabe en la tristeza</l>
+               <l n="14" met="-+++--++-+-" enjamb="I-cc_crossclause">que no hay más dicha que no ansiar ninguna!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

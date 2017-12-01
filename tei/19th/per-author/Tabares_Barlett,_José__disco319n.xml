@@ -1,168 +1,239 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de José Tabares Barlett</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_319n"/>
-          <name type="short">Tabares Barlett</name>
-          <name type="full">
-            <name type="first-name">José</name>
-            <name type="second-name">Tabares Barlett</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">4</measure>
-        <measure unit="tokens">342</measure>
-        <measure unit="line">56</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_319n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_319n" role="author" sex="M">
-            <persName>José Tabares Barlett</persName>
-            <birth><placeName type="place">Tenerife</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1850" cert="high">1850</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1921" cert="high">1921</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de José Tabares Barlett</title>
+            <author corresp="#disco_319n">José Tabares Barlett</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">4</measure>
+            <measure unit="tokens">342</measure>
+            <measure unit="line">56</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_319n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_319n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Tabares Barlett</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">José</forename>
+                     <surname property="foaf:familyName">Tabares Barlett</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">José Tabares Barlett</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Tenerife</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1850" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1921" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s319n_1041" about="dbpedia:Soneto">
+                        <title property="dc:title">A Josefina de Ascanio</title>
+                        <title type="incipit" property="dc:alternative">Desde la crencha de tu oscuro pelo,</title>
+                     </bibl>
+                     <bibl resource="disco#s319n_1042" about="dbpedia:Soneto">
+                        <title property="dc:title">Puesta de sol</title>
+                        <title type="incipit" property="dc:alternative">El astro de oro, el luminar del cielo,</title>
+                     </bibl>
+                     <bibl resource="disco#s319n_1043" about="dbpedia:Soneto">
+                        <title property="dc:title">La lechera</title>
+                        <title type="incipit" property="dc:alternative">Ojos negros, castaña cabellera;</title>
+                     </bibl>
+                     <bibl resource="disco#s319n_1044" about="dbpedia:Soneto">
+                        <title property="dc:title">Remembranza</title>
+                        <title type="incipit" property="dc:alternative">Marco el postigo a su hermosura era,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>José Tabares Barlett</head>
-        <p>Tenerife. 1850 - 1921</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s319n_1041">
-        <head>A Josefina de Ascanio</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Desde la crencha de tu oscuro pelo,</l>
-          <l n="2">que besando acaricia el aura leve,</l>
-          <l n="3">hasta el sedoso y transparente velo</l>
-          <l n="4">del encaje que roza tu pie breve;</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">tus ojos, brilladores como el cielo;</l>
-          <l n="6">tus manos, lirios de impoluta nieve;</l>
-          <l n="7">tus líneas, tus contornos, son modelo</l>
-          <l n="8">que en vano el arte a bosquejar se atreve.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Tu voz, como el acorde de una lira,</l>
-          <l n="10">fuente parece que en brezal suspira;</l>
-          <l n="11">a los ensueños del amor provoca...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Es tu sonrisa un mundo de quimeras,</l>
-          <l n="13">y son las ilusiones prisioneras</l>
-          <l n="14">en el hilo de perlas de tu boca.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s319n_1042">
-        <head>Puesta de sol</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">El astro de oro, el luminar del cielo,</l>
-          <l n="2">en las líquidas ondas se ocultaba,</l>
-          <l n="3">la brisa, caprichosa, jugueteaba</l>
-          <l n="4">en las selvas oscuras de tu pelo.</l>
-        </lg>
-        <lg n="2" type="terceto">
-          <l n="5">-¡Canta! -dijiste- con vibrante anhelo!</l>
-          <l n="6">¡Canta esa lumbre excelsa que se acaba!-</l>
-          <l n="7">Y en la línea indecisa fulguraba</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="8">del cárdeno horizonte, sin un velo.</l>
-          <l n="9">¡Lo recuerdo muy bien! En la agonía</l>
-          <l n="10">del celeste volcán, bella María,</l>
-        </lg>
-        <lg n="4" type="cuarteto">
-          <l n="11">miraba yo tu faz encantadora...</l>
-          <l n="12">Y ante aquel espectáculo de muerte.</l>
-          <l n="13">¡raro contraste!, parecíame al verte</l>
-          <l n="14">que despuntaba, espléndida, la aurora.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s319n_1043">
-        <head>La lechera</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Ojos negros, castaña cabellera;</l>
-          <l n="2">las mejillas de nieve y escarlata;</l>
-          <l n="3">las pomas del amor, ¡cuán bien retrata</l>
-          <l n="4">su turgente y temblante delantera!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Miradla, por la alegre carretera,</l>
-          <l n="6">cuando el naciente sol su luz dilata,</l>
-          <l n="7">y a sus rayos el cántaro de lata</l>
-          <l n="8">salpicado de helechos reverbera.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Dibujando graciosas redondeces,</l>
-          <l n="10">el percal a sus formas ciñe a veces</l>
-          <l n="11">el viento caprichoso, jugueteando...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Desnudo el pie, la pantorrilla al aire,</l>
-          <l n="13">y moviendo su cuerpo con donaire,</l>
-          <l n="14">oliendo al retamal pasa cantando.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s319n_1044">
-        <head>Remembranza</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Marco el postigo a su hermosura era,</l>
-          <l n="2">¡ha cincuenta años! ¡con dolor lo digo!</l>
-          <l n="3">Hoy pasé por su calle y el postigo</l>
-          <l n="4">abierto vi, como diciendo: -¡Espera!-</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Ni un compañero de mi edad primera</l>
-          <l n="6">existe ya, de mi pasión testigo;</l>
-          <l n="7">de aquellos que rondábanla conmigo</l>
-          <l n="8">por las losas gastadas de la acera.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Ella, núbil, bajó a la sepultura</l>
-          <l n="10">llevándose un ensueño de ventura!</l>
-          <l n="11">Cruzo delante de su hogar desierto...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Vuelvo atrás la mirada entristecida,</l>
-          <l n="13">y se le antoja al alma dolorida</l>
-          <l n="14">hoy, el postigo aquel, un nicho abierto.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>José Tabares Barlett</head>
+            <p>Tenerife. 1850 - 1921</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s319n_1041">
+            <head>A Josefina de Ascanio</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="---+---+-+-">Desde la crencha de tu oscuro pelo,</l>
+               <l n="2" met="--+--+-+-+-">que besando acaricia el aura leve,</l>
+               <l n="3" met="---+---+-+-" enjamb="B-pb_noun_prep">hasta el sedoso y transparente velo</l>
+               <l n="4" met="--+--+--++-" enjamb="I-pb_noun_prep">del encaje que roza tu pie breve;</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="-+---+---+-">tus ojos, brilladores como el cielo;</l>
+               <l n="6" met="-+-+---+-+-">tus manos, lirios de impoluta nieve;</l>
+               <l n="7" met="-+---+-+-+-" enjamb="B-cc_crossclause">tus líneas, tus contornos, son modelo</l>
+               <l n="8" met="-+-+---+-+-" enjamb="I-cc_crossclause">que en vano el arte a bosquejar se atreve.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+-+-+-">Tu voz, como el acorde de una lira,</l>
+               <l n="10" met="+--+---+-+-">fuente parece que en brezal suspira;</l>
+               <l n="11" met="---+---+-+-">a los ensueños del amor provoca...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+++---+-">Es tu sonrisa un mundo de quimeras,</l>
+               <l n="13" met="-+---+---+-">y son las ilusiones prisioneras</l>
+               <l n="14" met="--+--+---+-">en el hilo de perlas de tu boca.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s319n_1042">
+            <head>Puesta de sol</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-">El astro de oro, el luminar del cielo,</l>
+               <l n="2" met="--+--+---+-">en las líquidas ondas se ocultaba,</l>
+               <l n="3" met="-+---+---+-">la brisa, caprichosa, jugueteaba</l>
+               <l n="4" met="--+--+---+-">en las selvas oscuras de tu pelo.</l>
+            </lg>
+            <lg n="2" type="terceto">
+               <l n="5" met="+--+---+-+-">-¡Canta! -dijiste- con vibrante anhelo!</l>
+               <l n="6" met="++-+-+---+-">¡Canta esa lumbre excelsa que se acaba!-</l>
+               <l n="7" met="--+--+---+-" enjamb="B-pb_verb_cprep">Y en la línea indecisa fulguraba</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="8" met="-+---+--++-" enjamb="I-pb_verb_cprep">del cárdeno horizonte, sin un velo.</l>
+               <l n="9" met="+-+-++---+-" enjamb="B-pb_noun_prep">¡Lo recuerdo muy bien! En la agonía</l>
+               <l n="10" met="--+--++--+-" enjamb="I-pb_noun_prep">del celeste volcán, bella María,</l>
+            </lg>
+            <lg n="4" type="cuarteto">
+               <l n="11" met="-+-+-+---+-">miraba yo tu faz encantadora...</l>
+               <l n="12" met="--+--+---+-">Y ante aquel espectáculo de muerte.</l>
+               <l n="13" met="+--+---+-+-">¡raro contraste!, parecíame al verte</l>
+               <l n="14" met="---+-+---+-">que despuntaba, espléndida, la aurora.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s319n_1043">
+            <head>La lechera</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-">Ojos negros, castaña cabellera;</l>
+               <l n="2" met="--+--+---+-">las mejillas de nieve y escarlata;</l>
+               <l n="3" met="-+---+++-+-" enjamb="B-ex_dobj_verb">las pomas del amor, ¡cuán bien retrata</l>
+               <l n="4" met="--+--+---+-" enjamb="I-ex_dobj_verb">su turgente y temblante delantera!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-++--+---+-">Miradla, por la alegre carretera,</l>
+               <l n="6" met="---+-+-+-+-">cuando el naciente sol su luz dilata,</l>
+               <l n="7" met="--+--+---+-" enjamb="B-pb_adj_noun">y a sus rayos el cántaro de lata</l>
+               <l n="8" met="--+--+---+-" enjamb="I-pb_adj_noun">salpicado de helechos reverbera.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">Dibujando graciosas redondeces,</l>
+               <l n="10" met="--+--+-+-+-">el percal a sus formas ciñe a veces</l>
+               <l n="11" met="-+---+---+-">el viento caprichoso, jugueteando...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">Desnudo el pie, la pantorrilla al aire,</l>
+               <l n="13" met="--+--+---+-">y moviendo su cuerpo con donaire,</l>
+               <l n="14" met="-+---++--+-">oliendo al retamal pasa cantando.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s319n_1044">
+            <head>Remembranza</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-">Marco el postigo a su hermosura era,</l>
+               <l n="2" met="+-+-+--+++-">¡ha cincuenta años! ¡con dolor lo digo!</l>
+               <l n="3" met="+-+--+---+-" enjamb="B-pb_adj_noun">Hoy pasé por su calle y el postigo</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-pb_adj_noun">abierto vi, como diciendo: -¡Espera!-</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-" enjamb="B-ex_subj_verb">Ni un compañero de mi edad primera</l>
+               <l n="6" met="-+-+---+-+-" enjamb="I-ex_subj_verb">existe ya, de mi pasión testigo;</l>
+               <l n="7" met="-+---+---+-">de aquellos que rondábanla conmigo</l>
+               <l n="8" met="--+--+---+-">por las losas gastadas de la acera.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+---+-">¡Ella, núbil, bajó a la sepultura</l>
+               <l n="10" met="-+-+-+---+-">llevándose un ensueño de ventura!</l>
+               <l n="11" met="+------+-+-">Cruzo delante de su hogar desierto...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-">Vuelvo atrás la mirada entristecida,</l>
+               <l n="13" met="--++-+---+-" enjamb="B-pb_adj_adv">y se le antoja al alma dolorida</l>
+               <l n="14" met="+-+-+++--+-" enjamb="I-pb_adj_adv">hoy, el postigo aquel, un nicho abierto.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

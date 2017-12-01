@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>A una rosa -- I</title>
+            <author corresp="#disco_009e">Juan Bautista Aguirre</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">98</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_po_009e0024_01"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XVIII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc12653"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xviii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_009e"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/46776903"/>
+                  <persName type="short">Aguirre</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan Bautista</forename>
+                     <surname property="foaf:familyName">Aguirre</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan Bautista Aguirre</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Daule</settlement>
+                           <country>Ecuador</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1725" cert="high"/>
+                     <date type="century">18</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1786" cert="high"/>
+                     <date type="century">18</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s009e0024_01" about="dbpedia:Soneto">
+                        <title property="dc:title">A una rosa -- I</title>
+                        <title type="incipit" property="dc:alternative">En catre de esmeraldas nace altiva</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <head>A una rosa -- I</head>
+      </front>
+      <body>
+         <lg n="1" type="cuarteto">
+            <l n="1" met="-+---+-+-+-" enjamb="B-ex_subj_verb">En catre de esmeraldas nace altiva</l>
+            <l n="2" met="-+-+---+-+-" enjamb="I-ex_subj_verb">la bella rosa, vanidad de Flora,</l>
+            <l n="3" met="-+-+-+-+-+-" enjamb="B-ex_dobj_verb">y cuanto en perlas le bebió a la aurora</l>
+            <l n="4" met="+--+-+-+-+-" enjamb="I-ex_dobj_verb">cobra en rubís del sol la luz altiva.</l>
+         </lg>
+         <lg n="2" type="cuarteto">
+            <l n="5" met="---+-+++-+-" enjamb="B-cc_crossclause">De nacarado incendio es llama viva</l>
+            <l n="6" met="-+-+-+--++-" enjamb="I-cc_crossclause">que al prado ilustra en fe de que la adora;</l>
+            <l n="7" met="-+++-+-+-+-" enjamb="B-ex_dobj_verb">la luz la enciende, el sol sus hojas dora</l>
+            <l n="8" met="-+-+---+++-" enjamb="I-ex_dobj_verb">con bello nácar de que al fin la priva.</l>
+         </lg>
+         <lg n="3" type="terceto">
+            <l n="9" met="+----++--+-">Rosas, escarmentad: no presurosas</l>
+            <l n="10" met="--++-+---+-">anheléis a este ardor, que si autoriza,</l>
+            <l n="11" met="--+--+-+-+-">aniquila también el sol, ¡oh rosas!</l>
+         </lg>
+         <lg n="4" type="terceto">
+            <l n="12" met="-+--++-+-+-">Naced y vivir lentas; no en la prisa</l>
+            <l n="13" met="+--+-+---+-">os confundáis, floridas mariposas,</l>
+            <l n="14" met="+--+-+-+-+-">que es anhelar arder, buscar ceniza.</l>
+         </lg>
+      </body>
+  </text>
+</TEI>

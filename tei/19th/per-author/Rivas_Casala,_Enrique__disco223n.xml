@@ -1,93 +1,150 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Enrique Rivas Casala</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_223n"/>
-          <name type="short">Rivas Casala</name>
-          <name type="full">
-            <name type="first-name">Enrique</name>
-            <name type="second-name">Rivas Casala</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">89</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_223n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_223n" role="author" sex="M">
-            <persName>Enrique Rivas Casala</persName>
-            <birth><placeName type="place">Málaga</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Enrique Rivas Casala</title>
+            <author corresp="#disco_223n">Enrique Rivas Casala</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">89</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_223n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_223n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Rivas Casala</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Enrique</forename>
+                     <surname property="foaf:familyName">Rivas Casala</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Enrique Rivas Casala</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Málaga</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s223n_0722" about="dbpedia:Soneto">
+                        <title property="dc:title">Último amor</title>
+                        <title type="incipit" property="dc:alternative">Dame a beber enamorada loca</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Enrique Rivas Casala</head>
-        <p>Málaga. 19th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s223n_0722">
-        <head>Último amor</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Dame a beber enamorada loca</l>
-          <l n="2">el néctar que las penas desvanece</l>
-          <l n="3">aquel que la razón nos oscurece</l>
-          <l n="4">y la fiereza del valor provoca.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Dame con el perfume de tu boca,</l>
-          <l n="6">el veneno sutil que me enardece,</l>
-          <l n="7">y el dormido volcán que se estremece</l>
-          <l n="8">vuelva otra vez a conmover la roca.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De la edad juvenil y los engaños,</l>
-          <l n="10">haz que de nuevo se despierte el brío,</l>
-          <l n="11">renacerá también de aquellos años,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">la ardiente sangre que apagó el hastío,</l>
-          <l n="13">si me dejas; ¡con tantos desengaños</l>
-          <l n="14">entre la nieve moriré de frío!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Enrique Rivas Casala</head>
+            <p>Málaga. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s223n_0722">
+            <head>Último amor</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+---+-+-" enjamb="B-ex_dobj_verb">Dame a beber enamorada loca</l>
+               <l n="2" met="-+---+---+-" enjamb="B-ex_dobj_verb I-ex_dobj_verb">el néctar que las penas desvanece</l>
+               <l n="3" met="-+---++--+-" enjamb="I-ex_dobj_verb">aquel que la razón nos oscurece</l>
+               <l n="4" met="---+---+-+-">y la fiereza del valor provoca.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++---+---+-">Dame con el perfume de tu boca,</l>
+               <l n="6" met="--+--+-+-+-">el veneno sutil que me enardece,</l>
+               <l n="7" met="--+--+---+-" enjamb="B-pb_verb_chain">y el dormido volcán que se estremece</l>
+               <l n="8" met="++-+---+-+-" enjamb="I-pb_verb_chain">vuelva otra vez a conmover la roca.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">De la edad juvenil y los engaños,</l>
+               <l n="10" met="+--+---+-+-">haz que de nuevo se despierte el brío,</l>
+               <l n="11" met="---+-+-+-+-">renacerá también de aquellos años,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">la ardiente sangre que apagó el hastío,</l>
+               <l n="13" met="-++--+---+-" enjamb="B-pb_noun_prep">si me dejas; ¡con tantos desengaños</l>
+               <l n="14" met="---+---+-+-" enjamb="I-pb_noun_prep">entre la nieve moriré de frío!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

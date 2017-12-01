@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Soneto</title>
+            <author corresp="#disco_362g">Diego (Padre) Murillo</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">288</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_po_362g0826"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_362g"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Murillo</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Diego (Padre)</forename>
+                     <surname property="foaf:familyName">Murillo</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Diego (Padre) Murillo</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s362g0826" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">El paso lento, ahora acelerado,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <head>Soneto</head>
+      </front>
+      <body>
+         <lg n="1" type="cuarteto">
+            <l n="1" met="-+-++----+-">El paso lento, ahora acelerado,</l>
+            <l n="2" met="---+-+---+-">de virginal vergüenza acompañada,</l>
+            <l n="3" met="-+-+--+--+-">la rubia crencha al tranzado echada</l>
+            <l n="4" met="+--+--+--+-">busca la oveja al cordero amado.</l>
+         </lg>
+         <lg n="2" type="unknown">
+            <l n="5" met="-+---+-+-+-">El rastro de la sangre que ha dejado,</l>
+            <l n="6" met="+--+--+--+-">sigue la madre de su hijo amado,</l>
+            <l n="7" met="-+-+-+---+-" enjamb="B-ex_subj_verb">sin duda le hallará, porque bañada</l>
+            <l n="8" met="+--+---+-+-" enjamb="I-ex_subj_verb">queda la calle, y lo demás bañado.</l>
+         </lg>
+         <lg n="3" type="terceto">
+            <l n="9" met="++-+---+-+-">Cual va la cierva con ardor buscando,</l>
+            <l n="10" met="-+-+---+-+-">la clara fuente, donde bañe y riegue,</l>
+            <l n="11" met="-+-+---+-+-">de flechas cruel la peligrosa herida.</l>
+         </lg>
+         <lg n="4" type="terceto">
+            <l n="12" met="-++--+---+-">Así corre la Virgen suspirando,</l>
+            <l n="13" met="-++--+---+-">y no la detendrán hasta que llegue</l>
+            <l n="14" met="-+-+-+---+-">al hijo, que es la fuente de su vida.</l>
+         </lg>
+         <lg n="5" type="cuarteto">
+            <l n="15" met="+--+---+-+-">Llega la Virgen donde el Hijo estaba;</l>
+            <l n="16" met="+-+++-+--+-">Ella le mira y El la mira a Ella;</l>
+            <l n="17" met="+-+--+--+-">Ella llora por El y El por Ella,</l>
+            <l n="18" met="---+-+---+-">y por los dos la tierra se regaba.</l>
+         </lg>
+         <lg n="6" type="cuarteto">
+            <l n="19" met="+--+---+-+-">Ambos se miran, mas ninguno hablaba;</l>
+            <l n="20" met="--+--+---+-">con los ojos publica su querella;</l>
+            <l n="21" met="-+-+--+--+-">El ve su muerte en los ojos de Ella</l>
+            <l n="22" met="+--+-+---+-">y Ella en los ojos de El lo que mataba.</l>
+         </lg>
+         <lg n="7" type="terceto">
+            <l n="23" met="---++----+-" enjamb="B-ex_dobj_verb">Mas el impío pueblo, que entendía</l>
+            <l n="24" met="--+--+-+-+-" enjamb="I-ex_dobj_verb">que aliviaba su pena en tal jornada,</l>
+            <l n="25" met="+--+---+-+-">ver a su madre en el dolor presente,</l>
+         </lg>
+         <lg n="8" type="terceto">
+            <l n="26" met="-+-+------+-">al punto apartan al Hijo de María,</l>
+            <l n="27" met="-+-+---+-+-">del Hijo apartan a su Madre amada</l>
+            <l n="28" met="+-++-+++-+-">¡Juzgue quién sabe quién más pena siente!</l>
+         </lg>
+         <lg n="9" type="cuarteto">
+            <l n="29" met="-+-+-+-+-+-">El Verbo eterno al cielo el rostro alzado,</l>
+            <l n="30" met="-+-+-+---+-">estando ya en la cruz donde moría,</l>
+            <l n="31" met="-+-+---+-+-" enjamb="B-pb_noun_prep">al Padre ruega por la culpa impía</l>
+            <l n="32" met="-+--++-+-+-" enjamb="I-pb_noun_prep">del pueblo que le tiene allí enclavado.</l>
+         </lg>
+         <lg n="10" type="cuarteto">
+            <l n="33" met="-+-+-+-+-+-" enjamb="B-ex_dobj_verb">Prométele al ladrón que está a su lado</l>
+            <l n="34" met="+--+-+-+-+-" enjamb="I-ex_dobj_verb">mucho mayor merced que le pedía,</l>
+            <l n="35" met="-----+----">y a su Madre Santísima María</l>
+            <l n="36" met="++-+---+-+-">le da por hijo a Juan amado.</l>
+         </lg>
+         <lg n="11" type="terceto">
+            <l n="37" met="-+-+-+-+++-" enjamb="B-pb_verb_chain">Pregunta al Padre: «¿Qué ocasión ha habido</l>
+            <l n="38" met="-----++--+-" enjamb="I-pb_verb_chain">para desampararme, Eterno Padre?»</l>
+            <l n="39" met="-+---+-+-+-">y vuelto al pueblo dice: «Sitio».</l>
+         </lg>
+         <lg n="12" type="terceto">
+            <l n="40" met="-+---+-+-+-">Y viendo que lo escrito está cumplido,</l>
+            <l n="41" met="--+--+---+-">inclinando su rostro hacia su Madre,</l>
+            <l n="42" met="-+-+-+---+-">ofrece al Padre el alma en sacrificio.</l>
+         </lg>
+      </body>
+  </text>
+</TEI>

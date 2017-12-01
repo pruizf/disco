@@ -1,218 +1,294 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de José J. Villa</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_366n"/>
-          <name type="short">Villa</name>
-          <name type="full">
-            <name type="first-name">José J.</name>
-            <name type="second-name">Villa</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">6</measure>
-        <measure unit="tokens">539</measure>
-        <measure unit="line">84</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_366n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_366n" role="author" sex="M">
-            <persName>José J. Villa</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de José J. Villa</title>
+            <author corresp="#disco_366n">José J. Villa</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">6</measure>
+            <measure unit="tokens">539</measure>
+            <measure unit="line">84</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_366n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_366n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Villa</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">José J.</forename>
+                     <surname property="foaf:familyName">Villa</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">José J. Villa</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s366n_1349" about="dbpedia:Soneto">
+                        <title property="dc:title">Umbra</title>
+                        <title type="incipit" property="dc:alternative">Amo las cosas tristes: esas flores</title>
+                     </bibl>
+                     <bibl resource="disco#s366n_1350" about="dbpedia:Soneto">
+                        <title property="dc:title">El obrero</title>
+                        <title type="incipit" property="dc:alternative">Ajeno de la vida a los placeres</title>
+                     </bibl>
+                     <bibl resource="disco#s366n_1351" about="dbpedia:Soneto">
+                        <title property="dc:title">El esquife</title>
+                        <title type="incipit" property="dc:alternative">La blanca vela desplegando al viento,</title>
+                     </bibl>
+                     <bibl resource="disco#s366n_1352" about="dbpedia:Soneto">
+                        <title property="dc:title">El caballo</title>
+                        <title type="incipit" property="dc:alternative">Echando espumarajos por la boca,</title>
+                     </bibl>
+                     <bibl resource="disco#s366n_1353" about="dbpedia:Soneto">
+                        <title property="dc:title">Crepúsculo</title>
+                        <title type="incipit" property="dc:alternative">El horizonte, con cambiantes grises,</title>
+                     </bibl>
+                     <bibl resource="disco#s366n_1354" about="dbpedia:Soneto">
+                        <title property="dc:title">Como yo hago un soneto</title>
+                        <title type="incipit" property="dc:alternative">Tomo un papel más blanco que el armiño;</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>José J. Villa</head>
-        <p>Cuba. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s366n_1349">
-        <head>Umbra</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Amo las cosas tristes: esas flores</l>
-          <l n="2">que ostentaron amantes desposadas,</l>
-          <l n="3">y en un rincón, después, abandonadas,</l>
-          <l n="4">van perdiendo su esencia y sus colores.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Las misivas que ayer fueron de amores</l>
-          <l n="6">un tesoro, y hoy yacen sepultadas</l>
-          <l n="7">entre rizos y cintas arrugadas,</l>
-          <l n="8">sufriendo del olvido los rigores.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Amo los rostros mustios, que comentan</l>
-          <l n="10">de un pasado feliz la historia breve,</l>
-          <l n="11">y triste, del presente se lamentan.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y amo a un ciprés, que baña en sombra leve</l>
-          <l n="13">unos despojos que mi amor le cuentan,</l>
-          <l n="14">cuando él su copa, quejumbroso, mueve.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s366n_1350">
-        <head>El obrero</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Ajeno de la vida a los placeres</l>
-          <l n="2">que goza el adalid de falso brillo,</l>
-          <l n="3">el golpe de la fragua y del martillo</l>
-          <l n="4">es carne mutilada en los talleres.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">No parece el hermano de esos seres</l>
-          <l n="6">que encumbró la fortuna; es tan sencillo</l>
-          <l n="7">que sube, por un solo panecillo,</l>
-          <l n="8">la escala de los múltiples quehaceres.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Doblada la cerviz y sudoroso,</l>
-          <l n="10">como una bestia en el trabajo ungida,</l>
-          <l n="11">atraviesa las calles silencioso.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Pero ¡ay! lleva en el alma comprimida,</l>
-          <l n="13">toda una tempestad: ¡el pavoroso</l>
-          <l n="14">problema de su clase redimida!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s366n_1351">
-        <head>El esquife</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">La blanca vela desplegando al viento,</l>
-          <l n="2">el azuloso mar surca triunfante,</l>
-          <l n="3">reclinada la borda vacilante</l>
-          <l n="4">al impulso del loco movimiento.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Dominador del líquido elemento,</l>
-          <l n="6">parece que su dicha ve distante</l>
-          <l n="7">y que en pos de ella lánzase anhelante,</l>
-          <l n="8">como tras la ilusión el pensamiento.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Desde un peñón, en la arenosa playa,</l>
-          <l n="10">pasar le veo la cerúlea raya</l>
-          <l n="11">que al mar y al cielo en el confín divide.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y al ocultarse en el espacioso umbroso,</l>
-          <l n="13">se esfuma como un cisne misterioso</l>
-          <l n="14">que moviendo las alas se despide.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s366n_1352">
-        <head>El caballo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Echando espumarajos por la boca,</l>
-          <l n="2">sueltas las riendas y la crin tendida,</l>
-          <l n="3">con dos ascuas por ojos, lleva erguida</l>
-          <l n="4">la audaz cabeza en su carrera loca.</l>
-        </lg>
-        <lg n="2" type="terceto">
-          <l n="5">Cruje la tierra que su planta toca;</l>
-          <l n="6">doblégase la yerba estremecida;</l>
-          <l n="7">y él, resoplando, en la veloz huida</l>
-        </lg>
-        <lg n="3" type="unknown">
-          <l n="8">parece un dios que la tormenta evoca.</l>
-          <l n="9">Ya rebrame el cañón en las alturas,</l>
-          <l n="10">ya alumbre el sol o rujan los ciclones,</l>
-          <l n="11">fantasmas por colinas y llanuras,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">o entre nieblas fulgor de exhalaciones,</l>
-          <l n="13">allá va como el héroe denodado,</l>
-          <l n="14">intrépido, valiente, desbocado.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s366n_1353">
-        <head>Crepúsculo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">El horizonte, con cambiantes grises,</l>
-          <l n="2">de grana y oro, y perlas se colora,</l>
-          <l n="3">y ya luce jirones de la aurora,</l>
-          <l n="4">ya del iris espléndidos matices.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Del esmaltado suelo los tapices</l>
-          <l n="6">el sol a trechos con sus rayos dora,</l>
-          <l n="7">y cual negro crespón que descolora,</l>
-          <l n="8">baja la sombra en mágicos deslices.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Como un ángel que expira delirante</l>
-          <l n="10">abrazado a una diosa, en ese instante</l>
-          <l n="11">muere la tarde en brazos de la noche.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y yo al mirarla, entristecido, siento</l>
-          <l n="13">que en el jardín del alma abre su broche</l>
-          <l n="14">la delicada flor del pensamiento.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s366n_1354">
-        <head>Como yo hago un soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Tomo un papel más blanco que el armiño;</l>
-          <l n="2">lo extiendo en mi carpeta con esmero;</l>
-          <l n="3">la pluma empuño, mojo en el tintero,</l>
-          <l n="4">y con cualquier tesis me encariño.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Por ejemplo, el Amor, que es un buen niño,</l>
-          <l n="6">aunque a veces un tanto majadero:</l>
-          <l n="7">mis cuitas le relato placentero,</l>
-          <l n="8">le acaricio después, y al fin le riño.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Medito un poco más. De nuevo mojo</l>
-          <l n="10">la péñola que, exhausta, ya no escribe,</l>
-          <l n="11">y el hilo del asunto otra vez cojo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Pero, ya aquí, la musa se apercibe</l>
-          <l n="13">de que hacer un soneto fue mi antojo,</l>
-          <l n="14">y que lo de por hecho me prescribe.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>José J. Villa</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s366n_1349">
+            <head>Umbra</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+-+-+-" enjamb="B-cc_crossclause">Amo las cosas tristes: esas flores</l>
+               <l n="2" met="--+--+---+-" enjamb="I-cc_crossclause">que ostentaron amantes desposadas,</l>
+               <l n="3" met="-+-+-+---+-">y en un rincón, después, abandonadas,</l>
+               <l n="4" met="+-+--+---+-">van perdiendo su esencia y sus colores.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--++--+-" enjamb="B-ex_subj_verb">Las misivas que ayer fueron de amores</l>
+               <l n="6" met="+-+-++---+-" enjamb="I-ex_subj_verb">un tesoro, y hoy yacen sepultadas</l>
+               <l n="7" met="--+--+---+-">entre rizos y cintas arrugadas,</l>
+               <l n="8" met="-+---+---+-">sufriendo del olvido los rigores.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+-+---+-" enjamb="B-pb_verb_cprep">Amo los rostros mustios, que comentan</l>
+               <l n="10" met="+-+--+-+-+-" enjamb="I-pb_verb_cprep">de un pasado feliz la historia breve,</l>
+               <l n="11" met="-+---+---+-">y triste, del presente se lamentan.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++-+-+-+-+-" enjamb="B-ex_dobj_verb">Y amo a un ciprés, que baña en sombra leve</l>
+               <l n="13" met="+--+---+++-" enjamb="I-ex_dobj_verb">unos despojos que mi amor le cuentan,</l>
+               <l n="14" met="-+-+---+-+-">cuando él su copa, quejumbroso, mueve.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s366n_1350">
+            <head>El obrero</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-" enjamb="B-cc_crossclause">Ajeno de la vida a los placeres</l>
+               <l n="2" met="-+---+-+-+-" enjamb="I-cc_crossclause">que goza el adalid de falso brillo,</l>
+               <l n="3" met="-+---+---+-" enjamb="B-ex_subj_verb">el golpe de la fragua y del martillo</l>
+               <l n="4" met="++---+---+-" enjamb="I-ex_subj_verb">es carne mutilada en los talleres.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+-+-+-" enjamb="B-cc_crossclause">No parece el hermano de esos seres</l>
+               <l n="6" met="--+--+++-+-" enjamb="I-cc_crossclause">que encumbró la fortuna; es tan sencillo</l>
+               <l n="7" met="-+--++---+-">que sube, por un solo panecillo,</l>
+               <l n="8" met="-+---+---+-">la escala de los múltiples quehaceres.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">Doblada la cerviz y sudoroso,</l>
+               <l n="10" met="-+-+---+-+-">como una bestia en el trabajo ungida,</l>
+               <l n="11" met="--+--+---+-">atraviesa las calles silencioso.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">Pero ¡ay! lleva en el alma comprimida,</l>
+               <l n="13" met="++---+---+-" enjamb="B-pb_adj_noun">toda una tempestad: ¡el pavoroso</l>
+               <l n="14" met="-+---+---+-" enjamb="I-pb_adj_noun">problema de su clase redimida!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s366n_1351">
+            <head>El esquife</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-">La blanca vela desplegando al viento,</l>
+               <l n="2" met="---+-++--+-">el azuloso mar surca triunfante,</l>
+               <l n="3" met="--+--+---+-" enjamb="B-pb_adj_prep">reclinada la borda vacilante</l>
+               <l n="4" met="--+--+---+-" enjamb="I-pb_adj_prep">al impulso del loco movimiento.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-">Dominador del líquido elemento,</l>
+               <l n="6" met="-+---+-+-+-">parece que su dicha ve distante</l>
+               <l n="7" met="---+-+-+-+-">y que en pos de ella lánzase anhelante,</l>
+               <l n="8" met="-----+---+-">como tras la ilusión el pensamiento.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">Desde un peñón, en la arenosa playa,</l>
+               <l n="10" met="-+++--+--+-" enjamb="B-cc_crossclause">pasar le veo la cerúlea raya</l>
+               <l n="11" met="-+-+---+-+-" enjamb="I-cc_crossclause">que al mar y al cielo en el confín divide.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---++---+-+-">Y al ocultarse en el espacioso umbroso,</l>
+               <l n="13" met="-+--++---+-" enjamb="B-cc_crossclause">se esfuma como un cisne misterioso</l>
+               <l n="14" met="--+--+---+-" enjamb="I-cc_crossclause">que moviendo las alas se despide.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s366n_1352">
+            <head>El caballo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">Echando espumarajos por la boca,</l>
+               <l n="2" met="+--+---+-+-">sueltas las riendas y la crin tendida,</l>
+               <l n="3" met="-++--+-+-+-" enjamb="B-ex_dobj_verb">con dos ascuas por ojos, lleva erguida</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">la audaz cabeza en su carrera loca.</l>
+            </lg>
+            <lg n="2" type="terceto">
+               <l n="5" met="+--+---+-+-">Cruje la tierra que su planta toca;</l>
+               <l n="6" met="-+-+-+---+-">doblégase la yerba estremecida;</l>
+               <l n="7" met="+--+----++-" enjamb="B-ex_subj_verb">y él, resoplando, en la veloz huida</l>
+            </lg>
+            <lg n="3" type="unknown">
+               <l n="8" met="-+++---+-+-" enjamb="I-ex_subj_verb">parece un dios que la tormenta evoca.</l>
+               <l n="9" met="+-+--+---+-">Ya rebrame el cañón en las alturas,</l>
+               <l n="10" met="++-+-+---+-">ya alumbre el sol o rujan los ciclones,</l>
+               <l n="11" met="-+---+---+-">fantasmas por colinas y llanuras,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">o entre nieblas fulgor de exhalaciones,</l>
+               <l n="13" met="-++--+---+-">allá va como el héroe denodado,</l>
+               <l n="14" met="-+---+---+-">intrépido, valiente, desbocado.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s366n_1353">
+            <head>Crepúsculo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+---+-+-">El horizonte, con cambiantes grises,</l>
+               <l n="2" met="-++--+---+-">de grana y oro, y perlas se colora,</l>
+               <l n="3" met="-++--+---+-">y ya luce jirones de la aurora,</l>
+               <l n="4" met="+-+--+---+-">ya del iris espléndidos matices.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-">Del esmaltado suelo los tapices</l>
+               <l n="6" met="-+-+---+-+-">el sol a trechos con sus rayos dora,</l>
+               <l n="7" met="--+--+---+-">y cual negro crespón que descolora,</l>
+               <l n="8" met="+--+-+---+-">baja la sombra en mágicos deslices.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--+---+-">Como un ángel que expira delirante</l>
+               <l n="10" met="--++-+-+-+-">abrazado a una diosa, en ese instante</l>
+               <l n="11" met="+--+-+---+-">muere la tarde en brazos de la noche.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-++--+-+-" enjamb="B-ex_dobj_verb">Y yo al mirarla, entristecido, siento</l>
+               <l n="13" met="---+-++--+-" enjamb="B-ex_dobj_verb I-ex_dobj_verb">que en el jardín del alma abre su broche</l>
+               <l n="14" met="---+-+---+-" enjamb="I-ex_dobj_verb">la delicada flor del pensamiento.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s366n_1354">
+            <head>Como yo hago un soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+++---+-">Tomo un papel más blanco que el armiño;</l>
+               <l n="2" met="++---+---+-">lo extiendo en mi carpeta con esmero;</l>
+               <l n="3" met="-+-+-+---+-">la pluma empuño, mojo en el tintero,</l>
+               <l n="4" met="---++-+--+-">y con cualquier tesis me encariño.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+--+-++++-">Por ejemplo, el Amor, que es un buen niño,</l>
+               <l n="6" met="--+-++---+-">aunque a veces un tanto majadero:</l>
+               <l n="7" met="-+-+-+---+-">mis cuitas le relato placentero,</l>
+               <l n="8" met="+-+--+-+++-">le acaricio después, y al fin le riño.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-++-++-+-">Medito un poco más. De nuevo mojo</l>
+               <l n="10" met="-+---+-+++-">la péñola que, exhausta, ya no escribe,</l>
+               <l n="11" met="-+---++-++-">y el hilo del asunto otra vez cojo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++-+---+-" enjamb="B-pb_verb_cprep">Pero, ya aquí, la musa se apercibe</l>
+               <l n="13" met="--++-+-+-+-" enjamb="I-pb_verb_cprep">de que hacer un soneto fue mi antojo,</l>
+               <l n="14" met="--+--+-+-+-">y que lo de por hecho me prescribe.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

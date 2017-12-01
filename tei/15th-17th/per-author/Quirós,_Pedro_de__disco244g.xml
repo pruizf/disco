@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Pedro de Quirós</title>
+            <author corresp="#disco_244g">Pedro de Quirós</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">8</measure>
+            <measure unit="tokens">745</measure>
+            <measure unit="line">112</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_244g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_244g"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/87149630"/>
+                  <persName type="short">Quirós</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Pedro</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Quirós</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Pedro de Quirós</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Sevilla</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1590" cert="high"/>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1667" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s244g_0510" about="dbpedia:Soneto">
+                        <title property="dc:title">Sonetos</title>
+                        <title type="incipit" property="dc:alternative">Itálica, ¿do estás? Tu lozanía</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <div>
+            <head>Pedro de Quirós</head>
+            <p>Sevilla. 1590 - 1667</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s244g_0510">
+            <head>Sonetos</head>
+            <lg type="sonnet" xml:id="s244g_0510_01">
+               <head>- I -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-+--+-+--+-" enjamb="B-pb_adj_noun">Itálica, ¿do estás? Tu lozanía</l>
+                  <l n="2" met="-+-+-+---+-" enjamb="I-pb_adj_noun">tendida yace al peso de los años.</l>
+                  <l n="3" met="+--+-+---+-" enjamb="B-ex_subj_verb">¿Quién a la luz que dan tus desengaños</l>
+                  <l n="4" met="--+--+-+-+-" enjamb="I-ex_subj_verb">en la sombra veloz del tiempo fía?</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+-+---+-+-" enjamb="B-pb_noun_prep">Cedió tu pompa a la fatal porfía</l>
+                  <l n="6" met="--+--+---+-" enjamb="I-pb_noun_prep">de tirana ambición de los extraños;</l>
+                  <l n="7" met="-+---+---+-">mas hízote el ejemplo de tus daños</l>
+                  <l n="8" met="+--+---+-+-">libro de sabios, de ignorantes guía.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="++-+-+-+-+-" enjamb="B-pb_adj_noun">Mal dije; no humilló tus torres claras</l>
+                  <l n="10" met="+----+-+-+-" enjamb="I-pb_adj_noun">tiempo ni emulación con manos fieras;</l>
+                  <l n="11" met="---++--+-+-">que, a resistirte, de las dos triunfaras.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="--++-+-+-+-">Tu morir fue deber; que si hoy vivieras,</l>
+                  <l n="13" met="--+-++-+-+-">ni a tus héroes más triunfos les hallaras,</l>
+                  <l n="14" met="--+--+---+-">ni del mundo en el ámbito cupieras.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s244g_0510_02">
+               <head>- II -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="---+-+-+-+-">El coronado yelmo, el real escudo,</l>
+                  <l n="2" met="-+-+---+-+-">primor que admiras del cincel valiente,</l>
+                  <l n="3" met="+-+--+---+-">de esta urna de pórfido luciente</l>
+                  <l n="4" met="++-+---+-+-">lengua es que rompe su silencio mudo.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+-+---+++-" enjamb="B-pb_verb_adv">Sellado el mármol ocultar no pudo</l>
+                  <l n="6" met="+-+--+---+-" enjamb="I-pb_verb_adv">tanto sol retirado al occidente;</l>
+                  <l n="7" met="--+--+---+-" enjamb="B-ex_subj_verb">que sus glorias la fama reverente</l>
+                  <l n="8" met="-+-+---+-+-" enjamb="I-ex_subj_verb">en bronce graba con buril agudo.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+--+++-+-+-">Alma del tiempo es esta pira grave,</l>
+                  <l n="10" met="---+-+++-+-">que al postrimer Afán le da reposo,</l>
+                  <l n="11" met="--+--+-+-+-">cuyo nombre en su fama apenas cabe;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+-+-+-+-+-" enjamb="B-ex_subj_verb">su fama, que es el triunfo más glorioso</l>
+                  <l n="13" met="-----+-+-+-" enjamb="I-ex_subj_verb">que a la inmortalidad terció la llave,</l>
+                  <l n="14" met="-++--++--+-">deidad, le veneró Marte dichoso.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s244g_0510_03">
+               <head>- III -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="---+-+---+-">Del cristalino piélago se atreve</l>
+                  <l n="2" met="-+-+-+---+-">tal vez marina concha a la ribera,</l>
+                  <l n="3" met="--++---+-+-" enjamb="B-ex_subj_verb">y el fulgor puro de la luz primera</l>
+                  <l n="4" met="-+-+---+-+-" enjamb="I-ex_subj_verb">su ser, menor que la avaricia, bebe.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="---+-+-+-+-" enjamb="B-pb_verb_chain">De la preciosa perla apenas debe</l>
+                  <l n="6" met="-+-+-+---+-" enjamb="B-pb_verb_chain I-pb_verb_chain">quedar fecunda el alba lisonjera</l>
+                  <l n="7" met="--+--+---+-" enjamb="B-pb_verb_adv I-pb_verb_chain">cuando al mar se retira, porque fuera</l>
+                  <l n="8" met="+-+--+-+-+-" enjamb="I-pb_verb_adv">ve los rayos del sol manchar su nieve.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="--+--+-+++-" enjamb="B-ex_dobj_verb">En el mar de la gracia ¿quién no mira</l>
+                  <l n="10" met="+--+-+-+-+-" enjamb="I-ex_dobj_verb">que eres ¡oh Virgen! tú la perla pura</l>
+                  <l n="11" met="---++--+-+-">por cuya luz aun la del sol suspira?</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+-+--+---+-">Mancha el sol de tu perla la blancura;</l>
+                  <l n="13" met="--++-+-+-+-" enjamb="B-ex_dobj_verb">mas que en ti no haya mancha ¿a quién admira</l>
+                  <l n="14" met="+-++-+---+-" enjamb="I-ex_dobj_verb">si aun al sol presta rayos tu hermosura?</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s244g_0510_04">
+               <head>- IV -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-+-+-+---+-" enjamb="B-cc_crossclause">¡Oh tú, cualquier que fueses, el primero</l>
+                  <l n="2" met="-+-+---+-+-" enjamb="I-cc_crossclause">que a verdes canas el enrubio diste,</l>
+                  <l n="3" met="-+-+---+-+-">y rotos dientes con marfil supiste,</l>
+                  <l n="4" met="++---+---+-">seas pasto infeliz del Cancerbero!</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+---+++-+-" enjamb="B-pb_noun_prep">Por ti, a pesar de casi un siglo entero</l>
+                  <l n="6" met="+--+----++-" enjamb="I-pb_noun_prep">de años que tiene doña Guzmía, insiste</l>
+                  <l n="7" met="-++--+---+-">en que es niña, y del malo se reviste</l>
+                  <l n="8" met="--+--+-+++-">porque yo por sus rugas no me muero.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+----+---+-">Niña dentipostiza y trencicana,</l>
+                  <l n="10" met="++---+---+-">no quieras que arrastrando el apetito,</l>
+                  <l n="11" met="-++-++---+-">por ti sea yo mártir del demonio.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+-+----+-">¡Ay! Olvídame; así, cuando mañana</l>
+                  <l n="13" met="--+-++-+-+-">rapagona te llame aquel bendito,</l>
+                  <l n="14" met="+-+-++---+-">nadie diga: «¡Oh qué falso testimonio!»</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s244g_0510_05">
+               <head>- V -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="--+--+---+-" enjamb="B-ex_dobj_verb">Ruiseñor amoroso cuyo llanto</l>
+                  <l n="2" met="++--++---+-" enjamb="I-ex_dobj_verb">no hay noble que no deje enternecido,</l>
+                  <l n="3" met="---+-+---+-">¡oh, si tu voz cantase mi gemido,</l>
+                  <l n="4" met="---+---+-+-">oh, si gimiera mi dolor tu canto!</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="--+--+-+-+-">Esperar mi desvelo osara tanto,</l>
+                  <l n="6" met="---+---+-+-">que mereciese por lo bien sentido</l>
+                  <l n="7" met="+--+---+-+-" enjamb="B-pb_verb_cprep">ser escuchado, cuando no creído</l>
+                  <l n="8" met="--+--+-+-+-" enjamb="I-pb_verb_cprep">de la que es de mi amor hermoso encanto.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="++-+---+-+-">¡Qué mal empleas tu caudal sonoro,</l>
+                  <l n="10" met="-+-+---+-+-">cantando el alba y a las flores bellas</l>
+                  <l n="11" met="+-+--+--++-">canta tú, oh, ruiseñor, lo que yo lloro!</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="--+--+---+-">Acomoda en tu pico mis querellas,</l>
+                  <l n="13" met="--++---+-+-">que si las dices a quien tierno adoro,</l>
+                  <l n="14" met="--+--+---+-">con tu voz llegarás a las estrellas.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s244g_0510_06">
+               <head>- VI -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-+-+-+-+-+-">Soñaba yo, querida Ardenia mía,</l>
+                  <l n="2" met="-+-+-+--++-">que Amor por dar alivio a mi sed loca</l>
+                  <l n="3" met="--+--+---+-" enjamb="B-pb_noun_prep">el aljófar nevado de tu boca</l>
+                  <l n="4" met="--+--+-+-+-" enjamb="I-pb_noun_prep">al divino clavel robar quería.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="--+--+---+-" enjamb="B-ex_dobj_verb">Con mi amor al respeto competía</l>
+                  <l n="6" met="---+---+-+-" enjamb="B-ex_dobj_verb I-ex_dobj_verb">a que tu dulce gravedad provoca</l>
+                  <l n="7" met="-+---+-+++-" enjamb="B-ex_subj_verb I-ex_dobj_verb">y el miedo por templar mi sed no poca</l>
+                  <l n="8" met="-++--+---+-" enjamb="I-ex_subj_verb">en dos fuentes los ojos convertía.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+--+---+-+-">Visto mi llanto, de temor nacido,</l>
+                  <l n="10" met="--+--+-+-+-">y mostrando en tu risa mil auroras</l>
+                  <l n="11" met="-+-+-+-+-+-">dijiste: «No haya más pastor dormido;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+----+---+-">mira en lo que imaginas lo que ignoras;</l>
+                  <l n="13" met="---+-++--+-">porque si lloras, no me has conocido;</l>
+                  <l n="14" met="--+--+--++-">y si me has conocido, ¿por qué lloras?»</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s244g_0510_07">
+               <head>- VII -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-+---+---+-">Al campo de los dulces ruiseñores</l>
+                  <l n="2" met="-+---+-+-+-">el alba despertó, vistióse de oro,</l>
+                  <l n="3" met="---+-+-+-+-">y con amena risa y blando lloro,</l>
+                  <l n="4" met="-+-+-++--+-">desmayo a estrellas dio y aliento a flores.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="---+---+-+-">En cuya hermosa variedad de olores,</l>
+                  <l n="6" met="+--+---+-+-" enjamb="B-ex_subj_verb">vi que afectaba con mayor decoro</l>
+                  <l n="7" met="+-++-+---+-" enjamb="I-ex_subj_verb">ese rojo, ese cándido tesoro,</l>
+                  <l n="8" met="--+--+---+-">de su llama y su luz competidores.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="--+--+---+-">Con ingrata arrogancia competía</l>
+                  <l n="10" met="--+--+-+-+-">con la joven aurora aquesta rosa,</l>
+                  <l n="11" met="+--+---+-+-">y este jazmín con el infante día.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+----+---+-" enjamb="B-pb_adj_prep">Póngolos en tu mano poderosa</l>
+                  <l n="13" met="---+++-+-+-" enjamb="I-pb_adj_prep">por castigarlos, dulce Ardemia mía,</l>
+                  <l n="14" met="---+---+-+-">con tus mejillas y tu frente hermosa.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s244g_0510_08">
+               <head>Soneto</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="--+-+--+-+-" enjamb="B-ex_subj_verb">Hijo del Alba nace aquel que dora</l>
+                  <l n="2" met="+-+--+---+-" enjamb="I-ex_subj_verb">tantos Orbes farol resplandeciente,</l>
+                  <l n="3" met="+--+-++--+-" enjamb="B-ex_subj_verb">él se ilumina Sol, y ella doliente</l>
+                  <l n="4" met="+-+--+-+-+-" enjamb="I-ex_subj_verb">cuanto en luces concibe, en perlas llora.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="++-+--+--+-">Ahora es el llanto, y el gemido ahora;</l>
+                  <l n="6" met="+++--+-+-+-" enjamb="B-pb_verb_adv">sí; que es riesgo del Alba tanto ardiente</l>
+                  <l n="7" met="-+---++--+-" enjamb="I-pb_verb_adv">lucir, pero el rigor de ese accidente,</l>
+                  <l n="8" met="+-+---+--+-">día se anima, si amanece Aurora.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-----+---+-" enjamb="B-pb_adj_noun">Alba Augusta de España, tu divina</l>
+                  <l n="10" met="--+-++--++-" enjamb="B-pb_adj_noun I-pb_adj_noun">hermosura fue Oriente a la más pura</l>
+                  <l n="11" met="+++-++---+-" enjamb="I-pb_adj_noun">luz de un sol, que dos Orbes ilumina.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+---+-+-+-">A tanto resplandor violencia dura</l>
+                  <l n="13" met="--++---+-+-">tu beldad siente; pero no declina,</l>
+                  <l n="14" met="--+--+---+-">la que a nuevos Orientes, se asegura.</l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
+  </text>
+</TEI>

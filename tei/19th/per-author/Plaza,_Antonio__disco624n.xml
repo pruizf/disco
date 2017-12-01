@@ -1,168 +1,240 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Antonio Plaza</title>
-        <author>
-          <idno type="viaf" cert="high">26211953</idno>
-          <idno type="#disco" xml:id="disco_624n"/>
-          <name type="short">Plaza</name>
-          <name type="full">
-            <name type="first-name">Antonio</name>
-            <name type="second-name">Plaza</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">4</measure>
-        <measure unit="tokens">375</measure>
-        <measure unit="line">56</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_624n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_624n" role="author" sex="M">
-            <persName>Antonio Plaza</persName>
-            <birth><placeName type="place">Guanajuato (México)</placeName>, <placeName type="country">México</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1833" cert="high">1833</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1882" cert="high">1882</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Antonio Plaza</title>
+            <author corresp="#disco_624n">Antonio Plaza</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">4</measure>
+            <measure unit="tokens">375</measure>
+            <measure unit="line">56</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_624n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_624n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/26211953"/>
+                  <persName type="short">Plaza</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Antonio</forename>
+                     <surname property="foaf:familyName">Plaza</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Antonio Plaza</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Guanajuato</settlement>
+                           <country>México</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1833" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1882" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s624n_2302" about="dbpedia:Soneto">
+                        <title property="dc:title">¡Siempre solo!</title>
+                        <title type="incipit" property="dc:alternative">Si de la clara aurora diamantina</title>
+                     </bibl>
+                     <bibl resource="disco#s624n_2303" about="dbpedia:Soneto">
+                        <title property="dc:title">Nada</title>
+                        <title type="incipit" property="dc:alternative">Nadaba entre la nada. Sin empeño</title>
+                     </bibl>
+                     <bibl resource="disco#s624n_2304" about="dbpedia:Soneto">
+                        <title property="dc:title">Desencanto</title>
+                        <title type="incipit" property="dc:alternative">Nuestra senda regada está de llanto,</title>
+                     </bibl>
+                     <bibl resource="disco#s624n_2305" about="dbpedia:Soneto">
+                        <title property="dc:title">El borracho</title>
+                        <title type="incipit" property="dc:alternative">Generoso en la copa, ruin en todo;</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Antonio Plaza</head>
-        <p>Guanajuato (México). 1833 - 1882</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s624n_2302">
-        <head>¡Siempre solo!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Si de la clara aurora diamantina</l>
-          <l n="2">se dibujan los célicos albores,</l>
-          <l n="3">los pájaros del viento moradores</l>
-          <l n="4">al éter mandan su canción divina.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Y si el sol orgulloso se reclina</l>
-          <l n="6">sobre un lecho radiante de colores,</l>
-          <l n="7">llenas de amor las carminadas flores</l>
-          <l n="8">entreabren su corola purpurina.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Todos tienen un ser que los comprenda,</l>
-          <l n="10">yo al vicio y la virtud indiferente</l>
-          <l n="11">aislado cruzo la maldita senda,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">cual se arrastra en las rocas la serpiente;</l>
-          <l n="13">mas tengo un alma de vivir cansada</l>
-          <l n="14">que ni al cielo ni al mundo pide nada.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s624n_2303">
-        <head>Nada</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Nadaba entre la nada. Sin empeño</l>
-          <l n="2">a la vida, que es nada, de improviso</l>
-          <l n="3">vine a soñar que soy; porque Dios quiso</l>
-          <l n="4">entre la nada levanta un sueño.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Dios, que es el Todo y de la nada es dueño,</l>
-          <l n="6">me hace un mundo soñar, porque es preciso;</l>
-          <l n="7">Él siendo Dios, de nada un paraíso</l>
-          <l n="8">formó, nadando en eternal ensueño.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿Qué importa que la nada confundida</l>
-          <l n="10">vuelva a nadar, al fin, está soñada</l>
-          <l n="11">vil existencia que la nada olvida,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">nada fatal de la que fue sacada?...</l>
-          <l n="13">¿Qué tiene esta ilusión que llaman vida?</l>
-          <l n="14">Nada en su origen. ¿ Y en su extremo? ¡Nada!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s624n_2304">
-        <head>Desencanto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Nuestra senda regada está de llanto,</l>
-          <l n="2">el placer del placer es el suicidio,</l>
-          <l n="3">detrás de la ilusión está el fastidio</l>
-          <l n="4">y detrás del fastidio el desencanto.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Lleno yo de fastidio y de quebranto,</l>
-          <l n="6">sin fuerza ya contra la suerte lidio,</l>
-          <l n="7">y muerto para el mundo, sólo envidio</l>
-          <l n="8">a los muertos que guarda el camposanto.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">El infierno sus furias desenfrena,</l>
-          <l n="10">viento de maldición en torno zumba,</l>
-          <l n="11">que apenas el destino me condena,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y he de pensar hasta que al fin sucumba;</l>
-          <l n="13">con el peso brutal de la cadena,</l>
-          <l n="14">que arrastra el hombre hasta la negra tumba.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s624n_2305">
-        <head>El borracho</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Generoso en la copa, ruin en todo;</l>
-          <l n="2">ronca la voz, inyecta la mirada,</l>
-          <l n="3">párpados gruesos, faz abotargada</l>
-          <l n="4">y siempre crudo cuando no beodo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Perdida la razón, goza a su modo,</l>
-          <l n="6">y nunca estar en su razón le agrada;</l>
-          <l n="7">que el vino es todo, la razón es nada,</l>
-          <l n="8">y sólo vive al empinar el codo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Cuando a inflamarle empieza el aguardiente,</l>
-          <l n="10">lenguaraz, atrevido y vivaracho,</l>
-          <l n="11">es intrépido, franco y excelente</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">amigo; pero juzgo sin empacho</l>
-          <l n="13">que no es franco, ni amigo, ni valiente;</l>
-          <l n="14">porque el borracho... en fin, sólo es borracho.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Antonio Plaza</head>
+            <p>Guanajuato (México). 1833 - 1882</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s624n_2302">
+            <head>¡Siempre solo!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+---+-">Si de la clara aurora diamantina</l>
+               <l n="2" met="--+--+---+-">se dibujan los célicos albores,</l>
+               <l n="3" met="-+---+---+-" enjamb="B-ex_subj_verb">los pájaros del viento moradores</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-ex_subj_verb">al éter mandan su canción divina.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-">Y si el sol orgulloso se reclina</l>
+               <l n="6" met="-++--+---+-">sobre un lecho radiante de colores,</l>
+               <l n="7" met="+--+---+-+-">llenas de amor las carminadas flores</l>
+               <l n="8" met="-+---+---+-">entreabren su corola purpurina.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+-++-+-+-">Todos tienen un ser que los comprenda,</l>
+               <l n="10" met="++---+---+-">yo al vicio y la virtud indiferente</l>
+               <l n="11" met="-+-+---+-+-">aislado cruzo la maldita senda,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-">cual se arrastra en las rocas la serpiente;</l>
+               <l n="13" met="-+++---+-+-">mas tengo un alma de vivir cansada</l>
+               <l n="14" met="-++--+-+-+-">que ni al cielo ni al mundo pide nada.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s624n_2303">
+            <head>Nada</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+----+--+-" enjamb="B-pb_noun_prep">Nadaba entre la nada. Sin empeño</l>
+               <l n="2" met="--+-++---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">a la vida, que es nada, de improviso</l>
+               <l n="3" met="+--+-+--++-" enjamb="B-ex_dobj_verb I-pb_noun_prep">vine a soñar que soy; porque Dios quiso</l>
+               <l n="4" met="---+--+-++-" enjamb="I-ex_dobj_verb">entre la nada levanta un sueño.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+++-">Dios, que es el Todo y de la nada es dueño,</l>
+               <l n="6" met="+++--+-+-+-">me hace un mundo soñar, porque es preciso;</l>
+               <l n="7" met="++-+-++--+-" enjamb="B-ex_subj_verb">Él siendo Dios, de nada un paraíso</l>
+               <l n="8" met="-+-+---+-+-" enjamb="I-ex_subj_verb">formó, nadando en eternal ensueño.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++---+---+-" enjamb="B-ex_subj_verb">¿Qué importa que la nada confundida</l>
+               <l n="10" met="+--+-+-+-+-" enjamb="B-pb_adj_noun I-ex_subj_verb">vuelva a nadar, al fin, está soñada</l>
+               <l n="11" met="+--+---+-+-" enjamb="I-pb_adj_noun">vil existencia que la nada olvida,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+---+-+-">nada fatal de la que fue sacada?...</l>
+               <l n="13" met="+++--+-+-+-">¿Qué tiene esta ilusión que llaman vida?</l>
+               <l n="14" met="+---+----+-">Nada en su origen. ¿ Y en su extremo? ¡Nada!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s624n_2304">
+            <head>Desencanto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+-+-+-">Nuestra senda regada está de llanto,</l>
+               <l n="2" met="--+--++--+-">el placer del placer es el suicidio,</l>
+               <l n="3" met="-----+-+-+-">detrás de la ilusión está el fastidio</l>
+               <l n="4" met="-----+---+-">y detrás del fastidio el desencanto.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-">Lleno yo de fastidio y de quebranto,</l>
+               <l n="6" met="-+-+---+-+-">sin fuerza ya contra la suerte lidio,</l>
+               <l n="7" met="-+---+-+-+-" enjamb="B-ex_dobj_verb">y muerto para el mundo, sólo envidio</l>
+               <l n="8" met="--+--+---+-" enjamb="I-ex_dobj_verb">a los muertos que guarda el camposanto.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">El infierno sus furias desenfrena,</l>
+               <l n="10" met="+----+-+-+-">viento de maldición en torno zumba,</l>
+               <l n="11" met="-+---+-+-+-">que apenas el destino me condena,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+---+-+-">y he de pensar hasta que al fin sucumba;</l>
+               <l n="13" met="--+--+---+-">con el peso brutal de la cadena,</l>
+               <l n="14" met="-+-+---+-+-">que arrastra el hombre hasta la negra tumba.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s624n_2305">
+            <head>El borracho</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+-+-+-">Generoso en la copa, ruin en todo;</l>
+               <l n="2" met="+--+-+---+-">ronca la voz, inyecta la mirada,</l>
+               <l n="3" met="+--+-+---+-">párpados gruesos, faz abotargada</l>
+               <l n="4" met="-+-+---+-+-">y siempre crudo cuando no beodo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---++--+-">Perdida la razón, goza a su modo,</l>
+               <l n="6" met="-+-+---+++-">y nunca estar en su razón le agrada;</l>
+               <l n="7" met="-+++---+++-">que el vino es todo, la razón es nada,</l>
+               <l n="8" met="-+-+---+-+-">y sólo vive al empinar el codo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+++---+-">Cuando a inflamarle empieza el aguardiente,</l>
+               <l n="10" met="--+--+---+-">lenguaraz, atrevido y vivaracho,</l>
+               <l n="11" met="+-+--+---+-" enjamb="B-pb_adj_noun">es intrépido, franco y excelente</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-" enjamb="B-cc_crossclause I-pb_adj_noun">amigo; pero juzgo sin empacho</l>
+               <l n="13" met="-++--+---+-" enjamb="I-cc_crossclause">que no es franco, ni amigo, ni valiente;</l>
+               <l n="14" met="---+-+++-+-">porque el borracho... en fin, sólo es borracho.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

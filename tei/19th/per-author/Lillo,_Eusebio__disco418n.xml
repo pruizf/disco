@@ -1,143 +1,211 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Eusebio Lillo</title>
-        <author>
-          <idno type="viaf" cert="high">34341743</idno>
-          <idno type="#disco" xml:id="disco_418n"/>
-          <name type="short">Lillo</name>
-          <name type="full">
-            <name type="first-name">Eusebio</name>
-            <name type="second-name">Lillo</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">3</measure>
-        <measure unit="tokens">295</measure>
-        <measure unit="line">42</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_418n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_418n" role="author" sex="M">
-            <persName>Eusebio Lillo</persName>
-            <birth><placeName type="place">Santiago (Chile)</placeName>, <placeName type="country">Chile</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1826" cert="high">1826</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1910" cert="high">1910</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Eusebio Lillo</title>
+            <author corresp="#disco_418n">Eusebio Lillo</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">295</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_418n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_418n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/34341743"/>
+                  <persName type="short">Lillo</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Eusebio</forename>
+                     <surname property="foaf:familyName">Lillo</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Eusebio Lillo</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Santiago</settlement>
+                           <country>Chile</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1826" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1910" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s418n_1653" about="dbpedia:Soneto">
+                        <title property="dc:title">El poeta y el vulgo</title>
+                        <title type="incipit" property="dc:alternative">Al altanero y encumbrado pino</title>
+                     </bibl>
+                     <bibl resource="disco#s418n_1654" about="dbpedia:Soneto">
+                        <title property="dc:title">A la niña M.</title>
+                        <title type="incipit" property="dc:alternative">Hay algo en ti del serafín que mora</title>
+                     </bibl>
+                     <bibl resource="disco#s418n_1655" about="dbpedia:Soneto">
+                        <title property="dc:title">Consejo</title>
+                        <title type="incipit" property="dc:alternative">Goza, bien mío, en tanto que en la vida</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Eusebio Lillo</head>
-        <p>Santiago (Chile). 1826 - 1910</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s418n_1653">
-        <head>El poeta y el vulgo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Al altanero y encumbrado pino</l>
-          <l n="2">díjole un día la rastrera grama:</l>
-          <l n="3">-¿Por qué tan orgulloso alzas tu rama</l>
-          <l n="4">cuando no alfombras como yo el camino?</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Y él respondió: -Yo doy al peregrino</l>
-          <l n="6">sombra, cuando su luz el sol derrama,</l>
-          <l n="7">y cobijo las flores cuando brama</l>
-          <l n="8">el ronco y desatado torbellino.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Así el vulgo al poeta gritó un día:</l>
-          <l n="10">-¿Por qué miráis indiferente el suelo?</l>
-          <l n="11">¿Qué hacéis? ¿Quién sois? - Y el bardo respondía:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">-Soy más que tú porque tal vez recelo</l>
-          <l n="13">que sólo de mi canto a la armonía</l>
-          <l n="14">comprendes que hay un Dios y que hay un cielo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s418n_1654">
-        <head>A la niña M.</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Hay algo en ti del serafín que mora</l>
-          <l n="2">en la mansión eterna y esplendente;</l>
-          <l n="3">en tu serena faz, niña inocente,</l>
-          <l n="4">y en el azul que tu mirar colora.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Fresco botón que al despertar la Aurora</l>
-          <l n="6">y al casto beso del fugaz ambiente,</l>
-          <l n="7">alza su pura y delicada frente,</l>
-          <l n="8">tal eres tú, Matilde encantadora.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De aquesta vida en el camino estrecho</l>
-          <l n="10">se abra a tu paso florecida senda</l>
-          <l n="11">y paz respire y bienestar tu pecho.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Un alma halles que te ame y te comprenda;</l>
-          <l n="13">y grato abrigo del paterno techo</l>
-          <l n="14">sé de feliz unión, hermosa prenda.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s418n_1655">
-        <head>Consejo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Goza, bien mío, en tanto que en la vida</l>
-          <l n="2">la fresca lozanía te acompaña,</l>
-          <l n="3">que es flor la juventud que el tiempo daña</l>
-          <l n="4">y no vuelve jamás una vez ida.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Mientras gozamos de la edad florida</l>
-          <l n="6">en mil deleites el amor nos baña;</l>
-          <l n="7">más tarde, ¡ay tristes! la vejez huraña</l>
-          <l n="8">nos roba el fuego que en el alma anida.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">El amor, como Dios, tiene su cielo;</l>
-          <l n="10">olvida allí del corazón enojos</l>
-          <l n="11">pues para gozar viniste al suelo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y si presa han de ser aquesos ojos</l>
-          <l n="13">y el seno aquel de la vejez de hielo,</l>
-          <l n="14">sean más bien de amor dulces despojos.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Eusebio Lillo</head>
+            <p>Santiago (Chile). 1826 - 1910</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s418n_1653">
+            <head>El poeta y el vulgo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+---+-+-">Al altanero y encumbrado pino</l>
+               <l n="2" met="+-++---+-+-">díjole un día la rastrera grama:</l>
+               <l n="3" met="-++--++--+-">-¿Por qué tan orgulloso alzas tu rama</l>
+               <l n="4" met="--++---+-+-">cuando no alfombras como yo el camino?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+++---+-" enjamb="B-ex_dobj_verb">Y él respondió: -Yo doy al peregrino</l>
+               <l n="6" met="+----+-+-+-" enjamb="I-ex_dobj_verb">sombra, cuando su luz el sol derrama,</l>
+               <l n="7" met="--+--+---+-" enjamb="B-ex_subj_verb">y cobijo las flores cuando brama</l>
+               <l n="8" met="-+---+---+-" enjamb="I-ex_subj_verb">el ronco y desatado torbellino.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++-+--+++-">Así el vulgo al poeta gritó un día:</l>
+               <l n="10" met="-+-+---+-+-">-¿Por qué miráis indiferente el suelo?</l>
+               <l n="11" met="+++--+---+-">¿Qué hacéis? ¿Quién sois? - Y el bardo respondía:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++-+---+-+-">-Soy más que tú porque tal vez recelo</l>
+               <l n="13" met="-+---+---+-" enjamb="B-ex_subj_verb">que sólo de mi canto a la armonía</l>
+               <l n="14" met="-+-++--+++-" enjamb="I-ex_subj_verb">comprendes que hay un Dios y que hay un cielo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s418n_1654">
+            <head>A la niña M.</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-">Hay algo en ti del serafín que mora</l>
+               <l n="2" met="---+-+---+-">en la mansión eterna y esplendente;</l>
+               <l n="3" met="---+-++--+-">en tu serena faz, niña inocente,</l>
+               <l n="4" met="---+---+-+-">y en el azul que tu mirar colora.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-">Fresco botón que al despertar la Aurora</l>
+               <l n="6" met="-+-+---+-+-">y al casto beso del fugaz ambiente,</l>
+               <l n="7" met="+--+---+-+-">alza su pura y delicada frente,</l>
+               <l n="8" met="++-+-+---+-">tal eres tú, Matilde encantadora.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">De aquesta vida en el camino estrecho</l>
+               <l n="10" met="+--+---+-+-" enjamb="B-ex_dobj_verb">se abra a tu paso florecida senda</l>
+               <l n="11" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">y paz respire y bienestar tu pecho.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+++--+---+-">Un alma halles que te ame y te comprenda;</l>
+               <l n="13" met="-+-+---+-+-" enjamb="B-ex_subj_verb">y grato abrigo del paterno techo</l>
+               <l n="14" met="+--+-+-+-+-" enjamb="I-ex_subj_verb">sé de feliz unión, hermosa prenda.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s418n_1655">
+            <head>Consejo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+------+-">Goza, bien mío, en tanto que en la vida</l>
+               <l n="2" met="-+---++--+-">la fresca lozanía te acompaña,</l>
+               <l n="3" met="++---+-+-+-">que es flor la juventud que el tiempo daña</l>
+               <l n="4" met="-++--++-++-">y no vuelve jamás una vez ida.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+---+-+-" enjamb="B-ex_subj_verb">Mientras gozamos de la edad florida</l>
+               <l n="6" met="-+-+---+++-" enjamb="I-ex_subj_verb">en mil deleites el amor nos baña;</l>
+               <l n="7" met="++-+---+-+-" enjamb="B-ex_subj_verb">más tarde, ¡ay tristes! la vejez huraña</l>
+               <l n="8" met="++-+---+-+-" enjamb="I-ex_subj_verb">nos roba el fuego que en el alma anida.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--++--+-">El amor, como Dios, tiene su cielo;</l>
+               <l n="10" met="-+-+---+-+-">olvida allí del corazón enojos</l>
+               <l n="11" met="----+-+--+-">pues para gozar viniste al suelo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++-+-+-+-">Y si presa han de ser aquesos ojos</l>
+               <l n="13" met="-+-+---+-+-">y el seno aquel de la vejez de hielo,</l>
+               <l n="14" met="+++--++--+-">sean más bien de amor dulces despojos.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

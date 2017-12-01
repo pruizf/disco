@@ -1,93 +1,149 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de J. Blázquez</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_678n"/>
-          <name type="short">Blázquez</name>
-          <name type="full">
-            <name type="first-name">J.</name>
-            <name type="second-name">Blázquez</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">85</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_678n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_678n" role="author" sex="M">
-            <persName>J. Blázquez</persName>
-            <birth><placeName type="place">España</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de J. Blázquez</title>
+            <author corresp="#disco_678n">J. Blázquez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">85</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_678n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_678n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Blázquez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">J.</forename>
+                     <surname property="foaf:familyName">Blázquez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">J. Blázquez</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s678n_2437" about="dbpedia:Soneto">
+                        <title property="dc:title">A la señorita Elisa Amador</title>
+                        <title type="incipit" property="dc:alternative">Quisiera ser la horquilla que atraviesa</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>J. Blázquez</head>
-        <p>España. 19th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s678n_2437">
-        <head>A la señorita Elisa Amador</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Quisiera ser la horquilla que atraviesa</l>
-          <l n="2">las trenzas de tu blonda cabellera;</l>
-          <l n="3">quisiera ser cruz de oro que estuviera</l>
-          <l n="4">constantemente en tu garganta presa.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Envidia la elegante polonesa</l>
-          <l n="6">con que envuelves tu mórbida pechera.</l>
-          <l n="7">Me da envidia el botón de tu pulsera</l>
-          <l n="8">y el céfiro atrevido que te besa:</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Quisiera ser varita poderosa</l>
-          <l n="10">de virtud, obediente a tus antojos.</l>
-          <l n="11">Quisiera ser la abeja que mimosa</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">chupara el néctar de tus labios rojos.</l>
-          <l n="13">Pero soy solamente mariposa,</l>
-          <l n="14">que se quema en la lumbre de tus ojos.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>J. Blázquez</head>
+            <p>España. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s678n_2437">
+            <head>A la señorita Elisa Amador</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+---+-" enjamb="B-ex_dobj_verb">Quisiera ser la horquilla que atraviesa</l>
+               <l n="2" met="-+---+---+-" enjamb="I-ex_dobj_verb">las trenzas de tu blonda cabellera;</l>
+               <l n="3" met="-+-+++---+-" enjamb="B-pb_verb_adv">quisiera ser cruz de oro que estuviera</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-pb_verb_adv">constantemente en tu garganta presa.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">Envidia la elegante polonesa</l>
+               <l n="6" met="--+--+---+-">con que envuelves tu mórbida pechera.</l>
+               <l n="7" met="+++--+---+-">Me da envidia el botón de tu pulsera</l>
+               <l n="8" met="-+---+--++-">y el céfiro atrevido que te besa:</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+---+-" enjamb="B-pb_noun_prep">Quisiera ser varita poderosa</l>
+               <l n="10" met="--+--+---+-" enjamb="I-pb_noun_prep">de virtud, obediente a tus antojos.</l>
+               <l n="11" met="-+-+-+---+-">Quisiera ser la abeja que mimosa</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">chupara el néctar de tus labios rojos.</l>
+               <l n="13" met="--++-+---+-">Pero soy solamente mariposa,</l>
+               <l n="14" met="--+--+---+-">que se quema en la lumbre de tus ojos.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

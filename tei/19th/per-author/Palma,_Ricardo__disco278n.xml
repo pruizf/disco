@@ -1,93 +1,158 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Ricardo Palma</title>
-        <author>
-          <idno type="viaf" cert="high">51754567</idno>
-          <idno type="#disco" xml:id="disco_278n"/>
-          <name type="short">Palma</name>
-          <name type="full">
-            <name type="first-name">Ricardo</name>
-            <name type="second-name">Palma</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">85</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_278n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_278n" role="author" sex="M">
-            <persName>Ricardo Palma</persName>
-            <birth><placeName type="place">Lima (Perú)</placeName>, <placeName type="country">Perú</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1833" cert="high">1833</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Miraflores</placeName>, <date type="year" when="1919" cert="high">1919</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Ricardo Palma</title>
+            <author corresp="#disco_278n">Ricardo Palma</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">85</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_278n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_278n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/51754567"/>
+                  <persName type="short">Palma</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ricardo</forename>
+                     <surname property="foaf:familyName">Palma</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ricardo Palma</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Lima</settlement>
+                           <country>Perú</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1833" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Miraflores</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1919" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s278n_0918" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Vi elevarse un altar a la virtud</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Ricardo Palma</head>
-        <p>Lima (Perú). 1833 - 1919</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s278n_0918">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Vi elevarse un altar a la virtud</l>
-          <l n="2">y el crimen castigado por doquier;</l>
-          <l n="3">vi ¡oh prodigio! constancia en la mujer</l>
-          <l n="4">y ciencia en la indolente juventud.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Honrada contemplé la senectud</l>
-          <l n="6">y en manos de los buenos el poder,</l>
-          <l n="7">triunfante la justicia, y el deber</l>
-          <l n="8">levantado a magnífica latitud.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Arca abierta miré en la caridad</l>
-          <l n="10">y proscrita la infamia de Caín;</l>
-          <l n="11">fe en el amor, confianza en la amistad,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">patriotismo en la gente más ruin...</l>
-          <l n="13">Pero ¿en dónde vio usted tanto primor?</l>
-          <l n="14">En sueños, queridísimo lector.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Ricardo Palma</head>
+            <p>Lima (Perú). 1833 - 1919</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s278n_0918">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-++-+---+-" enjamb="B-ex_dobj_verb">Vi elevarse un altar a la virtud</l>
+               <l n="2" met="-+---+---+-" enjamb="I-ex_dobj_verb">y el crimen castigado por doquier;</l>
+               <l n="3" met="+-+--+---+-">vi ¡oh prodigio! constancia en la mujer</l>
+               <l n="4" met="-+---+---+-">y ciencia en la indolente juventud.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">Honrada contemplé la senectud</l>
+               <l n="6" met="-----+---+-">y en manos de los buenos el poder,</l>
+               <l n="7" met="-+---+---+-" enjamb="B-pb_adj_noun">triunfante la justicia, y el deber</l>
+               <l n="8" met="--+--+----+-" enjamb="I-pb_adj_noun">levantado a magnífica latitud.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+---+-">Arca abierta miré en la caridad</l>
+               <l n="10" met="--+---+---+-">y proscrita la infamia de Caín;</l>
+               <l n="11" met="+--+-+---+-">fe en el amor, confianza en la amistad,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+---+-++-">patriotismo en la gente más ruin...</l>
+               <l n="13" met="--+-+++--+-">Pero ¿en dónde vio usted tanto primor?</l>
+               <l n="14" met="-+---+---+-">En sueños, queridísimo lector.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

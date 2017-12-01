@@ -1,168 +1,236 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Luis Hine</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_604n"/>
-          <name type="short">Hine</name>
-          <name type="full">
-            <name type="first-name">Luis</name>
-            <name type="second-name">Hine</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">4</measure>
-        <measure unit="tokens">394</measure>
-        <measure unit="line">56</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_604n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_604n" role="author" sex="M">
-            <persName>Luis Hine</persName>
-            <birth><placeName type="place">Costa Rica</placeName>, <placeName type="country">Costa Rica</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Luis Hine</title>
+            <author corresp="#disco_604n">Luis Hine</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">4</measure>
+            <measure unit="tokens">394</measure>
+            <measure unit="line">56</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_604n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_604n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Hine</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Luis</forename>
+                     <surname property="foaf:familyName">Hine</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Luis Hine</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Costa Rica</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s604n_2257" about="dbpedia:Soneto">
+                        <title property="dc:title">Ensueño</title>
+                        <title type="incipit" property="dc:alternative">Reclinar mi cabeza en tu regazo</title>
+                     </bibl>
+                     <bibl resource="disco#s604n_2258" about="dbpedia:Soneto">
+                        <title property="dc:title">Salomé</title>
+                        <title type="incipit" property="dc:alternative">Dicen que fuiste mala, dicen que fuiste impía,</title>
+                     </bibl>
+                     <bibl resource="disco#s604n_2259" about="dbpedia:Soneto">
+                        <title property="dc:title">En la playa</title>
+                        <title type="incipit" property="dc:alternative">El mar es un gigante que solloza</title>
+                     </bibl>
+                     <bibl resource="disco#s604n_2260" about="dbpedia:Soneto">
+                        <title property="dc:title">Tristeza de indio</title>
+                        <title type="incipit" property="dc:alternative">Quiero otra vez atravesar el río</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Luis Hine</head>
-        <p>Costa Rica. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s604n_2257">
-        <head>Ensueño</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Reclinar mi cabeza en tu regazo</l>
-          <l n="2">para dormirme en él. Sentir que el sueño</l>
-          <l n="3">va cerrando mis párpados. Beleño</l>
-          <l n="4">para mi corazón que está en su ocaso.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">No pensar, no sentir. Soñar, acaso,</l>
-          <l n="6">en que llega hasta mi, tibio y risueño,</l>
-          <l n="7">tu beso perfumado, flor de ensueño,</l>
-          <l n="8">mientras dormido estoy en tu regazo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Y nunca despertar. Eternamente</l>
-          <l n="10">quedarse allí para que dulcemente</l>
-          <l n="11">pueda mi alma tu espíritu absorber.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Vivir de tu perfume. Ser un muerto</l>
-          <l n="13">que sólo está para tu amor despierto,</l>
-          <l n="14">y para todo lo demás, no ser.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s604n_2258">
-        <head>Salomé</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Dicen que fuiste mala, dicen que fuiste impía,</l>
-          <l n="2">que una noche abrileña de azahar perfumada,</l>
-          <l n="3">a Herodes le pediste la cabeza sagrada</l>
-          <l n="4">de San Juan el Bautista, porque no te quería.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La verdad no fue así. Una noche de orgía,</l>
-          <l n="6">el Tetrarca de oriente al mirarte embriagada,</l>
-          <l n="7">robó un beso a tu boca, roja flor de granada,</l>
-          <l n="8">y olvidó su corona, por tu danza judía.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">En las redes ya presto de tu carne dorada,</l>
-          <l n="10">escuchó aquella voz que su amor maldecía</l>
-          <l n="11">y ordenó le llevaran la cabeza cortada</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">del Profeta importuno que turbó su alegría.</l>
-          <l n="13">Le cerraste los ojos y en su barba rizada,</l>
-          <l n="14">una hilera de perlas, con tu llanto se hacía.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s604n_2259">
-        <head>En la playa</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">El mar es un gigante que solloza</l>
-          <l n="2">en la sombra apacible sus dolores;</l>
-          <l n="3">las olas cantan sus canción de amores</l>
-          <l n="4">y un ave inquieta sus espumas roza.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">En el cristal inmenso que reposa</l>
-          <l n="6">las estrellas contemplan sus fulgores,</l>
-          <l n="7">y se escucha el volar de los rumores,</l>
-          <l n="8">en la noche de paz maravillosa.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Llenó el ambiente con su luz de plata</l>
-          <l n="10">la triste luna, que su faz retrata</l>
-          <l n="11">en el cóncavo espejo de la ola,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y en el silencio de la noche en calma,</l>
-          <l n="13">solloza el mar y le contesta el alma,</l>
-          <l n="14">como una hermana, inconsolable y sola.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s604n_2260">
-        <head>Tristeza de indio</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Quiero otra vez atravesar el río</l>
-          <l n="2">donde la luna en su cristal se baña,</l>
-          <l n="3">para darle mi adiós a la montaña</l>
-          <l n="4">que ocultaba el nidal de mi bohío.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Ya nunca más en la estación del frío,</l>
-          <l n="6">cuando la luz del padre sol se empaña,</l>
-          <l n="7">amparado al fogón de mi cabaña</l>
-          <l n="8">podrá soñar el pensamiento mío.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Cual bandada de pájaros perdidos,</l>
-          <l n="10">vamos los hijos de la selva heridos,</l>
-          <l n="11">sin Dios, sin esperanza y sin hogar.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mi tristeza la oculto en mi piragua,</l>
-          <l n="13">y voy dando mis lágrimas al agua</l>
-          <l n="14">que se las lleva, indiferente, al mar.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Luis Hine</head>
+            <p>Costa Rica. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s604n_2257">
+            <head>Ensueño</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+---+-">Reclinar mi cabeza en tu regazo</l>
+               <l n="2" met="---++-+--+-" enjamb="B-ex_subj_verb">para dormirme en él. Sentir que el sueño</l>
+               <l n="3" met="+-+--+-" enjamb="I-ex_subj_verb">va cerrando mis párpados. Beleño</l>
+               <l n="4" met="-----+-+-+-">para mi corazón que está en su ocaso.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-++-+-+-">No pensar, no sentir. Soñar, acaso,</l>
+               <l n="6" met="--+---+--+-">en que llega hasta mi, tibio y risueño,</l>
+               <l n="7" met="-+---+-+-+-">tu beso perfumado, flor de ensueño,</l>
+               <l n="8" met="+--+-+---+-">mientras dormido estoy en tu regazo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+-" enjamb="B-pb_verb_adv">Y nunca despertar. Eternamente</l>
+               <l n="10" met="-+++---+-+-" enjamb="B-pb_verb_adv I-pb_verb_adv">quedarse allí para que dulcemente</l>
+               <l n="11" met="+-+--+---+-" enjamb="I-pb_verb_adv">pueda mi alma tu espíritu absorber.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+-+-+-" enjamb="B-cc_crossclause">Vivir de tu perfume. Ser un muerto</l>
+               <l n="13" met="-+-+---+-+-" enjamb="I-cc_crossclause">que sólo está para tu amor despierto,</l>
+               <l n="14" met="---+---+++-">y para todo lo demás, no ser.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s604n_2258">
+            <head>Salomé</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+-+--+-+-">Dicen que fuiste mala, dicen que fuiste impía,</l>
+               <l n="2" met="+-+--+--+--+-">que una noche abrileña de azahar perfumada,</l>
+               <l n="3" met="-+-+-+---+--+-" enjamb="B-pb_noun_prep">a Herodes le pediste la cabeza sagrada</l>
+               <l n="4" met="----+---++-+-" enjamb="I-pb_noun_prep">de San Juan el Bautista, porque no te quería.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+++++--+-">La verdad no fue así. Una noche de orgía,</l>
+               <l n="6" met="--+--+--++-+-">el Tetrarca de oriente al mirarte embriagada,</l>
+               <l n="7" met="-++--+-+-+--+-">robó un beso a tu boca, roja flor de granada,</l>
+               <l n="8" met="--+--+---+--+-">y olvidó su corona, por tu danza judía.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+-++---+--+-">En las redes ya presto de tu carne dorada,</l>
+               <l n="10" met="--++-+--+--+-" enjamb="B-ex_subj_verb">escuchó aquella voz que su amor maldecía</l>
+               <l n="11" met="--++-+---+--+-" enjamb="B-pb_noun_prep I-ex_subj_verb">y ordenó le llevaran la cabeza cortada</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+--+-" enjamb="I-pb_noun_prep">del Profeta importuno que turbó su alegría.</l>
+               <l n="13" met="+-+--+---+--+-">Le cerraste los ojos y en su barba rizada,</l>
+               <l n="14" met="+-+--+---+--+-">una hilera de perlas, con tu llanto se hacía.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s604n_2259">
+            <head>En la playa</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+++-+---+-" enjamb="B-ex_dobj_verb">El mar es un gigante que solloza</l>
+               <l n="2" met="--+--+---+-" enjamb="I-ex_dobj_verb">en la sombra apacible sus dolores;</l>
+               <l n="3" met="-+-+---+-+-">las olas cantan sus canción de amores</l>
+               <l n="4" met="++-+---+-+-">y un ave inquieta sus espumas roza.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-">En el cristal inmenso que reposa</l>
+               <l n="6" met="--+--+---+-">las estrellas contemplan sus fulgores,</l>
+               <l n="7" met="--+--+---+-">y se escucha el volar de los rumores,</l>
+               <l n="8" met="--+--+---+-">en la noche de paz maravillosa.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">Llenó el ambiente con su luz de plata</l>
+               <l n="10" met="-+-+---+-+-">la triste luna, que su faz retrata</l>
+               <l n="11" met="--+--+---+-">en el cóncavo espejo de la ola,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-">y en el silencio de la noche en calma,</l>
+               <l n="13" met="-+-+-+-+-+-">solloza el mar y le contesta el alma,</l>
+               <l n="14" met="-+-+---+-+-">como una hermana, inconsolable y sola.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s604n_2260">
+            <head>Tristeza de indio</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+---+-+-" enjamb="B-cc_crossclause">Quiero otra vez atravesar el río</l>
+               <l n="2" met="---+---+-+-" enjamb="I-cc_crossclause">donde la luna en su cristal se baña,</l>
+               <l n="3" met="--++-+---+-" enjamb="B-cc_crossclause">para darle mi adiós a la montaña</l>
+               <l n="4" met="--+--+---+-" enjamb="I-cc_crossclause">que ocultaba el nidal de mi bohío.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+---+-+-">Ya nunca más en la estación del frío,</l>
+               <l n="6" met="---+-+-+-+-">cuando la luz del padre sol se empaña,</l>
+               <l n="7" met="--+--+---+-">amparado al fogón de mi cabaña</l>
+               <l n="8" met="-+-+---+-+-">podrá soñar el pensamiento mío.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+---+-">Cual bandada de pájaros perdidos,</l>
+               <l n="10" met="+--+---+-+-">vamos los hijos de la selva heridos,</l>
+               <l n="11" met="-+---+---+-">sin Dios, sin esperanza y sin hogar.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">Mi tristeza la oculto en mi piragua,</l>
+               <l n="13" met="-++--+---+-" enjamb="B-cc_crossclause">y voy dando mis lágrimas al agua</l>
+               <l n="14" met="--++---+-+-" enjamb="I-cc_crossclause">que se las lleva, indiferente, al mar.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

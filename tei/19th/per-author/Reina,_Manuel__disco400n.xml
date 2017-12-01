@@ -1,496 +1,612 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Manuel Reina</title>
-        <author>
-          <idno type="viaf" cert="high">60220398</idno>
-          <idno type="#disco" xml:id="disco_400n"/>
-          <name type="short">Reina</name>
-          <name type="full">
-            <name type="first-name">Manuel</name>
-            <name type="second-name">Reina</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">17</measure>
-        <measure unit="tokens">1445</measure>
-        <measure unit="line">238</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_400n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_400n" role="author" sex="M">
-            <persName>Manuel Reina</persName>
-            <birth><placeName type="place">Puente Genil (Córdoba)</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1856" cert="high">1856</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1906" cert="high">1906</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Manuel Reina</title>
+            <author corresp="#disco_400n">Manuel Reina</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">17</measure>
+            <measure unit="tokens">1445</measure>
+            <measure unit="line">238</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_400n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_400n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/60220398"/>
+                  <persName type="short">Reina</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Manuel</forename>
+                     <surname property="foaf:familyName">Reina</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Manuel Reina</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Puente Genil (Córdoba)</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1856" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1906" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s400n_1513" about="dbpedia:Soneto">
+                        <title property="dc:title">Claveles rojos</title>
+                        <title type="incipit" property="dc:alternative">Rojo clavel abierto y perfumado</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1514" about="dbpedia:Soneto">
+                        <title property="dc:title">Tus ojos</title>
+                        <title type="incipit" property="dc:alternative">Son tus ojos, mi bien, negros diamantes</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1515" about="dbpedia:Soneto">
+                        <title property="dc:title">La gota de sangre</title>
+                        <title type="incipit" property="dc:alternative">Sentados en la gótica ventana</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1516" about="dbpedia:Soneto">
+                        <title property="dc:title">Las almas tristes</title>
+                        <title type="incipit" property="dc:alternative">Yo amo las tristes almas dolorosas</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1517" about="dbpedia:Soneto">
+                        <title property="dc:title">Nuestro siglo</title>
+                        <title type="incipit" property="dc:alternative">¿Oís...? Es el silbar de los cañones;</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1518" about="dbpedia:Soneto">
+                        <title property="dc:title">La eterna mascarada</title>
+                        <title type="incipit" property="dc:alternative">¡Todo es disfraz! Bajo una frente hermosa</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1519" about="dbpedia:Soneto">
+                        <title property="dc:title">Andalucía</title>
+                        <title type="incipit" property="dc:alternative">Cielo brillante, fuentes rumorosas;</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1520" about="dbpedia:Soneto">
+                        <title property="dc:title">La perla</title>
+                        <title type="incipit" property="dc:alternative">Contemplaban tus ojos centelleantes</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1521" about="dbpedia:Soneto">
+                        <title property="dc:title">La rosa y el ruiseñor</title>
+                        <title type="incipit" property="dc:alternative">La rosa, emperatriz de la hermosura,</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1522" about="dbpedia:Soneto">
+                        <title property="dc:title">La poesía</title>
+                        <title type="incipit" property="dc:alternative">Como el raudal que corre en la pradera</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1523" about="dbpedia:Soneto">
+                        <title property="dc:title">Los rojos</title>
+                        <title type="incipit" property="dc:alternative">Retruena el tambor, la turba avanza</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1524" about="dbpedia:Soneto">
+                        <title property="dc:title">María Stuart</title>
+                        <title type="incipit" property="dc:alternative">Pálida la color, en la alba frente,</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1525" about="dbpedia:Soneto">
+                        <title property="dc:title">En mayo</title>
+                        <title type="incipit" property="dc:alternative">¡Ven al prado de lirios y claveles,</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1526" about="dbpedia:Soneto">
+                        <title property="dc:title">A Núñez de Arce en su coronación</title>
+                        <title type="incipit" property="dc:alternative">Un genio ardiente, un alma vengadora</title>
+                     </bibl>
+                     <bibl resource="disco#s400n_1527" about="dbpedia:Soneto">
+                        <title property="dc:title">Canción de las estrellas</title>
+                        <title type="incipit" property="dc:alternative">¡Oh sol oh regio sol de Andalucía,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Manuel Reina</head>
-        <p>Puente Genil (Córdoba). 1856 - 1906</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s400n_1513">
-        <head>Claveles rojos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Rojo clavel abierto y perfumado</l>
-          <l n="2">ostentaba su pompa y lozanía</l>
-          <l n="3">sobre el nítido encaje que cubría</l>
-          <l n="4">las gracias de tu seno cincelado.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Aquella flor de pétalo encarnado</l>
-          <l n="6">-viva llama que aromas esparcía-</l>
-          <l n="7">deshojéla, gozoso en la onda fría</l>
-          <l n="8">del champaña de espuma coronado.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Ciego de amor, la copa reluciente</l>
-          <l n="10">del áureo vino, que la placer provoca,</l>
-          <l n="11">apuré con afán y ansia vehemente.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mas calmada no vi mi fiebre loca,</l>
-          <l n="13">hasta que deshojó mi labio ardiente</l>
-          <l n="14">el clavel encendido de tu boca.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1514">
-        <head>Tus ojos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Son tus ojos, mi bien, negros diamantes</l>
-          <l n="2">en que relumbra el sol del mediodía;</l>
-          <l n="3">ojos llenos de erótica poesía,</l>
-          <l n="4">de llamas y promesas embriagantes.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Tus ojos son espejos fulgurantes</l>
-          <l n="6">que reflejan la hermosa Andalucía</l>
-          <l n="7">con su pompa, su gracia y su alegría,</l>
-          <l n="8">sus campos y sus cielos deslumbrantes.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Cuando me asomo a tus pupilas bellas,</l>
-          <l n="10">miro vergeles, árabes palacios,</l>
-          <l n="11">mares de plata y luz, noches de estrellas,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">patios floridos, ferias bulliciosas,</l>
-          <l n="13">la Giralda riendo en los espacios,</l>
-          <l n="14">y el amor sobre céspedes y rosas.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1515">
-        <head>La gota de sangre</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Sentados en la gótica ventana</l>
-          <l n="2">estábamos tú y yo, mi antigua amante:</l>
-          <l n="3">tú, de hermosura y de placer, radiante;</l>
-          <l n="4">yo, absorto en tu belleza soberana.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Al ver tu fresca juventud lozana,</l>
-          <l n="6">una abeja lasciva y susurrante</l>
-          <l n="7">clavó su oculto dardo penetrante</l>
-          <l n="8">en tu seno gentil de nieve y grana.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Viva gota de sangre transparente</l>
-          <l n="10">sobre tu piel rosada y hechicera</l>
-          <l n="11">brilló como un rubí resplandeciente.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mi ansioso labio en la pequeña herida</l>
-          <l n="13">estampé con afán... ¡Nunca lo hiciera;</l>
-          <l n="14">que aquella gota envenenó mi vida!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1516">
-        <head>Las almas tristes</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Yo amo las tristes almas dolorosas</l>
-          <l n="2">que la intensa amargura ha devorado:</l>
-          <l n="3">el valle, por la lava calcinado,</l>
-          <l n="4">da ricas vides y fragantes rosas.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¡Lejos de mí las risas bulliciosas!</l>
-          <l n="6">¡Lejos de mí el placer emponzoñado!</l>
-          <l n="7">Yo amé siempre el dolor, raudal sagrado</l>
-          <l n="8">de purísimas lágrimas hermosas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Triste es todo lo grande, noble y fuerte,</l>
-          <l n="10">el libro de la Historia, los Profetas,</l>
-          <l n="11">los abismos, los templos seculares.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Tétrico es el amor como la muerte,</l>
-          <l n="13">lúgubre el corazón de los poetas,</l>
-          <l n="14">y amargos son los dilatados mares.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1517">
-        <head>Nuestro siglo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¿Oís...? Es el silbar de los cañones;</l>
-          <l n="2">el bote de la lanza en la cimera;</l>
-          <l n="3">el grito atronador de la guerrera</l>
-          <l n="4">trompa y el relinchar de los bridones.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Mirad en las murallas los pendones;</l>
-          <l n="6">lagos de sangre son monte y pradera,</l>
-          <l n="7">y extendidas están por la ancha esfera,</l>
-          <l n="8">cual campo de batalla, las naciones.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">La guerra es nuestro dios; sacrificamos</l>
-          <l n="10">en el altar de la ambición la vida;</l>
-          <l n="11">la victoria de lauros coronamos,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">sin ver nuestra razón oscurecida</l>
-          <l n="13">que el paladín, que hoy héroe contemplamos,</l>
-          <l n="14">mañana ha de pasar por homicida!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1518">
-        <head>La eterna mascarada</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Todo es disfraz! Bajo una frente hermosa</l>
-          <l n="2">descubro un pensamiento pervertido:</l>
-          <l n="3">allá contemplo un ser empedernido</l>
-          <l n="4">con tristes ojos y la voz llorosa.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Aquí la corrupción con faz de diosa;</l>
-          <l n="6">y allá, en risueño y apartado nido</l>
-          <l n="7">de amores, el rencor vela escondido,</l>
-          <l n="8">cual víbora en el cáliz de una rosa.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Todo es disfraz! Con cara placentera</l>
-          <l n="10">y en el labio la alegre carcajada</l>
-          <l n="11">la horrorosa perfidia nos espera.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¡Tuvo siempre el cobarde audaz mirada!</l>
-          <l n="13">¡Piel sedosa y brillante la pantera!</l>
-          <l n="14">¡Y resplandores la traidora espada!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1519">
-        <head>Andalucía</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Cielo brillante, fuentes rumorosas;</l>
-          <l n="2">ojos negros; cantores y verbenas;</l>
-          <l n="3">altares adornados de azucenas;</l>
-          <l n="4">rostros tostados, perfumadas rosas.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Bellas noches de amor esplendorosas,</l>
-          <l n="6">mares de plata y luz, brisas serenas,</l>
-          <l n="7">rejas de nardos y claveles llenas;</l>
-          <l n="8">serenatas; mujeres deliciosas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Cancelas, orientales miradores;</l>
-          <l n="10">la guitarra y su triste melodía;</l>
-          <l n="11">patios; mantillas, huertos, ruiseñores;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">rica y deslumbrante poesía...</l>
-          <l n="13">He aquí el pueblo del sol y los amores;</l>
-          <l n="14">la mañana del mundo: ¡Andalucía!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1520">
-        <head>La perla</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Contemplaban tus ojos centelleantes</l>
-          <l n="2">la palma de cristal, la linfa pura</l>
-          <l n="3">del surtidor que vierte en la espesura</l>
-          <l n="4">su polvo de zafiros y diamantes;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">cuando enferma, con pasos vacilantes,</l>
-          <l n="6">se acercó una mujer toda tristura,</l>
-          <l n="7">y te pidió limosna con dulzura,</l>
-          <l n="8">fijando en ti miradas suplicantes.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">La perla que en tu mano refulgía</l>
-          <l n="10">diste a aquella mujer pobre y doliente,</l>
-          <l n="11">que se alejó llorando de alegría.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Yo entonces, conmovido y reverente,</l>
-          <l n="13">no te besé en tus labios cual solía</l>
-          <l n="14">¡sino en la noble y luminosa frente!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1521">
-        <head>La rosa y el ruiseñor</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">La rosa, emperatriz de la hermosura,</l>
-          <l n="2">que brinda al sol sus labios encendidos;</l>
-          <l n="3">la que arranca a los céfiros y nidos</l>
-          <l n="4">endechas rebosantes de dulzura;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">la rosa de opulenta vestidura,</l>
-          <l n="6">que es gloria y embriaguez de los sentidos</l>
-          <l n="7">y en los verdes jazmines florecidos,</l>
-          <l n="8">cual rojizo relámpago, fulgura;</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">la que aroma las noches de verbena,</l>
-          <l n="10">fue, del mundo en la espléndida alborada,</l>
-          <l n="11">más nívea que la cándida azucena.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Pero Adán fijo en ella la mirada</l>
-          <l n="13">y, palpitante y de rubores llena,</l>
-          <l n="14">la blanca rosa se volvió encarnada.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1522">
-        <head>La poesía</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Como el raudal que corre en la pradera</l>
-          <l n="2">copia en su espejo pájaros y flores,</l>
-          <l n="3">la alada mariposa de colores,</l>
-          <l n="4">el verde arbusto y la radiante esfera,</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">la sublime poesía reverbera</l>
-          <l n="6">combates, glorias, risas y dolores,</l>
-          <l n="7">odio y amor, tinieblas y esplendores,</l>
-          <l n="8">el cielo, el campo, el mar... ¡la vida entera!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Así Homero es la lid; Virgilio, el día;</l>
-          <l n="10">Esquilo, la tormenta bramadora;</l>
-          <l n="11">Anacreonte, el vino y la alegría;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Dante, la noche con su negro arcano;</l>
-          <l n="13">Calderón, el honor; Miltón la aurora;</l>
-          <l n="14">Shakespeare, el triste corazón humano!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1523">
-        <head>Los rojos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Retruena el tambor, la turba avanza</l>
-          <l n="2">terrible el rostro y la mirada fiera;</l>
-          <l n="3">flota, teñida en sangre, la bandera;</l>
-          <l n="4">silba el ronco fusil; cruje la lanza.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La multitud sedienta de venganza,</l>
-          <l n="6">crímenes va sembrando por doquiera;</l>
-          <l n="7">convierte al pueblo en colosal hoguera</l>
-          <l n="8">y se entrega, iracunda, a la matanza.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Viva la libertad! la turba grita,</l>
-          <l n="10">cuando, furiosa, al mar se precipita</l>
-          <l n="11">y todo cuanto ve quema y destruye.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¡Oh libertad! ¡Oh libertad sagrada!</l>
-          <l n="13">¡Maldita sea la hueste degradada</l>
-          <l n="14">que tu precioso nombre prostituye!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1524">
-        <head>María Stuart</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Pálida la color, en la alba frente,</l>
-          <l n="2">un surco que revela el desconsuelo,</l>
-          <l n="3">la azul pupila dirigida al cielo,</l>
-          <l n="4">el paso firme, el ademán prudente,</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">baña su hermosa faz el llanto ardiente.</l>
-          <l n="6">Marcado en su semblante está el desvelo,</l>
-          <l n="7">y un vestido de negro terciopelo</l>
-          <l n="8">aprisiona sus formas ricamente.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Así María Stuart camina lenta,</l>
-          <l n="10">el pudoroso pecho destrozado,</l>
-          <l n="11">a la picota lúgubre y sangrienta;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y al rodar su cabeza en el tablado,</l>
-          <l n="13">rodó en el suelo, para eterna afrenta,</l>
-          <l n="14">el nombre de su prima deshonrado.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1525">
-        <head>En mayo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Ven al prado de lirios y claveles,</l>
-          <l n="2">mi bello y dulce bien! El campo llena</l>
-          <l n="3">de perfumes la atmósfera serena</l>
-          <l n="4">y el mes de mayo irradia en los vergeles.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¡Ven! Entre los rosales y laureles</l>
-          <l n="6">flauta invisible melodiosa suena.</l>
-          <l n="7">¡Ven! Que en la orilla del Genil amena</l>
-          <l n="8">el amor es panal de ricas mieles.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Ven, mi alma! Las auras su frescura</l>
-          <l n="10">nos ofrecen; las aves su armonía</l>
-          <l n="11">y recóndito nido la espesura.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¡Mas no, no vengas, adorada mía;</l>
-          <l n="13">que el inmenso raudal de mi amargura</l>
-          <l n="14">tu corazón feliz destruiría!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet-sequence">
-        <head>A Núñez de Arce en su coronación</head>
-        <lg type="sonnet" xml:id="s400n_1526_01">
-          <head>I</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Un genio ardiente, un alma vengadora</l>
-            <l n="2">reclama ya la universal conciencia:</l>
-            <l n="3">brilla el cinismo, triunfa la licencia,</l>
-            <l n="4">y la maldad se yergue vanidosa.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Falta un genio de voz atronadora</l>
-            <l n="6">que maldiga del mundo y la imprudencia,</l>
-            <l n="7">reduzca al ambicioso a la impotencia</l>
-            <l n="8">y arranque tanta máscara traidora.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Un genio, sí, de frente inmaculada</l>
-            <l n="10">que convierta su pluma de diamante</l>
-            <l n="11">en látigo de fuego o recia espada;</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">y que ostente en su espíritu radiante</l>
-            <l n="13">de Tácito, la cólera sagrada</l>
-            <l n="14">y el estro airado del terrible Dante.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s400n_1526_02">
-          <head>II</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Ese genio inmortal, esa alma austera</l>
-            <l n="2">sólo puedes ser tú, sublime vate:</l>
-            <l n="3">tú, en cuya estrofa cincelada late</l>
-            <l n="4">noble y augusta la verdad sincera.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Tú, cuya inspiración robusta y fiera</l>
-            <l n="6">da al crimen y al terror tremendo embate</l>
-            <l n="7">en los valientes Gritos del combate,</l>
-            <l n="8">donde solloza nuestra edad entera.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Tú sólo puedes ser el soberano</l>
-            <l n="10">poeta vengador, porque has reunido</l>
-            <l n="11">las virtudes del pueblo castellano,</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">y en tu grandioso canto enardecido</l>
-            <l n="13">suena potente del león hispano</l>
-            <l n="14">el formidable aterrador rugido.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s400n_1526_03">
-          <head>III</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Hoy que el mundo latino te proclama</l>
-            <l n="2">emperador del Arte; hoy que un senado,</l>
-            <l n="3">de noble admiración arrebatado,</l>
-            <l n="4">ciñe a tu frente el lauro de la fama,</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">piensa en la humanidad que sufre y clama,</l>
-            <l n="6">y pon la vista en nuestro pueblo amado</l>
-            <l n="7">que, roto, escarnecido y desgraciado,</l>
-            <l n="8">en ti, varón insigne, espera y ama.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">¡Y hace bien, vive Dios! ¡Ya me parece</l>
-            <l n="10">que estallan furibundos tus acentos!</l>
-            <l n="11">¡Ya el mal, amedrentado, se estremece!</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">¡Ya las cuerdas de bronce de tu lira</l>
-            <l n="13">se transforman en látigos sangrientos!</l>
-            <l n="14">¡Ya miro arder el hierro de tu ira!</l>
-          </lg>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s400n_1527">
-        <head>Canción de las estrellas</head>
-        <lg n="1" type="unknown">
-          <l n="1">¡Oh sol oh regio sol de Andalucía,</l>
-          <l n="2">besa mi frente, y con tus rayos de oro</l>
-          <l n="3">corona mi laúd! ¡Oh frescas rosas</l>
-          <l n="4">de los jardines béticos, perfumes</l>
-        </lg>
-        <lg n="2" type="unknown">
-          <l n="5">y colores prestad a mi poesía!</l>
-          <l n="6">¡Oh esquivos ruiseñores melodiosos</l>
-          <l n="7">que moráis en los bosques de mi patria,</l>
-          <l n="8">las perlas derramad de vuestro canto</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">sobre el metal sonoro de mis versos!</l>
-          <l n="10">¡Sol rosas, ruiseñores, embriagadme</l>
-          <l n="11">de fragancia, y músicas, y lumbres,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y así podré narrar la breve historia</l>
-          <l n="13">de un tierno amor en lágrimas bañado,</l>
-          <l n="14">como violeta henchida de rocío!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Manuel Reina</head>
+            <p>Puente Genil (Córdoba). 1856 - 1906</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s400n_1513">
+            <head>Claveles rojos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-">Rojo clavel abierto y perfumado</l>
+               <l n="2" met="--+--+---+-">ostentaba su pompa y lozanía</l>
+               <l n="3" met="--+--+---+-" enjamb="B-ex_dobj_verb">sobre el nítido encaje que cubría</l>
+               <l n="4" met="-+---+---+-" enjamb="I-ex_dobj_verb">las gracias de tu seno cincelado.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+---+-" enjamb="B-ex_subj_verb">Aquella flor de pétalo encarnado</l>
+               <l n="6" met="+-+--+---+-" enjamb="I-ex_subj_verb">-viva llama que aromas esparcía-</l>
+               <l n="7" met="--+--+-+-+-" enjamb="B-pb_noun_prep">deshojéla, gozoso en la onda fría</l>
+               <l n="8" met="--+--+---+-" enjamb="I-pb_noun_prep">del champaña de espuma coronado.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+-+---+-" enjamb="B-pb_noun_prep">Ciego de amor, la copa reluciente</l>
+               <l n="10" met="-+-+----+-+-" enjamb="I-pb_noun_prep">del áureo vino, que la placer provoca,</l>
+               <l n="11" met="--+--++--+-">apuré con afán y ansia vehemente.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+-++-+-+-">Mas calmada no vi mi fiebre loca,</l>
+               <l n="13" met="-----+-+-+-" enjamb="B-ex_subj_verb">hasta que deshojó mi labio ardiente</l>
+               <l n="14" met="--+--+---+-" enjamb="I-ex_subj_verb">el clavel encendido de tu boca.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1514">
+            <head>Tus ojos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--++--+-" enjamb="B-ex_subj_verb">Son tus ojos, mi bien, negros diamantes</l>
+               <l n="2" met="---+-+---+-" enjamb="I-ex_subj_verb">en que relumbra el sol del mediodía;</l>
+               <l n="3" met="+-+--+---+-">ojos llenos de erótica poesía,</l>
+               <l n="4" met="-+---+---+-">de llamas y promesas embriagantes.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+---+-" enjamb="B-cc_crossclause">Tus ojos son espejos fulgurantes</l>
+               <l n="6" met="--+--+---+-" enjamb="I-cc_crossclause">que reflejan la hermosa Andalucía</l>
+               <l n="7" met="--+--+---+-">con su pompa, su gracia y su alegría,</l>
+               <l n="8" met="-+---+---+-">sus campos y sus cielos deslumbrantes.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--++---+-+-">Cuando me asomo a tus pupilas bellas,</l>
+               <l n="10" met="+--+-+---+-">miro vergeles, árabes palacios,</l>
+               <l n="11" met="+--+-++--+-">mares de plata y luz, noches de estrellas,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+---+-">patios floridos, ferias bulliciosas,</l>
+               <l n="13" met="--+-+----+-">la Giralda riendo en los espacios,</l>
+               <l n="14" met="--+--+---+-">y el amor sobre céspedes y rosas.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1515">
+            <head>La gota de sangre</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">Sentados en la gótica ventana</l>
+               <l n="2" met="-+--++-+-+-">estábamos tú y yo, mi antigua amante:</l>
+               <l n="3" met="+--+---+-+-">tú, de hermosura y de placer, radiante;</l>
+               <l n="4" met="++---+---+-">yo, absorto en tu belleza soberana.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-">Al ver tu fresca juventud lozana,</l>
+               <l n="6" met="+-+--+---+-" enjamb="B-ex_subj_verb">una abeja lasciva y susurrante</l>
+               <l n="7" met="-+-+-+---+-" enjamb="I-ex_subj_verb">clavó su oculto dardo penetrante</l>
+               <l n="8" met="--+--+-+-+-">en tu seno gentil de nieve y grana.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+---+-">Viva gota de sangre transparente</l>
+               <l n="10" met="---+-+---+-">sobre tu piel rosada y hechicera</l>
+               <l n="11" met="-+-+-+---+-">brilló como un rubí resplandeciente.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-" enjamb="B-pb_adj_noun">Mi ansioso labio en la pequeña herida</l>
+               <l n="13" met="--+--++-++-" enjamb="I-pb_adj_noun">estampé con afán... ¡Nunca lo hiciera;</l>
+               <l n="14" met="-+-+---+-+-">que aquella gota envenenó mi vida!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1516">
+            <head>Las almas tristes</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-" enjamb="B-cc_crossclause">Yo amo las tristes almas dolorosas</l>
+               <l n="2" met="--+--++--+-" enjamb="I-cc_crossclause">que la intensa amargura ha devorado:</l>
+               <l n="3" met="-+---+---+-">el valle, por la lava calcinado,</l>
+               <l n="4" met="++-+---+-+-">da ricas vides y fragantes rosas.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-">¡Lejos de mí las risas bulliciosas!</l>
+               <l n="6" met="---+-+---+-">¡Lejos de mí el placer emponzoñado!</l>
+               <l n="7" met="+++--+-+-+-" enjamb="B-pb_noun_prep">Yo amé siempre el dolor, raudal sagrado</l>
+               <l n="8" met="--+--+---+-" enjamb="I-pb_noun_prep">de purísimas lágrimas hermosas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+++-++-+-+-">Triste es todo lo grande, noble y fuerte,</l>
+               <l n="10" met="-+---+---+-">el libro de la Historia, los Profetas,</l>
+               <l n="11" met="--+--+---+-">los abismos, los templos seculares.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-">Tétrico es el amor como la muerte,</l>
+               <l n="13" met="+----+---+-">lúgubre el corazón de los poetas,</l>
+               <l n="14" met="-+-+---+-+-">y amargos son los dilatados mares.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1517">
+            <head>Nuestro siglo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+--+---+-">¿Oís...? Es el silbar de los cañones;</l>
+               <l n="2" met="-+---+---+-">el bote de la lanza en la cimera;</l>
+               <l n="3" met="-+---+---+-" enjamb="B-pb_adj_noun">el grito atronador de la guerrera</l>
+               <l n="4" met="+----+---+-" enjamb="I-pb_adj_noun">trompa y el relinchar de los bridones.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">Mirad en las murallas los pendones;</l>
+               <l n="6" met="+--+-++--+-">lagos de sangre son monte y pradera,</l>
+               <l n="7" met="--+--+-+-+-">y extendidas están por la ancha esfera,</l>
+               <l n="8" met="++---+---+-">cual campo de batalla, las naciones.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--+---+-" enjamb="B-ex_dobj_verb">La guerra es nuestro dios; sacrificamos</l>
+               <l n="10" met="---+---+-+-" enjamb="I-ex_dobj_verb">en el altar de la ambición la vida;</l>
+               <l n="11" met="--+--+---+-">la victoria de lauros coronamos,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">sin ver nuestra razón oscurecida</l>
+               <l n="13" met="---++----+-">que el paladín, que hoy héroe contemplamos,</l>
+               <l n="14" met="-++--+---+-">mañana ha de pasar por homicida!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1518">
+            <head>La eterna mascarada</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-++-+--+-">¡Todo es disfraz! Bajo una frente hermosa</l>
+               <l n="2" met="-++--+---+-">descubro un pensamiento pervertido:</l>
+               <l n="3" met="-+-+++---+-">allá contemplo un ser empedernido</l>
+               <l n="4" met="-+-+---+-+-">con tristes ojos y la voz llorosa.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+-+-+-">Aquí la corrupción con faz de diosa;</l>
+               <l n="6" met="-+-+---+-+-" enjamb="B-pb_noun_prep">y allá, en risueño y apartado nido</l>
+               <l n="7" met="-+---++--+-" enjamb="I-pb_noun_prep">de amores, el rencor vela escondido,</l>
+               <l n="8" met="++---+-+-+-">cual víbora en el cáliz de una rosa.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+-++---+-">¡Todo es disfraz! Con cara placentera</l>
+               <l n="10" met="--+--+---+-">y en el labio la alegre carcajada</l>
+               <l n="11" met="--+--+-+-+-">la horrorosa perfidia nos espera.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+-+-+-">¡Tuvo siempre el cobarde audaz mirada!</l>
+               <l n="13" met="+-+--+---+-">¡Piel sedosa y brillante la pantera!</l>
+               <l n="14" met="---+---+-+-">¡Y resplandores la traidora espada!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1519">
+            <head>Andalucía</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-">Cielo brillante, fuentes rumorosas;</l>
+               <l n="2" met="+-+--+---+-">ojos negros; cantores y verbenas;</l>
+               <l n="3" met="-+---+---+-">altares adornados de azucenas;</l>
+               <l n="4" met="+--+---+-+-">rostros tostados, perfumadas rosas.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-">Bellas noches de amor esplendorosas,</l>
+               <l n="6" met="+--+-++--+-">mares de plata y luz, brisas serenas,</l>
+               <l n="7" met="+--+---+-+-">rejas de nardos y claveles llenas;</l>
+               <l n="8" met="--+--+---+-">serenatas; mujeres deliciosas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">Cancelas, orientales miradores;</l>
+               <l n="10" met="--+--+---+-">la guitarra y su triste melodía;</l>
+               <l n="11" met="+--+-+---+-">patios; mantillas, huertos, ruiseñores;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+----+---+-">rica y deslumbrante poesía...</l>
+               <l n="13" met="+++--+---+-">He aquí el pueblo del sol y los amores;</l>
+               <l n="14" met="--+--+---+-">la mañana del mundo: ¡Andalucía!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1520">
+            <head>La perla</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+---+-">Contemplaban tus ojos centelleantes</l>
+               <l n="2" met="-+---+-+-+-" enjamb="B-pb_noun_prep">la palma de cristal, la linfa pura</l>
+               <l n="3" met="---+-+---+-" enjamb="B-ex_dobj_verb I-pb_noun_prep">del surtidor que vierte en la espesura</l>
+               <l n="4" met="-+---+---+-" enjamb="I-ex_dobj_verb">su polvo de zafiros y diamantes;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-">cuando enferma, con pasos vacilantes,</l>
+               <l n="6" met="--+--++--+-">se acercó una mujer toda tristura,</l>
+               <l n="7" met="-+-+-+---+-">y te pidió limosna con dulzura,</l>
+               <l n="8" met="-+-+-+---+-">fijando en ti miradas suplicantes.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-" enjamb="B-ex_subj_verb">La perla que en tu mano refulgía</l>
+               <l n="10" met="+-+--++--+-" enjamb="I-ex_subj_verb">diste a aquella mujer pobre y doliente,</l>
+               <l n="11" met="---+-+---+-">que se alejó llorando de alegría.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++---+---+-">Yo entonces, conmovido y reverente,</l>
+               <l n="13" met="++-+-+---+-">no te besé en tus labios cual solía</l>
+               <l n="14" met="---+---+-+-">¡sino en la noble y luminosa frente!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1521">
+            <head>La rosa y el ruiseñor</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">La rosa, emperatriz de la hermosura,</l>
+               <l n="2" met="-+-+-+---+-">que brinda al sol sus labios encendidos;</l>
+               <l n="3" met="--+--+---+-" enjamb="B-ex_subj_verb">la que arranca a los céfiros y nidos</l>
+               <l n="4" met="-+---+---+-" enjamb="I-ex_subj_verb">endechas rebosantes de dulzura;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">la rosa de opulenta vestidura,</l>
+               <l n="6" met="++---+---+-">que es gloria y embriaguez de los sentidos</l>
+               <l n="7" met="--+--+---+-">y en los verdes jazmines florecidos,</l>
+               <l n="8" met="+-+--+---+-">cual rojizo relámpago, fulgura;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">la que aroma las noches de verbena,</l>
+               <l n="10" met="+-+--+---+-">fue, del mundo en la espléndida alborada,</l>
+               <l n="11" met="++---+---+-">más nívea que la cándida azucena.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++-+---+-">Pero Adán fijo en ella la mirada</l>
+               <l n="13" met="---+---+-+-">y, palpitante y de rubores llena,</l>
+               <l n="14" met="-+-+---+-+-">la blanca rosa se volvió encarnada.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1522">
+            <head>La poesía</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+---+-" enjamb="B-ex_subj_verb">Como el raudal que corre en la pradera</l>
+               <l n="2" met="+--+-+---+-" enjamb="I-ex_subj_verb">copia en su espejo pájaros y flores,</l>
+               <l n="3" met="-+---+---+-">la alada mariposa de colores,</l>
+               <l n="4" met="-+-+---+-+-">el verde arbusto y la radiante esfera,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-" enjamb="B-ex_dobj_verb">la sublime poesía reverbera</l>
+               <l n="6" met="-+-+-+---+-" enjamb="I-ex_dobj_verb">combates, glorias, risas y dolores,</l>
+               <l n="7" met="+-+-+----+-">odio y amor, tinieblas y esplendores,</l>
+               <l n="8" met="-+-+-+-+-+-">el cielo, el campo, el mar... ¡la vida entera!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+++-+-+-+-">¡Así Homero es la lid; Virgilio, el día;</l>
+               <l n="10" met="-+---+---+-">Esquilo, la tormenta bramadora;</l>
+               <l n="11" met="--+-+----+-">Anacreonte, el vino y la alegría;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+---+-+-">Dante, la noche con su negro arcano;</l>
+               <l n="13" met="--+--+-+-+-">Calderón, el honor; Miltón la aurora;</l>
+               <l n="14" met="--+-+---+-+-">Shakespeare, el triste corazón humano!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1523">
+            <head>Los rojos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+--+-+--+-" enjamb="B-ex_dobj_verb">Retruena el tambor, la turba avanza</l>
+               <l n="2" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">terrible el rostro y la mirada fiera;</l>
+               <l n="3" met="+--+-+---+-">flota, teñida en sangre, la bandera;</l>
+               <l n="4" met="+-+--++--+-">silba el ronco fusil; cruje la lanza.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-">La multitud sedienta de venganza,</l>
+               <l n="6" met="+--+-+---+-">crímenes va sembrando por doquiera;</l>
+               <l n="7" met="-+-+---+-+-">convierte al pueblo en colosal hoguera</l>
+               <l n="8" met="--+--+---+-">y se entrega, iracunda, a la matanza.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+----+-+-+-">¡Viva la libertad! la turba grita,</l>
+               <l n="10" met="---+-+---+-">cuando, furiosa, al mar se precipita</l>
+               <l n="11" met="-+---++--+-">y todo cuanto ve quema y destruye.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+--+-+-">¡Oh libertad! ¡Oh libertad sagrada!</l>
+               <l n="13" met="-+-+-+---+-" enjamb="B-cc_crossclause">¡Maldita sea la hueste degradada</l>
+               <l n="14" met="---+-+---+-" enjamb="I-cc_crossclause">que tu precioso nombre prostituye!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1524">
+            <head>María Stuart</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+----+-+-+-">Pálida la color, en la alba frente,</l>
+               <l n="2" met="++---+---+-">un surco que revela el desconsuelo,</l>
+               <l n="3" met="-+-+---+-+-">la azul pupila dirigida al cielo,</l>
+               <l n="4" met="-+-+---+-+-">el paso firme, el ademán prudente,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+-+-+-">baña su hermosa faz el llanto ardiente.</l>
+               <l n="6" met="-+---+-+-+-">Marcado en su semblante está el desvelo,</l>
+               <l n="7" met="+-+--+---+-" enjamb="B-ex_subj_verb">y un vestido de negro terciopelo</l>
+               <l n="8" met="--+--+-+-+-" enjamb="I-ex_subj_verb">aprisiona sus formas ricamente.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">Así María Stuart camina lenta,</l>
+               <l n="10" met="---+-+---+-">el pudoroso pecho destrozado,</l>
+               <l n="11" met="---+-+---+-">a la picota lúgubre y sangrienta;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">y al rodar su cabeza en el tablado,</l>
+               <l n="13" met="-+-+---+-+-">rodó en el suelo, para eterna afrenta,</l>
+               <l n="14" met="-+---+---+-">el nombre de su prima deshonrado.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1525">
+            <head>En mayo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-">¡Ven al prado de lirios y claveles,</l>
+               <l n="2" met="-+--+-++-+-" enjamb="B-pb_verb_cprep">mi bello y dulce bien! El campo llena</l>
+               <l n="3" met="--+--+---+-" enjamb="I-pb_verb_cprep">de perfumes la atmósfera serena</l>
+               <l n="4" met="-----+---+-">y el mes de mayo irradia en los vergeles.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+----+-">¡Ven! Entre los rosales y laureles</l>
+               <l n="6" met="+--+---+-+-">flauta invisible melodiosa suena.</l>
+               <l n="7" met="+--+---+-+-" enjamb="B-ex_subj_verb">¡Ven! Que en la orilla del Genil amena</l>
+               <l n="8" met="--++-+-+-+-" enjamb="I-ex_subj_verb">el amor es panal de ricas mieles.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+---+-" enjamb="B-ex_subj_verb">¡Ven, mi alma! Las auras su frescura</l>
+               <l n="10" met="+-+--+---+-" enjamb="I-ex_subj_verb">nos ofrecen; las aves su armonía</l>
+               <l n="11" met="--+--+---+-">y recóndito nido la espesura.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+++---+-+-">¡Mas no, no vengas, adorada mía;</l>
+               <l n="13" met="--+--+---+-" enjamb="B-ex_subj_verb">que el inmenso raudal de mi amargura</l>
+               <l n="14" met="---+-+---+-" enjamb="I-ex_subj_verb">tu corazón feliz destruiría!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet-sequence" xml:id="s400n_1526">
+            <head>A Núñez de Arce en su coronación</head>
+            <lg type="sonnet" xml:id="s400n_1526_01">
+               <head>I</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="++-+++---+-" enjamb="B-ex_subj_verb">Un genio ardiente, un alma vengadora</l>
+                  <l n="2" met="-+-+---+-+-" enjamb="I-ex_subj_verb">reclama ya la universal conciencia:</l>
+                  <l n="3" met="+--+-+---+-">brilla el cinismo, triunfa la licencia,</l>
+                  <l n="4" met="---+-+---+-">y la maldad se yergue vanidosa.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="+++--+---+-" enjamb="B-cc_crossclause">Falta un genio de voz atronadora</l>
+                  <l n="6" met="--+--+---+-" enjamb="I-cc_crossclause">que maldiga del mundo y la imprudencia,</l>
+                  <l n="7" met="-+---+---+-" enjamb="B-ex_dobj_verb">reduzca al ambicioso a la impotencia</l>
+                  <l n="8" met="-+-+-+---+-" enjamb="I-ex_dobj_verb">y arranque tanta máscara traidora.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="++-+-+---+-" enjamb="B-cc_crossclause">Un genio, sí, de frente inmaculada</l>
+                  <l n="10" met="--+--+---+-" enjamb="I-cc_crossclause">que convierta su pluma de diamante</l>
+                  <l n="11" met="-+---+-+-+-">en látigo de fuego o recia espada;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="--+--+---+-" enjamb="B-pb_noun_prep">y que ostente en su espíritu radiante</l>
+                  <l n="13" met="-+---+---+-" enjamb="I-pb_noun_prep">de Tácito, la cólera sagrada</l>
+                  <l n="14" met="-+-+---+-+-">y el estro airado del terrible Dante.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s400n_1526_02">
+               <head>II</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+-+--+++-+-" enjamb="B-pb_adj_adv">Ese genio inmortal, esa alma austera</l>
+                  <l n="2" met="+-+-++-+-+-" enjamb="I-pb_adj_adv">sólo puedes ser tú, sublime vate:</l>
+                  <l n="3" met="+--+---+-+-">tú, en cuya estrofa cincelada late</l>
+                  <l n="4" met="+--+---+-+-">noble y augusta la verdad sincera.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="+----+-+-+-" enjamb="B-ex_subj_verb">Tú, cuya inspiración robusta y fiera</l>
+                  <l n="6" met="++---+-+-+-" enjamb="I-ex_subj_verb">da al crimen y al terror tremendo embate</l>
+                  <l n="7" met="---+-+---+-">en los valientes Gritos del combate,</l>
+                  <l n="8" met="---+---+-+-">donde solloza nuestra edad entera.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="++-+-+---+-" enjamb="B-pb_adj_noun">Tú sólo puedes ser el soberano</l>
+                  <l n="10" met="+---+--+-+-" enjamb="B-ex_dobj_verb I-pb_adj_noun">poeta vengador, porque has reunido</l>
+                  <l n="11" met="--+--+---+-" enjamb="I-ex_dobj_verb">las virtudes del pueblo castellano,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="---+-+---+-">y en tu grandioso canto enardecido</l>
+                  <l n="13" met="+--+---+-+-" enjamb="B-ex_dobj_verb">suena potente del león hispano</l>
+                  <l n="14" met="---+---+-+-" enjamb="I-ex_dobj_verb">el formidable aterrador rugido.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s400n_1526_03">
+               <head>III</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+-+--+-+-+-" enjamb="B-ex_dobj_verb">Hoy que el mundo latino te proclama</l>
+                  <l n="2" met="---+-+++-+-" enjamb="I-ex_dobj_verb">emperador del Arte; hoy que un senado,</l>
+                  <l n="3" met="-+---+---+-">de noble admiración arrebatado,</l>
+                  <l n="4" met="+--+-+---+-">ciñe a tu frente el lauro de la fama,</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="+----+-+-+-">piensa en la humanidad que sufre y clama,</l>
+                  <l n="6" met="-+-+---+-+-" enjamb="B-cc_crossclause">y pon la vista en nuestro pueblo amado</l>
+                  <l n="7" met="-+---+---+-" enjamb="I-cc_crossclause">que, roto, escarnecido y desgraciado,</l>
+                  <l n="8" met="-+-+-+-+-+-">en ti, varón insigne, espera y ama.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-+-++-++-+-">¡Y hace bien, vive Dios! ¡Ya me parece</l>
+                  <l n="10" met="-+---+---+-">que estallan furibundos tus acentos!</l>
+                  <l n="11" met="++---+---+-">¡Ya el mal, amedrentado, se estremece!</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+-+--+---+-" enjamb="B-ex_subj_verb">¡Ya las cuerdas de bronce de tu lira</l>
+                  <l n="13" met="--+--+---+-" enjamb="I-ex_subj_verb">se transforman en látigos sangrientos!</l>
+                  <l n="14" met="++-+-+---+-">¡Ya miro arder el hierro de tu ira!</l>
+               </lg>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s400n_1527">
+            <head>Canción de las estrellas</head>
+            <lg n="1" type="unknown">
+               <l n="1" met="-+-+-+---+-">¡Oh sol oh regio sol de Andalucía,</l>
+               <l n="2" met="+--+---+-+-" enjamb="B-ex_dobj_verb">besa mi frente, y con tus rayos de oro</l>
+               <l n="3" met="-+---++-+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">corona mi laúd! ¡Oh frescas rosas</l>
+               <l n="4" met="---+-+---+-" enjamb="I-pb_noun_prep">de los jardines béticos, perfumes</l>
+            </lg>
+            <lg n="2" type="unknown">
+               <l n="5" met="--+--+---+-">y colores prestad a mi poesía!</l>
+               <l n="6" met="-+---+---+-" enjamb="B-cc_crossclause">¡Oh esquivos ruiseñores melodiosos</l>
+               <l n="7" met="--+--+---+-" enjamb="I-cc_crossclause">que moráis en los bosques de mi patria,</l>
+               <l n="8" met="-+---+---+-">las perlas derramad de vuestro canto</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+---+-">sobre el metal sonoro de mis versos!</l>
+               <l n="10" met="++---+---+-" enjamb="B-pb_noun_prep">¡Sol rosas, ruiseñores, embriagadme</l>
+               <l n="11" met="--+--+---+-" enjamb="I-pb_noun_prep">de fragancia, y músicas, y lumbres,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+-+-+-" enjamb="B-pb_noun_prep">y así podré narrar la breve historia</l>
+               <l n="13" met="++-+-+---+-" enjamb="I-pb_noun_prep">de un tierno amor en lágrimas bañado,</l>
+               <l n="14" met="---+-+---+-">como violeta henchida de rocío!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

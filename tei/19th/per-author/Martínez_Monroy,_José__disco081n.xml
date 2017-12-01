@@ -1,193 +1,268 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de José Martínez Monroy</title>
-        <author>
-          <idno type="viaf" cert="high">86439</idno>
-          <idno type="#disco" xml:id="disco_081n"/>
-          <name type="short">Martínez Monroy</name>
-          <name type="full">
-            <name type="first-name">José</name>
-            <name type="second-name">Martínez Monroy</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">5</measure>
-        <measure unit="tokens">467</measure>
-        <measure unit="line">70</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_081n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_081n" role="author" sex="M">
-            <persName>José Martínez Monroy</persName>
-            <birth><placeName type="place">España</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1837" cert="high">1837</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1861" cert="high">1861</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de José Martínez Monroy</title>
+            <author corresp="#disco_081n">José Martínez Monroy</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">5</measure>
+            <measure unit="tokens">467</measure>
+            <measure unit="line">70</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_081n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_081n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/86439"/>
+                  <persName type="short">Martínez Monroy</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">José</forename>
+                     <surname property="foaf:familyName">Martínez Monroy</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">José Martínez Monroy</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1837" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1861" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s081n_0276" about="dbpedia:Soneto">
+                        <title property="dc:title">Con un duro</title>
+                        <title type="incipit" property="dc:alternative">Sentí, al pisar de nuestro amado el suelo,</title>
+                     </bibl>
+                     <bibl resource="disco#s081n_0277" about="dbpedia:Soneto">
+                        <title property="dc:title">El sol en oriente</title>
+                        <title type="incipit" property="dc:alternative">Ya rutilante en raudo remolino</title>
+                     </bibl>
+                     <bibl resource="disco#s081n_0278" about="dbpedia:Soneto">
+                        <title property="dc:title">Gonzalo en la batalla de Cerinola</title>
+                        <title type="incipit" property="dc:alternative">Cierra Nemur, de su escuadrón seguido,</title>
+                     </bibl>
+                     <bibl resource="disco#s081n_0279" about="dbpedia:Soneto">
+                        <title property="dc:title">Celajes de abril</title>
+                        <title type="incipit" property="dc:alternative">Pura nube, que vaga en manso vuelo,</title>
+                     </bibl>
+                     <bibl resource="disco#s081n_0280" about="dbpedia:Soneto">
+                        <title property="dc:title">El beso</title>
+                        <title type="incipit" property="dc:alternative">El beso, como tierna mariposa,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>José Martínez Monroy</head>
-        <p>España. 1837 - 1861</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s081n_0276">
-        <head>Con un duro</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Sentí, al pisar de nuestro amado el suelo,</l>
-          <l n="2">de perder a mis padres la amargura;</l>
-          <l n="3">no supe que era amor ni qué hermosura,</l>
-          <l n="4">ni hallé un amigo a quien decir mi anhelo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">En la tumba final del desconsuelo</l>
-          <l n="6">gime mi corazón: si, por ventura,</l>
-          <l n="7">ansioso busco a Dios tras esa altura,</l>
-          <l n="8">y al cielo miro, se oscurece el cielo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Nada soy, nada tengo, nada valgo;</l>
-          <l n="10">he dado a la ilusión mi adiós postrero:</l>
-          <l n="11">¿puedo ya en adelante creer en algo?</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Ni honores alcancé, ni fama espero;</l>
-          <l n="13">entré muerto en la vida, y muerto salgo.</l>
-          <l n="14">Me queda un duro: ¿para qué lo quiero?</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s081n_0277">
-        <head>El sol en oriente</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Ya rutilante en raudo remolino</l>
-          <l n="2">hierve ¡oh Sol! en Oriente el polvo de oro</l>
-          <l n="3">que tus ruedas levantan; ya el tesoro</l>
-          <l n="4">de tus rayos relumbra diamantino.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Desplegase ondeante y purpurino,</l>
-          <l n="6">al revolar el céfiro sonoro,</l>
-          <l n="7">tu regio manto, y en alegre coro</l>
-          <l n="8">siguen las rubias Horas tu camino.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Naturaleza ríe y se levanta</l>
-          <l n="10">del sueño en que nació suspensa y muda,</l>
-          <l n="11">y con su pompa y su beldad encanta;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y el hombre que vacila ante la duda,</l>
-          <l n="13">al contemplar magnificencia tanta,</l>
-          <l n="14">vuelve a la fe y al Hacedor saluda.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s081n_0278">
-        <head>Gonzalo en la batalla de Cerinola</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Cierra Nemur, de su escuadrón seguido,</l>
-          <l n="2">contra el audaz ibero, que le atiende;</l>
-          <l n="3">truena el bronce, chocando el hierro esplende,</l>
-          <l n="4">retumba en torno el bélico alarido.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Estrago a mil estragos añadido,</l>
-          <l n="6">en la pólvora hispana el fuego prende:</l>
-          <l n="7">ella furiosa por el aire asciende</l>
-          <l n="8">en llama y humo y hórrido estampido.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mas tú, Gran Capitán, la espada al viento,</l>
-          <l n="10">en fogoso corcel raudo atraviesas</l>
-          <l n="11">tus huestes, deslumbrando con tu gloria.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y a tus leones, con alegre acento,</l>
-          <l n="13">ánimo, gritas, mis amigos, esas</l>
-          <l n="14">las luminarias son de la victoria.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s081n_0279">
-        <head>Celajes de abril</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Pura nube, que vaga en manso vuelo,</l>
-          <l n="2">si el rojo sol que fúlgido amanece</l>
-          <l n="3">la ilumina, magnífica parece</l>
-          <l n="4">púrpura y oro en el azul del cielo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Cual de la blanca aurora rico velo,</l>
-          <l n="6">al hálito del céfiro se mece:</l>
-          <l n="7">crece en carmín, y en resplandores crece,</l>
-          <l n="8">y al alma infunde misterioso anhelo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Así, llena de encanto y lozanía,</l>
-          <l n="10">esplende, si en su luz amor la dora,</l>
-          <l n="11">dulce ilusión de joven fantasía.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mas ¿qué vale si al fin se descolora</l>
-          <l n="13">la ráfaga, y cual flor de un solo día,</l>
-          <l n="14">lo ideal pierde el lustre que atesora?</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s081n_0280">
-        <head>El beso</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">El beso, como tierna mariposa,</l>
-          <l n="2">que va de flor a flor volando breve,</l>
-          <l n="3">de boca a boca desprendido, mueve</l>
-          <l n="4">sus tenues alas de color de rosa;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">es a veces sonrisa cariñosa,</l>
-          <l n="6">que el dulce gozo sobre el labio llueve,</l>
-          <l n="7">o lágrima tal vez ardiente y leve,</l>
-          <l n="8">que del llagado corazón rebosa;</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">o bien suspiro triste y anhelante,</l>
-          <l n="10">que da la angustia a la perdida calma;</l>
-          <l n="11">mas para mí, que gimo delirante,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">de amor ornado por la hermosa palma,</l>
-          <l n="13">es la esencia del alma de mi amante,</l>
-          <l n="14">que baña las esencias de mi alma.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>José Martínez Monroy</head>
+            <p>España. 1837 - 1861</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s081n_0276">
+            <head>Con un duro</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-">Sentí, al pisar de nuestro amado el suelo,</l>
+               <l n="2" met="--+--+---+-">de perder a mis padres la amargura;</l>
+               <l n="3" met="++-+-+-+-+-">no supe que era amor ni qué hermosura,</l>
+               <l n="4" met="-+-+---+-+-">ni hallé un amigo a quien decir mi anhelo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-" enjamb="B-pb_adj_noun">En la tumba final del desconsuelo</l>
+               <l n="6" met="+----+---+-" enjamb="I-pb_adj_noun">gime mi corazón: si, por ventura,</l>
+               <l n="7" met="-+-+-+-+-+-">ansioso busco a Dios tras esa altura,</l>
+               <l n="8" met="-++---+--+-">y al cielo miro, se oscurece el cielo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-++-+-+-+-">Nada soy, nada tengo, nada valgo;</l>
+               <l n="10" met="++---+-+-+-">he dado a la ilusión mi adiós postrero:</l>
+               <l n="11" met="+-+--+-+-+-">¿puedo ya en adelante creer en algo?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+-+-+-">Ni honores alcancé, ni fama espero;</l>
+               <l n="13" met="-++--+-+-+-">entré muerto en la vida, y muerto salgo.</l>
+               <l n="14" met="++++---+++-">Me queda un duro: ¿para qué lo quiero?</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s081n_0277">
+            <head>El sol en oriente</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-" enjamb="B-ex_subj_verb">Ya rutilante en raudo remolino</l>
+               <l n="2" met="+-+--+-+-+-" enjamb="B-cc_crossclause I-ex_subj_verb">hierve ¡oh Sol! en Oriente el polvo de oro</l>
+               <l n="3" met="--+--+-+-+-" enjamb="B-pb_noun_prep I-cc_crossclause">que tus ruedas levantan; ya el tesoro</l>
+               <l n="4" met="--+--+---+-" enjamb="I-pb_noun_prep">de tus rayos relumbra diamantino.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+-+----+-">Desplegase ondeante y purpurino,</l>
+               <l n="6" met="---+-+---+-">al revolar el céfiro sonoro,</l>
+               <l n="7" met="-+-+---+-+-">tu regio manto, y en alegre coro</l>
+               <l n="8" met="+--+-+---+-">siguen las rubias Horas tu camino.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+---+-" enjamb="B-pb_verb_cprep">Naturaleza ríe y se levanta</l>
+               <l n="10" met="-+---+-+-+-" enjamb="I-pb_verb_cprep">del sueño en que nació suspensa y muda,</l>
+               <l n="11" met="---+---+-+-">y con su pompa y su beldad encanta;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">y el hombre que vacila ante la duda,</l>
+               <l n="13" met="---+---+-+-">al contemplar magnificencia tanta,</l>
+               <l n="14" met="+--+---+-+-">vuelve a la fe y al Hacedor saluda.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s081n_0278">
+            <head>Gonzalo en la batalla de Cerinola</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-">Cierra Nemur, de su escuadrón seguido,</l>
+               <l n="2" met="---+-+--++-">contra el audaz ibero, que le atiende;</l>
+               <l n="3" met="+-+--+-+-+-">truena el bronce, chocando el hierro esplende,</l>
+               <l n="4" met="-+-+-+---+-">retumba en torno el bélico alarido.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+---+-">Estrago a mil estragos añadido,</l>
+               <l n="6" met="--+--+-+-+-">en la pólvora hispana el fuego prende:</l>
+               <l n="7" met="+--+---+-+-">ella furiosa por el aire asciende</l>
+               <l n="8" met="-++-+----+-">en llama y humo y hórrido estampido.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+-+-+-">Mas tú, Gran Capitán, la espada al viento,</l>
+               <l n="10" met="--+--++--+-" enjamb="B-ex_dobj_verb">en fogoso corcel raudo atraviesas</l>
+               <l n="11" met="-+---+---+-" enjamb="I-ex_dobj_verb">tus huestes, deslumbrando con tu gloria.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+---+--+-">Y a tus leones, con alegre acento,</l>
+               <l n="13" met="--+---+-+-" enjamb="B-pb_relword">ánimo, gritas, mis amigos, esas</l>
+               <l n="14" met="---+-+---+-" enjamb="I-pb_relword">las luminarias son de la victoria.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s081n_0279">
+            <head>Celajes de abril</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+-+-+-">Pura nube, que vaga en manso vuelo,</l>
+               <l n="2" met="-+-+-+---+-" enjamb="B-ex_subj_verb">si el rojo sol que fúlgido amanece</l>
+               <l n="3" met="+-+--+---+-" enjamb="I-ex_subj_verb">la ilumina, magnífica parece</l>
+               <l n="4" met="+-+----+-+-">púrpura y oro en el azul del cielo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+-+-+-">Cual de la blanca aurora rico velo,</l>
+               <l n="6" met="-+---+---+-">al hálito del céfiro se mece:</l>
+               <l n="7" met="+--+---+-+-">crece en carmín, y en resplandores crece,</l>
+               <l n="8" met="-+-+---+-+-">y al alma infunde misterioso anhelo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--+---+-">Así, llena de encanto y lozanía,</l>
+               <l n="10" met="-+---+-+++-">esplende, si en su luz amor la dora,</l>
+               <l n="11" met="+--+-+---+-">dulce ilusión de joven fantasía.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+---+-" enjamb="B-ex_dobj_verb">Mas ¿qué vale si al fin se descolora</l>
+               <l n="13" met="-+---+++-+-" enjamb="I-ex_dobj_verb">la ráfaga, y cual flor de un solo día,</l>
+               <l n="14" met="-++-+----+-">lo ideal pierde el lustre que atesora?</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s081n_0280">
+            <head>El beso</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">El beso, como tierna mariposa,</l>
+               <l n="2" met="-+-+-+-+-+-">que va de flor a flor volando breve,</l>
+               <l n="3" met="-+-+---+-+-">de boca a boca desprendido, mueve</l>
+               <l n="4" met="-+-+---+-+-">sus tenues alas de color de rosa;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-">es a veces sonrisa cariñosa,</l>
+               <l n="6" met="-+-+---+-+-">que el dulce gozo sobre el labio llueve,</l>
+               <l n="7" met="-+---+-+-+-">o lágrima tal vez ardiente y leve,</l>
+               <l n="8" met="---+---+-+-">que del llagado corazón rebosa;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+---+-">o bien suspiro triste y anhelante,</l>
+               <l n="10" met="-+-+---+-+-">que da la angustia a la perdida calma;</l>
+               <l n="11" met="---+-+---+-">mas para mí, que gimo delirante,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">de amor ornado por la hermosa palma,</l>
+               <l n="13" met="+-+--+---+-">es la esencia del alma de mi amante,</l>
+               <l n="14" met="-+---+---+-">que baña las esencias de mi alma.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

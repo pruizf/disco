@@ -1,143 +1,209 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Atenógenes Segale</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_066n"/>
-          <name type="short">Segale</name>
-          <name type="full">
-            <name type="first-name">Atenógenes</name>
-            <name type="second-name">Segale</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">3</measure>
-        <measure unit="tokens">280</measure>
-        <measure unit="line">42</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_066n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_066n" role="author" sex="M">
-            <persName>Atenógenes Segale</persName>
-            <birth><placeName type="place">México</placeName>, <placeName type="country">México</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1868" cert="high">1868</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1903" cert="high">1903</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Atenógenes Segale</title>
+            <author corresp="#disco_066n">Atenógenes Segale</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">280</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_066n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_066n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Segale</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Atenógenes</forename>
+                     <surname property="foaf:familyName">Segale</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Atenógenes Segale</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">México</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1868" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1903" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s066n_0195" about="dbpedia:Soneto">
+                        <title property="dc:title">El primer viático</title>
+                        <title type="incipit" property="dc:alternative">Fue la primera vez esa mañana</title>
+                     </bibl>
+                     <bibl resource="disco#s066n_0196" about="dbpedia:Soneto">
+                        <title property="dc:title">Corona de espinas</title>
+                        <title type="incipit" property="dc:alternative">Cuando piensas a solas hijo mío,</title>
+                     </bibl>
+                     <bibl resource="disco#s066n_0197" about="dbpedia:Soneto">
+                        <title property="dc:title">A Santa Teresa en éxtasis</title>
+                        <title type="incipit" property="dc:alternative">Te habla la voz divina, resonando</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Atenógenes Segale</head>
-        <p>México. 1868 - 1903</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s066n_0195">
-        <head>El primer viático</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Fue la primera vez esa mañana</l>
-          <l n="2">que a mi Señor llevé junto a mi pecho</l>
-          <l n="3">de un moribundo al doloroso lecho;</l>
-          <l n="4">y la que iba a partir era mi hermana.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Lo pongo en el altar, que olores mana,</l>
-          <l n="6">todo de prendas muy queridas hecho;</l>
-          <l n="7">y recibo, ya en lágrimas deshecho,</l>
-          <l n="8">las confesiones de su fe cristiana.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Calló su voz que dulce respondía,</l>
-          <l n="10">y en su semblante de ángel resignado,</l>
-          <l n="11">la luz de la esperanza sonreía.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y le di el Cuerpo del Señor (que alado</l>
-          <l n="13">le acompañase por la eterna vía),</l>
-          <l n="14">con gotas de mis ojos empapado.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s066n_0196">
-        <head>Corona de espinas</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Cuando piensas a solas hijo mío,</l>
-          <l n="2">con deleite visiones de impureza,</l>
-          <l n="3">yo contemplo de Cristo la cabeza,</l>
-          <l n="4">que vas de abrojos a ceñir impío.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Oigo crujir de un modo que da frío</l>
-          <l n="6">las puntas que rechinan con fiereza</l>
-          <l n="7">resbalando en el cráneo, que empieza</l>
-          <l n="8">de carmín a brotar tibio rocío.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Ya te miran de lágrimas bañados</l>
-          <l n="10">los ojos del Señor, tan dulcemente,</l>
-          <l n="11">que ablandaran a tigres no domados.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y, ¿tú sientes placer, y tu alma siente</l>
-          <l n="13">que está bien, repitiendo los pecados,</l>
-          <l n="14">de tales rosas coronar su frente?</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s066n_0197">
-        <head>A Santa Teresa en éxtasis</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Te habla la voz divina, resonando</l>
-          <l n="2">dentro del alma, que en dulzor se anega,</l>
-          <l n="3">y los sentidos de tu cuerpo ciega</l>
-          <l n="4">un mar de luz en tu interior brotando.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Suspéndese la vida, retemblando</l>
-          <l n="6">a la presencia de su Dios que llega;</l>
-          <l n="7">y Dios al alma su virtud allega,</l>
-          <l n="8">como airecillo de la tarde blando.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De toda ciencia, y todo amor traspasa</l>
-          <l n="10">la esfera tu alma, y luz no conocida,</l>
-          <l n="11">suprema luz a iluminarla pasa.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Toda verdad a un punto reducida</l>
-          <l n="13">contempla, y de ella en el amor se abrasa:</l>
-          <l n="14">oh desmayo feliz, oh muerte ¡oh vida!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Atenógenes Segale</head>
+            <p>México. 1868 - 1903</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s066n_0195">
+            <head>El primer viático</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-++--+-">Fue la primera vez esa mañana</l>
+               <l n="2" met="---+-+---+-" enjamb="B-pb_noun_prep">que a mi Señor llevé junto a mi pecho</l>
+               <l n="3" met="+--+---+-+-" enjamb="I-pb_noun_prep">de un moribundo al doloroso lecho;</l>
+               <l n="4" met="--+--++--+-">y la que iba a partir era mi hermana.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++---+-+-+-">Lo pongo en el altar, que olores mana,</l>
+               <l n="6" met="+--+-+-+-+-">todo de prendas muy queridas hecho;</l>
+               <l n="7" met="--+-++---+-">y recibo, ya en lágrimas deshecho,</l>
+               <l n="8" met="---+---+-+-">las confesiones de su fe cristiana.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+---+-">Calló su voz que dulce respondía,</l>
+               <l n="10" met="---+-+---+-">y en su semblante de ángel resignado,</l>
+               <l n="11" met="-+---+---+-">la luz de la esperanza sonreía.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++----+-+-" enjamb="B-ex_subj_verb">Y le di el Cuerpo del Señor (que alado</l>
+               <l n="13" met="+--+---+-+-" enjamb="I-ex_subj_verb">le acompañase por la eterna vía),</l>
+               <l n="14" met="-+---+---+-">con gotas de mis ojos empapado.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s066n_0196">
+            <head>Corona de espinas</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+-+-+-">Cuando piensas a solas hijo mío,</l>
+               <l n="2" met="--+--+---+-">con deleite visiones de impureza,</l>
+               <l n="3" met="+-+--+---+-">yo contemplo de Cristo la cabeza,</l>
+               <l n="4" met="-+-+---+-+-">que vas de abrojos a ceñir impío.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+++--++-" enjamb="B-ex_dobj_verb">Oigo crujir de un modo que da frío</l>
+               <l n="6" met="-+---+---+-" enjamb="B-ex_dobj_verb I-ex_dobj_verb">las puntas que rechinan con fiereza</l>
+               <l n="7" met="--+--+---+-" enjamb="B-pb_verb_cprep I-ex_dobj_verb">resbalando en el cráneo, que empieza</l>
+               <l n="8" met="--+--++--+-" enjamb="I-pb_verb_cprep">de carmín a brotar tibio rocío.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+++--+---+-" enjamb="B-ex_subj_verb">Ya te miran de lágrimas bañados</l>
+               <l n="10" met="-+---+++-+-" enjamb="I-ex_subj_verb">los ojos del Señor, tan dulcemente,</l>
+               <l n="11" met="--+--+-+-+-">que ablandaran a tigres no domados.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+-+-+-" enjamb="B-ex_dobj_verb">Y, ¿tú sientes placer, y tu alma siente</l>
+               <l n="13" met="-++--+---+-" enjamb="I-ex_dobj_verb">que está bien, repitiendo los pecados,</l>
+               <l n="14" met="-+-+---+-+-">de tales rosas coronar su frente?</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s066n_0197">
+            <head>A Santa Teresa en éxtasis</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-" enjamb="B-pb_verb_adv">Te habla la voz divina, resonando</l>
+               <l n="2" met="---+---+-+-" enjamb="I-pb_verb_adv">dentro del alma, que en dulzor se anega,</l>
+               <l n="3" met="---+---+-+-" enjamb="B-ex_subj_verb">y los sentidos de tu cuerpo ciega</l>
+               <l n="4" met="++-+---+-+-" enjamb="I-ex_subj_verb">un mar de luz en tu interior brotando.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+---+-" enjamb="B-ex_dobj_verb">Suspéndese la vida, retemblando</l>
+               <l n="6" met="---+---+-+-" enjamb="I-ex_dobj_verb">a la presencia de su Dios que llega;</l>
+               <l n="7" met="-+-+---+-+-">y Dios al alma su virtud allega,</l>
+               <l n="8" met="---+---+-+-">como airecillo de la tarde blando.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+-+-+-" enjamb="B-ex_dobj_verb">De toda ciencia, y todo amor traspasa</l>
+               <l n="10" met="-+-+-++--+-" enjamb="I-ex_dobj_verb">la esfera tu alma, y luz no conocida,</l>
+               <l n="11" met="-+-+---+++-">suprema luz a iluminarla pasa.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+++---+-" enjamb="B-pb_verb_chain">Toda verdad a un punto reducida</l>
+               <l n="13" met="-+-+---+-+-" enjamb="I-pb_verb_chain">contempla, y de ella en el amor se abrasa:</l>
+               <l n="14" met="--+--+-+-+-">oh desmayo feliz, oh muerte ¡oh vida!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

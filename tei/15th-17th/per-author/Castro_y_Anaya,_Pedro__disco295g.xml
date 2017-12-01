@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Pedro Castro y Anaya</title>
+            <author corresp="#disco_295g">Pedro Castro y Anaya</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">290</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_295g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_295g"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Castro y Anaya</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Pedro</forename>
+                     <surname property="foaf:familyName">Castro y Anaya</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Pedro Castro y Anaya</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Murcia</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1610" cert="high"/>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1644" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s295g_0615" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Copiaste en mármol la mayor belleza,</title>
+                     </bibl>
+                     <bibl resource="disco#s295g_0616" about="dbpedia:Soneto">
+                        <title property="dc:title">No pises, no; detén el pie de nieve...</title>
+                        <title type="incipit" property="dc:alternative">No pises, no; detén el pie de nieve;</title>
+                     </bibl>
+                     <bibl resource="disco#s295g_0617" about="dbpedia:Soneto">
+                        <title property="dc:title">La rosa en los cristales de una fuente...</title>
+                        <title type="incipit" property="dc:alternative">La rosa en los cristales de una fuente</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <div>
+            <head>Pedro Castro y Anaya</head>
+            <p>Murcia. 1610 - 1644</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s295g_0615">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-">Copiaste en mármol la mayor belleza,</l>
+               <l n="2" met="-+-+-+---+-">oh Lauro, y tanto a Lisis parecida,</l>
+               <l n="3" met="---+++-+-+-">que de las dos es una ya la vida,</l>
+               <l n="4" met="---+++---+-">y de las dos es una la dureza.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-">Sola a Lisis formó naturaleza,</l>
+               <l n="6" met="-+++-+---+-">y tú nos diste a Lisis repetida,</l>
+               <l n="7" met="+--+-+---+-">Lisi o la estatua en ella convertida,</l>
+               <l n="8" met="+--+-+---+-">¿cuál de las dos se debe a tu destreza?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++-+-+---+-">No fue el impulso, no, de la escultura,</l>
+               <l n="10" met="--+--+---+-" enjamb="B-ex_subj_verb">que en el mármol viviente y sucesivo</l>
+               <l n="11" met="+--+---+-+-" enjamb="I-ex_subj_verb">Lisis quedase de morir ajena.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+-+-+-" enjamb="B-ex_subj_verb">Arbitrio fue de Amor, que hermosa y dura</l>
+               <l n="13" met="-+-+---+-+-" enjamb="I-ex_subj_verb">formó otra Lisis, porque en mármol vivo</l>
+               <l n="14" met="+--+-+---+-">viva inmortal la causa de mi pena.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s295g_0616">
+            <head>No pises, no; detén el pie de nieve...</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+-+-+-+-">No pises, no; detén el pie de nieve;</l>
+               <l n="2" met="++-+---+-+-">no pises esta desmayada rosa,</l>
+               <l n="3" met="---+---+-+-" enjamb="B-ex_subj_verb">que a los claveles de tu boca hermosa</l>
+               <l n="4" met="-+-+-+--++-" enjamb="I-ex_subj_verb">la ya marchita púrpura les debe.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+----++-++-" enjamb="B-pb_adj_prep">Esta, que poseyó cetro tan breve</l>
+               <l n="6" met="-+---+---+-" enjamb="I-pb_adj_prep">del prado en la república olorosa,</l>
+               <l n="7" met="+-++-+-+-+-">hállete, oh Nise, alguna vez piadosa</l>
+               <l n="8" met="---+-+--++-">si tu retrato a lástima te mueve.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">Pero si acaso enternecida lloras</l>
+               <l n="10" met="-+-+-+-+-+-">la muerte de una flor, oh dueño ingrato,</l>
+               <l n="11" met="-++--+---+-">por ser copia gentil de tus auroras,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+--++-+-">Nise, Temed; en que, en tan breve rato,</l>
+               <l n="13" met="---+-+---+-">sin la prolija guerra de las horas,</l>
+               <l n="14" met="+----+---+-">falte el original como el retrato.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s295g_0617">
+            <head>La rosa en los cristales de una fuente...</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+-+-+-" enjamb="B-ex_subj_verb">La rosa en los cristales de una fuente</l>
+               <l n="2" met="+-++-+---+-" enjamb="I-ex_subj_verb">flor a flor todo el prado desafía;</l>
+               <l n="3" met="-+-+---+-+-" enjamb="B-pb_verb_chain">hermosa en plumas de carmín se abría</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-pb_verb_chain">a ser narciso en el cristal luciente.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-" enjamb="B-ex_subj_verb">Y cuando más purpúrea y floreciente</l>
+               <l n="6" met="-+---++--+-" enjamb="I-ex_subj_verb">en copas de rubí perlas bebía,</l>
+               <l n="7" met="--+-++-+++-">del achaque de un sol, del mal de un día,</l>
+               <l n="8" met="-++--+-+-+-">murió: que aun la hermosura en flores miente.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+--++---+-" enjamb="B-ex_subj_verb">¡Oh flor!, el primer paso de tu vida</l>
+               <l n="10" met="++---+-+-+-" enjamb="I-ex_subj_verb">fue el último también que pudo darte,</l>
+               <l n="11" met="+----+---+-">antes escarmentada que nacida.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-">¡Oh documento de la humana suerte!</l>
+               <l n="13" met="--+--+---+-">¡Oh verdad de los campos escondida!</l>
+               <l n="14" met="++---+---+-">¿Quién no se desengaña con tu muerte?</l>
+            </lg>
+         </lg>
+      </body>
+  </text>
+</TEI>

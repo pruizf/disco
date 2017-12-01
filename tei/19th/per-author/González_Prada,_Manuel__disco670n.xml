@@ -1,168 +1,240 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Manuel González Prada</title>
-        <author>
-          <idno type="viaf" cert="high">27088692</idno>
-          <idno type="#disco" xml:id="disco_670n"/>
-          <name type="short">González Prada</name>
-          <name type="full">
-            <name type="first-name">Manuel</name>
-            <name type="second-name">González Prada</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">4</measure>
-        <measure unit="tokens">368</measure>
-        <measure unit="line">56</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_670n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_670n" role="author" sex="M">
-            <persName>Manuel González Prada</persName>
-            <birth><placeName type="place">Lima (Perú)</placeName>, <placeName type="country">Perú</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1848" cert="high">1848</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1918" cert="high">1918</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Manuel González Prada</title>
+            <author corresp="#disco_670n">Manuel González Prada</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">4</measure>
+            <measure unit="tokens">368</measure>
+            <measure unit="line">56</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_670n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_670n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/27088692"/>
+                  <persName type="short">González Prada</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Manuel</forename>
+                     <surname property="foaf:familyName">González Prada</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Manuel González Prada</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Lima</settlement>
+                           <country>Perú</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1848" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1918" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s670n_2423" about="dbpedia:Soneto">
+                        <title property="dc:title">A I...</title>
+                        <title type="incipit" property="dc:alternative">Tuyo es el blondo, undívago cabello,</title>
+                     </bibl>
+                     <bibl resource="disco#s670n_2424" about="dbpedia:Soneto">
+                        <title property="dc:title">El amor</title>
+                        <title type="incipit" property="dc:alternative">Si eres, Amor, un bien del alto cielo,</title>
+                     </bibl>
+                     <bibl resource="disco#s670n_2425" about="dbpedia:Soneto">
+                        <title property="dc:title">Placeres de la soledad</title>
+                        <title type="incipit" property="dc:alternative">Pláceme, huyendo el mundanal ruido,</title>
+                     </bibl>
+                     <bibl resource="disco#s670n_2426" about="dbpedia:Soneto">
+                        <title property="dc:title">La nube</title>
+                        <title type="incipit" property="dc:alternative">Con el primer aliento de la aurora,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Manuel González Prada</head>
-        <p>Lima (Perú). 1848 - 1918</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s670n_2423">
-        <head>A I...</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Tuyo es el blondo, undívago cabello,</l>
-          <l n="2">tuya la frente de marfil nevado,</l>
-          <l n="3">tuyo el andar modesto y recatado,</l>
-          <l n="4">la mórbida mejilla y rostro bello;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">tuyos los ojos que el vivaz destello</l>
-          <l n="6">vencen del sol en el cenit colgado,</l>
-          <l n="7">tuya la boca de coral preciado,</l>
-          <l n="8">el talle grácil y el venusto cuello;</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">tuyo el aliento de jazmín y acacia,</l>
-          <l n="10">el gracioso decir, la risa honesta,</l>
-          <l n="11">la gallardía y la inefable gracia:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">mía es la angustia, míos los dolores,</l>
-          <l n="13">mío el gemir en soledad funesta</l>
-          <l n="14">y sufrir tus desdenes y rigores.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s670n_2424">
-        <head>El amor</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Si eres, Amor, un bien del alto cielo,</l>
-          <l n="2">¿por qué las dudas, el gemido, el llanto,</l>
-          <l n="3">la desconfianza, el torcedor quebranto,</l>
-          <l n="4">las turbias noches de febril desvelo?</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Si eres un mal en el terrestre suelo,</l>
-          <l n="6">¿por qué los goces, la sonrisa, el canto,</l>
-          <l n="7">las esperanzas, el glorioso en canto,</l>
-          <l n="8">las visiones de paz y de consuelo?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Si eres nieve, ¿por qué tus vivas llamas?;</l>
-          <l n="10">si eres llama, ¿por qué tu hielo inerte?;</l>
-          <l n="11">si eres sombra, ¿por qué la luz derramas?</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¿Por qué la sombra si eres luz querida?;</l>
-          <l n="13">si eres vida, ¿por qué me das la muerte?</l>
-          <l n="14">si eres muerte, ¿por qué me das la vida?</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s670n_2425">
-        <head>Placeres de la soledad</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Pláceme, huyendo el mundanal ruido,</l>
-          <l n="2">tender al bosque mi ligero paso</l>
-          <l n="3">y en la negra espesura errar perdido</l>
-          <l n="4">al fallecer del sol en el ocaso;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">pláceme agreste monte y escondido,</l>
-          <l n="6">luna que brilla en el etéreo raso,</l>
-          <l n="7">volcán de eterna nieve revestido,</l>
-          <l n="8">fuente sonora y arroyuelo escaso.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Que en tu recinto, soledad secreta,</l>
-          <l n="10">duerme el dolor que al infeliz oprime</l>
-          <l n="11">y es todo paz y venturanza quieta:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">habla el silencio en tu solemne calma;</l>
-          <l n="13">adormecido el universo gime</l>
-          <l n="14">y ábrense a Dios el corazón y el alma.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s670n_2426">
-        <head>La nube</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Con el primer aliento de la aurora,</l>
-          <l n="2">abre la nube su cendal de nieve,</l>
-          <l n="3">las frescas agua de los mares bebe</l>
-          <l n="4">y de rosado tinte se colora.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Ora impelida por los vientos, ora</l>
-          <l n="6">acariciada por el aura leve,</l>
-          <l n="7">con serpentina ondulación se mueve</l>
-          <l n="8">y la serena inmensidad devora.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Al divisar en bonancible suelo</l>
-          <l n="10">olas de mieses y tapiz de flores,</l>
-          <l n="11">sonríe, goza y encadena el vuelo;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">mas, al mirar asolación y espanto,</l>
-          <l n="13">odios y guerras, muertes y dolores,</l>
-          <l n="14">lanza un gemido y se deshace en llanto.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Manuel González Prada</head>
+            <p>Lima (Perú). 1848 - 1918</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s670n_2423">
+            <head>A I...</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+---+-">Tuyo es el blondo, undívago cabello,</l>
+               <l n="2" met="+--+---+-+-">tuya la frente de marfil nevado,</l>
+               <l n="3" met="---+-+---+-">tuyo el andar modesto y recatado,</l>
+               <l n="4" met="-+---+-+-+-">la mórbida mejilla y rostro bello;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+---+-+-">tuyos los ojos que el vivaz destello</l>
+               <l n="6" met="+--+---+-+-">vencen del sol en el cenit colgado,</l>
+               <l n="7" met="+--+---+-+-">tuya la boca de coral preciado,</l>
+               <l n="8" met="-+-+---+-+-">el talle grácil y el venusto cuello;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">tuyo el aliento de jazmín y acacia,</l>
+               <l n="10" met="--+--+-+-+-">el gracioso decir, la risa honesta,</l>
+               <l n="11" met="---+---+-+-">la gallardía y la inefable gracia:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-----+-">mía es la angustia, míos los dolores,</l>
+               <l n="13" met="+--+---+-+-">mío el gemir en soledad funesta</l>
+               <l n="14" met="--+--+---+-">y sufrir tus desdenes y rigores.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s670n_2424">
+            <head>El amor</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+++-+-+-">Si eres, Amor, un bien del alto cielo,</l>
+               <l n="2" met="-+-+---+-+-">¿por qué las dudas, el gemido, el llanto,</l>
+               <l n="3" met="---+---+-+-">la desconfianza, el torcedor quebranto,</l>
+               <l n="4" met="-+-+---+-+-">las turbias noches de febril desvelo?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-++---+-+-">Si eres un mal en el terrestre suelo,</l>
+               <l n="6" met="-+-+---+-+-">¿por qué los goces, la sonrisa, el canto,</l>
+               <l n="7" met="---+---+-+-">las esperanzas, el glorioso en canto,</l>
+               <l n="8" met="--+--+---+-">las visiones de paz y de consuelo?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+-+-+-">Si eres nieve, ¿por qué tus vivas llamas?;</l>
+               <l n="10" met="+-+--++--+-">si eres llama, ¿por qué tu hielo inerte?;</l>
+               <l n="11" met="+-+--+-+-+-">si eres sombra, ¿por qué la luz derramas?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+-+-+-">¿Por qué la sombra si eres luz querida?;</l>
+               <l n="13" met="+-+--+++-+-">si eres vida, ¿por qué me das la muerte?</l>
+               <l n="14" met="+-+--+++-+-">si eres muerte, ¿por qué me das la vida?</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s670n_2425">
+            <head>Placeres de la soledad</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+----++-">Pláceme, huyendo el mundanal ruido,</l>
+               <l n="2" met="-+-+---+-+-">tender al bosque mi ligero paso</l>
+               <l n="3" met="--+--+-+-+-">y en la negra espesura errar perdido</l>
+               <l n="4" met="---+-+---+-">al fallecer del sol en el ocaso;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+---+-">pláceme agreste monte y escondido,</l>
+               <l n="6" met="+--+---+-+-">luna que brilla en el etéreo raso,</l>
+               <l n="7" met="-+-+-+---+-">volcán de eterna nieve revestido,</l>
+               <l n="8" met="+--+--+--+-">fuente sonora y arroyuelo escaso.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">Que en tu recinto, soledad secreta,</l>
+               <l n="10" met="+--+---+-+-">duerme el dolor que al infeliz oprime</l>
+               <l n="11" met="++-+---+-+-">y es todo paz y venturanza quieta:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+---+-+-">habla el silencio en tu solemne calma;</l>
+               <l n="13" met="---+---+-+-">adormecido el universo gime</l>
+               <l n="14" met="+--+---+-+-">y ábrense a Dios el corazón y el alma.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s670n_2426">
+            <head>La nube</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+---+-">Con el primer aliento de la aurora,</l>
+               <l n="2" met="+--+---+-+-">abre la nube su cendal de nieve,</l>
+               <l n="3" met="-+-+---+-+-">las frescas agua de los mares bebe</l>
+               <l n="4" met="---+-+---+-">y de rosado tinte se colora.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-" enjamb="B-pb_adj_noun">Ora impelida por los vientos, ora</l>
+               <l n="6" met="---+---+-+-" enjamb="I-pb_adj_noun">acariciada por el aura leve,</l>
+               <l n="7" met="---+---+-+-">con serpentina ondulación se mueve</l>
+               <l n="8" met="---+---+-+-">y la serena inmensidad devora.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-" enjamb="B-pb_adj_noun">Al divisar en bonancible suelo</l>
+               <l n="10" met="+--+---+-+-" enjamb="I-pb_adj_noun">olas de mieses y tapiz de flores,</l>
+               <l n="11" met="-++---+--+-">sonríe, goza y encadena el vuelo;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-">mas, al mirar asolación y espanto,</l>
+               <l n="13" met="+--+-+---+-">odios y guerras, muertes y dolores,</l>
+               <l n="14" met="++-+---+-+-">lanza un gemido y se deshace en llanto.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

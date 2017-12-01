@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Fray José Manuel de Navarrete</title>
+            <author corresp="#disco_039e">Fray José Manuel de Navarrete</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">249</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_039e"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XVIII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc12653"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xviii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_039e"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/97252"/>
+                  <persName type="short">Fray José Manuel de Navarrete</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Fray José</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Manuel de Navarrete</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Fray José Manuel de Navarrete</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <date property="schema:birthDate" when="1768" cert="high"/>
+                     <date type="century">18</date>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Michoacán</settlement>
+                           <country>México</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1809" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s039e_0217" about="dbpedia:Soneto">
+                        <title property="dc:title">Influjo de amor</title>
+                        <title type="incipit" property="dc:alternative">Célebres calles de la corte indiana,</title>
+                     </bibl>
+                     <bibl resource="disco#s039e_0218" about="dbpedia:Soneto">
+                        <title property="dc:title">La triste ausencia</title>
+                        <title type="incipit" property="dc:alternative">Su manto recogió la noche oscura</title>
+                     </bibl>
+                     <bibl resource="disco#s039e_0219" about="dbpedia:Soneto">
+                        <title property="dc:title">Recuerdos tristes</title>
+                        <title type="incipit" property="dc:alternative">Cuando tu blanca frente yo ceñía</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <div>
+            <head>Fray José Manuel de Navarrete</head>
+            <p>Michoacán. 1768 - 1809</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s039e_0217">
+            <head>Influjo de amor</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-">Célebres calles de la corte indiana,</l>
+               <l n="2" met="+-+--+---+-">grandes plazas, soberbios edificios,</l>
+               <l n="3" met="+----+---+-">templos de milagrosos frontispicios,</l>
+               <l n="4" met="--+--+-+-+-">elevados torreones de arte ufana,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-">altos palacios de la gloria humana,</l>
+               <l n="6" met="+----+---+-">fuentes de primorosos artificios,</l>
+               <l n="7" met="--+--+---+-">chapiteles, pirámides, hospicios,</l>
+               <l n="8" met="-+---+---+-">que arguyen la grandeza americana:</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+-+-+-" enjamb="B-pb_verb_cprep">¡Oh México!, sin duda yo gozara</l>
+               <l n="10" met="-+--++---+-" enjamb="I-pb_verb_cprep">del gusto que me brinda tu grandeza,</l>
+               <l n="11" met="-+---+++-+-">si causa superior no lo estorbara.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+-++---+-" enjamb="B-ex_dobj_verb">De tu suelo me arranca con presteza</l>
+               <l n="13" met="-+-+---+-+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">el suave influjo de la dulce cara</l>
+               <l n="14" met="+--+-+---+-" enjamb="I-pb_noun_prep">de una agraciada rústica belleza.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s039e_0218">
+            <head>La triste ausencia</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+-+-+-" enjamb="B-cc_crossclause">Su manto recogió la noche oscura</l>
+               <l n="2" met="--+--+-+-+-" enjamb="I-cc_crossclause">que cobija al mundo tristemente,</l>
+               <l n="3" met="-+-+-+---+-">y abriéndose las puertas del oriente</l>
+               <l n="4" met="-+---+-+-+-">se asoma a su balcón la aurora pura.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-">De la fresca arboleda en la espesura</l>
+               <l n="6" met="-+---+-+-+-">los céfiros susurran blandamente;</l>
+               <l n="7" met="-+---+---+-">desata el arroyuelo su corriente,</l>
+               <l n="8" met="--+--+---+-">y por márgenes verdes se apresura.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+-+-+-">Sus fragancias respiran flores suaves,</l>
+               <l n="10" met="--+--+---+-">y llenando los vientos de armonía</l>
+               <l n="11" met="-+-+---+-+-">requiebros trinan las parleras aves.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-">Todo el mundo se llena de alegría,</l>
+               <l n="13" met="+-+--+-+-+-">menos yo, que en mis penas siempre graves,</l>
+               <l n="14" met="-+-+---+-+-">ausente estoy de la zagala mía.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s039e_0219">
+            <head>Recuerdos tristes</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+-+-+-" enjamb="B-pb_noun_prep">Cuando tu blanca frente yo ceñía</l>
+               <l n="2" met="-+-+---+-+-" enjamb="I-pb_noun_prep">de yedra azul y de encarnada rosa;</l>
+               <l n="3" met="---+-+-+-+-">cuando en el fértil prado y selva umbrosa</l>
+               <l n="4" met="+-+-++-+-+-">mil cariños muy dulces te decía;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+-+-+-">cuando de agresta flauta me servía</l>
+               <l n="6" met="---+-+---+-">para cantar tu cara milagrosa;</l>
+               <l n="7" met="-----+---+-">cuando en nuestra cabaña venturosa</l>
+               <l n="8" met="+-+----+-+-">me nombraba por tuyo, y tú por mía;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+++-+-+-">cuando... mas no, no quieras, Clori amada,</l>
+               <l n="10" met="--+-++--++-" enjamb="B-ex_dobj_verb">que refiera más gustos, pues no intento</l>
+               <l n="11" met="-+---+---+-" enjamb="I-ex_dobj_verb">que gima la memoria lastimada.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--++--+-+-" enjamb="B-cc_crossclause">Iba a decirle que en aquel momento</l>
+               <l n="13" met="--+--+-+-+-" enjamb="I-cc_crossclause">que recuerdo la vida ya pasada,</l>
+               <l n="14" met="++--++---+-">no sé como no muero de tormento.</l>
+            </lg>
+         </lg>
+      </body>
+  </text>
+</TEI>

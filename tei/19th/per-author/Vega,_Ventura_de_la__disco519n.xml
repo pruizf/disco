@@ -1,197 +1,261 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Ventura de la Vega</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_519n"/>
-          <name type="short">Vega</name>
-          <name type="full">
-            <name type="first-name">Ventura</name>
-            <name type="preposition-name">de la</name>
-            <name type="second-name">Vega</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">5</measure>
-        <measure unit="tokens">441</measure>
-        <measure unit="line">70</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_519n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_519n" role="author" sex="M">
-            <persName>Ventura de la Vega</persName>
-            <birth><placeName type="place">Buenos Aires</placeName>, <placeName type="country">Argentina</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1807" cert="high">1807</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Madrid</placeName>, <date type="year" when="1865" cert="high">1865</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Ventura de la Vega</title>
+            <author corresp="#disco_519n">Ventura de la Vega</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">5</measure>
+            <measure unit="tokens">441</measure>
+            <measure unit="line">70</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_519n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_519n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Vega</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ventura</forename>
+                     <nameLink>de la</nameLink>
+                     <surname property="foaf:familyName">Vega</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ventura de la Vega</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Buenos Aires</settlement>
+                           <country>Argentina</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1807" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1865" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s519n_1941" about="dbpedia:Soneto">
+                        <title property="dc:title">Sonetos</title>
+                        <title type="incipit" property="dc:alternative">«Cruza sin mí los espumosos mares;</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Ventura de la Vega</head>
-        <p>Buenos Aires. 1807 - 1865</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet-sequence">
-        <head>Sonetos</head>
-        <lg type="sonnet" xml:id="s519n_1941_01">
-          <head>I</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">«Cruza sin mí los espumosos mares;</l>
-            <l n="2">saluda, ¡oh nave!, de mi patria el muro,</l>
-            <l n="3">y déjame vagar triste y oscuro</l>
-            <l n="4">por la orilla del lento Manzanares.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Si osa turbar la paz de tus hogares</l>
-            <l n="6">de soberbio extranjero el soplo impuro,</l>
-            <l n="7">otra defienda con el hierro duro</l>
-            <l n="8">su libertad y mis nativos lares.»</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Esto decía yo cuando las olas</l>
-            <l n="10">surcó la nave en que partir debía,</l>
-            <l n="11">y abandonó las costas españolas.</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Ella al impulso plácido del aura</l>
-            <l n="13">voló a la orilla de la patria mía...</l>
-            <l n="14">y yo en los brazos me volví de Laura.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s519n_1941_02">
-          <head>II</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">El Parnaso tembló: Febo indignado</l>
-            <l n="2">despedazó su cítara de oro,</l>
-            <l n="3">y en abundante y encendido lloro</l>
-            <l n="4">Melpómene bañó su rostro airado.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Carnerero, de berros coronado,</l>
-            <l n="6">conduce al ara el furibundo coro;</l>
-            <l n="7">Comella, oyendo el cántico sonoro,</l>
-            <l n="8">desde el limbo sonríe alborozado.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Intenso y fiero, con osada planta,</l>
-            <l n="10">ante el marmóreo altar Solís parece</l>
-            <l n="11">y la segur de Góngora levanta.</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Triste Racine al verla se estremece;</l>
-            <l n="13">baja Alfiere desnuda la garganta,</l>
-            <l n="14">y al sacrifico bárbaro la ofrece.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s519n_1941_03">
-          <head>III</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">«Este tronco que mayo adorna y viste,</l>
-            <l n="2">donde grabas tu nombre idolatrado,</l>
-            <l n="3">Laura, verasle pronto deshojado,</l>
-            <l n="4">que a la furia del tiempo no resiste.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Vendrá el noviembre con sus lluvias triste,</l>
-            <l n="6">vendrá el enero con su escarcha helado,</l>
-            <l n="7">o el huracán a desgajarle airado,</l>
-            <l n="8">arrebatando el nombre que esculpiste.</l>
-          </lg>
-          <lg n="3" type="unknown">
-            <l n="9">Templo más digno que tu nombre lleve</l>
-            <l n="10">donde no le destrocen vendavales,</l>
-            <l n="11">ni el invierno le cubra con su nieve,</l>
-            <l n="12">un corazón será que te ame ciego.»</l>
-          </lg>
-          <lg n="4" type="pareado">
-            <l n="13">Dijo Amor, y con rasgos eternales</l>
-            <l n="14">grabole aquí con su buril de fuego.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s519n_1941_04">
-          <head>IV</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Si atrevida tal vez la lira mía</l>
-            <l n="2">osa turbar con importuno acento</l>
-            <l n="3">el noble afán del alto pensamiento</l>
-            <l n="4">en que la patria sus destinos fía;</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">perdóname, Señor, que en este día</l>
-            <l n="6">mal sintiera de Apolo el sacro aliento,</l>
-            <l n="7">si al fiel clamor del popular contento</l>
-            <l n="8">no mezclase mis cantos de alegría.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Que nunca de tu aurora bienhadada,</l>
-            <l n="10">por más que corran los veloces años,</l>
-            <l n="11">la memoria feliz España pierde.</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">No: que la patria que salvó tu espada</l>
-            <l n="13">jamás recuerde el nombre de Castaños</l>
-            <l n="14">sin que los lauros de Bailén recuerde.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s519n_1941_05">
-          <head>V</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Musas, alcemos de victoria el canto:</l>
-            <l n="2">España despertó: su honor la inspira;</l>
-            <l n="3">y fue el arranque de su noble ira</l>
-            <l n="4">del mundo admiración, de África espanto.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">En desagravio al fin de ultraje tanto,</l>
-            <l n="6">Tetuán postrada a nuestros pies se mira.</l>
-            <l n="7">Musas, cantad y al eco de la lira</l>
-            <l n="8">reverdezcan los lauros de Lepanto.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Sí; que al ver por las ondas del Tirreno</l>
-            <l n="10">allá lanzarse en la guerrera popa</l>
-            <l n="11">hueste arrojada y adalid sereno;</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">y que a sus antros con terror galopa</l>
-            <l n="13">roto y vencido el bárbaro agareno...</l>
-            <l n="14">ya con respeto nos saluda Europa.</l>
-          </lg>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Ventura de la Vega</head>
+            <p>Buenos Aires. 1807 - 1865</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s519n_1941">
+            <head>Sonetos</head>
+            <lg type="sonnet" xml:id="s519n_1941_01">
+               <head>I</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+--+---+-+-">«Cruza sin mí los espumosos mares;</l>
+                  <l n="2" met="-+-+---+-+-">saluda, ¡oh nave!, de mi patria el muro,</l>
+                  <l n="3" met="-+-+-++--+-" enjamb="B-pb_adj_prep">y déjame vagar triste y oscuro</l>
+                  <l n="4" met="--+--+---+-" enjamb="I-pb_adj_prep">por la orilla del lento Manzanares.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="+--+-+---+-" enjamb="B-pb_noun_prep">Si osa turbar la paz de tus hogares</l>
+                  <l n="6" met="--+--+-+-+-" enjamb="I-pb_noun_prep">de soberbio extranjero el soplo impuro,</l>
+                  <l n="7" met="+--+---+-+-" enjamb="B-ex_dobj_verb">otra defienda con el hierro duro</l>
+                  <l n="8" met="---+---+-+-" enjamb="I-ex_dobj_verb">su libertad y mis nativos lares.»</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+--+-+---+-" enjamb="B-ex_subj_verb">Esto decía yo cuando las olas</l>
+                  <l n="10" met="-+-+---+-+-" enjamb="I-ex_subj_verb">surcó la nave en que partir debía,</l>
+                  <l n="11" met="---+-+---+-">y abandonó las costas españolas.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+--+-+---+-" enjamb="B-ex_subj_verb">Ella al impulso plácido del aura</l>
+                  <l n="13" met="-+-+---+-" enjamb="I-ex_subj_verb">voló a la orilla de la patria mía...</l>
+                  <l n="14" met="-+-+---+-+-">y yo en los brazos me volví de Laura.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s519n_1941_02">
+               <head>II</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="--+--++--+-" enjamb="B-ex_subj_verb">El Parnaso tembló: Febo indignado</l>
+                  <l n="2" met="---+-+---+-" enjamb="I-ex_subj_verb">despedazó su cítara de oro,</l>
+                  <l n="3" met="---+---+-+-">y en abundante y encendido lloro</l>
+                  <l n="4" met="-+---+-+-+-">Melpómene bañó su rostro airado.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="--+--+---+-">Carnerero, de berros coronado,</l>
+                  <l n="6" met="-+-+---+-+-">conduce al ara el furibundo coro;</l>
+                  <l n="7" met="-+-+-+---+-">Comella, oyendo el cántico sonoro,</l>
+                  <l n="8" met="--+--+---+-">desde el limbo sonríe alborozado.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-+-+---+-+-">Intenso y fiero, con osada planta,</l>
+                  <l n="10" met="---+-+-+-+-">ante el marmóreo altar Solís parece</l>
+                  <l n="11" met="---+-+---+-">y la segur de Góngora levanta.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="---+-++--+-">Triste Racine al verla se estremece;</l>
+                  <l n="13" met="+-+--+---+-">baja Alfiere desnuda la garganta,</l>
+                  <l n="14" met="---+-+--++-">y al sacrifico bárbaro la ofrece.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s519n_1941_03">
+               <head>III</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+-+----+-+-">«Este tronco que mayo adorna y viste,</l>
+                  <l n="2" met="--+--+---+-">donde grabas tu nombre idolatrado,</l>
+                  <l n="3" met="+--+-+---+-">Laura, verasle pronto deshojado,</l>
+                  <l n="4" met="--+--+-+-+-">que a la furia del tiempo no resiste.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+-----+-+-">Vendrá el noviembre con sus lluvias triste,</l>
+                  <l n="6" met="-+-----+-+-">vendrá el enero con su escarcha helado,</l>
+                  <l n="7" met="---+---+++-">o el huracán a desgajarle airado,</l>
+                  <l n="8" met="---+-+---+-">arrebatando el nombre que esculpiste.</l>
+               </lg>
+               <lg n="3" type="unknown">
+                  <l n="9" met="+-++---+-+-">Templo más digno que tu nombre lleve</l>
+                  <l n="10" met="--++-+---+-">donde no le destrocen vendavales,</l>
+                  <l n="11" met="--+-++---+-">ni el invierno le cubra con su nieve,</l>
+                  <l n="12" met="+--+-+-+-+-">un corazón será que te ame ciego.»</l>
+               </lg>
+               <lg n="4" type="pareado">
+                  <l n="13" met="+-+--+---+-" enjamb="B-pb_adj_noun">Dijo Amor, y con rasgos eternales</l>
+                  <l n="14" met="-+-+---+-+-" enjamb="I-pb_adj_noun">grabole aquí con su buril de fuego.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s519n_1941_04">
+               <head>IV</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="--+--+-+-+-" enjamb="B-ex_subj_verb">Si atrevida tal vez la lira mía</l>
+                  <l n="2" met="+--+---+-+-" enjamb="B-ex_dobj_verb I-ex_subj_verb">osa turbar con importuno acento</l>
+                  <l n="3" met="-+-+-+---+-" enjamb="I-ex_dobj_verb">el noble afán del alto pensamiento</l>
+                  <l n="4" met="---+---+-+-">en que la patria sus destinos fía;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+-+-+-+-+-">perdóname, Señor, que en este día</l>
+                  <l n="6" met="+-+--+-+-+-">mal sintiera de Apolo el sacro aliento,</l>
+                  <l n="7" met="-+-+---+-+-" enjamb="B-pb_adj_adv">si al fiel clamor del popular contento</l>
+                  <l n="8" met="+-+--+---+-" enjamb="I-pb_adj_adv">no mezclase mis cantos de alegría.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-+---+---+-">Que nunca de tu aurora bienhadada,</l>
+                  <l n="10" met="-+-+---+-+-">por más que corran los veloces años,</l>
+                  <l n="11" met="--+--+-+-+-">la memoria feliz España pierde.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+--+---+-+-" enjamb="B-ex_subj_verb">No: que la patria que salvó tu espada</l>
+                  <l n="13" met="-+-+-+---+-" enjamb="I-ex_subj_verb">jamás recuerde el nombre de Castaños</l>
+                  <l n="14" met="---+---+-+-">sin que los lauros de Bailén recuerde.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s519n_1941_05">
+               <head>V</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+--+---+-+-">Musas, alcemos de victoria el canto:</l>
+                  <l n="2" met="-+---+-+++-">España despertó: su honor la inspira;</l>
+                  <l n="3" met="-+-+---+-+-" enjamb="B-pb_noun_prep">y fue el arranque de su noble ira</l>
+                  <l n="4" met="-+---++--+-" enjamb="I-pb_noun_prep">del mundo admiración, de África espanto.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="---+-+-+-+-">En desagravio al fin de ultraje tanto,</l>
+                  <l n="6" met="-+-+---+-+-">Tetuán postrada a nuestros pies se mira.</l>
+                  <l n="7" met="+--+-+---+-" enjamb="B-ex_subj_verb">Musas, cantad y al eco de la lira</l>
+                  <l n="8" met="--+--+---+-" enjamb="I-ex_subj_verb">reverdezcan los lauros de Lepanto.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+-+--+---+-">Sí; que al ver por las ondas del Tirreno</l>
+                  <l n="10" met="-+-++--+-+-" enjamb="B-pb_adj_noun">allá lanzarse en la guerrera popa</l>
+                  <l n="11" met="+--+---+-+-" enjamb="I-pb_adj_noun">hueste arrojada y adalid sereno;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="---+---+-+-" enjamb="B-ex_subj_verb">y que a sus antros con terror galopa</l>
+                  <l n="13" met="+--+-+---+-" enjamb="I-ex_subj_verb">roto y vencido el bárbaro agareno...</l>
+                  <l n="14" met="+--+-+-+-+-">ya con respeto nos saluda Europa.</l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

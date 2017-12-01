@@ -1,218 +1,298 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Francisco Rodríguez Zapata</title>
-        <author>
-          <idno type="viaf" cert="high">31760949</idno>
-          <idno type="#disco" xml:id="disco_144n"/>
-          <name type="short">Rodríguez Zapata</name>
-          <name type="full">
-            <name type="first-name">Francisco</name>
-            <name type="second-name">Rodríguez Zapata</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">6</measure>
-        <measure unit="tokens">544</measure>
-        <measure unit="line">84</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_144n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_144n" role="author" sex="M">
-            <persName>Francisco Rodríguez Zapata</persName>
-            <birth><placeName type="place">Sevilla</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1813" cert="high">1813</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1889" cert="high">1889</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Francisco Rodríguez Zapata</title>
+            <author corresp="#disco_144n">Francisco Rodríguez Zapata</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">6</measure>
+            <measure unit="tokens">544</measure>
+            <measure unit="line">84</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_144n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_144n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/31760949"/>
+                  <persName type="short">Rodríguez Zapata</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Francisco</forename>
+                     <surname property="foaf:familyName">Rodríguez Zapata</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Francisco Rodríguez Zapata</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Sevilla</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1813" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1889" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s144n_0414" about="dbpedia:Soneto">
+                        <title property="dc:title">Eternidad de Dios</title>
+                        <title type="incipit" property="dc:alternative">Cuando al lucir el postrimero día,</title>
+                     </bibl>
+                     <bibl resource="disco#s144n_0415" about="dbpedia:Soneto">
+                        <title property="dc:title">A Donoso Cortés</title>
+                        <title type="incipit" property="dc:alternative">Guarde en su margen el dichoso Sena</title>
+                     </bibl>
+                     <bibl resource="disco#s144n_0416" about="dbpedia:Soneto">
+                        <title property="dc:title">A la Asunción de la Virgen</title>
+                        <title type="incipit" property="dc:alternative">De aqueste valle de zozobra y llanto</title>
+                     </bibl>
+                     <bibl resource="disco#s144n_0417" about="dbpedia:Soneto">
+                        <title property="dc:title">En la declaración dogmática de la Inmaculada Concepción de la Santísima Virgen María</title>
+                        <title type="incipit" property="dc:alternative">Doble su luz el claro firmamento,</title>
+                     </bibl>
+                     <bibl resource="disco#s144n_0418" about="dbpedia:Soneto">
+                        <title property="dc:title">A nuestro santísimo padre Pío Nono</title>
+                        <title type="incipit" property="dc:alternative">Brillas ¡oh Pío! en la moderna historia,</title>
+                     </bibl>
+                     <bibl resource="disco#s144n_0419" about="dbpedia:Soneto">
+                        <title property="dc:title">Ofrenda a la Santísima Virgen</title>
+                        <title type="incipit" property="dc:alternative">Al pie de nuestras aras la rodilla,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Francisco Rodríguez Zapata</head>
-        <p>Sevilla. 1813 - 1889</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s144n_0414">
-        <head>Eternidad de Dios</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Cuando al lucir el postrimero día,</l>
-          <l n="2">los astros en pavesas convertidos</l>
-          <l n="3">reden, y el mar con hórridos bramidos</l>
-          <l n="4">al caos torne en la región vacía:</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">y, rota la ancha base do yacía,</l>
-          <l n="6">la tierra, con sus ejes sacudidos,</l>
-          <l n="7">vagar se mire en átomos perdidos</l>
-          <l n="8">por espacios sin fin en noche umbría:</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">y, ante un trono de luz, final sentencia</l>
-          <l n="10">escuchen de la vida o de la muerte</l>
-          <l n="11">los restos de las tumbas animados:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">el tiempo acabará, no la existencia</l>
-          <l n="13">del Dios que es inmortal y santo y fuerte</l>
-          <l n="14">sobre mundos y mundos consumados.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s144n_0415">
-        <head>A Donoso Cortés</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Guarde en su margen el dichoso Sena</l>
-          <l n="2">al que Europa admiró genio eminente,</l>
-          <l n="3">y por quien dobla la abatida frente</l>
-          <l n="4">España en el dolor que la enajena.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Yace agotada allí la inmensa vena</l>
-          <l n="6">del escritor, del místico elocuente,</l>
-          <l n="7">que era el orgullo de la ibera gente</l>
-          <l n="8">y aun en la tumba contra el siglo truena.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Cedióle Tulio sus brillantes galas,</l>
-          <l n="10">Demóstenes su fuego y energía,</l>
-          <l n="11">Job su ternura, Ezequiel su vuelo:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">prestóle al fin la Religión sus alas,</l>
-          <l n="13">y cual ciervo sediento en su agonía</l>
-          <l n="14">voló a la eterna fuente del consuelo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s144n_0416">
-        <head>A la Asunción de la Virgen</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">De aqueste valle de zozobra y llanto</l>
-          <l n="2">al Empíreo elevándote, oh María,</l>
-          <l n="3">tierras y mares bañas de alegría,</l>
-          <l n="4">y al éter prestas inefable encanto.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Sírvete el sol de esplendoroso manto,</l>
-          <l n="6">oriente las estrellas a porfía,</l>
-          <l n="7">la luna alfombra tu fragante vía</l>
-          <l n="8">entre nubes de nácar y amaranto.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Alzan los orbes cántico sonoro</l>
-          <l n="10">a tu grandeza, augusta Soberana,</l>
-          <l n="11">hoy de Sión apetecida aurora.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Lo repite incesante el almo coro,</l>
-          <l n="13">y con júbilo intenso, al verte ufana,</l>
-          <l n="14">junto al solio de Dios tu solio adora.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s144n_0417">
-        <head>En la declaración dogmática de la Inmaculada Concepción de la Santísima Virgen María</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Doble su luz el claro firmamento,</l>
-          <l n="2">su espuma ricen los extensos mares,</l>
-          <l n="3">brote la tierra flores a millares,</l>
-          <l n="4">rico en aromas se dilate el viento:</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Las naciones convóquense al acento</l>
-          <l n="6">de concordia y amor, y a los altares</l>
-          <l n="7">lleven, con blancas rosas y azahares,</l>
-          <l n="8">de férvida piedad el sacro aliento;</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">que del Pastor universal sonando</l>
-          <l n="10">do quien la voz, por el cristiano ansiada,</l>
-          <l n="11">de la Virgen más pura ensalza el nombre;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y hoy, a despecho del precito bando,</l>
-          <l n="13">aplaude el orbe toda Inmaculada</l>
-          <l n="14">a la que diera un Redentor al hombre.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s144n_0418">
-        <head>A nuestro santísimo padre Pío Nono</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Brillas ¡oh Pío! en la moderna historia,</l>
-          <l n="2">como el sol del espacio en las regiones,</l>
-          <l n="3">y emana de las célicas mansiones,</l>
-          <l n="4">cual sucesor de Pedro, tu alta gloria.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Un siglo al otro siglo tu memoria</l>
-          <l n="6">legará entre solemnes bendiciones,</l>
-          <l n="7">hundidas del Averno las legiones</l>
-          <l n="8">bajo tu planta en sin igual victoria.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De la Madre de Dios la pura frente</l>
-          <l n="10">por ti nos muestra el lauro soberano,</l>
-          <l n="11">que tu grey canta con amor profundo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">No temas, pues; que el rayo del Potente</l>
-          <l n="13">obedece a tu voz, y alza tu mano</l>
-          <l n="14">el Cetro de los cetros sobre el mundo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s144n_0419">
-        <head>Ofrenda a la Santísima Virgen</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Al pie de nuestras aras la rodilla,</l>
-          <l n="2">de vuestro dulce amor al vivo fuego,</l>
-          <l n="3">esta guirnalda a presentaros llego,</l>
-          <l n="4">donde tu nombre enaltecido brilla.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">No desoigáis al que ante Vos se humilla,</l>
-          <l n="6">acoged tierna mi piadoso ruego,</l>
-          <l n="7">con las flores que dio en fecundo riego</l>
-          <l n="8">de otra España mejor la Fe sencilla.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">A ellas, que ostentan variedad hermosa</l>
-          <l n="10">y en mística fragancia el aire inundan,</l>
-          <l n="11">pobres mirtos enlazo reverente.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Aceptarlos también, reina gloriosa,</l>
-          <l n="13">y con los puros rayos que os circundan,</l>
-          <l n="14">prez de eterna salud, bañad mi frente.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Francisco Rodríguez Zapata</head>
+            <p>Sevilla. 1813 - 1889</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s144n_0414">
+            <head>Eternidad de Dios</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+---+-+-">Cuando al lucir el postrimero día,</l>
+               <l n="2" met="-+---+---+-" enjamb="B-pb_adj_noun">los astros en pavesas convertidos</l>
+               <l n="3" met="+--+-+---+-" enjamb="I-pb_adj_noun">reden, y el mar con hórridos bramidos</l>
+               <l n="4" met="-++----+-+-">al caos torne en la región vacía:</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+-+-+-">y, rota la ancha base do yacía,</l>
+               <l n="6" met="-+---+---+-">la tierra, con sus ejes sacudidos,</l>
+               <l n="7" met="-+-+-+---+-">vagar se mire en átomos perdidos</l>
+               <l n="8" met="--+--+-+-+-">por espacios sin fin en noche umbría:</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--+-+-+-">y, ante un trono de luz, final sentencia</l>
+               <l n="10" met="-+---+---+-">escuchen de la vida o de la muerte</l>
+               <l n="11" met="-+---+---+-">los restos de las tumbas animados:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---++--+-" enjamb="B-pb_noun_prep">el tiempo acabará, no la existencia</l>
+               <l n="13" met="-++--+-+-+-" enjamb="I-pb_noun_prep">del Dios que es inmortal y santo y fuerte</l>
+               <l n="14" met="--+--+---+-">sobre mundos y mundos consumados.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s144n_0415">
+            <head>A Donoso Cortés</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-">Guarde en su margen el dichoso Sena</l>
+               <l n="2" met="--+--++--+-">al que Europa admiró genio eminente,</l>
+               <l n="3" met="---+---+-+-" enjamb="B-ex_subj_verb">y por quien dobla la abatida frente</l>
+               <l n="4" met="-+---+-+-+-" enjamb="I-ex_subj_verb">España en el dolor que la enajena.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+-+-+-" enjamb="B-pb_noun_prep">Yace agotada allí la inmensa vena</l>
+               <l n="6" met="---+-+---+-" enjamb="I-pb_noun_prep">del escritor, del místico elocuente,</l>
+               <l n="7" met="+--+---+-+-">que era el orgullo de la ibera gente</l>
+               <l n="8" met="+--+---+-+-">y aun en la tumba contra el siglo truena.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-----+-+-">Cedióle Tulio sus brillantes galas,</l>
+               <l n="10" met="-+---+---+-">Demóstenes su fuego y energía,</l>
+               <l n="11" met="+--+---+-+-">Job su ternura, Ezequiel su vuelo:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">prestóle al fin la Religión sus alas,</l>
+               <l n="13" met="--+--+---+-">y cual ciervo sediento en su agonía</l>
+               <l n="14" met="-+-+-+---+-">voló a la eterna fuente del consuelo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s144n_0416">
+            <head>A la Asunción de la Virgen</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-" enjamb="B-pb_noun_prep">De aqueste valle de zozobra y llanto</l>
+               <l n="2" met="--+--+-+-+-" enjamb="I-pb_noun_prep">al Empíreo elevándote, oh María,</l>
+               <l n="3" met="+--+-+---+-">tierras y mares bañas de alegría,</l>
+               <l n="4" met="-+-+---+-+-">y al éter prestas inefable encanto.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-++---+-+-">Sírvete el sol de esplendoroso manto,</l>
+               <l n="6" met="-+---+---+-">oriente las estrellas a porfía,</l>
+               <l n="7" met="-+-+---+-+-" enjamb="B-pb_noun_prep">la luna alfombra tu fragante vía</l>
+               <l n="8" met="--+--+---+-" enjamb="I-pb_noun_prep">entre nubes de nácar y amaranto.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+-+---+-" enjamb="B-pb_adj_prep">Alzan los orbes cántico sonoro</l>
+               <l n="10" met="---+-+---+-" enjamb="I-pb_adj_prep">a tu grandeza, augusta Soberana,</l>
+               <l n="11" met="+-+---+--+-">hoy de Sión apetecida aurora.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+-+-+-">Lo repite incesante el almo coro,</l>
+               <l n="13" met="--+--+-+++-">y con júbilo intenso, al verte ufana,</l>
+               <l n="14" met="--+--+-+-+-">junto al solio de Dios tu solio adora.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s144n_0417">
+            <head>En la declaración dogmática de la Inmaculada Concepción de la Santísima Virgen María</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-">Doble su luz el claro firmamento,</l>
+               <l n="2" met="-+-+---+-+-">su espuma ricen los extensos mares,</l>
+               <l n="3" met="+--+-+---+-">brote la tierra flores a millares,</l>
+               <l n="4" met="+--+---+-+-">rico en aromas se dilate el viento:</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+-+-+-" enjamb="B-pb_noun_prep">Las naciones convóquense al acento</l>
+               <l n="6" met="--+-+----+-" enjamb="I-pb_noun_prep">de concordia y amor, y a los altares</l>
+               <l n="7" met="+--+-+---+-">lleven, con blancas rosas y azahares,</l>
+               <l n="8" met="-+---+-+-+-">de férvida piedad el sacro aliento;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">que del Pastor universal sonando</l>
+               <l n="10" met="+--+---+-+-">do quien la voz, por el cristiano ansiada,</l>
+               <l n="11" met="--+-++-+-+-">de la Virgen más pura ensalza el nombre;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+------+-+-">y hoy, a despecho del precito bando,</l>
+               <l n="13" met="-+-+-+---+-">aplaude el orbe toda Inmaculada</l>
+               <l n="14" met="---++--+-+-">a la que diera un Redentor al hombre.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s144n_0418">
+            <head>A nuestro santísimo padre Pío Nono</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+--+--+-">Brillas ¡oh Pío! en la moderna historia,</l>
+               <l n="2" met="--+--+---+-">como el sol del espacio en las regiones,</l>
+               <l n="3" met="-+---+---+-">y emana de las célicas mansiones,</l>
+               <l n="4" met="+--+-+-+-+-">cual sucesor de Pedro, tu alta gloria.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+-+---+-" enjamb="B-ex_subj_verb">Un siglo al otro siglo tu memoria</l>
+               <l n="6" met="--+--+---+-" enjamb="I-ex_subj_verb">legará entre solemnes bendiciones,</l>
+               <l n="7" met="-+---+---+-" enjamb="B-pb_noun_prep">hundidas del Averno las legiones</l>
+               <l n="8" met="---+---+-+-" enjamb="I-pb_noun_prep">bajo tu planta en sin igual victoria.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="----+--+-+-" enjamb="B-pb_noun_prep">De la Madre de Dios la pura frente</l>
+               <l n="10" met="-+++-+---+-" enjamb="I-pb_noun_prep">por ti nos muestra el lauro soberano,</l>
+               <l n="11" met="--++---+-+-">que tu grey canta con amor profundo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++---+---+-" enjamb="B-ex_subj_verb">No temas, pues; que el rayo del Potente</l>
+               <l n="13" met="--+--++--+-" enjamb="B-ex_dobj_verb I-ex_subj_verb">obedece a tu voz, y alza tu mano</l>
+               <l n="14" met="-+---+---+-" enjamb="I-ex_dobj_verb">el Cetro de los cetros sobre el mundo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s144n_0419">
+            <head>Ofrenda a la Santísima Virgen</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">Al pie de nuestras aras la rodilla,</l>
+               <l n="2" met="---+-+-+-+-">de vuestro dulce amor al vivo fuego,</l>
+               <l n="3" met="+--+---+++-">esta guirnalda a presentaros llego,</l>
+               <l n="4" met="---+---+-+-">donde tu nombre enaltecido brilla.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-">No desoigáis al que ante Vos se humilla,</l>
+               <l n="6" met="--++---+-+-">acoged tierna mi piadoso ruego,</l>
+               <l n="7" met="--+--+-+-+-" enjamb="B-pb_noun_prep">con las flores que dio en fecundo riego</l>
+               <l n="8" met="+-+--+-+-+-" enjamb="I-pb_noun_prep">de otra España mejor la Fe sencilla.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+---+-+-">A ellas, que ostentan variedad hermosa</l>
+               <l n="10" met="-+---+-+-+-">y en mística fragancia el aire inundan,</l>
+               <l n="11" met="+-+--+---+-">pobres mirtos enlazo reverente.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++-++--+-">Aceptarlos también, reina gloriosa,</l>
+               <l n="13" met="---+-+-+-+-">y con los puros rayos que os circundan,</l>
+               <l n="14" met="+-+--+-+-+-">prez de eterna salud, bañad mi frente.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

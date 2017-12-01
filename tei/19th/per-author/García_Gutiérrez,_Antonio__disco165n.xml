@@ -1,318 +1,419 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Antonio García Gutiérrez</title>
-        <author>
-          <idno type="viaf" cert="high">49268080</idno>
-          <idno type="#disco" xml:id="disco_165n"/>
-          <name type="short">García Gutiérrez</name>
-          <name type="full">
-            <name type="first-name">Antonio</name>
-            <name type="second-name">García Gutiérrez</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">10</measure>
-        <measure unit="tokens">906</measure>
-        <measure unit="line">140</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_165n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_165n" role="author" sex="M">
-            <persName>Antonio García Gutiérrez</persName>
-            <birth><placeName type="place">Chiclana (Cádiz)</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1813" cert="high">1813</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Madrid</placeName>, <date type="year" when="1884" cert="high">1884</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Antonio García Gutiérrez</title>
+            <author corresp="#disco_165n">Antonio García Gutiérrez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">10</measure>
+            <measure unit="tokens">906</measure>
+            <measure unit="line">140</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_165n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_165n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/49268080"/>
+                  <persName type="short">García Gutiérrez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Antonio</forename>
+                     <surname property="foaf:familyName">García Gutiérrez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Antonio García Gutiérrez</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Chiclana (Cádiz)</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1813" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1884" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s165n_0520" about="dbpedia:Soneto">
+                        <title property="dc:title">Amor sin celos</title>
+                        <title type="incipit" property="dc:alternative">Tengo aprensiones yo como cualquiera,</title>
+                     </bibl>
+                     <bibl resource="disco#s165n_0521" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">¿Por qué funesto error, por qué demencia</title>
+                     </bibl>
+                     <bibl resource="disco#s165n_0522" about="dbpedia:Soneto">
+                        <title property="dc:title">La cita a la madrugada</title>
+                        <title type="incipit" property="dc:alternative">No hay pena, no hay dolor, hermosa mía,</title>
+                     </bibl>
+                     <bibl resource="disco#s165n_0523" about="dbpedia:Soneto">
+                        <title property="dc:title">La ambición</title>
+                        <title type="incipit" property="dc:alternative">Huye, ambición, al ostentoso lecho</title>
+                     </bibl>
+                     <bibl resource="disco#s165n_0524" about="dbpedia:Soneto">
+                        <title property="dc:title">La garza</title>
+                        <title type="incipit" property="dc:alternative">Sube veloz por las etéreas salas,</title>
+                     </bibl>
+                     <bibl resource="disco#s165n_0525" about="dbpedia:Soneto">
+                        <title property="dc:title">La calma</title>
+                        <title type="incipit" property="dc:alternative">No vi la pompa de dorada cuna</title>
+                     </bibl>
+                     <bibl resource="disco#s165n_0526" about="dbpedia:Soneto">
+                        <title property="dc:title">A la muerte de E...</title>
+                        <title type="incipit" property="dc:alternative">¡Rosa marchita, que en tu bella aurora</title>
+                     </bibl>
+                     <bibl resource="disco#s165n_0527" about="dbpedia:Soneto">
+                        <title property="dc:title">Al Cardenal Cisneros</title>
+                        <title type="incipit" property="dc:alternative">Si un instante romper te fuera dado</title>
+                     </bibl>
+                     <bibl resource="disco#s165n_0528" about="dbpedia:Soneto">
+                        <title property="dc:title">El hipócrita</title>
+                        <title type="incipit" property="dc:alternative">Siempre afectando místico lenguaje,</title>
+                     </bibl>
+                     <bibl resource="disco#s165n_0529" about="dbpedia:Soneto">
+                        <title property="dc:title">A don Adelardo López de Ayala</title>
+                        <title type="incipit" property="dc:alternative">¿De qué celeste Numen alcanzaste,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Antonio García Gutiérrez</head>
-        <p>Chiclana (Cádiz). 1813 - 1884</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s165n_0520">
-        <head>Amor sin celos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Tengo aprensiones yo como cualquiera,</l>
-          <l n="2">y tocante a caprichos ¡no se diga!</l>
-          <l n="3">El campo siempre verde me fatiga,</l>
-          <l n="4">el cielo siempre azul me sospecha.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Triste la luz del sol me pareciera</l>
-          <l n="6">sin esa noche del dolor amiga,</l>
-          <l n="7">y sin la pena que el placer mitiga,</l>
-          <l n="8">hasta la vida misma aborreciera.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Pues esos ojos tuyos, dueño mío,</l>
-          <l n="10">que pueden afrentar a uno y mil cielos,</l>
-          <l n="11">causaron mi amoroso desvarío.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">No hallé sombra en su luz, no hallé desvelos,</l>
-          <l n="13">y mi ardiente pasión murió de frío;</l>
-          <l n="14">que así muere el amor cuando no hay celos.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s165n_0521">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¿Por qué funesto error, por qué demencia</l>
-          <l n="2">hemos venido a tan infame estado</l>
-          <l n="3">que a disfrazar las llagas del pecado</l>
-          <l n="4">no basta ya la hipócrita apariencia?</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La virtud, la hidalguía, en la experiencia</l>
-          <l n="6">de su estéril valor se han estrellado,</l>
-          <l n="7">y mi patria feliz es ya un mercado</l>
-          <l n="8">en que se vende a gritos la conciencia.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">No hay gloria, no hay dolor, no hay sacrificio</l>
-          <l n="10">que por viles parásitos hambrientos</l>
-          <l n="11">no se convierta en propio beneficio.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y la gangrena avanza por momentos,</l>
-          <l n="13">y bajo el ancho pedestal del vicio</l>
-          <l n="14">restallan del Estado los cimientos.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s165n_0522">
-        <head>La cita a la madrugada</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">No hay pena, no hay dolor, hermosa mía,</l>
-          <l n="2">que yo no arrostre por tus lindos ojos;</l>
-          <l n="3">esclavo viviré de tus antojos</l>
-          <l n="4">en tanto que a mi amor tu amor sonría.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Preso en tus dulces lazos noche y día;</l>
-          <l n="6">bebiendo el néctar de tus labios rojos,</l>
-          <l n="7">¿cómo sentir los pérfidos abrojos</l>
-          <l n="8">que del mundo falaz cubren la vía?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Adorarte y no más! Este es mi oficio,</l>
-          <l n="10">y no hay afecto ni pasión profana</l>
-          <l n="11">que no venza mi amor en tu servicio.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¡Mas soy flaco mortal, hermosa Juana!</l>
-          <l n="13">Pídeme de mi sangre el sacrificio,</l>
-          <l n="14">y déjame dormir por las mañanas.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s165n_0523">
-        <head>La ambición</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Huye, ambición, al ostentoso lecho</l>
-          <l n="2">donde reposa el feble cortesano:</l>
-          <l n="3">donde divierte su cuidado en vano</l>
-          <l n="4">bajo la pompa del dorado techo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Airada oprime tu agitado pecho,</l>
-          <l n="6">en él aborta tu veneno insano,</l>
-          <l n="7">y resentido al toque de tu mano</l>
-          <l n="8">el mundo juzgue a su anhelar estrecho.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mas nunca imprimas en el alma mía</l>
-          <l n="10">el hidrópico anhelo de grandeza...</l>
-          <l n="11">dame la paz en que vivir solía.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">En mi estado infeliz, en mi pobreza,</l>
-          <l n="13">no desear tan sólo apetecía,</l>
-          <l n="14">que es para el hombre la mayor riqueza.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s165n_0524">
-        <head>La garza</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Sube veloz por las etéreas salas,</l>
-          <l n="2">garza fugaz, y al mundo señorea,</l>
-          <l n="3">y opón al brillo de la luz Febea</l>
-          <l n="4">la regia pompa de tus blancas galas.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Cuando las nubes en altura igualas,</l>
-          <l n="6">si estremecido el mundo titubea,</l>
-          <l n="7">la ruda tempestad tu frente orea</l>
-          <l n="8">y el tremendo huracán mece tus alas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Así yo un tiempo mi ligero vuelo</l>
-          <l n="10">a un sol más puro remontar quería</l>
-          <l n="11">y alcé mi orgullo a conquistar el cielo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Pero nublose con sorpresa impía,</l>
-          <l n="13">y las alas cortadas a mi anhelo,</l>
-          <l n="14">murió su luz y la esperanza mía.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s165n_0525">
-        <head>La calma</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">No vi la pompa de dorada cuna</l>
-          <l n="2">mecer mi infancia ni halagar mis días,</l>
-          <l n="3">ni vi prestarse a las pasiones mías</l>
-          <l n="4">el celo encantador de la fortuna.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Jamás mi mente en esperanza alguna</l>
-          <l n="6">se alimentó de locas fantasías,</l>
-          <l n="7">ni mi sueño entre imágenes sombrías</l>
-          <l n="8">turbara la ambición, negra, importuna.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Pero en pobreza mísera la suerte</l>
-          <l n="10">guardo a mi afán un término medido</l>
-          <l n="11">y un corazón en la desgracia fuerte!</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">De este modo mi anhelo reducido,</l>
-          <l n="13">¿qué temer debo el hora de mi muerte</l>
-          <l n="14">si más felicidad no he conocido?</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s165n_0526">
-        <head>A la muerte de E...</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Rosa marchita, que en tu bella aurora</l>
-          <l n="2">víctima fuiste del rigor del hado!</l>
-          <l n="3">¡Flor malograda que con ceño airado</l>
-          <l n="4">la Parca horrible desoló traidora!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¡Oh! ¡Cuánto has sido triste! En vano llora</l>
-          <l n="6">siempre Dalmiro en tu sepulcro helado,</l>
-          <l n="7">que a cada instante un eco desmayado</l>
-          <l n="8">murió, me dice, tu infeliz pastora.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Y no más la veré! ¡Terrible pena!</l>
-          <l n="10">¡Y no más en su rostro la sonrisa</l>
-          <l n="11">hará mi encanto, de delicias llena!</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¡Oh! ¡Dura suerte! ¡Obligación precisa!</l>
-          <l n="13">¡Que ya más no veré tu faz serena!</l>
-          <l n="14">Que ya no existe mi adorada Elisa.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s165n_0527">
-        <head>Al Cardenal Cisneros</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Si un instante romper te fuera dado</l>
-          <l n="2">la glacial ligadura de la muerte,</l>
-          <l n="3">¡oh humilde franciscano!, ¡de qué suerte</l>
-          <l n="4">te sintieras de gozo arrebatado!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Viera vuestro león, desmelenado,</l>
-          <l n="6">sacudiendo el sopor del sueño inerte</l>
-          <l n="7">caer rugiendo vengativo y fuerte</l>
-          <l n="8">sobre el tigre del África indomado.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Hoy, renovando timbres de tu gloria,</l>
-          <l n="10">van de Bullones por la inhiesta falda</l>
-          <l n="11">los hijos de Castilla a la victoria;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y en breve su bandera roja y gualda,</l>
-          <l n="13">clavarán, invocando tu memoria,</l>
-          <l n="14">del Atlas rudo en la breñosa espalda.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s165n_0528">
-        <head>El hipócrita</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Siempre afectando místico lenguaje,</l>
-          <l n="2">es prevaricador impertinente.</l>
-          <l n="3">Cándido amor a la pobreza miente,</l>
-          <l n="4">y al oro, que es su dios, rinde homenaje.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Modestia finge con sencillo traje,</l>
-          <l n="6">como al lirio odorífico y riente</l>
-          <l n="7">intenta remedar la pestilente</l>
-          <l n="8">corola azul del fraude más salvaje.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Sus ojos, en que brilla la impaciencia,</l>
-          <l n="10">buscan la tierra y con mentido celo</l>
-          <l n="11">se condena a incesante reverencia,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">mas no por humildad se inclina al suelo:</l>
-          <l n="13">es que le abruma tanto la conciencia,</l>
-          <l n="14">que ya no puede ni aun mirar al cielo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s165n_0529">
-        <head>A don Adelardo López de Ayala</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¿De qué celeste Numen alcanzaste,</l>
-          <l n="2">¡gloria del suelo en que rodó tu cuna!,</l>
-          <l n="3">el alto ingenio que al saber se aduna</l>
-          <l n="4">como la perla al generoso engaste?</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Poeta y orador, raro contraste</l>
-          <l n="6">de varias dotes, con igual fortuna</l>
-          <l n="7">en el templo del arte, en la tribuna,</l>
-          <l n="8">espléndidos laureles conquistaste.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Pero nos deja ya! Dios me es testigo</l>
-          <l n="10">de que aceptara inútil el anciano,</l>
-          <l n="11">partir ya solo a caminar contigo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Pero ya que mi ruego ha sido en vano,</l>
-          <l n="13">te despiden el vate y el amigo,</l>
-          <l n="14">y ambos te dicen: «¡Hasta luego, hermano!»...</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Antonio García Gutiérrez</head>
+            <p>Chiclana (Cádiz). 1813 - 1884</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s165n_0520">
+            <head>Amor sin celos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-">Tengo aprensiones yo como cualquiera,</l>
+               <l n="2" met="--+--+-+-+-">y tocante a caprichos ¡no se diga!</l>
+               <l n="3" met="-+-+-+-+-+-">El campo siempre verde me fatiga,</l>
+               <l n="4" met="-+-+--++-+-">el cielo siempre azul me sospecha.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-++--+-">Triste la luz del sol me pareciera</l>
+               <l n="6" met="-+-+---+-+-">sin esa noche del dolor amiga,</l>
+               <l n="7" met="---+---+-+-">y sin la pena que el placer mitiga,</l>
+               <l n="8" met="---+-+---+-">hasta la vida misma aborreciera.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">Pues esos ojos tuyos, dueño mío,</l>
+               <l n="10" met="-+---++-++-">que pueden afrentar a uno y mil cielos,</l>
+               <l n="11" met="-+---+---+-">causaron mi amoroso desvarío.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+++--+++-+-">No hallé sombra en su luz, no hallé desvelos,</l>
+               <l n="13" met="--+--+-+-+-">y mi ardiente pasión murió de frío;</l>
+               <l n="14" met="-++--+--++-">que así muere el amor cuando no hay celos.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s165n_0521">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+-+-+-">¿Por qué funesto error, por qué demencia</l>
+               <l n="2" met="+--+-+-+-+-" enjamb="B-cc_crossclause">hemos venido a tan infame estado</l>
+               <l n="3" met="---+-+---+-" enjamb="B-ex_subj_verb I-cc_crossclause">que a disfrazar las llagas del pecado</l>
+               <l n="4" met="++-+-+---+-" enjamb="I-ex_subj_verb">no basta ya la hipócrita apariencia?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-" enjamb="B-pb_noun_prep">La virtud, la hidalguía, en la experiencia</l>
+               <l n="6" met="--+--++--+-" enjamb="I-pb_noun_prep">de su estéril valor se han estrellado,</l>
+               <l n="7" met="--+--+++-+-">y mi patria feliz es ya un mercado</l>
+               <l n="8" met="---+-+---+-">en que se vende a gritos la conciencia.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++-+-++--+-" enjamb="B-cc_crossclause">No hay gloria, no hay dolor, no hay sacrificio</l>
+               <l n="10" met="--+--+---+-" enjamb="B-pb_adj_adv I-cc_crossclause">que por viles parásitos hambrientos</l>
+               <l n="11" met="+--+-+---+-" enjamb="I-pb_adj_adv">no se convierta en propio beneficio.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+---+-">Y la gangrena avanza por momentos,</l>
+               <l n="13" met="---+---+-+-">y bajo el ancho pedestal del vicio</l>
+               <l n="14" met="-+---+---+-">restallan del Estado los cimientos.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s165n_0522">
+            <head>La cita a la madrugada</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+-+-+-+-">No hay pena, no hay dolor, hermosa mía,</l>
+               <l n="2" met="-+++---+-+-">que yo no arrostre por tus lindos ojos;</l>
+               <l n="3" met="-+---+---+-">esclavo viviré de tus antojos</l>
+               <l n="4" met="-----+-+-+-">en tanto que a mi amor tu amor sonría.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+-+-+-">Preso en tus dulces lazos noche y día;</l>
+               <l n="6" met="-+-+---+-+-">bebiendo el néctar de tus labios rojos,</l>
+               <l n="7" met="+--+-+---+-" enjamb="B-cc_crossclause">¿cómo sentir los pérfidos abrojos</l>
+               <l n="8" met="--+--++--+-" enjamb="I-cc_crossclause">que del mundo falaz cubren la vía?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+++++--+-">¡Adorarte y no más! Este es mi oficio,</l>
+               <l n="10" met="-+-+---+-+-" enjamb="B-cc_crossclause">y no hay afecto ni pasión profana</l>
+               <l n="11" met="-++--+---+-" enjamb="I-cc_crossclause">que no venza mi amor en tu servicio.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+-+-+-">¡Mas soy flaco mortal, hermosa Juana!</l>
+               <l n="13" met="+-+--+---+-">Pídeme de mi sangre el sacrificio,</l>
+               <l n="14" met="-+-+-+---+-">y déjame dormir por las mañanas.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s165n_0523">
+            <head>La ambición</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-" enjamb="B-cc_crossclause">Huye, ambición, al ostentoso lecho</l>
+               <l n="2" met="---+-+---+-" enjamb="I-cc_crossclause">donde reposa el feble cortesano:</l>
+               <l n="3" met="---+---+-+-" enjamb="B-pb_adj_prep">donde divierte su cuidado en vano</l>
+               <l n="4" met="---+---+-+-" enjamb="I-pb_adj_prep">bajo la pompa del dorado techo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-">Airada oprime tu agitado pecho,</l>
+               <l n="6" met="-+-+---+-+-">en él aborta tu veneno insano,</l>
+               <l n="7" met="---+-+---+-">y resentido al toque de tu mano</l>
+               <l n="8" met="-+-+---+-+-">el mundo juzgue a su anhelar estrecho.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">Mas nunca imprimas en el alma mía</l>
+               <l n="10" met="--+--+---+-">el hidrópico anhelo de grandeza...</l>
+               <l n="11" met="++-+---+-+-">dame la paz en que vivir solía.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">En mi estado infeliz, en mi pobreza,</l>
+               <l n="13" met="+-+++----+-">no desear tan sólo apetecía,</l>
+               <l n="14" met="+--+---+-+-">que es para el hombre la mayor riqueza.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s165n_0524">
+            <head>La garza</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-">Sube veloz por las etéreas salas,</l>
+               <l n="2" met="+--+-+---+-">garza fugaz, y al mundo señorea,</l>
+               <l n="3" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">y opón al brillo de la luz Febea</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">la regia pompa de tus blancas galas.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+---+-+-">Cuando las nubes en altura igualas,</l>
+               <l n="6" met="---+-+---+-">si estremecido el mundo titubea,</l>
+               <l n="7" met="-+---+-+-+-" enjamb="B-ex_subj_verb">la ruda tempestad tu frente orea</l>
+               <l n="8" met="--+--++--+-" enjamb="I-ex_subj_verb">y el tremendo huracán mece tus alas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+++---+-+-" enjamb="B-pb_noun_prep">Así yo un tiempo mi ligero vuelo</l>
+               <l n="10" met="++++---+-+-" enjamb="B-ex_dobj_verb I-pb_noun_prep">a un sol más puro remontar quería</l>
+               <l n="11" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">y alcé mi orgullo a conquistar el cielo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-">Pero nublose con sorpresa impía,</l>
+               <l n="13" met="--+--+---+-">y las alas cortadas a mi anhelo,</l>
+               <l n="14" met="-+-+---+-+-">murió su luz y la esperanza mía.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s165n_0525">
+            <head>La calma</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+---+-+-" enjamb="B-ex_dobj_verb">No vi la pompa de dorada cuna</l>
+               <l n="2" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">mecer mi infancia ni halagar mis días,</l>
+               <l n="3" met="++-++--+-+-" enjamb="B-ex_dobj_verb">ni vi prestarse a las pasiones mías</l>
+               <l n="4" met="-+---+---+-" enjamb="I-ex_dobj_verb">el celo encantador de la fortuna.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-" enjamb="B-ex_subj_verb">Jamás mi mente en esperanza alguna</l>
+               <l n="6" met="---+-+---+-" enjamb="I-ex_subj_verb">se alimentó de locas fantasías,</l>
+               <l n="7" met="--+--+---+-" enjamb="B-ex_subj_verb">ni mi sueño entre imágenes sombrías</l>
+               <l n="8" met="-+---++--+-" enjamb="I-ex_subj_verb">turbara la ambición, negra, importuna.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+---+-" enjamb="B-ex_subj_verb">¡Pero en pobreza mísera la suerte</l>
+               <l n="10" met="+--+++---+-" enjamb="I-ex_subj_verb">guardo a mi afán un término medido</l>
+               <l n="11" met="+--+---+-+-">y un corazón en la desgracia fuerte!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-">De este modo mi anhelo reducido,</l>
+               <l n="13" met="+-++-+---+-">¿qué temer debo el hora de mi muerte</l>
+               <l n="14" met="-+---++--+-">si más felicidad no he conocido?</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s165n_0526">
+            <head>A la muerte de E...</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-" enjamb="B-pb_adj_noun">¡Rosa marchita, que en tu bella aurora</l>
+               <l n="2" met="+--+---+-+-" enjamb="I-pb_adj_noun">víctima fuiste del rigor del hado!</l>
+               <l n="3" met="+--+---+-+-">¡Flor malograda que con ceño airado</l>
+               <l n="4" met="-+-+---+-+-">la Parca horrible desoló traidora!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-++-+-+-+-" enjamb="B-pb_verb_adv">¡Oh! ¡Cuánto has sido triste! En vano llora</l>
+               <l n="6" met="+--+---+-+-" enjamb="I-pb_verb_adv">siempre Dalmiro en tu sepulcro helado,</l>
+               <l n="7" met="---+++---+-" enjamb="B-ex_subj_verb">que a cada instante un eco desmayado</l>
+               <l n="8" met="-+++---+-+-" enjamb="I-ex_subj_verb">murió, me dice, tu infeliz pastora.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--++-">¡Y no más la veré! ¡Terrible pena!</l>
+               <l n="10" met="-++--+---+-" enjamb="B-ex_subj_verb">¡Y no más en su rostro la sonrisa</l>
+               <l n="11" met="-+-+---+-+-" enjamb="I-ex_subj_verb">hará mi encanto, de delicias llena!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+-">¡Oh! ¡Dura suerte! ¡Obligación precisa!</l>
+               <l n="13" met="-+++-+-+-+-">¡Que ya más no veré tu faz serena!</l>
+               <l n="14" met="-+++---+-+-">Que ya no existe mi adorada Elisa.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s165n_0527">
+            <head>Al Cardenal Cisneros</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+++-+-" enjamb="B-ex_dobj_verb">Si un instante romper te fuera dado</l>
+               <l n="2" met="--+--+---+-" enjamb="I-ex_dobj_verb">la glacial ligadura de la muerte,</l>
+               <l n="3" met="-+---+--++-">¡oh humilde franciscano!, ¡de qué suerte</l>
+               <l n="4" met="+-+--+---+-">te sintieras de gozo arrebatado!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+----+---+-">Viera vuestro león, desmelenado,</l>
+               <l n="6" met="--+--+-+-+-">sacudiendo el sopor del sueño inerte</l>
+               <l n="7" met="+-+---+--+-">caer rugiendo vengativo y fuerte</l>
+               <l n="8" met="--+--+---+-">sobre el tigre del África indomado.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+-+---+-">Hoy, renovando timbres de tu gloria,</l>
+               <l n="10" met="+--+---+-+-" enjamb="B-ex_dobj_verb">van de Bullones por la inhiesta falda</l>
+               <l n="11" met="-+---+---+-" enjamb="I-ex_dobj_verb">los hijos de Castilla a la victoria;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+-+-+-">y en breve su bandera roja y gualda,</l>
+               <l n="13" met="--+--+---+-">clavarán, invocando tu memoria,</l>
+               <l n="14" met="-+-+---+-+-">del Atlas rudo en la breñosa espalda.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s165n_0528">
+            <head>El hipócrita</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-">Siempre afectando místico lenguaje,</l>
+               <l n="2" met="+----+---+-">es prevaricador impertinente.</l>
+               <l n="3" met="+--+---+-+-">Cándido amor a la pobreza miente,</l>
+               <l n="4" met="-+-+-++--+-">y al oro, que es su dios, rinde homenaje.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-">Modestia finge con sencillo traje,</l>
+               <l n="6" met="--+--+---+-" enjamb="B-pb_verb_adv">como al lirio odorífico y riente</l>
+               <l n="7" met="-+---+---+-" enjamb="B-pb_adj_noun I-pb_verb_adv">intenta remedar la pestilente</l>
+               <l n="8" met="-+-+-+-+-+-" enjamb="I-pb_adj_noun">corola azul del fraude más salvaje.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">Sus ojos, en que brilla la impaciencia,</l>
+               <l n="10" met="+--+---+-+-">buscan la tierra y con mentido celo</l>
+               <l n="11" met="--+--+---+-">se condena a incesante reverencia,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+-+-+-">mas no por humildad se inclina al suelo:</l>
+               <l n="13" met="+-++-+---+-">es que le abruma tanto la conciencia,</l>
+               <l n="14" met="-+++-+-+-+-">que ya no puede ni aun mirar al cielo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s165n_0529">
+            <head>A don Adelardo López de Ayala</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+---+-">¿De qué celeste Numen alcanzaste,</l>
+               <l n="2" met="+--+---+-+-">¡gloria del suelo en que rodó tu cuna!,</l>
+               <l n="3" met="-+-+---+-+-">el alto ingenio que al saber se aduna</l>
+               <l n="4" met="---+---+-+-">como la perla al generoso engaste?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+----++--+-" enjamb="B-pb_noun_prep">Poeta y orador, raro contraste</l>
+               <l n="6" met="-+-+---+-+-" enjamb="B-pb_noun_prep I-pb_noun_prep">de varias dotes, con igual fortuna</l>
+               <l n="7" met="--+--+---+-" enjamb="I-pb_noun_prep">en el templo del arte, en la tribuna,</l>
+               <l n="8" met="-+---+---+-">espléndidos laureles conquistaste.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--++-+++-+-" enjamb="B-pb_noun_prep">¡Pero nos deja ya! Dios me es testigo</l>
+               <l n="10" met="---+-+---+-" enjamb="I-pb_noun_prep">de que aceptara inútil el anciano,</l>
+               <l n="11" met="-+++---+-+-">partir ya solo a caminar contigo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-----+++-+-">Pero ya que mi ruego ha sido en vano,</l>
+               <l n="13" met="+-+--+---+-">te despiden el vate y el amigo,</l>
+               <l n="14" met="+-++-+-+-+-">y ambos te dicen: «¡Hasta luego, hermano!»...</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

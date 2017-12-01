@@ -1,318 +1,410 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Luz Gay</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_187n"/>
-          <name type="short">Gay</name>
-          <name type="full">
-            <name type="first-name">Luz</name>
-            <name type="second-name">Gay</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">10</measure>
-        <measure unit="tokens">810</measure>
-        <measure unit="line">140</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_187n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_187n" role="author" sex="F">
-            <persName>Luz Gay</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Luz Gay</title>
+            <author corresp="#disco_187n">Luz Gay</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">10</measure>
+            <measure unit="tokens">810</measure>
+            <measure unit="line">140</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_187n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_187n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Gay</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Luz</forename>
+                     <surname property="foaf:familyName">Gay</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Luz Gay</persName>
+                  <sex property="foaf:gender" value="F"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s187n_0629" about="dbpedia:Soneto">
+                        <title property="dc:title">A todos</title>
+                        <title type="incipit" property="dc:alternative">Como el suave rumor de las cascadas</title>
+                     </bibl>
+                     <bibl resource="disco#s187n_0630" about="dbpedia:Soneto">
+                        <title property="dc:title">A mi amigo Juan de Dios Peza</title>
+                        <title type="incipit" property="dc:alternative">Toma la débil flor que te dedica</title>
+                     </bibl>
+                     <bibl resource="disco#s187n_0631" about="dbpedia:Soneto">
+                        <title property="dc:title">Ya vuelve el pesimismo...</title>
+                        <title type="incipit" property="dc:alternative">Ya vuelve el pesimismo descarnado</title>
+                     </bibl>
+                     <bibl resource="disco#s187n_0632" about="dbpedia:Soneto">
+                        <title property="dc:title">Después de la fiesta</title>
+                        <title type="incipit" property="dc:alternative">Queden las galas otra vez guardadas:</title>
+                     </bibl>
+                     <bibl resource="disco#s187n_0633" about="dbpedia:Soneto">
+                        <title property="dc:title">Apología</title>
+                        <title type="incipit" property="dc:alternative">¿Qué, me dicen que tú, patria querida,</title>
+                     </bibl>
+                     <bibl resource="disco#s187n_0634" about="dbpedia:Soneto">
+                        <title property="dc:title">Hadas</title>
+                        <title type="incipit" property="dc:alternative">Las hadas que en las tardes bonancibles</title>
+                     </bibl>
+                     <bibl resource="disco#s187n_0635" about="dbpedia:Soneto">
+                        <title property="dc:title">Apostasía</title>
+                        <title type="incipit" property="dc:alternative">Lejos de los festines mundanales</title>
+                     </bibl>
+                     <bibl resource="disco#s187n_0636" about="dbpedia:Soneto">
+                        <title property="dc:title">Inspiración</title>
+                        <title type="incipit" property="dc:alternative">Recorren las agujas silenciosas,</title>
+                     </bibl>
+                     <bibl resource="disco#s187n_0637" about="dbpedia:Soneto">
+                        <title property="dc:title">¡Fugace!</title>
+                        <title type="incipit" property="dc:alternative">Como envuelve la clara luz del día</title>
+                     </bibl>
+                     <bibl resource="disco#s187n_0638" about="dbpedia:Soneto">
+                        <title property="dc:title">Flores y almas</title>
+                        <title type="incipit" property="dc:alternative">Del perfumado edén do florecieron</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Luz Gay</head>
-        <p>Cuba. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s187n_0629">
-        <head>A todos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Como el suave rumor de las cascadas</l>
-          <l n="2">cuyo raudal fecundo y cristalino</l>
-          <l n="3">desciende en agitado torbellino</l>
-          <l n="4">de las fértiles cimas encumbradas,</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">regando las llanuras asoladas,</l>
-          <l n="6">para que con su germen argentino</l>
-          <l n="7">reverdezca el arbusto mortecino</l>
-          <l n="8">y renazcan las flores agostadas;</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">así llegan a mí las rumorosas</l>
-          <l n="10">cadencias de las frases generosas</l>
-          <l n="11">vertidas en obsequio de mi númen;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">nutriendo mi abatida fortaleza</l>
-          <l n="13">para resucitar de la tristeza</l>
-          <l n="14">el desmayo mortal que me consumen.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s187n_0630">
-        <head>A mi amigo Juan de Dios Peza</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Toma la débil flor que te dedica</l>
-          <l n="2">la musa blanca del país cubano;</l>
-          <l n="3">pálida, triste, sin follaje vano,</l>
-          <l n="4">pero en aromas de pureza rica.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Para muertos cual tú ¿qué significa</l>
-          <l n="6">en la flor bella del jardín lozano</l>
-          <l n="7">el brillo frágil del matiz galano</l>
-          <l n="8">que la hermosura del color implica?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Yo, que sé bien lo que lo eterno vale,</l>
-          <l n="10">busqué una flor que en tu sepulcro exhale</l>
-          <l n="11">lo que el tiempo no estruja ni consume;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">lo que la brisa a las alturas lleva</l>
-          <l n="13">y hasta los tronos del Señor eleva:</l>
-          <l n="14">¡la fragante pureza del perfume!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s187n_0631">
-        <head>Ya vuelve el pesimismo...</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Ya vuelve el pesimismo descarnado</l>
-          <l n="2">a disertarme, con palabra fría,</l>
-          <l n="3">sobre el tema nefasto que desvía</l>
-          <l n="4">del mágico ideal que yo he soñado.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Su acento magistral y reposado</l>
-          <l n="6">con mil razones de probanza amplia</l>
-          <l n="7">la desalentadora profecía</l>
-          <l n="8">opositora de mi empeño airado.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Ah! si la hostil contrariedad levanta</l>
-          <l n="10">sobre mi suerte su fatal enseña,</l>
-          <l n="11">la lucha vigoriza y agiganta;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y en mí, creyente que el error desdeña,</l>
-          <l n="13">halla el embate resistencia tanta</l>
-          <l n="14">como los oleajes en la peña!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s187n_0632">
-        <head>Después de la fiesta</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Queden las galas otra vez guardadas:</l>
-          <l n="2">el cinturón de plata, el blanco traje,</l>
-          <l n="3">el chal sedoso de nevado encaje</l>
-          <l n="4">y los ramos de flores perfumadas.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Ya pasaron las horas agitadas</l>
-          <l n="6">en que el asedio del pesar distraje,</l>
-          <l n="7">regresando las alas sin ultraje</l>
-          <l n="8">y de suaves aromas impregnadas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Pero tú, terco corazón, persistes</l>
-          <l n="10">en conservarte indiferente y frío;</l>
-          <l n="11">como has ido al sarao, así volvistes,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y siempre melancólico y sombrío</l>
-          <l n="13">sigues soñando con fantasmas tristes</l>
-          <l n="14">y latiendo ¡infeliz! en el vacío.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s187n_0633">
-        <head>Apología</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¿Qué, me dicen que tú, patria querida,</l>
-          <l n="2">tan pródiga y fecunda en bienandanza,</l>
-          <l n="3">la que con toda bienaventuranza</l>
-          <l n="4">ha sido por mi Dios favorecida,</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">negarás a la fe que en mí se anida</l>
-          <l n="6">y que con paso gigantesco avanza</l>
-          <l n="7">al oasis feliz de la esperanza</l>
-          <l n="8">la ayuda protectora que te pida?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Oh! no irreconciliable en tu divorcio</l>
-          <l n="10">muestres indiferencias desdeñosas</l>
-          <l n="11">al anhelo que abrigo de encumbrarte;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">pues quiero unir en ideal consorcio</l>
-          <l n="13">todas sus simpatías amorosas</l>
-          <l n="14">con mi abnegado culto por el Arte.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s187n_0634">
-        <head>Hadas</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Las hadas que en las tardes bonancibles</l>
-          <l n="2">descienden a la margen de la fuente,</l>
-          <l n="3">cuando rizan la onda transparente</l>
-          <l n="4">los besos de las brisas apacibles;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">las que en los juncos verdes y flexibles</l>
-          <l n="6">reclinan mustia la abatida frente</l>
-          <l n="7">buscando alguna tregua a la doliente</l>
-          <l n="8">memoria de desdichas ostensibles;</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">no son «las desposadas del ensueño»,</l>
-          <l n="10">son hadas que errabundas peregrinan</l>
-          <l n="11">desierta el alma del placer risueño,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y sin ver en su senda flor alguna,</l>
-          <l n="13">sollozantes y pálidas caminan</l>
-          <l n="14">huérfanas del amor y la fortuna.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s187n_0635">
-        <head>Apostasía</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Lejos de los festines mundanales</l>
-          <l n="2">donde el bullicio, aturde los sentidos</l>
-          <l n="3">y arrebata la paz a los queridos</l>
-          <l n="4">blancos y transparentes ideales;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">lejos de las perfidias desleales</l>
-          <l n="6">que del mundo en los senos carcomidos</l>
-          <l n="7">germinan, cual microbios corrompidos</l>
-          <l n="8">en el fondo de infectos lodazales;</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">entre la soledad del aislamiento,</l>
-          <l n="10">así pretendo consumir la vida;</l>
-          <l n="11">y que bogue mi alado pensamiento</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">como la nave en alta mar perdida</l>
-          <l n="13">que se abandona a la merced del viento</l>
-          <l n="14">y de su propia suerte se descuida.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s187n_0636">
-        <head>Inspiración</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Recorren las agujas silenciosas,</l>
-          <l n="2">las horas, en la esfera señaladas,</l>
-          <l n="3">y en el reloj las doce campanadas</l>
-          <l n="4">una tras otra vibran sonorosas.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Duerme la creación; y las hermosas</l>
-          <l n="6">fantásticas visiones de las «hadas»</l>
-          <l n="7">de su aligero vuelo fatigadas,</l>
-          <l n="8">mueren entre las brumas tenebrosas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Solo mi pensamiento, delirante</l>
-          <l n="10">en la región de las ideas vela,</l>
-          <l n="11">vagando entre la rima, el consonante</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y las estrofas, porque loco anhela,</l>
-          <l n="13">hallar en ello el eficaz calmante</l>
-          <l n="14">del agitado afán que me desvela.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s187n_0637">
-        <head>¡Fugace!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Como envuelve la clara luz del día</l>
-          <l n="2">y el vespertino diáfano paisaje</l>
-          <l n="3">entre su denso y lúgubre ropaje</l>
-          <l n="4">la noche melancólica y sombría;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">así envuelve mi cándida alegría,</l>
-          <l n="6">a mi valor moral haciendo ultraje,</l>
-          <l n="7">en los luctuosos pliegues de su traje</l>
-          <l n="8">la fatídica y cruel melancolía.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mas, si la sombra de la duda cruenta</l>
-          <l n="10">nublar la fe del corazón intenta,</l>
-          <l n="11">pasará por su radio terso y puro</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">fugace como pasa fugazmente</l>
-          <l n="13">por el disco del sol resplandeciente,</l>
-          <l n="14">la mancha negra del eclipse oscuro.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s187n_0638">
-        <head>Flores y almas</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Del perfumado edén do florecieron</l>
-          <l n="2">heterogéneas plantas primorosas,</l>
-          <l n="3">osé arrancar unas gallardas rosas</l>
-          <l n="4">cuyas espinas, pérfidas, me hirieron.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Mártires de mis ansias también fueron</l>
-          <l n="6">los lirios de hojas tersas y sedosas,</l>
-          <l n="7">y al troncharlos fragancias olorosas</l>
-          <l n="8">derramando su savia me ofrecieron.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Almas hay, que vulgares y mezquinas</l>
-          <l n="10">hieren, como las rosas con espinas,</l>
-          <l n="11">al que inconscientemente los agravia;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">almas hay, superiores, que prefieren</l>
-          <l n="13">cual los sensibles lirios, si les hieren</l>
-          <l n="14">sufrir la herida y derramar la savia.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Luz Gay</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s187n_0629">
+            <head>A todos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+---+-" enjamb="B-cc_crossclause">Como el suave rumor de las cascadas</l>
+               <l n="2" met="---+-+---+-" enjamb="B-ex_subj_verb I-cc_crossclause">cuyo raudal fecundo y cristalino</l>
+               <l n="3" met="-+---+---+-" enjamb="B-pb_noun_prep I-ex_subj_verb">desciende en agitado torbellino</l>
+               <l n="4" met="--+--+---+-" enjamb="I-pb_noun_prep">de las fértiles cimas encumbradas,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">regando las llanuras asoladas,</l>
+               <l n="6" met="-----+---+-">para que con su germen argentino</l>
+               <l n="7" met="--+--+---+-">reverdezca el arbusto mortecino</l>
+               <l n="8" met="--+--+---+-">y renazcan las flores agostadas;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--+---+-" enjamb="B-pb_adj_noun">así llegan a mí las rumorosas</l>
+               <l n="10" met="-+---+---+-" enjamb="I-pb_adj_noun">cadencias de las frases generosas</l>
+               <l n="11" met="-+-------+-">vertidas en obsequio de mi númen;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-" enjamb="B-pb_noun_prep">nutriendo mi abatida fortaleza</l>
+               <l n="13" met="-----+---+-" enjamb="B-ex_dobj_verb I-pb_noun_prep">para resucitar de la tristeza</l>
+               <l n="14" met="--+--+-+-+-" enjamb="I-ex_dobj_verb">el desmayo mortal que me consumen.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s187n_0630">
+            <head>A mi amigo Juan de Dios Peza</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+-+-+-" enjamb="B-ex_subj_verb">Toma la débil flor que te dedica</l>
+               <l n="2" met="-+-+---+-+-" enjamb="I-ex_subj_verb">la musa blanca del país cubano;</l>
+               <l n="3" met="+--+---+-+-">pálida, triste, sin follaje vano,</l>
+               <l n="4" met="---+---+-+-">pero en aromas de pureza rica.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--++--+-">Para muertos cual tú ¿qué significa</l>
+               <l n="6" met="--++---+-+-">en la flor bella del jardín lozano</l>
+               <l n="7" met="-+-+---+-+-" enjamb="B-cc_crossclause">el brillo frágil del matiz galano</l>
+               <l n="8" met="---+---+-+-" enjamb="I-cc_crossclause">que la hermosura del color implica?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-++--++-+-">Yo, que sé bien lo que lo eterno vale,</l>
+               <l n="10" met="-+-+---+-+-" enjamb="B-ex_subj_verb">busqué una flor que en tu sepulcro exhale</l>
+               <l n="11" met="--+-++---+-" enjamb="I-ex_subj_verb">lo que el tiempo no estruja ni consume;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-">lo que la brisa a las alturas lleva</l>
+               <l n="13" met="---+---+-+-">y hasta los tronos del Señor eleva:</l>
+               <l n="14" met="--+--+---+-">¡la fragante pureza del perfume!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s187n_0631">
+            <head>Ya vuelve el pesimismo...</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++---+---+-">Ya vuelve el pesimismo descarnado</l>
+               <l n="2" met="---++--+-+-">a disertarme, con palabra fría,</l>
+               <l n="3" met="--+--+---+-" enjamb="B-pb_verb_cprep">sobre el tema nefasto que desvía</l>
+               <l n="4" met="-+--+-++-+-" enjamb="I-pb_verb_cprep">del mágico ideal que yo he soñado.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">Su acento magistral y reposado</l>
+               <l n="6" met="-+-+---+-+-">con mil razones de probanza amplia</l>
+               <l n="7" met="-----+---+-" enjamb="B-pb_adj_noun">la desalentadora profecía</l>
+               <l n="8" met="---+---+-+-" enjamb="I-pb_adj_noun">opositora de mi empeño airado.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-" enjamb="B-ex_dobj_verb">¡Ah! si la hostil contrariedad levanta</l>
+               <l n="10" met="---+---+-+-" enjamb="I-ex_dobj_verb">sobre mi suerte su fatal enseña,</l>
+               <l n="11" met="-+---+---+-">la lucha vigoriza y agiganta;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">y en mí, creyente que el error desdeña,</l>
+               <l n="13" met="+--+---+-+-">halla el embate resistencia tanta</l>
+               <l n="14" met="-----+---+-">como los oleajes en la peña!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s187n_0632">
+            <head>Después de la fiesta</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+-+-+-">Queden las galas otra vez guardadas:</l>
+               <l n="2" met="---+-+-+-+-">el cinturón de plata, el blanco traje,</l>
+               <l n="3" met="-+-+---+-+-">el chal sedoso de nevado encaje</l>
+               <l n="4" met="--+--+---+-">y los ramos de flores perfumadas.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-">Ya pasaron las horas agitadas</l>
+               <l n="6" met="---+---+-+-">en que el asedio del pesar distraje,</l>
+               <l n="7" met="--+--+---+-">regresando las alas sin ultraje</l>
+               <l n="8" met="--+--+---+-">y de suaves aromas impregnadas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--++---+-+-" enjamb="B-pb_noun_prep">Pero tú, terco corazón, persistes</l>
+               <l n="10" met="---++--+-+-" enjamb="I-pb_noun_prep">en conservarte indiferente y frío;</l>
+               <l n="11" met="-++--+-+-+-">como has ido al sarao, así volvistes,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">y siempre melancólico y sombrío</l>
+               <l n="13" met="+--+---+-+-">sigues soñando con fantasmas tristes</l>
+               <l n="14" met="--+--+---+-">y latiendo ¡infeliz! en el vacío.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s187n_0633">
+            <head>Apología</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+++--++--+-">¿Qué, me dicen que tú, patria querida,</l>
+               <l n="2" met="++---+---+-">tan pródiga y fecunda en bienandanza,</l>
+               <l n="3" met="---+-----+-" enjamb="B-ex_subj_verb">la que con toda bienaventuranza</l>
+               <l n="4" met="++---+---+-" enjamb="I-ex_subj_verb">ha sido por mi Dios favorecida,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+-+-+-">negarás a la fe que en mí se anida</l>
+               <l n="6" met="---+---+-+-">y que con paso gigantesco avanza</l>
+               <l n="7" met="-+--+----+-">al oasis feliz de la esperanza</l>
+               <l n="8" met="-+---+--++-">la ayuda protectora que te pida?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">¡Oh! no irreconciliable en tu divorcio</l>
+               <l n="10" met="+----+---+-" enjamb="B-pb_adj_prep">muestres indiferencias desdeñosas</l>
+               <l n="11" met="--+--+---+-" enjamb="I-pb_adj_prep">al anhelo que abrigo de encumbrarte;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">pues quiero unir en ideal consorcio</l>
+               <l n="13" met="+----+---+-" enjamb="I-ex_dobj_verb">todas sus simpatías amorosas</l>
+               <l n="14" met="---+-+---+-">con mi abnegado culto por el Arte.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s187n_0634">
+            <head>Hadas</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-" enjamb="B-ex_subj_verb">Las hadas que en las tardes bonancibles</l>
+               <l n="2" met="-+---+---+-" enjamb="I-ex_subj_verb">descienden a la margen de la fuente,</l>
+               <l n="3" met="--+--+---+-" enjamb="B-ex_subj_verb">cuando rizan la onda transparente</l>
+               <l n="4" met="-+---+---+-" enjamb="I-ex_subj_verb">los besos de las brisas apacibles;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-" enjamb="B-ex_subj_verb">las que en los juncos verdes y flexibles</l>
+               <l n="6" met="-+-+---+-+-" enjamb="B-pb_verb_adv I-ex_subj_verb">reclinan mustia la abatida frente</l>
+               <l n="7" met="-+-+-+---+-" enjamb="B-pb_adj_noun I-pb_verb_adv">buscando alguna tregua a la doliente</l>
+               <l n="8" met="-+---+---+-" enjamb="I-pb_adj_noun">memoria de desdichas ostensibles;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++---+---+-">no son «las desposadas del ensueño»,</l>
+               <l n="10" met="++---+---+-" enjamb="B-ex_subj_verb">son hadas que errabundas peregrinan</l>
+               <l n="11" met="-+-+---+-+-" enjamb="I-ex_subj_verb">desierta el alma del placer risueño,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+-+-+-">y sin ver en su senda flor alguna,</l>
+               <l n="13" met="--+--+---+-" enjamb="B-ex_dobj_verb">sollozantes y pálidas caminan</l>
+               <l n="14" met="+----+---+-" enjamb="I-ex_dobj_verb">huérfanas del amor y la fortuna.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s187n_0635">
+            <head>Apostasía</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-----+---+-" enjamb="B-cc_crossclause">Lejos de los festines mundanales</l>
+               <l n="2" met="---+-+---+-" enjamb="B-ex_subj_verb I-cc_crossclause">donde el bullicio, aturde los sentidos</l>
+               <l n="3" met="--+--+---+-" enjamb="B-pb_adj_noun I-ex_subj_verb">y arrebata la paz a los queridos</l>
+               <l n="4" met="+----+---+-" enjamb="I-pb_adj_noun">blancos y transparentes ideales;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-----+---+-" enjamb="B-cc_crossclause">lejos de las perfidias desleales</l>
+               <l n="6" met="--+--+---+-" enjamb="B-ex_dobj_verb I-cc_crossclause">que del mundo en los senos carcomidos</l>
+               <l n="7" met="-+---+---+-" enjamb="I-ex_dobj_verb">germinan, cual microbios corrompidos</l>
+               <l n="8" met="--+--+---+-">en el fondo de infectos lodazales;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-----+---+-">entre la soledad del aislamiento,</l>
+               <l n="10" met="-+-+---+-+-">así pretendo consumir la vida;</l>
+               <l n="11" met="--+--+---+-">y que bogue mi alado pensamiento</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+-+-+-" enjamb="B-cc_crossclause">como la nave en alta mar perdida</l>
+               <l n="13" met="---+---+-+-" enjamb="I-cc_crossclause">que se abandona a la merced del viento</l>
+               <l n="14" met="---+-+---+-">y de su propia suerte se descuida.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s187n_0636">
+            <head>Inspiración</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">Recorren las agujas silenciosas,</l>
+               <l n="2" met="-+---+---+-">las horas, en la esfera señaladas,</l>
+               <l n="3" met="---+-+---+-">y en el reloj las doce campanadas</l>
+               <l n="4" met="+--+-+---+-">una tras otra vibran sonorosas.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+----+---+-" enjamb="B-pb_adj_noun">Duerme la creación; y las hermosas</l>
+               <l n="6" met="-+---+---+-" enjamb="I-pb_adj_noun">fantásticas visiones de las «hadas»</l>
+               <l n="7" met="---+-+---+-">de su aligero vuelo fatigadas,</l>
+               <l n="8" met="+----+---+-">mueren entre las brumas tenebrosas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+----+---+-" enjamb="B-pb_adj_prep">Solo mi pensamiento, delirante</l>
+               <l n="10" met="---+---+-+-" enjamb="I-pb_adj_prep">en la región de las ideas vela,</l>
+               <l n="11" met="-+---+---+-">vagando entre la rima, el consonante</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-">y las estrofas, porque loco anhela,</l>
+               <l n="13" met="-+-+---+-+-" enjamb="B-pb_noun_prep">hallar en ello el eficaz calmante</l>
+               <l n="14" met="---+-+-+-+-" enjamb="I-pb_noun_prep">del agitado afán que me desvela.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s187n_0637">
+            <head>¡Fugace!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+-+-+-">Como envuelve la clara luz del día</l>
+               <l n="2" met="---+-+---+-" enjamb="B-pb_noun_prep">y el vespertino diáfano paisaje</l>
+               <l n="3" met="---+-+---+-" enjamb="I-pb_noun_prep">entre su denso y lúgubre ropaje</l>
+               <l n="4" met="-+---+---+-">la noche melancólica y sombría;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-++--+---+-">así envuelve mi cándida alegría,</l>
+               <l n="6" met="---+-+-+-+-">a mi valor moral haciendo ultraje,</l>
+               <l n="7" met="---+-+---+-">en los luctuosos pliegues de su traje</l>
+               <l n="8" met="--+--+---+-">la fatídica y cruel melancolía.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-" enjamb="B-ex_subj_verb">Mas, si la sombra de la duda cruenta</l>
+               <l n="10" met="-+-+---+-+-" enjamb="I-ex_subj_verb">nublar la fe del corazón intenta,</l>
+               <l n="11" met="--+--+-+-+-" enjamb="B-pb_adj_noun">pasará por su radio terso y puro</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+--++-" enjamb="I-pb_adj_noun">fugace como pasa fugazmente</l>
+               <l n="13" met="--+--+---+-">por el disco del sol resplandeciente,</l>
+               <l n="14" met="-+-+---+-+-">la mancha negra del eclipse oscuro.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s187n_0638">
+            <head>Flores y almas</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-++--+-" enjamb="B-ex_dobj_verb">Del perfumado edén do florecieron</l>
+               <l n="2" met="---+-+---+-" enjamb="I-ex_dobj_verb">heterogéneas plantas primorosas,</l>
+               <l n="3" met="-+-++--+-+-" enjamb="B-cc_crossclause">osé arrancar unas gallardas rosas</l>
+               <l n="4" met="---+-+--++-" enjamb="I-cc_crossclause">cuyas espinas, pérfidas, me hirieron.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+----+--++-">Mártires de mis ansias también fueron</l>
+               <l n="6" met="-+-+-+---+-">los lirios de hojas tersas y sedosas,</l>
+               <l n="7" met="--++-+---+-" enjamb="B-ex_dobj_verb">y al troncharlos fragancias olorosas</l>
+               <l n="8" met="--+--+-+-+-" enjamb="I-ex_dobj_verb">derramando su savia me ofrecieron.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+---+-" enjamb="B-ex_subj_verb">Almas hay, que vulgares y mezquinas</l>
+               <l n="10" met="+----+---+-" enjamb="I-ex_subj_verb">hieren, como las rosas con espinas,</l>
+               <l n="11" met="---+-+-+-+-">al que inconscientemente los agravia;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-" enjamb="B-ex_subj_verb">almas hay, superiores, que prefieren</l>
+               <l n="13" met="+--+-+--++-" enjamb="B-pb_verb_chain I-ex_subj_verb">cual los sensibles lirios, si les hieren</l>
+               <l n="14" met="-+-+---+-+-" enjamb="I-pb_verb_chain">sufrir la herida y derramar la savia.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

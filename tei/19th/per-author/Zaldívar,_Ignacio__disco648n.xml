@@ -1,93 +1,153 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Ignacio Zaldívar</title>
-        <author>
-          <idno type="viaf" cert="high">2038854</idno>
-          <idno type="#disco" xml:id="disco_648n"/>
-          <name type="short">Zaldívar</name>
-          <name type="full">
-            <name type="first-name">Ignacio</name>
-            <name type="second-name">Zaldívar</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">95</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_648n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_648n" role="author" sex="M">
-            <persName>Ignacio Zaldívar</persName>
-            <birth><placeName type="place">Santander</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1873" cert="high">1873</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1921" cert="high">1921</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Ignacio Zaldívar</title>
+            <author corresp="#disco_648n">Ignacio Zaldívar</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">95</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_648n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_648n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/2038854"/>
+                  <persName type="short">Zaldívar</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ignacio</forename>
+                     <surname property="foaf:familyName">Zaldívar</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ignacio Zaldívar</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Santander</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1873" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1921" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s648n_2395" about="dbpedia:Soneto">
+                        <title property="dc:title">Samaritana</title>
+                        <title type="incipit" property="dc:alternative">Libre soy; mas dichoso cambiaría</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Ignacio Zaldívar</head>
-        <p>Santander. 1873 - 1921</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s648n_2395">
-        <head>Samaritana</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Libre soy; mas dichoso cambiaría</l>
-          <l n="2">esta mi libertad por tus cadenas...</l>
-          <l n="3">¡Oh, de tus manos dulces y morenas</l>
-          <l n="4">la adorable y eterna tiranía!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Si yo tu esclavo fuese, te daría</l>
-          <l n="6">todas mis horas, de tu imagen llenas,</l>
-          <l n="7">toda la ardiente sangre de mis venas...</l>
-          <l n="8">y si pidiese más... más todavía...</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Samaritana: el agua que yo quiero</l>
-          <l n="10">entre las rosas de tus labios mana,</l>
-          <l n="11">y es Dios el que te puso en mi sendero...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Ayer te amé; hoy te adoro; y si mañana</l>
-          <l n="13">ves que, sediento de tu amor, me muero,</l>
-          <l n="14">¿me darás de beber, Samaritana?</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Ignacio Zaldívar</head>
+            <p>Santander. 1873 - 1921</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s648n_2395">
+            <head>Samaritana</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-" enjamb="B-ex_dobj_verb">Libre soy; mas dichoso cambiaría</l>
+               <l n="2" met="+----+---+-" enjamb="I-ex_dobj_verb">esta mi libertad por tus cadenas...</l>
+               <l n="3" met="---+-+---+-">¡Oh, de tus manos dulces y morenas</l>
+               <l n="4" met="--+--+---+-">la adorable y eterna tiranía!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+-+-+-" enjamb="B-ex_dobj_verb">Si yo tu esclavo fuese, te daría</l>
+               <l n="6" met="+--+---+-+-" enjamb="I-ex_dobj_verb">todas mis horas, de tu imagen llenas,</l>
+               <l n="7" met="+--+-+---+-">toda la ardiente sangre de mis venas...</l>
+               <l n="8" met="---+-++--+-">y si pidiese más... más todavía...</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+--++-">Samaritana: el agua que yo quiero</l>
+               <l n="10" met="---+---+-+-">entre las rosas de tus labios mana,</l>
+               <l n="11" met="++--++---+-">y es Dios el que te puso en mi sendero...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+++-+---+-" enjamb="B-pb_verb_adv">Ayer te amé; hoy te adoro; y si mañana</l>
+               <l n="13" met="+--+---+++-" enjamb="I-pb_verb_adv">ves que, sediento de tu amor, me muero,</l>
+               <l n="14" met="+-+--+---+-">¿me darás de beber, Samaritana?</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

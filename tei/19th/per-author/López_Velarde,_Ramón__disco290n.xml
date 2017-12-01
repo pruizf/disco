@@ -1,440 +1,554 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Ramón López Velarde</title>
-        <author>
-          <idno type="viaf" cert="high">68976435</idno>
-          <idno type="#disco" xml:id="disco_290n"/>
-          <name type="short">López Velarde</name>
-          <name type="full">
-            <name type="first-name">Ramón</name>
-            <name type="second-name">López Velarde</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">14</measure>
-        <measure unit="tokens">1466</measure>
-        <measure unit="line">210</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_290n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_290n" role="author" sex="M">
-            <persName>Ramón López Velarde</persName>
-            <birth><placeName type="place">Jerez (Zacatecas, México)</placeName>, <placeName type="country">México</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1884" cert="high">1884</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1921" cert="high">1921</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Ramón López Velarde</title>
+            <author corresp="#disco_290n">Ramón López Velarde</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">14</measure>
+            <measure unit="tokens">1466</measure>
+            <measure unit="line">210</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_290n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_290n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/68976435"/>
+                  <persName type="short">López Velarde</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ramón</forename>
+                     <surname property="foaf:familyName">López Velarde</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ramón López Velarde</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Jerez (Zacatecas)</settlement>
+                           <country>México</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1884" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1921" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s290n_0956" about="dbpedia:Soneto">
+                        <title property="dc:title">Domingo de provincia</title>
+                        <title type="incipit" property="dc:alternative">En los claros domingos de mi pueblo, es costumbre</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0957" about="dbpedia:Soneto">
+                        <title property="dc:title">Noches de hotel</title>
+                        <title type="incipit" property="dc:alternative">Se distraen las penas en los cuartos de hoteles</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0958" about="dbpedia:Soneto">
+                        <title property="dc:title">A una ausente seráfica</title>
+                        <title type="incipit" property="dc:alternative">Éstos, amada, son sitios vulgares</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0959" about="dbpedia:Soneto">
+                        <title property="dc:title">En un jardín</title>
+                        <title type="incipit" property="dc:alternative">Al decir que las penas son fugaces</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0960" about="dbpedia:Soneto">
+                        <title property="dc:title">Ella</title>
+                        <title type="incipit" property="dc:alternative">Esta novia del alma con quien soñé un día</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0961" about="dbpedia:Soneto">
+                        <title property="dc:title">Alejandrinos eclesiásticos</title>
+                        <title type="incipit" property="dc:alternative">Tú, Fuensanta, me libras de los brazos del mal;</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0962" about="dbpedia:Soneto">
+                        <title property="dc:title">A la traición de una hermosa</title>
+                        <title type="incipit" property="dc:alternative">Tú que prendiste ayer los aurorales</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0963" about="dbpedia:Soneto">
+                        <title property="dc:title">Para tus dedos ágiles y finos</title>
+                        <title type="incipit" property="dc:alternative">Doy a los cuatro vientos los loores</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0964" about="dbpedia:Soneto">
+                        <title property="dc:title">Mientras muere la tarde</title>
+                        <title type="incipit" property="dc:alternative">Noble señora de provincia: unidos</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0965" about="dbpedia:Soneto">
+                        <title property="dc:title">Del pueblo natal</title>
+                        <title type="incipit" property="dc:alternative">Ingenuas provincianas: cuando mi vida se halle</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0966" about="dbpedia:Soneto">
+                        <title property="dc:title">Flor temprana</title>
+                        <title type="incipit" property="dc:alternative">Mujer que recogiste los primeros</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0967" about="dbpedia:Soneto">
+                        <title property="dc:title">Clor de cuento</title>
+                        <title type="incipit" property="dc:alternative">¡Oh qué gratas las horas de los tiempos lejanos</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0968" about="dbpedia:Soneto">
+                        <title property="dc:title">Del seminario</title>
+                        <title type="incipit" property="dc:alternative">Hoy que la indiferencia del siglo me desola</title>
+                     </bibl>
+                     <bibl resource="disco#s290n_0969" about="dbpedia:Soneto">
+                        <title property="dc:title">Para tus dedos ágiles y finos</title>
+                        <title type="incipit" property="dc:alternative">Coses en dulce paz, y son divinos</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Ramón López Velarde</head>
-        <p>Jerez (Zacatecas, México). 1884 - 1921</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s290n_0956">
-        <head>Domingo de provincia</head>
-        <lg n="1" type="serventesio">
-          <l n="1">En los claros domingos de mi pueblo, es costumbre</l>
-          <l n="2">que en la plaza descubran las gentiles cabezas</l>
-          <l n="3">las mozas, y sus ojos reflejan dulcemente</l>
-          <l n="4">y la banda en el quiosco toca lánguidas piezas.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Y al caer sobre el pueblo la noche ensoñadora,</l>
-          <l n="6">los amantes se miran con la mejor mirada</l>
-          <l n="7">y las orquesta en sus flautas y violín atesora</l>
-          <l n="8">mil sonidos románticos en la noche enfiestada.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Los días de guardar en pueblos provincianos</l>
-          <l n="10">regalan al viandante gratos amaneceres</l>
-          <l n="11">en que frescos los rostros, el Lavalle en las manos,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">camino de la iglesia van las mozas aprisa;</l>
-          <l n="13">que en los días festivos, entre aquellas mujeres</l>
-          <l n="14">no hay una cara hermosa que se quede sin misa.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0957">
-        <head>Noches de hotel</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Se distraen las penas en los cuartos de hoteles</l>
-          <l n="2">con el heterogéneo concurso divertido</l>
-          <l n="3">de yanquis, sacerdotes, quincalleros infieles,</l>
-          <l n="4">niñas recién casadas y mozas del partido.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Media luz... Copio al huésped la desconchada luna</l>
-          <l n="6">en su azogue sin brillo; y flota en calendarios,</l>
-          <l n="7">en cortinas polvosas y catres mercenarios</l>
-          <l n="8">la nómada tristeza de viajes sin fortuna.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Lejos quedó el terruño, la familia distante,</l>
-          <l n="10">y en la hora gris del éxodo medita el caminante</l>
-          <l n="11">que hay jornadas luctuosas y alegres en el mundo:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">que van pasando juntos por el sórdido hotel</l>
-          <l n="13">con el cosmopolita dolor del moribundo</l>
-          <l n="14">los alocados lances de la luna de miel.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0958">
-        <head>A una ausente seráfica</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Éstos, amada, son sitios vulgares</l>
-          <l n="2">en que en el ruido mundanal se asusta</l>
-          <l n="3">el alma fidelísima, que gusta</l>
-          <l n="4">de evocar tus encantos familiares.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Añoro dulcemente los lugares</l>
-          <l n="6">en donde imperas cual señora justa,</l>
-          <l n="7">tu voz real y tu mirada augusta</l>
-          <l n="8">que ungieron con su gracia mis pesares.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Y recuerdo que en época lejana,</l>
-          <l n="10">por tus raras virtudes milagrosas</l>
-          <l n="11">y tu amable modestia provinciana,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">ebrio de amor te comparó el poeta</l>
-          <l n="13">con la mejor de las piedras preciosas</l>
-          <l n="14">oculta en pobres hojas de violeta.</l>
-        </lg>
-        <lg n="5" type="cuarteto">
-          <l n="15">Tuviste, en la delicia de mi sueño,</l>
-          <l n="16">fuerza de mano que se da al caído</l>
-          <l n="17">y la piedad de un pájaro agreño</l>
-          <l n="18">que en la rama caduca pone el nido.</l>
-        </lg>
-        <lg n="6" type="cuarteto">
-          <l n="19">De tu falda al seráfico pergeño</l>
-          <l n="20">cual párvulo medroso estoy asido,</l>
-          <l n="21">que en la infantil iglesia de mi ensueño</l>
-          <l n="22">las imágenes rotas han caído.</l>
-        </lg>
-        <lg n="7" type="terceto">
-          <l n="23">Yo sé que en mis catástrofes internas</l>
-          <l n="24">no más quedas tú en pie, señora alta,</l>
-          <l n="25">de frente noble y de miradas tiernas.</l>
-        </lg>
-        <lg n="8" type="terceto">
-          <l n="26">Condúceme en las noches inclementes</l>
-          <l n="27">porque sin ti para marchar me falta</l>
-          <l n="28">el óleo de las vírgenes prudentes.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0959">
-        <head>En un jardín</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Al decir que las penas son fugaces</l>
-          <l n="2">en tanto que la dicha persevera,</l>
-          <l n="3">tu cara es sugestiva y hechicera</l>
-          <l n="4">y juegan a los novios los rapaces.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Al escuchar la apología que haces</l>
-          <l n="6">del mejor de los mundos, se creyera</l>
-          <l n="7">que lees a Abelardo... En voz parlera</l>
-          <l n="8">dialogas con los pájaros locuaces.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De pronto, sin que tú me lo adivines,</l>
-          <l n="10">cual por un sortilegio se contrista</l>
-          <l n="11">mi alma con la visión de los jardines.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mientras oigo sonar plácidamente</l>
-          <l n="13">los trinos de tu plática optimista</l>
-          <l n="14">y el irisado chorro de la fuente.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0960">
-        <head>Ella</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Esta novia del alma con quien soñé un día</l>
-          <l n="2">fundar el paraíso de una casa risueña</l>
-          <l n="3">y echar, pescando amores, en el mar de la vida</l>
-          <l n="4">mis redes, a la usanza de la edad evangélica.</l>
-        </lg>
-        <lg n="2" type="unknown">
-          <l n="5">Es blanca como la hostia de la primera misa</l>
-          <l n="6">que en una azul mañana miró decir la tierra</l>
-          <l n="7">luce negros los ojos, la túnica sombría</l>
-          <l n="8">y en un ungir heridas las manos beneméritas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Dormir en paz se puede sobre sus castos senos</l>
-          <l n="10">de nieve, que beatos se hinchan como frutas</l>
-          <l n="11">en la heredad de Cristo, celeste jardinero;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Con propiedades hondas y los labios de azúcar,</l>
-          <l n="13">y por su grave porte se asemeja al excelso</l>
-          <l n="14">retrato de la Virgen pintado por San Lucas.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0961">
-        <head>Alejandrinos eclesiásticos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Tú, Fuensanta, me libras de los brazos del mal;</l>
-          <l n="2">queman mi boca exangüe de Isaías los carbones;</l>
-          <l n="3">por ti me dan los cielos profundas contriciones</l>
-          <l n="4">y el ensueño me otorga su gracia episcopal.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Para comer las viandas del convite nupcial</l>
-          <l n="6">en que se han desposado nuestros dos corazones,</l>
-          <l n="7">tomo el báculo y ciño mis pies y mis riñones</l>
-          <l n="8">cual se hacía en las fiestas del Cordero Pascual.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Las llaves con que he abierto tu corazón, mis llaves</l>
-          <l n="10">sagradas son las mismas de Pedro el Pescador;</l>
-          <l n="11">y mis alejandrinos, por tristes y por graves,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">son como los versículos proféticos de un canto,</l>
-          <l n="13">y hasta las doce horas de mis días de amor</l>
-          <l n="14">serán los doce frutos del Espíritu Santo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0962">
-        <head>A la traición de una hermosa</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Tú que prendiste ayer los aurorales</l>
-          <l n="2">fulgores del amor en mi ventana;</l>
-          <l n="3">Tú, bella infiel, adoración lejana</l>
-          <l n="4">madona de eucologios y misales.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Tú, que ostentas reflejos siderales</l>
-          <l n="6">en el pecho enjoyado, grave hermana,</l>
-          <l n="7">y en tus ojos, con lumbre sobrehumana,</l>
-          <l n="8">brillan las tres virtudes teologales.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">No pienses que tal vez te guardo encono</l>
-          <l n="10">por tus nupcias de hoy. Que te bendiga</l>
-          <l n="11">mi señor Jesucristo. Yo perdono</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">tu flaqueza, y esclavo de tu hechizo</l>
-          <l n="13">de tu primer hijuelo, dulce amiga,</l>
-          <l n="14">celebraré en mis versos el bautizo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0963">
-        <head>Para tus dedos ágiles y finos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Doy a los cuatro vientos los loores</l>
-          <l n="2">de tus dedos de clásica finura</l>
-          <l n="3">que preparan el pan sin levadura</l>
-          <l n="4">para el banquete de nuestros amores.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Saben de las domésticas labores</l>
-          <l n="6">lucen en el mantel su compostura</l>
-          <l n="7">y apartan, de la verde, la madura</l>
-          <l n="8">producción de los meses frutidores.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Para gloria de Dios en homenaje</l>
-          <l n="10">a tu excelencia, mi soneto adorna</l>
-          <l n="11">de tus manos preclaras el linaje.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y el soneto dichoso, en las esbeltas</l>
-          <l n="13">falanges de mis índices se torna</l>
-          <l n="14">una sortija de catorce vueltas.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0964">
-        <head>Mientras muere la tarde</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Noble señora de provincia: unidos</l>
-          <l n="2">en el viejo balcón que ve al poniente,</l>
-          <l n="3">hablamos tristemente, largamente,</l>
-          <l n="4">de dichas muertas y de tiempos idos.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">De los rústicos tiestos florecidos</l>
-          <l n="6">desprendo rosas para ornar tu frente,</l>
-          <l n="7">y hay en los fresnos del jardín de enfrente</l>
-          <l n="8">un escándalo de aves en los nidos.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">El crepúsculo cae soñoliento,</l>
-          <l n="10">y si con tus desdenes amortiguas</l>
-          <l n="11">la llama de mi amor, yo me contento</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">con el hondo mirar de tus arcanos</l>
-          <l n="13">ojos, mientras admiro las antiguas</l>
-          <l n="14">joyas de las abuelas en tus manos.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0965">
-        <head>Del pueblo natal</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Ingenuas provincianas: cuando mi vida se halle</l>
-          <l n="2">desahuciada por todos, iré por los caminos</l>
-          <l n="3">por donde vais cantando los más sonoros trinos</l>
-          <l n="4">y en fraternal confianza ceñiré vuestro talle.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">A la hora del Ángelus, cuando vais por la calle,</l>
-          <l n="6">enredados al busto los chales blanquecinos,</l>
-          <l n="7">decora vuestro rostro -¡oh rostros peregrinos!-</l>
-          <l n="8">la luz de los mejores crepúsculos del valle.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De pecho en los balcones de vetusta madera,</l>
-          <l n="10">platicáis en las tardes tibias de primavera</l>
-          <l n="11">que Rosa tiene novio, que Virginia se casa;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y oyendo los poetas vuestros discursos sanos</l>
-          <l n="13">para siempre se curan de males ciudadanos,</l>
-          <l n="14">y en la aldea la vida buenamente se pasa.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0966">
-        <head>Flor temprana</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Mujer que recogiste los primeros</l>
-          <l n="2">frutos de mi pasión, ¡con qué alegría</l>
-          <l n="3">como una santa esposa te vería</l>
-          <l n="4">llegar a mis floridos jazmineros!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Al mirarte venir, los placenteros</l>
-          <l n="6">cantares del amor desgranaría,</l>
-          <l n="7">colgada en la risueña galería,</l>
-          <l n="8">la jaula de canarios vocingleros.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Si a mis abismos de tristeza bajas</l>
-          <l n="10">y si al conjuro de tu labio cuajas</l>
-          <l n="11">de botones las rústicas macetas,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">te aspiraré con gozo temerario</l>
-          <l n="13">como se aspira en un devocionario</l>
-          <l n="14">un perfume de místicas violetas.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0967">
-        <head>Clor de cuento</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Oh qué gratas las horas de los tiempos lejanos</l>
-          <l n="2">en que quiso la infancia regalarnos un cuento!</l>
-          <l n="3">Dormida por centurias en un bosque opulento,</l>
-          <l n="4">despertaste a la blanda caricia de mis manos.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Y después, sin que fueran los barbudos enanos</l>
-          <l n="6">o las almas en pena a turbar el contento</l>
-          <l n="7">del señorial palacio, en dulce arrobamiento</l>
-          <l n="8">unimos nuestras vidas como buenos hermanos.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Hoy se ha roto el encanto: ya la Bella Durmiente</l>
-          <l n="10">no eres tú; la ilusión de trinos musicales</l>
-          <l n="11">se fue para otros climas, y pacíficamente</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">celebraré contigo mis regios esponsales,</l>
-          <l n="13">al rendir el espíritu, de rostro hacia el poniente,</l>
-          <l n="14">en la paz evangélica de los campos natales.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0968">
-        <head>Del seminario</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Hoy que la indiferencia del siglo me desola</l>
-          <l n="2">sé que ayer tuve dones celestes de continuo,</l>
-          <l n="3">y con los ejercicios de Ignacio de Loyola</l>
-          <l n="4">el corazón sangraba como al dardo divino.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Feliz era mi alma sin que estuviese sola:</l>
-          <l n="6">había en torno de ella pan de hostias, el vino</l>
-          <l n="7">de consagrar, los actos con que Jesús se inmola</l>
-          <l n="8">y tesis de Boecio y de Tomás de Aquino.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿Amor a las mujeres? Apenas rememoro</l>
-          <l n="10">que tuve no sé cuales sensaciones arcanas</l>
-          <l n="11">en las misas solemnes, cuando brillaba oro</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">de casullas y mitras, en aquellas mañanas</l>
-          <l n="13">en que vi muchas bellas colegialas: el coro</l>
-          <l n="14">que a la iglesia traían las monjas Teresianas.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s290n_0969">
-        <head>Para tus dedos ágiles y finos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Coses en dulce paz, y son divinos</l>
-          <l n="2">tus mirares y plácido tu gesto,</l>
-          <l n="3">cuando escuchas la rima que he compuesto</l>
-          <l n="4">para tu dedos ágiles y finos.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La candidez sin mancha de los linos</l>
-          <l n="6">nieva y decora tu regazo honesto,</l>
-          <l n="7">y en grato ir y venir tocan el cesto</l>
-          <l n="8">las yemas de tus dedos marfilinos.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mirándote coser, tan envidiosa</l>
-          <l n="10">de tu aguja está el alma, que quisiera</l>
-          <l n="11">tener, en la existencia fastidiosa,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">la suerte de la aguja afortunada,</l>
-          <l n="13">por quedar un momento prisionera</l>
-          <l n="14">entre los dedos de la bien amada.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Ramón López Velarde</head>
+            <p>Jerez (Zacatecas, México). 1884 - 1921</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s290n_0956">
+            <head>Domingo de provincia</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="--+--+---++-+-" enjamb="B-ex_subj_verb">En los claros domingos de mi pueblo, es costumbre</l>
+               <l n="2" met="--+--+---+--+-" enjamb="B-ex_dobj_verb I-ex_subj_verb">que en la plaza descubran las gentiles cabezas</l>
+               <l n="3" met="-+---+--+-+-+-" enjamb="I-ex_dobj_verb">las mozas, y sus ojos reflejan dulcemente</l>
+               <l n="4" met="--+--+-+-+--+-">y la banda en el quiosco toca lánguidas piezas.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+--+--+---+-">Y al caer sobre el pueblo la noche ensoñadora,</l>
+               <l n="6" met="--+--+----+-+-">los amantes se miran con la mejor mirada</l>
+               <l n="7" met="---+--+---+--+" enjamb="B-ex_dobj_verb">y las orquesta en sus flautas y violín atesora</l>
+               <l n="8" met="+-+--+----+--+" enjamb="I-ex_dobj_verb">mil sonidos románticos en la noche enfiestada.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+--+-+---+-" enjamb="B-ex_subj_verb">Los días de guardar en pueblos provincianos</l>
+               <l n="10" met="-+---+-+----+-" enjamb="I-ex_subj_verb">regalan al viandante gratos amaneceres</l>
+               <l n="11" met="--+--+---+--+-">en que frescos los rostros, el Lavalle en las manos,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+-+-+--+-">camino de la iglesia van las mozas aprisa;</l>
+               <l n="13" met="--+-+---+--+-">que en los días festivos, entre aquellas mujeres</l>
+               <l n="14" met="++-+-+---+--+-">no hay una cara hermosa que se quede sin misa.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0957">
+            <head>Noches de hotel</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="--+-+---+--+-" enjamb="B-pb_noun_prep">Se distraen las penas en los cuartos de hoteles</l>
+               <l n="2" met="-----+--+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">con el heterogéneo concurso divertido</l>
+               <l n="3" met="-+---+---+--+-" enjamb="I-pb_noun_prep">de yanquis, sacerdotes, quincalleros infieles,</l>
+               <l n="4" met="+--+-+--+---+-">niñas recién casadas y mozas del partido.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-++-+----+-+-" enjamb="B-pb_noun_prep">Media luz... Copio al huésped la desconchada luna</l>
+               <l n="6" met="--+--+-+---+-" enjamb="I-pb_noun_prep">en su azogue sin brillo; y flota en calendarios,</l>
+               <l n="7" met="--+--+--+---+-">en cortinas polvosas y catres mercenarios</l>
+               <l n="8" met="-+---+--+---+-">la nómada tristeza de viajes sin fortuna.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+-+---+--+-">Lejos quedó el terruño, la familia distante,</l>
+               <l n="10" met="-+-+-+---+---+" enjamb="B-cc_crossclause">y en la hora gris del éxodo medita el caminante</l>
+               <l n="11" met="+-+--+--+---+-" enjamb="I-cc_crossclause">que hay jornadas luctuosas y alegres en el mundo:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+---+--+-" enjamb="B-pb_noun_prep">que van pasando juntos por el sórdido hotel</l>
+               <l n="13" met="-----+--+---+-" enjamb="I-pb_noun_prep">con el cosmopolita dolor del moribundo</l>
+               <l n="14" met="---+-+---+--+-">los alocados lances de la luna de miel.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0958">
+            <head>A una ausente seráfica</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-++--+-" enjamb="B-pb_adj_prep">Éstos, amada, son sitios vulgares</l>
+               <l n="2" met="---+---+-+-" enjamb="B-ex_dobj_verb I-pb_adj_prep">en que en el ruido mundanal se asusta</l>
+               <l n="3" met="-+---+---+-" enjamb="B-pb_verb_chain I-ex_dobj_verb">el alma fidelísima, que gusta</l>
+               <l n="4" met="--+--+---+-" enjamb="I-pb_verb_chain">de evocar tus encantos familiares.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+---+-">Añoro dulcemente los lugares</l>
+               <l n="6" met="---+-+-+-+-">en donde imperas cual señora justa,</l>
+               <l n="7" met="-++---+--+-" enjamb="B-ex_dobj_verb">tu voz real y tu mirada augusta</l>
+               <l n="8" met="-+---+---+-" enjamb="I-ex_dobj_verb">que ungieron con su gracia mis pesares.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">Y recuerdo que en época lejana,</l>
+               <l n="10" met="--+--+---+-">por tus raras virtudes milagrosas</l>
+               <l n="11" met="--+--+---+-">y tu amable modestia provinciana,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--++--+-+-">ebrio de amor te comparó el poeta</l>
+               <l n="13" met="---+--+--+-" enjamb="B-ex_subj_verb">con la mejor de las piedras preciosas</l>
+               <l n="14" met="-+-+-+---+-" enjamb="I-ex_subj_verb">oculta en pobres hojas de violeta.</l>
+            </lg>
+            <lg n="5" type="cuarteto">
+               <l n="15" met="-+---+---+-">Tuviste, en la delicia de mi sueño,</l>
+               <l n="16" met="+--+---+-+-">fuerza de mano que se da al caído</l>
+               <l n="17" met="---+++---+-" enjamb="B-cc_crossclause">y la piedad de un pájaro agreño</l>
+               <l n="18" met="--+--+-+-+-" enjamb="I-cc_crossclause">que en la rama caduca pone el nido.</l>
+            </lg>
+            <lg n="6" type="cuarteto">
+               <l n="19" met="--+--+---+-">De tu falda al seráfico pergeño</l>
+               <l n="20" met="++---+-+-+-">cual párvulo medroso estoy asido,</l>
+               <l n="21" met="---+-+---+-" enjamb="B-ex_subj_verb">que en la infantil iglesia de mi ensueño</l>
+               <l n="22" met="--+--+-+-+-" enjamb="I-ex_subj_verb">las imágenes rotas han caído.</l>
+            </lg>
+            <lg n="7" type="terceto">
+               <l n="23" met="++---+---+-" enjamb="B-pb_adj_adv">Yo sé que en mis catástrofes internas</l>
+               <l n="24" met="+++-++-+-+-" enjamb="I-pb_adj_adv">no más quedas tú en pie, señora alta,</l>
+               <l n="25" met="-+-+---+-+-">de frente noble y de miradas tiernas.</l>
+            </lg>
+            <lg n="8" type="terceto">
+               <l n="26" met="-+-+-+---+-">Condúceme en las noches inclementes</l>
+               <l n="27" met="---+---+++-" enjamb="B-ex_subj_verb">porque sin ti para marchar me falta</l>
+               <l n="28" met="-+---+---+-" enjamb="I-ex_subj_verb">el óleo de las vírgenes prudentes.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0959">
+            <head>En un jardín</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+-+-+-" enjamb="B-pb_adj_prep">Al decir que las penas son fugaces</l>
+               <l n="2" met="-----+---+-" enjamb="I-pb_adj_prep">en tanto que la dicha persevera,</l>
+               <l n="3" met="-++--+---+-">tu cara es sugestiva y hechicera</l>
+               <l n="4" met="-+---+---+-">y juegan a los novios los rapaces.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+---+-+-" enjamb="B-pb_verb_cprep">Al escuchar la apología que haces</l>
+               <l n="6" met="--+--+---+-" enjamb="B-ex_dobj_verb I-pb_verb_cprep">del mejor de los mundos, se creyera</l>
+               <l n="7" met="-+--+-+-+-" enjamb="B-pb_relword I-ex_dobj_verb">que lees a Abelardo... En voz parlera</l>
+               <l n="8" met="-+---+---+-" enjamb="I-pb_relword">dialogas con los pájaros locuaces.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+++-+-">De pronto, sin que tú me lo adivines,</l>
+               <l n="10" met="+-+--+---+-" enjamb="B-pb_relword">cual por un sortilegio se contrista</l>
+               <l n="11" met="+----+---+-" enjamb="I-pb_relword">mi alma con la visión de los jardines.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--++---" enjamb="B-ex_dobj_verb">Mientras oigo sonar plácidamente</l>
+               <l n="13" met="-+---+---+-" enjamb="I-ex_dobj_verb">los trinos de tu plática optimista</l>
+               <l n="14" met="---+-+---+-">y el irisado chorro de la fuente.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0960">
+            <head>Ella</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+----++-" enjamb="B-ex_subj_verb">Esta novia del alma con quien soñé un día</l>
+               <l n="2" met="-+--+-+-+--+-" enjamb="B-ex_subj_verb I-ex_subj_verb">fundar el paraíso de una casa risueña</l>
+               <l n="3" met="-+-+-+---+--+-" enjamb="B-ex_dobj_verb I-ex_subj_verb">y echar, pescando amores, en el mar de la vida</l>
+               <l n="4" met="-+-------+--+-" enjamb="I-ex_dobj_verb">mis redes, a la usanza de la edad evangélica.</l>
+            </lg>
+            <lg n="2" type="unknown">
+               <l n="5" met="++---+----+-+-" enjamb="B-cc_crossclause">Es blanca como la hostia de la primera misa</l>
+               <l n="6" met="-+-+-+--+-+-+-" enjamb="B-ex_subj_verb I-cc_crossclause">que en una azul mañana miró decir la tierra</l>
+               <l n="7" met="+-+--+--+---+-" enjamb="I-ex_subj_verb">luce negros los ojos, la túnica sombría</l>
+               <l n="8" met="-+-+-+--+---+-">y en un ungir heridas las manos beneméritas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+----+-+-" enjamb="B-pb_noun_prep">Dormir en paz se puede sobre sus castos senos</l>
+               <l n="10" met="-+--+-+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">de nieve, que beatos se hinchan como frutas</l>
+               <l n="11" met="---+-+--+---+-" enjamb="I-pb_noun_prep">en la heredad de Cristo, celeste jardinero;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+---+--+-">Con propiedades hondas y los labios de azúcar,</l>
+               <l n="13" met="---+-+---+--+-" enjamb="B-pb_adj_noun">y por su grave porte se asemeja al excelso</l>
+               <l n="14" met="-+---+--+---+-" enjamb="I-pb_adj_noun">retrato de la Virgen pintado por San Lucas.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0961">
+            <head>Alejandrinos eclesiásticos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+-++---+--+-">Tú, Fuensanta, me libras de los brazos del mal;</l>
+               <l n="2" met="+--+-+--+--+-">queman mi boca exangüe de Isaías los carbones;</l>
+               <l n="3" met="-+++-+--+---+-">por ti me dan los cielos profundas contriciones</l>
+               <l n="4" met="--+-++--+---+-">y el ensueño me otorga su gracia episcopal.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+--+-">Para comer las viandas del convite nupcial</l>
+               <l n="6" met="--+--+---+--+-">en que se han desposado nuestros dos corazones,</l>
+               <l n="7" met="+-+--+--+---+-">tomo el báculo y ciño mis pies y mis riñones</l>
+               <l n="8" met="+-+-+------+-">cual se hacía en las fiestas del Cordero Pascual.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-++----+-+-" enjamb="B-pb_adj_noun">Las llaves con que he abierto tu corazón, mis llaves</l>
+               <l n="10" met="-+-+-+------+-" enjamb="I-pb_adj_noun">sagradas son las mismas de Pedro el Pescador;</l>
+               <l n="11" met="-----+--+---+-">y mis alejandrinos, por tristes y por graves,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+----+---+--++">son como los versículos proféticos de un canto,</l>
+               <l n="13" met="---------+-+-">y hasta las doce horas de mis días de amor</l>
+               <l n="14" met="-+-+-+---+---">serán los doce frutos del Espíritu Santo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0962">
+            <head>A la traición de una hermosa</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-" enjamb="B-pb_adj_noun">Tú que prendiste ayer los aurorales</l>
+               <l n="2" met="-+---+---+-" enjamb="I-pb_adj_noun">fulgores del amor en mi ventana;</l>
+               <l n="3" met="++-+---+-+-" enjamb="B-pb_adj_noun">Tú, bella infiel, adoración lejana</l>
+               <l n="4" met="-+---+---+-" enjamb="I-pb_adj_noun">madona de eucologios y misales.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-">Tú, que ostentas reflejos siderales</l>
+               <l n="6" met="--+--+-+-+-">en el pecho enjoyado, grave hermana,</l>
+               <l n="7" met="--+--+---+-">y en tus ojos, con lumbre sobrehumana,</l>
+               <l n="8" met="+--+-+---+-">brillan las tres virtudes teologales.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++---+++-+-" enjamb="B-pb_adj_prep">No pienses que tal vez te guardo encono</l>
+               <l n="10" met="--+---++-+-" enjamb="B-ex_subj_verb I-pb_adj_prep">por tus nupcias de hoy. Que te bendiga</l>
+               <l n="11" met="--+--+--+-" enjamb="B-ex_dobj_verb I-ex_subj_verb">mi señor Jesucristo. Yo perdono</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+-+----+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">tu flaqueza, y esclavo de tu hechizo</l>
+               <l n="13" met="---+-+-+-+-" enjamb="I-pb_noun_prep">de tu primer hijuelo, dulce amiga,</l>
+               <l n="14" met="---+-+---+-">celebraré en mis versos el bautizo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0963">
+            <head>Para tus dedos ágiles y finos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+----+---+-" enjamb="B-pb_noun_prep">Doy a los cuatro vientos los loores</l>
+               <l n="2" met="--+--+---+-" enjamb="B-cc_crossclause I-pb_noun_prep">de tus dedos de clásica finura</l>
+               <l n="3" met="--+--+---+-" enjamb="I-cc_crossclause">que preparan el pan sin levadura</l>
+               <l n="4" met="---+-----+-">para el banquete de nuestros amores.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+----+---+-" enjamb="B-ex_subj_verb">Saben de las domésticas labores</l>
+               <l n="6" met="+----+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">lucen en el mantel su compostura</l>
+               <l n="7" met="-+---+---+-" enjamb="B-pb_adj_noun I-ex_subj_verb">y apartan, de la verde, la madura</l>
+               <l n="8" met="--+--+---+-" enjamb="I-pb_adj_noun">producción de los meses frutidores.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-" enjamb="B-pb_noun_prep">Para gloria de Dios en homenaje</l>
+               <l n="10" met="---+---+-+-" enjamb="B-pb_verb_cprep I-pb_noun_prep">a tu excelencia, mi soneto adorna</l>
+               <l n="11" met="--+--+---+-" enjamb="I-pb_verb_cprep">de tus manos preclaras el linaje.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-" enjamb="B-pb_adj_noun">Y el soneto dichoso, en las esbeltas</l>
+               <l n="13" met="-+---+---+-" enjamb="B-ex_dobj_verb I-pb_adj_noun">falanges de mis índices se torna</l>
+               <l n="14" met="+--+---+-+-" enjamb="I-ex_dobj_verb">una sortija de catorce vueltas.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0964">
+            <head>Mientras muere la tarde</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-">Noble señora de provincia: unidos</l>
+               <l n="2" met="--+--+-+-+-">en el viejo balcón que ve al poniente,</l>
+               <l n="3" met="-+-+-+-+-+-">hablamos tristemente, largamente,</l>
+               <l n="4" met="-+-+---+-+-">de dichas muertas y de tiempos idos.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-">De los rústicos tiestos florecidos</l>
+               <l n="6" met="-+-+---+-+-">desprendo rosas para ornar tu frente,</l>
+               <l n="7" met="+-+---+--+-">y hay en los fresnos del jardín de enfrente</l>
+               <l n="8" met="+-+--+---+-">un escándalo de aves en los nidos.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">El crepúsculo cae soñoliento,</l>
+               <l n="10" met="-----+---+-">y si con tus desdenes amortiguas</l>
+               <l n="11" met="-+---+++-+-" enjamb="B-pb_adj_prep">la llama de mi amor, yo me contento</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-" enjamb="B-pb_adj_noun I-pb_adj_prep">con el hondo mirar de tus arcanos</l>
+               <l n="13" met="+----+---+-" enjamb="B-pb_adj_noun I-pb_adj_noun">ojos, mientras admiro las antiguas</l>
+               <l n="14" met="+----+---+-" enjamb="I-pb_adj_noun">joyas de las abuelas en tus manos.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0965">
+            <head>Del pueblo natal</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+----+-+-">Ingenuas provincianas: cuando mi vida se halle</l>
+               <l n="2" met="--+--+--+---+-" enjamb="B-pb_noun_prep">desahuciada por todos, iré por los caminos</l>
+               <l n="3" met="---+-+--+-+-+-" enjamb="I-pb_noun_prep">por donde vais cantando los más sonoros trinos</l>
+               <l n="4" met="---+-+---+--+-">y en fraternal confianza ceñiré vuestro talle.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+--+----+--+-">A la hora del Ángelus, cuando vais por la calle,</l>
+               <l n="6" met="--+--+--+---+-">enredados al busto los chales blanquecinos,</l>
+               <l n="7" met="-+---+-+---+-">decora vuestro rostro -¡oh rostros peregrinos!-</l>
+               <l n="8" met="-+---+--+---+-">la luz de los mejores crepúsculos del valle.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+--+-">De pecho en los balcones de vetusta madera,</l>
+               <l n="10" met="--+--+-+----+-" enjamb="B-cc_crossclause">platicáis en las tardes tibias de primavera</l>
+               <l n="11" met="-+-+-+---+--+-" enjamb="I-cc_crossclause">que Rosa tiene novio, que Virginia se casa;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+--+----+-+-">y oyendo los poetas vuestros discursos sanos</l>
+               <l n="13" met="--+--+--+---+-">para siempre se curan de males ciudadanos,</l>
+               <l n="14" met="--+-+-+-+--+-">y en la aldea la vida buenamente se pasa.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0966">
+            <head>Flor temprana</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-" enjamb="B-pb_adj_noun">Mujer que recogiste los primeros</l>
+               <l n="2" met="+----+-+-+-" enjamb="B-pb_adj_noun I-pb_adj_noun">frutos de mi pasión, ¡con qué alegría</l>
+               <l n="3" met="-+-+-+-+-+-" enjamb="B-pb_verb_chain I-pb_adj_noun">como una santa esposa te vería</l>
+               <l n="4" met="-+---+---+-" enjamb="I-pb_verb_chain">llegar a mis floridos jazmineros!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--++-+---+-" enjamb="B-pb_adj_noun">Al mirarte venir, los placenteros</l>
+               <l n="6" met="-+---+---+-" enjamb="I-pb_adj_noun">cantares del amor desgranaría,</l>
+               <l n="7" met="-+---+---+-">colgada en la risueña galería,</l>
+               <l n="8" met="-+---+---+-">la jaula de canarios vocingleros.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">Si a mis abismos de tristeza bajas</l>
+               <l n="10" met="-------+-+-" enjamb="B-pb_noun_prep">y si al conjuro de tu labio cuajas</l>
+               <l n="11" met="--+--+---+-" enjamb="I-pb_noun_prep">de botones las rústicas macetas,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+---+-">te aspiraré con gozo temerario</l>
+               <l n="13" met="---+-+---+-" enjamb="B-ex_dobj_verb">como se aspira en un devocionario</l>
+               <l n="14" met="+-+--+---+-" enjamb="I-ex_dobj_verb">un perfume de místicas violetas.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0967">
+            <head>Clor de cuento</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-++--+---+--+-">¡Oh qué gratas las horas de los tiempos lejanos</l>
+               <l n="2" met="--+--+---++++-">en que quiso la infancia regalarnos un cuento!</l>
+               <l n="3" met="-+---+--++--+-">Dormida por centurias en un bosque opulento,</l>
+               <l n="4" met="--+--+--+---+-">despertaste a la blanda caricia de mis manos.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+--+-">Y después, sin que fueran los barbudos enanos</l>
+               <l n="6" met="--+--+--+--+-" enjamb="B-pb_adj_prep">o las almas en pena a turbar el contento</l>
+               <l n="7" met="---+-+-+---+-" enjamb="I-pb_adj_prep">del señorial palacio, en dulce arrobamiento</l>
+               <l n="8" met="-+---+---+--+-">unimos nuestras vidas como buenos hermanos.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+++--+-+----+-" enjamb="B-ex_subj_verb">Hoy se ha roto el encanto: ya la Bella Durmiente</l>
+               <l n="10" met="+-+--+-+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">no eres tú; la ilusión de trinos musicales</l>
+               <l n="11" met="-+-+-+---+---" enjamb="B-pb_verb_adv I-ex_subj_verb">se fue para otros climas, y pacíficamente</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+--+---+-" enjamb="I-pb_verb_adv">celebraré contigo mis regios esponsales,</l>
+               <l n="13" met="--+--+---+---+">al rendir el espíritu, de rostro hacia el poniente,</l>
+               <l n="14" met="--+--+----+--+">en la paz evangélica de los campos natales.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0968">
+            <head>Del seminario</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="+----+--+-+-+-" enjamb="B-pb_verb_chain">Hoy que la indiferencia del siglo me desola</l>
+               <l n="2" met="+-++-+--+---+-" enjamb="I-pb_verb_chain">sé que ayer tuve dones celestes de continuo,</l>
+               <l n="3" met="-----+------+-">y con los ejercicios de Ignacio de Loyola</l>
+               <l n="4" met="---+-+---+--+-">el corazón sangraba como al dardo divino.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="-++-+----+-+-">Feliz era mi alma sin que estuviese sola:</l>
+               <l n="6" met="-+--+-++--+-" enjamb="B-pb_noun_prep">había en torno de ella pan de hostias, el vino</l>
+               <l n="7" met="---+-+----+-+-" enjamb="I-pb_noun_prep">de consagrar, los actos con que Jesús se inmola</l>
+               <l n="8" met="-+--+---+--">y tesis de Boecio y de Tomás de Aquino.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-" enjamb="B-ex_subj_verb">¿Amor a las mujeres? Apenas rememoro</l>
+               <l n="10" met="-+-++----+--+-" enjamb="B-ex_subj_verb I-ex_subj_verb">que tuve no sé cuales sensaciones arcanas</l>
+               <l n="11" met="--+--+----++-" enjamb="B-pb_noun_prep I-ex_subj_verb">en las misas solemnes, cuando brillaba oro</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+--+-" enjamb="B-pb_noun_prep I-pb_noun_prep">de casullas y mitras, en aquellas mañanas</l>
+               <l n="13"
+                  met="--++-+---+--+-"
+                  enjamb="B-cc_crossclause I-pb_noun_prep">en que vi muchas bellas colegialas: el coro</l>
+               <l n="14" met="--+-+-+---+-" enjamb="I-cc_crossclause">que a la iglesia traían las monjas Teresianas.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s290n_0969">
+            <head>Para tus dedos ágiles y finos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+-+-+-" enjamb="B-ex_subj_verb">Coses en dulce paz, y son divinos</l>
+               <l n="2" met="--+--+---+-" enjamb="I-ex_subj_verb">tus mirares y plácido tu gesto,</l>
+               <l n="3" met="--+--+-+-+-">cuando escuchas la rima que he compuesto</l>
+               <l n="4" met="---+-+---+-">para tu dedos ágiles y finos.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-" enjamb="B-ex_subj_verb">La candidez sin mancha de los linos</l>
+               <l n="6" met="+--+---+-+-" enjamb="I-ex_subj_verb">nieva y decora tu regazo honesto,</l>
+               <l n="7" met="-++--++--+-" enjamb="B-ex_dobj_verb">y en grato ir y venir tocan el cesto</l>
+               <l n="8" met="-+---+---+-" enjamb="I-ex_dobj_verb">las yemas de tus dedos marfilinos.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-++--+-" enjamb="B-pb_adj_prep">Mirándote coser, tan envidiosa</l>
+               <l n="10" met="--+-++---+-" enjamb="B-pb_verb_chain I-pb_adj_prep">de tu aguja está el alma, que quisiera</l>
+               <l n="11" met="-+---+---+-" enjamb="I-pb_verb_chain">tener, en la existencia fastidiosa,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">la suerte de la aguja afortunada,</l>
+               <l n="13" met="--++-+---+-">por quedar un momento prisionera</l>
+               <l n="14" met="---+---+-+-">entre los dedos de la bien amada.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

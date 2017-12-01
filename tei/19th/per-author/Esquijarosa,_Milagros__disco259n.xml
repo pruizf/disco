@@ -1,143 +1,207 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Milagros Esquijarosa</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_259n"/>
-          <name type="short">Esquijarosa</name>
-          <name type="full">
-            <name type="first-name">Milagros</name>
-            <name type="second-name">Esquijarosa</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">3</measure>
-        <measure unit="tokens">264</measure>
-        <measure unit="line">42</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_259n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_259n" role="author" sex="M">
-            <persName>Milagros Esquijarosa</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Milagros Esquijarosa</title>
+            <author corresp="#disco_259n">Milagros Esquijarosa</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">264</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_259n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_259n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Esquijarosa</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Milagros</forename>
+                     <surname property="foaf:familyName">Esquijarosa</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Milagros Esquijarosa</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s259n_0843" about="dbpedia:Soneto">
+                        <title property="dc:title">Talión</title>
+                        <title type="incipit" property="dc:alternative">Y tú serás juzgado, sí, algún día,</title>
+                     </bibl>
+                     <bibl resource="disco#s259n_0844" about="dbpedia:Soneto">
+                        <title property="dc:title">¡Culpable...!</title>
+                        <title type="incipit" property="dc:alternative">Y tú, infame, tendrás el merecido</title>
+                     </bibl>
+                     <bibl resource="disco#s259n_0845" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Copia el hombre celajes purpurinos,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Milagros Esquijarosa</head>
-        <p>Cuba. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s259n_0843">
-        <head>Talión</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Y tú serás juzgado, sí, algún día,</l>
-          <l n="2">por un severo juez: por tu conciencia.</l>
-          <l n="3">Te llevará, infalible, a su presencia</l>
-          <l n="4">delitos de traición y de falsía.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">De un alma que te amaba, la agonía</l>
-          <l n="6">te ha de hacer recordar, con su elocuencia;</l>
-          <l n="7">y temblarás oyendo la sentencia,</l>
-          <l n="8">de Ley tan justa, inexorable y fría.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">No te puedes quejar: tú lo quisiste:</l>
-          <l n="10">pues loco, entusiasmado, preferiste</l>
-          <l n="11">fingido amor, a una pasión sincera.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Ya sabes, tu condena irrevocable.</l>
-          <l n="13">Se cumplirá el axioma inexorable:</l>
-          <l n="14">«¡Quién a hierro mató que a hierro muera!»</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s259n_0844">
-        <head>¡Culpable...!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Y tú, infame, tendrás el merecido</l>
-          <l n="2">de tu acción baja y vil, engañadora;</l>
-          <l n="3">él no tuvo la culpa. Tú, traidora,</l>
-          <l n="4">pisoteaste un corazón herido.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Yo no le culpo, no; pues, seducido</l>
-          <l n="6">por tus halagos, Circe engañadora</l>
-          <l n="7">cayó ciego en la red apresadora,</l>
-          <l n="8">y se entregó cual vencedor vencido.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Tu castigo tendrás, te lo mereces;</l>
-          <l n="10">tú, que apurar le hiciste hasta las heces</l>
-          <l n="11">el cáliz del dolor, mujer ligera.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y tu conciencia, juez inexorable,</l>
-          <l n="13">te dictará su fallo irrevocable:»</l>
-          <l n="14">¡Quién a hierro mató que a hierro muera!»</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s259n_0845">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Copia el hombre celajes purpurinos,</l>
-          <l n="2">estatuas hace de la dura piedra,</l>
-          <l n="3">y en número a las hojas de la hiedra</l>
-          <l n="4">exceden sus inventos peregrinos.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Arrebata con cánticos divinos,</l>
-          <l n="6">la «Iliada» escribe, «Don Quijote» y «Fedra»,</l>
-          <l n="7">y cuanto más el adelanto medra,</l>
-          <l n="8">más busca del saber nuevos caminos.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">A su patria da timbres con su gloria,</l>
-          <l n="10">liberta y engrandece las naciones,</l>
-          <l n="11">los secretos descubre de la historia.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y este ser, que mandando a las naciones</l>
-          <l n="13">sólo piensa en la muerte o la victoria,</l>
-          <l n="14">¡es el juguete vil de las pasiones!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Milagros Esquijarosa</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s259n_0843">
+            <head>Talión</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+-+++-">Y tú serás juzgado, sí, algún día,</l>
+               <l n="2" met="-+-+-+---+-">por un severo juez: por tu conciencia.</l>
+               <l n="3" met="+--+-+---+-">Te llevará, infalible, a su presencia</l>
+               <l n="4" met="-+---+---+-">delitos de traición y de falsía.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++--++---+-" enjamb="B-ex_subj_verb">De un alma que te amaba, la agonía</l>
+               <l n="6" met="+-+--+---+-" enjamb="I-ex_subj_verb">te ha de hacer recordar, con su elocuencia;</l>
+               <l n="7" met="---+-+---+-">y temblarás oyendo la sentencia,</l>
+               <l n="8" met="-+++---+-+-">de Ley tan justa, inexorable y fría.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+++--+++-+-">No te puedes quejar: tú lo quisiste:</l>
+               <l n="10" met="-+---+---+-">pues loco, entusiasmado, preferiste</l>
+               <l n="11" met="-+-++--+-+-">fingido amor, a una pasión sincera.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++---+---+-">Ya sabes, tu condena irrevocable.</l>
+               <l n="13" met="---+-+---+-">Se cumplirá el axioma inexorable:</l>
+               <l n="14" met="++--+--+-+-">«¡Quién a hierro mató que a hierro muera!»</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s259n_0844">
+            <head>¡Culpable...!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-++--+---+-" enjamb="B-pb_verb_cprep">Y tú, infame, tendrás el merecido</l>
+               <l n="2" met="--++-+---+-" enjamb="I-pb_verb_cprep">de tu acción baja y vil, engañadora;</l>
+               <l n="3" met="+++--+---+-">él no tuvo la culpa. Tú, traidora,</l>
+               <l n="4" met="--+-+--+-+-">pisoteaste un corazón herido.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++++-+---+-" enjamb="B-pb_adj_prep">Yo no le culpo, no; pues, seducido</l>
+               <l n="6" met="---+-+---+-" enjamb="B-ex_subj_verb I-pb_adj_prep">por tus halagos, Circe engañadora</l>
+               <l n="7" met="-++--+---+-" enjamb="I-ex_subj_verb">cayó ciego en la red apresadora,</l>
+               <l n="8" met="---+---+-+-">y se entregó cual vencedor vencido.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+++-+-">Tu castigo tendrás, te lo mereces;</l>
+               <l n="10" met="+--+++---+-" enjamb="B-ex_dobj_verb">tú, que apurar le hiciste hasta las heces</l>
+               <l n="11" met="-+---+-+-+-" enjamb="I-ex_dobj_verb">el cáliz del dolor, mujer ligera.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+---+-">Y tu conciencia, juez inexorable,</l>
+               <l n="13" met="+--+-+---+-">te dictará su fallo irrevocable:»</l>
+               <l n="14" met="++--+--+-+-">¡Quién a hierro mató que a hierro muera!»</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s259n_0845">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-">Copia el hombre celajes purpurinos,</l>
+               <l n="2" met="-+-+---+-+-">estatuas hace de la dura piedra,</l>
+               <l n="3" met="-+---+---+-">y en número a las hojas de la hiedra</l>
+               <l n="4" met="-+---+---+-">exceden sus inventos peregrinos.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-">Arrebata con cánticos divinos,</l>
+               <l n="6" met="-+-+---+-+-">la «Iliada» escribe, «Don Quijote» y «Fedra»,</l>
+               <l n="7" met="-+-+---+-+-">y cuanto más el adelanto medra,</l>
+               <l n="8" met="++---++--+-">más busca del saber nuevos caminos.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+-++---+-">A su patria da timbres con su gloria,</l>
+               <l n="10" met="-+---+---+-">liberta y engrandece las naciones,</l>
+               <l n="11" met="--+--+---+-">los secretos descubre de la historia.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-" enjamb="B-ex_subj_verb">Y este ser, que mandando a las naciones</l>
+               <l n="13" met="+-+--+---+-" enjamb="I-ex_subj_verb">sólo piensa en la muerte o la victoria,</l>
+               <l n="14" met="+--+-+---+-">¡es el juguete vil de las pasiones!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

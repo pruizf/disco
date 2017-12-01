@@ -1,346 +1,411 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Antonio Osete</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_518n"/>
-          <name type="short">Osete</name>
-          <name type="full">
-            <name type="first-name">Antonio</name>
-            <name type="second-name">Osete</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">11</measure>
-        <measure unit="tokens">968</measure>
-        <measure unit="line">154</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_518n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_518n" role="author" sex="M">
-            <persName>Antonio Osete</persName>
-            <birth><placeName type="place">Murcia</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Antonio Osete</title>
+            <author corresp="#disco_518n">Antonio Osete</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">11</measure>
+            <measure unit="tokens">968</measure>
+            <measure unit="line">154</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_518n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_518n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Osete</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Antonio</forename>
+                     <surname property="foaf:familyName">Osete</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Antonio Osete</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Murcia</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s518n_1938" about="dbpedia:Soneto">
+                        <title property="dc:title">¡Bien hallados todos!</title>
+                        <title type="incipit" property="dc:alternative">Al volver al lugar de mis amores,</title>
+                     </bibl>
+                     <bibl resource="disco#s518n_1939" about="dbpedia:Soneto">
+                        <title property="dc:title">Los dolores de la Virgen</title>
+                        <title type="incipit" property="dc:alternative">Ecos fugaces de la selva umbría,</title>
+                     </bibl>
+                     <bibl resource="disco#s518n_1940" about="dbpedia:Soneto">
+                        <title property="dc:title">En la Catedral de Toledo</title>
+                        <title type="incipit" property="dc:alternative">Al mirar este gótico portento</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Antonio Osete</head>
-        <p>Murcia. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s518n_1938">
-        <head>¡Bien hallados todos!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Al volver al lugar de mis amores,</l>
-          <l n="2">tras una ausencia por demás penosa,</l>
-          <l n="3">me buscaron en turba presurosa</l>
-          <l n="4">deudos, amigos, siervos y señores.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Nunca pude esperar tales favores;</l>
-          <l n="6">jamás soñé acogida tan hermosa;</l>
-          <l n="7">hicieron de mi vuelta una gran cosa;</l>
-          <l n="8">¿dónde, cómo y por qué tantos honores?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Todos, cuál más cuál menos, ya en sencillas</l>
-          <l n="10">frases o ya entre rasgos de elocuencia</l>
-          <l n="11">me dieron un saludo a maravillas.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mas lo que me causó gran complacencia</l>
-          <l n="13">fue la banda de azules campanillas</l>
-          <l n="14">de mi balcón... temblando a mi presencia.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet-sequence">
-        <head>Los dolores de la Virgen</head>
-        <lg type="sonnet" xml:id="s518n_1939_01">
-          <head>Invocación</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Ecos fugaces de la selva umbría,</l>
-            <l n="2">murmullos de arroyuelos bullidores,</l>
-            <l n="3">suspiros de canoros ruiseñores,</l>
-            <l n="4">confusas notas de la mar bravía;</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">venid a secundar la lira mía,</l>
-            <l n="6">que ha menester de fuerzas superiores,</l>
-            <l n="7">y en mágico conjunto de primores</l>
-            <l n="8">cantaré los tormentos de María.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Tú, Madre celestial, a cuyo manto</l>
-            <l n="10">se acoge el triste trovador sincero;</l>
-            <l n="11">muéstrame las grandezas de tu llanto.</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Cantar tus penas cual merecen quiero;</l>
-            <l n="13">dirige tú mi plañidero canto</l>
-            <l n="14">y escuchará mi voz el mundo entero.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s518n_1939_02">
-          <head>I</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Apenas el lucero matutino,</l>
-            <l n="2">presentóse en la bóveda azulada,</l>
-            <l n="3">dejan José y María su morada</l>
-            <l n="4">llevando en brazos a Jesús divino.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Las flores que guarnecen el camino</l>
-            <l n="6">se yerguen para verlos de pasada,</l>
-            <l n="7">y Ellos siguen su marcha acelerada</l>
-            <l n="8">sin presentir los triste de su sino.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">¡Oh Templo de Sión! Yo te saludo</l>
-            <l n="10">con voz ferviente, de suspiros llena,</l>
-            <l n="11">y ante tus gradas me prosterno mudo;</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">que hoy en ti se consuma la alta escena</l>
-            <l n="13">en que, a la voz de Simeón, sacudo</l>
-            <l n="14">el primer eslabón de mi cadena.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s518n_1939_03">
-          <head>II</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Obedeciendo celestial aviso,</l>
-            <l n="2">con alma triste y con el cuerpo yerto,</l>
-            <l n="3">la Sagrada Familia huye al desierto,</l>
-            <l n="4">sin prepararse ni lo más preciso.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">En su curso anhelante e indeciso,</l>
-            <l n="6">siempre a sus ojos el abismo abierto,</l>
-            <l n="7">cuando es su rudo parecer más cierto</l>
-            <l n="8">exclama resignada: -Dios lo quiso-</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">¡Flor la más delicada de las flores!</l>
-            <l n="10">¡Oh Virgen! ¿Cómo puede tu ternura</l>
-            <l n="11">sufrir de tanto daño los rigores?</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Mas ¡ay! el cáliz de vapor apura...</l>
-            <l n="13">¿Qué sería sin eso tus dolores</l>
-            <l n="14">de aquesta miserable criatura?</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s518n_1939_04">
-          <head>III</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">-¿Habéis visto al amor del alma mía?-</l>
-            <l n="2">pregunta a todos con afán prolijo</l>
-            <l n="3">al verse sola sin su amado hijo,</l>
-            <l n="4">la tan afligidísima María.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Un vértigo de amor sus pasos guía</l>
-            <l n="6">y busca por doquier sin rumbo fijo,</l>
-            <l n="7">y no hay calle ni plaza ni escondrijo</l>
-            <l n="8">que se cierre a su bárbara agonía.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Sapientísima y alta Providencia:</l>
-            <l n="10">¿do está Jesús que no oye tanto duelo?</l>
-            <l n="11">¿qué lugar santifica su presencia?</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Vedle en el templo: esparce con anhelo</l>
-            <l n="13">las primeras semillas de una ciencia</l>
-            <l n="14">que puede hacer de nuestro mundo un cielo.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s518n_1939_05">
-          <head>IV</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Todo inspira doquier duelo y pavura:</l>
-            <l n="2">el sol que apenas arde, el triste acento</l>
-            <l n="3">del aire enrarecido, y el lamento</l>
-            <l n="4">de Jesús en la calle de Amargura.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Rompiendo de la turba la espesura,</l>
-            <l n="6">ya sin color y casi sin aliento,</l>
-            <l n="7">cual paloma impedida por el viento</l>
-            <l n="8">corre hacia el Salvador la Virgen pura.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Anhelosa lo llama a su regazo,</l>
-            <l n="10">y, aunque a entrambos el paso se les cierra,</l>
-            <l n="11">al fin se funden en estrecho abrazo;</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">y el miserable pecador se aterra,</l>
-            <l n="13">sin saber que ese nudo es un abrazo</l>
-            <l n="14">que sen dan hoy los cielos con la tierra.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s518n_1939_06">
-          <head>V</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">¿Cómo podrá expresa mi baja lira</l>
-            <l n="2">con fieles vibraciones el quebranto</l>
-            <l n="3">de la Madre del Dios tres veces santo</l>
-            <l n="4">que abrazada a la cruz hondo suspira?</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">¡Nube de horrores por la mente gira</l>
-            <l n="6">que baja al corazón trocada en llanto,</l>
-            <l n="7">y, al querer entonar fúnebre canto,</l>
-            <l n="8">sobreexcitada la razón delira.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">¡Oh de Dios y los hombres santa Madre!</l>
-            <l n="10">Plegue a tu sacratísimo derecho</l>
-            <l n="11">que tu negra aflicción a mi alma cuadre</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">y que, en mi llanto abrasador deshecho,</l>
-            <l n="13">la misma espada que te hirió taladre</l>
-            <l n="14">la víscera amorosa de mi pecho.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s518n_1939_07">
-          <head>VI</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Cubre negro crespón el firmamento,</l>
-            <l n="2">riñen los mundos infernal batalla,</l>
-            <l n="3">embravecido el mar rompe su valla</l>
-            <l n="4">y silba desatado y seco el viento.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">De las piedras escúchase el lamento,</l>
-            <l n="6">el trueno airado zumba, el rayo estalla,</l>
-            <l n="7">y, temblando la cruz en que se halla,</l>
-            <l n="8">lanza el Hijo de Dios su último aliento.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">En medio del desorden y la muerte</l>
-            <l n="10">preséntase la Madre dolorida</l>
-            <l n="11">y en sus brazos recoge a su hijo inerte;</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">y lo oprime y lo besa estremecida</l>
-            <l n="13">cual si le fuese dada tanta suerte</l>
-            <l n="14">que pudiese otra vez darle la vida.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s518n_1939_08">
-          <head>VII</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">¡Ya no existe Jesús! Pesada losa</l>
-            <l n="2">aprisiona sus lívidos despojos.</l>
-            <l n="3">¿Y María? Doquier lanza los ojos</l>
-            <l n="4">halla la soledad más espantosa.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Al ver tal duelo, la encendida rosa</l>
-            <l n="6">temblando oculta sus colores rojos,</l>
-            <l n="7">y al presenciar el ave sus enojos</l>
-            <l n="8">pliega el vuelo y se oculta silenciosa.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Todo ofrece señales de tristeza:</l>
-            <l n="10">desde el negro crespón del firmamento</l>
-            <l n="11">hasta el frío tapiz de la maleza</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">se oye con voz sin timbre este lamento:</l>
-            <l n="13">-Si así siente la gran naturaleza,</l>
-            <l n="14">¿quién mide de María el sufrimiento?</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s518n_1939_09">
-          <head>Conclusión</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Ecos fugaces de la selva umbría,</l>
-            <l n="2">murmullos de arroyuelos bullidores,</l>
-            <l n="3">suspiros de canoros ruiseñores,</l>
-            <l n="4">confusas notas de la mar bravía;</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">los que auxiliasteis a la lira mía,</l>
-            <l n="6">al cantar de la Virgen los dolores,</l>
-            <l n="7">recibir de mi pecho los favores</l>
-            <l n="8">que os devuelvo dichoso en este día.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Tú, Madre celestial, a cuyo manto</l>
-            <l n="10">se acoge el triste trovador sincero;</l>
-            <l n="11">recibe con amor mi pobre canto.</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Yo, en la empresa, feliz me considero;</l>
-            <l n="13">pues si pensé morirme al ver tu llanto</l>
-            <l n="14">eterna vida por tu llanto espero.</l>
-          </lg>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s518n_1940">
-        <head>En la Catedral de Toledo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Al mirar este gótico portento</l>
-          <l n="2">que el poder de los siglos desafía,</l>
-          <l n="3">a impulsos de exaltada fantasía</l>
-          <l n="4">se estremece el humano pensamiento.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Desde el mármol del rico pavimento</l>
-          <l n="6">a la cruz que las nubes desafía,</l>
-          <l n="7">todo es arte y amor y poesía</l>
-          <l n="8">y hermosura y belleza y sentimiento.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Absorta el alma ve su mole ingente;</l>
-          <l n="10">como leyendo en insondable arcano,</l>
-          <l n="11">humíllase con pasmo reverente,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y, de su autor al bendecir la mano,</l>
-          <l n="13">adora en el Señor Omnipotente,</l>
-          <l n="14">que dio al hombre poder tan soberano.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Antonio Osete</head>
+            <p>Murcia. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s518n_1938">
+            <head>¡Bien hallados todos!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+---+-">Al volver al lugar de mis amores,</l>
+               <l n="2" met="-+-+---+-+-">tras una ausencia por demás penosa,</l>
+               <l n="3" met="+-+--+---+-" enjamb="B-ex_dobj_verb">me buscaron en turba presurosa</l>
+               <l n="4" met="+--+-+---+-" enjamb="I-ex_dobj_verb">deudos, amigos, siervos y señores.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--++--+-">Nunca pude esperar tales favores;</l>
+               <l n="6" met="-+-+-+-+-+-">jamás soñé acogida tan hermosa;</l>
+               <l n="7" met="-+---++-++-">hicieron de mi vuelta una gran cosa;</l>
+               <l n="8" met="+-+--++--+-">¿dónde, cómo y por qué tantos honores?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-++++-+-+-">Todos, cuál más cuál menos, ya en sencillas</l>
+               <l n="10" met="+--+-+---+-">frases o ya entre rasgos de elocuencia</l>
+               <l n="11" met="++-+-+---+-">me dieron un saludo a maravillas.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-++--+-" enjamb="B-ex_subj_verb">Mas lo que me causó gran complacencia</l>
+               <l n="13" met="+-+--+---+-" enjamb="B-pb_noun_prep I-ex_subj_verb">fue la banda de azules campanillas</l>
+               <l n="14" met="---+-+---+-" enjamb="I-pb_noun_prep">de mi balcón... temblando a mi presencia.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet-sequence" xml:id="s518n_1939">
+            <head>Los dolores de la Virgen</head>
+            <lg type="sonnet" xml:id="s518n_1939_01">
+               <head>Invocación</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+--+---+-+-">Ecos fugaces de la selva umbría,</l>
+                  <l n="2" met="-+---+---+-">murmullos de arroyuelos bullidores,</l>
+                  <l n="3" met="-+---+---+-">suspiros de canoros ruiseñores,</l>
+                  <l n="4" met="-+-+---+-+-">confusas notas de la mar bravía;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+---+-+-+-">venid a secundar la lira mía,</l>
+                  <l n="6" met="+--+-+---+-">que ha menester de fuerzas superiores,</l>
+                  <l n="7" met="-+---+---+-">y en mágico conjunto de primores</l>
+                  <l n="8" met="--+--+---+-">cantaré los tormentos de María.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="++---+---+-" enjamb="B-ex_subj_verb">Tú, Madre celestial, a cuyo manto</l>
+                  <l n="10" met="-+-+---+-+-" enjamb="I-ex_subj_verb">se acoge el triste trovador sincero;</l>
+                  <l n="11" met="+-+--+---+-">muéstrame las grandezas de tu llanto.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+-+---+-+-">Cantar tus penas cual merecen quiero;</l>
+                  <l n="13" met="-+-+---+-+-">dirige tú mi plañidero canto</l>
+                  <l n="14" met="---+-+-+-+-">y escuchará mi voz el mundo entero.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_02">
+               <head>I</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-+---+---+-">Apenas el lucero matutino,</l>
+                  <l n="2" met="--+--+---+-">presentóse en la bóveda azulada,</l>
+                  <l n="3" met="+--+-+---+-">dejan José y María su morada</l>
+                  <l n="4" met="-+-+---+-+-">llevando en brazos a Jesús divino.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+---+---+-" enjamb="B-ex_subj_verb">Las flores que guarnecen el camino</l>
+                  <l n="6" met="-+---++--+-" enjamb="I-ex_subj_verb">se yerguen para verlos de pasada,</l>
+                  <l n="7" met="+-+--+---+-">y Ellos siguen su marcha acelerada</l>
+                  <l n="8" met="---+-+---+-">sin presentir los triste de su sino.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-----++-+-" enjamb="B-pb_noun_prep">¡Oh Templo de Sión! Yo te saludo</l>
+                  <l n="10" met="-+-+---+-+-" enjamb="I-pb_noun_prep">con voz ferviente, de suspiros llena,</l>
+                  <l n="11" met="---+-+-+-+-">y ante tus gradas me prosterno mudo;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="++--+-+--+-">que hoy en ti se consuma la alta escena</l>
+                  <l n="13" met="---+---+-+-" enjamb="B-ex_dobj_verb">en que, a la voz de Simeón, sacudo</l>
+                  <l n="14" met="--+--+---+-" enjamb="I-ex_dobj_verb">el primer eslabón de mi cadena.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_03">
+               <head>II</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="---+---+-+-">Obedeciendo celestial aviso,</l>
+                  <l n="2" met="-+-+---+-+-">con alma triste y con el cuerpo yerto,</l>
+                  <l n="3" met="-----++--+-">la Sagrada Familia huye al desierto,</l>
+                  <l n="4" met="---++-++-+-">sin prepararse ni lo más preciso.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="--+--+---+-">En su curso anhelante e indeciso,</l>
+                  <l n="6" met="+--+---+-+-">siempre a sus ojos el abismo abierto,</l>
+                  <l n="7" met="-+-+---+++-">cuando es su rudo parecer más cierto</l>
+                  <l n="8" met="-+---+--++-">exclama resignada: -Dios lo quiso-</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+-+--+---+-">¡Flor la más delicada de las flores!</l>
+                  <l n="10" met="-+--+---+-" enjamb="B-ex_dobj_verb">¡Oh Virgen! ¿Cómo puede tu ternura</l>
+                  <l n="11" met="-+-+-+---+-" enjamb="I-ex_dobj_verb">sufrir de tanto daño los rigores?</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="---+---+-+-">Mas ¡ay! el cáliz de vapor apura...</l>
+                  <l n="13" met="+-+--+---+-" enjamb="B-pb_noun_prep">¿Qué sería sin eso tus dolores</l>
+                  <l n="14" met="--+---+--+-" enjamb="I-pb_noun_prep">de aquesta miserable criatura?</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_04">
+               <head>III</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-++--+-+-+-">-¿Habéis visto al amor del alma mía?-</l>
+                  <l n="2" met="-+-+---+-+-">pregunta a todos con afán prolijo</l>
+                  <l n="3" met="-+++---+-+-">al verse sola sin su amado hijo,</l>
+                  <l n="4" met="-+---+---+-">la tan afligidísima María.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="++---+-+-+-">Un vértigo de amor sus pasos guía</l>
+                  <l n="6" met="-+---+-+-+-">y busca por doquier sin rumbo fijo,</l>
+                  <l n="7" met="-++--+---+-" enjamb="B-cc_crossclause">y no hay calle ni plaza ni escondrijo</l>
+                  <l n="8" met="--+--+---+-" enjamb="I-cc_crossclause">que se cierre a su bárbara agonía.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="--+--+---+-">Sapientísima y alta Providencia:</l>
+                  <l n="10" met="++-+-+-+-+-">¿do está Jesús que no oye tanto duelo?</l>
+                  <l n="11" met="+-+--+---+-">¿qué lugar santifica su presencia?</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="++-+-+---+-" enjamb="B-ex_dobj_verb">Vedle en el templo: esparce con anhelo</l>
+                  <l n="13" met="--+--+-+-+-" enjamb="B-cc_crossclause I-ex_dobj_verb">las primeras semillas de una ciencia</l>
+                  <l n="14" met="-+-+---+++-" enjamb="I-cc_crossclause">que puede hacer de nuestro mundo un cielo.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_05">
+               <head>IV</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+-+--++--+-">Todo inspira doquier duelo y pavura:</l>
+                  <l n="2" met="-+-+-+-+-+-" enjamb="B-pb_noun_prep">el sol que apenas arde, el triste acento</l>
+                  <l n="3" met="-+---+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">del aire enrarecido, y el lamento</l>
+                  <l n="4" met="--+--+---+-" enjamb="I-pb_noun_prep">de Jesús en la calle de Amargura.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+---+---+-">Rompiendo de la turba la espesura,</l>
+                  <l n="6" met="+--+-+---+-">ya sin color y casi sin aliento,</l>
+                  <l n="7" met="+-+--+---+-">cual paloma impedida por el viento</l>
+                  <l n="8" met="+------+-+-">corre hacia el Salvador la Virgen pura.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="--+-++---+-">Anhelosa lo llama a su regazo,</l>
+                  <l n="10" met="--+--+--++-">y, aunque a entrambos el paso se les cierra,</l>
+                  <l n="11" met="-+-+---+-+-">al fin se funden en estrecho abrazo;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="---+---+-+-">y el miserable pecador se aterra,</l>
+                  <l n="13" met="--++-+++-+-" enjamb="B-cc_crossclause">sin saber que ese nudo es un abrazo</l>
+                  <l n="14" met="-+++-+---+-" enjamb="I-cc_crossclause">que sen dan hoy los cielos con la tierra.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_06">
+               <head>V</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+--++--+-+-" enjamb="B-ex_dobj_verb">¿Cómo podrá expresa mi baja lira</l>
+                  <l n="2" met="-+---+---+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">con fieles vibraciones el quebranto</l>
+                  <l n="3" met="----+-++-+-" enjamb="B-cc_crossclause I-pb_noun_prep">de la Madre del Dios tres veces santo</l>
+                  <l n="4" met="--+--++--+-" enjamb="I-cc_crossclause">que abrazada a la cruz hondo suspira?</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="+--+---+-+-" enjamb="B-cc_crossclause">¡Nube de horrores por la mente gira</l>
+                  <l n="6" met="-+---+-+-+-" enjamb="I-cc_crossclause">que baja al corazón trocada en llanto,</l>
+                  <l n="7" met="--+--++--+-">y, al querer entonar fúnebre canto,</l>
+                  <l n="8" met="---+---+-+-">sobreexcitada la razón delira.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="--+--+-+-+-">¡Oh de Dios y los hombres santa Madre!</l>
+                  <l n="10" met="+----+---+-" enjamb="B-cc_crossclause">Plegue a tu sacratísimo derecho</l>
+                  <l n="11" met="--+--+-+-+-" enjamb="I-cc_crossclause">que tu negra aflicción a mi alma cuadre</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="---+---+-+-">y que, en mi llanto abrasador deshecho,</l>
+                  <l n="13" met="-+-+--++-+-" enjamb="B-ex_subj_verb">la misma espada que te hirió taladre</l>
+                  <l n="14" met="-+---+---+-" enjamb="I-ex_subj_verb">la víscera amorosa de mi pecho.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_07">
+               <head>VI</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+-+--+---+-">Cubre negro crespón el firmamento,</l>
+                  <l n="2" met="+--+---+-+-">riñen los mundos infernal batalla,</l>
+                  <l n="3" met="---+-++--+-">embravecido el mar rompe su valla</l>
+                  <l n="4" met="-+---+-+-+-">y silba desatado y seco el viento.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="--+--+-+-+-">De las piedras escúchase el lamento,</l>
+                  <l n="6" met="-+-+-+-+-+-">el trueno airado zumba, el rayo estalla,</l>
+                  <l n="7" met="--+--+---+-">y, temblando la cruz en que se halla,</l>
+                  <l n="8" met="+---+-+--+-">lanza el Hijo de Dios su último aliento.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-----+---+-">En medio del desorden y la muerte</l>
+                  <l n="10" met="-+-+-+---+-">preséntase la Madre dolorida</l>
+                  <l n="11" met="--+--+-+-+-">y en sus brazos recoge a su hijo inerte;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-++-++---+-">y lo oprime y lo besa estremecida</l>
+                  <l n="13" met="+-++-+-+-+-" enjamb="B-cc_crossclause">cual si le fuese dada tanta suerte</l>
+                  <l n="14" met="--++-+++-+-" enjamb="I-cc_crossclause">que pudiese otra vez darle la vida.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_08">
+               <head>VII</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="++-+--++-" enjamb="B-ex_subj_verb">¡Ya no existe Jesús! Pesada losa</l>
+                  <l n="2" met="--+--+---+-" enjamb="I-ex_subj_verb">aprisiona sus lívidos despojos.</l>
+                  <l n="3" met="--+-+--+-">¿Y María? Doquier lanza los ojos</l>
+                  <l n="4" met="+----++--+-">halla la soledad más espantosa.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+++---+-+-" enjamb="B-ex_subj_verb">Al ver tal duelo, la encendida rosa</l>
+                  <l n="6" met="-+-+---+-+-" enjamb="I-ex_subj_verb">temblando oculta sus colores rojos,</l>
+                  <l n="7" met="---+-+---+-" enjamb="B-ex_subj_verb">y al presenciar el ave sus enojos</l>
+                  <l n="8" met="+-+--+---+-" enjamb="I-ex_subj_verb">pliega el vuelo y se oculta silenciosa.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+-+--+---+-">Todo ofrece señales de tristeza:</l>
+                  <l n="10" met="--+--+---+-">desde el negro crespón del firmamento</l>
+                  <l n="11" met="--+--+---+-">hasta el frío tapiz de la maleza</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+--+-++--+-">se oye con voz sin timbre este lamento:</l>
+                  <l n="13" met="-++--+---+-">-Si así siente la gran naturaleza,</l>
+                  <l n="14" met="++---+---+-">¿quién mide de María el sufrimiento?</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_09">
+               <head>Conclusión</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+--+---+-+-">Ecos fugaces de la selva umbría,</l>
+                  <l n="2" met="-+---+---+-">murmullos de arroyuelos bullidores,</l>
+                  <l n="3" met="-+---+---+-">suspiros de canoros ruiseñores,</l>
+                  <l n="4" met="-+-+---+-+-">confusas notas de la mar bravía;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="---+---+-+-">los que auxiliasteis a la lira mía,</l>
+                  <l n="6" met="--+--+---+-">al cantar de la Virgen los dolores,</l>
+                  <l n="7" met="--+--+---+-" enjamb="B-cc_crossclause">recibir de mi pecho los favores</l>
+                  <l n="8" met="+-+--+-+-+-" enjamb="I-cc_crossclause">que os devuelvo dichoso en este día.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="++---+---+-" enjamb="B-ex_subj_verb">Tú, Madre celestial, a cuyo manto</l>
+                  <l n="10" met="-+-+---+-+-" enjamb="I-ex_subj_verb">se acoge el triste trovador sincero;</l>
+                  <l n="11" met="-+---+-+-+-">recibe con amor mi pobre canto.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+-+--++--+-">Yo, en la empresa, feliz me considero;</l>
+                  <l n="13" met="---+-+++-+-" enjamb="B-pb_adj_noun">pues si pensé morirme al ver tu llanto</l>
+                  <l n="14" met="-+-+---+-+-" enjamb="I-pb_adj_noun">eterna vida por tu llanto espero.</l>
+               </lg>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s518n_1940">
+            <head>En la Catedral de Toledo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--++-+---+-" enjamb="B-cc_crossclause">Al mirar este gótico portento</l>
+               <l n="2" met="--+--+---+-" enjamb="I-cc_crossclause">que el poder de los siglos desafía,</l>
+               <l n="3" met="-+---+---+-">a impulsos de exaltada fantasía</l>
+               <l n="4" met="--+--+---+-">se estremece el humano pensamiento.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-" enjamb="B-pb_noun_prep">Desde el mármol del rico pavimento</l>
+               <l n="6" met="--+--+---+-" enjamb="I-pb_noun_prep">a la cruz que las nubes desafía,</l>
+               <l n="7" met="+++--+---+-">todo es arte y amor y poesía</l>
+               <l n="8" met="--+--+---+-">y hermosura y belleza y sentimiento.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+-+-+-">Absorta el alma ve su mole ingente;</l>
+               <l n="10" met="---+---+-+-">como leyendo en insondable arcano,</l>
+               <l n="11" met="-+-+-+---+-">humíllase con pasmo reverente,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-">y, de su autor al bendecir la mano,</l>
+               <l n="13" met="-+-------+-">adora en el Señor Omnipotente,</l>
+               <l n="14" met="-++--++--+-">que dio al hombre poder tan soberano.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

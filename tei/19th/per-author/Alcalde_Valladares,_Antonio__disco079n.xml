@@ -1,118 +1,182 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Antonio Alcalde Valladares</title>
-        <author>
-          <idno type="viaf" cert="high">87214012</idno>
-          <idno type="#disco" xml:id="disco_079n"/>
-          <name type="short">Alcalde Valladares</name>
-          <name type="full">
-            <name type="first-name">Antonio</name>
-            <name type="second-name">Alcalde Valladares</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">189</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_079n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_079n" role="author" sex="M">
-            <persName>Antonio Alcalde Valladares</persName>
-            <birth><placeName type="place">Baena (Córdoba)</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1892" cert="low">1892</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1892" cert="low">1892</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Antonio Alcalde Valladares</title>
+            <author corresp="#disco_079n">Antonio Alcalde Valladares</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">189</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_079n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_079n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/87214012"/>
+                  <persName type="short">Alcalde Valladares</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Antonio</forename>
+                     <surname property="foaf:familyName">Alcalde Valladares</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Antonio Alcalde Valladares</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Baena (Córdoba)</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1828" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1892" cert="low"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s079n_0257" about="dbpedia:Soneto">
+                        <title property="dc:title">A ellas</title>
+                        <title type="incipit" property="dc:alternative">Como se ven por el cristal del río</title>
+                     </bibl>
+                     <bibl resource="disco#s079n_0258" about="dbpedia:Soneto">
+                        <title property="dc:title">A una niña muerta</title>
+                        <title type="incipit" property="dc:alternative">Al venir a este valle de sonrojos,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Antonio Alcalde Valladares</head>
-        <p>Baena (Córdoba). 1892 - 0</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s079n_0257">
-        <head>A ellas</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Como se ven por el cristal del río</l>
-          <l n="2">los granos de sus límpidas arenas,</l>
-          <l n="3">como se ven también las azucenas</l>
-          <l n="4">a través de las gotas de rocío;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">como en las noches del quemado estío</l>
-          <l n="6">tras de las nubes blancas y serenas</l>
-          <l n="7">se ve la luna, ¡cual las almas buenas</l>
-          <l n="8">se ven detrás de su dolor impío!;</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">como por medio a la verdad se mira</l>
-          <l n="10">la fe del corazón, que sin enojos</l>
-          <l n="11">en el fulgor de la virtud se inspira,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">así quisiera en mi aparente calma,</l>
-          <l n="13">a través de las niñas de tus ojos</l>
-          <l n="14">mirar los sentimientos de tu alma.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s079n_0258">
-        <head>A una niña muerta</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Al venir a este valle de sonrojos,</l>
-          <l n="2">en dicha estéril, en dolor fecundo,</l>
-          <l n="3">sentiste en tu suspiro moribundo</l>
-          <l n="4">punzarte el aguijón de sus abrojos.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Ni una sonrisa de tus labios rojos</l>
-          <l n="6">pude escaparse en tu pesar profundo,</l>
-          <l n="7">y al llegar a las puertas de este mundo</l>
-          <l n="8">cerraste con desdén los tristes ojos.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Pasaste como estrella desgajada</l>
-          <l n="10">que, fugaz por la atmósfera cruzando,</l>
-          <l n="11">va a perderse en la bóveda azulada.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y es que dijiste, en tu dolor pensando:</l>
-          <l n="13">-Para siempre volver quiero a la nada,</l>
-          <l n="14">que no nacer para vivir llorando.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Antonio Alcalde Valladares</head>
+            <p>Baena (Córdoba). 1892 - 0</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s079n_0257">
+            <head>A ellas</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+---+-+-">Como se ven por el cristal del río</l>
+               <l n="2" met="-+---+---+-">los granos de sus límpidas arenas,</l>
+               <l n="3" met="---+-+---+-">como se ven también las azucenas</l>
+               <l n="4" met="-----+---+-">a través de las gotas de rocío;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+---+-+-">como en las noches del quemado estío</l>
+               <l n="6" met="---+-+---+-">tras de las nubes blancas y serenas</l>
+               <l n="7" met="-+-+---+-+-">se ve la luna, ¡cual las almas buenas</l>
+               <l n="8" met="-+-----+-+-">se ven detrás de su dolor impío!;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">como por medio a la verdad se mira</l>
+               <l n="10" met="-+---+---+-">la fe del corazón, que sin enojos</l>
+               <l n="11" met="---+---+-+-">en el fulgor de la virtud se inspira,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">así quisiera en mi aparente calma,</l>
+               <l n="13" met="-----+---+-">a través de las niñas de tus ojos</l>
+               <l n="14" met="-+---+---+-">mirar los sentimientos de tu alma.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s079n_0258">
+            <head>A una niña muerta</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--++-+---+-">Al venir a este valle de sonrojos,</l>
+               <l n="2" met="-+-+---+-+-">en dicha estéril, en dolor fecundo,</l>
+               <l n="3" met="-+---+---+-">sentiste en tu suspiro moribundo</l>
+               <l n="4" met="-++--+---+-">punzarte el aguijón de sus abrojos.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-" enjamb="B-ex_subj_verb">Ni una sonrisa de tus labios rojos</l>
+               <l n="6" met="+--++--+-+-" enjamb="I-ex_subj_verb">pude escaparse en tu pesar profundo,</l>
+               <l n="7" met="--+--+-+-+-">y al llegar a las puertas de este mundo</l>
+               <l n="8" met="-+---+-+-+-">cerraste con desdén los tristes ojos.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-" enjamb="B-cc_crossclause">Pasaste como estrella desgajada</l>
+               <l n="10" met="--+--+---+-" enjamb="I-cc_crossclause">que, fugaz por la atmósfera cruzando,</l>
+               <l n="11" met="+-++-+---+-">va a perderse en la bóveda azulada.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+---+-+-">Y es que dijiste, en tu dolor pensando:</l>
+               <l n="13" met="--+--++--+-">-Para siempre volver quiero a la nada,</l>
+               <l n="14" met="-+-+---+-+-">que no nacer para vivir llorando.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

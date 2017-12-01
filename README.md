@@ -2,7 +2,9 @@
 [![DOI](https://zenodo.org/badge/103841064.svg)](https://zenodo.org/badge/latestdoi/103841064)
 
 
-**NOTE: SONNETS FROM THE 18th CENTURY AND GOLDEN AGE, IN TEI+RDFa, AND ANNOTATED WITH METRICS AND ENJAMBMENTS, WILL BE UPLOADED HERE SHORTLY**
+**NOTE: DOCUMENTATION IN PROGRESS**
+
+*Let's party*
 
 
 The Diachronic Spanish Sonnet Corpus (DISCO) currently contains 19th-century sonnets in Spanish in XML-TEI (685 authors, 2677 sonnets) from 21 different countries. It includes well-known authors, such as Bécquer, Delmira Agustini or “Clarín”, but also less canonized authors. Texts and authors are enriched with identifiers and metadata.
@@ -21,7 +23,7 @@ The Diachronic Spanish Sonnet Corpus (DISCO) currently contains 19th-century son
        * [Other metadata](#other-metadata)
        * [Metadata in the plain-text version](#metadata-in-the-plain-text-version)
    * [Versions](#versions)
-   * [Publication and Preservation](#publication-and-preservation)
+   * [Publication and Preservation](#publication-and-preservation)=
    * [Licence and Citation](#licence-and-citation)
    * [Future Steps](#future-steps)
    * [References](#references)
@@ -38,17 +40,15 @@ Regarding 19th-century Spanish literature, available collections covering differ
 
 Concerning available sonnet corpora, Sonnet-Archiv (Elf Edition) is organized as a forum, and its coverage is less wide than ours. The “Sonnet Library” (Biblioteca Virtual Miguel de Cervantes, 2007) is organized alphabetically, rather than using meaningful criteria for literary scholarship, like periods. Both are traditional websites. Finally, the Corpus of Spanish Golden Age Sonnets (Navarro-Colorado et al., 2015) covers major authors from the 15th to the 17th century, with an automatic metrical annotation. Author metadata in these corpora are very limited and unavailable in a machine-readable format (see Calvo Tello, 2017, for discussion of related issues).
 
-DISCO complements this growing ecosystem by adding a meaningful representation of 19th-century sonnets, with more periods under validation, to be published shortly. 
+DISCO complements this growing ecosystem by adding a meaningful representation of sonnets from the 15th to the 19th centuries.
 
 # Description of DISCO
 
-Our corpus currently offers 2677 sonnets in Spanish from the 19th century, by 685 authors (Spain or Latin America). It intends to provide a wide sample, inspired by distant reading approaches (Moretti, 2005). The raw texts were extracted from Biblioteca Virtual Miguel de Cervantes (1999).
+Our corpus currently offers 2676 sonnets in Spanish from the 19th century, 330 from the 18th century and 1088 from the so-called Spanish Golden Age (15th to 17th centuries). There are a total of 1204 authors (both from Spain and Latin America). It intends to provide a wide sample, inspired by distant reading approaches (Moretti, 2005). The raw texts were extracted from Biblioteca Virtual Miguel de Cervantes (1999).
 
 The corpus is available in plain-text and in TEI formats; XML-TEI P5 was used given this standard’s benefits in terms of reuse, storage, and retrieval. Author metadata were extracted or inferred from unstructured content in the sources (year, place of birth and death, and gender), and placed in the TEIheader, or in a metadata table in the case of the plain-text version. For both TEI and plain-text formats, two versions of the texts are available: one collecting every sonnet per author, the other encoding a single sonnet per file. For corpus preparation, we closely followed the TEI guidelines and RIDE’s criteria for Digital Text Collections (Henny-Krahmer and Neuber, 2017).
 
-Additionally, authors have been assigned VIAF identifiers. This gives the corpus an entry-point to the Linked Open Data cloud, enhancing its findability. The corpus is available as a GitHub repository and saved in Zenodo, in response to good practices for data use, reuse, and conservation.
-
-We have also obtained sonnets from other centuries, since the 15th century to the present. These are under validation and will be published shortly as part of the DISCO corpus, which intends to give a wide perspective on the sonnet in Spanish diachronically.
+Additionally, authors have been assigned VIAF identifiers and described using RDFa attributes. This gives the corpus an entry-point to the Linked Open Data cloud, enhancing its findability. The corpus is available as a GitHub repository and saved in Zenodo, in response to good practices for data use, reuse, and conservation.
 
 ## Why Sonnets?
 
@@ -56,26 +56,26 @@ The sonnet has had great importance in European poetry; the relevance of the cor
 
 ## Corpus Design
 
-The corpus is based on [texts](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) of *Biblioteca Virtual Miguel de Cervantes* prepared by Ramón García González in 2006. It contains 2677 sonnets, written by 685 authors. Half of the texts were written by Spanish authors, half by Latin American authors, with Cuba as the best-represented country, followed at a large distances by Mexico, Argentina, Colombia and Puerto Rico. Some authors were born in non Spanish-speaking countries, such as Portugal, Brasil or Haiti. Around 90% of the authors are male, a distribution that is not abnormal for literature in Spanish.
+The corpus is based on [texts](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) of *Biblioteca Virtual Miguel de Cervantes* prepared by Ramón García González in 2006. It contains 2677 sonnets, written by 685 authors. Half of the texts were written by Spanish authors, half by Latin American authors, with Cuba as the best-represented country, followed at a large distances by Mexico, Argentina, Colombia and Puerto Rico. Some authors were born in non Spanish-speaking countries, such as Portugal, Brasil or Haiti. More than 90% of the authors are male, *a distribution that is not abnormal for literature in Spanish* **heb: no me gusta mucho esta frase: me da la sensación de que es condescendiente en relación a las condiciones socio-históricas que determinan esta escasa presencia. Apostaría por una formulación del tipo: “Although we deliberately included less canonical writers, less than 10% of the authors are female. An active search will be carried out to counteract this lack of diversity.”**.
 
 ## Encoding
 
-The corpus is offfered as TEI-encoded files (*tei* directory) and as plain-text files (*txt* directory). In either case, poems are grouped by author (**per-author** mode), besides being represented as a single file per poem (**per-poem** mode). In the plain-text version, in order to group poems per author, a directory for each author was created, which contains each of that author's poems as single files. In the TEI version, the way to group an author's poems was to create a single TEI file for the author, containing all of that author's poems in the corpus.
+The corpus is offered as TEI-encoded files (*tei* directory) and as plain-text files (*txt* directory). In either case, poems are grouped, firstly by period, and then by author (**per-author** mode), and per sonnet (**per-sonnet** mode) where each sonnet is contained in a single file. In the plain-text version, in order to group poems per author, a directory for each author was created, which contains each of that author's poems as single files. In the TEI version, the way to group an author's poems was to create a single TEI file for the author, containing all of that author's poems in the corpus.
 
-Depending on the purpose of the research, the *per-author* or the *per-poem* mode will be more useful. For example, for stylometric methods or to compare the works of the same author in different genres, the researcher would prefer to work with the per-author files; but to analyse features in each poem, they would prefer the per-poem files. 
+Depending on the purpose of the research, the *per-author* or the *per-sonnet* mode will be more useful. For example, for stylometric methods or to compare the works of the same author in different genres, the researcher would prefer to work with the per-author files; but to analyse features in each poem, they would prefer the per-sonnet files. 
 
 ### TEI
 
-The files' structure differs very little between the *per-author* and the *per-poem* modes: the title and identification of the digital work are different, and in the per-author files there is an *lg type="sonnet"* element absent in the per-poem files. The rest of the elements and structure are shared.
+The files' structure differs very little between the *per-author* and the *per-sonnet* modes: the title and identification of the digital work are different, and in the per-author files there is an *lg type="sonnet"* element absent in the per-poem files. The rest of the elements and structure are shared.
 
-Each poem is identified using ID-strings created by the project (since single sonnets are not the focus of identification projects such as VIAF). Inside a sonnet, the following information has been encoded explicitly: 
+Each poem is identified using ID-strings created by the project (since there is no authority file of reference for individual sonnets). Inside a sonnet, the following information has been encoded explicitly: 
 * Headings
 * Stanza number and type (*cuarteto, terceto*)
 * Line numbers
 
-The **order of sonnets** in the source edition has been respected in the per-author files, and can be recovered from the numeric part of file-ids in the per-poem files. 
+The **order of sonnets** in the source edition has been respected in the per-author files, and can be recovered from the numeric part of file-ids in the per-sonnet files. 
 
-In the source, sometimes there were **sonnet sequences**, i.e. when an author has written a series of sonnets about the same topic, under the same overall heading and with a separate heading for each sonnet in the sequence. In the per-author files, sequences have been encoded within an *lg="sonnet-sequence"* element comprising all sonnets in the sequence. In the per-poem files, sonnet-sequences can be recovered from the last numeric part of the file-ids.
+In the source, sometimes there were **sonnet sequences**, i.e. when an author has written a series of sonnets as part of the same composition, under the same overall heading and with a separate heading for each sonnet in the sequence. In the per-author files, sequences have been encoded within an *lg[@type="sonnet-sequence"]* element comprising all sonnets in the sequence. In the per-sonnet files, sonnet-sequences can be recovered from the last numeric part of the file-ids.
 
 More information about the metadata encoded in our TEI files is [below](#metadata).
 
@@ -88,7 +88,7 @@ See [below](#metadata-in-the-plain-text-version) for details how author- and poe
 
 ## Metadata
 
-DISCO has collected several metadata about the texts and authors and made it explicit and accessible, using technologies like TEI and linked open data. The HTML sources contained relevant information for identifying author metadata, within a non-standardized text-string, which mentioned the author's place and year of birth and death, their profession etc.; the level of detail varied across authors. First, the project collected these data and identified them explicitly. Second, missing information was inferred. For example, in some cases the original sources mentioned a city of birth, in other cases just the country. Countries and continents were added for all authors. Finally, VIAF IDs for authors were added (details below)
+DISCO has collected several metadata about the texts and authors and made it explicit and accessible, using technologies like TEI and linked open data. The HTML sources contained relevant information for identifying author metadata, within a non-standardized text-string, which mentioned the author's place and year of birth and death, their profession etc. **heb: No encontré ejemplos de profesiones!**; the level of detail varied across authors. First, the project collected these data and identified them explicitly. Second, missing information was inferred or actively researched. For example, in some cases the original sources mentioned a city of birth, in other cases just the country. Countries and continents were added for all authors. Finally, VIAF IDs for authors were added (details below).
 
 **These metadata make it now possible for researchers to create their own subcorpora, for example *female authors from Cuba that were born between certain years in the 19th Century*.**
 
@@ -96,27 +96,43 @@ In the **TEI** version of the corpus, the metadata was encoded in the TEI struct
 
 ### Authors' biographical metadata
 
-In TEI, biographical information about the author (whether it was found in the source or inferred) is now made explicit through a *person* element that bears a *role="author"* attribute. Inside this element, the following information can be found:
+In TEI, biographical information about the author (whether it was found in the source, inferred or researched) is now made explicit through a *person* element in the *ParticDesc*  (participant description) declaration. Inside this element, the following information can be found:
+* DISCO’s ID and VIAF’s ID when available (see [below](#viaf-ids))
+* name components (personal, patronymic, particles) 
+* full name as it appears in the source
 * gender
-* name
 * year, century, place, country and continent of birth
 * year, century, place, country and continent of death
+* cases in which the place of origin did not match the location where the author developed his/her literary activity, a *floruit* element was added
 
-A breakup of author-name components (first and last names, particles) is found within the *author* element. 
+In addition, extra attributes were added following the [RDFa](https://rdfa.info) specification. 
+* Justify that RDFa is a sustainable manner to make the TEI semantics readable to search engines
+* Brief explanation about the RDFa-specific attributes
+* Explain that we had to modify the TEI schema in order to make available those attributes in all elements
+
+We looked for the vocabularies that would translate more accurately the TEI semantics. Similarly to the use of the RDFa attribute *@prefix*, we declared all the vocabularies inside the element *listPrefixDef* available in the TEIheader. We implemented the following vocabularies:
+
+* [Dublin Core vocabulary](http://dublincore.org/documents/dcmi-terms/)
+* [FOAF](http://xmlns.com/foaf/spec/)
+* [schema.org](http://schema.org/)
+
+
+Furthermore, besides linking to the VIAF and, scarcely ever, to the [Wikidata](https://www.wikidata.org) datasets for the identification of authors, we added some links to the [esDBpedia](http://es.dbpedia.org/) dataset so as to refer to some metrical concepts that were available in this resource.
+
 
 ### VIAF IDs
 
-The name of the author was searched programmatically against [VIAF's REST API](https://platform.worldcat.org/api-explorer/apis/VIAF/AuthorityCluster/AutoSuggest). Based on those queries, a VIAF ID was added to each author, in a *idno[@type=viaf]* element, if an appropriate candidate was returned by VIAF's API. This element was left empty if no appropriate candidate was returned. The criteria for assigning a VIAF ID to the authors based on the API's responses were the following:
+The name of the author was searched programmatically against [VIAF's REST API](https://platform.worldcat.org/api-explorer/apis/VIAF/AuthorityCluster/AutoSuggest). Based on those queries, a VIAF ID was added to each author, in a *idno[@type="viaf"]* element, if an appropriate candidate was returned by VIAF's API. This element was left empty if no appropriate candidate was returned. The criteria for assigning a VIAF ID to the authors based on the API's responses were the following:
 
 * if the name of a candidate proposed by the VIAF API and the dates of birth and death matched exactly the information in the source corpus, the VIAF ID for that candidate was added to the TEI files, together with a *@cert* attribute set to *high*. This was also done in case the original source didn't have any dates of birth and death, but the author's name matched exactly the first candidate suggested by VIAF. 
 * if the name of the author matched exactly one of the candidates returend by VIAF, but the dates didn't match, the attribute *@cert* was set to *medium*
-* authors that were not found in VIAF were assigned an empty element for the VIAF ID, with a *@cert* value of *medium*. This is meant to indicate that VIAF was queried and no information was found, but it can't be ruled out that the author could be found in VIAF if deeper searches are carried out.
+* authors that were not found in VIAF do not contain the *idno[@type="viaf"]* element. Some of these authors were manually searched later and whenever a result from VIAF was retrieved, it was introduced with a *@cert* value of *high*.
 * for the remaining cases, the VIAF ID for the best candidate returned by the API and assigned a *@cert* value of *low* 
 
 ### Other metadata
 
 The TEIheader also encodes additional information, unavailable in the sources:
-* number of sonnets containend in the file (in the per-author files this is the number of sonnets for the author in the corpus)
+* number of sonnets contained in the file (in the per-author files this is the number of sonnets for the author in the corpus)
 * number of lines and tokens
 * reference to the source
 * language of the text
@@ -143,28 +159,31 @@ As the examples show, the \~\~ delimiter separates author from poem information.
 
 # Versions
 
-DISCO published in October 2017 its version 1.0 containing texts from the 19th Century. It is planed to publish a second version of it in late 2017/early 2018 containing sonnets between the 15th to the 18th Century, reinforcing the corpus' diachronic dimension.
+DISCO published in October 2017 its version 1.0 containing texts from the 19th Century. In December 2017 a second version was published containing sonnets between the 15th to the 18th Century, reinforcing the corpus' diachronic dimension.
 
 # Publication and Preservation
 
-The corpus has been published as a GitHub repository, which enables other researchers to clone, fork and keep track of changes. The data is also stored in the Zenodo project, with DOI <https://doi.org/10.5281/zenodo.1012568> 
+The corpus has been published as a GitHub repository, which enables other researchers to clone, fork and keep track of changes. The data has been also kept in the Zenodo project, with the DOI: tbd. 
 
 # Licence and Citation
 
 The corpus is available under: CC-BY licence
 
 
-* Ruiz Fabo, Pablo, Clara Martínez Cantón, and José Calvo Tello. 2017. *Diachronic Spanish Sonnet Corpus* (DISCO). Madrid: UNED. <https://github.com/pruizf/disco>. [![DOI](https://zenodo.org/badge/103841064.svg)](https://zenodo.org/badge/latestdoi/103841064)
+* Ruiz Fabo, Pablo, Helena Bermúdez Sabel, Clara Martínez Cantón, and José Calvo Tello. 2017. *Diachronic Spanish Sonnet Corpus* (DISCO). Madrid: UNED. <https://github.com/pruizf/disco>. [![DOI](https://zenodo.org/badge/103841064.svg)](https://zenodo.org/badge/latestdoi/103841064)
 
 
 # Future Steps
 
-* The corpus will be enriched with sonnets from other periods
+* The corpus will be enriched with sonnets from other periods **heb: borrar?**
 * Stanza type identification will be verified manually for some uncertain cases
+* For authors not present in VIAF, other datasets will be used instead to provide additional information (e.g. [Wikidata](https://www.wikidata.org) and [Bieses](http://www.bieses.net/)) 
+* Publication of the corpus in HTML5+RDFa
 
 # References
 
 * Agenjo, Xavier. 2015. ‘Las bibliotecas virtuales españolas y el tratamiento textual de los recursos bibliográficos.’ *Ínsula: revista de letras y ciencias humanas*, no. 822: 12–15.
+* Agirrezabal, Manex (2017): *Automatic Scansion of Poetry*. PhD Thesis. University of the Basque Country.
 * Álvarez Mellado, Elena, and Leticia Martín-Fuertes. 2015. *Aracne*. Madrid: Fundéu. <http://www.fundeu.es/aracne/>.
 * Biblioteca Virtual Miguel de Cervantes (1999): *Biblioteca Virtual Miguel de Cervantes* <http://www.cervantesvirtual.com/>
 * Biblioteca Virtual Miguel de Cervantes (2007): Biblioteca del Soneto [Sonnet Library] <http://www.cervantesvirtual.com/bib/portal/bibliotecasoneto/>

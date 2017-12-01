@@ -1,94 +1,150 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Juan M. de Arrambide</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_495n"/>
-          <name type="short">Arrambide</name>
-          <name type="full">
-            <name type="first-name">Juan M.</name>
-            <name type="preposition-name">de</name>
-            <name type="second-name">Arrambide</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">91</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_495n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_495n" role="author" sex="M">
-            <persName>Juan M. de Arrambide</persName>
-            <birth><placeName type="place">España</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Juan M. de Arrambide</title>
+            <author corresp="#disco_495n">Juan M. de Arrambide</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">91</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_495n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_495n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Arrambide</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan M.</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Arrambide</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan M. de Arrambide</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s495n_1854" about="dbpedia:Soneto">
+                        <title property="dc:title">Cupido en desgracia</title>
+                        <title type="incipit" property="dc:alternative">Perdió el amor en el celeste cielo,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Juan M. de Arrambide</head>
-        <p>España. 19th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s495n_1854">
-        <head>Cupido en desgracia</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Perdió el amor en el celeste cielo,</l>
-          <l n="2">pues al verle tan fatuo y delirante</l>
-          <l n="3">ante los Dioses, su poder triunfante,</l>
-          <l n="4">le quitaron sus armas y su velo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Venus tierna, angustiosa, en dulce anhelo</l>
-          <l n="6">a Júpiter clamó, triste, incesante,</l>
-          <l n="7">y de su tierno y afligido infante</l>
-          <l n="8">le pintó el desaliento y desconsuelo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Y el Padre de los Dioses, siempre humano,</l>
-          <l n="10">al hijo desgraciado consolaba</l>
-          <l n="11">y uno le concedió de sus despojos.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">-Elije, pues- le dijo, y el insano</l>
-          <l n="13">no eligió su cadena ni su aljaba</l>
-          <l n="14">sino la venda de cubrir los ojos.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Juan M. de Arrambide</head>
+            <p>España. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s495n_1854">
+            <head>Cupido en desgracia</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-">Perdió el amor en el celeste cielo,</l>
+               <l n="2" met="--++++---+-">pues al verle tan fatuo y delirante</l>
+               <l n="3" met="---+---+-+-">ante los Dioses, su poder triunfante,</l>
+               <l n="4" met="+-+--+---+-">le quitaron sus armas y su velo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+-+-+-" enjamb="B-ex_subj_verb">Venus tierna, angustiosa, en dulce anhelo</l>
+               <l n="6" met="-+---++--+-" enjamb="I-ex_subj_verb">a Júpiter clamó, triste, incesante,</l>
+               <l n="7" met="---+--+--+-">y de su tierno y afligido infante</l>
+               <l n="8" met="+-+--+---+-">le pintó el desaliento y desconsuelo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-----+-+-+-">Y el Padre de los Dioses, siempre humano,</l>
+               <l n="10" met="-+---+---+-">al hijo desgraciado consolaba</l>
+               <l n="11" met="+-+--+---+-">y uno le concedió de sus despojos.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+--++---+-" enjamb="B-pb_adj_adv">-Elije, pues- le dijo, y el insano</l>
+               <l n="13" met="+-+--+---+-" enjamb="I-pb_adj_adv">no eligió su cadena ni su aljaba</l>
+               <l n="14" met="---+---+-+-">sino la venda de cubrir los ojos.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

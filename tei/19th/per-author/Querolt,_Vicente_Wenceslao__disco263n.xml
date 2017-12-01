@@ -1,221 +1,289 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Vicente Wenceslao Querolt</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_263n"/>
-          <name type="short">Querolt</name>
-          <name type="full">
-            <name type="first-name">Vicente Wenceslao</name>
-            <name type="second-name">Querolt</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">6</measure>
-        <measure unit="tokens">543</measure>
-        <measure unit="line">84</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_263n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_263n" role="author" sex="M">
-            <persName>Vicente Wenceslao Querolt</persName>
-            <birth><placeName type="place">Valencia</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1836" cert="high">1836</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Bétera (Valencia)</placeName>, <date type="year" when="1889" cert="high">1889</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Vicente Wenceslao Querolt</title>
+            <author corresp="#disco_263n">Vicente Wenceslao Querolt</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">6</measure>
+            <measure unit="tokens">543</measure>
+            <measure unit="line">84</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_263n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_263n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Querolt</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Vicente Wenceslao</forename>
+                     <surname property="foaf:familyName">Querolt</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Vicente Wenceslao Querolt</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Valencia</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1836" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Bétera (Valencia)</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1889" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s263n_0852" about="dbpedia:Soneto">
+                        <title property="dc:title">Golondrina de otoño</title>
+                        <title type="incipit" property="dc:alternative">Del norte huyendo las glaciales brumas,</title>
+                     </bibl>
+                     <bibl resource="disco#s263n_0853" about="dbpedia:Soneto">
+                        <title property="dc:title">La fiesta de Venus</title>
+                        <title type="incipit" property="dc:alternative">Ya del oscuro Citerón las cumbres</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Vicente Wenceslao Querolt</head>
-        <p>Valencia. 1836 - 1889</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s263n_0852">
-        <head>Golondrina de otoño</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Del norte huyendo las glaciales brumas,</l>
-          <l n="2">de África busca el prolongado estío,</l>
-          <l n="3">y rauda pasa, las azules plumas</l>
-          <l n="4">rozando leve en el cristal del río.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Si atrás pudiera yo, corazón mío,</l>
-          <l n="6">dejar así el dolor con que me abrumas,</l>
-          <l n="7">el nido huyendo de mi hogar vacío,</l>
-          <l n="8">surcara, oh mar, tus pérfidas espumas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Pero ella ve el turbión que se avecina</l>
-          <l n="10">y va a otros climas de apacible calma,</l>
-          <l n="11">porque remonta hasta el cenit su vuelo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Yo imitaré a esa pobre golondrina</l>
-          <l n="13">y hallaré la perdida paz del alma</l>
-          <l n="14">subiendo en alas de la fe hasta el cielo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet-sequence">
-        <head>La fiesta de Venus</head>
-        <lg type="sonnet" xml:id="s263n_0853_01">
-          <head>I</head>
-          <lg n="1" type="unknown">
-            <l n="1">Ya del oscuro Citerón las cumbres</l>
-            <l n="2">bajaba el sol a trasponer, vertiendo</l>
-            <l n="3">ríos de luz sobre los verdes mares,</l>
-            <l n="4">cuyos abrazos lánguidos y besos</l>
-          </lg>
-          <lg n="2" type="unknown">
-            <l n="5">dulces y prolongados, adormecen</l>
-            <l n="6">los grupos de las islas del Egeo.</l>
-            <l n="7">Helios guiaba sus caballos de oro</l>
-            <l n="8">hacia el collado de la augusta Delfos,</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">y en las rocas de Egina y las abruptas</l>
-            <l n="10">cimas sagradas del antiguo Himeto</l>
-            <l n="11">sus reflejos de púrpura bañaban</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">los bosques de olivares cenicientos,</l>
-            <l n="13">por donde va, entre franjas de verdura,</l>
-            <l n="14">del Cefiso el caudal siempre risueño.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s263n_0853_02">
-          <head>II</head>
-          <lg n="1" type="unknown">
-            <l n="1">Sunium extiende la azulada sombra</l>
-            <l n="2">de su alto promontorio sobre el lecho</l>
-            <l n="3">de las calladas ondas, y en la cumbre</l>
-            <l n="4">blanco se eleva de Minerva el templo,</l>
-          </lg>
-          <lg n="2" type="unknown">
-            <l n="5">donde Platón meditabundo entabla</l>
-            <l n="6">coloquios con las musas del silencio.</l>
-            <l n="7">De allí descubre los pasmados ojos</l>
-            <l n="8">todo el golfo del África, y los senos</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">de sus risueñas costas, y el enjambre</l>
-            <l n="10">de sus pequeñas islas que, en el terso</l>
-            <l n="11">cristal, parecen cual bandada de aves</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">fugitivas del África, que el sueño</l>
-            <l n="13">detuvo allí una noche, y que a otros climas,</l>
-            <l n="14">tornando el alba, emprenderán su vuelo.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s263n_0853_03">
-          <head>III</head>
-          <lg n="1" type="serventesio">
-            <l n="1">Bajo del ancho pórtico, en las gradas</l>
-            <l n="2">que hasta el atrio conducen, sobre el fresco</l>
-            <l n="3">césped que brota entre las blancas piedras,</l>
-            <l n="4">de las columnas jónicas sustento,</l>
-          </lg>
-          <lg n="2" type="unknown">
-            <l n="5">Platón descansa entre el amado grupo</l>
-            <l n="6">de sus fieles discípulos, que atentos</l>
-            <l n="7">ora a la voz de su elocuente labio,</l>
-            <l n="8">ora el rumor del mar, que en sordo estruendo</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">bate del cabo las deformes rocas,</l>
-            <l n="10">ora a las quejas lánguidas del céfiro</l>
-            <l n="11">yacen inmobles semejando aquellas</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">escenas de los dioses que el eterno</l>
-            <l n="13">cincel de Fidias, en los anchos frisos,</l>
-            <l n="14">supo trazar del Partenón soberbio.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s263n_0853_04">
-          <head>IV</head>
-          <lg n="1" type="unknown">
-            <l n="1">Callados miran, de la clara tarde</l>
-            <l n="2">a la mudable luz, tierras y cielos</l>
-            <l n="3">prolongarse sin límites. La noche</l>
-            <l n="4">sube ya por las faldas del Taigeto;</l>
-          </lg>
-          <lg n="2" type="unknown">
-            <l n="5">pero aún el rayo trémulo del día</l>
-            <l n="6">brilla sobre el sepulcro de Teseo.</l>
-            <l n="7">Callados miran de la mar hirviente</l>
-            <l n="8">los vívidos cambiantes y el incierto</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">vaivén de sus llanuras solitarias,</l>
-            <l n="10">que leve impulsa pasajero el viento;</l>
-            <l n="11">cuando, en sus frescas ráfagas, la brisa</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">trajo a su oído el rumoroso eco</l>
-            <l n="13">de la confusa multitud, que invade</l>
-            <l n="14">las murallas de mármol del Pireo.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s263n_0853_05">
-          <head>V</head>
-          <lg n="1" type="unknown">
-            <l n="1">Largos trirremes de encorvadas proras</l>
-            <l n="2">con la estatua de un dios, con los abiertos</l>
-            <l n="3">velámenes de púrpura, que ciñen</l>
-            <l n="4">cuerdas de seda pérsica, al ligero</l>
-          </lg>
-          <lg n="2" type="unknown">
-            <l n="5">soplo del aire henchidos; con la popa</l>
-            <l n="6">de oro y marfil ornada, y con los remos</l>
-            <l n="7">blancos cayendo en uniforme golpe</l>
-            <l n="8">sobre las quietas aguas, desde el puerto</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">bogaban hacia el mar, y al clamoroso</l>
-            <l n="10">grito de despedida, los viajeros</l>
-            <l n="11">de las gallardas naves, agitando</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">ramas de mirto y en la sien ciñendo</l>
-            <l n="13">frescas guirnaldas de fragantes rosas,</l>
-            <l n="14">de, ¡adiós!, mandaban el alegre acento.</l>
-          </lg>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Vicente Wenceslao Querolt</head>
+            <p>Valencia. 1836 - 1889</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s263n_0852">
+            <head>Golondrina de otoño</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="-+-+---+-+-">Del norte huyendo las glaciales brumas,</l>
+               <l n="2" met="+--+---+-+-">de África busca el prolongado estío,</l>
+               <l n="3" met="-+-+---+-+-">y rauda pasa, las azules plumas</l>
+               <l n="4" met="-+-+---+-+-">rozando leve en el cristal del río.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="-+-+-+--++-">Si atrás pudiera yo, corazón mío,</l>
+               <l n="6" met="-+-+-+--++-">dejar así el dolor con que me abrumas,</l>
+               <l n="7" met="-+-+---+-+-">el nido huyendo de mi hogar vacío,</l>
+               <l n="8" met="-+-+-+---+-">surcara, oh mar, tus pérfidas espumas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+---+-">Pero ella ve el turbión que se avecina</l>
+               <l n="10" met="-+-+---+-+-">y va a otros climas de apacible calma,</l>
+               <l n="11" met="---+---+-+-">porque remonta hasta el cenit su vuelo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+---+-">Yo imitaré a esa pobre golondrina</l>
+               <l n="13" met="--+--+-+-+-">y hallaré la perdida paz del alma</l>
+               <l n="14" met="-+-+---+-+-">subiendo en alas de la fe hasta el cielo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet-sequence" xml:id="s263n_0853">
+            <head>La fiesta de Venus</head>
+            <lg type="sonnet" xml:id="s263n_0853_01">
+               <head>I</head>
+               <lg n="1" type="unknown">
+                  <l n="1" met="+--+---+-+-" enjamb="B-ex_subj_verb">Ya del oscuro Citerón las cumbres</l>
+                  <l n="2" met="-+-+---+-+-" enjamb="B-ex_dobj_verb I-ex_subj_verb">bajaba el sol a trasponer, vertiendo</l>
+                  <l n="3" met="+--+---+-+-" enjamb="I-ex_dobj_verb">ríos de luz sobre los verdes mares,</l>
+                  <l n="4" met="---+-+---+-" enjamb="B-pb_adj_noun">cuyos abrazos lánguidos y besos</l>
+               </lg>
+               <lg n="2" type="unknown">
+                  <l n="5" met="+----+---+-" enjamb="B-ex_subj_verb I-pb_adj_noun">dulces y prolongados, adormecen</l>
+                  <l n="6" met="-+---+---+-" enjamb="I-ex_subj_verb">los grupos de las islas del Egeo.</l>
+                  <l n="7" met="+-+---+--+-">Helios guiaba sus caballos de oro</l>
+                  <l n="8" met="---+---+-+-">hacia el collado de la augusta Delfos,</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="--+--+---+-" enjamb="B-pb_adj_noun">y en las rocas de Egina y las abruptas</l>
+                  <l n="10" met="+--+---+-+-" enjamb="B-pb_adj_noun I-pb_adj_noun">cimas sagradas del antiguo Himeto</l>
+                  <l n="11" met="--+--+---+-" enjamb="B-ex_dobj_verb I-pb_adj_noun">sus reflejos de púrpura bañaban</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+---+---+-" enjamb="I-ex_dobj_verb">los bosques de olivares cenicientos,</l>
+                  <l n="13" met="---+-+---+-">por donde va, entre franjas de verdura,</l>
+                  <l n="14" met="--+--++--+-">del Cefiso el caudal siempre risueño.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s263n_0853_02">
+               <head>II</head>
+               <lg n="1" type="unknown">
+                  <l n="1" met="-+-+---+-+-" enjamb="B-pb_noun_prep">Sunium extiende la azulada sombra</l>
+                  <l n="2" met="-+---+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">de su alto promontorio sobre el lecho</l>
+                  <l n="3" met="---+-+---+-" enjamb="B-pb_adj_noun I-pb_noun_prep">de las calladas ondas, y en la cumbre</l>
+                  <l n="4" met="+--+---+-+-" enjamb="I-pb_adj_noun">blanco se eleva de Minerva el templo,</l>
+               </lg>
+               <lg n="2" type="unknown">
+                  <l n="5" met="---+---+-+-" enjamb="B-ex_dobj_verb">donde Platón meditabundo entabla</l>
+                  <l n="6" met="-+---+---+-" enjamb="I-ex_dobj_verb">coloquios con las musas del silencio.</l>
+                  <l n="7" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">De allí descubre los pasmados ojos</l>
+                  <l n="8" met="+-+--+---+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">todo el golfo del África, y los senos</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="---+-+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">de sus risueñas costas, y el enjambre</l>
+                  <l n="10" met="---+-+---+-" enjamb="B-ex_subj_verb I-pb_noun_prep">de sus pequeñas islas que, en el terso</l>
+                  <l n="11" met="-+-+---+-+-" enjamb="B-pb_adj_noun I-ex_subj_verb">cristal, parecen cual bandada de aves</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="--+--+---+-" enjamb="B-ex_subj_verb I-pb_adj_noun">fugitivas del África, que el sueño</l>
+                  <l n="13" met="-+-+-+-+-+-" enjamb="I-ex_subj_verb">detuvo allí una noche, y que a otros climas,</l>
+                  <l n="14" met="-+-+---+-+-">tornando el alba, emprenderán su vuelo.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s263n_0853_03">
+               <head>III</head>
+               <lg n="1" type="serventesio">
+                  <l n="1" met="---+-+---+-" enjamb="B-cc_crossclause">Bajo del ancho pórtico, en las gradas</l>
+                  <l n="2" met="--+--+---+-" enjamb="B-pb_adj_noun I-cc_crossclause">que hasta el atrio conducen, sobre el fresco</l>
+                  <l n="3" met="+--+---+-+-" enjamb="I-pb_adj_noun">césped que brota entre las blancas piedras,</l>
+                  <l n="4" met="---+-+---+-">de las columnas jónicas sustento,</l>
+               </lg>
+               <lg n="2" type="unknown">
+                  <l n="5" met="-+-+---+-+-" enjamb="B-pb_noun_prep">Platón descansa entre el amado grupo</l>
+                  <l n="6" met="--+--+---+-" enjamb="I-pb_noun_prep">de sus fieles discípulos, que atentos</l>
+                  <l n="7" met="+--+---+-+-">ora a la voz de su elocuente labio,</l>
+                  <l n="8" met="+--+-+-+-+-">ora el rumor del mar, que en sordo estruendo</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+--+---+-+-">bate del cabo las deformes rocas,</l>
+                  <l n="10" met="+--+-+---+-">ora a las quejas lánguidas del céfiro</l>
+                  <l n="11" met="+--+---+-+-" enjamb="B-pb_relword">yacen inmobles semejando aquellas</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+---+---+-" enjamb="B-pb_adj_noun I-pb_relword">escenas de los dioses que el eterno</l>
+                  <l n="13" met="-+-+---+-+-" enjamb="I-pb_adj_noun">cincel de Fidias, en los anchos frisos,</l>
+                  <l n="14" met="+--+---+-+-">supo trazar del Partenón soberbio.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s263n_0853_04">
+               <head>IV</head>
+               <lg n="1" type="unknown">
+                  <l n="1" met="-+-+---+-+-">Callados miran, de la clara tarde</l>
+                  <l n="2" met="---+-++--+-">a la mudable luz, tierras y cielos</l>
+                  <l n="3" met="--++-+--+-" enjamb="B-ex_subj_verb">prolongarse sin límites. La noche</l>
+                  <l n="4" met="+-+--+---+-" enjamb="I-ex_subj_verb">sube ya por las faldas del Taigeto;</l>
+               </lg>
+               <lg n="2" type="unknown">
+                  <l n="5" met="-+-+-+---+-" enjamb="B-ex_subj_verb">pero aún el rayo trémulo del día</l>
+                  <l n="6" met="+----+---+-" enjamb="I-ex_subj_verb">brilla sobre el sepulcro de Teseo.</l>
+                  <l n="7" met="-+-+---+-+-" enjamb="B-pb_relword">Callados miran de la mar hirviente</l>
+                  <l n="8" met="-+---+---+-" enjamb="B-pb_adj_noun I-pb_relword">los vívidos cambiantes y el incierto</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-+---+---+-" enjamb="I-pb_adj_noun">vaivén de sus llanuras solitarias,</l>
+                  <l n="10" met="-+-+---+-+-">que leve impulsa pasajero el viento;</l>
+                  <l n="11" met="---+-+---+-" enjamb="B-ex_subj_verb">cuando, en sus frescas ráfagas, la brisa</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+-+----+-+-" enjamb="B-pb_noun_prep I-ex_subj_verb">trajo a su oído el rumoroso eco</l>
+                  <l n="13" met="---+---+-+-" enjamb="B-ex_dobj_verb I-pb_noun_prep">de la confusa multitud, que invade</l>
+                  <l n="14" met="--+--+---+-" enjamb="I-ex_dobj_verb">las murallas de mármol del Pireo.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s263n_0853_05">
+               <head>V</head>
+               <lg n="1" type="unknown">
+                  <l n="1" met="+--+---+-+-">Largos trirremes de encorvadas proras</l>
+                  <l n="2" met="--+-++---+-" enjamb="B-pb_adj_noun">con la estatua de un dios, con los abiertos</l>
+                  <l n="3" met="-+---+---+-" enjamb="B-pb_adj_noun I-pb_adj_noun">velámenes de púrpura, que ciñen</l>
+                  <l n="4" met="+--+-+---+-" enjamb="B-pb_adj_noun I-pb_adj_noun">cuerdas de seda pérsica, al ligero</l>
+               </lg>
+               <lg n="2" type="unknown">
+                  <l n="5" met="+--+-+---+-" enjamb="B-pb_noun_prep I-pb_adj_noun">soplo del aire henchidos; con la popa</l>
+                  <l n="6" met="+--+-+---+-" enjamb="B-pb_adj_noun I-pb_noun_prep">de oro y marfil ornada, y con los remos</l>
+                  <l n="7" met="+--+---+-+-" enjamb="B-pb_adj_noun I-pb_adj_noun">blancos cayendo en uniforme golpe</l>
+                  <l n="8" met="---+-+---+-" enjamb="B-pb_adj_noun I-pb_adj_noun">sobre las quietas aguas, desde el puerto</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-+---+---+-" enjamb="B-pb_adj_noun I-pb_adj_noun">bogaban hacia el mar, y al clamoroso</l>
+                  <l n="10" met="+----+---+-" enjamb="B-pb_noun_prep I-pb_adj_noun">grito de despedida, los viajeros</l>
+                  <l n="11" met="---+-+---+-" enjamb="I-pb_noun_prep">de las gallardas naves, agitando</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+--+---+-+-">ramas de mirto y en la sien ciñendo</l>
+                  <l n="13" met="+--+---+-+-">frescas guirnaldas de fragantes rosas,</l>
+                  <l n="14" met="---+---+-+-">de, ¡adiós!, mandaban el alegre acento.</l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

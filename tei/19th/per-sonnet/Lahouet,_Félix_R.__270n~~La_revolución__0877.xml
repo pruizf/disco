@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>La revolución</title>
+            <author corresp="#disco_270n">Félix R. Lahouet</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">93</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_po_270n0877"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_270n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Lahouet</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Félix R.</forename>
+                     <surname property="foaf:familyName">Lahouet</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Félix R. Lahouet</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s270n0877" about="dbpedia:Soneto">
+                        <title property="dc:title">La revolución</title>
+                        <title type="incipit" property="dc:alternative">Siempre te aborreció la tiranía</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <head>La revolución</head>
+      </front>
+      <body>
+         <lg n="1" type="cuarteto">
+            <l n="1" met="+-+--+---+-">Siempre te aborreció la tiranía</l>
+            <l n="2" met="--+--+-+-+-" enjamb="B-cc_crossclause">porque encarnas la fe del pueblo esclavo</l>
+            <l n="3" met="---+-+--++-" enjamb="I-cc_crossclause">que sacudiendo el yugo como un bravo</l>
+            <l n="4" met="++---+---+-">mil cetros derrocó con valentía.</l>
+         </lg>
+         <lg n="2" type="cuarteto">
+            <l n="5" met="--+--+-+-+-" enjamb="B-ex_subj_verb">A torrentes la sangre noche y día</l>
+            <l n="6" met="--++-+---+-" enjamb="I-ex_subj_verb">derramó el ruso, el griego y el esclavo,</l>
+            <l n="7" met="---+---+-+-">y por doquiera que la vista clavo</l>
+            <l n="8" met="-++--+---+-">tu nombre ha hecho temblar la dinastía.</l>
+         </lg>
+         <lg n="3" type="terceto">
+            <l n="9" met="++-+---+-+-" enjamb="B-ex_subj_verb">Hoy dos colonias de la Ibera odiada</l>
+            <l n="10" met="+-+--+--++-" enjamb="B-ex_subj_verb I-ex_subj_verb">se han lanzado a la lid con valor sumo</l>
+            <l n="11" met="--++-+-+-+-" enjamb="I-ex_subj_verb">desnudando otra vez la heroica espada</l>
+         </lg>
+         <lg n="4" type="terceto">
+            <l n="12" met="---+-+---+-">y lograrán su fin según presumo,</l>
+            <l n="13" met="-+---++--+-" enjamb="B-pb_adj_noun">pues Cuba quedará de esta jornada</l>
+            <l n="14" met="--+--+---+-" enjamb="I-pb_adj_noun">convertida en república o en humo.</l>
+         </lg>
+      </body>
+  </text>
+</TEI>

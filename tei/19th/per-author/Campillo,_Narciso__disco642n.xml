@@ -1,118 +1,187 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Narciso Campillo</title>
-        <author>
-          <idno type="viaf" cert="high">26148017</idno>
-          <idno type="#disco" xml:id="disco_642n"/>
-          <name type="short">Campillo</name>
-          <name type="full">
-            <name type="first-name">Narciso</name>
-            <name type="second-name">Campillo</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">188</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_642n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_642n" role="author" sex="M">
-            <persName>Narciso Campillo</persName>
-            <birth><placeName type="place">Sevilla</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1835" cert="high">1835</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Madrid</placeName>, <date type="year" when="1900" cert="high">1900</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Narciso Campillo</title>
+            <author corresp="#disco_642n">Narciso Campillo</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">188</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_642n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_642n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/26148017"/>
+                  <persName type="short">Campillo</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Narciso</forename>
+                     <surname property="foaf:familyName">Campillo</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Narciso Campillo</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Sevilla</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1835" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1900" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s642n_2365" about="dbpedia:Soneto">
+                        <title property="dc:title">Sócrates</title>
+                        <title type="incipit" property="dc:alternative">Ya la cicuta que su sangre hiela</title>
+                     </bibl>
+                     <bibl resource="disco#s642n_2366" about="dbpedia:Soneto">
+                        <title property="dc:title">A la Eucaristía</title>
+                        <title type="incipit" property="dc:alternative">Por más que se levanta el pensamiento</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Narciso Campillo</head>
-        <p>Sevilla. 1835 - 1900</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s642n_2365">
-        <head>Sócrates</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Ya la cicuta que su sangre hiela</l>
-          <l n="2">de la vida los vínculos quebranta;</l>
-          <l n="3">deja la carne muerta el alma santa</l>
-          <l n="4">y, cual astro de luz, relumbra y vuela.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Discípulos que estáis de centinela</l>
-          <l n="6">en torno del cadáver, ¿no os espanta</l>
-          <l n="7">ese inmenso fragor, que se levanta</l>
-          <l n="8">y luto y muerte y lágrimas revela?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De lejana batalla el son parece,</l>
-          <l n="10">o el huracán, los bosques sacudiendo,</l>
-          <l n="11">o voz del mar que rebramando crece.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Discípulos id: todo ese estruendo</l>
-          <l n="13">es el antiguo mundo que perece;</l>
-          <l n="14">son los dioses vencidos: van huyendo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s642n_2366">
-        <head>A la Eucaristía</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Por más que se levanta el pensamiento</l>
-          <l n="2">con vuelo desusado y peregrino,</l>
-          <l n="3">hallar no puede en su ideal camino</l>
-          <l n="4">otro tan alto y singular portento.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Que baje Dios desde el sublime asiento</l>
-          <l n="6">que de su carne en pan, su sangre en vino,</l>
-          <l n="7">que habite el cuerpo del mortal mezquino</l>
-          <l n="8">y se confunda y viva con su aliento.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Misterios son en que se abisma en vano</l>
-          <l n="10">aun del ángel la clara inteligencia,</l>
-          <l n="11">cual piedra en la extensión del océano.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">«¿Quién investigará la Eterna Esencia?»</l>
-          <l n="13">absorto y mudo ante el grandioso arcano</l>
-          <l n="14">invoco yo la fe, y ella es mi ciencia.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Narciso Campillo</head>
+            <p>Sevilla. 1835 - 1900</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s642n_2365">
+            <head>Sócrates</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-" enjamb="B-pb_verb_cprep">Ya la cicuta que su sangre hiela</l>
+               <l n="2" met="--+--+---+-" enjamb="I-pb_verb_cprep">de la vida los vínculos quebranta;</l>
+               <l n="3" met="+--+-+-+-+-">deja la carne muerta el alma santa</l>
+               <l n="4" met="--+--+-+-+-">y, cual astro de luz, relumbra y vuela.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">Discípulos que estáis de centinela</l>
+               <l n="6" met="-----+-+-+-" enjamb="B-ex_subj_verb">en torno del cadáver, ¿no os espanta</l>
+               <l n="7" met="+-+--+---+-" enjamb="I-ex_subj_verb">ese inmenso fragor, que se levanta</l>
+               <l n="8" met="-+-+-+---+-">y luto y muerte y lágrimas revela?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+-+-+-">De lejana batalla el son parece,</l>
+               <l n="10" met="---+-+---+-">o el huracán, los bosques sacudiendo,</l>
+               <l n="11" met="-+-+---+-+-">o voz del mar que rebramando crece.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+--+++--+-" enjamb="B-ex_subj_verb">Discípulos id: todo ese estruendo</l>
+               <l n="13" met="+--+-+---+-" enjamb="I-ex_subj_verb">es el antiguo mundo que perece;</l>
+               <l n="14" met="+-+--+-+-+-">son los dioses vencidos: van huyendo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s642n_2366">
+            <head>A la Eucaristía</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">Por más que se levanta el pensamiento</l>
+               <l n="2" met="-+---+---+-">con vuelo desusado y peregrino,</l>
+               <l n="3" met="-+++---+-+-" enjamb="B-ex_dobj_verb">hallar no puede en su ideal camino</l>
+               <l n="4" met="+-++---+-+-" enjamb="I-ex_dobj_verb">otro tan alto y singular portento.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-" enjamb="B-cc_crossclause">Que baje Dios desde el sublime asiento</l>
+               <l n="6" met="---+-+-+-+-" enjamb="I-cc_crossclause">que de su carne en pan, su sangre en vino,</l>
+               <l n="7" met="-+-+---+-+-">que habite el cuerpo del mortal mezquino</l>
+               <l n="8" met="---+-+---+-">y se confunda y viva con su aliento.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-" enjamb="B-pb_adj_adv">Misterios son en que se abisma en vano</l>
+               <l n="10" met="+-+--+---+-" enjamb="I-pb_adj_adv">aun del ángel la clara inteligencia,</l>
+               <l n="11" met="++----+--+-">cual piedra en la extensión del océano.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+----+---+-">«¿Quién investigará la Eterna Esencia?»</l>
+               <l n="13" met="-+-+---+-+-">absorto y mudo ante el grandioso arcano</l>
+               <l n="14" met="-+-+-+-+-+-">invoco yo la fe, y ella es mi ciencia.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

@@ -1,93 +1,150 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Teobaldo Elías Corpancho</title>
-        <author>
-          <idno type="viaf" cert="high">118490338</idno>
-          <idno type="#disco" xml:id="disco_423n"/>
-          <name type="short">Corpancho</name>
-          <name type="full">
-            <name type="first-name">Teobaldo Elías</name>
-            <name type="second-name">Corpancho</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">94</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_423n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_423n" role="author" sex="M">
-            <persName>Teobaldo Elías Corpancho</persName>
-            <birth><placeName type="place">Perú</placeName>, <placeName type="country">Perú</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Teobaldo Elías Corpancho</title>
+            <author corresp="#disco_423n">Teobaldo Elías Corpancho</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">94</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_423n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_423n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/118490338"/>
+                  <persName type="short">Corpancho</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Teobaldo Elías</forename>
+                     <surname property="foaf:familyName">Corpancho</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Teobaldo Elías Corpancho</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Perú</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s423n_1664" about="dbpedia:Soneto">
+                        <title property="dc:title">Íntimo</title>
+                        <title type="incipit" property="dc:alternative">Arcángel de mi hogar, alma piadosa</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Teobaldo Elías Corpancho</head>
-        <p>Perú. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s423n_1664">
-        <head>Íntimo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Arcángel de mi hogar, alma piadosa</l>
-          <l n="2">para el amor y la virtud nacida;</l>
-          <l n="3">bajo tus alas trémulas mi vida</l>
-          <l n="4">auroras tiene de zafir y rosa.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Pero lejos de ti, noche espantosa</l>
-          <l n="6">sólo ve mi mirada entristecida,</l>
-          <l n="7">sin blanca luna que a evocar convida</l>
-          <l n="8">las dulces horas de la edad dichosa.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿Y tú me olvidarás? ¿No habrá un acento</l>
-          <l n="10">siempre en tu corazón que a mí responda</l>
-          <l n="11">en efluvios de casto sentimiento?</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">No es anhelo de loco desvarío;</l>
-          <l n="13">mas si en tu pecho la pasión no es honda,</l>
-          <l n="14">¡hazla que sufra como yo, Dios mío!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Teobaldo Elías Corpancho</head>
+            <p>Perú. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s423n_1664">
+            <head>Íntimo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---++--+-" enjamb="B-pb_adj_prep">Arcángel de mi hogar, alma piadosa</l>
+               <l n="2" met="---+---+-+-" enjamb="I-pb_adj_prep">para el amor y la virtud nacida;</l>
+               <l n="3" met="---+-+---+-" enjamb="B-ex_subj_verb">bajo tus alas trémulas mi vida</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-ex_subj_verb">auroras tiene de zafir y rosa.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-----++--+-" enjamb="B-pb_adj_adv">Pero lejos de ti, noche espantosa</l>
+               <l n="6" met="+-+--+---+-" enjamb="I-pb_adj_adv">sólo ve mi mirada entristecida,</l>
+               <l n="7" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">sin blanca luna que a evocar convida</l>
+               <l n="8" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">las dulces horas de la edad dichosa.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--+-+-+-">¿Y tú me olvidarás? ¿No habrá un acento</l>
+               <l n="10" met="+----+-+-+-">siempre en tu corazón que a mí responda</l>
+               <l n="11" met="--+--+---+-">en efluvios de casto sentimiento?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-">No es anhelo de loco desvarío;</l>
+               <l n="13" met="---+---+++-">mas si en tu pecho la pasión no es honda,</l>
+               <l n="14" met="++-+---+++-">¡hazla que sufra como yo, Dios mío!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

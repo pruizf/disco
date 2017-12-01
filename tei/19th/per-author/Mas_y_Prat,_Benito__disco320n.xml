@@ -1,118 +1,182 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Benito Mas y Prat</title>
-        <author>
-          <idno type="viaf" cert="high">87478656</idno>
-          <idno type="#disco" xml:id="disco_320n"/>
-          <name type="short">Mas y Prat</name>
-          <name type="full">
-            <name type="first-name">Benito</name>
-            <name type="second-name">Mas y Prat</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">179</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_320n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_320n" role="author" sex="M">
-            <persName>Benito Mas y Prat</persName>
-            <birth><placeName type="place">Ecija (Sevilla)</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1846" cert="high">1846</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1892" cert="high">1892</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Benito Mas y Prat</title>
+            <author corresp="#disco_320n">Benito Mas y Prat</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">179</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_320n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_320n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/87478656"/>
+                  <persName type="short">Mas y Prat</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Benito</forename>
+                     <surname property="foaf:familyName">Mas y Prat</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Benito Mas y Prat</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Ecija (Sevilla)</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1846" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1892" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s320n_1045" about="dbpedia:Soneto">
+                        <title property="dc:title">A Cervantes</title>
+                        <title type="incipit" property="dc:alternative">Si todo el peso del orgullo humano</title>
+                     </bibl>
+                     <bibl resource="disco#s320n_1046" about="dbpedia:Soneto">
+                        <title property="dc:title">A un crítico</title>
+                        <title type="incipit" property="dc:alternative">Dícenme que denuestas a mi musa</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Benito Mas y Prat</head>
-        <p>Ecija (Sevilla). 1846 - 1892</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s320n_1045">
-        <head>A Cervantes</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Si todo el peso del orgullo humano</l>
-          <l n="2">un tiempo gravitó sobre el «Quijote»,</l>
-          <l n="3">alzándose en titánico rebote</l>
-          <l n="4">al fin lo sacudió cual polvo vano.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Su autor, de los ingenios soberano,</l>
-          <l n="6">y de la Edad Moderna sacerdote,</l>
-          <l n="7">venció a Roldán, Orlando y Lamarote,</l>
-          <l n="8">derribando a los tres con una mano.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Como el alud que rueda en la montaña,</l>
-          <l n="10">el libro sin rival y sin segundo,</l>
-          <l n="11">rodó desde el palacio a la cabaña.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Logrando el héroe, pensador profundo,</l>
-          <l n="13">con la tizona, contener a España</l>
-          <l n="14">y con la pluma, conmover al mundo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s320n_1046">
-        <head>A un crítico</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Dícenme que denuestas a mi musa</l>
-          <l n="2">sin el menor asomo de respeto,</l>
-          <l n="3">por esquivar el clásico soneto</l>
-          <l n="4">que todo vate por difícil usa:</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Razón de tal valer no admite excusa,</l>
-          <l n="6">yo ratifico el concienzudo veto,</l>
-          <l n="7">y resarcir la falta te prometo</l>
-          <l n="8">si el rebelde laúd no lo rehúsa.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Diversos cobijaba en mi carpeta,</l>
-          <l n="10">que tal vez los prohíja con descoco</l>
-          <l n="11">algún alto erudito a la violeta;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">mas yo no peco y tu indulgencia invoco,</l>
-          <l n="13">pues ha tiempo que dijo un buen poeta</l>
-          <l n="14">que para muestra y de lo malo poco.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Benito Mas y Prat</head>
+            <p>Ecija (Sevilla). 1846 - 1892</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s320n_1045">
+            <head>A Cervantes</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-" enjamb="B-ex_subj_verb">Si todo el peso del orgullo humano</l>
+               <l n="2" met="++---+---+-" enjamb="I-ex_subj_verb">un tiempo gravitó sobre el «Quijote»,</l>
+               <l n="3" met="-+-+-+---+-" enjamb="B-ex_dobj_verb">alzándose en titánico rebote</l>
+               <l n="4" met="-++--+++-+-" enjamb="I-ex_dobj_verb">al fin lo sacudió cual polvo vano.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">Su autor, de los ingenios soberano,</l>
+               <l n="6" met="-----+---+-">y de la Edad Moderna sacerdote,</l>
+               <l n="7" met="-+-+-+---+-">venció a Roldán, Orlando y Lamarote,</l>
+               <l n="8" met="--+--+-+-+-">derribando a los tres con una mano.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+---+-">Como el alud que rueda en la montaña,</l>
+               <l n="10" met="-+---+---+-">el libro sin rival y sin segundo,</l>
+               <l n="11" met="-+---+---+-">rodó desde el palacio a la cabaña.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">Logrando el héroe, pensador profundo,</l>
+               <l n="13" met="---+---+-+-">con la tizona, contener a España</l>
+               <l n="14" met="---+---+-+-">y con la pluma, conmover al mundo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s320n_1046">
+            <head>A un crítico</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+----+---+-" enjamb="B-pb_noun_prep">Dícenme que denuestas a mi musa</l>
+               <l n="2" met="---+-+---+-" enjamb="I-pb_noun_prep">sin el menor asomo de respeto,</l>
+               <l n="3" met="---+-+---+-" enjamb="B-cc_crossclause">por esquivar el clásico soneto</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-cc_crossclause">que todo vate por difícil usa:</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+++-+-">Razón de tal valer no admite excusa,</l>
+               <l n="6" met="+--+---+-+-">yo ratifico el concienzudo veto,</l>
+               <l n="7" met="---+-+-+-+-">y resarcir la falta te prometo</l>
+               <l n="8" met="--+--+++-+-">si el rebelde laúd no lo rehúsa.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">Diversos cobijaba en mi carpeta,</l>
+               <l n="10" met="--++-+---+-" enjamb="B-ex_dobj_verb">que tal vez los prohíja con descoco</l>
+               <l n="11" met="-++--+---+-" enjamb="I-ex_dobj_verb">algún alto erudito a la violeta;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+++---+-+-">mas yo no peco y tu indulgencia invoco,</l>
+               <l n="13" met="-++--+++-+-" enjamb="B-cc_crossclause">pues ha tiempo que dijo un buen poeta</l>
+               <l n="14" met="---+---+-+-" enjamb="I-cc_crossclause">que para muestra y de lo malo poco.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

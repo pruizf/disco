@@ -1,368 +1,469 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Augusto E. Madan</title>
-        <author>
-          <idno type="viaf" cert="high">77975528</idno>
-          <idno type="#disco" xml:id="disco_344n"/>
-          <name type="short">Madan</name>
-          <name type="full">
-            <name type="first-name">Augusto E.</name>
-            <name type="second-name">Madan</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">12</measure>
-        <measure unit="tokens">887</measure>
-        <measure unit="line">168</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_344n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_344n" role="author" sex="M">
-            <persName>Augusto E. Madan</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Augusto E. Madan</title>
+            <author corresp="#disco_344n">Augusto E. Madan</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">12</measure>
+            <measure unit="tokens">887</measure>
+            <measure unit="line">168</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_344n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_344n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/77975528"/>
+                  <persName type="short">Madan</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Augusto E.</forename>
+                     <surname property="foaf:familyName">Madan</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Augusto E. Madan</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s344n_1190" about="dbpedia:Soneto">
+                        <title property="dc:title">Ripios ratoniles</title>
+                        <title type="incipit" property="dc:alternative">Roedores, retened recalcitrantes</title>
+                     </bibl>
+                     <bibl resource="disco#s344n_1191" about="dbpedia:Soneto">
+                        <title property="dc:title">¡Cómo comes!</title>
+                        <title type="incipit" property="dc:alternative">¡Caramba! ¡Cómo comes, compañero!</title>
+                     </bibl>
+                     <bibl resource="disco#s344n_1192" about="dbpedia:Soneto">
+                        <title property="dc:title">Contra el histérico</title>
+                        <title type="incipit" property="dc:alternative">Mezcla un poco del ácido sulfúrico,</title>
+                     </bibl>
+                     <bibl resource="disco#s344n_1193" about="dbpedia:Soneto">
+                        <title property="dc:title">Sales sin sal</title>
+                        <title type="incipit" property="dc:alternative">¡Sal soneto sin sal! ¡Saca sensato</title>
+                     </bibl>
+                     <bibl resource="disco#s344n_1194" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto chino</title>
+                        <title type="incipit" property="dc:alternative">¡Qué higiénico resulta el té Houlong,</title>
+                     </bibl>
+                     <bibl resource="disco#s344n_1195" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto sueco</title>
+                        <title type="incipit" property="dc:alternative">¿Porqué me detendría en Strewjmoj?</title>
+                     </bibl>
+                     <bibl resource="disco#s344n_1196" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto hebreo</title>
+                        <title type="incipit" property="dc:alternative">Bebiendo mansedumbres en Jacob,</title>
+                     </bibl>
+                     <bibl resource="disco#s344n_1197" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto persa</title>
+                        <title type="incipit" property="dc:alternative">Contando con la ayuda de Jheováh,</title>
+                     </bibl>
+                     <bibl resource="disco#s344n_1198" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto turco</title>
+                        <title type="incipit" property="dc:alternative">Para bárbaros blancos, Ghemorúk.</title>
+                     </bibl>
+                     <bibl resource="disco#s344n_1199" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto ruso</title>
+                        <title type="incipit" property="dc:alternative">¡Qué herejía, Señor! Ir al Falstaff</title>
+                     </bibl>
+                     <bibl resource="disco#s344n_1200" about="dbpedia:Soneto">
+                        <title property="dc:title">¡Anda aprisa, ayudante!</title>
+                        <title type="incipit" property="dc:alternative">-Ayestarán: amaneció apirético.</title>
+                     </bibl>
+                     <bibl resource="disco#s344n_1201" about="dbpedia:Soneto">
+                        <title property="dc:title">La Enmienda Platt</title>
+                        <title type="incipit" property="dc:alternative">Tal vez porque a las buenas no medrabas,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Augusto E. Madan</head>
-        <p>Cuba. 19th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s344n_1190">
-        <head>Ripios ratoniles</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Roedores, retened recalcitrantes</l>
-          <l n="2">rústicos rumorcillos requirentes;</l>
-          <l n="3">repoblando, rebeldes reverentes,</l>
-          <l n="4">recónditos rincones rezumantes.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Rastreras ratoneras rutilantes</l>
-          <l n="6">reporten ratonismos repelentes,</l>
-          <l n="7">rebanando rumiantes reincidentes,</l>
-          <l n="8">reprimiendo retozos rechinantes.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Rencores resistid reconcentrados,</l>
-          <l n="10">republicanas ratas repentistas,</l>
-          <l n="11">rufianes ratoncillos rezagados.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Resolviendo reductos rigoristas</l>
-          <l n="13">repuestos roncaréis regocijados,</l>
-          <l n="14">¡respetables ratones reformistas!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s344n_1191">
-        <head>¡Cómo comes!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Caramba! ¡Cómo comes, compañero!</l>
-          <l n="2">Comiendo cada cosa con cuidado.</l>
-          <l n="3">¡Cual canónigo comes, condenado!</l>
-          <l n="4">Como, como cumplido caballero.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Comiste caracoles, col, carnero,</l>
-          <l n="6">calamares, caviar, corzo cebado,</l>
-          <l n="7">costillas, coliflor, congrio curado...!</l>
-          <l n="8">¡Comieras, comilón, curtido cuero!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Claro! Como comer, como caliente.</l>
-          <l n="10">Con cólico caerás. Con candamomo</l>
-          <l n="11">curarlos conseguí completamente.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¿Compotas? ¡Compasión! ¡Cómico cromo!</l>
-          <l n="13">¿Cómo comes con cara complaciente?</l>
-          <l n="14">¿Cómo como? ¡Cá! Como como como.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s344n_1192">
-        <head>Contra el histérico</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Mezcla un poco del ácido sulfúrico,</l>
-          <l n="2">con el láctico, el pícrico y el bórico;</l>
-          <l n="3">y agrégale después ácido clórico</l>
-          <l n="4">bien disuelto en el ácido ingasúrico.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Por la reacción del ácido telórico,</l>
-          <l n="6">y sometiendo el líquido al calórico,</l>
-          <l n="7">con adición del ácido fosfórico,</l>
-          <l n="8">combinando en caliente con el úrico,</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">obtendrás, si incorporas el butírico,</l>
-          <l n="10">una sal, a que el ácido subérico</l>
-          <l n="11">dará un brillo metálico hidrargírico.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Bébete este compuesto climatérico;</l>
-          <l n="13">y ya veras, mujer, como un empírico</l>
-          <l n="14">te libra para siempre del histérico.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s344n_1193">
-        <head>Sales sin sal</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Sal soneto sin sal! ¡Saca sensato</l>
-          <l n="2">salobridad siquiera! ¡Sé salino!</l>
-          <l n="3">Sorbiendo sal seguido, Saladino</l>
-          <l n="4">salvó su situación sin ser silbato.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Salicinina, salol, salicilato,</l>
-          <l n="6">sub-sales salicílicas, succino,</l>
-          <l n="7">solimán, sulfureto, santonino,</l>
-          <l n="8">sulfaminol, sílicio, silicato;</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">si sabias sales sois, salad sextetos.</l>
-          <l n="10">Salvando salaciones superables,</l>
-          <l n="11">sugiriéndome símiles secretos,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">sacaré, -sí señor- siendo sacables,</l>
-          <l n="13">salobres, saladísimos sonetos...</l>
-          <l n="14">si salidos sin sal, salificables.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s344n_1194">
-        <head>Soneto chino</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Qué higiénico resulta el té Houlong,</l>
-          <l n="2">mezclado con un poco de gin-seng,</l>
-          <l n="3">cuando es del puro que recibe Weng</l>
-          <l n="4">el mercader de efectos de Hong-Kong!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Comprendo que no teman a un Armstrong</l>
-          <l n="6">los chinos de Tsung-Hái y de Tái-Yuéng,</l>
-          <l n="7">de Kwansi, de Ning-Kiang y de Chung-Tiéng,</l>
-          <l n="8">de Ning-Pó, de Nankín y de Souchóng.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Bebido el té, me pongo el Smocking;</l>
-          <l n="10">y fumando mi pipa de Kwantúng,</l>
-          <l n="11">me paso un rato en el Skáting-Ríng.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Vuelvo a casa: reposo la Zeitúng;</l>
-          <l n="13">y después de saber que aún vive el King,</l>
-          <l n="14">pido el sueño a otra taza de Yuén-Súng.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s344n_1195">
-        <head>Soneto sueco</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¿Porqué me detendría en Strewjmoj?</l>
-          <l n="2">¡Hielos, bálago, musgo, almoraduj!</l>
-          <l n="3">Por cubrirme la faz con un cambuj</l>
-          <l n="4">me dejaron un día sin reloj.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Húbeme de calzar suecos de boj</l>
-          <l n="6">y encapillarme bien con el ganduj.</l>
-          <l n="7">A mi costa esa gente sacó el fluj,</l>
-          <l n="8">cada vez que pegaba un pedicoj.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Si no es porque me embarco en un pataj,</l>
-          <l n="10">prometiendo volver al abenmej,</l>
-          <l n="11">dejo allí bolsa, flechas y carcaj.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Escarmentado estoy, amigo Aruéj.</l>
-          <l n="13">Aunque me den las minas del balaj,</l>
-          <l n="14">me vuelvo a mi región de Abaguanej.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s344n_1196">
-        <head>Soneto hebreo</head>
-        <lg n="1" type="unknown">
-          <l n="1">Bebiendo mansedumbres en Jacob,</l>
-          <l n="2">que a la vez que patriarca fue nabab,</l>
-          <l n="3">forjó Gentrudis su novela Sap</l>
-          <l n="4">con la paciencia mística de Job.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Yo no puedo escribir. La acción del rob</l>
-          <l n="6">me sumerge en las sombras de un boabab,</l>
-          <l n="7">de aquellos que en la patria de Moab</l>
-          <l n="8">trocaron en asceta al más snob.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿Cómo pedir sus alas al querub,</l>
-          <l n="10">o sus estóicos fallos al hegib.</l>
-          <l n="11">o su fe de profeta a un Habacub,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">o sus conceptos mágicos a un Gib,</l>
-          <l n="13">quien no acierta a encontrar, desde su Horeb,</l>
-          <l n="14">tierras de promisión como Caleb?</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s344n_1197">
-        <head>Soneto persa</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Contando con la ayuda de Jheováh,</l>
-          <l n="2">me interné por la estepa del Agréh,</l>
-          <l n="3">llegando, sano y salvo, a Devayeh,</l>
-          <l n="4">donde tuve el honor de ver al Shah.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Cubierto de riquísimo surah</l>
-          <l n="6">y leyendo el grandioso Shah-Nameh,</l>
-          <l n="7">hallémelo, de nuevo, en Boureydéh,</l>
-          <l n="8">punto en que lo guardaba el padischáh.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Pero que sol! ¡Ni el hielo de Sandóh,</l>
-          <l n="10">ni los árticos musgos del Suróh</l>
-          <l n="11">refrescan las llanuras de Ghutníh!</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Entre abrasada arena fui a Barkúh,</l>
-          <l n="13">y me embarqué asfixiándome en Tarkúh,</l>
-          <l n="14">maldiciendo el calor de Osmanfalíh!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s344n_1198">
-        <head>Soneto turco</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Para bárbaros blancos, Ghemorúk.</l>
-          <l n="2">Para zancos ridículos, Albék.</l>
-          <l n="3">Para maderas vírgenes Ilék.</l>
-          <l n="4">Para ágiles refígeros, Ipúk.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Para marfiles diáfanos, Murzúk.</l>
-          <l n="6">Par higiénicos lúpidos, Pysék</l>
-          <l n="7">Para tebáicos báquicos, Hupék.</l>
-          <l n="8">Para dátiles cándidos, Mabrúk.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Para ostrícolas regias, Chesapík.</l>
-          <l n="10">Para búfalos gordos, Omenák.</l>
-          <l n="11">Para bálago helado, Upernavík.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Para bichos mortíferos, Sihák.</l>
-          <l n="13">Par tétricas focas, Reykjhavík.</l>
-          <l n="14">Para kábila cruel, Kjalikasák.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s344n_1199">
-        <head>Soneto ruso</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Qué herejía, Señor! Ir al Falstaff</l>
-          <l n="2">zumbándome las notas del Surcouff!</l>
-          <l n="3">Seguro que no duermo ni en le Pouff,</l>
-          <l n="4">si no tomo el Estroncio de Paraff.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Igual que en mares el pirata Graff</l>
-          <l n="6">o en tierras firmes el emir Yusuff,</l>
-          <l n="7">persígueme Offenbach, Verdi y Buruouff,</l>
-          <l n="8">como persigue en los Madgyares, Raff.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Por ver al general Stambuloff,</l>
-          <l n="10">que parece un espectro de Radcliff,</l>
-          <l n="11">alto como la torre Malakoff,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">fui al teatro no más. Venga un rosbiff;</l>
-          <l n="13">y o me olvido del ruso del Azoff...</l>
-          <l n="14">o sueños con los bárbaros del Riff.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s344n_1200">
-        <head>¡Anda aprisa, ayudante!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">-Ayestarán: amaneció apirético.</l>
-          <l n="2">-Alimento adecuado-. Amat: artrítico.</l>
-          <l n="3">-Analgesina-. Arbués; abceso ascítico.</l>
-          <l n="4">-Acupuntura. Apiol. Acido acético.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">-Alzugaray: anuria-. Algo aloético.</l>
-          <l n="6">-Ausúrez: aneurisma-. Algo aconítico.</l>
-          <l n="7">-Antón: albuminuria-. Al analítico.</l>
-          <l n="8">Aurelia Azúcar: aborto-. Aceite abético.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">-Argüelles: accidente aponeurótico.</l>
-          <l n="10">-Afusiones. Anís-. Achón, asiático:</l>
-          <l n="11">ascárides-. Almácigo apazótico.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¡Avívate!- Acabóse. Auset: asmático.</l>
-          <l n="13">-Amapola. Aspirar ácido azótico.</l>
-          <l n="14">¡A almorzar, ayudante anagramático!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s344n_1201">
-        <head>La Enmienda Platt</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Tal vez porque a las buenas no medrabas,</l>
-          <l n="2">simulacro naval quiso imponerte;</l>
-          <l n="3">y opinión del país, fue, sin leerte,</l>
-          <l n="4">que Libertad y Patria cercenabas.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La Convención después, de luchas bravas,</l>
-          <l n="6">aprobarte decide al conocerte.</l>
-          <l n="7">Diplomacia o lealtad, ¿temió al más fuerte</l>
-          <l n="8">o salvándote vio que nos salvabas?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Si entiendo de política muy poco,</l>
-          <l n="10">la tierra miro que tu ley nos quita</l>
-          <l n="11">sin descubrir, en cambio, el bien que creas.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">De tu propia conciencia el juicio invoco,</l>
-          <l n="13">y te digo: ¿Proteges? ¡Sé bendita!</l>
-          <l n="14">¿Cubres la usurpación? ¡Maldita seas!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Augusto E. Madan</head>
+            <p>Cuba. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s344n_1190">
+            <head>Ripios ratoniles</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-" enjamb="B-pb_adj_noun">Roedores, retened recalcitrantes</l>
+               <l n="2" met="+----+---+-" enjamb="I-pb_adj_noun">rústicos rumorcillos requirentes;</l>
+               <l n="3" met="--+--+---+-">repoblando, rebeldes reverentes,</l>
+               <l n="4" met="-+---+---+-">recónditos rincones rezumantes.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-" enjamb="B-ex_subj_verb">Rastreras ratoneras rutilantes</l>
+               <l n="6" met="-+---+---+-" enjamb="I-ex_subj_verb">reporten ratonismos repelentes,</l>
+               <l n="7" met="--+--+---+-">rebanando rumiantes reincidentes,</l>
+               <l n="8" met="--+--+---+-">reprimiendo retozos rechinantes.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">Rencores resistid reconcentrados,</l>
+               <l n="10" met="---+-+---+-">republicanas ratas repentistas,</l>
+               <l n="11" met="-+---+---+-">rufianes ratoncillos rezagados.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-" enjamb="B-pb_relword">Resolviendo reductos rigoristas</l>
+               <l n="13" met="-+---+---+-" enjamb="I-pb_relword">repuestos roncaréis regocijados,</l>
+               <l n="14" met="--+--+---+-">¡respetables ratones reformistas!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s344n_1191">
+            <head>¡Cómo comes!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+---+-">¡Caramba! ¡Cómo comes, compañero!</l>
+               <l n="2" met="-+-+-+---+-">Comiendo cada cosa con cuidado.</l>
+               <l n="3" met="--+--+---+-">¡Cual canónigo comes, condenado!</l>
+               <l n="4" met="-----+---+-">Como, como cumplido caballero.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+-+-+-">Comiste caracoles, col, carnero,</l>
+               <l n="6" met="--+--++--+-">calamares, caviar, corzo cebado,</l>
+               <l n="7" met="-+---++--+-">costillas, coliflor, congrio curado...!</l>
+               <l n="8" met="-+---+-+-+-">¡Comieras, comilón, curtido cuero!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+----+-">¡Claro! Como comer, como caliente.</l>
+               <l n="10" met="-+----+--+-">Con cólico caerás. Con candamomo</l>
+               <l n="11" met="-++--+-+-+-">curarlos conseguí completamente.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-">¿Compotas? ¡Compasión! ¡Cómico cromo!</l>
+               <l n="13" met="+-+--+---+-">¿Cómo comes con cara complaciente?</l>
+               <l n="14" met="+---++-">¿Cómo como? ¡Cá! Como como como.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s344n_1192">
+            <head>Contra el histérico</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+++--+---+-">Mezcla un poco del ácido sulfúrico,</l>
+               <l n="2" met="--+--+---+-">con el láctico, el pícrico y el bórico;</l>
+               <l n="3" met="-+-+-++--+-" enjamb="B-pb_adj_adv">y agrégale después ácido clórico</l>
+               <l n="4" met="+-+--+---+-" enjamb="I-pb_adj_adv">bien disuelto en el ácido ingasúrico.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-">Por la reacción del ácido telórico,</l>
+               <l n="6" met="---+-+---+-">y sometiendo el líquido al calórico,</l>
+               <l n="7" met="---+-+---+-">con adición del ácido fosfórico,</l>
+               <l n="8" met="--+--+---+-">combinando en caliente con el úrico,</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">obtendrás, si incorporas el butírico,</l>
+               <l n="10" met="+-+--+---+-" enjamb="B-ex_subj_verb">una sal, a que el ácido subérico</l>
+               <l n="11" met="-++--+---+-" enjamb="I-ex_subj_verb">dará un brillo metálico hidrargírico.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-">Bébete este compuesto climatérico;</l>
+               <l n="13" met="-++--+-+-+-">y ya veras, mujer, como un empírico</l>
+               <l n="14" met="++---+---+-">te libra para siempre del histérico.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s344n_1193">
+            <head>Sales sin sal</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+-+-" enjamb="B-ex_subj_verb">¡Sal soneto sin sal! ¡Saca sensato</l>
+               <l n="2" met="---+--+--+-" enjamb="I-ex_subj_verb">salobridad siquiera! ¡Sé salino!</l>
+               <l n="3" met="-+-+-+---+-" enjamb="B-ex_subj_verb">Sorbiendo sal seguido, Saladino</l>
+               <l n="4" met="-+---+-+-+-" enjamb="I-ex_subj_verb">salvó su situación sin ser silbato.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+--+---+-">Salicinina, salol, salicilato,</l>
+               <l n="6" met="-+---+---+-">sub-sales salicílicas, succino,</l>
+               <l n="7" met="--+--+---+-">solimán, sulfureto, santonino,</l>
+               <l n="8" met="---++----+-">sulfaminol, sílicio, silicato;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+-+-+-">si sabias sales sois, salad sextetos.</l>
+               <l n="10" met="-+---+---+-">Salvando salaciones superables,</l>
+               <l n="11" met="--+-++---+-">sugiriéndome símiles secretos,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++-++--+-">sacaré, -sí señor- siendo sacables,</l>
+               <l n="13" met="-+---+---+-">salobres, saladísimos sonetos...</l>
+               <l n="14" met="--+--+---+-">si salidos sin sal, salificables.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s344n_1194">
+            <head>Soneto chino</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++---+-+-+-">¡Qué higiénico resulta el té Houlong,</l>
+               <l n="2" met="-+--++---+-">mezclado con un poco de gin-seng,</l>
+               <l n="3" met="-+-+---+-+-" enjamb="B-ex_subj_verb">cuando es del puro que recibe Weng</l>
+               <l n="4" met="---+-+--+-" enjamb="I-ex_subj_verb">el mercader de efectos de Hong-Kong!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+--++-+-+-" enjamb="B-ex_subj_verb">Comprendo que no teman a un Armstrong</l>
+               <l n="6" met="-+----+-+-" enjamb="I-ex_subj_verb">los chinos de Tsung-Hái y de Tái-Yuéng,</l>
+               <l n="7" met="-+---+---+-">de Kwansi, de Ning-Kiang y de Chung-Tiéng,</l>
+               <l n="8" met="--+--+---+-">de Ning-Pó, de Nankín y de Souchóng.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+++---+-">Bebido el té, me pongo el Smocking;</l>
+               <l n="10" met="--+--+---+-">y fumando mi pipa de Kwantúng,</l>
+               <l n="11" met="++++----+-+">me paso un rato en el Skáting-Ríng.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-">Vuelvo a casa: reposo la Zeitúng;</l>
+               <l n="13" met="-----+++-+-">y después de saber que aún vive el King,</l>
+               <l n="14" met="+-++-+--+-">pido el sueño a otra taza de Yuén-Súng.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s344n_1195">
+            <head>Soneto sueco</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-++--+---+-">¿Porqué me detendría en Strewjmoj?</l>
+               <l n="2" met="+-+--+---+-">¡Hielos, bálago, musgo, almoraduj!</l>
+               <l n="3" met="--++-+-+-+-">Por cubrirme la faz con un cambuj</l>
+               <l n="4" met="+-+-++---+-">me dejaron un día sin reloj.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+----++--+-">Húbeme de calzar suecos de boj</l>
+               <l n="6" met="---+++---+-">y encapillarme bien con el ganduj.</l>
+               <l n="7" met="--++-+--++-">A mi costa esa gente sacó el fluj,</l>
+               <l n="8" met="+-+--++--+-">cada vez que pegaba un pedicoj.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+--++-+-+-">Si no es porque me embarco en un pataj,</l>
+               <l n="10" met="--+--+---+-">prometiendo volver al abenmej,</l>
+               <l n="11" met="+-++-+---+-">dejo allí bolsa, flechas y carcaj.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-++--+-">Escarmentado estoy, amigo Aruéj.</l>
+               <l n="13" met="--++-+---+-">Aunque me den las minas del balaj,</l>
+               <l n="14" met="++---+---+-">me vuelvo a mi región de Abaguanej.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s344n_1196">
+            <head>Soneto hebreo</head>
+            <lg n="1" type="unknown">
+               <l n="1" met="-+---+---+-">Bebiendo mansedumbres en Jacob,</l>
+               <l n="2" met="-----+-+-+-">que a la vez que patriarca fue nabab,</l>
+               <l n="3" met="-+-+---+-+-">forjó Gentrudis su novela Sap</l>
+               <l n="4" met="---+-+---+-">con la paciencia mística de Job.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+++--+-+-+-" enjamb="B-ex_subj_verb">Yo no puedo escribir. La acción del rob</l>
+               <l n="6" met="+-+--+-+-+-" enjamb="I-ex_subj_verb">me sumerge en las sombras de un boabab,</l>
+               <l n="7" met="-+---+---+-" enjamb="B-ex_subj_verb">de aquellos que en la patria de Moab</l>
+               <l n="8" met="-+---+-+-+-" enjamb="I-ex_subj_verb">trocaron en asceta al más snob.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+-+---+-">¿Cómo pedir sus alas al querub,</l>
+               <l n="10" met="---+-+---+-">o sus estóicos fallos al hegib.</l>
+               <l n="11" met="--+--++--+-">o su fe de profeta a un Habacub,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+--++-">o sus conceptos mágicos a un Gib,</l>
+               <l n="13" met="-++--+---+-">quien no acierta a encontrar, desde su Horeb,</l>
+               <l n="14" met="+----+---+-">tierras de promisión como Caleb?</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s344n_1197">
+            <head>Soneto persa</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">Contando con la ayuda de Jheováh,</l>
+               <l n="2" met="+-+--+---+-">me interné por la estepa del Agréh,</l>
+               <l n="3" met="-+-+-+---+-">llegando, sano y salvo, a Devayeh,</l>
+               <l n="4" met="--+--+-+-+-">donde tuve el honor de ver al Shah.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">Cubierto de riquísimo surah</l>
+               <l n="6" met="--+--+---+-">y leyendo el grandioso Shah-Nameh,</l>
+               <l n="7" met="-+---+---+-">hallémelo, de nuevo, en Boureydéh,</l>
+               <l n="8" met="+--+-+---+-">punto en que lo guardaba el padischáh.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+---+-">¡Pero que sol! ¡Ni el hielo de Sandóh,</l>
+               <l n="10" met="--+--+---+-">ni los árticos musgos del Suróh</l>
+               <l n="11" met="-+---+---+-">refrescan las llanuras de Ghutníh!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+-+-+-">Entre abrasada arena fui a Barkúh,</l>
+               <l n="13" met="-+-+-+-+-+-">y me embarqué asfixiándome en Tarkúh,</l>
+               <l n="14" met="--+--+---+-">maldiciendo el calor de Osmanfalíh!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s344n_1198">
+            <head>Soneto turco</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+---+-">Para bárbaros blancos, Ghemorúk.</l>
+               <l n="2" met="--+--+---+-">Para zancos ridículos, Albék.</l>
+               <l n="3" met="---+-+---+-">Para maderas vírgenes Ilék.</l>
+               <l n="4" met="-+---+---+-">Para ágiles refígeros, Ipúk.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-">Para marfiles diáfanos, Murzúk.</l>
+               <l n="6" met="+-+--+---+-">Par higiénicos lúpidos, Pysék</l>
+               <l n="7" met="---+-+---+-">Para tebáicos báquicos, Hupék.</l>
+               <l n="8" met="--+--+---+-">Para dátiles cándidos, Mabrúk.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">Para ostrícolas regias, Chesapík.</l>
+               <l n="10" met="--+--+---+-">Para búfalos gordos, Omenák.</l>
+               <l n="11" met="--+--+---+-">Para bálago helado, Upernavík.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">Para bichos mortíferos, Sihák.</l>
+               <l n="13" met="++--+---+-">Par tétricas focas, Reykjhavík.</l>
+               <l n="14" met="--+--+----+-">Para kábila cruel, Kjalikasák.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s344n_1199">
+            <head>Soneto ruso</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+--+--+-">¡Qué herejía, Señor! Ir al Falstaff</l>
+               <l n="2" met="-+-+-+---+-">zumbándome las notas del Surcouff!</l>
+               <l n="3" met="-+--++--++-">Seguro que no duermo ni en le Pouff,</l>
+               <l n="4" met="-++------+-">si no tomo el Estroncio de Paraff.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-">Igual que en mares el pirata Graff</l>
+               <l n="6" met="-+-+---+-+-">o en tierras firmes el emir Yusuff,</l>
+               <l n="7" met="-+-+-++--+-">persígueme Offenbach, Verdi y Buruouff,</l>
+               <l n="8" met="---+---+-+-">como persigue en los Madgyares, Raff.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">Por ver al general Stambuloff,</l>
+               <l n="10" met="--++-+---+-">que parece un espectro de Radcliff,</l>
+               <l n="11" met="+----+---+-">alto como la torre Malakoff,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+++-+-">fui al teatro no más. Venga un rosbiff;</l>
+               <l n="13" met="--+--+---+-">y o me olvido del ruso del Azoff...</l>
+               <l n="14" met="-+---+---+-">o sueños con los bárbaros del Riff.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s344n_1200">
+            <head>¡Anda aprisa, ayudante!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+---+-+-">-Ayestarán: amaneció apirético.</l>
+               <l n="2" met="--+---+--+-">-Alimento adecuado-. Amat: artrítico.</l>
+               <l n="3" met="---+--+--+-">-Analgesina-. Arbués; abceso ascítico.</l>
+               <l n="4" met="---+--+-">-Acupuntura. Apiol. Acido acético.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---++---+--">-Alzugaray: anuria-. Algo aloético.</l>
+               <l n="6" met="-+---+---+-">-Ausúrez: aneurisma-. Algo aconítico.</l>
+               <l n="7" met="-+---+---+-">-Antón: albuminuria-. Al analítico.</l>
+               <l n="8" met="---+--+--+-">Aurelia Azúcar: aborto-. Aceite abético.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">-Argüelles: accidente aponeurótico.</l>
+               <l n="10" met="---+---+-">-Afusiones. Anís-. Achón, asiático:</l>
+               <l n="11" met="-+----+-">ascárides-. Almácigo apazótico.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+--+--+-">¡Avívate!- Acabóse. Auset: asmático.</l>
+               <l n="13" met="--+-+---+-">-Amapola. Aspirar ácido azótico.</l>
+               <l n="14" met="--+--+---+-">¡A almorzar, ayudante anagramático!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s344n_1201">
+            <head>La Enmienda Platt</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+-+-+-">Tal vez porque a las buenas no medrabas,</l>
+               <l n="2" met="--+--++--+-">simulacro naval quiso imponerte;</l>
+               <l n="3" met="--+-++--++-">y opinión del país, fue, sin leerte,</l>
+               <l n="4" met="---+-+---+-">que Libertad y Patria cercenabas.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+-+-+-">La Convención después, de luchas bravas,</l>
+               <l n="6" met="--+++---++-">aprobarte decide al conocerte.</l>
+               <l n="7" met="--+--+-+++-">Diplomacia o lealtad, ¿temió al más fuerte</l>
+               <l n="8" met="--+-++-+-+-">o salvándote vio que nos salvabas?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+--++-">Si entiendo de política muy poco,</l>
+               <l n="10" met="-+-+---+++-" enjamb="B-pb_verb_chain">la tierra miro que tu ley nos quita</l>
+               <l n="11" met="---+-+-+-+-" enjamb="I-pb_verb_chain">sin descubrir, en cambio, el bien que creas.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+-+-+-">De tu propia conciencia el juicio invoco,</l>
+               <l n="13" met="-++--+--+-">y te digo: ¿Proteges? ¡Sé bendita!</l>
+               <l n="14" met="+------++-">¿Cubres la usurpación? ¡Maldita seas!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

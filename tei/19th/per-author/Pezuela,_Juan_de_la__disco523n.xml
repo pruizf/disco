@@ -1,94 +1,158 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Juan de la Pezuela</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_523n"/>
-          <name type="short">Pezuela</name>
-          <name type="full">
-            <name type="first-name">Juan</name>
-            <name type="preposition-name">de la</name>
-            <name type="second-name">Pezuela</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">89</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_523n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_523n" role="author" sex="M">
-            <persName>Juan de la Pezuela</persName>
-            <birth><placeName type="place">Lima</placeName>, <placeName type="country">Perú</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1809" cert="high">1809</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Madrid</placeName>, <date type="year" when="1906" cert="high">1906</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Juan de la Pezuela</title>
+            <author corresp="#disco_523n">Juan de la Pezuela</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">89</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_523n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_523n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Pezuela</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan</forename>
+                     <nameLink>de la</nameLink>
+                     <surname property="foaf:familyName">Pezuela</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan de la Pezuela</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Lima</settlement>
+                           <country>Perú</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1809" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1906" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s523n_1946" about="dbpedia:Soneto">
+                        <title property="dc:title">Después de la batalla de Mendigorría</title>
+                        <title type="incipit" property="dc:alternative">AL noble ardor de juventud guerrera,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Juan de la Pezuela</head>
-        <p>Lima. 1809 - 1906</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s523n_1946">
-        <head>Después de la batalla de Mendigorría</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">AL noble ardor de juventud guerrera,</l>
-          <l n="2">por Madre excelsa y al deber fiada,</l>
-          <l n="3">crece nueva Isabel, hoy coronada</l>
-          <l n="4">bajo el dosel de cuádruple bandera.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Nuestras líneas arrolla hueste fiera;</l>
-          <l n="6">¡pasa el Ebro! ¡Castilla gime hollada!</l>
-          <l n="7">¡Fugaz blasón! Cristina denodada</l>
-          <l n="8">pecho al peligro opone y alma entera.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Y el sol bueno nos da Mendigorría;</l>
-          <l n="10">y el cañón de Descarga extingue al malo...</l>
-          <l n="11">respira «¡oh libertad!» ¡Tuyo es el día!</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Con nosotros ya son Bretón y Galo:</l>
-          <l n="13">y reina una Isabel, y a la lid guía</l>
-          <l n="14">un impávido nieto de Gonzalo.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Juan de la Pezuela</head>
+            <p>Lima. 1809 - 1906</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s523n_1946">
+            <head>Después de la batalla de Mendigorría</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+---+-+-">AL noble ardor de juventud guerrera,</l>
+               <l n="2" met="-+-+----++-">por Madre excelsa y al deber fiada,</l>
+               <l n="3" met="+-+--++--+-">crece nueva Isabel, hoy coronada</l>
+               <l n="4" met="---+-+---+-">bajo el dosel de cuádruple bandera.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+-+-+-">Nuestras líneas arrolla hueste fiera;</l>
+               <l n="6" met="+--+-+--+-">¡pasa el Ebro! ¡Castilla gime hollada!</l>
+               <l n="7" met="-+-+--+-" enjamb="B-pb_adj_noun">¡Fugaz blasón! Cristina denodada</l>
+               <l n="8" met="+--+-++--+-" enjamb="I-pb_adj_noun">pecho al peligro opone y alma entera.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++-++---+-">Y el sol bueno nos da Mendigorría;</l>
+               <l n="10" met="--+--+-+-+-">y el cañón de Descarga extingue al malo...</l>
+               <l n="11" met="-+---+-+-+-">respira «¡oh libertad!» ¡Tuyo es el día!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+-++-+-+-">Con nosotros ya son Bretón y Galo:</l>
+               <l n="13" met="-++--+--++-" enjamb="B-ex_subj_verb">y reina una Isabel, y a la lid guía</l>
+               <l n="14" met="+-+--+---+-" enjamb="I-ex_subj_verb">un impávido nieto de Gonzalo.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

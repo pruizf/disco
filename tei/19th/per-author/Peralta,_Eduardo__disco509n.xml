@@ -1,299 +1,382 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Eduardo Peralta</title>
-        <author>
-          <idno type="viaf" cert="medium">29867814</idno>
-          <idno type="#disco" xml:id="disco_509n"/>
-          <name type="short">Peralta</name>
-          <name type="full">
-            <name type="first-name">Eduardo</name>
-            <name type="second-name">Peralta</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">9</measure>
-        <measure unit="tokens">898</measure>
-        <measure unit="line">126</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_509n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_509n" role="author" sex="M">
-            <persName>Eduardo Peralta</persName>
-            <birth><placeName type="place">Costa Rica</placeName>, <placeName type="country">Costa Rica</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Eduardo Peralta</title>
+            <author corresp="#disco_509n">Eduardo Peralta</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">9</measure>
+            <measure unit="tokens">898</measure>
+            <measure unit="line">126</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_509n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_509n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="medium" resource="https://viaf.org/viaf/29867814"/>
+                  <persName type="short">Peralta</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Eduardo</forename>
+                     <surname property="foaf:familyName">Peralta</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Eduardo Peralta</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Costa Rica</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s509n_1917" about="dbpedia:Soneto">
+                        <title property="dc:title">A mi patria</title>
+                        <title type="incipit" property="dc:alternative">Hija hermosa, ilusión de mis abuelos,</title>
+                     </bibl>
+                     <bibl resource="disco#s509n_1918" about="dbpedia:Soneto">
+                        <title property="dc:title">¡Triunfo...!</title>
+                        <title type="incipit" property="dc:alternative">Pasó la guerra ya... El hogar querido</title>
+                     </bibl>
+                     <bibl resource="disco#s509n_1919" about="dbpedia:Soneto">
+                        <title property="dc:title">Hidalgos y morelos</title>
+                        <title type="incipit" property="dc:alternative">El grito de Dolores es la voz que despierta</title>
+                     </bibl>
+                     <bibl resource="disco#s509n_1920" about="dbpedia:Soneto">
+                        <title property="dc:title">A S. M. la reina Victoria</title>
+                        <title type="incipit" property="dc:alternative">Llegue mi voz a ti, Reina de España;</title>
+                     </bibl>
+                     <bibl resource="disco#s509n_1921" about="dbpedia:Soneto">
+                        <title property="dc:title">A Bolívar</title>
+                        <title type="incipit" property="dc:alternative">¡Oh, Padre! Oye la voz que a tu infinita</title>
+                     </bibl>
+                     <bibl resource="disco#s509n_1922" about="dbpedia:Soneto">
+                        <title property="dc:title">A Colón</title>
+                        <title type="incipit" property="dc:alternative">Siempre Dios suscitaba un gran profeta</title>
+                     </bibl>
+                     <bibl resource="disco#s509n_1923" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto de amor</title>
+                        <title type="incipit" property="dc:alternative">El tic-tac de la lluvia sobre el techo</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Eduardo Peralta</head>
-        <p>Costa Rica. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s509n_1917">
-        <head>A mi patria</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Hija hermosa, ilusión de mis abuelos,</l>
-          <l n="2">blanca flor en las olas transportada,</l>
-          <l n="3">yo te amo en tus hijos retratada,</l>
-          <l n="4">en tus campos, ciudades y en tus cielos.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Son tu riqueza inagotables suelos,</l>
-          <l n="6">es tu fuerza la escuela y no la espada,</l>
-          <l n="7">tu palacio es la hacienda cultivada</l>
-          <l n="8">en que riegan diamantes los riachuelos...</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Diste tú a Colón sus aguas puras</l>
-          <l n="10">que apagaron su sed; y de tu frente</l>
-          <l n="11">duro ceño borraron de amarguras...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">El te dio, dulce Patria, por presente</l>
-          <l n="13">Nombre, Sangre, Lenguaje y Fe Sagrada;</l>
-          <l n="14">¡te hizo rica al nacer de su mirada!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s509n_1918">
-        <head>¡Triunfo...!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Pasó la guerra ya... El hogar querido</l>
-          <l n="2">los obreros confiados reconstruyen;</l>
-          <l n="3">las libérrimas fasces sustituyen</l>
-          <l n="4">a coronas que ruedan al olvido.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">El poder musulmán llora vencido,</l>
-          <l n="6">y de Europa sus fieras hordas huyen;</l>
-          <l n="7">y en el bien del taller cambios influyen</l>
-          <l n="8">que lo libran del lucro desmedido...</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mas... en su Liga niegan las Naciones</l>
-          <l n="10">un asiento al pastor de toda grey!...</l>
-          <l n="11">¡No importa, oh, Cruz!... Tú vences sin cañones;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">que no en vano el triunfo del martirio</l>
-          <l n="13">por laurel en tus brazos puso un lirio</l>
-          <l n="14">coronado del título: «¡Soy Rey!»</l>
-        </lg>
-      </lg>
-      <lg type="sonnet-sequence">
-        <head>Hidalgos y morelos</head>
-        <lg type="sonnet" xml:id="s509n_1919_01">
-          <head>I</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">El grito de Dolores es la voz que despierta</l>
-            <l n="2">la conciencia de un pueblo sumida en el letargo,</l>
-            <l n="3">clarín de Roncesvalles que en penetrante y largo</l>
-            <l n="4">clamor, esparce al viento un infinito alerta.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Morelos tiene el alma para ese grito abierta;</l>
-            <l n="6">su paz de sacerdote trueca por el amargo</l>
-            <l n="7">trajín del guerrillero, y en el sublime cargo</l>
-            <l n="8">de encender en las almas la fe constante y cierta.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">¡Oh, sí! Cuando de Hidalgo el enemigo hiende</l>
-            <l n="10">la vida, cuando su alma al infinito asciende,</l>
-            <l n="11">parece que una herencia dejara en el suplicio;</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Morelos la recoge con serena mirada;</l>
-            <l n="13">bien sabe que el martirio cortará su jornada,</l>
-            <l n="14">que ha de ser de su vida, corona el sacrificio.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s509n_1919_02">
-          <head>II</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Son Hidalgo y Morelos como el gran Don Quijote</l>
-            <l n="2">constante enamorado de sin par Dulcinea;</l>
-            <l n="3">son firmes paladines de una sublime idea;</l>
-            <l n="4">llevan en sus escudos el más altivo mote.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Tienen sangre impetuosa; son un soberbio brote</l>
-            <l n="6">de la estirpe de libres, de la noble ralea</l>
-            <l n="7">que acción y ensueño juntan; de los que en la pelea</l>
-            <l n="8">mueren mas no hay empuje que si ideal derrote.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Casta de los que dejan a su paso una llama</l>
-            <l n="10">que prende inextinguible y a su paso derrama</l>
-            <l n="11">devorador incendio sobre la tierra impura.</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Quien caer los contempla, los ojos a los cielos</l>
-            <l n="13">levanta en el instante. Son Hidalgo y Morelos</l>
-            <l n="14">eterna para el alma, una visión de altura.</l>
-          </lg>
-        </lg>
-      </lg>
-      <lg type="sonnet-sequence">
-        <head>A S. M. la reina Victoria</head>
-        <lg type="sonnet" xml:id="s509n_1920_01">
-          <head>I</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Llegue mi voz a ti, Reina de España;</l>
-            <l n="2">hay en tu nombre un símbolo de gloria;</l>
-            <l n="3">pues al llamarte el español Victoria,</l>
-            <l n="4">el triunfo dice en la tenaz campaña.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Al grito de Victoria, nunca huraña</l>
-            <l n="6">será la suerte, y en la hispana historia,</l>
-            <l n="7">guardará cada página memoria</l>
-            <l n="8">de alguna heroica fulgurante hazaña.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Compañera de Alfonso le sublimas;</l>
-            <l n="10">llevas su mente a las excelsas cimas</l>
-            <l n="11">le imprimes tu bondad para los seres.</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Por su alta mente y su virtud constante,</l>
-            <l n="13">El es de nuestra casta hierofante:</l>
-            <l n="14">es nuestro Rey, y nuestra Reina tú eres.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s509n_1920_02">
-          <head>II</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Tan bella es y tan buena, que siempre me parece</l>
-            <l n="2">que es deidad esta Reina en la tierra española;</l>
-            <l n="3">a su corona adjunta magnífica aureola;</l>
-            <l n="4">el amor de su pueblo que el corazón le ofrece.</l>
-          </lg>
-          <lg n="2" type="unknown">
-            <l n="5">Amado de Victoria, hoy Alfonso merece</l>
-            <l n="6">la enseña que triunfante nuestra raza tremola,</l>
-            <l n="7">y lleva en letras de oro esta leyenda sola:</l>
-            <l n="8">«Rey es de nuestra casta el Rey Alfonso XIII».</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Cuando evoca la imagen de Victoria la mente,</l>
-            <l n="10">con su actitud gallarda, con su serena frente,</l>
-            <l n="11">con su bondad que el cielo ha trocado su casa,</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">una visión semeja de la divina altura,</l>
-            <l n="13">y dice el pensamiento ante su imagen pura:</l>
-            <l n="14">«es preciso inclinarse, que nuestra Reina pasa».</l>
-          </lg>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s509n_1921">
-        <head>A Bolívar</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Oh, Padre! Oye la voz que a tu infinita</l>
-          <l n="2">región de gloria América levanta;</l>
-          <l n="3">un solo acento es hoy el que te canta</l>
-          <l n="4">y un solo corazón por ti palpita.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Te ofrece amor que las fronteras quita,</l>
-          <l n="6">y un solo pedestal pone a tu planta;</l>
-          <l n="7">la gloria de tu nombre hoy a la santa</l>
-          <l n="8">Unión Americana nos invita.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Bajo tu nombre que fulgor derrama,</l>
-          <l n="10">en cada corazón prende la llama</l>
-          <l n="11">de amor a una admirable Patria sola.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">En tu acción libertaria hay un contraste:</l>
-          <l n="13">A España combatiste, a España honraste,</l>
-          <l n="14">porque honraste a la América española.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s509n_1922">
-        <head>A Colón</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Siempre Dios suscitaba un gran profeta</l>
-          <l n="2">para su pueblo que iba hacia la ruina</l>
-          <l n="3">cuando olvidaba aquella luz divina</l>
-          <l n="4">que la guiaba a una gloriosa meta.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Así te miro; genio que interpreta</l>
-          <l n="6">los designios celestes, ilumina</l>
-          <l n="7">Dios tu mente y tus pasos encamina,</l>
-          <l n="8">Colón, vidente, mártir y poeta.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Tu pensamiento es infinito foco</l>
-          <l n="10">que ilumina una edad. Te llaman loco</l>
-          <l n="11">por exceso de luz que hay en tu mente.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Porque en ella contemplas como brilla</l>
-          <l n="13">al través del Atlántico, la orilla</l>
-          <l n="14">de un admirable, nuevo Continente.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s509n_1923">
-        <head>Soneto de amor</head>
-        <lg n="1" type="serventesio">
-          <l n="1">El tic-tac de la lluvia sobre el techo</l>
-          <l n="2">me recuerda tu rostro junto al mar;</l>
-          <l n="3">los latidos que saltan en mi pecho</l>
-          <l n="4">se suman a la lluvia y su cantar.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Quiero que estés aquí, dentro del lecho,</l>
-          <l n="6">quiero la fiesta de tu acariciar;</l>
-          <l n="7">no me bastan los versos que te he hecho,</l>
-          <l n="8">quiero tu cuerpo ingrávido y lunar.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">No poderte tocar me vuelve inquieto,</l>
-          <l n="10">sediento de tus hambres de mujer;</l>
-          <l n="11">quiero que vengas ya con tu amuleto,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">el que hace al mundo desaparecer.</l>
-          <l n="13">¡Mientras tanto te escribo este soneto,</l>
-          <l n="14">antes de juntos sucumbir y arder!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Eduardo Peralta</head>
+            <p>Costa Rica. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s509n_1917">
+            <head>A mi patria</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-">Hija hermosa, ilusión de mis abuelos,</l>
+               <l n="2" met="+-+--+---+-">blanca flor en las olas transportada,</l>
+               <l n="3" met="++---+---+-">yo te amo en tus hijos retratada,</l>
+               <l n="4" met="--+--+---+-">en tus campos, ciudades y en tus cielos.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-">Son tu riqueza inagotables suelos,</l>
+               <l n="6" met="+-+--+-+-+-">es tu fuerza la escuela y no la espada,</l>
+               <l n="7" met="--++-+---+-">tu palacio es la hacienda cultivada</l>
+               <l n="8" met="--+--+---+-">en que riegan diamantes los riachuelos...</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+-+-+-" enjamb="B-cc_crossclause">Diste tú a Colón sus aguas puras</l>
+               <l n="10" met="--+--+---+-" enjamb="B-pb_adj_adv I-cc_crossclause">que apagaron su sed; y de tu frente</l>
+               <l n="11" met="+-+--+---+-" enjamb="I-pb_adj_adv">duro ceño borraron de amarguras...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+++-+---+-">El te dio, dulce Patria, por presente</l>
+               <l n="13" met="+-+--+---+-">Nombre, Sangre, Lenguaje y Fe Sagrada;</l>
+               <l n="14" met="+-+--+---+-">¡te hizo rica al nacer de su mirada!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s509n_1918">
+            <head>¡Triunfo...!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+-+-+-" enjamb="B-ex_subj_verb">Pasó la guerra ya... El hogar querido</l>
+               <l n="2" met="--+--+---+-" enjamb="I-ex_subj_verb">los obreros confiados reconstruyen;</l>
+               <l n="3" met="--+--+---+-" enjamb="B-ex_dobj_verb">las libérrimas fasces sustituyen</l>
+               <l n="4" met="--+--+---+-" enjamb="I-ex_dobj_verb">a coronas que ruedan al olvido.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--++--+-">El poder musulmán llora vencido,</l>
+               <l n="6" met="--+--+-+-+-">y de Europa sus fieras hordas huyen;</l>
+               <l n="7" met="--+--++--+-" enjamb="B-cc_crossclause">y en el bien del taller cambios influyen</l>
+               <l n="8" met="-++--+---+-" enjamb="B-cc_crossclause I-cc_crossclause">que lo libran del lucro desmedido...</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+-+---+-" enjamb="B-ex_dobj_verb I-cc_crossclause">Mas... en su Liga niegan las Naciones</l>
+               <l n="10" met="+-+--+-+-+-" enjamb="I-ex_dobj_verb">un asiento al pastor de toda grey!...</l>
+               <l n="11" met="++-+++---+-">¡No importa, oh, Cruz!... Tú vences sin cañones;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+---+-" enjamb="B-ex_subj_verb">que no en vano el triunfo del martirio</l>
+               <l n="13" met="--+--+-+++-" enjamb="I-ex_subj_verb">por laurel en tus brazos puso un lirio</l>
+               <l n="14" met="--+--+--++-">coronado del título: «¡Soy Rey!»</l>
+            </lg>
+         </lg>
+         <lg type="sonnet-sequence" xml:id="s509n_1919">
+            <head>Hidalgos y morelos</head>
+            <lg type="sonnet" xml:id="s509n_1919_01">
+               <head>I</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-+---+-+-+--+-" enjamb="B-ex_dobj_verb">El grito de Dolores es la voz que despierta</l>
+                  <l n="2" met="--+-++--+---+-" enjamb="I-ex_dobj_verb">la conciencia de un pueblo sumida en el letargo,</l>
+                  <l n="3" met="-+---+----+-+-" enjamb="B-pb_adj_noun">clarín de Roncesvalles que en penetrante y largo</l>
+                  <l n="4" met="-+-+-++--+-+-" enjamb="I-pb_adj_noun">clamor, esparce al viento un infinito alerta.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="+-++-+--+-+-+-">Morelos tiene el alma para ese grito abierta;</l>
+                  <l n="6" met="-+---+-+----+-" enjamb="B-pb_adj_noun">su paz de sacerdote trueca por el amargo</l>
+                  <l n="7" met="-+---+----+-+-" enjamb="B-pb_noun_prep I-pb_adj_noun">trajín del guerrillero, y en el sublime cargo</l>
+                  <l n="8" met="--+--+--+-+-+-" enjamb="I-pb_noun_prep">de encender en las almas la fe constante y cierta.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-+-+---+-+--+-" enjamb="B-ex_dobj_verb">¡Oh, sí! Cuando de Hidalgo el enemigo hiende</l>
+                  <l n="10" met="-+---+---+-+-" enjamb="I-ex_dobj_verb">la vida, cuando su alma al infinito asciende,</l>
+                  <l n="11" met="-+-+-+--+---+-">parece que una herencia dejara en el suplicio;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+-+--+---+--+-">Morelos la recoge con serena mirada;</l>
+                  <l n="13" met="++---+---+--+-">bien sabe que el martirio cortará su jornada,</l>
+                  <l n="14" met="+-+--+--+---+-">que ha de ser de su vida, corona el sacrificio.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s509n_1919_02">
+               <head>II</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="--+--+---+--+-">Son Hidalgo y Morelos como el gran Don Quijote</l>
+                  <l n="2" met="-+---+---+--+-">constante enamorado de sin par Dulcinea;</l>
+                  <l n="3" met="++---+-+--+-+-">son firmes paladines de una sublime idea;</l>
+                  <l n="4" met="+----+--+-+-+-">llevan en sus escudos el más altivo mote.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="+-+--+-++-+-+-" enjamb="B-pb_noun_prep">Tienen sangre impetuosa; son un soberbio brote</l>
+                  <l n="6" met="--+--+---+--+-" enjamb="I-pb_noun_prep">de la estirpe de libres, de la noble ralea</l>
+                  <l n="7" met="-+-+-+------+-">que acción y ensueño juntan; de los que en la pelea</l>
+                  <l n="8" met="+--+-+---+-+-">mueren mas no hay empuje que si ideal derrote.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+----+---++-+-" enjamb="B-cc_crossclause">Casta de los que dejan a su paso una llama</l>
+                  <l n="10"
+                     met="-+---+---+--+-"
+                     enjamb="B-ex_dobj_verb I-cc_crossclause">que prende inextinguible y a su paso derrama</l>
+                  <l n="11" met="---+-+----+-+-" enjamb="I-ex_dobj_verb">devorador incendio sobre la tierra impura.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+--+--+---+-" enjamb="B-ex_subj_verb">Quien caer los contempla, los ojos a los cielos</l>
+                  <l n="13" met="-+---+---+--+-" enjamb="I-ex_subj_verb">levanta en el instante. Son Hidalgo y Morelos</l>
+                  <l n="14" met="-+---++--+-+-">eterna para el alma, una visión de altura.</l>
+               </lg>
+            </lg>
+         </lg>
+         <lg type="sonnet-sequence" xml:id="s509n_1920">
+            <head>A S. M. la reina Victoria</head>
+            <lg type="sonnet" xml:id="s509n_1920_01">
+               <head>I</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+--+-+---+-">Llegue mi voz a ti, Reina de España;</l>
+                  <l n="2" met="+-+-++---+-">hay en tu nombre un símbolo de gloria;</l>
+                  <l n="3" met="---++--+-+-">pues al llamarte el español Victoria,</l>
+                  <l n="4" met="-+-+---+-+-">el triunfo dice en la tenaz campaña.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+---+-+-+-" enjamb="B-pb_verb_chain">Al grito de Victoria, nunca huraña</l>
+                  <l n="6" met="-+-+--+--+-" enjamb="I-pb_verb_chain">será la suerte, y en la hispana historia,</l>
+                  <l n="7" met="--++-+---+-" enjamb="B-pb_noun_prep">guardará cada página memoria</l>
+                  <l n="8" met="-+-+---+-+-" enjamb="I-pb_noun_prep">de alguna heroica fulgurante hazaña.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-----+-+-+-">Compañera de Alfonso le sublimas;</l>
+                  <l n="10" met="+--+---+-+-">llevas su mente a las excelsas cimas</l>
+                  <l n="11" met="++---+---+-">le imprimes tu bondad para los seres.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+-+---+-+-">Por su alta mente y su virtud constante,</l>
+                  <l n="13" met="-+---+---+-">El es de nuestra casta hierofante:</l>
+                  <l n="14" met="+--+--+-++-">es nuestro Rey, y nuestra Reina tú eres.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s509n_1920_02">
+               <head>II</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+++-++--+-+-+-">Tan bella es y tan buena, que siempre me parece</l>
+                  <l n="2" met="+-++-+--+--+-">que es deidad esta Reina en la tierra española;</l>
+                  <l n="3" met="---+-+--+--+-">a su corona adjunta magnífica aureola;</l>
+                  <l n="4" met="--+--+----+++-">el amor de su pueblo que el corazón le ofrece.</l>
+               </lg>
+               <lg n="2" type="unknown">
+                  <l n="5" met="-----++-+--+-" enjamb="B-ex_dobj_verb">Amado de Victoria, hoy Alfonso merece</l>
+                  <l n="6" met="-+---+---+--+-" enjamb="I-ex_dobj_verb">la enseña que triunfante nuestra raza tremola,</l>
+                  <l n="7" met="-+-+-++--+-+-">y lleva en letras de oro esta leyenda sola:</l>
+                  <l n="8" met="+---+----+-++-">«Rey es de nuestra casta el Rey Alfonso XIII».</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="--+--+---+--+-">Cuando evoca la imagen de Victoria la mente,</l>
+                  <l n="10" met="---+-+----+-+-">con su actitud gallarda, con su serena frente,</l>
+                  <l n="11" met="---+-++-+--+-">con su bondad que el cielo ha trocado su casa,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+--+-+----+-+-">una visión semeja de la divina altura,</l>
+                  <l n="13" met="-+---+---+-+-">y dice el pensamiento ante su imagen pura:</l>
+                  <l n="14" met="+-+--++---+-+-">«es preciso inclinarse, que nuestra Reina pasa».</l>
+               </lg>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s509n_1921">
+            <head>A Bolívar</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+--+----+-" enjamb="B-pb_adj_noun">¡Oh, Padre! Oye la voz que a tu infinita</l>
+               <l n="2" met="-+-+-+---+-" enjamb="I-pb_adj_noun">región de gloria América levanta;</l>
+               <l n="3" met="++-+++--++-">un solo acento es hoy el que te canta</l>
+               <l n="4" met="++---+-+-+-">y un solo corazón por ti palpita.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+---+-+-">Te ofrece amor que las fronteras quita,</l>
+               <l n="6" met="++---++--+-">y un solo pedestal pone a tu planta;</l>
+               <l n="7" met="-+---++--+-" enjamb="B-ex_subj_verb">la gloria de tu nombre hoy a la santa</l>
+               <l n="8" met="--+----+-+-" enjamb="I-ex_subj_verb">Unión Americana nos invita.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">Bajo tu nombre que fulgor derrama,</l>
+               <l n="10" met="-+---++--+-" enjamb="B-pb_noun_prep">en cada corazón prende la llama</l>
+               <l n="11" met="-++--+-+-+-" enjamb="I-pb_noun_prep">de amor a una admirable Patria sola.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+++-+-">En tu acción libertaria hay un contraste:</l>
+               <l n="13" met="-+---+-+-+-">A España combatiste, a España honraste,</l>
+               <l n="14" met="--+--+---+-">porque honraste a la América española.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s509n_1922">
+            <head>A Colón</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+++-+-">Siempre Dios suscitaba un gran profeta</l>
+               <l n="2" met="---+-+---+-">para su pueblo que iba hacia la ruina</l>
+               <l n="3" met="---+-+-+-+-" enjamb="B-cc_crossclause">cuando olvidaba aquella luz divina</l>
+               <l n="4" met="--+-+--+-+-" enjamb="I-cc_crossclause">que la guiaba a una gloriosa meta.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+++-+---+-" enjamb="B-ex_dobj_verb">Así te miro; genio que interpreta</l>
+               <l n="6" met="--+--+---+-" enjamb="B-ex_subj_verb I-ex_dobj_verb">los designios celestes, ilumina</l>
+               <l n="7" met="--+--+---+-" enjamb="I-ex_subj_verb">Dios tu mente y tus pasos encamina,</l>
+               <l n="8" met="-+-+-+---+-">Colón, vidente, mártir y poeta.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---++--+-+-" enjamb="B-cc_crossclause">Tu pensamiento es infinito foco</l>
+               <l n="10" met="--++--++-+-" enjamb="I-cc_crossclause">que ilumina una edad. Te llaman loco</l>
+               <l n="11" met="--+--++--+-">por exceso de luz que hay en tu mente.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">Porque en ella contemplas como brilla</l>
+               <l n="13" met="--+--+---+-" enjamb="B-pb_noun_prep">al través del Atlántico, la orilla</l>
+               <l n="14" met="+--+-+---+-" enjamb="I-pb_noun_prep">de un admirable, nuevo Continente.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s509n_1923">
+            <head>Soneto de amor</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="--+--+---+-" enjamb="B-ex_subj_verb">El tic-tac de la lluvia sobre el techo</l>
+               <l n="2" met="+-+--+---+-" enjamb="I-ex_subj_verb">me recuerda tu rostro junto al mar;</l>
+               <l n="3" met="--+--+---+-" enjamb="B-ex_subj_verb">los latidos que saltan en mi pecho</l>
+               <l n="4" met="-+---+---+-" enjamb="I-ex_subj_verb">se suman a la lluvia y su cantar.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="+--+-+---+-">Quiero que estés aquí, dentro del lecho,</l>
+               <l n="6" met="+--+-----+-">quiero la fiesta de tu acariciar;</l>
+               <l n="7" met="+++--+--++-">no me bastan los versos que te he hecho,</l>
+               <l n="8" met="+--+-+---+-">quiero tu cuerpo ingrávido y lunar.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-++-+++-+-">No poderte tocar me vuelve inquieto,</l>
+               <l n="10" met="-+---+---+-">sediento de tus hambres de mujer;</l>
+               <l n="11" met="+--+-+---+-">quiero que vengas ya con tu amuleto,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-----+-">el que hace al mundo desaparecer.</l>
+               <l n="13" met="--+-+++--+-">¡Mientras tanto te escribo este soneto,</l>
+               <l n="14" met="---+---+-+-">antes de juntos sucumbir y arder!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

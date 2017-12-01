@@ -1,119 +1,181 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de José de Velilla</title>
-        <author>
-          <idno type="viaf" cert="high">24175453</idno>
-          <idno type="#disco" xml:id="disco_646n"/>
-          <name type="short">Velilla</name>
-          <name type="full">
-            <name type="first-name">José</name>
-            <name type="preposition-name">de</name>
-            <name type="second-name">Velilla</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">184</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_646n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_646n" role="author" sex="M">
-            <persName>José de Velilla</persName>
-            <birth><placeName type="place">Sevilla</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de José de Velilla</title>
+            <author corresp="#disco_646n">José de Velilla</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">184</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_646n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_646n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/24175453"/>
+                  <persName type="short">Velilla</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">José</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Velilla</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">José de Velilla</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Sevilla</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s646n_2375" about="dbpedia:Soneto">
+                        <title property="dc:title">Ecos</title>
+                        <title type="incipit" property="dc:alternative">Con lágrimas ardientes, niña mía,</title>
+                     </bibl>
+                     <bibl resource="disco#s646n_2376" about="dbpedia:Soneto">
+                        <title property="dc:title">A la memoria de la inspirada poetisa Concepción de Estevanera</title>
+                        <title type="incipit" property="dc:alternative">Sé que fuiste infeliz como ninguna:</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>José de Velilla</head>
-        <p>Sevilla. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s646n_2375">
-        <head>Ecos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Con lágrimas ardientes, niña mía,</l>
-          <l n="2">de mis venturas las memorias riego,</l>
-          <l n="3">entre cenizas apagado el fuego</l>
-          <l n="4">que en otras horas por mi bien ardía.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Trocadas la ilusión y la alegría,</l>
-          <l n="6">mi corazón enamorado y ciego,</l>
-          <l n="7">en triste paz, en lánguido sosiego,</l>
-          <l n="8">no volverá a latir como solía.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Y pides hoy para adornar tu palma,</l>
-          <l n="10">un eco de mi lira desprendido!</l>
-          <l n="11">¡Oh, deja, deja que repose en calma!</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">A tu súplica, al fin, ha respondido:</l>
-          <l n="13">respondió con el eco de mi alma,</l>
-          <l n="14">y el eco de mi alma es un gemido.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s646n_2376">
-        <head>A la memoria de la inspirada poetisa Concepción de Estevanera</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Sé que fuiste infeliz como ninguna:</l>
-          <l n="2">te hirió el dolor, mirarte conmovida</l>
-          <l n="3">de todas tus venturas la caída,</l>
-          <l n="4">y las viste morir una por una.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">También me ha herido sin piedad alguna,</l>
-          <l n="6">y bebí de una vez la copa henchida</l>
-          <l n="7">de todos los dolores de la vida...</l>
-          <l n="8">y...¿lo creerás? envidio tu fortuna.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">No te oprime terrena pesadumbre,</l>
-          <l n="10">tu paso por el mundo fue ligero;</l>
-          <l n="11">gozas del cielo la divina lumbre.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¡Y yo, más infeliz, que nada espero,</l>
-          <l n="13">estoy de mi calvario en la alta cumbre</l>
-          <l n="14">y, clavado en mi cruz, gimo y no muero!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>José de Velilla</head>
+            <p>Sevilla. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s646n_2375">
+            <head>Ecos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+-+-+-">Con lágrimas ardientes, niña mía,</l>
+               <l n="2" met="---+---+-+-">de mis venturas las memorias riego,</l>
+               <l n="3" met="---+---+-+-" enjamb="B-cc_crossclause">entre cenizas apagado el fuego</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-cc_crossclause">que en otras horas por mi bien ardía.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">Trocadas la ilusión y la alegría,</l>
+               <l n="6" met="---+---+-+-">mi corazón enamorado y ciego,</l>
+               <l n="7" met="-+-+-+---+-">en triste paz, en lánguido sosiego,</l>
+               <l n="8" met="+--+-+---+-">no volverá a latir como solía.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">¡Y pides hoy para adornar tu palma,</l>
+               <l n="10" met="++---+---+-">un eco de mi lira desprendido!</l>
+               <l n="11" met="-+-+---+-+-">¡Oh, deja, deja que repose en calma!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--++--+-">A tu súplica, al fin, ha respondido:</l>
+               <l n="13" met="--+--+---+-">respondió con el eco de mi alma,</l>
+               <l n="14" met="-+--+-++-+-">y el eco de mi alma es un gemido.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s646n_2376">
+            <head>A la memoria de la inspirada poetisa Concepción de Estevanera</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-">Sé que fuiste infeliz como ninguna:</l>
+               <l n="2" met="++-+-++--+-" enjamb="B-pb_noun_prep">te hirió el dolor, mirarte conmovida</l>
+               <l n="3" met="-+---+---+-" enjamb="I-pb_noun_prep">de todas tus venturas la caída,</l>
+               <l n="4" met="-++--++-+-">y las viste morir una por una.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+++---+-+-">También me ha herido sin piedad alguna,</l>
+               <l n="6" met="--++-+-+-+-" enjamb="B-pb_noun_prep">y bebí de una vez la copa henchida</l>
+               <l n="7" met="-+---+---+-" enjamb="I-pb_noun_prep">de todos los dolores de la vida...</l>
+               <l n="8" met="-+-+-+---+-">y...¿lo creerás? envidio tu fortuna.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+++--+---+-">No te oprime terrena pesadumbre,</l>
+               <l n="10" met="-+---+-+-+-">tu paso por el mundo fue ligero;</l>
+               <l n="11" met="+--+---+-+-">gozas del cielo la divina lumbre.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+-+-+-">¡Y yo, más infeliz, que nada espero,</l>
+               <l n="13" met="-+---+-+-+-">estoy de mi calvario en la alta cumbre</l>
+               <l n="14" met="--+--++-++-">y, clavado en mi cruz, gimo y no muero!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

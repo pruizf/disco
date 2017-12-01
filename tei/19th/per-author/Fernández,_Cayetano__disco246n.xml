@@ -1,143 +1,211 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Cayetano Fernández</title>
-        <author>
-          <idno type="viaf" cert="high">296736769</idno>
-          <idno type="#disco" xml:id="disco_246n"/>
-          <name type="short">Fernández</name>
-          <name type="full">
-            <name type="first-name">Cayetano</name>
-            <name type="second-name">Fernández</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">3</measure>
-        <measure unit="tokens">278</measure>
-        <measure unit="line">42</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_246n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_246n" role="author" sex="M">
-            <persName>Cayetano Fernández</persName>
-            <birth><placeName type="place">Cádiz</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1820" cert="high">1820</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1901" cert="high">1901</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Cayetano Fernández</title>
+            <author corresp="#disco_246n">Cayetano Fernández</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">278</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_246n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_246n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/296736769"/>
+                  <persName type="short">Fernández</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Cayetano</forename>
+                     <surname property="foaf:familyName">Fernández</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Cayetano Fernández</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Cádiz</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1820" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1901" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s246n_0797" about="dbpedia:Soneto">
+                        <title property="dc:title">Coloquio del Beato Diego José de Cádiz, con su crucifijo</title>
+                        <title type="incipit" property="dc:alternative">Deja beber tus lágrimas divinas,</title>
+                     </bibl>
+                     <bibl resource="disco#s246n_0798" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">¿Sabes dar al caballo la pujanza?</title>
+                     </bibl>
+                     <bibl resource="disco#s246n_0799" about="dbpedia:Soneto">
+                        <title property="dc:title">La ventanera</title>
+                        <title type="incipit" property="dc:alternative">Era hermosa mujer la Doña Juana,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Cayetano Fernández</head>
-        <p>Cádiz. 1820 - 1901</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s246n_0797">
-        <head>Coloquio del Beato Diego José de Cádiz, con su crucifijo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Deja beber tus lágrimas divinas,</l>
-          <l n="2">y su raudal ablande el pecho duro.</l>
-          <l n="3">¡Ay! permite también al labio impuro</l>
-          <l n="4">besar de tu corona las espinas.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Si abandonado y sólo te imaginas,</l>
-          <l n="6">héteme aquí que, de tu amor seguro,</l>
-          <l n="7">el cáliz del dolor sediento apuro</l>
-          <l n="8">por si la tierra a perdonar te inclinas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Al verte en esa Cruz, mi Bien, yo creo,</l>
-          <l n="10">remóntase hasta el cielo mi esperanza</l>
-          <l n="11">y el corazón te rindo por trofeo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Ven, pecador, y abrevia tu mudanza;</l>
-          <l n="13">que, aunque de negro crimen fueses reo,</l>
-          <l n="14">quien le pide perdón, perdón alcanza.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s246n_0798">
-        <head>Soneto</head>
-        <lg n="1" type="serventesio">
-          <l n="1">¿Sabes dar al caballo la pujanza?</l>
-          <l n="2">¿Y qué, al relincho, encorve el ancho cuello?</l>
-          <l n="3">¿Qué salte cual langosta? Aterroriza</l>
-          <l n="4">el resoplar de su fogoso aliento.</l>
-        </lg>
-        <lg n="2" type="unknown">
-          <l n="5">Hiere la tierra con robusto callo,</l>
-          <l n="6">encabrítase audaz, corre al encuentro</l>
-          <l n="7">de la enemiga hueste en la llanura.</l>
-          <l n="8">No conoce el temor, no cede al hierro.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Oyese encima golpear la aljaba;</l>
-          <l n="10">siente el vibrar del asta y del acero.</l>
-          <l n="11">Ni refrena el ardor, ni aguarda, ansioso</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">de sorberse la tierra, el clarín bélico.</l>
-          <l n="13">Resuena al cabo, y ¡sus! de lejos huele</l>
-          <l n="14">la matanza, el rumor, y el clamoreo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s246n_0799">
-        <head>La ventanera</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Era hermosa mujer la Doña Juana,</l>
-          <l n="2">y de mucho caudal; pero tenía</l>
-          <l n="3">el achaque, el desbarro, la manía</l>
-          <l n="4">de estar siempre asomada a la ventana.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Cuanto ocurre en la casa más lejana</l>
-          <l n="6">no s esconde a su atenta policía;</l>
-          <l n="7">mas, con esto, la pobre no sabía</l>
-          <l n="8">lo que pasa en la suya, ¡tan cercana!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Todo en ella es desórdenes y olvidos:</l>
-          <l n="10">en fuerza de lo cual, a competencia,</l>
-          <l n="11">le robaban sus bienes más queridos.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Luego el Alma, que pasa su existencia</l>
-          <l n="13">asomada al balcón de los sentidos,</l>
-          <l n="14">recoja esta lección de la experiencia.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Cayetano Fernández</head>
+            <p>Cádiz. 1820 - 1901</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s246n_0797">
+            <head>Coloquio del Beato Diego José de Cádiz, con su crucifijo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-">Deja beber tus lágrimas divinas,</l>
+               <l n="2" met="---+-+-+-+-">y su raudal ablande el pecho duro.</l>
+               <l n="3" met="--+--+-+-+-" enjamb="B-ex_dobj_verb">¡Ay! permite también al labio impuro</l>
+               <l n="4" met="-+---+---+-" enjamb="I-ex_dobj_verb">besar de tu corona las espinas.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+-+-+-">Si abandonado y sólo te imaginas,</l>
+               <l n="6" met="+--+---+-+-">héteme aquí que, de tu amor seguro,</l>
+               <l n="7" met="-+---+-+-+-">el cáliz del dolor sediento apuro</l>
+               <l n="8" met="---+---+++-">por si la tierra a perdonar te inclinas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+++-+-+++-">Al verte en esa Cruz, mi Bien, yo creo,</l>
+               <l n="10" met="-+-+-+---+-">remóntase hasta el cielo mi esperanza</l>
+               <l n="11" met="---+-+---+-">y el corazón te rindo por trofeo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+---+-">Ven, pecador, y abrevia tu mudanza;</l>
+               <l n="13" met="---+-+-+-+-">que, aunque de negro crimen fueses reo,</l>
+               <l n="14" met="-++--+-+-+-">quien le pide perdón, perdón alcanza.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s246n_0798">
+            <head>Soneto</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="+-+--+---+-">¿Sabes dar al caballo la pujanza?</l>
+               <l n="2" met="-+-+-+-+-+-">¿Y qué, al relincho, encorve el ancho cuello?</l>
+               <l n="3" met="-++----+-">¿Qué salte cual langosta? Aterroriza</l>
+               <l n="4" met="---+---+-+-">el resoplar de su fogoso aliento.</l>
+            </lg>
+            <lg n="2" type="unknown">
+               <l n="5" met="+--+---+-+-">Hiere la tierra con robusto callo,</l>
+               <l n="6" met="--+-+++--+-" enjamb="B-pb_noun_prep">encabrítase audaz, corre al encuentro</l>
+               <l n="7" met="---++----+-" enjamb="I-pb_noun_prep">de la enemiga hueste en la llanura.</l>
+               <l n="8" met="+-+--+++-+-">No conoce el temor, no cede al hierro.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+--+--+-">Oyese encima golpear la aljaba;</l>
+               <l n="10" met="+--+-+---+-">siente el vibrar del asta y del acero.</l>
+               <l n="11" met="--+--+-+-+-" enjamb="B-pb_adj_prep">Ni refrena el ardor, ni aguarda, ansioso</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++-+--++-" enjamb="I-pb_adj_prep">de sorberse la tierra, el clarín bélico.</l>
+               <l n="13" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">Resuena al cabo, y ¡sus! de lejos huele</l>
+               <l n="14" met="--+--+---+-" enjamb="I-ex_dobj_verb">la matanza, el rumor, y el clamoreo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s246n_0799">
+            <head>La ventanera</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-">Era hermosa mujer la Doña Juana,</l>
+               <l n="2" met="--+--+---+-" enjamb="B-ex_dobj_verb">y de mucho caudal; pero tenía</l>
+               <l n="3" met="--+--+---+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">el achaque, el desbarro, la manía</l>
+               <l n="4" met="-++--+---+-" enjamb="I-pb_noun_prep">de estar siempre asomada a la ventana.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+-+-+-" enjamb="B-pb_adj_adv">Cuanto ocurre en la casa más lejana</l>
+               <l n="6" met="++-+--+---+-" enjamb="I-pb_adj_adv">no s esconde a su atenta policía;</l>
+               <l n="7" met="--+--+-+-+-" enjamb="B-ex_dobj_verb">mas, con esto, la pobre no sabía</l>
+               <l n="8" met="--+----+-+-" enjamb="I-ex_dobj_verb">lo que pasa en la suya, ¡tan cercana!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-++-+---+-">Todo en ella es desórdenes y olvidos:</l>
+               <l n="10" met="-+-------+-">en fuerza de lo cual, a competencia,</l>
+               <l n="11" met="+-+--+-+-+-">le robaban sus bienes más queridos.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-" enjamb="B-pb_adj_noun">Luego el Alma, que pasa su existencia</l>
+               <l n="13" met="--+--+---+-" enjamb="I-pb_adj_noun">asomada al balcón de los sentidos,</l>
+               <l n="14" met="-++--+---+-">recoja esta lección de la experiencia.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

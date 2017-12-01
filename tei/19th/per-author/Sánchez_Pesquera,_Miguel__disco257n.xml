@@ -1,143 +1,208 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Miguel Sánchez Pesquera</title>
-        <author>
-          <idno type="viaf" cert="high">313262052</idno>
-          <idno type="#disco" xml:id="disco_257n"/>
-          <name type="short">Sánchez Pesquera</name>
-          <name type="full">
-            <name type="first-name">Miguel</name>
-            <name type="second-name">Sánchez Pesquera</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">3</measure>
-        <measure unit="tokens">267</measure>
-        <measure unit="line">42</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_257n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_257n" role="author" sex="M">
-            <persName>Miguel Sánchez Pesquera</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Miguel Sánchez Pesquera</title>
+            <author corresp="#disco_257n">Miguel Sánchez Pesquera</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">267</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_257n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_257n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/313262052"/>
+                  <persName type="short">Sánchez Pesquera</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Miguel</forename>
+                     <surname property="foaf:familyName">Sánchez Pesquera</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Miguel Sánchez Pesquera</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s257n_0839" about="dbpedia:Soneto">
+                        <title property="dc:title">Plus ultra</title>
+                        <title type="incipit" property="dc:alternative">Cuando la inspiración fecunda y crea,</title>
+                     </bibl>
+                     <bibl resource="disco#s257n_0840" about="dbpedia:Soneto">
+                        <title property="dc:title">La cigarra</title>
+                        <title type="incipit" property="dc:alternative">Amor del sol, mi origen es divino;</title>
+                     </bibl>
+                     <bibl resource="disco#s257n_0841" about="dbpedia:Soneto">
+                        <title property="dc:title">La estrella de la tarde</title>
+                        <title type="incipit" property="dc:alternative">Ya estás allí, cual fúlgido diamante</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Miguel Sánchez Pesquera</head>
-        <p>Cuba. 19th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s257n_0839">
-        <head>Plus ultra</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Cuando la inspiración fecunda y crea,</l>
-          <l n="2">y viste forma y ritmo al pensamiento,</l>
-          <l n="3">enamorada de su propio aliento,</l>
-          <l n="4">en su labor celeste se recrea.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Mas el tiempo destruye la alta idea</l>
-          <l n="6">de su amor propio y de su vano intento;</l>
-          <l n="7">que no puede expresar humano acento</l>
-          <l n="8">cuanto la mente indómita desea.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Desgana el verso inspírame y no encanto,</l>
-          <l n="10">y tedio ya, del corazón prescrito,</l>
-          <l n="11">el soñado ideal que amara tanto;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y con desgana y tedio de lo escrito,</l>
-          <l n="13">el alma llena de mortal quebranto</l>
-          <l n="14">la sed de lo perfecto y infinito.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s257n_0840">
-        <head>La cigarra</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Amor del sol, mi origen es divino;</l>
-          <l n="2">embelesado Sócrates me oía;</l>
-          <l n="3">delicias era de la Grecia un día;</l>
-          <l n="4">me habló Virgilio en verso peregrino.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Cantar, amar, morir es mi destino.</l>
-          <l n="6">Yo de la ciencia gaya en la porfía,</l>
-          <l n="7">el premio soy que el trovador ansía.</l>
-          <l n="8">Canto la siesta en odorante pino.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Soy la cigarra; en el tendido llano</l>
-          <l n="10">nací de junio en el calor primero,</l>
-          <l n="11">alma del trigo y su fecundo grano;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y enamorada de la luz espero,</l>
-          <l n="13">la encendida mañana del verano,</l>
-          <l n="14">y canto el sol y cuando canto muero.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s257n_0841">
-        <head>La estrella de la tarde</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Ya estás allí, cual fúlgido diamante</l>
-          <l n="2">en la frente del cielo, anunciadora</l>
-          <l n="3">del descanso y la paz que el alma implora</l>
-          <l n="4">y del amor heraldo vigilante.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Ya estás allí, fantástica y brillante,</l>
-          <l n="6">como en piélago azul dorada prora,</l>
-          <l n="7">y la razón que tu destino ignora,</l>
-          <l n="8">torna hacia ti su esfuerzo vacilante.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Virgen, empero, tú de humana duda</l>
-          <l n="10">y exenta de terrígenos temores</l>
-          <l n="11">vas del espacio en la encantada vía,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y de la noche profetisa muda</l>
-          <l n="13">alumbras con tus pálidos fulgores</l>
-          <l n="14">el sonreír del moribundo día.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Miguel Sánchez Pesquera</head>
+            <p>Cuba. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s257n_0839">
+            <head>Plus ultra</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-----+-+-+-">Cuando la inspiración fecunda y crea,</l>
+               <l n="2" met="-+-+-+---+-">y viste forma y ritmo al pensamiento,</l>
+               <l n="3" met="---+---+-+-">enamorada de su propio aliento,</l>
+               <l n="4" met="---+-+---+-">en su labor celeste se recrea.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+-+-+-" enjamb="B-pb_noun_prep">Mas el tiempo destruye la alta idea</l>
+               <l n="6" met="--++---+-+-" enjamb="I-pb_noun_prep">de su amor propio y de su vano intento;</l>
+               <l n="7" met="-++--+-+-+-">que no puede expresar humano acento</l>
+               <l n="8" met="+--+-+---+-">cuanto la mente indómita desea.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+-+++-">Desgana el verso inspírame y no encanto,</l>
+               <l n="10" met="-+-+---+-+-">y tedio ya, del corazón prescrito,</l>
+               <l n="11" met="--+-+--+-+-">el soñado ideal que amara tanto;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+---+-">y con desgana y tedio de lo escrito,</l>
+               <l n="13" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">el alma llena de mortal quebranto</l>
+               <l n="14" met="-+---+---+-" enjamb="I-ex_dobj_verb">la sed de lo perfecto y infinito.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s257n_0840">
+            <head>La cigarra</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+-+-+-">Amor del sol, mi origen es divino;</l>
+               <l n="2" met="---+-+--++-">embelesado Sócrates me oía;</l>
+               <l n="3" met="-+-+---+++-">delicias era de la Grecia un día;</l>
+               <l n="4" met="++-+-+---+-">me habló Virgilio en verso peregrino.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-++--+-">Cantar, amar, morir es mi destino.</l>
+               <l n="6" met="+--+-+---+-">Yo de la ciencia gaya en la porfía,</l>
+               <l n="7" met="-+-+---+-+-">el premio soy que el trovador ansía.</l>
+               <l n="8" met="+--+---+-+-">Canto la siesta en odorante pino.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+---+-+-" enjamb="B-ex_subj_verb">Soy la cigarra; en el tendido llano</l>
+               <l n="10" met="-+-----+-+-" enjamb="I-ex_subj_verb">nací de junio en el calor primero,</l>
+               <l n="11" met="+--+---+-+-">alma del trigo y su fecundo grano;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-">y enamorada de la luz espero,</l>
+               <l n="13" met="--+--+---+-">la encendida mañana del verano,</l>
+               <l n="14" met="-+-+---+-+-">y canto el sol y cuando canto muero.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s257n_0841">
+            <head>La estrella de la tarde</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+-+---+-" enjamb="B-pb_noun_prep">Ya estás allí, cual fúlgido diamante</l>
+               <l n="2" met="--+--+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">en la frente del cielo, anunciadora</l>
+               <l n="3" met="--+--+-+-+-" enjamb="I-pb_noun_prep">del descanso y la paz que el alma implora</l>
+               <l n="4" met="---+-+---+-">y del amor heraldo vigilante.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+-+---+-">Ya estás allí, fantástica y brillante,</l>
+               <l n="6" met="--+--+-+-+-">como en piélago azul dorada prora,</l>
+               <l n="7" met="---+---+-+-">y la razón que tu destino ignora,</l>
+               <l n="8" met="+--+-+---+-">torna hacia ti su esfuerzo vacilante.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+----+-+-+-" enjamb="B-ex_subj_verb">Virgen, empero, tú de humana duda</l>
+               <l n="10" met="-+---+---+-" enjamb="I-ex_subj_verb">y exenta de terrígenos temores</l>
+               <l n="11" met="+--+---+-+-">vas del espacio en la encantada vía,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-" enjamb="B-ex_dobj_verb">y de la noche profetisa muda</l>
+               <l n="13" met="-+---+---+-" enjamb="I-ex_dobj_verb">alumbras con tus pálidos fulgores</l>
+               <l n="14" met="---+---+-+-">el sonreír del moribundo día.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

@@ -914,6 +914,32 @@ att.placement.attribute.place =
        | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })+
     }
   }?
+  
+att.metrical.attributes =
+  att.metrical.attribute.met,
+  att.metrical.attribute.real,
+  att.metrical.attribute.rhyme
+att.metrical.attribute.met =
+  
+  ## (metrical structure, conventional) contains a user-specified encoding for the conventional metrical structure of the element.
+  attribute met { xsd:token }?
+att.metrical.attribute.real =
+  
+  ## (metrical structure, realized) contains a user-specified encoding for the actual realization of the conventional metrical structure applicable to the element.
+  attribute real { xsd:token }?
+att.metrical.attribute.rhyme =
+  
+  ## (rhyme scheme) specifies the rhyme scheme applicable to a group of verse lines.
+  attribute rhyme { xsd:token }?
+att.enjamb.attributes = att.enjamb.attribute.enjamb
+att.enjamb.attribute.enjamb =
+  
+  ## (enjambement) indicates that the end of a verse line is marked by enjambement.
+  ## Sample values include: 1] no; 2] yes; 3] weak; 4] strong
+  attribute enjamb {
+    xsd:token { pattern = ".+" }
+  }?
+  
 att.typed.attributes =
   att.typed.attribute.type, att.typed.attribute.subtype
 att.typed.attribute.type =
@@ -1861,6 +1887,7 @@ model.encodingDescPart =
   | styleDefDecl
   | refsDecl
   | listPrefixDef
+  | metDecl
   | classDecl
   | geoDecl
   | appInfo
@@ -3096,6 +3123,8 @@ l =
        ],
     att.global.attributes,
     att.fragmentable.attributes,
+    att.metrical.attributes,
+    att.enjamb.attributes,
     empty
   }
 lg =
@@ -4448,12 +4477,48 @@ prefixDef =
     },
     empty
   }
+  
 listPrefixDef =
   
   ## (list of prefix definitions) contains a list of definitions of prefixing schemes used in data.pointer values, showing how abbreviated URIs using each scheme may be expanded into full URIs. [16.2.3. Using Abbreviated Pointers]
   element listPrefixDef {
     (prefixDef | listPrefixDef)+, att.global.attributes, empty
   }
+  
+metDecl = 
+
+element metDecl
+{
+   att.global.attributes,
+   att.declarable.attributes,
+   attribute type
+   {
+      list
+      {
+         ( "met" | "real" | "enjamb" | "rhyme" ),
+         ( "met" | "real" | "enjamb" | "rhyme" )?,
+         ( "met" | "real" | "enjamb" | "rhyme" )?
+      }
+   }?,
+   attribute pattern { teidata.pattern }?,
+   ( ( model.pLike | model.noteLike )+ | metSym+ )
+}
+
+	
+metSym = 
+
+element metSym
+{
+   att.global.attributes,
+   attribute value { list { teidata.word+ } },
+   attribute terminal { teidata.truthValue }?,
+   macro.phraseSeq.limited
+}
+
+teidata.pattern = token
+teidata.word = xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+teidata.truthValue = xsd:boolean
+
 refState =
   
   ## (reference state) specifies one component of a canonical reference defined by the milestone method. [2.3.6.3. Milestone Method 2.3.6. The Reference System Declaration]
@@ -4763,6 +4828,10 @@ att.global.linking.attributes =
   att.global.linking.attribute.next,
   att.global.linking.attribute.prev,
   att.global.linking.attribute.exclude,
+  att.global.linking.attribute.property,
+  att.global.linking.attribute.resource,
+  att.global.linking.attribute.about,
+  att.global.linking.attribute.typeOf,
   att.global.linking.attribute.select
 att.global.linking.attribute.corresp =
   
@@ -4774,6 +4843,26 @@ att.global.linking.attribute.synch =
   
   ## (synchronous) points to elements that are synchronous with the current element.
   attribute synch {
+    list { xsd:anyURI+ }
+  }?
+  att.global.linking.attribute.property =
+  
+  attribute property {
+    list { xsd:anyURI+ }
+  }?
+  att.global.linking.attribute.resource =
+  
+  attribute resource {
+    list { xsd:anyURI+ }
+  }?
+  att.global.linking.attribute.typeOf =
+  
+  attribute typeOf {
+    list { xsd:anyURI+ }
+  }?
+    att.global.linking.attribute.about =
+  
+  attribute about {
     list { xsd:anyURI+ }
   }?
 att.global.linking.attribute.sameAs =

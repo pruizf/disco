@@ -1,118 +1,182 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Jorge Pombo</title>
-        <author>
-          <idno type="viaf" cert="high">90148933484054300013</idno>
-          <idno type="#disco" xml:id="disco_003n"/>
-          <name type="short">Pombo</name>
-          <name type="full">
-            <name type="first-name">Jorge</name>
-            <name type="second-name">Pombo</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">177</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_003n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_003n" role="author" sex="M">
-            <persName>Jorge Pombo</persName>
-            <birth><placeName type="place">Bogotá (Colombia)</placeName>, <placeName type="country">Colombia</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1857" cert="high">1857</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1912" cert="high">1912</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Jorge Pombo</title>
+            <author corresp="#disco_003n">Jorge Pombo</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">177</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_003n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_003n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/90148933484054300013"/>
+                  <persName type="short">Pombo</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Jorge</forename>
+                     <surname property="foaf:familyName">Pombo</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Jorge Pombo</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Bogotá</settlement>
+                           <country>Colombia</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1857" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1912" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s003n_0006" about="dbpedia:Soneto">
+                        <title property="dc:title">Funesta dualidad</title>
+                        <title type="incipit" property="dc:alternative">Siento otro Yo que contra mí se empeña,</title>
+                     </bibl>
+                     <bibl resource="disco#s003n_0007" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Catorce versos forman los sonetos;</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Jorge Pombo</head>
-        <p>Bogotá (Colombia). 1857 - 1912</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s003n_0006">
-        <head>Funesta dualidad</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Siento otro Yo que contra mí se empeña,</l>
-          <l n="2">que en todo influye y todo me acibara,</l>
-          <l n="3">un Yo que si de mí se retirara,</l>
-          <l n="4">me hiciera ver la vida hasta risueña.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Sólo una gracia, al parecer pequeña,</l>
-          <l n="6">humilde, al Yo fatal le demandara:</l>
-          <l n="7">que alguna vez, siquiera, me dejara</l>
-          <l n="8">salir del diario afán sin contraseña.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Concedida tal gracia, el Yo visible</l>
-          <l n="10">mostrárase cual es, no cual ha sido</l>
-          <l n="11">por causa superior e irresistible.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mas como existe siempre el Yo oprimido,</l>
-          <l n="13">y existe el Yo opresor, no me es factible</l>
-          <l n="14">la auto-semblanza que se me ha pedido.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s003n_0007">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Catorce versos forman los sonetos;</l>
-          <l n="2">catorce bardos con primor los hacen;</l>
-          <l n="3">catorce estrellas en la «Gruta» nacen</l>
-          <l n="4">que iluminan a incrédulos sujetos.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Veintiocho veces escuché cuartetos</l>
-          <l n="6">que en verdad, plenamente satisfacen</l>
-          <l n="7">a todos los poetas que aquí yacen</l>
-          <l n="8">esperando principie los tercetos.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Estoy con ellos! El temor me invade</l>
-          <l n="10">de improvisarlos ante Rivas Frade,</l>
-          <l n="11">Valencia y Gómez. ¡Me metí en la gorda!</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mas... llegué al último. ¿Podré sacarlo?</l>
-          <l n="13">¡Si no puedo, que vengan a acabarlo</l>
-          <l n="14">Julio Flórez, Restrepo y Soto Borda!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Jorge Pombo</head>
+            <p>Bogotá (Colombia). 1857 - 1912</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s003n_0006">
+            <head>Funesta dualidad</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+---+-+-">Siento otro Yo que contra mí se empeña,</l>
+               <l n="2" met="-+-+-+-+-+-">que en todo influye y todo me acibara,</l>
+               <l n="3" met="++---+---+-">un Yo que si de mí se retirara,</l>
+               <l n="4" met="+--+-+---+-">me hiciera ver la vida hasta risueña.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+---+-+-">Sólo una gracia, al parecer pequeña,</l>
+               <l n="6" met="-+-+-++--+-">humilde, al Yo fatal le demandara:</l>
+               <l n="7" met="-+-+-+-+-+-" enjamb="B-pb_verb_chain">que alguna vez, siquiera, me dejara</l>
+               <l n="8" met="-+-+-+---+-" enjamb="I-pb_verb_chain">salir del diario afán sin contraseña.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+-++-+-+-" enjamb="B-ex_subj_verb">Concedida tal gracia, el Yo visible</l>
+               <l n="10" met="-+---++-++-" enjamb="I-ex_subj_verb">mostrárase cual es, no cual ha sido</l>
+               <l n="11" met="-+---+---+-">por causa superior e irresistible.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+-+-+-">Mas como existe siempre el Yo oprimido,</l>
+               <l n="13" met="-+-+-+++-+-" enjamb="B-ex_subj_verb">y existe el Yo opresor, no me es factible</l>
+               <l n="14" met="---+---+-+-" enjamb="I-ex_subj_verb">la auto-semblanza que se me ha pedido.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s003n_0007">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+---+-">Catorce versos forman los sonetos;</l>
+               <l n="2" met="-+-+---+++-">catorce bardos con primor los hacen;</l>
+               <l n="3" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">catorce estrellas en la «Gruta» nacen</l>
+               <l n="4" met="--+--+---+-" enjamb="I-ex_dobj_verb">que iluminan a incrédulos sujetos.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-" enjamb="B-cc_crossclause">Veintiocho veces escuché cuartetos</l>
+               <l n="6" met="--++-+---+-" enjamb="B-ex_dobj_verb I-cc_crossclause">que en verdad, plenamente satisfacen</l>
+               <l n="7" met="-+--+---++-" enjamb="B-pb_verb_chain I-ex_dobj_verb">a todos los poetas que aquí yacen</l>
+               <l n="8" met="--+--+---+-" enjamb="I-pb_verb_chain">esperando principie los tercetos.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+--++-+-" enjamb="B-pb_verb_chain">¡Estoy con ellos! El temor me invade</l>
+               <l n="10" met="---++----+-" enjamb="I-pb_verb_chain">de improvisarlos ante Rivas Frade,</l>
+               <l n="11" met="-+-+--+--+-">Valencia y Gómez. ¡Me metí en la gorda!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++---++-">Mas... llegué al último. ¿Podré sacarlo?</l>
+               <l n="13" met="-++--+---++-" enjamb="B-ex_dobj_verb">¡Si no puedo, que vengan a acabarlo</l>
+               <l n="14" met="--+--+---+-" enjamb="I-ex_dobj_verb">Julio Flórez, Restrepo y Soto Borda!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

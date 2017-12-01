@@ -1,243 +1,323 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de J. Goy de Silva</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_545n"/>
-          <name type="short">Goy de Silva</name>
-          <name type="full">
-            <name type="first-name">J.</name>
-            <name type="second-name">Goy de Silva</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">7</measure>
-        <measure unit="tokens">708</measure>
-        <measure unit="line">98</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_545n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_545n" role="author" sex="M">
-            <persName>J. Goy de Silva</persName>
-            <birth><placeName type="place">España</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de J. Goy de Silva</title>
+            <author corresp="#disco_545n">J. Goy de Silva</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">7</measure>
+            <measure unit="tokens">708</measure>
+            <measure unit="line">98</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_545n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_545n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Goy de Silva</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">J.</forename>
+                     <surname property="foaf:familyName">Goy de Silva</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">J. Goy de Silva</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s545n_2011" about="dbpedia:Soneto">
+                        <title property="dc:title">Jordán de amor</title>
+                        <title type="incipit" property="dc:alternative">Bailemos toda la noche, con alas en el desvelo.</title>
+                     </bibl>
+                     <bibl resource="disco#s545n_2012" about="dbpedia:Soneto">
+                        <title property="dc:title">Embrujo de amor</title>
+                        <title type="incipit" property="dc:alternative">Cuando nuestro noviazgo cantaba su alborada,</title>
+                     </bibl>
+                     <bibl resource="disco#s545n_2013" about="dbpedia:Soneto">
+                        <title property="dc:title">Ella vino hacia mí...</title>
+                        <title type="incipit" property="dc:alternative">Sonrientes sus ojos me besaron,</title>
+                     </bibl>
+                     <bibl resource="disco#s545n_2014" about="dbpedia:Soneto">
+                        <title property="dc:title">Toledo</title>
+                        <title type="incipit" property="dc:alternative">Tu egregia testa elevas, ¡oh!, Toledo inmortal,</title>
+                     </bibl>
+                     <bibl resource="disco#s545n_2015" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Todo el cielo una brasa. Todo el viento un lamento.</title>
+                     </bibl>
+                     <bibl resource="disco#s545n_2016" about="dbpedia:Soneto">
+                        <title property="dc:title">¡Oh, redentor divino!</title>
+                        <title type="incipit" property="dc:alternative">Oh, Redentor Divino, que fulguras</title>
+                     </bibl>
+                     <bibl resource="disco#s545n_2017" about="dbpedia:Soneto">
+                        <title property="dc:title">A María Settier, dolecta de las musas</title>
+                        <title type="incipit" property="dc:alternative">Quisiera colocar sobre tu frente</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>J. Goy de Silva</head>
-        <p>España. 19th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s545n_2011">
-        <head>Jordán de amor</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Bailemos toda la noche, con alas en el desvelo.</l>
-          <l n="2">Bailemos toda la noche al resplandor de la hoguera,</l>
-          <l n="3">sobre la alfombra que extiende a nuestros pies la pradera</l>
-          <l n="4">y bajo el toldo prendido por estrellas en el cielo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Bailemos toda la noche, como en jubiloso anhelo,</l>
-          <l n="6">despidiéndonos alegres de la alegre primavera,</l>
-          <l n="7">que mañana, del verano, vendrá la aurora primera</l>
-          <l n="8">con su corona de alondras, envuelta en fúlgido velo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Bailemos toda la noche y vencedores del sueño,</l>
-          <l n="10">cuando el sol, toro del campo, beba el iris del rocío,</l>
-          <l n="11">correremos tú y yo, alegres, a la ribera del río,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">donde se baña la fronda del paisaje más risueño,</l>
-          <l n="13">y la linfa espejeante nos servirá de Jordán</l>
-          <l n="14">para nuestro amor, nacido en la fiesta de San Juan.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s545n_2012">
-        <head>Embrujo de amor</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Cuando nuestro noviazgo cantaba su alborada,</l>
-          <l n="2">el jardín solitario, edén de nuestro amor,</l>
-          <l n="3">nos brindaba la sombra de aquel manzano en flor,</l>
-          <l n="4">al final de una senda, de rosas perfumada.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Allí el banco, entre mirtos, oculto en la enramada</l>
-          <l n="6">era de nuestro idilio el nido encantador,</l>
-          <l n="7">y entre las florecidas plantas de suave olor</l>
-          <l n="8">destacaban los nardos su nota inmaculada.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Tú siempre sonriente, yo siempre embelesado;</l>
-          <l n="10">mis ojos en tus ojos, tus manos en las mías,</l>
-          <l n="11">gozaban nuestras almas sin sombra de pecado.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Sabíamos del mundo las bélicas porfías.</l>
-          <l n="13">¡Todas las plagas bíblicas sobre la Humanidad!</l>
-          <l n="14">¡Pero era tan inmensa nuestra felicidad!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s545n_2013">
-        <head>Ella vino hacia mí...</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Sonrientes sus ojos me besaron,</l>
-          <l n="2">mientras su boca apenas sonreía,</l>
-          <l n="3">porque, sin duda, revelar temía</l>
-          <l n="4">el sentir que sus ojos expresaron.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¿A qué disimular si al fin cantaron</l>
-          <l n="6">las niñas de los ojos la alegría</l>
-          <l n="7">de asomarse a la luz de un nuevo día</l>
-          <l n="8">en que Cupido y Psiquis se encontraron?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Eso ocurrió a la vuelta de un sendero</l>
-          <l n="10">del jardín de la vida, en el estío.</l>
-          <l n="11">Ella vino hacia mí con pie ligero.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mecíase en su pecho una camelia.</l>
-          <l n="13">Se encendió una ilusión sobre mi hastío.</l>
-          <l n="14">¡Era mi Beatriz, no era mi Ofelia!...</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s545n_2014">
-        <head>Toledo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Tu egregia testa elevas, ¡oh!, Toledo inmortal,</l>
-          <l n="2">coronada de fuertes murallas almenadas,</l>
-          <l n="3">donde lucen florones de grandezas pasadas</l>
-          <l n="4">las torres de tu Alcázar y de tu Catedral.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Carlos V te impuso la púrpura imperial.</l>
-          <l n="6">El acero en tu sangre, templo, de sus espadas</l>
-          <l n="7">el ejército hispano. Sus victorias ganadas</l>
-          <l n="8">te hicieron soberana del mundo, sin rival.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Hoy eres como una vieja reina olvidada,</l>
-          <l n="10">sin corte, sin dominios, guardando tu tesoro</l>
-          <l n="11">en tu vasto palacio solitario y gigante.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y en las noches de luna sales engalanada</l>
-          <l n="13">a tu jardín desierto donde el Tajo sonoro</l>
-          <l n="14">canta a tus pies rendido, como un antiguo amante.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s545n_2015">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Todo el cielo una brasa. Todo el viento un lamento.</l>
-          <l n="2">Las arpas de los bosques, en un largo clamor,</l>
-          <l n="3">lloran el sacrificio de Cristo Redentor,</l>
-          <l n="4">cuya cruz se destaca sobre el cielo sangriento.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Judas, en tanto, presa de su remordimiento,</l>
-          <l n="6">interroga al Enigma: «¿Para qué fui traidor?»</l>
-          <l n="7">Él era sabio y justo, ¡todo fe, todo amor!</l>
-          <l n="8">¿Quién dio codicia a mi alma y odio a mi pensamiento?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿Quién dio veneno al áspid, mansedumbre al cordero,</l>
-          <l n="10">bálsamo a las Virtudes, ponzoña a los pecados?</l>
-          <l n="11">¿Quién trazó fatalmente mi siniestro sendero...?</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¿No habrá piedad, ¡Maestro!, para mi desventura...?</l>
-          <l n="13">Y una voz le responde desde la augusta altura:</l>
-          <l n="14">«¡Mi amor es sol que alumbra hasta los condenados!»</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s545n_2016">
-        <head>¡Oh, redentor divino!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Oh, Redentor Divino, que fulguras</l>
-          <l n="2">en la noche final del paganismo.</l>
-          <l n="3">Sol fue tu resplandor sobre el abismo</l>
-          <l n="4">donde el Olimpo, en nubes, quedó a oscuras.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Viniste a redimir las criaturas</l>
-          <l n="6">de la estirpe de Adán, con el bautismo</l>
-          <l n="7">del agua del Jordán, y el Cristianismo</l>
-          <l n="8">surgió triunfante de las aguas puras.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Cuando del mago Oriente, los tres Reyes</l>
-          <l n="10">ofrendáronte incienso, mirra y oro,</l>
-          <l n="11">recibiendo de Ti mayor tesoro,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">en luz a su conciencia, por Tus Leyes,</l>
-          <l n="13">¡plañidos del abismo se elevaron,</l>
-          <l n="14">que cánticos angélicos ahogaron!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s545n_2017">
-        <head>A María Settier, dolecta de las musas</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Quisiera colocar sobre tu frente</l>
-          <l n="2">una rara diadema de adjetivos</l>
-          <l n="3">más bella que de lauros y de olivos</l>
-          <l n="4">y luminosa como luz de oriente.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¿Pero qué diccionario es elocuente</l>
-          <l n="6">par encontrar en él apelativos</l>
-          <l n="7">de laudatoria esencia, bellos, vivos,</l>
-          <l n="8">como flores de luz en clara mente?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Estrellas y diamantes engarzados</l>
-          <l n="10">en frases como ilustre y como hermosa,</l>
-          <l n="11">por ser constantemente dedicados,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">no son dignos de ti, porque mereces</l>
-          <l n="13">algo más que la estrella y que la rosa</l>
-          <l n="14">que es del arte el pensil donde floreces.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>J. Goy de Silva</head>
+            <p>España. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s545n_2011">
+            <head>Jordán de amor</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+--+--+----+-">Bailemos toda la noche, con alas en el desvelo.</l>
+               <l n="2" met="-+-+--+---+--+-">Bailemos toda la noche al resplandor de la hoguera,</l>
+               <l n="3" met="---+--+---+--+-">sobre la alfombra que extiende a nuestros pies la pradera</l>
+               <l n="4" met="---+--+---+---+-">y bajo el toldo prendido por estrellas en el cielo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+--+-----+-+-">Bailemos toda la noche, como en jubiloso anhelo,</l>
+               <l n="6" met="--+-+-+---+---+-">despidiéndonos alegres de la alegre primavera,</l>
+               <l n="7" met="--+---+--+-+--+-">que mañana, del verano, vendrá la aurora primera</l>
+               <l n="8" met="---+--+--+-+--+-">con su corona de alondras, envuelta en fúlgido velo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+--+---+--+-">Bailemos toda la noche y vencedores del sueño,</l>
+               <l n="10" met="--++--+-+-+---+-">cuando el sol, toro del campo, beba el iris del rocío,</l>
+               <l n="11" met="--+-+++----+--+-">correremos tú y yo, alegres, a la ribera del río,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+--+---+-+-+-">donde se baña la fronda del paisaje más risueño,</l>
+               <l n="13" met="--+--+-+--+--+-">y la linfa espejeante nos servirá de Jordán</l>
+               <l n="14" met="----+-+--+--+-">para nuestro amor, nacido en la fiesta de San Juan.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s545n_2012">
+            <head>Embrujo de amor</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-----+--+---+-">Cuando nuestro noviazgo cantaba su alborada,</l>
+               <l n="2" met="--+--+-+---+-">el jardín solitario, edén de nuestro amor,</l>
+               <l n="3" met="+-+--+--+-+-+-">nos brindaba la sombra de aquel manzano en flor,</l>
+               <l n="4" met="--++-+--+---+-">al final de una senda, de rosas perfumada.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-++--+--+---+-" enjamb="B-ex_subj_verb">Allí el banco, entre mirtos, oculto en la enramada</l>
+               <l n="6" met="+----+-+---+-" enjamb="I-ex_subj_verb">era de nuestro idilio el nido encantador,</l>
+               <l n="7" met="-----+-+--+-+-">y entre las florecidas plantas de suave olor</l>
+               <l n="8" met="--+--+--+---+-">destacaban los nardos su nota inmaculada.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++--+-++---+-">Tú siempre sonriente, yo siempre embelesado;</l>
+               <l n="10" met="-+---+--+---+-">mis ojos en tus ojos, tus manos en las mías,</l>
+               <l n="11" met="-+---+--+---+-">gozaban nuestras almas sin sombra de pecado.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+--+--+---+-">Sabíamos del mundo las bélicas porfías.</l>
+               <l n="13" met="+--+-+-------+">¡Todas las plagas bíblicas sobre la Humanidad!</l>
+               <l n="14" met="-+-+-+------+-">¡Pero era tan inmensa nuestra felicidad!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s545n_2013">
+            <head>Ella vino hacia mí...</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+-+-+-">Sonrientes sus ojos me besaron,</l>
+               <l n="2" met="---+-+---+-">mientras su boca apenas sonreía,</l>
+               <l n="3" met="---+---+-+-" enjamb="B-ex_dobj_verb">porque, sin duda, revelar temía</l>
+               <l n="4" met="--+--+---+-" enjamb="I-ex_dobj_verb">el sentir que sus ojos expresaron.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+-+-+-" enjamb="B-ex_dobj_verb">¿A qué disimular si al fin cantaron</l>
+               <l n="6" met="-+---+---+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">las niñas de los ojos la alegría</l>
+               <l n="7" met="--++-+++-+-" enjamb="I-pb_noun_prep">de asomarse a la luz de un nuevo día</l>
+               <l n="8" met="---+--+---+-">en que Cupido y Psiquis se encontraron?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+---+-+-" enjamb="B-pb_noun_prep">Eso ocurrió a la vuelta de un sendero</l>
+               <l n="10" met="--+--+---+-" enjamb="I-pb_noun_prep">del jardín de la vida, en el estío.</l>
+               <l n="11" met="+-+--+-+-+-">Ella vino hacia mí con pie ligero.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+--+-+--+-">Mecíase en su pecho una camelia.</l>
+               <l n="13" met="--+--+---+-">Se encendió una ilusión sobre mi hastío.</l>
+               <l n="14" met="+---++---+-">¡Era mi Beatriz, no era mi Ofelia!...</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s545n_2014">
+            <head>Toledo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+---+--+-">Tu egregia testa elevas, ¡oh!, Toledo inmortal,</l>
+               <l n="2" met="--+--+--+---+-">coronada de fuertes murallas almenadas,</l>
+               <l n="3" met="--+--+---+--+-" enjamb="B-ex_subj_verb">donde lucen florones de grandezas pasadas</l>
+               <l n="4" met="-+---+------+-" enjamb="I-ex_subj_verb">las torres de tu Alcázar y de tu Catedral.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+++--+---+-">Carlos V te impuso la púrpura imperial.</l>
+               <l n="6" met="--+--+-+----+-">El acero en tu sangre, templo, de sus espadas</l>
+               <l n="7" met="--+--+--+--+-" enjamb="B-ex_subj_verb">el ejército hispano. Sus victorias ganadas</l>
+               <l n="8" met="++---+--+---+-" enjamb="I-ex_subj_verb">te hicieron soberana del mundo, sin rival.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++--+-+-+--+-">Hoy eres como una vieja reina olvidada,</l>
+               <l n="10" met="-+---+--+---+-">sin corte, sin dominios, guardando tu tesoro</l>
+               <l n="11" met="--+--+---+--+-">en tu vasto palacio solitario y gigante.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+-+----+-">Y en las noches de luna sales engalanada</l>
+               <l n="13" met="---+-+---+--+-" enjamb="B-ex_subj_verb">a tu jardín desierto donde el Tajo sonoro</l>
+               <l n="14" met="+--+-+--+-+-+-" enjamb="I-ex_subj_verb">canta a tus pies rendido, como un antiguo amante.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s545n_2015">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-++-+-++-+-">Todo el cielo una brasa. Todo el viento un lamento.</l>
+               <l n="2" met="-+---+--++--+-">Las arpas de los bosques, en un largo clamor,</l>
+               <l n="3" met="+----+------+-">lloran el sacrificio de Cristo Redentor,</l>
+               <l n="4" met="--+--+---+--+-">cuya cruz se destaca sobre el cielo sangriento.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+------+-">Judas, en tanto, presa de su remordimiento,</l>
+               <l n="6" met="--+--+---++-+-">interroga al Enigma: «¿Para qué fui traidor?»</l>
+               <l n="7" met="++-+-+-+-++-+-">Él era sabio y justo, ¡todo fe, todo amor!</l>
+               <l n="8" met="++-+-+-+----+-">¿Quién dio codicia a mi alma y odio a mi pensamiento?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++-+-+---+--+-">¿Quién dio veneno al áspid, mansedumbre al cordero,</l>
+               <l n="10" met="+----+--+---+-">bálsamo a las Virtudes, ponzoña a los pecados?</l>
+               <l n="11" met="+-+-++---+--+-">¿Quién trazó fatalmente mi siniestro sendero...?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++-++------+-">¿No habrá piedad, ¡Maestro!, para mi desventura...?</l>
+               <l n="13" met="+-++-+----+-+-">Y una voz le responde desde la augusta altura:</l>
+               <l n="14" met="-+++-+-----+-">«¡Mi amor es sol que alumbra hasta los condenados!»</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s545n_2016">
+            <head>¡Oh, redentor divino!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-----+---+-">Oh, Redentor Divino, que fulguras</l>
+               <l n="2" met="--+--+---+-">en la noche final del paganismo.</l>
+               <l n="3" met="++---+---+-" enjamb="B-cc_crossclause">Sol fue tu resplandor sobre el abismo</l>
+               <l n="4" met="---+-+--++-" enjamb="I-cc_crossclause">donde el Olimpo, en nubes, quedó a oscuras.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+----+--+-" enjamb="B-pb_noun_prep">Viniste a redimir las criaturas</l>
+               <l n="6" met="--+--+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">de la estirpe de Adán, con el bautismo</l>
+               <l n="7" met="-+---+---+-" enjamb="B-ex_subj_verb I-pb_noun_prep">del agua del Jordán, y el Cristianismo</l>
+               <l n="8" met="-+-+---+-+-" enjamb="I-ex_subj_verb">surgió triunfante de las aguas puras.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+--++-">Cuando del mago Oriente, los tres Reyes</l>
+               <l n="10" met="--+--+-+-+-">ofrendáronte incienso, mirra y oro,</l>
+               <l n="11" met="--+--+-+-+-">recibiendo de Ti mayor tesoro,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">en luz a su conciencia, por Tus Leyes,</l>
+               <l n="13" met="-+---+---+-">¡plañidos del abismo se elevaron,</l>
+               <l n="14" met="-+---+---+-">que cánticos angélicos ahogaron!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s545n_2017">
+            <head>A María Settier, dolecta de las musas</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-" enjamb="B-ex_dobj_verb">Quisiera colocar sobre tu frente</l>
+               <l n="2" met="+-+--+---+-" enjamb="B-ex_dobj_verb I-ex_dobj_verb">una rara diadema de adjetivos</l>
+               <l n="3" met="++---+---+-" enjamb="B-ex_subj_verb I-ex_dobj_verb">más bella que de lauros y de olivos</l>
+               <l n="4" met="---+---+-+-" enjamb="I-ex_subj_verb">y luminosa como luz de oriente.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--++--+-" enjamb="B-pb_adj_noun">¿Pero qué diccionario es elocuente</l>
+               <l n="6" met="+--+-+---+-" enjamb="B-pb_noun_prep I-pb_adj_noun">par encontrar en él apelativos</l>
+               <l n="7" met="---+-+-+-+-" enjamb="I-pb_noun_prep">de laudatoria esencia, bellos, vivos,</l>
+               <l n="8" met="--+--+-+-+-">como flores de luz en clara mente?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">Estrellas y diamantes engarzados</l>
+               <l n="10" met="-+---+---+-">en frases como ilustre y como hermosa,</l>
+               <l n="11" met="-+-+-+---+-">por ser constantemente dedicados,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+++--+---+-">no son dignos de ti, porque mereces</l>
+               <l n="13" met="+-+--+---+-" enjamb="B-cc_crossclause">algo más que la estrella y que la rosa</l>
+               <l n="14" met="+-+--+---+-" enjamb="I-cc_crossclause">que es del arte el pensil donde floreces.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

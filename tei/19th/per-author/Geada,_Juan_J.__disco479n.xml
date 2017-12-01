@@ -1,118 +1,178 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Juan J. Geada</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_479n"/>
-          <name type="short">Geada</name>
-          <name type="full">
-            <name type="first-name">Juan J.</name>
-            <name type="second-name">Geada</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">220</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_479n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_479n" role="author" sex="M">
-            <persName>Juan J. Geada</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Juan J. Geada</title>
+            <author corresp="#disco_479n">Juan J. Geada</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">220</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_479n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_479n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Geada</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan J.</forename>
+                     <surname property="foaf:familyName">Geada</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan J. Geada</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s479n_1820" about="dbpedia:Soneto">
+                        <title property="dc:title">Yo no lo sé</title>
+                        <title type="incipit" property="dc:alternative">Yo no lo sé. Me han dicho que te mueres</title>
+                     </bibl>
+                     <bibl resource="disco#s479n_1821" about="dbpedia:Soneto">
+                        <title property="dc:title">Sin esperanzas</title>
+                        <title type="incipit" property="dc:alternative">Desde los más profundos abismos de la vida</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Juan J. Geada</head>
-        <p>Cuba. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s479n_1820">
-        <head>Yo no lo sé</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Yo no lo sé. Me han dicho que te mueres</l>
-          <l n="2">enferma de un dolor desconocido;</l>
-          <l n="3">y que a la Ciencia un imposible res,</l>
-          <l n="4">que no halla en tu dolor nada aprendido.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Que de todo te aburres al momento.</l>
-          <l n="6">Y que el piano te hastía; y te sofoca</l>
-          <l n="7">la lectura y el canto, que el contento</l>
-          <l n="8">jamás lleva sonrisas a tu boca.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Que no puedes vivir. Constantemente</l>
-          <l n="10">recorres las estancias, indolente,</l>
-          <l n="11">como buscando en el andar consuelo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y que después, cansada y abatida,</l>
-          <l n="13">cual queriendo pasar, a la otra vida,</l>
-          <l n="14">dices mi nombre, suspirando, al cielo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s479n_1821">
-        <head>Sin esperanzas</head>
-        <lg n="1" type="unknown">
-          <l n="1">Desde los más profundos abismos de la vida</l>
-          <l n="2">yo te invoqué mil veces; y mil veces mi afán</l>
-          <l n="3">fue para mis anhelos la estrella bendecida</l>
-          <l n="4">que fulguró un instante con dulce fulgurar.</l>
-        </lg>
-        <lg n="2" type="unknown">
-          <l n="5">¿Por qué no te levantas, flor de mis pensamientos,</l>
-          <l n="6">y vienes con tus ósculos de esperanza y de fe,</l>
-          <l n="7">a darme lo que en vida me dieron tus alientos</l>
-          <l n="8">y a nutrir de ilusiones mis ansias del ayer?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Muerta querida, lejos de ti la vida mía</l>
-          <l n="10">se deshoja cual mustia Rosa de Alejandría</l>
-          <l n="11">sangrando gota a gota mi amante corazón!</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y en vano es que te implore, si no has de volver nunca.</l>
-          <l n="13">El soplo de tu muerte dejó en mi alma trunca</l>
-          <l n="14">la flor de la esperanza y el iris del amor.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Juan J. Geada</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s479n_1820">
+            <head>Yo no lo sé</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="++++++--++-">Yo no lo sé. Me han dicho que te mueres</l>
+               <l n="2" met="-+-+-+---+-">enferma de un dolor desconocido;</l>
+               <l n="3" met="---++--+-+-">y que a la Ciencia un imposible res,</l>
+               <l n="4" met="-+---++--+-">que no halla en tu dolor nada aprendido.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="--+-++---+-">Que de todo te aburres al momento.</l>
+               <l n="6" met="--+-++-+-+-" enjamb="B-ex_dobj_verb">Y que el piano te hastía; y te sofoca</l>
+               <l n="7" met="--+-+----+-" enjamb="B-pb_adj_adv I-ex_dobj_verb">la lectura y el canto, que el contento</l>
+               <l n="8" met="-++--+---+-" enjamb="I-pb_adj_adv">jamás lleva sonrisas a tu boca.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+--+-">Que no puedes vivir. Constantemente</l>
+               <l n="10" met="-+---+---+-">recorres las estancias, indolente,</l>
+               <l n="11" met="---+---+-+-">como buscando en el andar consuelo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+---+-">Y que después, cansada y abatida,</l>
+               <l n="13" met="+-+--+-+-+-">cual queriendo pasar, a la otra vida,</l>
+               <l n="14" met="+--+---+-+-">dices mi nombre, suspirando, al cielo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s479n_1821">
+            <head>Sin esperanzas</head>
+            <lg n="1" type="unknown">
+               <l n="1" met="---+-+--+---+-">Desde los más profundos abismos de la vida</l>
+               <l n="2" met="++-+++--++--+-" enjamb="B-ex_subj_verb">yo te invoqué mil veces; y mil veces mi afán</l>
+               <l n="3" met="+----+--+---+-" enjamb="B-cc_crossclause I-ex_subj_verb">fue para mis anhelos la estrella bendecida</l>
+               <l n="4" met="---+-+--+---+-" enjamb="I-cc_crossclause">que fulguró un instante con dulce fulgurar.</l>
+            </lg>
+            <lg n="2" type="unknown">
+               <l n="5" met="-+++-+-+----+-">¿Por qué no te levantas, flor de mis pensamientos,</l>
+               <l n="6" met="-+---+----+--+">y vienes con tus ósculos de esperanza y de fe,</l>
+               <l n="7" met="-++--+-++---+-">a darme lo que en vida me dieron tus alientos</l>
+               <l n="8" met="--+--+--+---+-">y a nutrir de ilusiones mis ansias del ayer?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+----+-+-+-" enjamb="B-ex_subj_verb">¡Muerta querida, lejos de ti la vida mía</l>
+               <l n="10" met="--+--+------+-" enjamb="I-ex_subj_verb">se deshoja cual mustia Rosa de Alejandría</l>
+               <l n="11" met="-+-+-+--+---+-">sangrando gota a gota mi amante corazón!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++-++--+--++-">Y en vano es que te implore, si no has de volver nunca.</l>
+               <l n="13" met="-+---+--++-+-" enjamb="B-ex_dobj_verb">El soplo de tu muerte dejó en mi alma trunca</l>
+               <l n="14" met="-+---+--+---+-" enjamb="I-ex_dobj_verb">la flor de la esperanza y el iris del amor.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

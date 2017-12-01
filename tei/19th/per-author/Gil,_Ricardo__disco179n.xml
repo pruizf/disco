@@ -1,243 +1,332 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Ricardo Gil</title>
-        <author>
-          <idno type="viaf" cert="medium">3706986</idno>
-          <idno type="#disco" xml:id="disco_179n"/>
-          <name type="short">Gil</name>
-          <name type="full">
-            <name type="first-name">Ricardo</name>
-            <name type="second-name">Gil</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">7</measure>
-        <measure unit="tokens">600</measure>
-        <measure unit="line">98</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_179n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_179n" role="author" sex="M">
-            <persName>Ricardo Gil</persName>
-            <birth><placeName type="place">Madrid</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1855" cert="high">1855</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Madrid</placeName>, <date type="year" when="1908" cert="high">1908</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Ricardo Gil</title>
+            <author corresp="#disco_179n">Ricardo Gil</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">7</measure>
+            <measure unit="tokens">600</measure>
+            <measure unit="line">98</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_179n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_179n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="medium" resource="https://viaf.org/viaf/3706986"/>
+                  <persName type="short">Gil</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ricardo</forename>
+                     <surname property="foaf:familyName">Gil</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ricardo Gil</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1855" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1908" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s179n_0610" about="dbpedia:Soneto">
+                        <title property="dc:title">Pereza</title>
+                        <title type="incipit" property="dc:alternative">No de rizosas plumas el mullido</title>
+                     </bibl>
+                     <bibl resource="disco#s179n_0611" about="dbpedia:Soneto">
+                        <title property="dc:title">Sueña...</title>
+                        <title type="incipit" property="dc:alternative">No despiertes aún... En los risueños</title>
+                     </bibl>
+                     <bibl resource="disco#s179n_0612" about="dbpedia:Soneto">
+                        <title property="dc:title">Mi único enemigo</title>
+                        <title type="incipit" property="dc:alternative">Amigo cariñoso en apariencia</title>
+                     </bibl>
+                     <bibl resource="disco#s179n_0613" about="dbpedia:Soneto">
+                        <title property="dc:title">Consejo</title>
+                        <title type="incipit" property="dc:alternative">Luzbel, (que, mientras Dios hizo la rosa,</title>
+                     </bibl>
+                     <bibl resource="disco#s179n_0614" about="dbpedia:Soneto">
+                        <title property="dc:title">Prudencia</title>
+                        <title type="incipit" property="dc:alternative">No con reserva inútil, irrisoria,</title>
+                     </bibl>
+                     <bibl resource="disco#s179n_0615" about="dbpedia:Soneto">
+                        <title property="dc:title">Jurar en vano</title>
+                        <title type="incipit" property="dc:alternative">¡Juramentos de amor!... Música vana,</title>
+                     </bibl>
+                     <bibl resource="disco#s179n_0616" about="dbpedia:Soneto">
+                        <title property="dc:title">A Calderón</title>
+                        <title type="incipit" property="dc:alternative">Siendo español no ha sido perezoso,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Ricardo Gil</head>
-        <p>Madrid. 1855 - 1908</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s179n_0610">
-        <head>Pereza</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">No de rizosas plumas el mullido</l>
-          <l n="2">cómodo lecho mi pereza ansía,</l>
-          <l n="3">sino de blando césped en la umbría</l>
-          <l n="4">fresca arboleda solitario nido;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">un cielo azul; el lento y sostenido</l>
-          <l n="6">gotear de la fuente en la vacía</l>
-          <l n="7">sonante roca, y el olor que envía</l>
-          <l n="8">el pino por las auras removido.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Broten luego al caer el sol poniente,</l>
-          <l n="10">creciendo con la sombras el reposo,</l>
-          <l n="11">del ruiseñor las trémulas escalas,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y entornará mis ojos dulcemente</l>
-          <l n="13">ese sueño tranquilo y misterioso</l>
-          <l n="14">en que a la mariposa nacen alas.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s179n_0611">
-        <head>Sueña...</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">No despiertes aún... En los risueños</l>
-          <l n="2">abriles tan cercanos a tu cuna</l>
-          <l n="3">vas cabalgando al rayo de la luna</l>
-          <l n="4">en el corcel nevado de los sueños...</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Suelta la rienda de oro... Los pequeños</l>
-          <l n="6">te atajarán con crítica importuna...</l>
-          <l n="7">Déjalos que, envidiando tu fortuna,</l>
-          <l n="8">rían de tus quiméricos empeños.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De paso vas... Del éter estrellado</l>
-          <l n="10">no desciendas a un mundo miserable</l>
-          <l n="11">que todo sueño en lágrimas disuelve...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¡Antes se pierda tu corcel nevado</l>
-          <l n="13">en la noche callada, impenetrable</l>
-          <l n="14">de esa región de la que nadie vuelve!...</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s179n_0612">
-        <head>Mi único enemigo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Amigo cariñoso en apariencia</l>
-          <l n="2">y en realidad verdugo, de mi suerte</l>
-          <l n="3">decide a su capricho con el fuerte</l>
-          <l n="4">poder de su satánica elocuencia:</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">en torpe desaliento, sin clemencia</l>
-          <l n="6">toda viril aspiración convierte</l>
-          <l n="7">y triunfa y hace luego que despierte</l>
-          <l n="8">voraz remordimiento en mi conciencia.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Tú lo sabes, Dios mío, la mezquina</l>
-          <l n="10">loca pasión, el vergonzoso miedo,</l>
-          <l n="11">la duda y el estéril egoísmos</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">son armas con que lucha y me domina...</l>
-          <l n="13">¡Véncele Tú, Señor, que yo no puedo,</l>
-          <l n="14">no le puedo vencer, pues soy yo mismo!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s179n_0613">
-        <head>Consejo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Luzbel, (que, mientras Dios hizo la rosa,</l>
-          <l n="2">la espina modelo traidoramente)</l>
-          <l n="3">en un remanso de agua transparente</l>
-          <l n="4">vertió al pasar su baba ponzoñosa.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Contemplándose en él Eva curiosa</l>
-          <l n="6">dejó caer, al inclinar la frente,</l>
-          <l n="7">la flor que la adornaba, y sonriente</l>
-          <l n="8">creyó al cristal que la llamaba hermosa.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Cerró los ojos y se vio sin ella</l>
-          <l n="10">en otro espejo... tímidos sonrojos</l>
-          <l n="11">sintió, y después mortales agonías...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Cuando el tuyo consultes, niña bella,</l>
-          <l n="13">para mirarte bien, cierra los ojos</l>
-          <l n="14">y quiera Dios que entonces te sonrías.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s179n_0614">
-        <head>Prudencia</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">No con reserva inútil, irrisoria,</l>
-          <l n="2">de nuestro amor ocultaré el tesoro.</l>
-          <l n="3">Busca la luz para brillar el oro.</l>
-          <l n="4">¿Por qué lo he de ocultar siendo mi gloria...?</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">En tu huerto las flores de memoria</l>
-          <l n="6">saben, hace ya tiempo, que te adoro.</l>
-          <l n="7">Lo repiten los pájaros en coro.</l>
-          <l n="8">Las estrellas conocen nuestra historia.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mas de quien no comprenda el verdadero</l>
-          <l n="10">valor de mi tesoro, tenazmente</l>
-          <l n="11">como el avaro recatarme quiero.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">No digas, no, que oculto mi ferviente</l>
-          <l n="13">amor; lo sabe el universo entero.</l>
-          <l n="14">¿Quién lo ignora?... Los hombres solamente.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s179n_0615">
-        <head>Jurar en vano</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Juramentos de amor!... Música vana,</l>
-          <l n="2">¡no por sabida menos tentadora!...</l>
-          <l n="3">De nada sirve que os améis ahora</l>
-          <l n="4">si no juráis que os amaréis mañana.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¿Qué la insaciable voluntad humana</l>
-          <l n="6">es tornadiza? La pasión lo ignora</l>
-          <l n="7">y desdeña el presente, soñadora,</l>
-          <l n="8">y por triunfar del porvenir se afana.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Laura: en vuestra ventura necesita,</l>
-          <l n="10">para desvanecer recelo amargo,</l>
-          <l n="11">juramentos que abarquen lo futuro.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Que tu voz cadenciosa los repita</l>
-          <l n="13">una vez y otra y mil... Y sin embargo</l>
-          <l n="14">no creo en juramentos, te lo juro.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s179n_0616">
-        <head>A Calderón</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Siendo español no ha sido perezoso,</l>
-          <l n="2">ni siendo militar fue pendenciero;</l>
-          <l n="3">cortesano y no ha sido lisonjero;</l>
-          <l n="4">teólogo y al ergo dio reposo;</l>
-        </lg>
-        <lg n="2" type="unknown">
-          <l n="5">Honores recibió; no fue ambicioso:</l>
-          <l n="6">fue poeta y modesto... ¿Pues qué pero,</l>
-          <l n="7">qué falta impide que el romano clero</l>
-          <l n="8">canonice a varón tan virtuosos?...</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿A qué tanto esperar? Yo le consagro</l>
-          <l n="10">mis oraciones ya con toda el alma</l>
-          <l n="11">en los combates de la carne recios...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mas ya sé lo que esperan, un milagro:</l>
-          <l n="13">ver si después de muerto puede en calma</l>
-          <l n="14">resistir la alabanza de los necios.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Ricardo Gil</head>
+            <p>Madrid. 1855 - 1908</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s179n_0610">
+            <head>Pereza</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-" enjamb="B-ex_subj_verb">No de rizosas plumas el mullido</l>
+               <l n="2" met="+--+---+-+-" enjamb="I-ex_subj_verb">cómodo lecho mi pereza ansía,</l>
+               <l n="3" met="---+-+---+-" enjamb="B-pb_adj_noun">sino de blando césped en la umbría</l>
+               <l n="4" met="+--+---+-+-" enjamb="I-pb_adj_noun">fresca arboleda solitario nido;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+-+---+-" enjamb="B-pb_adj_noun">un cielo azul; el lento y sostenido</l>
+               <l n="6" met="-+--+----+-" enjamb="B-pb_adj_noun I-pb_adj_noun">gotear de la fuente en la vacía</l>
+               <l n="7" met="-+-+--+--+-" enjamb="B-ex_dobj_verb I-pb_adj_noun">sonante roca, y el olor que envía</l>
+               <l n="8" met="-+---+---+-" enjamb="I-ex_dobj_verb">el pino por las auras removido.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+-+-+-">Broten luego al caer el sol poniente,</l>
+               <l n="10" met="-+---+---+-">creciendo con la sombras el reposo,</l>
+               <l n="11" met="---+-+---+-">del ruiseñor las trémulas escalas,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+-+-+-" enjamb="B-ex_subj_verb">y entornará mis ojos dulcemente</l>
+               <l n="13" met="+-+--+---+-" enjamb="I-ex_subj_verb">ese sueño tranquilo y misterioso</l>
+               <l n="14" met="-----+-+-+-">en que a la mariposa nacen alas.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s179n_0611">
+            <head>Sueña...</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+-+---+-" enjamb="B-pb_adj_noun">No despiertes aún... En los risueños</l>
+               <l n="2" met="-+-+-+---+-" enjamb="I-pb_adj_noun">abriles tan cercanos a tu cuna</l>
+               <l n="3" met="+--+-+---+-">vas cabalgando al rayo de la luna</l>
+               <l n="4" met="---+-+---+-">en el corcel nevado de los sueños...</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+---+-" enjamb="B-ex_subj_verb">Suelta la rienda de oro... Los pequeños</l>
+               <l n="6" met="+--+-+---+-" enjamb="I-ex_subj_verb">te atajarán con crítica importuna...</l>
+               <l n="7" met="+-+--+---+-">Déjalos que, envidiando tu fortuna,</l>
+               <l n="8" met="+----+---+-">rían de tus quiméricos empeños.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+---+-" enjamb="B-pb_verb_adv">De paso vas... Del éter estrellado</l>
+               <l n="10" met="+-+-++---+-" enjamb="B-cc_crossclause I-pb_verb_adv">no desciendas a un mundo miserable</l>
+               <l n="11" met="-+-+-+---+-" enjamb="I-cc_crossclause">que todo sueño en lágrimas disuelve...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+---+-+-">¡Antes se pierda tu corcel nevado</l>
+               <l n="13" met="--+--+---+-" enjamb="B-pb_adj_prep">en la noche callada, impenetrable</l>
+               <l n="14" met="+--+---+-+-" enjamb="I-pb_adj_prep">de esa región de la que nadie vuelve!...</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s179n_0612">
+            <head>Mi único enemigo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">Amigo cariñoso en apariencia</l>
+               <l n="2" met="---+-+---+-">y en realidad verdugo, de mi suerte</l>
+               <l n="3" met="-+---+---+-" enjamb="B-pb_adj_noun">decide a su capricho con el fuerte</l>
+               <l n="4" met="-+---+---+-" enjamb="I-pb_adj_noun">poder de su satánica elocuencia:</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">en torpe desaliento, sin clemencia</l>
+               <l n="6" met="+--+---+-+-">toda viril aspiración convierte</l>
+               <l n="7" met="-+-+-----+-" enjamb="B-ex_dobj_verb">y triunfa y hace luego que despierte</l>
+               <l n="8" met="-+---+---+-" enjamb="I-ex_dobj_verb">voraz remordimiento en mi conciencia.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+++-++---+-">Tú lo sabes, Dios mío, la mezquina</l>
+               <l n="10" met="+--+---+-+-">loca pasión, el vergonzoso miedo,</l>
+               <l n="11" met="-+---+---+-">la duda y el estéril egoísmos</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++---+-+-+-">son armas con que lucha y me domina...</l>
+               <l n="13" met="+-++-+-+++-">¡Véncele Tú, Señor, que yo no puedo,</l>
+               <l n="14" met="+++--+-+++-">no le puedo vencer, pues soy yo mismo!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s179n_0613">
+            <head>Consejo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---++--+-">Luzbel, (que, mientras Dios hizo la rosa,</l>
+               <l n="2" met="-+--+--+-+-">la espina modelo traidoramente)</l>
+               <l n="3" met="-+-+-+---+-">en un remanso de agua transparente</l>
+               <l n="4" met="-+-+-+---+-">vertió al pasar su baba ponzoñosa.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+-+++--+-" enjamb="B-ex_subj_verb">Contemplándose en él Eva curiosa</l>
+               <l n="6" met="-+-+---+-+-" enjamb="I-ex_subj_verb">dejó caer, al inclinar la frente,</l>
+               <l n="7" met="-+-+-+---+-" enjamb="B-pb_verb_adv">la flor que la adornaba, y sonriente</l>
+               <l n="8" met="-+-+-+-+-+-" enjamb="I-pb_verb_adv">creyó al cristal que la llamaba hermosa.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">Cerró los ojos y se vio sin ella</l>
+               <l n="10" met="-+-+-+---+-" enjamb="B-pb_verb_adv">en otro espejo... tímidos sonrojos</l>
+               <l n="11" met="-+-+-+---+-" enjamb="I-pb_verb_adv">sintió, y después mortales agonías...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-----+-+-+-">Cuando el tuyo consultes, niña bella,</l>
+               <l n="13" met="---++++--+-" enjamb="B-ex_subj_verb">para mirarte bien, cierra los ojos</l>
+               <l n="14" met="-+-+-+-+-+-" enjamb="I-ex_subj_verb">y quiera Dios que entonces te sonrías.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s179n_0614">
+            <head>Prudencia</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-">No con reserva inútil, irrisoria,</l>
+               <l n="2" met="---+---+-+-">de nuestro amor ocultaré el tesoro.</l>
+               <l n="3" met="+--+---+-+-">Busca la luz para brillar el oro.</l>
+               <l n="4" met="-++--++--+-">¿Por qué lo he de ocultar siendo mi gloria...?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-" enjamb="B-ex_subj_verb">En tu huerto las flores de memoria</l>
+               <l n="6" met="+-+-++--++-" enjamb="I-ex_subj_verb">saben, hace ya tiempo, que te adoro.</l>
+               <l n="7" met="+-+--+---+-">Lo repiten los pájaros en coro.</l>
+               <l n="8" met="--+--+---+-">Las estrellas conocen nuestra historia.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+---+-" enjamb="B-pb_adj_noun">Mas de quien no comprenda el verdadero</l>
+               <l n="10" met="-+---+--++-" enjamb="I-pb_adj_noun">valor de mi tesoro, tenazmente</l>
+               <l n="11" met="---+---+++-">como el avaro recatarme quiero.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++-+-+---+-" enjamb="B-ex_subj_verb">No digas, no, que oculto mi ferviente</l>
+               <l n="13" met="-+++---+-+-" enjamb="I-ex_subj_verb">amor; lo sabe el universo entero.</l>
+               <l n="14" met="+++--+-+-+-">¿Quién lo ignora?... Los hombres solamente.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s179n_0615">
+            <head>Jurar en vano</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--++--+-">¡Juramentos de amor!... Música vana,</l>
+               <l n="2" met="+--+-+---+-">¡no por sabida menos tentadora!...</l>
+               <l n="3" met="-+-+-+-+-+-">De nada sirve que os améis ahora</l>
+               <l n="4" met="-+-++--+-+-">si no juráis que os amaréis mañana.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-" enjamb="B-ex_subj_verb">¿Qué la insaciable voluntad humana</l>
+               <l n="6" met="+--+--++-+-" enjamb="I-ex_subj_verb">es tornadiza? La pasión lo ignora</l>
+               <l n="7" met="--+--+---+-">y desdeña el presente, soñadora,</l>
+               <l n="8" met="---+---+-+-">y por triunfar del porvenir se afana.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+----+---+-">Laura: en vuestra ventura necesita,</l>
+               <l n="10" met="-----+-+-+-">para desvanecer recelo amargo,</l>
+               <l n="11" met="--+--+---+-">juramentos que abarquen lo futuro.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+-+-+-" enjamb="B-ex_subj_verb">Que tu voz cadenciosa los repita</l>
+               <l n="13" met="+-++-+---+-" enjamb="I-ex_subj_verb">una vez y otra y mil... Y sin embargo</l>
+               <l n="14" met="++---+-+++-">no creo en juramentos, te lo juro.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s179n_0616">
+            <head>A Calderón</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+++---+-">Siendo español no ha sido perezoso,</l>
+               <l n="2" met="-+---++--+-">ni siendo militar fue pendenciero;</l>
+               <l n="3" met="--+-++---+-">cortesano y no ha sido lisonjero;</l>
+               <l n="4" met="+------+-+-">teólogo y al ergo dio reposo;</l>
+            </lg>
+            <lg n="2" type="unknown">
+               <l n="5" met="-+---+++-+-">Honores recibió; no fue ambicioso:</l>
+               <l n="6" met="++--+--++-">fue poeta y modesto... ¿Pues qué pero,</l>
+               <l n="7" met="++-+---+-+-" enjamb="B-ex_subj_verb">qué falta impide que el romano clero</l>
+               <l n="8" met="--+---++-+-" enjamb="B-ex_subj_verb I-ex_subj_verb">canonice a varón tan virtuosos?...</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++---++-+-" enjamb="B-ex_dobj_verb I-ex_subj_verb">¿A qué tanto esperar? Yo le consagro</l>
+               <l n="10" met="---+-+-+-+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">mis oraciones ya con toda el alma</l>
+               <l n="11" met="---+---+-+-" enjamb="I-pb_noun_prep">en los combates de la carne recios...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+-+-+-">Mas ya sé lo que esperan, un milagro:</l>
+               <l n="13" met="+----+-+-+-">ver si después de muerto puede en calma</l>
+               <l n="14" met="--+--+---+-">resistir la alabanza de los necios.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

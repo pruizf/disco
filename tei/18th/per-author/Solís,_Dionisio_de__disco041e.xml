@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Dionisio de Solís</title>
+            <author corresp="#disco_041e">Dionisio de Solís</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">5</measure>
+            <measure unit="tokens">473</measure>
+            <measure unit="line">70</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_041e"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XVIII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc12653"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xviii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_041e"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="medium" resource="https://viaf.org/viaf/45406044"/>
+                  <persName type="short">Solís</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Dionisio</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Solís</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Dionisio de Solís</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1774" cert="high"/>
+                     <date type="century">18</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1834" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s041e_0222" about="dbpedia:Soneto">
+                        <title property="dc:title">A un cortesano</title>
+                        <title type="incipit" property="dc:alternative">Dicen que eres mudable, don Pepito,</title>
+                     </bibl>
+                     <bibl resource="disco#s041e_0223" about="dbpedia:Soneto">
+                        <title property="dc:title">Pobre importuno</title>
+                        <title type="incipit" property="dc:alternative">¿Por qué aspira sin fruto, Arnardi bella,</title>
+                     </bibl>
+                     <bibl resource="disco#s041e_0224" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">¡En media hora un soneto! ¿A qué cristiano</title>
+                     </bibl>
+                     <bibl resource="disco#s041e_0225" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Puro y Luciente sol, ¡oh, qué consuelo</title>
+                     </bibl>
+                     <bibl resource="disco#s041e_0226" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Canta blanco palomo, y de la aurora</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <div>
+            <head>Dionisio de Solís</head>
+            <p>Madrid. 1774 - 1834</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s041e_0222">
+            <head>A un cortesano</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-">Dicen que eres mudable, don Pepito,</l>
+               <l n="2" met="-+---+---+-">que fuiste de Manolo cortesano,</l>
+               <l n="3" met="---+---+-+-">soneteruelo del francés tirano</l>
+               <l n="4" met="---+---+-+-">y de sus odres perennal mosquito;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+-+-+-" enjamb="B-ex_subj_verb">que mudando de altar, de culto y rito</l>
+               <l n="6" met="+--+---+-+-" enjamb="I-ex_subj_verb">fuiste, tras esto, muratista insano</l>
+               <l n="7" met="---+---+-+-" enjamb="B-pb_adj_adv">y, para postres, del Nerón hispano</l>
+               <l n="8" met="--++---+-+-" enjamb="I-pb_adj_adv">semanalmente adorador contrito.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--++-+-+-+-">Pero no dicen bien; el pueblo miente,</l>
+               <l n="10" met="-+-+-+---+-" enjamb="B-ex_subj_verb">ni menos hay razón por que afrentando</l>
+               <l n="11" met="++-+-+--++-" enjamb="I-ex_subj_verb">te esté, y traidor y apóstata te llame.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+---+-">Antes en eso mismo que insolente</l>
+               <l n="13" met="+--+-+-+-+-" enjamb="B-pb_verb_adv">te echa Madrid en cara, estás mostrando</l>
+               <l n="14" met="++++-+-+-+-" enjamb="I-pb_verb_adv">cuán firme has sido siempre en ser infame.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s041e_0223">
+            <head>Pobre importuno</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-++--+-+-+-">¿Por qué aspira sin fruto, Arnardi bella,</l>
+               <l n="2" met="---++--+-+-">a lo que darme tu piedad resiste?</l>
+               <l n="3" met="-+-+---+-+-" enjamb="B-ex_subj_verb">¿por qué mi amor en alcanzar insiste</l>
+               <l n="4" met="--++---+-+-" enjamb="I-ex_subj_verb">lo que me impide merecer mi estrella?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+-+---+-">¿No fuera bien buscar a mi querella,</l>
+               <l n="6" met="---+---+-+-">en el asilo de mi tumba triste,</l>
+               <l n="7" met="---+-+---+-" enjamb="B-ex_subj_verb">el anhelado fin, pues que consiste</l>
+               <l n="8" met="+--+---+-+-" enjamb="I-ex_subj_verb">mi única dicha y mi consuelo en ella?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+---+-+-">¡Necio, que pronto de esperar cansado,</l>
+               <l n="10" met="-+---++--+-">se abate tu pasión, antes osada,</l>
+               <l n="11" met="---+---+-+-">y con el miedo la fortuna mide!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-++-+-+++-">¿Qué amador fue constante y no fue amado?</l>
+               <l n="13" met="-+-+-+---+-">¿O qué mujer, del hombre importunada,</l>
+               <l n="14" met="++-+-+--++-">no la concede al fin lo que le pide?</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s041e_0224">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+++-+-+-+-" enjamb="B-pb_noun_prep">¡En media hora un soneto! ¿A qué cristiano</l>
+               <l n="2" met="-++--+-+-+-" enjamb="I-pb_noun_prep">a tan bárbaro afán se le condena?</l>
+               <l n="3" met="++--++-+-+-">¿Y es Filis quien lo quiere? ¿A qué otra pena</l>
+               <l n="4" met="+--+++---+-">me sentenciara un Fálaris tirano?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+++-++--+-" enjamb="B-ex_subj_verb">Pues qué, ¿no hay más? O ¿están tan a la mano</l>
+               <l n="6" met="---+---+-+-" enjamb="I-ex_subj_verb">los consonantes como en esta amena</l>
+               <l n="7" met="+--+---+-+-">margen del Turia la menuda arena</l>
+               <l n="8" met="---+-+-+-+-">en que tu blanco pie se imprime ufano?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++-+-+-+-+-">No, cara Filis; mándame otra cosa,</l>
+               <l n="10" met="+--+-+---+-">ora de riesgo sea, ora de afrenta;</l>
+               <l n="11" met="-+---+---+-">que a cuanto de mis órdenes concedo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+-+++-">Pero ¿un soneto, y qué, por ser tú hermosa,</l>
+               <l n="13" met="-+-+---+-+-">en ello, al fin, mi necedad consienta?</l>
+               <l n="14" met="++-+-+-+++-">No, Filis, no; perdóname: ¡no puedo!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s041e_0225">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+-+-+-" enjamb="B-pb_noun_prep">Puro y Luciente sol, ¡oh, qué consuelo</l>
+               <l n="2" met="-+----+--+-" enjamb="I-pb_noun_prep">al alma mía en tu presencia ofreces,</l>
+               <l n="3" met="---+-+---+-">cuando con rostro cándido esclareces</l>
+               <l n="4" met="-+-+---+-+-">la oscura sombra del nocturno velo!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-">¡Oh, cómo animas el marchito suelo</l>
+               <l n="6" met="--+--+-+-+-">con benéfica llama! Y ¡cómo creces</l>
+               <l n="7" met="-+---+---+-">inmenso y luminoso, que pareces</l>
+               <l n="8" met="-+-+-+-+-+-">llenar la tierra, el mar, el aire, el cielo!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-" enjamb="B-cc_crossclause">¡Oh sol! Entra en la espléndida carrera</l>
+               <l n="10" met="-+-+-+---+-" enjamb="I-cc_crossclause">que te señala el dedo omnipotente,</l>
+               <l n="11" met="---+---+-+-">al asomar por las etéreas cumbres;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+-+-+-">y tu increado Autor piadoso quiera,</l>
+               <l n="13" met="---+-+-+-+-" enjamb="B-pb_adj_noun">que desde oriente a ocaso eternamente</l>
+               <l n="14" met="+--+---+-+-" enjamb="I-pb_adj_noun">pueblos felices en tu curso alumbres!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s041e_0226">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-">Canta blanco palomo, y de la aurora</l>
+               <l n="2" met="-+-+--++-+-">el róseo carro con ti acento llama;</l>
+               <l n="3" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">que atenta escucha en la mullida cama</l>
+               <l n="4" met="-+---+---+-" enjamb="I-ex_dobj_verb">la esposa a quien tu cántico enamora.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+----+-+-">Canta y anuncia la estación de Flora</l>
+               <l n="6" met="---+-+--++-">y el delicioso incendio que te inflama,</l>
+               <l n="7" met="+--+---+-+-">mientras sentado en la frontera rama</l>
+               <l n="8" met="+--+---+-+-">otro palomo solitario llora.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+---+-" enjamb="B-pb_noun_prep">¡Felice tú que puedes con tu canto</l>
+               <l n="10" met="-+---+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">al alma penetrar por el oído</l>
+               <l n="11" met="-+-+---+-+-" enjamb="I-pb_noun_prep">del ave amante en que tu bien se funda!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+--+-+-">Y ¡mísero de mí, que la triste llanto</l>
+               <l n="13" met="--+-++---+-">en que a solas me miras consumido,</l>
+               <l n="14" met="-+-+---+++-">sin fruto el rostro y sin cesar me inunda!</l>
+            </lg>
+         </lg>
+      </body>
+  </text>
+</TEI>

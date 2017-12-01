@@ -1,118 +1,181 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Ambrosio Echemendia</title>
-        <author>
-          <idno type="viaf" cert="high">108090009</idno>
-          <idno type="#disco" xml:id="disco_466n"/>
-          <name type="short">Echemendia</name>
-          <name type="full">
-            <name type="first-name">Ambrosio</name>
-            <name type="second-name">Echemendia</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">164</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_466n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_466n" role="author" sex="M">
-            <persName>Ambrosio Echemendia</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1843" cert="high">1843</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1843" cert="high">1843</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Ambrosio Echemendia</title>
+            <author corresp="#disco_466n">Ambrosio Echemendia</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">164</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_466n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_466n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/108090009"/>
+                  <persName type="short">Echemendia</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ambrosio</forename>
+                     <surname property="foaf:familyName">Echemendia</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ambrosio Echemendia</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1843" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1893" cert="low"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s466n_1775" about="dbpedia:Soneto">
+                        <title property="dc:title">Al Damují</title>
+                        <title type="incipit" property="dc:alternative">No ha mucho tiempo, caudaloso río,</title>
+                     </bibl>
+                     <bibl resource="disco#s466n_1776" about="dbpedia:Soneto">
+                        <title property="dc:title">Un incrédulo de mis versos</title>
+                        <title type="incipit" property="dc:alternative">Tú, que a mis versos niegas despiadado,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Ambrosio Echemendia</head>
-        <p>Cuba. 1843 - 0</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s466n_1775">
-        <head>Al Damují</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">No ha mucho tiempo, caudaloso río,</l>
-          <l n="2">murmuraban tus aguas quejumbrosas,</l>
-          <l n="3">bañando tristes las pajizas chozas</l>
-          <l n="4">que formaban tu pobre caserío.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">El Progreso escuchó tu murmurío,</l>
-          <l n="6">y en tus incultas márgenes hojosas,</l>
-          <l n="7">brotó Cienfuegos, como en frescas rosas</l>
-          <l n="8">gentil capullo en el ardiente estío.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿Será cual tú mi genio desgraciado</l>
-          <l n="10">que en silencioso vegetal se inspira?</l>
-          <l n="11">¿Vendrá el Progreso a revocar su hado?</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Si es cierto, Damují, ¡ay! en mi lira,</l>
-          <l n="13">al mudar cual tus linfas a otro estado...</l>
-          <l n="14">¡te promete cantar quien hoy suspira!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s466n_1776">
-        <head>Un incrédulo de mis versos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Tú, que a mis versos niegas despiadado,</l>
-          <l n="2">su único valor, el que son míos,</l>
-          <l n="3">¿calmarás tus dudosos desvaríos,</l>
-          <l n="4">por mi rudo soneto improvisado?</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">El cuarteto primero está formado,</l>
-          <l n="6">y siguiendo a Mendoza sin desvíos,</l>
-          <l n="7">con sentimientos crédulos y píos</l>
-          <l n="8">el segundo (dirás) lo ha rematado.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Pobreza, esclavitud, dolor maldito</l>
-          <l n="10">«terceto cruel d mi primer terceto»</l>
-          <l n="11">formaré de tu duda el requisito.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Pero al segundo muéstrame respeto</l>
-          <l n="13">por que entonces sin dudas es prurito,</l>
-          <l n="14">o clávenme en la frente mi soneto.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Ambrosio Echemendia</head>
+            <p>Cuba. 1843 - 0</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s466n_1775">
+            <head>Al Damují</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+---+-+-">No ha mucho tiempo, caudaloso río,</l>
+               <l n="2" met="--+--+---+-">murmuraban tus aguas quejumbrosas,</l>
+               <l n="3" met="-+-+---+-+-" enjamb="B-cc_crossclause">bañando tristes las pajizas chozas</l>
+               <l n="4" met="--+--+---+-" enjamb="I-cc_crossclause">que formaban tu pobre caserío.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-">El Progreso escuchó tu murmurío,</l>
+               <l n="6" met="---+-+---+-">y en tus incultas márgenes hojosas,</l>
+               <l n="7" met="-+-+---+-+-" enjamb="B-pb_adj_noun">brotó Cienfuegos, como en frescas rosas</l>
+               <l n="8" met="-+-+---+-+-" enjamb="I-pb_adj_noun">gentil capullo en el ardiente estío.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+---+-" enjamb="B-cc_crossclause">¿Será cual tú mi genio desgraciado</l>
+               <l n="10" met="---+---+-+-" enjamb="I-cc_crossclause">que en silencioso vegetal se inspira?</l>
+               <l n="11" met="-+-+---+-+-">¿Vendrá el Progreso a revocar su hado?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++---+---+-">Si es cierto, Damují, ¡ay! en mi lira,</l>
+               <l n="13" met="--+--+-+-+-">al mudar cual tus linfas a otro estado...</l>
+               <l n="14" met="+-+--+-+-+-">¡te promete cantar quien hoy suspira!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s466n_1776">
+            <head>Un incrédulo de mis versos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-">Tú, que a mis versos niegas despiadado,</l>
+               <l n="2" met="-+---+--++-">su único valor, el que son míos,</l>
+               <l n="3" met="--+--+---+-">¿calmarás tus dudosos desvaríos,</l>
+               <l n="4" met="--+--+---+-">por mi rudo soneto improvisado?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+-+-+-">El cuarteto primero está formado,</l>
+               <l n="6" met="--+--+---+-">y siguiendo a Mendoza sin desvíos,</l>
+               <l n="7" met="---+-+---+-">con sentimientos crédulos y píos</l>
+               <l n="8" met="--+--++--+-">el segundo (dirás) lo ha rematado.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+-+-+-">Pobreza, esclavitud, dolor maldito</l>
+               <l n="10" met="-+-++--+-+-">«terceto cruel d mi primer terceto»</l>
+               <l n="11" met="--+--+---+-">formaré de tu duda el requisito.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+-+-+-">Pero al segundo muéstrame respeto</l>
+               <l n="13" met="--+--+-+-+-">por que entonces sin dudas es prurito,</l>
+               <l n="14" met="-+-+-+---+-">o clávenme en la frente mi soneto.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

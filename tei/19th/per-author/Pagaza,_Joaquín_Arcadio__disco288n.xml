@@ -1,418 +1,530 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Joaquín Arcadio Pagaza</title>
-        <author>
-          <idno type="viaf" cert="high">49283950</idno>
-          <idno type="#disco" xml:id="disco_288n"/>
-          <name type="short">Pagaza</name>
-          <name type="full">
-            <name type="first-name">Joaquín Arcadio</name>
-            <name type="second-name">Pagaza</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">14</measure>
-        <measure unit="tokens">1238</measure>
-        <measure unit="line">196</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_288n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_288n" role="author" sex="M">
-            <persName>Joaquín Arcadio Pagaza</persName>
-            <birth><placeName type="place">Valle de Bravo (Estado de México)</placeName>, <placeName type="country">México</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1839" cert="high">1839</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1918" cert="high">1918</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Joaquín Arcadio Pagaza</title>
+            <author corresp="#disco_288n">Joaquín Arcadio Pagaza</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">14</measure>
+            <measure unit="tokens">1238</measure>
+            <measure unit="line">196</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_288n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_288n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/49283950"/>
+                  <persName type="short">Pagaza</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Joaquín Arcadio</forename>
+                     <surname property="foaf:familyName">Pagaza</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Joaquín Arcadio Pagaza</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Valle de Bravo (Estado de México)</settlement>
+                           <country>México</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1839" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1918" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s288n_0939" about="dbpedia:Soneto">
+                        <title property="dc:title">La oración de la tarde</title>
+                        <title type="incipit" property="dc:alternative">Tiende la tarde el silencioso manto</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0940" about="dbpedia:Soneto">
+                        <title property="dc:title">Crepúsculo</title>
+                        <title type="incipit" property="dc:alternative">Lento desciende el sol y se reclina</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0941" about="dbpedia:Soneto">
+                        <title property="dc:title">En la noche</title>
+                        <title type="incipit" property="dc:alternative">Parece mediodía. ¡Tanto alumbra</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0942" about="dbpedia:Soneto">
+                        <title property="dc:title">Al amanecer</title>
+                        <title type="incipit" property="dc:alternative">Asoma, Filis, soñoliento el día</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0943" about="dbpedia:Soneto">
+                        <title property="dc:title">El mandato</title>
+                        <title type="incipit" property="dc:alternative">De Jonatás, su amigo y su delicia,</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0944" about="dbpedia:Soneto">
+                        <title property="dc:title">La institución</title>
+                        <title type="incipit" property="dc:alternative">Lleno de amor, negado a las querellas</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0945" about="dbpedia:Soneto">
+                        <title property="dc:title">A un girasol</title>
+                        <title type="incipit" property="dc:alternative">Espejo de lealtad, flor admirable,</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0946" about="dbpedia:Soneto">
+                        <title property="dc:title">De Murmurios de la selva</title>
+                        <title type="incipit" property="dc:alternative">Dejó en Tesalia un cazador garrido,</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0947" about="dbpedia:Soneto">
+                        <title property="dc:title">Jueves Santo</title>
+                        <title type="incipit" property="dc:alternative">Bestia cruel, Satán: ¿en un bocado?...</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0948" about="dbpedia:Soneto">
+                        <title property="dc:title">En la Parasceve</title>
+                        <title type="incipit" property="dc:alternative">Dicen que el Tracio fue tan inspirado</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0949" about="dbpedia:Soneto">
+                        <title property="dc:title">El río</title>
+                        <title type="incipit" property="dc:alternative">¡Salve, deidad agreste, claro río,</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0950" about="dbpedia:Soneto">
+                        <title property="dc:title">El Papaloapan</title>
+                        <title type="incipit" property="dc:alternative">Escucho aún tu plácida quejumbre,</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0951" about="dbpedia:Soneto">
+                        <title property="dc:title">La peña majestuosa</title>
+                        <title type="incipit" property="dc:alternative">De un monte el dorso ríspido y serrado</title>
+                     </bibl>
+                     <bibl resource="disco#s288n_0952" about="dbpedia:Soneto">
+                        <title property="dc:title">El invierno en Jalapa</title>
+                        <title type="incipit" property="dc:alternative">Luchan el cierzo y austro; leve bruma</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Joaquín Arcadio Pagaza</head>
-        <p>Valle de Bravo (Estado de México). 1839 - 1918</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s288n_0939">
-        <head>La oración de la tarde</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Tiende la tarde el silencioso manto</l>
-          <l n="2">de albos vapores y húmidas neblinas</l>
-          <l n="3">y los valles y lagos y colinas</l>
-          <l n="4">mudos deponen su divino encanto.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Las estrellas en solio de amaranto</l>
-          <l n="6">al horizonte yérguense vecinas</l>
-          <l n="7">salpicando de gotas cristalinas</l>
-          <l n="8">las negras hojas del dormido acanto.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De un árbol a otro en verberar se afana</l>
-          <l n="10">nocturna el ave con pesado vuelo</l>
-          <l n="11">las auras leves y la sombra vana;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y presa el alma de pavor y duelo,</l>
-          <l n="13">al místico rumor de la campana</l>
-          <l n="14">se encoge, y treme, y se remonta al cielo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0940">
-        <head>Crepúsculo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Lento desciende el sol y se reclina</l>
-          <l n="2">en nubes de ámbar, rosa y escarlata;</l>
-          <l n="3">y resuélvese en lluvia de oro y plata</l>
-          <l n="4">de los montes lejanos la neblina.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Entre nimbos la estrella vespertina</l>
-          <l n="6">brilla y treme; en el lago se retrata</l>
-          <l n="7">el nublado que grácil se dilata</l>
-          <l n="8">donde rompe la bóveda azulina.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">El horizonte aclárase y remeda</l>
-          <l n="10">voraz incendio, tinte de amaranto</l>
-          <l n="11">el cielo cubre, el llano, la arboleda.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y junto al nido el postrimero canto</l>
-          <l n="13">entona embebecida el ave leda</l>
-          <l n="14">del sol poniente en el divino canto.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0941">
-        <head>En la noche</head>
-        <lg n="1" type="unknown">
-          <l n="1">Parece mediodía. ¡Tanto alumbra</l>
-          <l n="2">húmedo el bosque salpicando Febo!</l>
-          <l n="3">suave el céfiro apenas mueve</l>
-          <l n="4">aquella encina que entre mil se encumbra.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Sobre el Zempoala el Véspero relumbra</l>
-          <l n="6">tendido encima de la blanca nieve;</l>
-          <l n="7">y en la planada el arroyuelo leve</l>
-          <l n="8">como cinta de plata se columbra.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Rutila el cielo; y se oye en la montaña</l>
-          <l n="10">de la abubilla el grito lastimero</l>
-          <l n="11">que el eco reproduce en la campaña.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Flérida, ven y sígueme, pues quiero</l>
-          <l n="13">gozar de aquesta noche. La cabaña</l>
-          <l n="14">cierra, amiga; te aguardo en el otero.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0942">
-        <head>Al amanecer</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Asoma, Filis, soñoliento el día</l>
-          <l n="2">y llueve sin cesar; en los cercanos</l>
-          <l n="3">valladares, al pie de los bananos,</l>
-          <l n="4">mi grey se escuda de la niebla fría.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Las vacas a sus hijos con porfía</l>
-          <l n="6">llaman de los corrales, en pantanos</l>
-          <l n="7">convertidos, y ruedan en los llanos</l>
-          <l n="8">pardas las nubes y en la selva umbría.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Oye... se arrastra sobre el techo herboso</l>
-          <l n="10">los tiernos sauces con extraño brío</l>
-          <l n="11">al mecerlos el viento vagaroso,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">que trayendo oleadas de rocío</l>
-          <l n="13">por las rendijas entra querelloso:</l>
-          <l n="14">prende el fogón, amiga, tengo frío.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0943">
-        <head>El mandato</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">De Jonatás, su amigo y su delicia,</l>
-          <l n="2">y de Sául, contrario, crudo el sino</l>
-          <l n="3">al par lloró David. (El amor fino</l>
-          <l n="4">lleva siempre un resabio de injusticia.)</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Y de Judas midiendo la malicia</l>
-          <l n="6">e ingratitud el Redentor divino</l>
-          <l n="7">y de Juan el afecto peregrino,</l>
-          <l n="8">a entrambos lava, obsequia y acaricia.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Lleva a su plato, aquel la mano impura;</l>
-          <l n="10">y aqueste aviva su amorosa llama</l>
-          <l n="11">libando de su pecho la dulzura.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Amable a entrambos sus amigos llama</l>
-          <l n="13">al que dañarle pérfido procura,</l>
-          <l n="14">y al que leal le sigue y tierno le ama.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0944">
-        <head>La institución</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Lleno de amor, negado a las querellas</l>
-          <l n="2">del aura y aves y fontana pura,</l>
-          <l n="3">tramonta Febo y a la noche obscura</l>
-          <l n="4">borrar permite sus fecundas huellas.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Pero al enviar sus últimas centellas</l>
-          <l n="6">aquese vuelo aviva su ternura;</l>
-          <l n="7">y cambiando ingenioso de figura</l>
-          <l n="8">de nuevo encarna en mil y mil estrellas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Ah, Sol de Sol! Tu mística paloma</l>
-          <l n="10">te aprisionó llegada tu partida,</l>
-          <l n="11">con sus arrullos y preciado aroma;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y por dejarla en saciedad cumplida</l>
-          <l n="13">tomaste, al trasponer el agria loma,</l>
-          <l n="14">en mil panes y mil eterna vida.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0945">
-        <head>A un girasol</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Espejo de lealtad, flor admirable,</l>
-          <l n="2">que inmoble y a la par en movimiento</l>
-          <l n="3">saludando de Febo el nacimiento,</l>
-          <l n="4">a su ocaso le sigues invariable.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Es tan fino tu amor inimitable,</l>
-          <l n="6">que si envuelto en su manto ceniciento</l>
-          <l n="7">esquivo se levanta y soñoliento,</l>
-          <l n="8">a través le contemplas siempre amable.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Si al amante Jesús, mi sol divino,</l>
-          <l n="10">que me busca y me acecha enamorado,</l>
-          <l n="11">como tú al luminar amara fino,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">no me helaría al verlo disfrazado,</l>
-          <l n="13">con capuz ingenioso y peregrino</l>
-          <l n="14">esconderse de mí Sacramentado.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0946">
-        <head>De Murmurios de la selva</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Dejó en Tesalia un cazador garrido,</l>
-          <l n="2">bajo al móvil sombra de un manzano,</l>
-          <l n="3">a su hijo, mientras va por monte y llano</l>
-          <l n="4">una perdiz siguiendo hasta su nido.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Al volver, ¡oh dolor!, le ve ceñido</l>
-          <l n="6">por las espiras de dragón tirano;</l>
-          <l n="7">¡era padre!, al carcaj llevó la mano,</l>
-          <l n="8">trémulo el brazo, el corazón transido.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">La flecha embebe al arco; y con tal arte</l>
-          <l n="10">la fuerza mide y el impulso pesa,</l>
-          <l n="11">que tan sólo al dragón, certero, hiere.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Así Dios el socorro nos imparte</l>
-          <l n="13">cuando nos mira del infierno presa;</l>
-          <l n="14">y vive el hombre y la serpiente muere.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0947">
-        <head>Jueves Santo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Bestia cruel, Satán: ¿en un bocado?...</l>
-          <l n="2">¿en un bocado -¡ah, pérfido!- aseguras</l>
-          <l n="3">a estas dulces y cándidas criaturas</l>
-          <l n="4">que todo un Dios se encierra? ¡Mal pecado!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¡Ay, que perdieron su feliz estado</l>
-          <l n="6">por darte oído! ¡Cuántas desventuras!</l>
-          <l n="7">¡En vez del néctar, liban amarguras!</l>
-          <l n="8">¡En vez del cetro, empuñan un cayado!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿Y esto por siempre? ¡No! La hora suena</l>
-          <l n="10">y asoma Aquel que, Fruto de la fruta,</l>
-          <l n="11">del caído hombre la mejilla bese;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">quien, al cenar la postrimera cena,</l>
-          <l n="13">«Este es mi cuerpo», dice: el pan trasmuta...</l>
-          <l n="14">¡Y dioses somos aunque mal te pese!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0948">
-        <head>En la Parasceve</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Dicen que el Tracio fue tan inspirado</l>
-          <l n="2">poeta, que al tañer su blanda lira</l>
-          <l n="3">llevaba en pos de sí (¡dulce mentira!)</l>
-          <l n="4">la selva, el arroyuelo y el collado.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¡Vate, no tú, por vates sublimado!</l>
-          <l n="6">Aquel cisne divino cuando expira</l>
-          <l n="7">el sí, por más que el báratro conspira,</l>
-          <l n="8">se atrajo el universo consternado.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Al resonar su postrimer acento,</l>
-          <l n="10">despierta el mar y airado se incorpora</l>
-          <l n="11">enviando a las estrellas su lamento;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">el Infierno sus pérdidas deplora;</l>
-          <l n="13">treme la Tierra en su hondo firmamento,</l>
-          <l n="14">y en luto el cielo con los astros llora.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0949">
-        <head>El río</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Salve, deidad agreste, claro río,</l>
-          <l n="2">de mi sueño natal lustre y decoro,</l>
-          <l n="3">que resbalas magnífico y sonoro</l>
-          <l n="4">entre brumas y gélido rocío!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Es el blanco nenúfar tu atavío,</l>
-          <l n="6">tus cuernos de coral, tu barba de oro,</l>
-          <l n="7">los jilguerillos tu preciado coro,</l>
-          <l n="8">tu espléndida mansión el bosque umbrío.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Hiedra y labrusca se encaraman blondas</l>
-          <l n="10">y enlazan por cubrirte en los calores</l>
-          <l n="11">con campanillas y rizadas frondas;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">te dan fragancia las palustres flores;</l>
-          <l n="13">y al zambullirte, tus cerúleas ondas</l>
-          <l n="14">ensortijan los cisnes nadadores.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0950">
-        <head>El Papaloapan</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Escucho aún tu plácida quejumbre,</l>
-          <l n="2">gigante río. ¡Límpida guirnalda</l>
-          <l n="3">tu sien orne y del médano la falda</l>
-          <l n="4">ciñas con aparente mansedumbre!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Del sol hermoso la divina lumbre</l>
-          <l n="6">retrátase en tu linfa de esmeralda</l>
-          <l n="7">y en ti se vea tinta de oro y gualda</l>
-          <l n="8">del Citlatépetl la nevada cumbre.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De tus riberas el papayo rico</l>
-          <l n="10">la poma ostente en nido de verdura</l>
-          <l n="11">del tordo herida por el rojo pico</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y mézclanse tus palmas en la altura</l>
-          <l n="13">blandamente agitando el abanico</l>
-          <l n="14">que al dulce Tlacotalpan da frescura.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0951">
-        <head>La peña majestuosa</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">De un monte el dorso ríspido y serrado</l>
-          <l n="2">tiene por trono, y la escarpada cumbre;</l>
-          <l n="3">se corona en laurel, y su techumbre</l>
-          <l n="4">las nubes son y el éter azulado.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Por cetro empuña verde y arriscado</l>
-          <l n="6">monolito de enorme pesadumbre;</l>
-          <l n="7">las colinas su regia servidumbre</l>
-          <l n="8">son, y su imperio el valle dilatado.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Se embebece mirando en el bruñido</l>
-          <l n="10">y líquido cristal su faz severa,</l>
-          <l n="11">su airoso porte y ademán temido.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y su música dulce y placentera</l>
-          <l n="13">son el trueno del rayo y el graznido</l>
-          <l n="14">del águila salvaje y altanera.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s288n_0952">
-        <head>El invierno en Jalapa</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Luchan el cierzo y austro; leve bruma</l>
-          <l n="2">el valle, el monte y el zafir empaña,</l>
-          <l n="3">y rumoroso sus arenas baña</l>
-          <l n="4">inquieto el mar con irisada espuma.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">En grupos, balador y ágil, trashuma</l>
-          <l n="6">el rebaño o se llega a la cabaña,</l>
-          <l n="7">donde no lejos de un rival, sin saña</l>
-          <l n="8">sacude e gallo la mojada pluma.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Y arrástranse las nubes con sublime</l>
-          <l n="10">susurro en el pinar. ¡Cuánta belleza</l>
-          <l n="11">la blanca, tenue luz al cuadro imprime!</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y del invierno acrece la rudeza</l>
-          <l n="13">la lluvia pertinaz, que el alma oprime</l>
-          <l n="14">con infinita y plácida tristeza.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Joaquín Arcadio Pagaza</head>
+            <p>Valle de Bravo (Estado de México). 1839 - 1918</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s288n_0939">
+            <head>La oración de la tarde</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-" enjamb="B-pb_noun_prep">Tiende la tarde el silencioso manto</l>
+               <l n="2" met="+--+-+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">de albos vapores y húmidas neblinas</l>
+               <l n="3" met="--+--+---+-" enjamb="B-pb_adj_noun I-pb_noun_prep">y los valles y lagos y colinas</l>
+               <l n="4" met="+--+---+-+-" enjamb="I-pb_adj_noun">mudos deponen su divino encanto.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-">Las estrellas en solio de amaranto</l>
+               <l n="6" met="---+-+---+-">al horizonte yérguense vecinas</l>
+               <l n="7" met="--+--+---+-" enjamb="B-ex_dobj_verb">salpicando de gotas cristalinas</l>
+               <l n="8" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">las negras hojas del dormido acanto.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++-+---+-+-" enjamb="B-ex_dobj_verb">De un árbol a otro en verberar se afana</l>
+               <l n="10" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">nocturna el ave con pesado vuelo</l>
+               <l n="11" met="-+-+---+-+-">las auras leves y la sombra vana;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">y presa el alma de pavor y duelo,</l>
+               <l n="13" met="-+---+---+-">al místico rumor de la campana</l>
+               <l n="14" met="-+-+---+-+-">se encoge, y treme, y se remonta al cielo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0940">
+            <head>Crepúsculo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-">Lento desciende el sol y se reclina</l>
+               <l n="2" met="-+-+-+---+-">en nubes de ámbar, rosa y escarlata;</l>
+               <l n="3" met="--+-++-+-+-" enjamb="B-pb_noun_prep">y resuélvese en lluvia de oro y plata</l>
+               <l n="4" met="--+--+---+-" enjamb="I-pb_noun_prep">de los montes lejanos la neblina.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-" enjamb="B-ex_subj_verb">Entre nimbos la estrella vespertina</l>
+               <l n="6" met="+-+--+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">brilla y treme; en el lago se retrata</l>
+               <l n="7" met="--+--+---+-" enjamb="B-cc_crossclause I-ex_subj_verb">el nublado que grácil se dilata</l>
+               <l n="8" met="--+--+---+-" enjamb="I-cc_crossclause">donde rompe la bóveda azulina.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+-+-+-" enjamb="B-ex_dobj_verb">El horizonte aclárase y remeda</l>
+               <l n="10" met="-+-+-+---+-" enjamb="I-ex_dobj_verb">voraz incendio, tinte de amaranto</l>
+               <l n="11" met="-+-+-+---+-">el cielo cubre, el llano, la arboleda.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-" enjamb="B-ex_dobj_verb">Y junto al nido el postrimero canto</l>
+               <l n="13" met="-+---+-+-+-" enjamb="I-ex_dobj_verb">entona embebecida el ave leda</l>
+               <l n="14" met="-+-+---+-+-">del sol poniente en el divino canto.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0941">
+            <head>En la noche</head>
+            <lg n="1" type="unknown">
+               <l n="1" met="-+-------+-" enjamb="B-pb_adj_noun">Parece mediodía. ¡Tanto alumbra</l>
+               <l n="2" met="+--+---+-+-" enjamb="I-pb_adj_noun">húmedo el bosque salpicando Febo!</l>
+               <l n="3" met="+--+---+-+-" enjamb="B-ex_dobj_verb">suave el céfiro apenas mueve</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">aquella encina que entre mil se encumbra.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-----+---+-" enjamb="B-ex_dobj_verb">Sobre el Zempoala el Véspero relumbra</l>
+               <l n="6" met="-+-----+-+-" enjamb="I-ex_dobj_verb">tendido encima de la blanca nieve;</l>
+               <l n="7" met="---+---+-+-" enjamb="B-ex_subj_verb">y en la planada el arroyuelo leve</l>
+               <l n="8" met="--+--+---+-" enjamb="I-ex_subj_verb">como cinta de plata se columbra.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+---+-" enjamb="B-pb_noun_prep">Rutila el cielo; y se oye en la montaña</l>
+               <l n="10" met="---+-+---+-" enjamb="I-pb_noun_prep">de la abubilla el grito lastimero</l>
+               <l n="11" met="-+---+---+-">que el eco reproduce en la campaña.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+-+-+-" enjamb="B-pb_verb_chain">Flérida, ven y sígueme, pues quiero</l>
+               <l n="13" met="-+--+-+--+-" enjamb="B-ex_subj_verb I-pb_verb_chain">gozar de aquesta noche. La cabaña</l>
+               <l n="14" met="+-+-++---+-" enjamb="I-ex_subj_verb">cierra, amiga; te aguardo en el otero.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0942">
+            <head>Al amanecer</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-" enjamb="B-ex_subj_verb">Asoma, Filis, soñoliento el día</l>
+               <l n="2" met="-+---+---+-" enjamb="B-pb_adj_noun I-ex_subj_verb">y llueve sin cesar; en los cercanos</l>
+               <l n="3" met="--+--+---+-" enjamb="I-pb_adj_noun">valladares, al pie de los bananos,</l>
+               <l n="4" met="-+-+---+-+-">mi grey se escuda de la niebla fría.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-" enjamb="B-ex_subj_verb">Las vacas a sus hijos con porfía</l>
+               <l n="6" met="+----+---+-" enjamb="B-pb_adj_noun I-ex_subj_verb">llaman de los corrales, en pantanos</l>
+               <l n="7" met="--+--+---+-" enjamb="B-pb_adj_noun I-pb_adj_noun">convertidos, y ruedan en los llanos</l>
+               <l n="8" met="+--+---+-+-" enjamb="I-pb_adj_noun">pardas las nubes y en la selva umbría.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+---+-+-" enjamb="B-ex_dobj_verb">Oye... se arrastra sobre el techo herboso</l>
+               <l n="10" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">los tiernos sauces con extraño brío</l>
+               <l n="11" met="--++-+---+-">al mecerlos el viento vagaroso,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-" enjamb="B-ex_subj_verb">que trayendo oleadas de rocío</l>
+               <l n="13" met="---+-+---+-" enjamb="I-ex_subj_verb">por las rendijas entra querelloso:</l>
+               <l n="14" met="+--+-+-+-+-">prende el fogón, amiga, tengo frío.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0943">
+            <head>El mandato</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+---+-">De Jonatás, su amigo y su delicia,</l>
+               <l n="2" met="--+-+-+--+-" enjamb="B-pb_relword">y de Sául, contrario, crudo el sino</l>
+               <l n="3" met="-+-+-+--++-" enjamb="B-ex_subj_verb I-pb_relword">al par lloró David. (El amor fino</l>
+               <l n="4" met="+-++-+---+-" enjamb="I-ex_subj_verb">lleva siempre un resabio de injusticia.)</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-" enjamb="B-ex_dobj_verb">Y de Judas midiendo la malicia</l>
+               <l n="6" met="---+---+-+-" enjamb="I-ex_dobj_verb">e ingratitud el Redentor divino</l>
+               <l n="7" met="--+--+---+-">y de Juan el afecto peregrino,</l>
+               <l n="8" met="-+-+-+---+-">a entrambos lava, obsequia y acaricia.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+-+-+-+-">Lleva a su plato, aquel la mano impura;</l>
+               <l n="10" met="-+-+---+-+-">y aqueste aviva su amorosa llama</l>
+               <l n="11" met="-+---+---+-">libando de su pecho la dulzura.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">Amable a entrambos sus amigos llama</l>
+               <l n="13" met="---+++---+-">al que dañarle pérfido procura,</l>
+               <l n="14" met="--+++-+-++-">y al que leal le sigue y tierno le ama.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0944">
+            <head>La institución</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-" enjamb="B-pb_noun_prep">Lleno de amor, negado a las querellas</l>
+               <l n="2" met="-+-+---+-+-" enjamb="I-pb_noun_prep">del aura y aves y fontana pura,</l>
+               <l n="3" met="-+-+--+--+-" enjamb="B-pb_verb_chain">tramonta Febo y a la noche obscura</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-pb_verb_chain">borrar permite sus fecundas huellas.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-">Pero al enviar sus últimas centellas</l>
+               <l n="6" met="-+-+-+---+-">aquese vuelo aviva su ternura;</l>
+               <l n="7" met="--+--+---+-" enjamb="B-pb_noun_prep">y cambiando ingenioso de figura</l>
+               <l n="8" met="-+-+-+-+-+-" enjamb="I-pb_noun_prep">de nuevo encarna en mil y mil estrellas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---++---+-" enjamb="B-ex_subj_verb">¡Ah, Sol de Sol! Tu mística paloma</l>
+               <l n="10" met="+--+-+---+-" enjamb="I-ex_subj_verb">te aprisionó llegada tu partida,</l>
+               <l n="11" met="---+---+-+-">con sus arrullos y preciado aroma;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---++--+-+-" enjamb="B-pb_adj_adv">y por dejarla en saciedad cumplida</l>
+               <l n="13" met="-+---+-+-+-" enjamb="I-pb_adj_adv">tomaste, al trasponer el agria loma,</l>
+               <l n="14" met="-++--+-+-+-">en mil panes y mil eterna vida.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0945">
+            <head>A un girasol</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---++--+-">Espejo de lealtad, flor admirable,</l>
+               <l n="2" met="-+---+---+-">que inmoble y a la par en movimiento</l>
+               <l n="3" met="--+--+---+-">saludando de Febo el nacimiento,</l>
+               <l n="4" met="--+-++---+-">a su ocaso le sigues invariable.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+++--+---+-">Es tan fino tu amor inimitable,</l>
+               <l n="6" met="--+--+---+-" enjamb="B-ex_subj_verb">que si envuelto en su manto ceniciento</l>
+               <l n="7" met="-+---+---+-" enjamb="I-ex_subj_verb">esquivo se levanta y soñoliento,</l>
+               <l n="8" met="--++-+-+-+-">a través le contemplas siempre amable.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+-+-+-">Si al amante Jesús, mi sol divino,</l>
+               <l n="10" met="-++-++---+-">que me busca y me acecha enamorado,</l>
+               <l n="11" met="--+--+-+-+-">como tú al luminar amara fino,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++-+-++--+-">no me helaría al verlo disfrazado,</l>
+               <l n="13" met="--+--+---+-">con capuz ingenioso y peregrino</l>
+               <l n="14" met="--++-+---+-">esconderse de mí Sacramentado.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0946">
+            <head>De Murmurios de la selva</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-++--+-+-">Dejó en Tesalia un cazador garrido,</l>
+               <l n="2" met="--+-+--+-+-">bajo al móvil sombra de un manzano,</l>
+               <l n="3" met="-+---+-+-+-" enjamb="B-ex_subj_verb">a su hijo, mientras va por monte y llano</l>
+               <l n="4" met="+--+-+---+-" enjamb="I-ex_subj_verb">una perdiz siguiendo hasta su nido.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+++-+-" enjamb="B-pb_adj_prep">Al volver, ¡oh dolor!, le ve ceñido</l>
+               <l n="6" met="---+---+-+-" enjamb="I-pb_adj_prep">por las espiras de dragón tirano;</l>
+               <l n="7" met="+-+--+-+-+-">¡era padre!, al carcaj llevó la mano,</l>
+               <l n="8" met="+--+---+-+-">trémulo el brazo, el corazón transido.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+--++-">La flecha embebe al arco; y con tal arte</l>
+               <l n="10" met="-+-+---+-+-">la fuerza mide y el impulso pesa,</l>
+               <l n="11" met="-++--+-+-+-">que tan sólo al dragón, certero, hiere.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+-+-+-">Así Dios el socorro nos imparte</l>
+               <l n="13" met="--++---+-+-">cuando nos mira del infierno presa;</l>
+               <l n="14" met="-+-+---+-+-">y vive el hombre y la serpiente muere.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0947">
+            <head>Jueves Santo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+-+-+-">Bestia cruel, Satán: ¿en un bocado?...</l>
+               <l n="2" met="-+-+-+---+-" enjamb="B-pb_noun_prep">¿en un bocado -¡ah, pérfido!- aseguras</l>
+               <l n="3" met="+-+--+---+-" enjamb="B-cc_crossclause I-pb_noun_prep">a estas dulces y cándidas criaturas</l>
+               <l n="4" met="-+++--+--+-" enjamb="I-cc_crossclause">que todo un Dios se encierra? ¡Mal pecado!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+---+-+-">¡Ay, que perdieron su feliz estado</l>
+               <l n="6" met="-++-+---+-">por darte oído! ¡Cuántas desventuras!</l>
+               <l n="7" met="---+-+---+-">¡En vez del néctar, liban amarguras!</l>
+               <l n="8" met="---+-+-+-+-">¡En vez del cetro, empuñan un cayado!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+-+-+-">¿Y esto por siempre? ¡No! La hora suena</l>
+               <l n="10" met="-+-+-+---+-">y asoma Aquel que, Fruto de la fruta,</l>
+               <l n="11" met="-+-+---+-+-">del caído hombre la mejilla bese;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-">quien, al cenar la postrimera cena,</l>
+               <l n="13" met="++-+-+-+-+-">«Este es mi cuerpo», dice: el pan trasmuta...</l>
+               <l n="14" met="-+-+---+++-">¡Y dioses somos aunque mal te pese!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0948">
+            <head>En la Parasceve</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-++--+-" enjamb="B-pb_adj_noun">Dicen que el Tracio fue tan inspirado</l>
+               <l n="2" met="+----+-+-+-" enjamb="I-pb_adj_noun">poeta, que al tañer su blanda lira</l>
+               <l n="3" met="-+---++--+-">llevaba en pos de sí (¡dulce mentira!)</l>
+               <l n="4" met="-+---+---+-">la selva, el arroyuelo y el collado.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-++-+---+-">¡Vate, no tú, por vates sublimado!</l>
+               <l n="6" met="-++--+---+-" enjamb="B-ex_subj_verb">Aquel cisne divino cuando expira</l>
+               <l n="7" met="-+-+-+---+-" enjamb="I-ex_subj_verb">el sí, por más que el báratro conspira,</l>
+               <l n="8" met="-+---+---+-">se atrajo el universo consternado.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">Al resonar su postrimer acento,</l>
+               <l n="10" met="-+-+-+---+-" enjamb="B-pb_verb_chain">despierta el mar y airado se incorpora</l>
+               <l n="11" met="-+---+---+-" enjamb="I-pb_verb_chain">enviando a las estrellas su lamento;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">el Infierno sus pérdidas deplora;</l>
+               <l n="13" met="+--+-+---+-">treme la Tierra en su hondo firmamento,</l>
+               <l n="14" met="-+-+---+-+-">y en luto el cielo con los astros llora.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0949">
+            <head>El río</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+-+-+-">¡Salve, deidad agreste, claro río,</l>
+               <l n="2" met="--+--++--+-">de mi sueño natal lustre y decoro,</l>
+               <l n="3" met="--+--+---+-">que resbalas magnífico y sonoro</l>
+               <l n="4" met="--+--+---+-">entre brumas y gélido rocío!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-">Es el blanco nenúfar tu atavío,</l>
+               <l n="6" met="-+---+-+-+-">tus cuernos de coral, tu barba de oro,</l>
+               <l n="7" met="---+---+-+-">los jilguerillos tu preciado coro,</l>
+               <l n="8" met="-+---+-+-+-">tu espléndida mansión el bosque umbrío.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+---+-+-">Hiedra y labrusca se encaraman blondas</l>
+               <l n="10" met="-+---++--+-" enjamb="B-pb_noun_prep">y enlazan por cubrirte en los calores</l>
+               <l n="11" met="---+---+-+-" enjamb="I-pb_noun_prep">con campanillas y rizadas frondas;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++-+---+-+-">te dan fragancia las palustres flores;</l>
+               <l n="13" met="---++--+-+-">y al zambullirte, tus cerúleas ondas</l>
+               <l n="14" met="--+--+---+-">ensortijan los cisnes nadadores.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0950">
+            <head>El Papaloapan</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+---+-">Escucho aún tu plácida quejumbre,</l>
+               <l n="2" met="-+-+---+-">gigante río. ¡Límpida guirnalda</l>
+               <l n="3" met="-++--+---+-">tu sien orne y del médano la falda</l>
+               <l n="4" met="+----+---+-">ciñas con aparente mansedumbre!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-" enjamb="B-ex_subj_verb">Del sol hermoso la divina lumbre</l>
+               <l n="6" met="-+-+-+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">retrátase en tu linfa de esmeralda</l>
+               <l n="7" met="-+-++-+--+-" enjamb="B-pb_noun_prep I-ex_subj_verb">y en ti se vea tinta de oro y gualda</l>
+               <l n="8" met="---+---+-+-" enjamb="I-pb_noun_prep">del Citlatépetl la nevada cumbre.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-" enjamb="B-ex_subj_verb">De tus riberas el papayo rico</l>
+               <l n="10" met="-+-+-+---+-" enjamb="B-pb_noun_prep I-ex_subj_verb">la poma ostente en nido de verdura</l>
+               <l n="11" met="-+-+---+-+-" enjamb="B-ex_dobj_verb I-pb_noun_prep">del tordo herida por el rojo pico</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-" enjamb="B-pb_adj_noun I-ex_dobj_verb">y mézclanse tus palmas en la altura</l>
+               <l n="13" met="+-+--+---+-" enjamb="B-cc_crossclause I-pb_adj_noun">blandamente agitando el abanico</l>
+               <l n="14" met="-+---+-+-+-" enjamb="I-cc_crossclause">que al dulce Tlacotalpan da frescura.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0951">
+            <head>La peña majestuosa</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+-+---+-" enjamb="B-ex_subj_verb">De un monte el dorso ríspido y serrado</l>
+               <l n="2" met="+--+---+-+-" enjamb="I-ex_subj_verb">tiene por trono, y la escarpada cumbre;</l>
+               <l n="3" met="--+--+---+-">se corona en laurel, y su techumbre</l>
+               <l n="4" met="-+-+-+---+-">las nubes son y el éter azulado.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+---+-" enjamb="B-pb_adj_noun">Por cetro empuña verde y arriscado</l>
+               <l n="6" met="--+--+---+-" enjamb="I-pb_adj_noun">monolito de enorme pesadumbre;</l>
+               <l n="7" met="--+--+---+-" enjamb="B-ex_subj_verb">las colinas su regia servidumbre</l>
+               <l n="8" met="+--+-+---+-" enjamb="I-ex_subj_verb">son, y su imperio el valle dilatado.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-" enjamb="B-ex_dobj_verb">Se embebece mirando en el bruñido</l>
+               <l n="10" met="-+---+-+-+-" enjamb="I-ex_dobj_verb">y líquido cristal su faz severa,</l>
+               <l n="11" met="-+-+---+-+-">su airoso porte y ademán temido.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-" enjamb="B-ex_subj_verb">Y su música dulce y placentera</l>
+               <l n="13" met="+-+--+---+-" enjamb="B-pb_noun_prep I-ex_subj_verb">son el trueno del rayo y el graznido</l>
+               <l n="14" met="-+---+---+-" enjamb="I-pb_noun_prep">del águila salvaje y altanera.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s288n_0952">
+            <head>El invierno en Jalapa</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+-+-+-" enjamb="B-ex_subj_verb">Luchan el cierzo y austro; leve bruma</l>
+               <l n="2" met="-+-+---+-+-" enjamb="I-ex_subj_verb">el valle, el monte y el zafir empaña,</l>
+               <l n="3" met="---+---+-+-" enjamb="B-pb_relword">y rumoroso sus arenas baña</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-pb_relword">inquieto el mar con irisada espuma.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---++--+-" enjamb="B-ex_dobj_verb">En grupos, balador y ágil, trashuma</l>
+               <l n="6" met="--+--+---+-" enjamb="I-ex_dobj_verb">el rebaño o se llega a la cabaña,</l>
+               <l n="7" met="--+--+-+-+-">donde no lejos de un rival, sin saña</l>
+               <l n="8" met="-+-+---+-+-">sacude e gallo la mojada pluma.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-" enjamb="B-pb_adj_noun">Y arrástranse las nubes con sublime</l>
+               <l n="10" met="-+----+-+-" enjamb="I-pb_adj_noun">susurro en el pinar. ¡Cuánta belleza</l>
+               <l n="11" met="-+-+-+-+-+-">la blanca, tenue luz al cuadro imprime!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+---+-" enjamb="B-ex_dobj_verb">Y del invierno acrece la rudeza</l>
+               <l n="13" met="-+---+-+-+-" enjamb="I-ex_dobj_verb">la lluvia pertinaz, que el alma oprime</l>
+               <l n="14" met="---+-+---+-">con infinita y plácida tristeza.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

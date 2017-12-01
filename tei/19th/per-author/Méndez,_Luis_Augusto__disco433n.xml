@@ -1,118 +1,178 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Luis Augusto Méndez</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_433n"/>
-          <name type="short">Méndez</name>
-          <name type="full">
-            <name type="first-name">Luis Augusto</name>
-            <name type="second-name">Méndez</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">183</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_433n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_433n" role="author" sex="M">
-            <persName>Luis Augusto Méndez</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Luis Augusto Méndez</title>
+            <author corresp="#disco_433n">Luis Augusto Méndez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">183</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_433n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_433n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Méndez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Luis Augusto</forename>
+                     <surname property="foaf:familyName">Méndez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Luis Augusto Méndez</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s433n_1681" about="dbpedia:Soneto">
+                        <title property="dc:title">Soy universal</title>
+                        <title type="incipit" property="dc:alternative">Es mi patria la esfera sostenida</title>
+                     </bibl>
+                     <bibl resource="disco#s433n_1682" about="dbpedia:Soneto">
+                        <title property="dc:title">El minero</title>
+                        <title type="incipit" property="dc:alternative">Conozco ese trabajo sin reposo,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Luis Augusto Méndez</head>
-        <p>Cuba. 19th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s433n_1681">
-        <head>Soy universal</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Es mi patria la esfera sostenida</l>
-          <l n="2">por invisible fuerza en el vacío,</l>
-          <l n="3">y mirar en su faz tan solo ansío</l>
-          <l n="4">a los hombres vivir natural vida.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Aspiro a ver la Humanidad unida</l>
-          <l n="6">en un estrecho abrazo en torno mío,</l>
-          <l n="7">y rodar por el suelo duro y frío</l>
-          <l n="8">la ambición y la guerra aborrecida.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Yo soy universal; mi pensamiento,</l>
-          <l n="10">que abarca la extensión del vago viento,</l>
-          <l n="11">no cabe en la estrechez de una frontera.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Suelo en él una época de hermanos,</l>
-          <l n="13">la abolición de siervos y tiranos</l>
-          <l n="14">y la armonía de la vida entera.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s433n_1682">
-        <head>El minero</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Conozco ese trabajo sin reposo,</l>
-          <l n="2">donde tu pobre cuerpo se destruye</l>
-          <l n="3">en busca del metal, que prostituye</l>
-          <l n="4">la conciencia, al magnate poderoso.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">En mis manos también el pico odioso</l>
-          <l n="6">y el hierro que la roca disminuye,</l>
-          <l n="7">han dejado su huella, que no arguye,</l>
-          <l n="8">cual quieren hacer ver, vivir honroso.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Yo sé, por experiencia, que tu vida,</l>
-          <l n="10">está perpetuamente suspendida</l>
-          <l n="11">sobre el oscuro abismo de la muerte;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">que tarde y mal se abona tu trabajo,</l>
-          <l n="13">y que eres de los hombres el más bajo</l>
-          <l n="14">pudiendo ser el más altivo y fuerte.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Luis Augusto Méndez</head>
+            <p>Cuba. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s433n_1681">
+            <head>Soy universal</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-" enjamb="B-pb_adj_prep">Es mi patria la esfera sostenida</l>
+               <l n="2" met="---+-+---+-" enjamb="I-pb_adj_prep">por invisible fuerza en el vacío,</l>
+               <l n="3" met="--+--+++-+-">y mirar en su faz tan solo ansío</l>
+               <l n="4" met="--+--+--++-">a los hombres vivir natural vida.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-">Aspiro a ver la Humanidad unida</l>
+               <l n="6" met="-+-+-+-+-+-">en un estrecho abrazo en torno mío,</l>
+               <l n="7" met="--+--+-+-+-" enjamb="B-ex_dobj_verb">y rodar por el suelo duro y frío</l>
+               <l n="8" met="--+--+---+-" enjamb="I-ex_dobj_verb">la ambición y la guerra aborrecida.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++---+---+-">Yo soy universal; mi pensamiento,</l>
+               <l n="10" met="-+---+-+-+-">que abarca la extensión del vago viento,</l>
+               <l n="11" met="++---++--+-">no cabe en la estrechez de una frontera.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+++----+-">Suelo en él una época de hermanos,</l>
+               <l n="13" met="---+-+---+-">la abolición de siervos y tiranos</l>
+               <l n="14" met="---+--+--+-">y la armonía de la vida entera.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s433n_1682">
+            <head>El minero</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-++--+---+-">Conozco ese trabajo sin reposo,</l>
+               <l n="2" met="---+-+---+-">donde tu pobre cuerpo se destruye</l>
+               <l n="3" met="-----+---+-" enjamb="B-ex_dobj_verb">en busca del metal, que prostituye</l>
+               <l n="4" met="--+--+---+-" enjamb="I-ex_dobj_verb">la conciencia, al magnate poderoso.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+-+-+-">En mis manos también el pico odioso</l>
+               <l n="6" met="-+---+---+-">y el hierro que la roca disminuye,</l>
+               <l n="7" met="+-+-+--+-+-">han dejado su huella, que no arguye,</l>
+               <l n="8" met="++---+-+-+-">cual quieren hacer ver, vivir honroso.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++---+---+-">Yo sé, por experiencia, que tu vida,</l>
+               <l n="10" met="-+-+-+---+-">está perpetuamente suspendida</l>
+               <l n="11" met="---+-+---+-">sobre el oscuro abismo de la muerte;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+---+-">que tarde y mal se abona tu trabajo,</l>
+               <l n="13" met="-+---+--++-" enjamb="B-ex_subj_verb">y que eres de los hombres el más bajo</l>
+               <l n="14" met="-+-+-+-+-+-" enjamb="I-ex_subj_verb">pudiendo ser el más altivo y fuerte.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

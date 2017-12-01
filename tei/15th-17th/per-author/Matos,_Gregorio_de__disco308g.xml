@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Gregorio de Matos</title>
+            <author corresp="#disco_308g">Gregorio de Matos</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">11</measure>
+            <measure unit="tokens">967</measure>
+            <measure unit="line">154</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_308g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_308g"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/122323020"/>
+                  <persName type="short">Matos</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Gregorio</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Matos</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Gregorio de Matos</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Brasil</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1633" cert="high"/>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1696" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s308g_0635" about="dbpedia:Soneto">
+                        <title property="dc:title">A Jesús crucificado</title>
+                        <title type="incipit" property="dc:alternative">A vos corriendo voy, brazos sagrados,</title>
+                     </bibl>
+                     <bibl resource="disco#s308g_0636" about="dbpedia:Soneto">
+                        <title property="dc:title">Sonetos</title>
+                        <title type="incipit" property="dc:alternative">A coronarte nubes, Castro, al cielo,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <div>
+            <head>Gregorio de Matos</head>
+            <p>Brasil. 1633 - 1696</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s308g_0635">
+            <head>A Jesús crucificado</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-++--+-">A vos corriendo voy, brazos sagrados,</l>
+               <l n="2" met="--+--+---+-">en la cruz sacrosanta descubiertos,</l>
+               <l n="3" met="-----+++-+-">que para recibirme estáis abiertos</l>
+               <l n="4" met="---+--+++-+-">y para no castigarme estáis clavados.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+---+-">A vos, divinos ojos, eclipsados,</l>
+               <l n="6" met="-+-+-+---+-">de tanta sangre y lágrimas cubiertos,</l>
+               <l n="7" met="-----+++-+-">que para perdonarme estáis despiertos,</l>
+               <l n="8" met="--+--+++-+-">y por no confundirme estáis cerrados.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+--++-">A vos, clavados pies para no huirme;</l>
+               <l n="10" met="-+-+-+---+-">a vos, cabeza baja por llamarme;</l>
+               <l n="11" met="-++--+---+-">a vos, sangre vertida por ungirme;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+-+-+-">a vos, costado abierto, quiero unirme;</l>
+               <l n="13" met="-++--+-+-+-">a vos, clavos preciosos, quiero atarme</l>
+               <l n="14" met="---+-+-+-+-">con ligadura dulce, estable y firme.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet-sequence" xml:id="s308g_0636">
+            <head>Sonetos</head>
+            <lg type="sonnet" xml:id="s308g_0636_01">
+               <head>- I -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="---+++-+-+-">A coronarte nubes, Castro, al cielo,</l>
+                  <l n="2" met="+-++-+---+-">río a acabar te escondes en la tierra,</l>
+                  <l n="3" met="-+-+-+---+-">Mendoza vuelas, rayo de la guerra,</l>
+                  <l n="4" met="-+-+---+-+-">Hurtado bajas desatado el cielo;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+-+-+---+-">Hurtado Río mueres en el suelo,</l>
+                  <l n="6" met="-+-+-+--++-">Mendoza brillas Astro que no yerra,</l>
+                  <l n="7" met="--+--+-+-+-">en tu curso fatal sutil se encierra</l>
+                  <l n="8" met="-+-+-+-+-+-">en fin sagrado dueño y otro vuelo;</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+--+---+-+-">Río en la mar, en el calor Hurtado,</l>
+                  <l n="10" met="-+-+---+-+-">Mendoza en aire, en ceniza Castro,</l>
+                  <l n="11" met="+--+-+---+-">fue lamentar, compuesto se destroza;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="--+--+---+-">pero espíritu todo arrebatado</l>
+                  <l n="13" met="+-++-+-+++-">nuevo te admira el Orbe, todo un Astro,</l>
+                  <l n="14" met="---+-+-----">de Hurtado Castro, Río de Mendoza.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s308g_0636_02">
+               <head>- II -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-+-+-+-+-+-" enjamb="B-ex_dobj_verb">Divina flor, si en esa pompa vana</l>
+                  <l n="2" met="--+--+---+-" enjamb="I-ex_dobj_verb">los martirios ostentas reverente,</l>
+                  <l n="3" met="-+---+---+-">corona con los clavos a tu frente,</l>
+                  <l n="4" met="-+---+-+-+-">pues brillas con las llagas tan lozana.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-++--+-+-+-" enjamb="B-cc_crossclause">Venera esa corona altiva, ufana</l>
+                  <l n="6" met="--+-++---+-" enjamb="I-cc_crossclause">que en tus garbos te ostenta floreciente:</l>
+                  <l n="7" met="-+---+-+-+-">los calvos enarbola eternamente,</l>
+                  <l n="8" met="-+---+--++-">pues Dios con tus heridas se te hermana.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-+-+---+-+-">Si flor naciste para más pomposa</l>
+                  <l n="10" met="---+-+---+-">desvanecer floridos crecimientos,</l>
+                  <l n="11" met="+++--+-+-+-">ya, flor, te reconocen más dichosa.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+-+-+-+-+-">Que el cielo te ha grabado en dos tormentos:</l>
+                  <l n="13" met="-+---+-+-+-">en clavos la corona más gloriosa</l>
+                  <l n="14" met="-+---+---+-">y en llagas sublimados lucimientos.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s308g_0636_03">
+               <head>- III -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+-+--+---+-">Nace el Sol de los astros presidente,</l>
+                  <l n="2" met="+----+---+-">príncipe en las esferas conocido,</l>
+                  <l n="3" met="--+++--+-+-">y aunque el día le mira el más lucido,</l>
+                  <l n="4" met="-+--++---+-">la noche se le atreve irreverente.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="+-+--+---+-">Sírvele de sepulcro transparente</l>
+                  <l n="6" met="-+-+-+-+-+-">el mar, pensión fatal de haber nacido;</l>
+                  <l n="7" met="---+++-+-+-">pues el que en todo un cielo no ha cabido</l>
+                  <l n="8" met="++-+-++--+-">le viene a ser el mar urna decente.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="++-+-+---+-">Sol fuiste, Conde ilustre, en la nobleza,</l>
+                  <l n="10" met="---+-+--++-">a quien la triste noche se le atreve,</l>
+                  <l n="11" met="+--+-+---+-">que es el morir del Sol naturaleza;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+---++--+-">hallaste como el Sol tumba de nieve:</l>
+                  <l n="13" met="-+-+-+---+-">pues siendo corto el Orbe a tu grandeza,</l>
+                  <l n="14" met="+-++-+--++-">sólo a tal Sol la urna se le debe.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s308g_0636_04">
+               <head>- IV -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-+-+---+-+-">Pasar la vida sin sentir que pasa,</l>
+                  <l n="2" met="-+-+---+-+-">de gustos falta y de esperanzas llena,</l>
+                  <l n="3" met="-+-+-+-+-+-">volver atrás pisando seca arena,</l>
+                  <l n="4" met="-+++---+-+-">sufrir un sol que como fuego abrasa;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+---+-+-+-">beber de las cacimas agua baza,</l>
+                  <l n="6" met="-+++---+-+-">comer mal pez a mediodía y cena,</l>
+                  <l n="7" met="+--++-+--+-">oír por cualquier parte una cadena,</l>
+                  <l n="8" met="++-+---+-+-">ver dar azotes sin piedad ni tasa;</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="++-+-+---+-">verse uno rico y dulce encantamiento</l>
+                  <l n="10" met="--+---+-++-">y Señor, cuando apenas fue criado,</l>
+                  <l n="11" met="+-+--+---+-">no tener de quien fue conocimiento;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+--+-----+-">ser mentiroso por razón de estado,</l>
+                  <l n="13" met="-+---++--+-">vivir en ambición siempre sediento,</l>
+                  <l n="14" met="-+-+---+-+-">morir de deudas y pesar cargado.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s308g_0636_05">
+               <head>- V -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-+--++---+-" enjamb="B-cc_crossclause">Prelado de tan alta perfección</l>
+                  <l n="2" met="-+-+-+-+-+-" enjamb="I-cc_crossclause">que supo en un aplauso, en un festín,</l>
+                  <l n="3" met="--+--++--+-">congregar en su casa un Serafín</l>
+                  <l n="4" met="-+--++---+-">cercado de tan alta relación.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-++--+---+-">Jamás tenga en su cargo disensión,</l>
+                  <l n="6" met="-----+-+-+-">ni entre sus frailecitos vea motín,</l>
+                  <l n="7" met="-+-+---+-+-">ningún hijuelo suyo sea ruin,</l>
+                  <l n="8" met="-++--+---+-">y los críe en su Santa bendición.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+-+--+---+-">Llena esté la cocina en la sartén,</l>
+                  <l n="10" met="-+---+-+-+-">y siempre el refectorio abunde en pan;</l>
+                  <l n="11" met="-+-+-+-+-+-">que bien merece fraile tan de bien.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-----+--++-" enjamb="B-pb_verb_chain">A quien el Sacro Bago se le dan</l>
+                  <l n="13" met="-+-+-----+-" enjamb="I-pb_verb_chain">regir la casa Santa de Belén,</l>
+                  <l n="14" met="--+--+---+-">y que yo se la quite a Solimán.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s308g_0636_06">
+               <head>- VI -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+-+--+---+-">Puedes, rosa, dejar la vanidad,</l>
+                  <l n="2" met="+-+--+---+-">no presumas, clavel, de anacarado,</l>
+                  <l n="3" met="+--+-+-+-+-">mansa azucena, ya jazmín nevado,</l>
+                  <l n="4" met="+----+---+-">deje de blasonar vuestra beldad.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="+--+-+---+-">Grana purpúrea aprisa retirad,</l>
+                  <l n="6" met="-+---++--+-">brillante rosicler, gala del prado,</l>
+                  <l n="7" met="---+-+-+-+-">si de la pompa el tiempo está acabado,</l>
+                  <l n="8" met="--+--+---+-">vuestra pompa en retiros minorad.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="---+-+-+-+-">Porque salió Marica de un desmayo,</l>
+                  <l n="10" met="+----+-+-+-" enjamb="B-cc_crossclause">flor en las gallardías más vistosas</l>
+                  <l n="11" met="--+--+---+-" enjamb="I-cc_crossclause">que brotó Primavera, Abril y Mayo.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="---++--+-+-">Pero a su vista os quedaréis hermosas,</l>
+                  <l n="13" met="--+-++-+-+-">suplicándola humildes un ensayo,</l>
+                  <l n="14" met="--+--+-+-+-">azucena, clavel, jazmín y rosas.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s308g_0636_07">
+               <head>- VII -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="++-+-+-+-+-">¡Qué presto el tiempo, Nise, se ha mostrado,</l>
+                  <l n="2" met="-+-+-+-+-+-">en una queja sola, mil tormentos!</l>
+                  <l n="3" met="-++--+---+-">Pues me vuelve en pesares los contentos,</l>
+                  <l n="4" met="-+---+---+-">que siempre duplicó lo venerado.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-++--+---+-">Decir, Nise, que falta mi cuidado,</l>
+                  <l n="6" met="++-+-+---+-">bien puede industria ser de tus intentos,</l>
+                  <l n="7" met="--+--+---+-">que en mi celo acreditan sentimientos,</l>
+                  <l n="8" met="-++--+---+-">y en ti lo verifica el retirado.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="---+-+-+-+-" enjamb="B-pb_verb_cprep">Pero si en esa duda al tiempo dejas</l>
+                  <l n="10" met="---+-+---+-" enjamb="I-pb_verb_cprep">de mis verdades sólo las razones,</l>
+                  <l n="11" met="---+-+---+-">de tus retiros tantas experiencias;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+--+---+-+-">calle mi queja la razón de quejas,</l>
+                  <l n="13" met="---+-+---+-">y mi oblación repita obligaciones,</l>
+                  <l n="14" met="-+---+---+-">que amor publicará las evidencias.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s308g_0636_08">
+               <head>- VIII -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+-+-+---++-">Rompa ya el silencio el amor mío</l>
+                  <l n="2" met="--+-++---+-">y provóquele en leguas desatado;</l>
+                  <l n="3" met="--+--+---+-" enjamb="B-pb_adj_adv">que vivir con ofensas y callado</l>
+                  <l n="4" met="++-+--++-+-" enjamb="I-pb_adj_adv">no puede ser, aunque bien lo porfío.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-----+---+-">Pero como de amante desconfío,</l>
+                  <l n="6" met="-+-+-+---+-">morir mejor será desesperado,</l>
+                  <l n="7" met="-++--+---+-">pues no quieres que tenga mi cuidado</l>
+                  <l n="8" met="--++-+---+-">ni que le ponga en otra mi albedrío.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-+---+-+-+-">En fin, como la pena me maltrata,</l>
+                  <l n="10" met="-++--+++++-" enjamb="B-pb_verb_adv">vivir más sin penar ya no lo espero</l>
+                  <l n="11" met="---+-+---+-" enjamb="I-pb_verb_adv">ni detener cristal que se desata.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+-+-++--+-">Y así resuelto ya me desespero,</l>
+                  <l n="13" met="+-+--+--++-">viendo yo que tu propio rigor mata,</l>
+                  <l n="14" met="--+--+++-+-">a mi amor, con que así dos veces muero.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s308g_0636_09">
+               <head>- IX -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+-++-+-+-+-">Una, dos, tres estrellas, veinte, ciento,</l>
+                  <l n="2" met="---+-+--+-">un millón, mil millares de millares;</l>
+                  <l n="3" met="+-++-+---+-" enjamb="B-ex_dobj_verb">¡válgame Dios, que tengan mis pesares</l>
+                  <l n="4" met="--+--+---+-" enjamb="I-ex_dobj_verb">su retrato en el alto firmamento!</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="++---+-+-+-">¡Qué siendo las estrellas tan sin cuento,</l>
+                  <l n="6" met="--+--+---+-">como son las arenas de los mares,</l>
+                  <l n="7" met="--+--+---+-" enjamb="B-ex_dobj_verb">las iguale en sus números impares</l>
+                  <l n="8" met="--+---+---+-" enjamb="I-ex_dobj_verb">mi pesara, mi desdicha y mi tormento!</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-+-+++-+++-">¡Mas yo de qué me espanto o qué me abismo!</l>
+                  <l n="10" met="++-+-+---+-">Tenga ese alivio en fin mi desconsuelo,</l>
+                  <l n="11" met="--+--+-+-+-">que se va pareciendo al cielo mismo.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="--+--+--++-" enjamb="B-ex_dobj_verb">Pues pudiendo mis males por más duelo</l>
+                  <l n="13" met="--++-+---+-" enjamb="I-ex_dobj_verb">semejarse a las penas del abismo,</l>
+                  <l n="14" met="+----+-+-+-">tienen su semejanza allá en el cielo.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s308g_0636_10">
+               <head>- X -</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="+-+--+-+-+-">Ya rendida y postrada más que barra,</l>
+                  <l n="2" met="---+-+---+-">a nuestros pies mi Musa reverente,</l>
+                  <l n="3" met="---+-+---+-">por coronar con ellos a su frente,</l>
+                  <l n="4" met="-+-+-+-+-+-">del suelo sube al cielo más lozana.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="---+-+-+-+-">Por convencida ostenta gloria ufana,</l>
+                  <l n="6" met="-+---+---+-" enjamb="B-ex_subj_verb">que tiene por corona floreciente</l>
+                  <l n="7" met="--++-+-+-+-" enjamb="I-ex_subj_verb">el quedarse rendida eternamente,</l>
+                  <l n="8" met="---+-+---+-">porque humillada al triunfo se hermana.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="--+--++--+-">Rendimiento fiel hace pomposa,</l>
+                  <l n="10" met="--+--+---+-" enjamb="B-ex_subj_verb">que en beber los castalios crecimientos</l>
+                  <l n="11" met="-+---+-+-+-" enjamb="I-ex_subj_verb">se adquiere la ventura más dichosa.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="--+-++-+-+-">A que Fénix no causa mil tormentos</l>
+                  <l n="13" met="+-+--+-+-+-">ver que triunfa humillada y tan gloriosa</l>
+                  <l n="14" met="-+-+-----+-">por ser rendida a vuestro lucimiento.</l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
+  </text>
+</TEI>

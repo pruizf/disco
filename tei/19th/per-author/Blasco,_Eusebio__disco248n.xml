@@ -1,118 +1,187 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Eusebio Blasco</title>
-        <author>
-          <idno type="viaf" cert="high">2458726</idno>
-          <idno type="#disco" xml:id="disco_248n"/>
-          <name type="short">Blasco</name>
-          <name type="full">
-            <name type="first-name">Eusebio</name>
-            <name type="second-name">Blasco</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">185</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_248n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_248n" role="author" sex="M">
-            <persName>Eusebio Blasco</persName>
-            <birth><placeName type="place">Zaragoza</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1903" cert="high">1903</date>, <date type="century">20</date></birth>
-            <death><placeName type="place">Madrid</placeName>, <date type="year" when="1906" cert="high">1906</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Eusebio Blasco</title>
+            <author corresp="#disco_248n">Eusebio Blasco</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">185</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_248n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_248n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/2458726"/>
+                  <persName type="short">Blasco</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Eusebio</forename>
+                     <surname property="foaf:familyName">Blasco</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Eusebio Blasco</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Zaragoza</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1903" cert="high"/>
+                     <date type="century">20</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1906" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s248n_0802" about="dbpedia:Soneto">
+                        <title property="dc:title">A Campo-Arana</title>
+                        <title type="incipit" property="dc:alternative">Caer, para sufrir el desengaño;</title>
+                     </bibl>
+                     <bibl resource="disco#s248n_0803" about="dbpedia:Soneto">
+                        <title property="dc:title">Petición</title>
+                        <title type="incipit" property="dc:alternative">Dame, Señor, paciencia en mis apuros;</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Eusebio Blasco</head>
-        <p>Zaragoza. 1903 - 1906</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s248n_0802">
-        <head>A Campo-Arana</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Caer, para sufrir el desengaño;</l>
-          <l n="2">soñar, para llorar cuando despierto;</l>
-          <l n="3">buscar la dicha cual remoto puerto,</l>
-          <l n="4">que nunca abordo , por destino extraño.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Sembrar el bien y cosechar el daño;</l>
-          <l n="6">dejar lo fijo por seguir lo incierto;</l>
-          <l n="7">ver siempre cerca y a mis pies abierto</l>
-          <l n="8">el ancho abismo de amoroso engaño.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Batallar con mi suerte rencorosa,</l>
-          <l n="10">ocultar del dolor la eterna herida,</l>
-          <l n="11">sentir el aire y respirar la prosa</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y ver mi triste juventud perdida.</l>
-          <l n="13">Tal es, en suma, mi existencia hermosa.</l>
-          <l n="14">¡Y a esto llaman vivir... y esto es la vida!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s248n_0803">
-        <head>Petición</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Dame, Señor, paciencia en mis apuros;</l>
-          <l n="2">valor de perdonar a quien me ofenda;</l>
-          <l n="3">salud igual, de mi trabajo prenda;</l>
-          <l n="4">resignación para los tiempos duros.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Dame la fe que va con pies seguros</l>
-          <l n="6">del bien sin gloria por la hermosa senda;</l>
-          <l n="7">oído humilde que el consejo atienda,</l>
-          <l n="8">hijos honrados con instintos puros.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Esto no más, Señor, es bien que pida,</l>
-          <l n="10">que oro y honores frágiles no ansío,</l>
-          <l n="11">y es desear envenenar la vida.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Séame dulce de la muerte el frío,</l>
-          <l n="13">y viendo en torno a la familia unida,</l>
-          <l n="14">dame muerte cristiana en lecho mío.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Eusebio Blasco</head>
+            <p>Zaragoza. 1903 - 1906</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s248n_0802">
+            <head>A Campo-Arana</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">Caer, para sufrir el desengaño;</l>
+               <l n="2" met="-+---+---+-">soñar, para llorar cuando despierto;</l>
+               <l n="3" met="-+-+---+-+-">buscar la dicha cual remoto puerto,</l>
+               <l n="4" met="-+-+---+-+-">que nunca abordo , por destino extraño.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-">Sembrar el bien y cosechar el daño;</l>
+               <l n="6" met="-+++---+-+-">dejar lo fijo por seguir lo incierto;</l>
+               <l n="7" met="++-+---+-+-" enjamb="B-ex_dobj_verb">ver siempre cerca y a mis pies abierto</l>
+               <l n="8" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">el ancho abismo de amoroso engaño.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">Batallar con mi suerte rencorosa,</l>
+               <l n="10" met="--+--+-+-+-">ocultar del dolor la eterna herida,</l>
+               <l n="11" met="-+-+---+-+-">sentir el aire y respirar la prosa</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">y ver mi triste juventud perdida.</l>
+               <l n="13" met="++-+---+-+-">Tal es, en suma, mi existencia hermosa.</l>
+               <l n="14" met="+-+--+++-+-">¡Y a esto llaman vivir... y esto es la vida!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s248n_0803">
+            <head>Petición</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+-+---+-">Dame, Señor, paciencia en mis apuros;</l>
+               <l n="2" met="-+---+---+-">valor de perdonar a quien me ofenda;</l>
+               <l n="3" met="-+-+---+-+-">salud igual, de mi trabajo prenda;</l>
+               <l n="4" met="---+---+-+-">resignación para los tiempos duros.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+-+-+-+-" enjamb="B-pb_noun_prep">Dame la fe que va con pies seguros</l>
+               <l n="6" met="-+-+---+-+-" enjamb="I-pb_noun_prep">del bien sin gloria por la hermosa senda;</l>
+               <l n="7" met="+-+---+--+-">oído humilde que el consejo atienda,</l>
+               <l n="8" met="+--+---+-+-">hijos honrados con instintos puros.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-++-+++-+-">Esto no más, Señor, es bien que pida,</l>
+               <l n="10" met="+-+-+--+-+-">que oro y honores frágiles no ansío,</l>
+               <l n="11" met="+--+---+-+-">y es desear envenenar la vida.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+++---+--+-">Séame dulce de la muerte el frío,</l>
+               <l n="13" met="-+-----+-+-">y viendo en torno a la familia unida,</l>
+               <l n="14" met="+++--+-+-+-">dame muerte cristiana en lecho mío.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

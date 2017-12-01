@@ -1,143 +1,218 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de José Jurado de la Parra</title>
-        <author>
-          <idno type="viaf" cert="high">9466377</idno>
-          <idno type="#disco" xml:id="disco_577n"/>
-          <name type="short">Jurado de la Parra</name>
-          <name type="full">
-            <name type="first-name">José</name>
-            <name type="second-name">Jurado de la Parra</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">3</measure>
-        <measure unit="tokens">289</measure>
-        <measure unit="line">42</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_577n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_577n" role="author" sex="M">
-            <persName>José Jurado de la Parra</persName>
-            <birth><placeName type="place">Baeza (Jaén)</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1856" cert="high">1856</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Madrid</placeName>, <date type="year" when="1915" cert="high">1915</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de José Jurado de la Parra</title>
+            <author corresp="#disco_577n">José Jurado de la Parra</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">289</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_577n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_577n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/9466377"/>
+                  <persName type="short">Jurado de la Parra</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">José</forename>
+                     <surname property="foaf:familyName">Jurado de la Parra</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">José Jurado de la Parra</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Baeza (Jaén)</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1856" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1915" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s577n_2093" about="dbpedia:Soneto">
+                        <title property="dc:title">Prometeo y Tántalo</title>
+                        <title type="incipit" property="dc:alternative">Imagen fiel del triste Prometeo,</title>
+                     </bibl>
+                     <bibl resource="disco#s577n_2094" about="dbpedia:Soneto">
+                        <title property="dc:title">El sermón moderno</title>
+                        <title type="incipit" property="dc:alternative">Dale menos sermón y más harina</title>
+                     </bibl>
+                     <bibl resource="disco#s577n_2095" about="dbpedia:Soneto">
+                        <title property="dc:title">Gretchen</title>
+                        <title type="incipit" property="dc:alternative">En el atrio del templo revendía</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>José Jurado de la Parra</head>
-        <p>Baeza (Jaén). 1856 - 1915</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s577n_2093">
-        <head>Prometeo y Tántalo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Imagen fiel del triste Prometeo,</l>
-          <l n="2">amarrado a mi afán, hora tras hora,</l>
-          <l n="3">el buitre de tu amor que me devora</l>
-          <l n="4">sobre mi pecho desangrado veo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La sed inextinguible del deseo</l>
-          <l n="6">me abrasa como a Tántalo y traidora</l>
-          <l n="7">en tus labios la fuente seductora</l>
-          <l n="8">que huye a mis ansias amorosas, creo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Y en medio de la horrible desventura</l>
-          <l n="10">en que mi pecho enamorado gime,</l>
-          <l n="11">con mirarte no más cambia mi suerte.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Por eso en mi pasión, o en mi locura,</l>
-          <l n="13">adoro la cadena que me oprime</l>
-          <l n="14">y bendigo la sed que me da muerte.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s577n_2094">
-        <head>El sermón moderno</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Dale menos sermón y más harina</l>
-          <l n="2">e irá tras sí la grey, sabio prelado.</l>
-          <l n="3">Ya no basta el sermón; la hora ha sonado</l>
-          <l n="4">de dar con picatostes la doctrina.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Donde hay hambre y dolor, todo es mohina;</l>
-          <l n="6">piénsalo así, pastor, y pon cuidado</l>
-          <l n="7">en que pazca y se nutra tu ganado</l>
-          <l n="8">y abreve en la corriente cristalina.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Los hambrientos, o luchan o bostezan,</l>
-          <l n="10">y si en lugar de pan das oraciones,</l>
-          <l n="11">tendrán tu caridad como castigo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Si les das de comer, verás cual rezan,</l>
-          <l n="13">que hoy es el ideal de los sermones,</l>
-          <l n="14">más que predicar bien, dar mucho trigo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s577n_2095">
-        <head>Gretchen</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">En el atrio del templo revendía</l>
-          <l n="2">cruces y estampas vieja repugnante,</l>
-          <l n="3">y en la arrugada tez de su semblante</l>
-          <l n="4">de hampa o burdel el sello se veía.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Al pregonar su santa mercancía,</l>
-          <l n="6">noté algo en ella de mujer galante,</l>
-          <l n="7">de pasado esplendor, y en el instante</l>
-          <l n="8">llegué curioso y pregunté a la arpía.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Fui Margarita, dijo, y al contado</l>
-          <l n="10">después que a Fausto amé, vendí mis besos,</l>
-          <l n="11">que al fin fueron desprecio de la gente.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">El hospital mi carne ha marchitado,</l>
-          <l n="13">y hoy vendo a Cristo y a los santos esos</l>
-          <l n="14">¡por ganarme una copa de aguardiente!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>José Jurado de la Parra</head>
+            <p>Baeza (Jaén). 1856 - 1915</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s577n_2093">
+            <head>Prometeo y Tántalo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+---+-">Imagen fiel del triste Prometeo,</l>
+               <l n="2" met="--+---++-+-">amarrado a mi afán, hora tras hora,</l>
+               <l n="3" met="-+---+-+-+-" enjamb="B-ex_subj_verb">el buitre de tu amor que me devora</l>
+               <l n="4" met="---+---+-+-" enjamb="I-ex_subj_verb">sobre mi pecho desangrado veo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-" enjamb="B-ex_subj_verb">La sed inextinguible del deseo</l>
+               <l n="6" met="++---+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">me abrasa como a Tántalo y traidora</l>
+               <l n="7" met="--+--+---+-" enjamb="B-cc_crossclause I-ex_subj_verb">en tus labios la fuente seductora</l>
+               <l n="8" met="+--+---+-+-" enjamb="I-cc_crossclause">que huye a mis ansias amorosas, creo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-----+---+-">Y en medio de la horrible desventura</l>
+               <l n="10" met="---+---+-+-">en que mi pecho enamorado gime,</l>
+               <l n="11" met="--+++++--+-">con mirarte no más cambia mi suerte.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">Por eso en mi pasión, o en mi locura,</l>
+               <l n="13" met="-+---+--++-" enjamb="B-ex_subj_verb">adoro la cadena que me oprime</l>
+               <l n="14" met="--+--+-+++-" enjamb="I-ex_subj_verb">y bendigo la sed que me da muerte.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s577n_2094">
+            <head>El sermón moderno</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+++--+-+-+-" enjamb="B-ex_subj_verb">Dale menos sermón y más harina</l>
+               <l n="2" met="-+-+-++--+-" enjamb="I-ex_subj_verb">e irá tras sí la grey, sabio prelado.</l>
+               <l n="3" met="+++--+++-+-" enjamb="B-pb_verb_chain">Ya no basta el sermón; la hora ha sonado</l>
+               <l n="4" met="-+---+---+-" enjamb="I-pb_verb_chain">de dar con picatostes la doctrina.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---++-++-">Donde hay hambre y dolor, todo es mohina;</l>
+               <l n="6" met="+-++-+-+-+-">piénsalo así, pastor, y pon cuidado</l>
+               <l n="7" met="--+--+---+-">en que pazca y se nutra tu ganado</l>
+               <l n="8" met="-+---+---+-">y abreve en la corriente cristalina.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">Los hambrientos, o luchan o bostezan,</l>
+               <l n="10" met="-----++--+-">y si en lugar de pan das oraciones,</l>
+               <l n="11" met="-+---+---+-">tendrán tu caridad como castigo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+-+-+-">Si les das de comer, verás cual rezan,</l>
+               <l n="13" met="++---+---+-">que hoy es el ideal de los sermones,</l>
+               <l n="14" met="+---++++-+-">más que predicar bien, dar mucho trigo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s577n_2095">
+            <head>Gretchen</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+---+-" enjamb="B-ex_dobj_verb">En el atrio del templo revendía</l>
+               <l n="2" met="+--+-+---+-" enjamb="I-ex_dobj_verb">cruces y estampas vieja repugnante,</l>
+               <l n="3" met="---+-+---+-" enjamb="B-pb_noun_prep">y en la arrugada tez de su semblante</l>
+               <l n="4" met="+--+-+---+-" enjamb="I-pb_noun_prep">de hampa o burdel el sello se veía.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-">Al pregonar su santa mercancía,</l>
+               <l n="6" met="-+-+---+-+-">noté algo en ella de mujer galante,</l>
+               <l n="7" met="--+--+---+-">de pasado esplendor, y en el instante</l>
+               <l n="8" met="-+-+---+-+-">llegué curioso y pregunté a la arpía.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+-+---+-" enjamb="B-pb_verb_adv">Fui Margarita, dijo, y al contado</l>
+               <l n="10" met="-+-+-+-+-+-" enjamb="I-pb_verb_adv">después que a Fausto amé, vendí mis besos,</l>
+               <l n="11" met="-++--+---+-">que al fin fueron desprecio de la gente.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-++--+-">El hospital mi carne ha marchitado,</l>
+               <l n="13" met="++-+---+-+-">y hoy vendo a Cristo y a los santos esos</l>
+               <l n="14" met="--++-+---+-">¡por ganarme una copa de aguardiente!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

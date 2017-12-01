@@ -1,218 +1,294 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Antonio Suárez Gómez</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_612n"/>
-          <name type="short">Suárez Gómez</name>
-          <name type="full">
-            <name type="first-name">Antonio</name>
-            <name type="second-name">Suárez Gómez</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">6</measure>
-        <measure unit="tokens">646</measure>
-        <measure unit="line">84</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_612n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_612n" role="author" sex="M">
-            <persName>Antonio Suárez Gómez</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Antonio Suárez Gómez</title>
+            <author corresp="#disco_612n">Antonio Suárez Gómez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">6</measure>
+            <measure unit="tokens">646</measure>
+            <measure unit="line">84</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_612n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_612n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Suárez Gómez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Antonio</forename>
+                     <surname property="foaf:familyName">Suárez Gómez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Antonio Suárez Gómez</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s612n_2270" about="dbpedia:Soneto">
+                        <title property="dc:title">Amelia</title>
+                        <title type="incipit" property="dc:alternative">Amelia es toda ensueño; toda romanticismo.</title>
+                     </bibl>
+                     <bibl resource="disco#s612n_2271" about="dbpedia:Soneto">
+                        <title property="dc:title">Julia</title>
+                        <title type="incipit" property="dc:alternative">Es soberbia. Es altiva. Perversamente bella</title>
+                     </bibl>
+                     <bibl resource="disco#s612n_2272" about="dbpedia:Soneto">
+                        <title property="dc:title">Otilia</title>
+                        <title type="incipit" property="dc:alternative">Es pequeñita, pero todo en ella es grandeza:</title>
+                     </bibl>
+                     <bibl resource="disco#s612n_2273" about="dbpedia:Soneto">
+                        <title property="dc:title">Bofia</title>
+                        <title type="incipit" property="dc:alternative">Es la mujer más blanca de cuantas he admirado</title>
+                     </bibl>
+                     <bibl resource="disco#s612n_2274" about="dbpedia:Soneto">
+                        <title property="dc:title">Teresa</title>
+                        <title type="incipit" property="dc:alternative">Atesora el encanto de la hembra bravía</title>
+                     </bibl>
+                     <bibl resource="disco#s612n_2275" about="dbpedia:Soneto">
+                        <title property="dc:title">Envió</title>
+                        <title type="incipit" property="dc:alternative">Forjé para vosotras, Sacerdotisas buenas</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Antonio Suárez Gómez</head>
-        <p>Cuba. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s612n_2270">
-        <head>Amelia</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Amelia es toda ensueño; toda romanticismo.</l>
-          <l n="2">La Diosa de la Carne le negó sus encantos.</l>
-          <l n="3">Y está enferma. Delira con el Catolicismo,</l>
-          <l n="4">con la Virgen, la Iglesia, los curas y los Santos.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Personificadora de un raro pesimismo</l>
-          <l n="6">sufre causas secretas. Tiene a veces espasmos</l>
-          <l n="7">como si la llevaran arrastrada a un abismo</l>
-          <l n="8">de inquietudes eternas y de horribles quebrantos.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Ella se curaría si dejase la Iglesia,</l>
-          <l n="10">que dio a su facultades una como anestesia,</l>
-          <l n="11">por obra de la hipócrita misión sacerdotal.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y, rebelde a ese rancio brebaje de sandeces,</l>
-          <l n="13">fuese mujer tan sólo; ¡que la mujer a veces</l>
-          <l n="14">cuanto más hembra sea más sube al Ideal!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s612n_2271">
-        <head>Julia</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Es soberbia. Es altiva. Perversamente bella</l>
-          <l n="2">y de ojos criminales, retadores e hirientes,</l>
-          <l n="3">pues sabe que el prodigio de sus formas descuella</l>
-          <l n="4">sobre las mundanales bellezas más ingentes.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Todo es fragancia, ritmo, fuego y ansias en ella,</l>
-          <l n="6">y su orgullo blasona de arrobar a las gentes</l>
-          <l n="7">con su andar de expresiones incitantes que sella</l>
-          <l n="8">el originalismo de sus carnes ardientes.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Pero es frágil; apenas el soplo del Deseo</l>
-          <l n="10">la invade, se convierte su corazón en reo</l>
-          <l n="11">del sanguíneo delito del Instinto Animal.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y, hembra entonces, humilde su vanidad sofoca</l>
-          <l n="13">como si un alma histérica y ardientemente loca</l>
-          <l n="14">fuese en aquel momento su Ser Espiritual.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s612n_2272">
-        <head>Otilia</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Es pequeñita, pero todo en ella es grandeza:</l>
-          <l n="2">ojos de Madre; labios rojos de Pecadora;</l>
-          <l n="3">caderas amplias; senos de incitante dureza</l>
-          <l n="4">y cabellera rubia sobre la tez de mora.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Ella nunca ha tenido momentos de tristeza</l>
-          <l n="6">y es una frivolilla. Veréisla a toda hora;</l>
-          <l n="7">ideando algo malo si parece que reza</l>
-          <l n="8">o rumiando algún goce si parece que llora.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">La niña incomprensible, para mí únicamente</l>
-          <l n="10">no tiene encrucijadas; sabe que soy vidente</l>
-          <l n="11">para los pensamientos que entraña su intención.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y sólo m domina con poder absoluto</l>
-          <l n="13">en los breves instantes en que el hombre es un bruto.</l>
-          <l n="14">¡Entonces sí que es suyo todo mi corazón!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s612n_2273">
-        <head>Bofia</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Es la mujer más blanca de cuantas he admirado</l>
-          <l n="2">y la mujer más buena de cuantas he querido;</l>
-          <l n="3">si es grande la belleza de su cuerpo nevado,</l>
-          <l n="4">es más la que atesora su Ser desconocido.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Es, para mí respeto, como un cáliz sagrado</l>
-          <l n="6">cuyo precioso néctar el Mal no ha corrompido;</l>
-          <l n="7">y que con tan unciosa reverencia he tocado</l>
-          <l n="8">y que con tanta fiebre de pasión he bebido.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Cuando la Hora Roja de la Mujer la llama</l>
-          <l n="10">y en la sanguínea estancia de su sexo se inflama,</l>
-          <l n="11">refínase el encanto que tiene su beldad.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Porque ella es una artista; ¡y el Arte que engrandece</l>
-          <l n="13">lo material y abstracto, depura y embellece</l>
-          <l n="14">hasta el carnal instante de la brutalidad!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s612n_2274">
-        <head>Teresa</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Atesora el encanto de la hembra bravía</l>
-          <l n="2">cuyo beso estrangula, cuya caricia mata,</l>
-          <l n="3">cuando se desenvuelve su lujuria de impía</l>
-          <l n="4">y el deseo su torpe sensualismo desata.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Tiene cuerpo de Venus y corazón de ingrata.</l>
-          <l n="6">La seducción es nula para su altanería,</l>
-          <l n="7">y el enfado en su grave semblante se retrata</l>
-          <l n="8">cuando la hacen objeto de una galantería.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Su ideal es un hijo, y en su busca labora,</l>
-          <l n="10">esperando que llegue para su carne la hora</l>
-          <l n="11">de abrirse en un milagro de fructificación.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Porque ella reconoce la misión de la hembra</l>
-          <l n="13">y quiere que en su entraña la fecundante siembra</l>
-          <l n="14">ejecute su obra de multiplicación.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s612n_2275">
-        <head>Envió</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Forjé para vosotras, Sacerdotisas buenas</l>
-          <l n="2">que adoráis en el Templo de la Carne al Amor,</l>
-          <l n="3">estos versos que fingen argentadas cadenas,</l>
-          <l n="4">para estrecharos juntas en un cuadro de honor.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Mujeres d embelesos, mieles y savias llenas;</l>
-          <l n="6">permitidme que os brinde mi Copa de Licor,</l>
-          <l n="7">que si tiene en su fondo residuos de mis penas</l>
-          <l n="8">es porque muchos labios probaron su sabor.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Recordando las dádivas de vuestras almas francas</l>
-          <l n="10">que, en la dulce caricia de vuestras carnes blancas,</l>
-          <l n="11">sumisas, generosas y buenas me ofrecisteis,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">es fuerza que yo sienta necesidad de amaros</l>
-          <l n="13">y con los áureos cetros de mis lirismo daros</l>
-          <l n="14">algo que recompense lo mucho que me disteis.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Antonio Suárez Gómez</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s612n_2270">
+            <head>Amelia</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="-+++-+-+----+-">Amelia es toda ensueño; toda romanticismo.</l>
+               <l n="2" met="-----+-+-+--+-">La Diosa de la Carne le negó sus encantos.</l>
+               <l n="3" met="-++------+-">Y está enferma. Delira con el Catolicismo,</l>
+               <l n="4" met="--+--+--+---+-">con la Virgen, la Iglesia, los curas y los Santos.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="-----+-++---+-" enjamb="B-ex_subj_verb">Personificadora de un raro pesimismo</l>
+               <l n="6" met="+-+--+--+--+-" enjamb="B-ex_subj_verb I-ex_subj_verb">sufre causas secretas. Tiene a veces espasmos</l>
+               <l n="7" met="---+-+---++-+-" enjamb="B-pb_noun_prep I-ex_subj_verb">como si la llevaran arrastrada a un abismo</l>
+               <l n="8" met="--+--+---+--+-" enjamb="I-pb_noun_prep">de inquietudes eternas y de horribles quebrantos.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+----+--+--+-">Ella se curaría si dejase la Iglesia,</l>
+               <l n="10" met="-+---+-+----+-">que dio a su facultades una como anestesia,</l>
+               <l n="11" met="----+---+---+-">por obra de la hipócrita misión sacerdotal.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++-+--+---+-">Y, rebelde a ese rancio brebaje de sandeces,</l>
+               <l n="13" met="+--+++----+-+-" enjamb="B-ex_subj_verb">fuese mujer tan sólo; ¡que la mujer a veces</l>
+               <l n="14" met="+-++-+++---+-" enjamb="I-ex_subj_verb">cuanto más hembra sea más sube al Ideal!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s612n_2271">
+            <head>Julia</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="+-+---+-+-">Es soberbia. Es altiva. Perversamente bella</l>
+               <l n="2" met="-+---+---+--+-">y de ojos criminales, retadores e hirientes,</l>
+               <l n="3" met="-+---+---+--+-">pues sabe que el prodigio de sus formas descuella</l>
+               <l n="4" met="-----+--+-+-+-">sobre las mundanales bellezas más ingentes.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="++-+-+-+-+--+-">Todo es fragancia, ritmo, fuego y ansias en ella,</l>
+               <l n="6" met="--+--+---+--+-">y su orgullo blasona de arrobar a las gentes</l>
+               <l n="7" met="--+--+---+--+-" enjamb="B-ex_dobj_verb">con su andar de expresiones incitantes que sella</l>
+               <l n="8" met="-----+---+--+-" enjamb="I-ex_dobj_verb">el originalismo de sus carnes ardientes.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--+--+---+-" enjamb="B-ex_subj_verb">Pero es frágil; apenas el soplo del Deseo</l>
+               <l n="10" met="++---+----+-+-" enjamb="B-pb_noun_prep I-ex_subj_verb">la invade, se convierte su corazón en reo</l>
+               <l n="11" met="--+--+------+-" enjamb="I-pb_noun_prep">del sanguíneo delito del Instinto Animal.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+----+-+-">Y, hembra entonces, humilde su vanidad sofoca</l>
+               <l n="13" met="--++-+---+-+-+" enjamb="B-ex_subj_verb">como si un alma histérica y ardientemente loca</l>
+               <l n="14" met="+--+-+-----+-" enjamb="I-ex_subj_verb">fuese en aquel momento su Ser Espiritual.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s612n_2272">
+            <head>Otilia</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-++-+-">Es pequeñita, pero todo en ella es grandeza:</l>
+               <l n="2" met="+--+-+-+----+-">ojos de Madre; labios rojos de Pecadora;</l>
+               <l n="3" met="-+-+-+---+--+-">caderas amplias; senos de incitante dureza</l>
+               <l n="4" met="---+-+----+-+-">y cabellera rubia sobre la tez de mora.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-++-+--+---+-">Ella nunca ha tenido momentos de tristeza</l>
+               <l n="6" met="++---+-+-+-++-">y es una frivolilla. Veréisla a toda hora;</l>
+               <l n="7" met="-++-+---+--+-">ideando algo malo si parece que reza</l>
+               <l n="8" met="--+-++---+--+-">o rumiando algún goce si parece que llora.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+---" enjamb="B-ex_subj_verb">La niña incomprensible, para mí únicamente</l>
+               <l n="10" met="++---+-+--+-+-" enjamb="B-pb_noun_prep I-ex_subj_verb">no tiene encrucijadas; sabe que soy vidente</l>
+               <l n="11" met="-----+--+---+-" enjamb="I-pb_noun_prep">para los pensamientos que entraña su intención.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+---+--+-">Y sólo m domina con poder absoluto</l>
+               <l n="13" met="--+--+---++++-">en los breves instantes en que el hombre es un bruto.</l>
+               <l n="14" met="-+-++--+----+-">¡Entonces sí que es suyo todo mi corazón!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s612n_2273">
+            <head>Bofia</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+++----+-+-">Es la mujer más blanca de cuantas he admirado</l>
+               <l n="2" met="---+++----+-+-">y la mujer más buena de cuantas he querido;</l>
+               <l n="3" met="++---+---+--+-">si es grande la belleza de su cuerpo nevado,</l>
+               <l n="4" met="++---+--+---+-">es más la que atesora su Ser desconocido.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+--++--+-" enjamb="B-cc_crossclause">Es, para mí respeto, como un cáliz sagrado</l>
+               <l n="6" met="---+-+--++--+-" enjamb="I-cc_crossclause">cuyo precioso néctar el Mal no ha corrompido;</l>
+               <l n="7" met="---+-+---++-+-">y que con tan unciosa reverencia he tocado</l>
+               <l n="8" met="---+-+---++-+-">y que con tanta fiebre de pasión he bebido.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---------+++-">Cuando la Hora Roja de la Mujer la llama</l>
+               <l n="10" met="---+-+---+--+-">y en la sanguínea estancia de su sexo se inflama,</l>
+               <l n="11" met="-+-+-+--+---+-">refínase el encanto que tiene su beldad.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+++-+--+---+-" enjamb="B-ex_dobj_verb">Porque ella es una artista; ¡y el Arte que engrandece</l>
+               <l n="13" met="---+-+--+---+-" enjamb="I-ex_dobj_verb">lo material y abstracto, depura y embellece</l>
+               <l n="14" met="---+-+------+-">hasta el carnal instante de la brutalidad!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s612n_2274">
+            <head>Teresa</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+--+--+-" enjamb="B-cc_crossclause">Atesora el encanto de la hembra bravía</l>
+               <l n="2" met="--+--+----+-+-" enjamb="I-cc_crossclause">cuyo beso estrangula, cuya caricia mata,</l>
+               <l n="3" met="-----+---+--+-">cuando se desenvuelve su lujuria de impía</l>
+               <l n="4" met="--+-+---+--+-">y el deseo su torpe sensualismo desata.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+----+-+-">Tiene cuerpo de Venus y corazón de ingrata.</l>
+               <l n="6" met="---+++------+-">La seducción es nula para su altanería,</l>
+               <l n="7" met="--+--+--+---+-">y el enfado en su grave semblante se retrata</l>
+               <l n="8" met="--+--+-+----+-">cuando la hacen objeto de una galantería.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++++---+--+-">Su ideal es un hijo, y en su busca labora,</l>
+               <l n="10" met="--+--+----+-+-" enjamb="B-pb_noun_prep">esperando que llegue para su carne la hora</l>
+               <l n="11" met="-+++-+------+-" enjamb="I-pb_noun_prep">de abrirse en un milagro de fructificación.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-+-">Porque ella reconoce la misión de la hembra</l>
+               <l n="13" met="-+---+----+-+-" enjamb="B-ex_subj_verb">y quiere que en su entraña la fecundante siembra</l>
+               <l n="14" met="--+-+------+-" enjamb="I-ex_subj_verb">ejecute su obra de multiplicación.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s612n_2275">
+            <head>Envió</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="-+---+----+-+-" enjamb="B-cc_crossclause">Forjé para vosotras, Sacerdotisas buenas</l>
+               <l n="2" met="--+------+--+-" enjamb="I-cc_crossclause">que adoráis en el Templo de la Carne al Amor,</l>
+               <l n="3" met="+-+--+---+--+-">estos versos que fingen argentadas cadenas,</l>
+               <l n="4" met="---+++--++--+-">para estrecharos juntas en un cuadro de honor.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="-+-+--+-+--+-+">Mujeres d embelesos, mieles y savias llenas;</l>
+               <l n="6" met="--++++------+-">permitidme que os brinde mi Copa de Licor,</l>
+               <l n="7" met="--+--+--+---+-">que si tiene en su fondo residuos de mis penas</l>
+               <l n="8" met="+--+-+--+---+-">es porque muchos labios probaron su sabor.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+-----+-+" enjamb="B-cc_crossclause">Recordando las dádivas de vuestras almas francas</l>
+               <l n="10" met="--+--+----+-+-" enjamb="I-cc_crossclause">que, en la dulce caricia de vuestras carnes blancas,</l>
+               <l n="11" met="-+---+--+-+-+-">sumisas, generosas y buenas me ofrecisteis,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++--++----+-++">es fuerza que yo sienta necesidad de amaros</l>
+               <l n="13" met="---+-+----+-++">y con los áureos cetros de mis lirismo daros</l>
+               <l n="14" met="+----+--+--++-">algo que recompense lo mucho que me disteis.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

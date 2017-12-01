@@ -1,94 +1,154 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Anthero de Quental</title>
-        <author>
-          <idno type="viaf" cert="high">100254861</idno>
-          <idno type="#disco" xml:id="disco_426n"/>
-          <name type="short">Quental</name>
-          <name type="full">
-            <name type="first-name">Anthero</name>
-            <name type="preposition-name">de</name>
-            <name type="second-name">Quental</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">103</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_426n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_426n" role="author" sex="M">
-            <persName>Anthero de Quental</persName>
-            <birth><placeName type="place">Ponta Delgada (Portugal)</placeName>, <placeName type="country">Portugal</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1842" cert="high">1842</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1891" cert="high">1891</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Anthero de Quental</title>
+            <author corresp="#disco_426n">Anthero de Quental</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">103</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_426n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_426n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/100254861"/>
+                  <persName type="short">Quental</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Anthero</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Quental</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Anthero de Quental</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Ponta Delgada</settlement>
+                           <country>Portugal</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1842" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1891" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s426n_1668" about="dbpedia:Soneto">
+                        <title property="dc:title">Despertar</title>
+                        <title type="incipit" property="dc:alternative">Soñando a veces -si el soñar quebranta</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Anthero de Quental</head>
-        <p>Ponta Delgada (Portugal). 1842 - 1891</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s426n_1668">
-        <head>Despertar</head>
-        <lg n="1" type="unknown">
-          <l n="1">Soñando a veces -si el soñar quebranta</l>
-          <l n="2">ese vago sufrir, esa agonía -,</l>
-          <l n="3">como canta al volar la alondra pía,</l>
-          <l n="4">por el cielo mi alma vuela y canta.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Canta el alba, la luz, la estrella santa</l>
-          <l n="6">que ilumina la tierra... sólo un día.</l>
-          <l n="7">Canta el cambio en las cosas, la alegría</l>
-          <l n="8">que las llena de amor y las levanta.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mas de repente, un viento húmedo y frío</l>
-          <l n="10">sopla en mi sueño. Un leve escalofrío</l>
-          <l n="11">me despierta. Y es noche. Es el dolor</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">que vela como antes a mi lado.</l>
-          <l n="13">¡Ay! mis cantos de luz, ángel amado,</l>
-          <l n="14">tan sólo sueño son, como mi amor.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Anthero de Quental</head>
+            <p>Ponta Delgada (Portugal). 1842 - 1891</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s426n_1668">
+            <head>Despertar</head>
+            <lg n="1" type="unknown">
+               <l n="1" met="-+-+---+-+-" enjamb="B-ex_subj_verb">Soñando a veces -si el soñar quebranta</l>
+               <l n="2" met="+-+--++--+-" enjamb="I-ex_subj_verb">ese vago sufrir, esa agonía -,</l>
+               <l n="3" met="--+--+-+-+-">como canta al volar la alondra pía,</l>
+               <l n="4" met="--+-+-+--+-">por el cielo mi alma vuela y canta.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+-+-+-" enjamb="B-cc_crossclause">Canta el alba, la luz, la estrella santa</l>
+               <l n="6" met="--+--+-+++-" enjamb="I-cc_crossclause">que ilumina la tierra... sólo un día.</l>
+               <l n="7" met="+-+--+---+-" enjamb="B-cc_crossclause">Canta el cambio en las cosas, la alegría</l>
+               <l n="8" met="--+--+-+-+-" enjamb="I-cc_crossclause">que las llena de amor y las levanta.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---++++--+-" enjamb="B-ex_subj_verb">Mas de repente, un viento húmedo y frío</l>
+               <l n="10" met="+--+-+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">sopla en mi sueño. Un leve escalofrío</l>
+               <l n="11" met="+-+-++---+-" enjamb="B-cc_crossclause I-ex_subj_verb">me despierta. Y es noche. Es el dolor</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-" enjamb="I-cc_crossclause">que vela como antes a mi lado.</l>
+               <l n="13" met="--+--++--+-">¡Ay! mis cantos de luz, ángel amado,</l>
+               <l n="14" met="++-+-+---+-">tan sólo sueño son, como mi amor.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

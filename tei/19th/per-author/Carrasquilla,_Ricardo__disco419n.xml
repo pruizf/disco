@@ -1,143 +1,210 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Ricardo Carrasquilla</title>
-        <author>
-          <idno type="viaf" cert="high">34051230</idno>
-          <idno type="#disco" xml:id="disco_419n"/>
-          <name type="short">Carrasquilla</name>
-          <name type="full">
-            <name type="first-name">Ricardo</name>
-            <name type="second-name">Carrasquilla</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">3</measure>
-        <measure unit="tokens">268</measure>
-        <measure unit="line">42</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_419n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_419n" role="author" sex="M">
-            <persName>Ricardo Carrasquilla</persName>
-            <birth><placeName type="place">Colombia</placeName>, <placeName type="country">Colombia</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1827" cert="high">1827</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1885" cert="high">1885</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Ricardo Carrasquilla</title>
+            <author corresp="#disco_419n">Ricardo Carrasquilla</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">268</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_419n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_419n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/34051230"/>
+                  <persName type="short">Carrasquilla</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ricardo</forename>
+                     <surname property="foaf:familyName">Carrasquilla</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ricardo Carrasquilla</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Colombia</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1827" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1885" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s419n_1656" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto1</title>
+                        <title type="incipit" property="dc:alternative">Hoy ninguna maldad al hombre enloda,</title>
+                     </bibl>
+                     <bibl resource="disco#s419n_1657" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Dios es quien es; la inmensidad, su manto;</title>
+                     </bibl>
+                     <bibl resource="disco#s419n_1658" about="dbpedia:Soneto">
+                        <title property="dc:title">Receta para hacer sonetos</title>
+                        <title type="incipit" property="dc:alternative">Ocho vocablos buscarás, diversos,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Ricardo Carrasquilla</head>
-        <p>Colombia. 1827 - 1885</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s419n_1656">
-        <head>Soneto1</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Hoy ninguna maldad al hombre enloda,</l>
-          <l n="2">y los nietos del mono y la monada</l>
-          <l n="3">sólo saben el «sé que no sé nada»,</l>
-          <l n="4">y fundan en dudar la ciencia toda.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La Esperanza y la fe no están de moda;</l>
-          <l n="6">la misma caridad es anticuada;</l>
-          <l n="7">los sagrados derechos de la nada</l>
-          <l n="8">sólo los niega ya la gente goda.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Es preciso buscar alguna idea;</l>
-          <l n="10">pero debo advertirte acá, en secreto,</l>
-          <l n="11">que ni de fe ni de esperanza sea.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Musa, al revés hagamos un soneto;</l>
-          <l n="13">es decir comencemos la tarea</l>
-          <l n="14">por escribir el último terceto.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s419n_1657">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Dios es quien es; la inmensidad, su manto;</l>
-          <l n="2">la creación, diadema de su frente;</l>
-          <l n="3">las dos eternidades, su presente;</l>
-          <l n="4">verdad, belleza, amor, su nombre santo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Bajo sus pies se hunde con espanto</l>
-          <l n="6">los firmamentos; es la luz ardiente</l>
-          <l n="7">sombra de su mirada omnipotente;</l>
-          <l n="8">ángeles y hombres, de su gloria el canto.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Con innúmeros soles de diamantes</l>
-          <l n="10">vi su poder inmensurable escrito</l>
-          <l n="11">en la cóncava esfera rutilante;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y de pasmo y amor lanzando un grito,</l>
-          <l n="13">¿Dónde, exclamé, se oculta tu semblante?</l>
-          <l n="14">En las alturas de mi ser habito.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s419n_1658">
-        <head>Receta para hacer sonetos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Ocho vocablos buscarás, diversos,</l>
-          <l n="2">que acaben cuatro en oso y cuatro en unta,</l>
-          <l n="3">para engastarlos todos en la punta</l>
-          <l n="4">de ocho renglones que se llaman versos.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Entre adjetivos mil, los más perversos</l>
-          <l n="6">en derredor de tu tintero junta,</l>
-          <l n="7">i a cada sustantivo dos le ayunta;</l>
-          <l n="8">i párrafos tendrás puros i tersos.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Los dos cuartetos acabaste? En alo</l>
-          <l n="10">recluta dos palabras, dos en unto;</l>
-          <l n="11">i un terceto tendrás que de regalo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Antes que ponga a mis preceptos punto,</l>
-          <l n="13">será bueno advertirte que no es malo</l>
-          <l n="14">buscar para el soneto algún asunto.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Ricardo Carrasquilla</head>
+            <p>Colombia. 1827 - 1885</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s419n_1656">
+            <head>Soneto1</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+-+-+-">Hoy ninguna maldad al hombre enloda,</l>
+               <l n="2" met="--+--+---+-">y los nietos del mono y la monada</l>
+               <l n="3" met="+-+--+-+++-">sólo saben el «sé que no sé nada»,</l>
+               <l n="4" met="-+---+-+-+-">y fundan en dudar la ciencia toda.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+++-+-">La Esperanza y la fe no están de moda;</l>
+               <l n="6" met="-+---++--+-">la misma caridad es anticuada;</l>
+               <l n="7" met="--+--+---+-">los sagrados derechos de la nada</l>
+               <l n="8" met="+-++-+-+-+-">sólo los niega ya la gente goda.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+-+-+-">Es preciso buscar alguna idea;</l>
+               <l n="10" met="--+--+++-+-">pero debo advertirte acá, en secreto,</l>
+               <l n="11" met="-+-+---+-+-">que ni de fe ni de esperanza sea.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+-+-+-">Musa, al revés hagamos un soneto;</l>
+               <l n="13" met="+-+--+---+-" enjamb="B-pb_noun_prep">es decir comencemos la tarea</l>
+               <l n="14" met="---+-+---+-" enjamb="I-pb_noun_prep">por escribir el último terceto.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s419n_1657">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-">Dios es quien es; la inmensidad, su manto;</l>
+               <l n="2" met="---+-+---+-">la creación, diadema de su frente;</l>
+               <l n="3" met="-+---+---+-">las dos eternidades, su presente;</l>
+               <l n="4" met="-+-+-+-+-+-">verdad, belleza, amor, su nombre santo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-" enjamb="B-ex_dobj_verb">Bajo sus pies se hunde con espanto</l>
+               <l n="6" met="---+-+-+-+-" enjamb="B-pb_adj_noun I-ex_dobj_verb">los firmamentos; es la luz ardiente</l>
+               <l n="7" met="+----+---+-" enjamb="I-pb_adj_noun">sombra de su mirada omnipotente;</l>
+               <l n="8" met="+--+---+-+-">ángeles y hombres, de su gloria el canto.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">Con innúmeros soles de diamantes</l>
+               <l n="10" met="+--+---+-+-">vi su poder inmensurable escrito</l>
+               <l n="11" met="--+--+---+-">en la cóncava esfera rutilante;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+-+-+-++-">y de pasmo y amor lanzando un grito,</l>
+               <l n="13" met="+--+-+---+-">¿Dónde, exclamé, se oculta tu semblante?</l>
+               <l n="14" met="---+---+-+-">En las alturas de mi ser habito.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s419n_1658">
+            <head>Receta para hacer sonetos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-">Ocho vocablos buscarás, diversos,</l>
+               <l n="2" met="-+-+-+-+-+-">que acaben cuatro en oso y cuatro en unta,</l>
+               <l n="3" met="---+++---+-" enjamb="B-pb_noun_prep">para engastarlos todos en la punta</l>
+               <l n="4" met="+--+---+-+-" enjamb="I-pb_noun_prep">de ocho renglones que se llaman versos.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+-+-+-" enjamb="B-pb_adj_prep">Entre adjetivos mil, los más perversos</l>
+               <l n="6" met="-------+-+-" enjamb="I-pb_adj_prep">en derredor de tu tintero junta,</l>
+               <l n="7" met="++---+-+++-">i a cada sustantivo dos le ayunta;</l>
+               <l n="8" met="++---++-++-">i párrafos tendrás puros i tersos.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">Los dos cuartetos acabaste? En alo</l>
+               <l n="10" met="-+-+-+-+-+-">recluta dos palabras, dos en unto;</l>
+               <l n="11" met="+-+--+---+-">i un terceto tendrás que de regalo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+---+-+-">Antes que ponga a mis preceptos punto,</l>
+               <l n="13" met="-++--++-++-" enjamb="B-ex_subj_verb">será bueno advertirte que no es malo</l>
+               <l n="14" met="-+---+-+-+-" enjamb="I-ex_subj_verb">buscar para el soneto algún asunto.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

@@ -1,93 +1,151 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Fermín Requena Díaz</title>
-        <author>
-          <idno type="viaf" cert="high">68701880</idno>
-          <idno type="#disco" xml:id="disco_630n"/>
-          <name type="short">Requena Díaz</name>
-          <name type="full">
-            <name type="first-name">Fermín</name>
-            <name type="second-name">Requena Díaz</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">86</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_630n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_630n" role="author" sex="M">
-            <persName>Fermín Requena Díaz</persName>
-            <birth><placeName type="place">Sevilla</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Fermín Requena Díaz</title>
+            <author corresp="#disco_630n">Fermín Requena Díaz</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">86</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_630n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_630n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/68701880"/>
+                  <persName type="short">Requena Díaz</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Fermín</forename>
+                     <surname property="foaf:familyName">Requena Díaz</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Fermín Requena Díaz</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Sevilla</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s630n_2328" about="dbpedia:Soneto">
+                        <title property="dc:title">Progreso</title>
+                        <title type="incipit" property="dc:alternative">¡Paso! dice su voz fuerte y vibrante,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Fermín Requena Díaz</head>
-        <p>Sevilla. 19th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s630n_2328">
-        <head>Progreso</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Paso! dice su voz fuerte y vibrante,</l>
-          <l n="2">y el eco melodioso allá retumba,</l>
-          <l n="3">en el místico arrobo de la tumba</l>
-          <l n="4">y en el mundo que bulle discordante.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¡Paso! dice, incansable caminante,</l>
-          <l n="6">y con la furia de huracán que zumba,</l>
-          <l n="7">arrastra las maldades a ultratumba,</l>
-          <l n="8">enarbolando la verdad triunfante.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Coge del bien la germinal semilla,</l>
-          <l n="10">y tras su verde y celestial aurora</l>
-          <l n="11">la estrella del amor, fulgente brilla:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Dando su resplandor a toda hora,</l>
-          <l n="13">siendo faro de mares en la orilla,</l>
-          <l n="14">y en la tierra voraz locomotora.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Fermín Requena Díaz</head>
+            <p>Sevilla. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s630n_2328">
+            <head>Progreso</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--++--+-">¡Paso! dice su voz fuerte y vibrante,</l>
+               <l n="2" met="-+---+-+-+-">y el eco melodioso allá retumba,</l>
+               <l n="3" met="--+--+---+-">en el místico arrobo de la tumba</l>
+               <l n="4" met="--+--+---+-">y en el mundo que bulle discordante.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-">¡Paso! dice, incansable caminante,</l>
+               <l n="6" met="---+---+-+-">y con la furia de huracán que zumba,</l>
+               <l n="7" met="-+---+---+-">arrastra las maldades a ultratumba,</l>
+               <l n="8" met="---+---+-+-">enarbolando la verdad triunfante.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+---+-+-">Coge del bien la germinal semilla,</l>
+               <l n="10" met="---+---+-+-">y tras su verde y celestial aurora</l>
+               <l n="11" met="-+---+-+-+-">la estrella del amor, fulgente brilla:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+----+-+-+-">Dando su resplandor a toda hora,</l>
+               <l n="13" met="+-+--+---+-">siendo faro de mares en la orilla,</l>
+               <l n="14" met="--+--+---+-">y en la tierra voraz locomotora.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

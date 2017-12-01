@@ -1,143 +1,211 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Julio Zaldumbide Gangotena</title>
-        <author>
-          <idno type="viaf" cert="high">24660589</idno>
-          <idno type="#disco" xml:id="disco_605n"/>
-          <name type="short">Zaldumbide Gangotena</name>
-          <name type="full">
-            <name type="first-name">Julio</name>
-            <name type="second-name">Zaldumbide Gangotena</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">3</measure>
-        <measure unit="tokens">287</measure>
-        <measure unit="line">42</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_605n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_605n" role="author" sex="M">
-            <persName>Julio Zaldumbide Gangotena</persName>
-            <birth><placeName type="place">Quito (Ecuador)</placeName>, <placeName type="country">Ecuador</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1833" cert="high">1833</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1881" cert="high">1881</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Julio Zaldumbide Gangotena</title>
+            <author corresp="#disco_605n">Julio Zaldumbide Gangotena</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">287</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_605n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_605n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/24660589"/>
+                  <persName type="short">Zaldumbide Gangotena</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Julio</forename>
+                     <surname property="foaf:familyName">Zaldumbide Gangotena</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Julio Zaldumbide Gangotena</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Quito</settlement>
+                           <country>Ecuador</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1833" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1881" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s605n_2261" about="dbpedia:Soneto">
+                        <title property="dc:title">En tempestad sin tregua de bonanza</title>
+                        <title type="incipit" property="dc:alternative">En tempestad sin tregua de bonanza</title>
+                     </bibl>
+                     <bibl resource="disco#s605n_2262" about="dbpedia:Soneto">
+                        <title property="dc:title">El llanto</title>
+                        <title type="incipit" property="dc:alternative">Cuando yo considero que en la vida</title>
+                     </bibl>
+                     <bibl resource="disco#s605n_2263" about="dbpedia:Soneto">
+                        <title property="dc:title">A las flores</title>
+                        <title type="incipit" property="dc:alternative">Prole gentil del céfiro y la aurora,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Julio Zaldumbide Gangotena</head>
-        <p>Quito (Ecuador). 1833 - 1881</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s605n_2261">
-        <head>En tempestad sin tregua de bonanza</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">En tempestad sin tregua de bonanza</l>
-          <l n="2">sufrir, llorar, de amor la pena dura,</l>
-          <l n="3">sin ver para más grande desventura</l>
-          <l n="4">ni en tu esquivez ni en mi dolor mudanza.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Fingir acaso en bella lontananza</l>
-          <l n="6">dichoso porvenir a mi tristura;</l>
-          <l n="7">ver luego disiparse su luz pura,</l>
-          <l n="8">y, cual siempre, quedar sin esperanza.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Aqueste es mi destino, Delia impía.</l>
-          <l n="10">Mas, tú contemplas con desdén mi llanto...</l>
-          <l n="11">¡Ay! Si has de ser de piedra a la agonía</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">del pobre corazón que te ama tanto,</l>
-          <l n="13">¿de qué me ha de servir esta traidora</l>
-          <l n="14">llama que en él prendiste y le devora?</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s605n_2262">
-        <head>El llanto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Cuando yo considero que en la vida</l>
-          <l n="2">no he cogido de amor ninguna rosa;</l>
-          <l n="3">cuando no miro en duda tenebrosa</l>
-          <l n="4">surgir lejana una ilusión querida;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">cuando de hiel colmada la medida</l>
-          <l n="6">de mi dolor el cálice rebosa;</l>
-          <l n="7">cuando el alma en su lucha tormentosa</l>
-          <l n="8">se postra al fin sin fuerzas abatida,</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">la frente inclino; en abundante vena</l>
-          <l n="10">desátase mi llanto, y baña el suelo,</l>
-          <l n="11">y mi alma poco a poco se serena:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">De la tormenta así el nubloso velo,</l>
-          <l n="13">revuelto en confusión, se rompe, truena,</l>
-          <l n="14">desciende en lluvia, y resplandece el cielo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s605n_2263">
-        <head>A las flores</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Prole gentil del céfiro y la aurora,</l>
-          <l n="2">nacida con el don de la belleza;</l>
-          <l n="3">gracias con que la gran naturaleza</l>
-          <l n="4">ríe, y su augusta majestad decora.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La luz del sol, que el universo dora,</l>
-          <l n="6">no tanto de su frente en la grandeza,</l>
-          <l n="7">cuanto en vosotras linda se adereza,</l>
-          <l n="8">y con matiz más gayo se colora.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">En el campo del éter las estrellas</l>
-          <l n="10">son flores celestiales, y en el suelo</l>
-          <l n="11">vosotras sois estrellas de colores.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Tan puras sois, en fin, al par que bellas,</l>
-          <l n="13">que pienso que del mundo el claro cielo</l>
-          <l n="14">no tiene cosas más... que almas y flores.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Julio Zaldumbide Gangotena</head>
+            <p>Quito (Ecuador). 1833 - 1881</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s605n_2261">
+            <head>En tempestad sin tregua de bonanza</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+---+-">En tempestad sin tregua de bonanza</l>
+               <l n="2" met="-+-+-+-+-+-">sufrir, llorar, de amor la pena dura,</l>
+               <l n="3" met="-+--++---+-">sin ver para más grande desventura</l>
+               <l n="4" met="---+---+-+-">ni en tu esquivez ni en mi dolor mudanza.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+---+-" enjamb="B-pb_adj_noun">Fingir acaso en bella lontananza</l>
+               <l n="6" met="-+---+---+-" enjamb="I-pb_adj_noun">dichoso porvenir a mi tristura;</l>
+               <l n="7" met="++---++-++-">ver luego disiparse su luz pura,</l>
+               <l n="8" met="--+--+---+-">y, cual siempre, quedar sin esperanza.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--+-+-+-">Aqueste es mi destino, Delia impía.</l>
+               <l n="10" met="-+-+---+-+-">Mas, tú contemplas con desdén mi llanto...</l>
+               <l n="11" met="+-+-+----+-" enjamb="B-pb_noun_prep">¡Ay! Si has de ser de piedra a la agonía</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+-+-+-" enjamb="I-pb_noun_prep">del pobre corazón que te ama tanto,</l>
+               <l n="13" met="-++--++--+-" enjamb="B-ex_subj_verb">¿de qué me ha de servir esta traidora</l>
+               <l n="14" met="+--+-+-+-+-" enjamb="I-ex_subj_verb">llama que en él prendiste y le devora?</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s605n_2262">
+            <head>El llanto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+---+-">Cuando yo considero que en la vida</l>
+               <l n="2" met="+-+--+-+-+-">no he cogido de amor ninguna rosa;</l>
+               <l n="3" met="--++-+---+-">cuando no miro en duda tenebrosa</l>
+               <l n="4" met="-+-++--+-+-">surgir lejana una ilusión querida;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-" enjamb="B-pb_noun_prep">cuando de hiel colmada la medida</l>
+               <l n="6" met="---+-+---+-" enjamb="I-pb_noun_prep">de mi dolor el cálice rebosa;</l>
+               <l n="7" met="--+--+---+-">cuando el alma en su lucha tormentosa</l>
+               <l n="8" met="-+-+-+---+-">se postra al fin sin fuerzas abatida,</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">la frente inclino; en abundante vena</l>
+               <l n="10" met="-+-+-+-+-+-">desátase mi llanto, y baña el suelo,</l>
+               <l n="11" met="-+---+---+-">y mi alma poco a poco se serena:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+-+-+-">De la tormenta así el nubloso velo,</l>
+               <l n="13" met="-+---+-+-+-">revuelto en confusión, se rompe, truena,</l>
+               <l n="14" met="-+-+---+-+-">desciende en lluvia, y resplandece el cielo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s605n_2263">
+            <head>A las flores</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-">Prole gentil del céfiro y la aurora,</l>
+               <l n="2" met="-+---+---+-">nacida con el don de la belleza;</l>
+               <l n="3" met="+----+---+-" enjamb="B-pb_adj_noun">gracias con que la gran naturaleza</l>
+               <l n="4" met="+--+---+-+-" enjamb="I-pb_adj_noun">ríe, y su augusta majestad decora.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-">La luz del sol, que el universo dora,</l>
+               <l n="6" met="++---+---+-">no tanto de su frente en la grandeza,</l>
+               <l n="7" met="+--+-+---+-">cuanto en vosotras linda se adereza,</l>
+               <l n="8" met="---+++---+-">y con matiz más gayo se colora.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-" enjamb="B-ex_subj_verb">En el campo del éter las estrellas</l>
+               <l n="10" met="++---+---+-" enjamb="I-ex_subj_verb">son flores celestiales, y en el suelo</l>
+               <l n="11" met="-+-+-+---+-">vosotras sois estrellas de colores.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++-+-+---+-">Tan puras sois, en fin, al par que bellas,</l>
+               <l n="13" met="-+---+-+-+-" enjamb="B-ex_subj_verb">que pienso que del mundo el claro cielo</l>
+               <l n="14" met="++-+-++--+-" enjamb="I-ex_subj_verb">no tiene cosas más... que almas y flores.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

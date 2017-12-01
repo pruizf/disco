@@ -1,119 +1,179 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Margarita del Valle</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_590n"/>
-          <name type="short">Valle</name>
-          <name type="full">
-            <name type="first-name">Margarita</name>
-            <name type="preposition-name">del</name>
-            <name type="second-name">Valle</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">177</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_590n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_590n" role="author" sex="F">
-            <persName>Margarita del Valle</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Margarita del Valle</title>
+            <author corresp="#disco_590n">Margarita del Valle</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">177</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_590n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_590n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Valle</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Margarita</forename>
+                     <nameLink>del</nameLink>
+                     <surname property="foaf:familyName">Valle</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Margarita del Valle</persName>
+                  <sex property="foaf:gender" value="F"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s590n_2194" about="dbpedia:Soneto">
+                        <title property="dc:title">Cabe la fuente del jardín</title>
+                        <title type="incipit" property="dc:alternative">Cabe la fuente del jardín sonoro</title>
+                     </bibl>
+                     <bibl resource="disco#s590n_2195" about="dbpedia:Soneto">
+                        <title property="dc:title">Exvotos...</title>
+                        <title type="incipit" property="dc:alternative">Alma que marchas disipando enojos:</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Margarita del Valle</head>
-        <p>Cuba. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s590n_2194">
-        <head>Cabe la fuente del jardín</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Cabe la fuente del jardín sonoro</l>
-          <l n="2">hay una amable y familiar glorieta:</l>
-          <l n="3">muda testigo que atisbó, discreta,</l>
-          <l n="4">descender un crepúsculo de oro.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Cabe la fuente del jardín, un coro</l>
-          <l n="6">forman canoros pájaros... Giuglietta</l>
-          <l n="7">viene de nuevo en busca del poeta</l>
-          <l n="8">que le dijera al suspirar: «Te adoro».</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Cabe la fuente del jardín yo sueño</l>
-          <l n="10">y en emociones rítmicas pergueño</l>
-          <l n="11">lo que en periodos líricos concibo...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Me enamora una estrofa bien pulida</l>
-          <l n="13">y en cada producción dejo la vida</l>
-          <l n="14">puesto que el alma pongo en lo que escribo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s590n_2195">
-        <head>Exvotos...</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Alma que marchas disipando enojos:</l>
-          <l n="2">igual que una mañana del estío,</l>
-          <l n="3">deja verme en las niñas de tus ojos</l>
-          <l n="4">como si fuera en el cristal de un río.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Quiero mirarme en ti. A mis antojos</l>
-          <l n="6">mirarte atravesar algún plantío...</l>
-          <l n="7">La tarde luce sus pendones rojos</l>
-          <l n="8">y quiero unir tu pensamiento al mío.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Sé fresca como el agua cristalina</l>
-          <l n="10">que vine de la olímpica montaña</l>
-          <l n="11">y se arrastra, como una Mesalina</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">que desciende a la paz de la cabaña,</l>
-          <l n="13">bajo la dulce tarde zafirina</l>
-          <l n="14">que en su precioso líquido se baña.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Margarita del Valle</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s590n_2194">
+            <head>Cabe la fuente del jardín</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-" enjamb="B-ex_subj_verb">Cabe la fuente del jardín sonoro</l>
+               <l n="2" met="+-+----+-+-" enjamb="I-ex_subj_verb">hay una amable y familiar glorieta:</l>
+               <l n="3" met="+--+---+-+-">muda testigo que atisbó, discreta,</l>
+               <l n="4" met="--++-+---+-">descender un crepúsculo de oro.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+++-" enjamb="B-ex_subj_verb">Cabe la fuente del jardín, un coro</l>
+               <l n="6" met="+--+-+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">forman canoros pájaros... Giuglietta</l>
+               <l n="7" met="+--+-----+-" enjamb="B-cc_crossclause I-ex_subj_verb">viene de nuevo en busca del poeta</l>
+               <l n="8" met="-+-+---+++-" enjamb="I-cc_crossclause">que le dijera al suspirar: «Te adoro».</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+---+++-">Cabe la fuente del jardín yo sueño</l>
+               <l n="10" met="---+-+---+-">y en emociones rítmicas pergueño</l>
+               <l n="11" met="---+-+---+-">lo que en periodos líricos concibo...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-++-+-+-+-">Me enamora una estrofa bien pulida</l>
+               <l n="13" met="-+---++--+-" enjamb="B-pb_adj_noun">y en cada producción dejo la vida</l>
+               <l n="14" met="+--+-+---+-" enjamb="I-pb_adj_noun">puesto que el alma pongo en lo que escribo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s590n_2195">
+            <head>Exvotos...</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="+--+---+-+-">Alma que marchas disipando enojos:</l>
+               <l n="2" met="-++--+---+-">igual que una mañana del estío,</l>
+               <l n="3" met="+-++-+---+-">deja verme en las niñas de tus ojos</l>
+               <l n="4" met="---+---+++-">como si fuera en el cristal de un río.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="+--++-+--+-">Quiero mirarme en ti. A mis antojos</l>
+               <l n="6" met="-++--+-+-+-">mirarte atravesar algún plantío...</l>
+               <l n="7" met="-+-+---+-+-">La tarde luce sus pendones rojos</l>
+               <l n="8" met="-+-+---+-+-">y quiero unir tu pensamiento al mío.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++---+---+-" enjamb="B-cc_crossclause">Sé fresca como el agua cristalina</l>
+               <l n="10" met="-+---+---+-" enjamb="B-cc_crossclause I-cc_crossclause">que vine de la olímpica montaña</l>
+               <l n="11" met="--+--+---+-" enjamb="B-cc_crossclause I-cc_crossclause">y se arrastra, como una Mesalina</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-" enjamb="I-cc_crossclause">que desciende a la paz de la cabaña,</l>
+               <l n="13" met="---+-+---+-" enjamb="B-cc_crossclause">bajo la dulce tarde zafirina</l>
+               <l n="14" met="---+-+---+-" enjamb="I-cc_crossclause">que en su precioso líquido se baña.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

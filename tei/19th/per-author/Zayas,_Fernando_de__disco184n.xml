@@ -1,144 +1,208 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Fernando de Zayas</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_184n"/>
-          <name type="short">Zayas</name>
-          <name type="full">
-            <name type="first-name">Fernando</name>
-            <name type="preposition-name">de</name>
-            <name type="second-name">Zayas</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">3</measure>
-        <measure unit="tokens">284</measure>
-        <measure unit="line">42</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_184n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_184n" role="author" sex="M">
-            <persName>Fernando de Zayas</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Fernando de Zayas</title>
+            <author corresp="#disco_184n">Fernando de Zayas</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">284</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_184n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_184n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Zayas</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Fernando</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Zayas</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Fernando de Zayas</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s184n_0624" about="dbpedia:Soneto">
+                        <title property="dc:title">En pleno sol</title>
+                        <title type="incipit" property="dc:alternative">Como un chorro de fuego, de la altura,</title>
+                     </bibl>
+                     <bibl resource="disco#s184n_0625" about="dbpedia:Soneto">
+                        <title property="dc:title">El torrente</title>
+                        <title type="incipit" property="dc:alternative">No quema el sol: alumbra suavemente,</title>
+                     </bibl>
+                     <bibl resource="disco#s184n_0626" about="dbpedia:Soneto">
+                        <title property="dc:title">A Cuba</title>
+                        <title type="incipit" property="dc:alternative">Aunque del golfo en la ajustada clave</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Fernando de Zayas</head>
-        <p>Cuba. 19th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s184n_0624">
-        <head>En pleno sol</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Como un chorro de fuego, de la altura,</l>
-          <l n="2">diamantina cascada al mundo arroja</l>
-          <l n="3">del sol la esfera coruscante y roja</l>
-          <l n="4">y, al beso ardiente de su lumbre pura,</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">canta su amor el ave en la espesura,</l>
-          <l n="6">se abre la nueva flor, tiembla la hoja,</l>
-          <l n="7">y del henchido grano se despoja</l>
-          <l n="8">la seca espiga de la mies madura.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">En busca de la sombra va el ganado;</l>
-          <l n="10">al aprisco sus pasos acelera</l>
-          <l n="11">mordiscando al pasar la yerba erguida.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y el rudo labrador deja el arado</l>
-          <l n="13">y va al rústico hogar donde le espera</l>
-          <l n="14">la amante esposa y la frugal comida.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s184n_0625">
-        <head>El torrente</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">No quema el sol: alumbra suavemente,</l>
-          <l n="2">el claro monte, el prado sin cultivo,</l>
-          <l n="3">y rumosoro, alborozado y vivo</l>
-          <l n="4">corre entre guijas el veloz torrente.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¿Qué impulso lleva, en su caudal latente,</l>
-          <l n="6">que a las bellezas del paisaje esquivo,</l>
-          <l n="7">cruza, cual descubierto fugitivo</l>
-          <l n="8">al vago ruido que a su espalda siente?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De pronto el lecho a su corriente falta,</l>
-          <l n="10">por el boquete de una roca hendida,</l>
-          <l n="11">como airoso bridón, se yergue y salta,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">ruge entre espumas, pero ruge en vano,</l>
-          <l n="13">y muere cual las ondas de la vida</l>
-          <l n="14">del infinito en el revuelto océano.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s184n_0626">
-        <head>A Cuba</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Aunque del golfo en la ajustada clave</l>
-          <l n="2">situada por la mano del misterio</l>
-          <l n="3">dominas casi todo un hemisferio</l>
-          <l n="4">y eres de un mar la centinela y llave,</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">al mundo no impondrás tu planta grave</l>
-          <l n="6">cual la patria de Augusto y de Tiberio,</l>
-          <l n="7">brillante cual la luz será tu imperio</l>
-          <l n="8">blando, como el amor, tu yugo suave.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">La tierna imagen del Edén perdido</l>
-          <l n="10">tu fauna y flora al viajador ofrecen,</l>
-          <l n="11">calma tu ley su inextinguible anhelo;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y conforta su espíritu abatido,</l>
-          <l n="13">la oración de tus palmas, que parecen</l>
-          <l n="14">las pitonisas del altar del cielo.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Fernando de Zayas</head>
+            <p>Cuba. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s184n_0624">
+            <head>En pleno sol</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-++--+---+-">Como un chorro de fuego, de la altura,</l>
+               <l n="2" met="--+--+-+-+-" enjamb="B-pb_verb_cprep">diamantina cascada al mundo arroja</l>
+               <l n="3" met="-+-+---+-+-" enjamb="I-pb_verb_cprep">del sol la esfera coruscante y roja</l>
+               <l n="4" met="-+-+---+-+-">y, al beso ardiente de su lumbre pura,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+---+-">canta su amor el ave en la espesura,</l>
+               <l n="6" met="+--+-++--+-">se abre la nueva flor, tiembla la hoja,</l>
+               <l n="7" met="---+-+---+-" enjamb="B-ex_dobj_verb">y del henchido grano se despoja</l>
+               <l n="8" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">la seca espiga de la mies madura.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-----+-+-+-">En busca de la sombra va el ganado;</l>
+               <l n="10" met="--+--+---+-" enjamb="B-pb_relword">al aprisco sus pasos acelera</l>
+               <l n="11" met="--+--+-+-+-" enjamb="I-pb_relword">mordiscando al pasar la yerba erguida.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---++--+-">Y el rudo labrador deja el arado</l>
+               <l n="13" met="-++--+--++-" enjamb="B-ex_subj_verb">y va al rústico hogar donde le espera</l>
+               <l n="14" met="-+-+---+-+-" enjamb="I-ex_subj_verb">la amante esposa y la frugal comida.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s184n_0625">
+            <head>El torrente</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+-+-+-+-">No quema el sol: alumbra suavemente,</l>
+               <l n="2" met="-+-+-+---+-">el claro monte, el prado sin cultivo,</l>
+               <l n="3" met="---+---+-+-" enjamb="B-ex_subj_verb">y rumosoro, alborozado y vivo</l>
+               <l n="4" met="+--+---+-+-" enjamb="I-ex_subj_verb">corre entre guijas el veloz torrente.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+---+-+-">¿Qué impulso lleva, en su caudal latente,</l>
+               <l n="6" met="---+---+-+-">que a las bellezas del paisaje esquivo,</l>
+               <l n="7" met="+----+---+-" enjamb="B-ex_dobj_verb">cruza, cual descubierto fugitivo</l>
+               <l n="8" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">al vago ruido que a su espalda siente?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">De pronto el lecho a su corriente falta,</l>
+               <l n="10" met="---+-+-+-+-">por el boquete de una roca hendida,</l>
+               <l n="11" met="--+--+-+-+-">como airoso bridón, se yergue y salta,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+---+-+-">ruge entre espumas, pero ruge en vano,</l>
+               <l n="13" met="-+---+---+-" enjamb="B-pb_noun_prep">y muere cual las ondas de la vida</l>
+               <l n="14" met="---+---+-+-" enjamb="I-pb_noun_prep">del infinito en el revuelto océano.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s184n_0626">
+            <head>A Cuba</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+---+-+-" enjamb="B-pb_adj_noun">Aunque del golfo en la ajustada clave</l>
+               <l n="2" met="-+---+---+-" enjamb="B-pb_adj_noun I-pb_adj_noun">situada por la mano del misterio</l>
+               <l n="3" met="-+-+-++--+-" enjamb="B-ex_subj_verb I-pb_adj_noun">dominas casi todo un hemisferio</l>
+               <l n="4" met="+-++---+-+-" enjamb="I-ex_subj_verb">y eres de un mar la centinela y llave,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+-+-+-" enjamb="B-ex_dobj_verb">al mundo no impondrás tu planta grave</l>
+               <l n="6" met="+-+--+---+-" enjamb="I-ex_dobj_verb">cual la patria de Augusto y de Tiberio,</l>
+               <l n="7" met="-+---+-+-+-" enjamb="B-pb_adj_noun">brillante cual la luz será tu imperio</l>
+               <l n="8" met="+----+-+-+-" enjamb="I-pb_adj_noun">blando, como el amor, tu yugo suave.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-" enjamb="B-ex_subj_verb">La tierna imagen del Edén perdido</l>
+               <l n="10" met="-+-+---+-+-" enjamb="I-ex_subj_verb">tu fauna y flora al viajador ofrecen,</l>
+               <l n="11" met="+--+---+-+-">calma tu ley su inextinguible anhelo;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">y conforta su espíritu abatido,</l>
+               <l n="13" met="--+--+---+-" enjamb="B-ex_subj_verb">la oración de tus palmas, que parecen</l>
+               <l n="14" met="---+---+-+-" enjamb="I-ex_subj_verb">las pitonisas del altar del cielo.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

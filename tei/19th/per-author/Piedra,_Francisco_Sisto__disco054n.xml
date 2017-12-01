@@ -1,218 +1,304 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Francisco Sisto Piedra</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_054n"/>
-          <name type="short">Piedra</name>
-          <name type="full">
-            <name type="first-name">Francisco Sisto</name>
-            <name type="second-name">Piedra</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">6</measure>
-        <measure unit="tokens">542</measure>
-        <measure unit="line">84</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_054n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_054n" role="author" sex="M">
-            <persName>Francisco Sisto Piedra</persName>
-            <birth><placeName type="place">Matanzas (Cuba)</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1861" cert="high">1861</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Cárdenas (Cuba)</placeName>, <date type="year" when="1918" cert="high">1918</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Francisco Sisto Piedra</title>
+            <author corresp="#disco_054n">Francisco Sisto Piedra</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">6</measure>
+            <measure unit="tokens">542</measure>
+            <measure unit="line">84</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_054n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_054n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Piedra</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Francisco Sisto</forename>
+                     <surname property="foaf:familyName">Piedra</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Francisco Sisto Piedra</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Matanzas</settlement>
+                           <country>Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1861" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Cárdenas</settlement>
+                           <country>Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1918" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s054n_0173" about="dbpedia:Soneto">
+                        <title property="dc:title">Labor constante</title>
+                        <title type="incipit" property="dc:alternative">Nada en el mundo en su quietud extraña</title>
+                     </bibl>
+                     <bibl resource="disco#s054n_0174" about="dbpedia:Soneto">
+                        <title property="dc:title">Homenaje</title>
+                        <title type="incipit" property="dc:alternative">Un cofre es tu violín de musicales</title>
+                     </bibl>
+                     <bibl resource="disco#s054n_0175" about="dbpedia:Soneto">
+                        <title property="dc:title">La Molienda en días de esclavitud</title>
+                        <title type="incipit" property="dc:alternative">Raudo y sonoro los espacios hiende</title>
+                     </bibl>
+                     <bibl resource="disco#s054n_0176" about="dbpedia:Soneto">
+                        <title property="dc:title">El cráneo de la selva</title>
+                        <title type="incipit" property="dc:alternative">En el hueco de un cráneo carcomido</title>
+                     </bibl>
+                     <bibl resource="disco#s054n_0177" about="dbpedia:Soneto">
+                        <title property="dc:title">Un consejo</title>
+                        <title type="incipit" property="dc:alternative">Cuando llegue a tu asilo algún viajero</title>
+                     </bibl>
+                     <bibl resource="disco#s054n_0178" about="dbpedia:Soneto">
+                        <title property="dc:title">Paisaje</title>
+                        <title type="incipit" property="dc:alternative">Arriba, un áureo sol que de un celaje</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Francisco Sisto Piedra</head>
-        <p>Matanzas (Cuba). 1861 - 1918</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s054n_0173">
-        <head>Labor constante</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Nada en el mundo en su quietud extraña</l>
-          <l n="2">yace en estéril ocio; allá en el llano</l>
-          <l n="3">forma el árbol futuro el seco grano,</l>
-          <l n="4">y el átomo de polvo la montaña.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">El aura tenue la floresta baña</l>
-          <l n="6">de fecundante polen; del pantano</l>
-          <l n="7">surge la nube, y tórnase en océano</l>
-          <l n="8">y crea el pez dorado en su honda entraña.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">La flor labora en su cerrado broche</l>
-          <l n="10">su aroma; llena el pólipo escondido</l>
-          <l n="11">de bosques de coral la mar sombría,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y el ave gigantesca de la noche,</l>
-          <l n="13">cubriendo silenciosa en su amplio nido</l>
-          <l n="14">su áureo huevo de sol, incuba el día.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s054n_0174">
-        <head>Homenaje</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Un cofre es tu violín de musicales</l>
-          <l n="2">joyas que se derraman a torrentes,</l>
-          <l n="3">como aquellos tesoros sorprendentes</l>
-          <l n="4">de los antiguos cuentos orientales.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Se oyen en sus armónicos raudales,</l>
-          <l n="6">aleteos de pájaros nacientes,</l>
-          <l n="7">risas de ondinas en serenas fuentes</l>
-          <l n="8">y trinos de canarios y turpiales.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Al poder de tu magia transformado,</l>
-          <l n="10">se agiganta mi numen desmayado,</l>
-          <l n="11">subo a las cumbres del excelso Pindo,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y en esta hermosa fiesta de las almas</l>
-          <l n="13">las copas de esmeralda de mis palmas</l>
-          <l n="14">de estrellas lleno ¡y por tus glorias brindo!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s054n_0175">
-        <head>La Molienda en días de esclavitud</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Raudo y sonoro los espacios hiende</l>
-          <l n="2">del ronco pito el imperioso acento,</l>
-          <l n="3">y al chasquido del látigo sangriento</l>
-          <l n="4">la humilde tribu su faena emprende.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">El húmedo bagazo se desprende</l>
-          <l n="6">del conductor pautado al giro lento,</l>
-          <l n="7">y el pobre siervo a su labor atento</l>
-          <l n="8">por el ancho batey al sol lo extiende.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Entre las férreas mazas comprimida</l>
-          <l n="10">cruje la caña; la gigante torre</l>
-          <l n="11">como humeante volcán se ostenta erguida,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">dulce guarapo en los canales corre,</l>
-          <l n="13">y en su oleada de miel no logra al cabo</l>
-          <l n="14">endulzar la amargura del esclavo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s054n_0176">
-        <head>El cráneo de la selva</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">En el hueco de un cráneo carcomido</l>
-          <l n="2">que el hado, cual corona funeraria,</l>
-          <l n="3">puso sobre la peña solitaria</l>
-          <l n="4">de una selva, hizo un pájaro su nido.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Vagando yo, en mis sueños embebido</l>
-          <l n="6">por aquella región hospitalaria,</l>
-          <l n="7">llegué a la agreste peña cineraria</l>
-          <l n="8">y vi aquel cráneo, emblema del olvido.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Y cuando entre las ráfagas del viento</l>
-          <l n="10">esperaba escuchar el triste acento</l>
-          <l n="11">del grito postrimero de su inerte</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">boca, o con el alma estremecida,</l>
-          <l n="13">salir de aquel despojo de la muerte</l>
-          <l n="14">el trino placentero de la vida.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s054n_0177">
-        <head>Un consejo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Cuando llegue a tu asilo algún viajero</l>
-          <l n="2">con la luz del placer en la pupila,</l>
-          <l n="3">si no sabes quien es, con voz tranquila,</l>
-          <l n="4">antes de abrir, pregúntale primero.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Pregúntale quien es al que, altanero,</l>
-          <l n="6">al llamar a tu puerta no vacila,</l>
-          <l n="7">al que en su porte y apariencia estila</l>
-          <l n="8">los modales de un rico caballero.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Pero al que débil tu favor reclama</l>
-          <l n="10">y ante tu hogar, jadeante, se detiene,</l>
-          <l n="11">al que triste sus lágrimas derrama,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">al que te pide un pan porque hambre tiene,</l>
-          <l n="13">no preguntes jamás como se llama,</l>
-          <l n="14">cuál es su patria, ni de donde viene.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s054n_0178">
-        <head>Paisaje</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Arriba, un áureo sol que de un celaje</l>
-          <l n="2">en el lecho de nácar se reclina,</l>
-          <l n="3">y abajo, una vivienda campesina</l>
-          <l n="4">como el nido de un ave entre el follaje,</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Cerca, un hojoso y pálido boscaje,</l>
-          <l n="6">y allá, a la falda de gentil colina,</l>
-          <l n="7">una sonora fuente cristalina</l>
-          <l n="8">y un pájaro que riza su plumaje.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Doquiera, como signos de esperanza,</l>
-          <l n="10">verdes mantos de fértiles praderas,</l>
-          <l n="11">y en alegre y risueña lontananza,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">extensa guardarraya de palmeras,</l>
-          <l n="13">semejante a un ejército que avanza</l>
-          <l n="14">desplegando a los vientos sus banderas.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Francisco Sisto Piedra</head>
+            <p>Matanzas (Cuba). 1861 - 1918</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s054n_0173">
+            <head>Labor constante</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-" enjamb="B-ex_subj_verb">Nada en el mundo en su quietud extraña</l>
+               <l n="2" met="+--+-+-+-+-" enjamb="I-ex_subj_verb">yace en estéril ocio; allá en el llano</l>
+               <l n="3" met="+-+--+-+-+-">forma el árbol futuro el seco grano,</l>
+               <l n="4" met="-+---+---+-">y el átomo de polvo la montaña.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-" enjamb="B-pb_noun_prep">El aura tenue la floresta baña</l>
+               <l n="6" met="---+-+---+-" enjamb="I-pb_noun_prep">de fecundante polen; del pantano</l>
+               <l n="7" met="+--+-+-+-+-">surge la nube, y tórnase en océano</l>
+               <l n="8" met="-++-+-+--+-">y crea el pez dorado en su honda entraña.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">La flor labora en su cerrado broche</l>
+               <l n="10" met="-+-+-+---+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">su aroma; llena el pólipo escondido</l>
+               <l n="11" met="-+---+-+-+-" enjamb="I-pb_noun_prep">de bosques de coral la mar sombría,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">y el ave gigantesca de la noche,</l>
+               <l n="13" met="-+---+-+-+-">cubriendo silenciosa en su amplio nido</l>
+               <l n="14" met="++--+-+--+-">su áureo huevo de sol, incuba el día.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s054n_0174">
+            <head>Homenaje</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+++--+---+-">Un cofre es tu violín de musicales</l>
+               <l n="2" met="+----+---+-">joyas que se derraman a torrentes,</l>
+               <l n="3" met="--+--+---+-" enjamb="B-pb_noun_prep">como aquellos tesoros sorprendentes</l>
+               <l n="4" met="---+-+---+-" enjamb="I-pb_noun_prep">de los antiguos cuentos orientales.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+----+---+-">Se oyen en sus armónicos raudales,</l>
+               <l n="6" met="--+--+---+-">aleteos de pájaros nacientes,</l>
+               <l n="7" met="+--+---+-+-">risas de ondinas en serenas fuentes</l>
+               <l n="8" met="-+---+---+-">y trinos de canarios y turpiales.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">Al poder de tu magia transformado,</l>
+               <l n="10" met="--+--+---+-">se agiganta mi numen desmayado,</l>
+               <l n="11" met="+--+---+-+-">subo a las cumbres del excelso Pindo,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+---+-">y en esta hermosa fiesta de las almas</l>
+               <l n="13" met="-+---+---+-" enjamb="B-pb_noun_prep">las copas de esmeralda de mis palmas</l>
+               <l n="14" met="-+-+---+-+-" enjamb="I-pb_noun_prep">de estrellas lleno ¡y por tus glorias brindo!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s054n_0175">
+            <head>La Molienda en días de esclavitud</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-" enjamb="B-pb_verb_cprep">Raudo y sonoro los espacios hiende</l>
+               <l n="2" met="-+-+---+-+-" enjamb="I-pb_verb_cprep">del ronco pito el imperioso acento,</l>
+               <l n="3" met="--+--+---+-">y al chasquido del látigo sangriento</l>
+               <l n="4" met="-+-+--+--+-">la humilde tribu su faena emprende.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-" enjamb="B-pb_verb_cprep">El húmedo bagazo se desprende</l>
+               <l n="6" met="---+-+-+-+-" enjamb="I-pb_verb_cprep">del conductor pautado al giro lento,</l>
+               <l n="7" met="-+-+---+-+-" enjamb="B-ex_subj_verb">y el pobre siervo a su labor atento</l>
+               <l n="8" met="--+--+++-+-" enjamb="I-ex_subj_verb">por el ancho batey al sol lo extiende.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+---+-">Entre las férreas mazas comprimida</l>
+               <l n="10" met="+--+---+-+-" enjamb="B-ex_subj_verb">cruje la caña; la gigante torre</l>
+               <l n="11" met="--+--+-+-+-" enjamb="I-ex_subj_verb">como humeante volcán se ostenta erguida,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+---+-+-">dulce guarapo en los canales corre,</l>
+               <l n="13" met="--+--+++-+-" enjamb="B-ex_dobj_verb">y en su oleada de miel no logra al cabo</l>
+               <l n="14" met="--+--+---+-" enjamb="I-ex_dobj_verb">endulzar la amargura del esclavo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s054n_0176">
+            <head>El cráneo de la selva</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+-++---+-" enjamb="B-cc_crossclause">En el hueco de un cráneo carcomido</l>
+               <l n="2" met="-+---+---+-" enjamb="I-cc_crossclause">que el hado, cual corona funeraria,</l>
+               <l n="3" met="+----+---+-" enjamb="B-pb_noun_prep">puso sobre la peña solitaria</l>
+               <l n="4" met="+-++++---+-" enjamb="I-pb_noun_prep">de una selva, hizo un pájaro su nido.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+---+-" enjamb="B-pb_adj_prep">Vagando yo, en mis sueños embebido</l>
+               <l n="6" met="--+--+---+-" enjamb="I-pb_adj_prep">por aquella región hospitalaria,</l>
+               <l n="7" met="-+-+-+---+-">llegué a la agreste peña cineraria</l>
+               <l n="8" met="-+++-+---+-">y vi aquel cráneo, emblema del olvido.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-----+---+-">Y cuando entre las ráfagas del viento</l>
+               <l n="10" met="--+--+-+-+-" enjamb="B-pb_noun_prep">esperaba escuchar el triste acento</l>
+               <l n="11" met="-+---+---+-" enjamb="B-pb_adj_noun I-pb_noun_prep">del grito postrimero de su inerte</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+---+----+-" enjamb="I-pb_adj_noun">boca, o con el alma estremecida,</l>
+               <l n="13" met="-+-+-+---+-" enjamb="B-ex_dobj_verb">salir de aquel despojo de la muerte</l>
+               <l n="14" met="-+---+---+-" enjamb="I-ex_dobj_verb">el trino placentero de la vida.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s054n_0177">
+            <head>Un consejo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+-+-+-">Cuando llegue a tu asilo algún viajero</l>
+               <l n="2" met="--+--+---+-">con la luz del placer en la pupila,</l>
+               <l n="3" met="-++--+-+-+-">si no sabes quien es, con voz tranquila,</l>
+               <l n="4" met="---+-+-+-+-">antes de abrir, pregúntale primero.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+---+-">Pregúntale quien es al que, altanero,</l>
+               <l n="6" met="--+--+-+-+-">al llamar a tu puerta no vacila,</l>
+               <l n="7" met="---+--+--+-" enjamb="B-ex_dobj_verb">al que en su porte y apariencia estila</l>
+               <l n="8" met="--+-++---+-" enjamb="I-ex_dobj_verb">los modales de un rico caballero.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">Pero al que débil tu favor reclama</l>
+               <l n="10" met="---+-+---+-">y ante tu hogar, jadeante, se detiene,</l>
+               <l n="11" met="--+--+---+-">al que triste sus lágrimas derrama,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++++-+-+-">al que te pide un pan porque hambre tiene,</l>
+               <l n="13" met="+-+--+---+-">no preguntes jamás como se llama,</l>
+               <l n="14" met="++-+-----+-">cuál es su patria, ni de donde viene.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s054n_0178">
+            <head>Paisaje</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+++-+-+-+-" enjamb="B-pb_noun_prep">Arriba, un áureo sol que de un celaje</l>
+               <l n="2" met="--+--+---+-" enjamb="I-pb_noun_prep">en el lecho de nácar se reclina,</l>
+               <l n="3" met="-++--+---+-">y abajo, una vivienda campesina</l>
+               <l n="4" met="--+-++---+-">como el nido de un ave entre el follaje,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+-+---+-">Cerca, un hojoso y pálido boscaje,</l>
+               <l n="6" met="-+-+---+-+-">y allá, a la falda de gentil colina,</l>
+               <l n="7" met="+--+-+---+-">una sonora fuente cristalina</l>
+               <l n="8" met="++---+---+-">y un pájaro que riza su plumaje.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">Doquiera, como signos de esperanza,</l>
+               <l n="10" met="+-+--+---+-">verdes mantos de fértiles praderas,</l>
+               <l n="11" met="--+--+---+-">y en alegre y risueña lontananza,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">extensa guardarraya de palmeras,</l>
+               <l n="13" met="--++-+---+-" enjamb="B-pb_verb_chain">semejante a un ejército que avanza</l>
+               <l n="14" met="--+--+---+-" enjamb="I-pb_verb_chain">desplegando a los vientos sus banderas.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

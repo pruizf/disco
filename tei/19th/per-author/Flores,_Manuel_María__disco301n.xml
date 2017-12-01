@@ -1,343 +1,442 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Manuel María Flores</title>
-        <author>
-          <idno type="viaf" cert="high">23703570</idno>
-          <idno type="#disco" xml:id="disco_301n"/>
-          <name type="short">Flores</name>
-          <name type="full">
-            <name type="first-name">Manuel María</name>
-            <name type="second-name">Flores</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">11</measure>
-        <measure unit="tokens">992</measure>
-        <measure unit="line">154</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_301n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_301n" role="author" sex="M">
-            <persName>Manuel María Flores</persName>
-            <birth><placeName type="place">México</placeName>, <placeName type="country">México</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1840" cert="high">1840</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1885" cert="high">1885</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Manuel María Flores</title>
+            <author corresp="#disco_301n">Manuel María Flores</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">11</measure>
+            <measure unit="tokens">992</measure>
+            <measure unit="line">154</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_301n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_301n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/23703570"/>
+                  <persName type="short">Flores</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Manuel María</forename>
+                     <surname property="foaf:familyName">Flores</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Manuel María Flores</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">México</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1840" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1885" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s301n_0985" about="dbpedia:Soneto">
+                        <title property="dc:title">En el baño</title>
+                        <title type="incipit" property="dc:alternative">Alegre y sola en el recodo blando</title>
+                     </bibl>
+                     <bibl resource="disco#s301n_0986" about="dbpedia:Soneto">
+                        <title property="dc:title">Primer beso</title>
+                        <title type="incipit" property="dc:alternative">La luz de ocaso moribunda toca</title>
+                     </bibl>
+                     <bibl resource="disco#s301n_0987" about="dbpedia:Soneto">
+                        <title property="dc:title">A Rosa</title>
+                        <title type="incipit" property="dc:alternative">¡Qué! ¿por qué nada el porvenir me guarde</title>
+                     </bibl>
+                     <bibl resource="disco#s301n_0988" about="dbpedia:Soneto">
+                        <title property="dc:title">Las diosas</title>
+                        <title type="incipit" property="dc:alternative">Cuando en un día de proscripción y duelo</title>
+                     </bibl>
+                     <bibl resource="disco#s301n_0989" about="dbpedia:Soneto">
+                        <title property="dc:title">Rosa</title>
+                        <title type="incipit" property="dc:alternative">Dulce cantora de Ayomac, levanta,</title>
+                     </bibl>
+                     <bibl resource="disco#s301n_0990" about="dbpedia:Soneto">
+                        <title property="dc:title">Genoveva</title>
+                        <title type="incipit" property="dc:alternative">Sola y oculta en el rincón del huerto</title>
+                     </bibl>
+                     <bibl resource="disco#s301n_0991" about="dbpedia:Soneto">
+                        <title property="dc:title">Catalina</title>
+                        <title type="incipit" property="dc:alternative">«Patria, familia, hogar... ¿qué os habéis hecho?</title>
+                     </bibl>
+                     <bibl resource="disco#s301n_0992" about="dbpedia:Soneto">
+                        <title property="dc:title">La cruz</title>
+                        <title type="incipit" property="dc:alternative">Hace dieciocho siglos, humillado</title>
+                     </bibl>
+                     <bibl resource="disco#s301n_0993" about="dbpedia:Soneto">
+                        <title property="dc:title">Pintura al pastel</title>
+                        <title type="incipit" property="dc:alternative">¡Lástima que en verdad no sea de Lola</title>
+                     </bibl>
+                     <bibl resource="disco#s301n_0994" about="dbpedia:Soneto">
+                        <title property="dc:title">En el álbum de Pepe</title>
+                        <title type="incipit" property="dc:alternative">¿La amaste? Pues olvídala. Esta vida</title>
+                     </bibl>
+                     <bibl resource="disco#s301n_0995" about="dbpedia:Soneto">
+                        <title property="dc:title">Juanita</title>
+                        <title type="incipit" property="dc:alternative">Mirad a Juana; su cintura es leve,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Manuel María Flores</head>
-        <p>México. 1840 - 1885</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s301n_0985">
-        <head>En el baño</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Alegre y sola en el recodo blando</l>
-          <l n="2">que forma entre los árboles el río</l>
-          <l n="3">al fresco abrigo del ramaje umbrío</l>
-          <l n="4">se está la niña de mi amor bañando.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Traviesa con las olas jugueteando</l>
-          <l n="6">el busto saca del remanso frío,</l>
-          <l n="7">y ríe y salpica el glacial rocío</l>
-          <l n="8">el blanco seno, de rubor temblando.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Al verla tan hermosa entre el follaje</l>
-          <l n="10">el viento apenas susurrando gira,</l>
-          <l n="11">salta trinando el pájaro salvaje,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">el sol más poco a poco se retira;</l>
-          <l n="13">todo calla... y Amor, entre el ramaje,</l>
-          <l n="14">a escondidas mirándola, suspira.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s301n_0986">
-        <head>Primer beso</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">La luz de ocaso moribunda toca</l>
-          <l n="2">del pinar los follajes tembladores,</l>
-          <l n="3">suspiran en el bosque los rumores</l>
-          <l n="4">y las tórtolas gimen en las roca.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Es el instante que el amor invoca;</l>
-          <l n="6">ven junto a mí te sostendré con flores</l>
-          <l n="7">mientras roban volando los amores</l>
-          <l n="8">el dulce beso de tu dulce boca.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">La virgen suspiró: sus labios rojos</l>
-          <l n="10">apenas él yo te amo murmuraron,</l>
-          <l n="11">se entrecerraron lánguidos los ojos,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">los labios a los labios se juntaron,</l>
-          <l n="13">y, las frentes, bañadas de sonrojos</l>
-          <l n="14">al peso de la dicha se doblaron.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s301n_0987">
-        <head>A Rosa</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Qué! ¿por qué nada el porvenir me guarde</l>
-          <l n="2">buscaré, luchador desfallecido,</l>
-          <l n="3">el rincón solitario del olvido</l>
-          <l n="4">para morir allí triste y cobarde?</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¡Jamás, mi corazón, jamás! Aun arde</l>
-          <l n="6">bajo tu dura nieve comprimido</l>
-          <l n="7">el fuego de un volcán. No estás vencido,</l>
-          <l n="8">y para combatir jamás es tarde.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Lucharé y venceré. Todo se inmola</l>
-          <l n="10">de amor ante el esfuerzo, temerario;</l>
-          <l n="11">y en mi alma, del amor bajo la aureola,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">como Dios en el alma del santuario,</l>
-          <l n="13">bella, serena, indestructible y sola</l>
-          <l n="14">resplandece la imagen de Rosario.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s301n_0988">
-        <head>Las diosas</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Cuando en un día de proscripción y duelo</l>
-          <l n="2">en busca ya de playas extranjeras,</l>
-          <l n="3">de Cuba abandonasteis las praderas,</l>
-          <l n="4">el sol de fuego y el brillante cielo;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Sin duda que en amargo desconsuelo</l>
-          <l n="6">viéndoos partir lloraron sus riberas,</l>
-          <l n="7">y al deciros adiós en sus palmeras</l>
-          <l n="8">gimió la brisa del nativo suelo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Porque si Cuba es concha de los mares,</l>
-          <l n="10">vosotras sois sus perlas más hermosas;</l>
-          <l n="11">si Cuba es un jardín entre palmares,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">vosotras sois sus flores más preciosas;</l>
-          <l n="13">y si Amor levantare sus altares,</l>
-          <l n="14">de esos altares os hiciera diosas.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s301n_0989">
-        <head>Rosa</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Dulce cantora de Ayomac, levanta,</l>
-          <l n="2">al suave ritmo de tu lira de oro,</l>
-          <l n="3">de tu almo verso el revolar canoro</l>
-          <l n="4">y como el ave en la enramada, canta.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Voz de pasión, en femenil garganta,</l>
-          <l n="6">ya que tiemble feliz en un te adoro,</l>
-          <l n="7">ya que se moje en escondido lloro,</l>
-          <l n="8">al son de un arpa cual la tuya, canta.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Así como la aurora entre la flores</l>
-          <l n="10">va esparciendo sus gotas cristalinas,</l>
-          <l n="11">de esa tu arpa derrama los primores</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">en tantos corazones que fascinas</l>
-          <l n="13">y olvida entre el aplauso y sus loores</l>
-          <l n="14">que eres Rosa y te cercan las espinas.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s301n_0990">
-        <head>Genoveva</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Sola y oculta en el rincón del huerto</l>
-          <l n="2">exhala su perfume la violeta;</l>
-          <l n="3">sola se queja en escondida grieta</l>
-          <l n="4">gentil paloma en el pensil desierto.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Sola, del cielo en el confín incierto,</l>
-          <l n="6">brilla y derrama inspiración secreta</l>
-          <l n="7">esa estrella querida del poeta,</l>
-          <l n="8">que resplandece cuando el sol ha muerto.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Así violeta de fragante aroma</l>
-          <l n="10">que perfuma los místicos altares,</l>
-          <l n="11">solitaria y dulcísima paloma</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">ajena de este mundo a los azares</l>
-          <l n="13">y blanca estrella que apacible asoma,</l>
-          <l n="14">eres tú, Genoveva, en tus hogares.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s301n_0991">
-        <head>Catalina</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">«Patria, familia, hogar... ¿qué os habéis hecho?</l>
-          <l n="2">Quedó al patria tras los anchos mares,</l>
-          <l n="3">destruyó el infortunio mis hogares</l>
-          <l n="4">cual pobre nido al huracán deshecho.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¡Mi familia, mi amor! Aquí en mi pecho</l>
-          <l n="6">convertí sus sepulcros en altares,</l>
-          <l n="7">y he llorado... he llorado mis pesares</l>
-          <l n="8">huérfana ¡ay! bajo extranjero techo.»</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Así te vi exhalar en hondo duelo</l>
-          <l n="10">quejas que al Dios del desterrado claman,</l>
-          <l n="11">hija preciosa del cubano cielo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Llanto tus ojos con razón derraman;</l>
-          <l n="13">mas tu patria, tu hogar en este suelo,</l>
-          <l n="14">está en el corazón de los que te aman.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s301n_0992">
-        <head>La cruz</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Hace dieciocho siglos, humillado</l>
-          <l n="2">y lleno el mundo de terror veía</l>
-          <l n="3">cómo Roma triunfal le conducía</l>
-          <l n="4">al rudo carro de su gloria atado.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Hace dieciocho siglos, ignorado</l>
-          <l n="6">del mundo que su fe no conocía,</l>
-          <l n="7">un hombre en el patíbulo moría</l>
-          <l n="8">como vil criminal crucificado.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Dieciocho siglos ha... Tras gloria tanta</l>
-          <l n="10">besó Roma imperial el polvo inmundo</l>
-          <l n="11">del bárbaro feroz bajo la planta;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">mientras la cruz del Cristo moribundo</l>
-          <l n="13">entre el cielo ya la tierra se levanta</l>
-          <l n="14">sobre el inmenso pedestal del mundo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s301n_0993">
-        <head>Pintura al pastel</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Lástima que en verdad no sea de Lola</l>
-          <l n="2">la cara angelical que lleva puesta!</l>
-          <l n="3">Pro es suya, no más porque le cuesta,</l>
-          <l n="4">como dice el soneto de Argensola.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Agréguese a esto la tremenda cola,</l>
-          <l n="6">el alto puff, la enmarañada cresta,</l>
-          <l n="7">y dígame cualquiera si no es ésta</l>
-          <l n="8">una muchacha que se pinta sola.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mancha ninguna su beldad empaña;</l>
-          <l n="10">mas yo, aunque dicen que por ella muero,</l>
-          <l n="11">no la quisiera ver cuando se baña;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y sólo pido a Dios mi amor sincero</l>
-          <l n="13">que el viento no se lleve su castaña,</l>
-          <l n="14">ni le caiga en el rostro un aguacero.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s301n_0994">
-        <head>En el álbum de Pepe</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¿La amaste? Pues olvídala. Esta vida</l>
-          <l n="2">de bienes duraderos tan escasa;</l>
-          <l n="3">amando y olvidando se nos pasa</l>
-          <l n="4">y cuanto más se vive más se olvida.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Una pasión es fiebre que, homicida,</l>
-          <l n="6">se nos mete cual Pedro por su casa</l>
-          <l n="7">dentro del corazón, y nos le abrasa...</l>
-          <l n="8">No hay, pues, que dar a la pasión cabida.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">La mujer es un ángel, no lo niego;</l>
-          <l n="10">pero, Pepe, la Biblia es testimonio</l>
-          <l n="11">de que la echaron del Paraíso luego:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">estaba en relación con el Demonio,</l>
-          <l n="13">y, como no ha quebrado, a pensar llego</l>
-          <l n="14">que ya hasta contrajeron matrimonio.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s301n_0995">
-        <head>Juanita</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Mirad a Juana; su cintura es leve,</l>
-          <l n="2">blanquísima su frente sin mancilla,</l>
-          <l n="3">y envidiará el carmín de su mejilla</l>
-          <l n="4">la fresca rosa que el favonio mueve.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¿Quién temerario a resistir se atreve</l>
-          <l n="6">el dulce fuego que en sus ojos brilla?</l>
-          <l n="7">¿Quién temblando de amor no se arrodilla</l>
-          <l n="8">y besa el polvo de su planta breve?</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Todo cuanto Natura en esta tierra</l>
-          <l n="10">ha prodigado a la belleza humana,</l>
-          <l n="11">en Juanita no hay duda que se encierra;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">mas ¡ay! que esa beldad tan soberana,</l>
-          <l n="13">queriendo escribir guerra pone gerra</l>
-          <l n="14">y firma al pie de sus escritos: Guana.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Manuel María Flores</head>
+            <p>México. 1840 - 1885</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s301n_0985">
+            <head>En el baño</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-" enjamb="B-cc_crossclause">Alegre y sola en el recodo blando</l>
+               <l n="2" met="-+---+---+-" enjamb="B-pb_noun_prep I-cc_crossclause">que forma entre los árboles el río</l>
+               <l n="3" met="-+-+---+-+-" enjamb="I-pb_noun_prep">al fresco abrigo del ramaje umbrío</l>
+               <l n="4" met="-+-+---+-+-">se está la niña de mi amor bañando.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-" enjamb="B-ex_subj_verb">Traviesa con las olas jugueteando</l>
+               <l n="6" met="-+-+---+-+-" enjamb="I-ex_subj_verb">el busto saca del remanso frío,</l>
+               <l n="7" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">y ríe y salpica el glacial rocío</l>
+               <l n="8" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">el blanco seno, de rubor temblando.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+++-+---+-">Al verla tan hermosa entre el follaje</l>
+               <l n="10" met="-+-+---+-+-">el viento apenas susurrando gira,</l>
+               <l n="11" met="+--+-+---+-">salta trinando el pájaro salvaje,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+---+-">el sol más poco a poco se retira;</l>
+               <l n="13" met="+-+--+---+-">todo calla... y Amor, entre el ramaje,</l>
+               <l n="14" met="--+--+-+-+-">a escondidas mirándola, suspira.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s301n_0986">
+            <head>Primer beso</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-" enjamb="B-pb_verb_chain">La luz de ocaso moribunda toca</l>
+               <l n="2" met="--+--+---+-" enjamb="I-pb_verb_chain">del pinar los follajes tembladores,</l>
+               <l n="3" met="-+---+---+-">suspiran en el bosque los rumores</l>
+               <l n="4" met="--+--+---+-">y las tórtolas gimen en las roca.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-">Es el instante que el amor invoca;</l>
+               <l n="6" met="+--++--+-+-">ven junto a mí te sostendré con flores</l>
+               <l n="7" met="--+--+---+-" enjamb="B-ex_dobj_verb">mientras roban volando los amores</l>
+               <l n="8" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">el dulce beso de tu dulce boca.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+-+-+-" enjamb="B-pb_adj_adv">La virgen suspiró: sus labios rojos</l>
+               <l n="10" met="-+-+++---+-" enjamb="I-pb_adj_adv">apenas él yo te amo murmuraron,</l>
+               <l n="11" met="---+-+---+-">se entrecerraron lánguidos los ojos,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">los labios a los labios se juntaron,</l>
+               <l n="13" met="--+--+---+-" enjamb="B-ex_subj_verb">y, las frentes, bañadas de sonrojos</l>
+               <l n="14" met="-+---+---+-" enjamb="I-ex_subj_verb">al peso de la dicha se doblaron.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s301n_0987">
+            <head>A Rosa</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+++----+++-" enjamb="B-pb_verb_chain">¡Qué! ¿por qué nada el porvenir me guarde</l>
+               <l n="2" met="--+--+---+-" enjamb="I-pb_verb_chain">buscaré, luchador desfallecido,</l>
+               <l n="3" met="--+--+---+-">el rincón solitario del olvido</l>
+               <l n="4" met="---+-++--+-">para morir allí triste y cobarde?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+-++-">¡Jamás, mi corazón, jamás! Aun arde</l>
+               <l n="6" met="---+-+---+-">bajo tu dura nieve comprimido</l>
+               <l n="7" met="-+-+-+-+-+-">el fuego de un volcán. No estás vencido,</l>
+               <l n="8" met="-----+-+++-">y para combatir jamás es tarde.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+---+--+-" enjamb="B-pb_verb_cprep">Lucharé y venceré. Todo se inmola</l>
+               <l n="10" met="-+---+---+-" enjamb="I-pb_verb_cprep">de amor ante el esfuerzo, temerario;</l>
+               <l n="11" met="-+---+---+-">y en mi alma, del amor bajo la aureola,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">como Dios en el alma del santuario,</l>
+               <l n="13" met="+--+---+-+-">bella, serena, indestructible y sola</l>
+               <l n="14" met="--+--+---+-">resplandece la imagen de Rosario.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s301n_0988">
+            <head>Las diosas</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--++---+-+-" enjamb="B-pb_noun_prep">Cuando en un día de proscripción y duelo</l>
+               <l n="2" met="-+-+-+---+-" enjamb="I-pb_noun_prep">en busca ya de playas extranjeras,</l>
+               <l n="3" met="-+---+---+-">de Cuba abandonasteis las praderas,</l>
+               <l n="4" met="-+-+---+-+-">el sol de fuego y el brillante cielo;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">Sin duda que en amargo desconsuelo</l>
+               <l n="6" met="++-+-+---+-">viéndoos partir lloraron sus riberas,</l>
+               <l n="7" met="--++-+---+-">y al deciros adiós en sus palmeras</l>
+               <l n="8" met="-+-+---+-+-">gimió la brisa del nativo suelo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+++---+-">Porque si Cuba es concha de los mares,</l>
+               <l n="10" met="-+-+-+-+-+-">vosotras sois sus perlas más hermosas;</l>
+               <l n="11" met="-+++-+---+-">si Cuba es un jardín entre palmares,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+-+-+-">vosotras sois sus flores más preciosas;</l>
+               <l n="13" met="--+--+---+-">y si Amor levantare sus altares,</l>
+               <l n="14" met="+--+-+-+-+-">de esos altares os hiciera diosas.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s301n_0989">
+            <head>Rosa</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-">Dulce cantora de Ayomac, levanta,</l>
+               <l n="2" met="-+-+---+-+-">al suave ritmo de tu lira de oro,</l>
+               <l n="3" met="-+-+---+-+-">de tu almo verso el revolar canoro</l>
+               <l n="4" met="---+---+-+-">y como el ave en la enramada, canta.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-">Voz de pasión, en femenil garganta,</l>
+               <l n="6" met="--+--+-+++-">ya que tiemble feliz en un te adoro,</l>
+               <l n="7" met="---+---+-+-">ya que se moje en escondido lloro,</l>
+               <l n="8" met="-+++-----+-">al son de un arpa cual la tuya, canta.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-----+---+-" enjamb="B-ex_subj_verb">Así como la aurora entre la flores</l>
+               <l n="10" met="+-+--+---+-" enjamb="I-ex_subj_verb">va esparciendo sus gotas cristalinas,</l>
+               <l n="11" met="+-+--+---+-">de esa tu arpa derrama los primores</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">en tantos corazones que fascinas</l>
+               <l n="13" met="-+---+---+-" enjamb="B-ex_dobj_verb">y olvida entre el aplauso y sus loores</l>
+               <l n="14" met="+-+-++---+-" enjamb="I-ex_dobj_verb">que eres Rosa y te cercan las espinas.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s301n_0990">
+            <head>Genoveva</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+----+-+-" enjamb="B-ex_subj_verb">Sola y oculta en el rincón del huerto</l>
+               <l n="2" met="-+---+---+-" enjamb="I-ex_subj_verb">exhala su perfume la violeta;</l>
+               <l n="3" met="+--+---+-+-" enjamb="B-pb_adj_noun">sola se queja en escondida grieta</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-pb_adj_noun">gentil paloma en el pensil desierto.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-">Sola, del cielo en el confín incierto,</l>
+               <l n="6" met="+--+---+-+-" enjamb="B-ex_subj_verb">brilla y derrama inspiración secreta</l>
+               <l n="7" met="+-+--+---+-" enjamb="I-ex_subj_verb">esa estrella querida del poeta,</l>
+               <l n="8" met="---+---+++-">que resplandece cuando el sol ha muerto.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-" enjamb="B-cc_crossclause">Así violeta de fragante aroma</l>
+               <l n="10" met="--+--+---+-" enjamb="I-cc_crossclause">que perfuma los místicos altares,</l>
+               <l n="11" met="--+--+---+-" enjamb="B-pb_adj_noun">solitaria y dulcísima paloma</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+---+-" enjamb="I-pb_adj_noun">ajena de este mundo a los azares</l>
+               <l n="13" met="-+-+---+-+-">y blanca estrella que apacible asoma,</l>
+               <l n="14" met="+-+--+---+-">eres tú, Genoveva, en tus hogares.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s301n_0991">
+            <head>Catalina</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-++-++-">«Patria, familia, hogar... ¿qué os habéis hecho?</l>
+               <l n="2" met="-+-+---+-+-">Quedó al patria tras los anchos mares,</l>
+               <l n="3" met="--+--+---+-">destruyó el infortunio mis hogares</l>
+               <l n="4" met="++-+---+-+-">cual pobre nido al huracán deshecho.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+---+--+-" enjamb="B-pb_adj_noun">¡Mi familia, mi amor! Aquí en mi pecho</l>
+               <l n="6" met="--+--+---+-" enjamb="I-pb_adj_noun">convertí sus sepulcros en altares,</l>
+               <l n="7" met="+-+-+-+---+-" enjamb="B-ex_subj_verb">y he llorado... he llorado mis pesares</l>
+               <l n="8" met="+------+-+-" enjamb="I-ex_subj_verb">huérfana ¡ay! bajo extranjero techo.»</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+++-+-+-+-" enjamb="B-pb_adj_noun">Así te vi exhalar en hondo duelo</l>
+               <l n="10" met="+--+---+-+-" enjamb="I-pb_adj_noun">quejas que al Dios del desterrado claman,</l>
+               <l n="11" met="+--+---+-+-">hija preciosa del cubano cielo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+---+-+-">Llanto tus ojos con razón derraman;</l>
+               <l n="13" met="--+--+-+-+-">mas tu patria, tu hogar en este suelo,</l>
+               <l n="14" met="-+---+---+-">está en el corazón de los que te aman.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s301n_0992">
+            <head>La cruz</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-">Hace dieciocho siglos, humillado</l>
+               <l n="2" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">y lleno el mundo de terror veía</l>
+               <l n="3" met="+-+--++--+-" enjamb="I-ex_dobj_verb">cómo Roma triunfal le conducía</l>
+               <l n="4" met="-+-+---+-+-">al rudo carro de su gloria atado.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+---+-" enjamb="B-pb_adj_prep">Hace dieciocho siglos, ignorado</l>
+               <l n="6" met="-+---++--+-" enjamb="I-pb_adj_prep">del mundo que su fe no conocía,</l>
+               <l n="7" met="++---+---+-">un hombre en el patíbulo moría</l>
+               <l n="8" met="--+--+---+-">como vil criminal crucificado.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+-+-+-" enjamb="B-ex_dobj_verb">Dieciocho siglos ha... Tras gloria tanta</l>
+               <l n="10" met="-++--+-+-+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">besó Roma imperial el polvo inmundo</l>
+               <l n="11" met="-+---+---+-" enjamb="I-pb_noun_prep">del bárbaro feroz bajo la planta;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+---+-" enjamb="B-ex_subj_verb">mientras la cruz del Cristo moribundo</l>
+               <l n="13" met="--+-+-+---+-" enjamb="I-ex_subj_verb">entre el cielo ya la tierra se levanta</l>
+               <l n="14" met="---+---+-+-">sobre el inmenso pedestal del mundo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s301n_0993">
+            <head>Pintura al pastel</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+----+++-+-">¡Lástima que en verdad no sea de Lola</l>
+               <l n="2" met="-+---+-+-+-">la cara angelical que lleva puesta!</l>
+               <l n="3" met="++--++--++-">Pro es suya, no más porque le cuesta,</l>
+               <l n="4" met="--+--+---+-">como dice el soneto de Argensola.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-">Agréguese a esto la tremenda cola,</l>
+               <l n="6" met="-+-----+-+-">el alto puff, la enmarañada cresta,</l>
+               <l n="7" met="-+-+-+--++-">y dígame cualquiera si no es ésta</l>
+               <l n="8" met="+--+---+-+-">una muchacha que se pinta sola.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+---+-+-">Mancha ninguna su beldad empaña;</l>
+               <l n="10" met="-+-+---+-+-">mas yo, aunque dicen que por ella muero,</l>
+               <l n="11" met="++-+-+---+-">no la quisiera ver cuando se baña;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+-+-+-" enjamb="B-cc_crossclause">y sólo pido a Dios mi amor sincero</l>
+               <l n="13" met="-+-+-+---+-" enjamb="I-cc_crossclause">que el viento no se lleve su castaña,</l>
+               <l n="14" met="-++--++--+-">ni le caiga en el rostro un aguacero.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s301n_0994">
+            <head>En el álbum de Pepe</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+-++-" enjamb="B-pb_noun_prep">¿La amaste? Pues olvídala. Esta vida</l>
+               <l n="2" met="-+---+-+-+-" enjamb="I-pb_noun_prep">de bienes duraderos tan escasa;</l>
+               <l n="3" met="-+---+--++-">amando y olvidando se nos pasa</l>
+               <l n="4" met="---+-+-+-+-">y cuanto más se vive más se olvida.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+++---+-">Una pasión es fiebre que, homicida,</l>
+               <l n="6" met="-++--+---+-">se nos mete cual Pedro por su casa</l>
+               <l n="7" met="-----+-+++-">dentro del corazón, y nos le abrasa...</l>
+               <l n="8" met="+--+---+-+-">No hay, pues, que dar a la pasión cabida.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--++++-+++-">La mujer es un ángel, no lo niego;</l>
+               <l n="10" met="--+--++--+-" enjamb="B-pb_noun_prep">pero, Pepe, la Biblia es testimonio</l>
+               <l n="11" met="---+---+-+-" enjamb="I-pb_noun_prep">de que la echaron del Paraíso luego:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">estaba en relación con el Demonio,</l>
+               <l n="13" met="---+-+--++-" enjamb="B-cc_crossclause">y, como no ha quebrado, a pensar llego</l>
+               <l n="14" met="-+---+---+-" enjamb="I-cc_crossclause">que ya hasta contrajeron matrimonio.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s301n_0995">
+            <head>Juanita</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+++-">Mirad a Juana; su cintura es leve,</l>
+               <l n="2" met="-+---+---+-">blanquísima su frente sin mancilla,</l>
+               <l n="3" met="---+-+---+-">y envidiará el carmín de su mejilla</l>
+               <l n="4" met="-+-+---+-+-">la fresca rosa que el favonio mueve.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-" enjamb="B-ex_dobj_verb">¿Quién temerario a resistir se atreve</l>
+               <l n="6" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">el dulce fuego que en sus ojos brilla?</l>
+               <l n="7" met="+-+--++--+-">¿Quién temblando de amor no se arrodilla</l>
+               <l n="8" met="-+-+---+-+-">y besa el polvo de su planta breve?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+----+-+-+-" enjamb="B-ex_subj_verb">Todo cuanto Natura en esta tierra</l>
+               <l n="10" met="+--+---+-+-" enjamb="I-ex_subj_verb">ha prodigado a la belleza humana,</l>
+               <l n="11" met="--+-++---+-">en Juanita no hay duda que se encierra;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--++--+-">mas ¡ay! que esa beldad tan soberana,</l>
+               <l n="13" met="-+--++-+-+-" enjamb="B-ex_dobj_verb">queriendo escribir guerra pone gerra</l>
+               <l n="14" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">y firma al pie de sus escritos: Guana.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

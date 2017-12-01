@@ -1,193 +1,266 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Manuel Bertolín Peña</title>
-        <author>
-          <idno type="viaf" cert="high">88010957</idno>
-          <idno type="#disco" xml:id="disco_578n"/>
-          <name type="short">Bertolín Peña</name>
-          <name type="full">
-            <name type="first-name">Manuel</name>
-            <name type="second-name">Bertolín Peña</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">5</measure>
-        <measure unit="tokens">490</measure>
-        <measure unit="line">70</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_578n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_578n" role="author" sex="M">
-            <persName>Manuel Bertolín Peña</persName>
-            <birth><placeName type="place">España</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Manuel Bertolín Peña</title>
+            <author corresp="#disco_578n">Manuel Bertolín Peña</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">5</measure>
+            <measure unit="tokens">490</measure>
+            <measure unit="line">70</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_578n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_578n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/88010957"/>
+                  <persName type="short">Bertolín Peña</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Manuel</forename>
+                     <surname property="foaf:familyName">Bertolín Peña</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Manuel Bertolín Peña</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s578n_2096" about="dbpedia:Soneto">
+                        <title property="dc:title">En la noche romántica</title>
+                        <title type="incipit" property="dc:alternative">Ven mujer y soñemos nuestro amor en la calma</title>
+                     </bibl>
+                     <bibl resource="disco#s578n_2097" about="dbpedia:Soneto">
+                        <title property="dc:title">A Emilio Carrere</title>
+                        <title type="incipit" property="dc:alternative">Nació con Heine y Murger el sentimentalismo</title>
+                     </bibl>
+                     <bibl resource="disco#s578n_2098" about="dbpedia:Soneto">
+                        <title property="dc:title">A Santiago Rusiñol</title>
+                        <title type="incipit" property="dc:alternative">Senderos al Ensueño adormecidos;</title>
+                     </bibl>
+                     <bibl resource="disco#s578n_2099" about="dbpedia:Soneto">
+                        <title property="dc:title">Voe Soli</title>
+                        <title type="incipit" property="dc:alternative">Tú que has vivido el tedio de la tarde aldeana,</title>
+                     </bibl>
+                     <bibl resource="disco#s578n_2100" about="dbpedia:Soneto">
+                        <title property="dc:title">Cuadro</title>
+                        <title type="incipit" property="dc:alternative">Lienzo español. Ambiente de Sevilla.</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Manuel Bertolín Peña</head>
-        <p>España. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s578n_2096">
-        <head>En la noche romántica</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Ven mujer y soñemos nuestro amor en la calma</l>
-          <l n="2">nocturna. Es Abril. Nuestra pasión es una</l>
-          <l n="3">llamarada celeste -Inquietudes del alma;</l>
-          <l n="4">floración interior bajo la blanca luna.-</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Bajo la blanca luna... la pálida y gloriosa</l>
-          <l n="6">magnolia del azul. -Ven mujer y soñemos</l>
-          <l n="7">nuestras bellas quimeras; cortaremos la rosa</l>
-          <l n="8">del rosal ilusión. ¡Oh mi Amada, gocemos</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">el nocturno amoroso! Escucha los diversos</l>
-          <l n="10">acentos de ternura que vibran en mis versos,</l>
-          <l n="11">y sentirás mi fuerte poema de Inquietud.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Es Abril. Esperanza. Beso de Primavera.</l>
-          <l n="13">Bajo la blanca luna, sea nuestra Quimera</l>
-          <l n="14">un cántico armonioso de Amor y Juventud.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s578n_2097">
-        <head>A Emilio Carrere</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Nació con Heine y Murger el sentimentalismo</l>
-          <l n="2">que hizo brotar en tu alma raudales de armonía,</l>
-          <l n="3">y florecer el claro rosal de tu lirismo</l>
-          <l n="4">con las pálidas rosas de la Melancolía.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Peregrino del arte, poeta y visionario,</l>
-          <l n="6">tienes el suave gesto de la Cordialidad,</l>
-          <l n="7">y es tu vida el perfume de un eterno Glosario</l>
-          <l n="8">que vibra con el ritmo de la sinceridad.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Tu espíritu emotivo surge en tonos diversos,</l>
-          <l n="10">a través de los prismas gloriosos de tu versos</l>
-          <l n="11">en un raro consorcio de bruja sensación.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">En la mística flora del jardín de tu Vida,</l>
-          <l n="13">brilló la gracia excelsa de una aurora encendida</l>
-          <l n="14">que llenó de armonías tu inquieto corazón.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s578n_2098">
-        <head>A Santiago Rusiñol</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Senderos al Ensueño adormecidos;</l>
-          <l n="2">románticos jardines otoñales;</l>
-          <l n="3">huertos de amor en el Abril floridos,</l>
-          <l n="4">y luminosos parques señoriales,</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">ofreces al Encanto en tus paisajes.</l>
-          <l n="6">-todo el reino interior de tus quimeras,-</l>
-          <l n="7">la suavidad de sedas y de encajes,</l>
-          <l n="8">y el optimismo de las primaveras.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Pintor poeta; pones en las horas,</l>
-          <l n="10">el ritmo amable de tus ilusiones,</l>
-          <l n="11">y la voz de tus místicas auroras.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Buscador de bellezas que al profundo</l>
-          <l n="13">misterio de las ondas creaciones,</l>
-          <l n="14">ha dado tu alma la emoción del mundo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s578n_2099">
-        <head>Voe Soli</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Tú que has vivido el tedio de la tarde aldeana,</l>
-          <l n="2">sabes la quinta esencia de la Melancolía;</l>
-          <l n="3">conoces el amargo sonar de la campana,</l>
-          <l n="4">y el profundo secreto de la Misantropía.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Todo el inmenso hastío que angustiaba tu alma,</l>
-          <l n="6">surgió en el agua fuerte de las remembraciones,</l>
-          <l n="7">y en los instantes místicos de esa infinita calma</l>
-          <l n="8">has glosado en el libro de tus Meditaciones.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Has sentido el dolor descansar en tu frente;</l>
-          <l n="10">y al Tiempo en su carrera cruzar tan lentamente,</l>
-          <l n="11">que una sombra mental cubrió tu corazón.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y era tanta la pena de tu recluimiento,</l>
-          <l n="13">que en el clarividente jardín del pensamiento,</l>
-          <l n="14">brotó cual rosa negra la Desesperación.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s578n_2100">
-        <head>Cuadro</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Lienzo español. Ambiente de Sevilla.</l>
-          <l n="2">-Entre luz y misterio te contemplo-.</l>
-          <l n="3">Una mujer tocada de mantilla</l>
-          <l n="4">y allá en el fondo la piedad de un templo.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Perfume de plegarias y oraciones,</l>
-          <l n="6">y una onda de cielo y de incensario.</l>
-          <l n="7">Junto a un rojo fulgor de corazones</l>
-          <l n="8">la emoción silenciosa del Calvario.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Milagrosa mujer fuerte y morena,</l>
-          <l n="10">de ojos negros de amor, de odio y de pena,</l>
-          <l n="11">que evocan con su luz la raza inquieta.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Yo te he visto piadosa y penitente</l>
-          <l n="13">con la humildad de tu mirar doliente,</l>
-          <l n="14">encarnar el dolor de una saeta.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Manuel Bertolín Peña</head>
+            <p>España. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s578n_2096">
+            <head>En la noche romántica</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+--+-" enjamb="B-pb_adj_noun">Ven mujer y soñemos nuestro amor en la calma</l>
+               <l n="2" met="-+-----+++-" enjamb="B-pb_relword I-pb_adj_noun">nocturna. Es Abril. Nuestra pasión es una</l>
+               <l n="3" met="--+--+--+--+-" enjamb="I-pb_relword">llamarada celeste -Inquietudes del alma;</l>
+               <l n="4" met="--+--+---+-+-">floración interior bajo la blanca luna.-</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="---+-+--+---+-" enjamb="B-pb_adj_noun">Bajo la blanca luna... la pálida y gloriosa</l>
+               <l n="6" met="-+---++-+--+-" enjamb="B-ex_dobj_verb I-pb_adj_noun">magnolia del azul. -Ven mujer y soñemos</l>
+               <l n="7" met="--+--+---+--+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">nuestras bellas quimeras; cortaremos la rosa</l>
+               <l n="8" met="--+--+-+--+-" enjamb="B-ex_dobj_verb I-pb_noun_prep">del rosal ilusión. ¡Oh mi Amada, gocemos</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-" enjamb="B-pb_relword I-ex_dobj_verb">el nocturno amoroso! Escucha los diversos</l>
+               <l n="10" met="-+---+--+---+-" enjamb="I-pb_relword">acentos de ternura que vibran en mis versos,</l>
+               <l n="11" met="---+-+-+---+-">y sentirás mi fuerte poema de Inquietud.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+-">Es Abril. Esperanza. Beso de Primavera.</l>
+               <l n="13" met="---+-+-+---+-">Bajo la blanca luna, sea nuestra Quimera</l>
+               <l n="14" met="++---+--+---+-">un cántico armonioso de Amor y Juventud.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s578n_2097">
+            <head>A Emilio Carrere</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="-+-+--+-----+-" enjamb="B-cc_crossclause">Nació con Heine y Murger el sentimentalismo</l>
+               <l n="2" met="+--+-+--+---+-" enjamb="I-cc_crossclause">que hizo brotar en tu alma raudales de armonía,</l>
+               <l n="3" met="---+-+--+---+-">y florecer el claro rosal de tu lirismo</l>
+               <l n="4" met="--+--+------+-">con las pálidas rosas de la Melancolía.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="--+--+-+---+-">Peregrino del arte, poeta y visionario,</l>
+               <l n="6" met="+--+-+------+-">tienes el suave gesto de la Cordialidad,</l>
+               <l n="7" met="+-+--+-+-+--+-" enjamb="B-cc_crossclause">y es tu vida el perfume de un eterno Glosario</l>
+               <l n="8" met="-+---+------+-" enjamb="I-cc_crossclause">que vibra con el ritmo de la sinceridad.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+-+-+--+-">Tu espíritu emotivo surge en tonos diversos,</l>
+               <l n="10" met="-----+--+---+-" enjamb="B-pb_noun_prep">a través de los prismas gloriosos de tu versos</l>
+               <l n="11" met="-++--+--+---+-" enjamb="I-pb_noun_prep">en un raro consorcio de bruja sensación.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+--+-">En la mística flora del jardín de tu Vida,</l>
+               <l n="13" met="-+-+-+-+-+--+-" enjamb="B-cc_crossclause">brilló la gracia excelsa de una aurora encendida</l>
+               <l n="14" met="--+--+-+---+-" enjamb="I-cc_crossclause">que llenó de armonías tu inquieto corazón.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s578n_2098">
+            <head>A Santiago Rusiñol</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">Senderos al Ensueño adormecidos;</l>
+               <l n="2" met="-+---+---+-">románticos jardines otoñales;</l>
+               <l n="3" met="+--+-----+-">huertos de amor en el Abril floridos,</l>
+               <l n="4" met="---+-+---+-">y luminosos parques señoriales,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">ofreces al Encanto en tus paisajes.</l>
+               <l n="6" met="+-+--+---+-">-todo el reino interior de tus quimeras,-</l>
+               <l n="7" met="---+-+---+-">la suavidad de sedas y de encajes,</l>
+               <l n="8" met="---+-----+-">y el optimismo de las primaveras.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+---+-">Pintor poeta; pones en las horas,</l>
+               <l n="10" met="-+-+-----+-">el ritmo amable de tus ilusiones,</l>
+               <l n="11" met="--+--+---+-">y la voz de tus místicas auroras.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-" enjamb="B-pb_adj_noun">Buscador de bellezas que al profundo</l>
+               <l n="13" met="-+---+---+-" enjamb="I-pb_adj_noun">misterio de las ondas creaciones,</l>
+               <l n="14" met="++-+---+-+-">ha dado tu alma la emoción del mundo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s578n_2099">
+            <head>Voe Soli</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+-+---+-+-">Tú que has vivido el tedio de la tarde aldeana,</l>
+               <l n="2" met="+--+-+------+-">sabes la quinta esencia de la Melancolía;</l>
+               <l n="3" met="-+---+--+---+-">conoces el amargo sonar de la campana,</l>
+               <l n="4" met="--+--+------+-">y el profundo secreto de la Misantropía.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="+--+-+--+-+-">Todo el inmenso hastío que angustiaba tu alma,</l>
+               <l n="6" met="-+-+-+------+-">surgió en el agua fuerte de las remembraciones,</l>
+               <l n="7" met="---+-+--+--+-+">y en los instantes místicos de esa infinita calma</l>
+               <l n="8" met="+-+--+------+-">has glosado en el libro de tus Meditaciones.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+--+--+-">Has sentido el dolor descansar en tu frente;</l>
+               <l n="10" met="-+---+--+++-+-">y al Tiempo en su carrera cruzar tan lentamente,</l>
+               <l n="11" met="+-+--+-+---+-">que una sombra mental cubrió tu corazón.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+-----+-">Y era tanta la pena de tu recluimiento,</l>
+               <l n="13" met="-----+--+---+-">que en el clarividente jardín del pensamiento,</l>
+               <l n="14" met="-+++-+------+-">brotó cual rosa negra la Desesperación.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s578n_2100">
+            <head>Cuadro</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="-+---+-">Lienzo español. Ambiente de Sevilla.</l>
+               <l n="2" met="--+--+-+-+-">-Entre luz y misterio te contemplo-.</l>
+               <l n="3" met="+--+-+---+-">Una mujer tocada de mantilla</l>
+               <l n="4" met="-+-+---+++-">y allá en el fondo la piedad de un templo.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="-+---+---+-">Perfume de plegarias y oraciones,</l>
+               <l n="6" met="++--+----+-">y una onda de cielo y de incensario.</l>
+               <l n="7" met="-++--+---+-" enjamb="B-ex_subj_verb">Junto a un rojo fulgor de corazones</l>
+               <l n="8" met="--+--+---+-" enjamb="I-ex_subj_verb">la emoción silenciosa del Calvario.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--++--+-">Milagrosa mujer fuerte y morena,</l>
+               <l n="10" met="+-+--++--+-">de ojos negros de amor, de odio y de pena,</l>
+               <l n="11" met="-+---+-+-+-">que evocan con su luz la raza inquieta.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+++--+---+-">Yo te he visto piadosa y penitente</l>
+               <l n="13" met="---+---+-+-">con la humildad de tu mirar doliente,</l>
+               <l n="14" met="--+--++--+-">encarnar el dolor de una saeta.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

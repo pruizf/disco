@@ -1,143 +1,207 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Evaristo Méndez</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_071n"/>
-          <name type="short">Méndez</name>
-          <name type="full">
-            <name type="first-name">Evaristo</name>
-            <name type="second-name">Méndez</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">3</measure>
-        <measure unit="tokens">335</measure>
-        <measure unit="line">42</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_071n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_071n" role="author" sex="M">
-            <persName>Evaristo Méndez</persName>
-            <birth><placeName type="place">Argentina</placeName>, <placeName type="country">Argentina</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Evaristo Méndez</title>
+            <author corresp="#disco_071n">Evaristo Méndez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">335</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_071n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_071n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Méndez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Evaristo</forename>
+                     <surname property="foaf:familyName">Méndez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Evaristo Méndez</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Argentina</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s071n_0246" about="dbpedia:Soneto">
+                        <title property="dc:title">La montaña</title>
+                        <title type="incipit" property="dc:alternative">Ya viste su coraza de nevada el gigante</title>
+                     </bibl>
+                     <bibl resource="disco#s071n_0247" about="dbpedia:Soneto">
+                        <title property="dc:title">Bohemia infantil</title>
+                        <title type="incipit" property="dc:alternative">La tropa vagabunda de pilluelos inicia</title>
+                     </bibl>
+                     <bibl resource="disco#s071n_0248" about="dbpedia:Soneto">
+                        <title property="dc:title">Diálogo pastoral</title>
+                        <title type="incipit" property="dc:alternative">Es la tarde; el crepúsculo se ha vestido de malva,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Evaristo Méndez</head>
-        <p>Argentina. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s071n_0246">
-        <head>La montaña</head>
-        <lg n="1" type="serventesio">
-          <l n="1">Ya viste su coraza de nevada el gigante</l>
-          <l n="2">Tupungato, y duerme en su lecho milenario.</l>
-          <l n="3">Es un bruñido espejo la nieve y la distante</l>
-          <l n="4">luna refleja en ella su rostro visionario.</l>
-        </lg>
-        <lg n="2" type="serventesio">
-          <l n="5">Precursor de tormentas, da su gran voz vibrante</l>
-          <l n="6">el viento, y va arrastrando por el enorme estuario</l>
-          <l n="7">del valle, su armonía quejosa y sollozante,</l>
-          <l n="8">quejosa y sollozante por el enorme estuario...</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">De las nubes desfilan las fantásticas tropas;</l>
-          <l n="10">en retirada llevan sus desgarradas ropas,</l>
-          <l n="11">van despacio, esperando que llegue la luz diurna.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y con hondo cansancio, con enorme desvelo,</l>
-          <l n="13">va tan sólo la luna peregrinando el cielo</l>
-          <l n="14">en esa formidable desolación nocturna...!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s071n_0247">
-        <head>Bohemia infantil</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">La tropa vagabunda de pilluelos inicia</l>
-          <l n="2">su emigración del pueblo, en busca de praderas,</l>
-          <l n="3">de bosques, de arroyuelos, de sol y de quimeras.</l>
-          <l n="4">La mañana es el éxodo fraternal y propicia.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Se creen conquistadores de un país sin noticia</l>
-          <l n="6">o de un mundo lejano. Atraviesan las eras</l>
-          <l n="7">cortando los caminos, o arrancan las primeras</l>
-          <l n="8">frutas de Estío. Su libertad les acaricia.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Y les embriaga. Llegan a un arroyuelo; el sauce</l>
-          <l n="10">sombrea las orillas del silencioso cauce</l>
-          <l n="11">y en el agua se sienten en su propio elemento.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Meriendan un yantar escaso, y el regreso</l>
-          <l n="13">emprenden. Y la hora que oprime con su peso</l>
-          <l n="14">y que mustia los campos, calla su pensamiento.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s071n_0248">
-        <head>Diálogo pastoral</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Es la tarde; el crepúsculo se ha vestido de malva,</l>
-          <l n="2">y en los trigales rubios glisa el céfiro lento.</l>
-          <l n="3">Othilia, ¿si algún día yo olvidase tu acento</l>
-          <l n="4">viendo pasar las nubes...? -La noche tiene su alba.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">-Hay una noche eterna... -Que aun el amor salva.</l>
-          <l n="6">-En tus pupilas verdes hundo mi pensamiento,</l>
-          <l n="7">¡son un mar!... -Son un mar o son un firmamento...</l>
-          <l n="8">(El sol se había ocultado tras la montaña calva.)</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">-Estas viñas se inclinan a tu paso. La espiga</l>
-          <l n="10">te saluda, pues sabe que su oro se mitiga</l>
-          <l n="11">al lado de los oros de tu cabello. El Hada</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">eres de esta pradera. Yo quiero ser la reina</l>
-          <l n="13">de tu imperio. (La noche su cabello despeina.)</l>
-          <l n="14">-¡Quiero crucificarme, Otilia, en tu mirada!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Evaristo Méndez</head>
+            <p>Argentina. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s071n_0246">
+            <head>La montaña</head>
+            <lg n="1" type="serventesio">
+               <l n="1" met="++---+---+--+-">Ya viste su coraza de nevada el gigante</l>
+               <l n="2" met="--+-+--+---+-">Tupungato, y duerme en su lecho milenario.</l>
+               <l n="3" met="++-+-+--+---+-" enjamb="B-pb_adj_noun">Es un bruñido espejo la nieve y la distante</l>
+               <l n="4" met="+--+-+--+---+-" enjamb="I-pb_adj_noun">luna refleja en ella su rostro visionario.</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l n="5" met="--+--+-+-++-+-" enjamb="B-ex_subj_verb">Precursor de tormentas, da su gran voz vibrante</l>
+               <l n="6" met="-+-+-+----+-+-" enjamb="B-pb_noun_prep I-ex_subj_verb">el viento, y va arrastrando por el enorme estuario</l>
+               <l n="7" met="-+---+-+---+-" enjamb="I-pb_noun_prep">del valle, su armonía quejosa y sollozante,</l>
+               <l n="8" met="-+---+----+-+-">quejosa y sollozante por el enorme estuario...</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+--+-">De las nubes desfilan las fantásticas tropas;</l>
+               <l n="10" met="---+-+----+-+-">en retirada llevan sus desgarradas ropas,</l>
+               <l n="11" met="+-+--+--+--++-">van despacio, esperando que llegue la luz diurna.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+--+-">Y con hondo cansancio, con enorme desvelo,</l>
+               <l n="13" met="+++--+----+-+-">va tan sólo la luna peregrinando el cielo</l>
+               <l n="14" met="-+---+----+-+-">en esa formidable desolación nocturna...!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s071n_0247">
+            <head>Bohemia infantil</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+--+-" enjamb="B-ex_dobj_verb">La tropa vagabunda de pilluelos inicia</l>
+               <l n="2" met="---+-+-----+-" enjamb="I-ex_dobj_verb">su emigración del pueblo, en busca de praderas,</l>
+               <l n="3" met="-+---+--+---+-">de bosques, de arroyuelos, de sol y de quimeras.</l>
+               <l n="4" met="--++-+----+--+">La mañana es el éxodo fraternal y propicia.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+-++--+-">Se creen conquistadores de un país sin noticia</l>
+               <l n="6" met="--++--+--+-" enjamb="B-pb_verb_chain">o de un mundo lejano. Atraviesan las eras</l>
+               <l n="7" met="-+---+--+---+-" enjamb="B-pb_adj_noun I-pb_verb_chain">cortando los caminos, o arrancan las primeras</l>
+               <l n="8" met="+--+--++--+-" enjamb="I-pb_adj_noun">frutas de Estío. Su libertad les acaricia.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-++--+-+-" enjamb="B-ex_subj_verb">Y les embriaga. Llegan a un arroyuelo; el sauce</l>
+               <l n="10" met="-+--+----+-+-" enjamb="I-ex_subj_verb">sombrea las orillas del silencioso cauce</l>
+               <l n="11" met="--+--+---+--+-">y en el agua se sienten en su propio elemento.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+-+---+-" enjamb="B-ex_subj_verb">Meriendan un yantar escaso, y el regreso</l>
+               <l n="13" met="-+-+--+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">emprenden. Y la hora que oprime con su peso</l>
+               <l n="14" met="--+--+-+----+-" enjamb="I-ex_subj_verb">y que mustia los campos, calla su pensamiento.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s071n_0248">
+            <head>Diálogo pastoral</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+--+-+--">Es la tarde; el crepúsculo se ha vestido de malva,</l>
+               <l n="2" met="---+-+-+-+--+-">y en los trigales rubios glisa el céfiro lento.</l>
+               <l n="3" met="-+--+++-+--+-" enjamb="B-ex_subj_verb">Othilia, ¿si algún día yo olvidase tu acento</l>
+               <l n="4" met="+--+-+--+-+-+-" enjamb="I-ex_subj_verb">viendo pasar las nubes...? -La noche tiene su alba.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+-+-+--++-">-Hay una noche eterna... -Que aun el amor salva.</l>
+               <l n="6" met="---+-+-+----+-">-En tus pupilas verdes hundo mi pensamiento,</l>
+               <l n="7" met="++++++-++--+-">¡son un mar!... -Son un mar o son un firmamento...</l>
+               <l n="8" met="-+-+-+----+-+-">(El sol se había ocultado tras la montaña calva.)</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+---+-+-" enjamb="B-ex_subj_verb">-Estas viñas se inclinan a tu paso. La espiga</l>
+               <l n="10" met="+-+--+--+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">te saluda, pues sabe que su oro se mitiga</l>
+               <l n="11" met="-+---+----++-" enjamb="B-ex_subj_verb I-ex_subj_verb">al lado de los oros de tu cabello. El Hada</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+-+-+-+-" enjamb="B-pb_noun_prep I-ex_subj_verb">eres de esta pradera. Yo quiero ser la reina</l>
+               <l n="13" met="--+--+---+--+-" enjamb="I-pb_noun_prep">de tu imperio. (La noche su cabello despeina.)</l>
+               <l n="14" met="+----+++---+-">-¡Quiero crucificarme, Otilia, en tu mirada!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

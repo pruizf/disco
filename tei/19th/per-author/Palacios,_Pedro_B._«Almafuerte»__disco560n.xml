@@ -1,293 +1,392 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Pedro B. «Almafuerte» Palacios</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_560n"/>
-          <name type="short">Palacios</name>
-          <name type="full">
-            <name type="first-name">Pedro B. «Almafuerte»</name>
-            <name type="second-name">Palacios</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">9</measure>
-        <measure unit="tokens">840</measure>
-        <measure unit="line">126</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_560n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_560n" role="author" sex="M">
-            <persName>Pedro B. «Almafuerte» Palacios</persName>
-            <birth><placeName type="place">San Justo (Argentina)</placeName>, <placeName type="country">Argentina</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1854" cert="high">1854</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">La Plata (Argentina)</placeName>, <date type="year" when="1917" cert="high">1917</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Pedro B. «Almafuerte» Palacios</title>
+            <author corresp="#disco_560n">Pedro B. «Almafuerte» Palacios</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">9</measure>
+            <measure unit="tokens">840</measure>
+            <measure unit="line">126</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_560n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_560n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Palacios</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Pedro B. «Almafuerte»</forename>
+                     <surname property="foaf:familyName">Palacios</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Pedro B. «Almafuerte»
+                  Palacios</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">San Justo</settlement>
+                           <country>Argentina</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1854" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">La Plata</settlement>
+                           <country>Argentina</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1917" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s560n_2047" about="dbpedia:Soneto">
+                        <title property="dc:title">Como los bueyes</title>
+                        <title type="incipit" property="dc:alternative">Ser bueno, en mi sentir, es lo más llano</title>
+                     </bibl>
+                     <bibl resource="disco#s560n_2048" about="dbpedia:Soneto">
+                        <title property="dc:title">No te des por vencido...</title>
+                        <title type="incipit" property="dc:alternative">No te des por vencido, ni aun vencido,</title>
+                     </bibl>
+                     <bibl resource="disco#s560n_2049" about="dbpedia:Soneto">
+                        <title property="dc:title">Avanti!</title>
+                        <title type="incipit" property="dc:alternative">Si te postran diez veces, te levantas</title>
+                     </bibl>
+                     <bibl resource="disco#s560n_2050" about="dbpedia:Soneto">
+                        <title property="dc:title">Molto più avanti!</title>
+                        <title type="incipit" property="dc:alternative">Los que viertan sus lágrimas amantes</title>
+                     </bibl>
+                     <bibl resource="disco#s560n_2051" about="dbpedia:Soneto">
+                        <title property="dc:title">Molto più avanti ancora!</title>
+                        <title type="incipit" property="dc:alternative">Esta vida mendaz es un estrado</title>
+                     </bibl>
+                     <bibl resource="disco#s560n_2052" about="dbpedia:Soneto">
+                        <title property="dc:title">Vera violeta</title>
+                        <title type="incipit" property="dc:alternative">En pos de su nivel se lanza el río</title>
+                     </bibl>
+                     <bibl resource="disco#s560n_2053" about="dbpedia:Soneto">
+                        <title property="dc:title">La yapa</title>
+                        <title type="incipit" property="dc:alternative">Como una sola estrella no es el cielo,</title>
+                     </bibl>
+                     <bibl resource="disco#s560n_2054" about="dbpedia:Soneto">
+                        <title property="dc:title">Moltissimo più avanti ancora!</title>
+                        <title type="incipit" property="dc:alternative">Si en vez de las estúpidas panteras</title>
+                     </bibl>
+                     <bibl resource="disco#s560n_2055" about="dbpedia:Soneto">
+                        <title property="dc:title">¡Molto piu avanti ancora!</title>
+                        <title type="incipit" property="dc:alternative">El mundo miserable es un estrado</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Pedro B. «Almafuerte» Palacios</head>
-        <p>San Justo (Argentina). 1854 - 1917</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s560n_2047">
-        <head>Como los bueyes</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Ser bueno, en mi sentir, es lo más llano</l>
-          <l n="2">y concilia deber, altruismo y gusto:</l>
-          <l n="3">con el que pasa lejos, casi adusto,</l>
-          <l n="4">con el que viene a mí, tierno y humano.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Hallo razón al triste y al insano,</l>
-          <l n="6">mal que reviente mi pesar robusto;</l>
-          <l n="7">y en vez de andar buscando lo más justo</l>
-          <l n="8">hago yunta con otro y soy su hermano.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Sin meterme a Moisés de nuevas leyes,</l>
-          <l n="10">doy al que pide pan, pan y puchero;</l>
-          <l n="11">y el honor de salvar al mundo entero</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">se lo dejo a los genios y a los reyes.</l>
-          <l n="13">Hago, vuelvo a decir, como los bueyes,</l>
-          <l n="14">mutualidad de yunta y compañero.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s560n_2048">
-        <head>No te des por vencido...</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">No te des por vencido, ni aun vencido,</l>
-          <l n="2">no te sientas esclavo, ni aun esclavo;</l>
-          <l n="3">trémulo de pavor, piénsate bravo,</l>
-          <l n="4">y arremete feroz, ya malherido.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Ten el tesón del clavo enmohecido,</l>
-          <l n="6">que ya viejo y ruin vuelve a ser clavo;</l>
-          <l n="7">no la cobarde intrepidez del pavo</l>
-          <l n="8">que amaina su plumaje al primer ruido.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Procede como Dios, que nunca llora,</l>
-          <l n="10">o como Lucifer, que nunca reza,</l>
-          <l n="11">o como el robledal, cuya grandeza</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">necesita del agua y no la implora...</l>
-          <l n="13">¡Qué muerda y vocifere vengadora,</l>
-          <l n="14">ya rodando en el polvo, tu cabeza!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s560n_2049">
-        <head>Avanti!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Si te postran diez veces, te levantas</l>
-          <l n="2">otras diez, otras cien, otras quinientas:</l>
-          <l n="3">no han de ser tus caídas tan violentas</l>
-          <l n="4">ni tampoco, por ley, han de ser tantas.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Con el hambre genial con que las plantas</l>
-          <l n="6">asimilan el humus avarientas,</l>
-          <l n="7">deglutiendo el rencor de las afrentas</l>
-          <l n="8">se formaron los santos y la santas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Obcecación asnal, para ser fuerte,</l>
-          <l n="10">nada más necesita la criatura</l>
-          <l n="11">y en cualquier infeliz se me figura</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">que se mellan los garfios de la suerte...</l>
-          <l n="13">¡Todos los incurables tienen cura</l>
-          <l n="14">cinco minutos antes de su muerte!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s560n_2050">
-        <head>Molto più avanti!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Los que viertan sus lágrimas amantes</l>
-          <l n="2">sobre las penas que no son sus penas;</l>
-          <l n="3">los que olvidan el son de sus cadenas</l>
-          <l n="4">para limar las de los otros antes;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">los que van por el mundo delirantes</l>
-          <l n="6">repartiendo sus amor a manos llenas,</l>
-          <l n="7">caen, bajo el peso de sus obras buenas,</l>
-          <l n="8">sucios, enfermos, trágicos, sobrantes.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Ah! Nunca quieras remediar entuertos;</l>
-          <l n="10">nunca sigas impulsos compasivos;</l>
-          <l n="11">ten los garfios del Odio siempre activos</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y los ojos del juez siempre despiertos...</l>
-          <l n="13">¡y al echarte en la caja de los muertos,</l>
-          <l n="14">menosprecia los llantos de los vivos!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s560n_2051">
-        <head>Molto più avanti ancora!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Esta vida mendaz es un estrado</l>
-          <l n="2">donde todo es estólido y fingido,</l>
-          <l n="3">donde cada anfitrión guarda escondido</l>
-          <l n="4">su verdadero ser tras el tocado:</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">No digas tu verdad ni al más amado,</l>
-          <l n="6">no demuestres temor ni al más temido,</l>
-          <l n="7">no creas que jamás te hayan querido</l>
-          <l n="8">por más besos de amor que te hayan dado.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mira como la nieve se deslíe</l>
-          <l n="10">sin una queja de su labio yerto,</l>
-          <l n="11">como ansía las nubes el desierto</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">sin que a ninguno su ansiedad confíe:</l>
-          <l n="13">Maldice de los hombres, pero ríe;</l>
-          <l n="14">vive la vida plena, pero muerto.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s560n_2052">
-        <head>Vera violeta</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">En pos de su nivel se lanza el río</l>
-          <l n="2">por el gran desnivel de los breñales;</l>
-          <l n="3">el aire es vendaval, y hay vendavales</l>
-          <l n="4">por la ley del no fin, del no vacío;</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">la más hermosa espiga del estío</l>
-          <l n="6">ni sueña con el pan en los trigales;</l>
-          <l n="7">el más dulce panal de los panales</l>
-          <l n="8">no declaró jamás: yo no soy mío;</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">y el sol, el padre sol, es raudo foco</l>
-          <l n="10">que fomenta la vida en la Natura,</l>
-          <l n="11">por calentar los polos no se apura</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">ni se desvía un ápice tampoco:</l>
-          <l n="13">Todo lo alcanzarás solemne loco...</l>
-          <l n="14">¡siempre que lo permita tu estatura!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s560n_2053">
-        <head>La yapa</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Como una sola estrella no es el cielo,</l>
-          <l n="2">ni una gota que salta, el Océano,</l>
-          <l n="3">ni una falange rígida, la mano,</l>
-          <l n="4">ni una brizna de paja, el santo suelo:</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">tu gimnasia de jaula no es el vuelo,</l>
-          <l n="6">el sublime tramonto soberano,</l>
-          <l n="7">ni nunca podrá ser anhelo humano</l>
-          <l n="8">tu miserable personal anhelo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿Qué saben de los eterno las esferas?</l>
-          <l n="10">¿de las borrascas de la mar, las gotas?</l>
-          <l n="11">¿de puñetazos, las falanges rotas?</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¿de harina y pan, las pajas de las eras?...</l>
-          <l n="13">¡Detén tus pasos, Lógica, no quieras</l>
-          <l n="14">que se hagan pesimistas los idiotas!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s560n_2054">
-        <head>Moltissimo più avanti ancora!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Si en vez de las estúpidas panteras</l>
-          <l n="2">y los férreos, estúpidos leones,</l>
-          <l n="3">encerrasen dos flacos mocetones</l>
-          <l n="4">en la frágil cárcel de las fieras:</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">No habrían de yacer noches enteras</l>
-          <l n="6">en el blando pajar de sus colchones,</l>
-          <l n="7">sin esperanzas ya, sin reacciones,</l>
-          <l n="8">lo mismo que dos plácidos horteras;</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">cual Napoleones pensativos, graves,</l>
-          <l n="10">no como el tigre sanguinario y maula,</l>
-          <l n="11">escrutarían palmo a palmo su aula,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">buscando las rendijas, no las llaves...</l>
-          <l n="13">¡Seas el que tú seas, ya lo sabes:</l>
-          <l n="14">a escrutar las rendijas de tu jaula!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s560n_2055">
-        <head>¡Molto piu avanti ancora!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">El mundo miserable es un estrado</l>
-          <l n="2">donde todo es estólido y fingido,</l>
-          <l n="3">donde cada anfitrión guarda escondido</l>
-          <l n="4">su verdadero ser, tras el tocado:</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">No digas tu verdad ni al más amado,</l>
-          <l n="6">no demuestres temor ni al más temido,</l>
-          <l n="7">no creas que jamás te hayan querido</l>
-          <l n="8">por más besos de amor que te hayan dado.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mira como la nieve de deslíe</l>
-          <l n="10">sin que apostrofe al sol su labio yerto,</l>
-          <l n="11">cómo ansía las nubes el desierto</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">sin que a ninguno su ansiedad confíe.</l>
-          <l n="13">¡Trema como el infierno, pero ríe!</l>
-          <l n="14">¡Vive la vida plena, pero muerto!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Pedro B. «Almafuerte» Palacios</head>
+            <p>San Justo (Argentina). 1854 - 1917</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s560n_2047">
+            <head>Como los bueyes</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++---++-++-">Ser bueno, en mi sentir, es lo más llano</l>
+               <l n="2" met="--+--+-+-+-">y concilia deber, altruismo y gusto:</l>
+               <l n="3" met="---+-+-+-+-">con el que pasa lejos, casi adusto,</l>
+               <l n="4" met="---+-++--+-">con el que viene a mí, tierno y humano.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+---+-">Hallo razón al triste y al insano,</l>
+               <l n="6" met="+--+---+-+-">mal que reviente mi pesar robusto;</l>
+               <l n="7" met="---+-+--++-">y en vez de andar buscando lo más justo</l>
+               <l n="8" met="+-+--+-+-+-">hago yunta con otro y soy su hermano.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--++-+-+-+-">Sin meterme a Moisés de nuevas leyes,</l>
+               <l n="10" met="+--+-++--+-">doy al que pide pan, pan y puchero;</l>
+               <l n="11" met="--+--+-+-+-" enjamb="B-ex_subj_verb">y el honor de salvar al mundo entero</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+---+-" enjamb="I-ex_subj_verb">se lo dejo a los genios y a los reyes.</l>
+               <l n="13" met="+-+--+---+-">Hago, vuelvo a decir, como los bueyes,</l>
+               <l n="14" met="---+-+---+-">mutualidad de yunta y compañero.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s560n_2048">
+            <head>No te des por vencido...</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+++--+-+-+-">No te des por vencido, ni aun vencido,</l>
+               <l n="2" met="+++--+-+-+-">no te sientas esclavo, ni aun esclavo;</l>
+               <l n="3" met="+----++-++-">trémulo de pavor, piénsate bravo,</l>
+               <l n="4" met="--+--++--+-">y arremete feroz, ya malherido.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+---+-">Ten el tesón del clavo enmohecido,</l>
+               <l n="6" met="-++-++--++-">que ya viejo y ruin vuelve a ser clavo;</l>
+               <l n="7" met="+--+---+-+-" enjamb="B-cc_crossclause">no la cobarde intrepidez del pavo</l>
+               <l n="8" met="-+---+--++-" enjamb="I-cc_crossclause">que amaina su plumaje al primer ruido.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+-+-+-">Procede como Dios, que nunca llora,</l>
+               <l n="10" met="-----+-+-+-">o como Lucifer, que nunca reza,</l>
+               <l n="11" met="-----+---+-" enjamb="B-ex_subj_verb">o como el robledal, cuya grandeza</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+-+++-" enjamb="I-ex_subj_verb">necesita del agua y no la implora...</l>
+               <l n="13" met="++---+---+-">¡Qué muerda y vocifere vengadora,</l>
+               <l n="14" met="+-+--+---+-">ya rodando en el polvo, tu cabeza!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s560n_2049">
+            <head>Avanti!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-++-++-+-+-" enjamb="B-ex_subj_verb">Si te postran diez veces, te levantas</l>
+               <l n="2" met="+-++-++--+-" enjamb="I-ex_subj_verb">otras diez, otras cien, otras quinientas:</l>
+               <l n="3" met="+-+--+-+-+-">no han de ser tus caídas tan violentas</l>
+               <l n="4" met="--+--++-++-">ni tampoco, por ley, han de ser tantas.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-" enjamb="B-ex_subj_verb">Con el hambre genial con que las plantas</l>
+               <l n="6" met="--+--+---+-" enjamb="I-ex_subj_verb">asimilan el humus avarientas,</l>
+               <l n="7" met="--+--+---+-">deglutiendo el rencor de las afrentas</l>
+               <l n="8" met="--+--+---+-">se formaron los santos y la santas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+--++-">Obcecación asnal, para ser fuerte,</l>
+               <l n="10" met="+-+--+---+-">nada más necesita la criatura</l>
+               <l n="11" met="--+--+-+-+-" enjamb="B-ex_subj_verb">y en cualquier infeliz se me figura</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-" enjamb="I-ex_subj_verb">que se mellan los garfios de la suerte...</l>
+               <l n="13" met="+----+-+-+-">¡Todos los incurables tienen cura</l>
+               <l n="14" met="---------+-">cinco minutos antes de su muerte!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s560n_2050">
+            <head>Molto più avanti!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+---+-" enjamb="B-pb_adj_prep">Los que viertan sus lágrimas amantes</l>
+               <l n="2" met="---+-++-+-" enjamb="I-pb_adj_prep">sobre las penas que no son sus penas;</l>
+               <l n="3" met="--+--+---+-">los que olvidan el son de sus cadenas</l>
+               <l n="4" met="---+---+-+-">para limar las de los otros antes;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-" enjamb="B-pb_verb_adv">los que van por el mundo delirantes</l>
+               <l n="6" met="--+---+---+-" enjamb="I-pb_verb_adv">repartiendo sus amor a manos llenas,</l>
+               <l n="7" met="+--+---+-+-">caen, bajo el peso de sus obras buenas,</l>
+               <l n="8" met="+--+-+---+-">sucios, enfermos, trágicos, sobrantes.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+---+--+-">¡Ah! Nunca quieras remediar entuertos;</l>
+               <l n="10" met="+-+--+---+-">nunca sigas impulsos compasivos;</l>
+               <l n="11" met="+-+--+-+-+-">ten los garfios del Odio siempre activos</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--++--+-">y los ojos del juez siempre despiertos...</l>
+               <l n="13" met="--++-+---+-">¡y al echarte en la caja de los muertos,</l>
+               <l n="14" met="--+--+---+-">menosprecia los llantos de los vivos!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s560n_2051">
+            <head>Molto più avanti ancora!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+++-+-" enjamb="B-cc_crossclause">Esta vida mendaz es un estrado</l>
+               <l n="2" met="--++-+---+-" enjamb="I-cc_crossclause">donde todo es estólido y fingido,</l>
+               <l n="3" met="--+--++--+-" enjamb="B-ex_dobj_verb">donde cada anfitrión guarda escondido</l>
+               <l n="4" met="---+-+---+-" enjamb="I-ex_dobj_verb">su verdadero ser tras el tocado:</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++---+-+-+-">No digas tu verdad ni al más amado,</l>
+               <l n="6" met="+-+--+-+-+-">no demuestres temor ni al más temido,</l>
+               <l n="7" met="++--+++--+-">no creas que jamás te hayan querido</l>
+               <l n="8" met="-++--+-+-+-">por más besos de amor que te hayan dado.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+----+---+-">Mira como la nieve se deslíe</l>
+               <l n="10" met="-+-+---+-+-">sin una queja de su labio yerto,</l>
+               <l n="11" met="--+--+---+-" enjamb="B-pb_noun_prep">como ansía las nubes el desierto</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-" enjamb="I-pb_noun_prep">sin que a ninguno su ansiedad confíe:</l>
+               <l n="13" met="-+---+---+-">Maldice de los hombres, pero ríe;</l>
+               <l n="14" met="+--+-+---+-">vive la vida plena, pero muerto.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s560n_2052">
+            <head>Vera violeta</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-----+-+-+-">En pos de su nivel se lanza el río</l>
+               <l n="2" met="--+--+---+-">por el gran desnivel de los breñales;</l>
+               <l n="3" met="-++--++--+-">el aire es vendaval, y hay vendavales</l>
+               <l n="4" met="--+-++-+-+-">por la ley del no fin, del no vacío;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+---+-">la más hermosa espiga del estío</l>
+               <l n="6" met="-+---+---+-">ni sueña con el pan en los trigales;</l>
+               <l n="7" met="-++--+---+-">el más dulce panal de los panales</l>
+               <l n="8" met="+--+-+++++-">no declaró jamás: yo no soy mío;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+++-+-" enjamb="B-cc_crossclause">y el sol, el padre sol, es raudo foco</l>
+               <l n="10" met="--+--+---+-" enjamb="I-cc_crossclause">que fomenta la vida en la Natura,</l>
+               <l n="11" met="---+-+-+-+-">por calentar los polos no se apura</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+++---+-">ni se desvía un ápice tampoco:</l>
+               <l n="13" met="+-+--+-+-+-">Todo lo alcanzarás solemne loco...</l>
+               <l n="14" met="+--+-+---+-">¡siempre que lo permita tu estatura!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s560n_2053">
+            <head>La yapa</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+-+-+-">Como una sola estrella no es el cielo,</l>
+               <l n="2" met="+-+--+---+-">ni una gota que salta, el Océano,</l>
+               <l n="3" met="+--+-+---+-">ni una falange rígida, la mano,</l>
+               <l n="4" met="+-+--+-+-+-">ni una brizna de paja, el santo suelo:</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+-+-+-">tu gimnasia de jaula no es el vuelo,</l>
+               <l n="6" met="--+--+---+-">el sublime tramonto soberano,</l>
+               <l n="7" met="-+--++-+-+-" enjamb="B-ex_subj_verb">ni nunca podrá ser anhelo humano</l>
+               <l n="8" met="---+---+-+-" enjamb="I-ex_subj_verb">tu miserable personal anhelo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++----+---+-">¿Qué saben de los eterno las esferas?</l>
+               <l n="10" met="---+---+-+-">¿de las borrascas de la mar, las gotas?</l>
+               <l n="11" met="---+---+-+-">¿de puñetazos, las falanges rotas?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+---+-">¿de harina y pan, las pajas de las eras?...</l>
+               <l n="13" met="-+-+-+--++-" enjamb="B-ex_dobj_verb">¡Detén tus pasos, Lógica, no quieras</l>
+               <l n="14" met="-+---+---+-" enjamb="I-ex_dobj_verb">que se hagan pesimistas los idiotas!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s560n_2054">
+            <head>Moltissimo più avanti ancora!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-----+---+-">Si en vez de las estúpidas panteras</l>
+               <l n="2" met="--+--+---+-">y los férreos, estúpidos leones,</l>
+               <l n="3" met="--+-++---+-">encerrasen dos flacos mocetones</l>
+               <l n="4" met="--+-+----+-">en la frágil cárcel de las fieras:</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++---++--+-">No habrían de yacer noches enteras</l>
+               <l n="6" met="--+--+---+-">en el blando pajar de sus colchones,</l>
+               <l n="7" met="---+-+---+-">sin esperanzas ya, sin reacciones,</l>
+               <l n="8" met="-+--++---+-">lo mismo que dos plácidos horteras;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+---+-+-">cual Napoleones pensativos, graves,</l>
+               <l n="10" met="+--+---+-+-">no como el tigre sanguinario y maula,</l>
+               <l n="11" met="---++-+--+-">escrutarían palmo a palmo su aula,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+-+-+-">buscando las rendijas, no las llaves...</l>
+               <l n="13" met="+---++-+++-">¡Seas el que tú seas, ya lo sabes:</l>
+               <l n="14" met="--+--+---+-">a escrutar las rendijas de tu jaula!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s560n_2055">
+            <head>¡Molto piu avanti ancora!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+++-+-" enjamb="B-cc_crossclause">El mundo miserable es un estrado</l>
+               <l n="2" met="--++-+---+-" enjamb="I-cc_crossclause">donde todo es estólido y fingido,</l>
+               <l n="3" met="--+--++--+-" enjamb="B-ex_dobj_verb">donde cada anfitrión guarda escondido</l>
+               <l n="4" met="---+-+---+-" enjamb="I-ex_dobj_verb">su verdadero ser, tras el tocado:</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++---+-+-+-">No digas tu verdad ni al más amado,</l>
+               <l n="6" met="+-+--+-+-+-">no demuestres temor ni al más temido,</l>
+               <l n="7" met="++--+++--+-">no creas que jamás te hayan querido</l>
+               <l n="8" met="-++--+-+-+-">por más besos de amor que te hayan dado.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+----+---+-">Mira como la nieve de deslíe</l>
+               <l n="10" met="---+-+-+-+-">sin que apostrofe al sol su labio yerto,</l>
+               <l n="11" met="+-+--+---+-" enjamb="B-pb_noun_prep">cómo ansía las nubes el desierto</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-" enjamb="I-pb_noun_prep">sin que a ninguno su ansiedad confíe.</l>
+               <l n="13" met="+----+---+-">¡Trema como el infierno, pero ríe!</l>
+               <l n="14" met="+--+-+---+-">¡Vive la vida plena, pero muerto!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

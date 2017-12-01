@@ -1,168 +1,245 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Carolina Coronado</title>
-        <author>
-          <idno type="viaf" cert="high">5738205</idno>
-          <idno type="#disco" xml:id="disco_434n"/>
-          <name type="short">Coronado</name>
-          <name type="full">
-            <name type="first-name">Carolina</name>
-            <name type="second-name">Coronado</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">4</measure>
-        <measure unit="tokens">370</measure>
-        <measure unit="line">56</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_434n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_434n" role="author" sex="F">
-            <persName>Carolina Coronado</persName>
-            <birth><placeName type="place">Almendralejo (Badajoz)</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1823" cert="high">1823</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Lisboa</placeName>, <date type="year" when="1911" cert="high">1911</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Carolina Coronado</title>
+            <author corresp="#disco_434n">Carolina Coronado</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">4</measure>
+            <measure unit="tokens">370</measure>
+            <measure unit="line">56</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_434n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_434n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/5738205"/>
+                  <persName type="short">Coronado</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Carolina</forename>
+                     <surname property="foaf:familyName">Coronado</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Carolina Coronado</persName>
+                  <sex property="foaf:gender" value="F"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Almendralejo (Badajoz)</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1823" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Lisboa</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1911" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s434n_1683" about="dbpedia:Soneto">
+                        <title property="dc:title">Siempre tú</title>
+                        <title type="incipit" property="dc:alternative">La niebla del diciembre quebrantaba</title>
+                     </bibl>
+                     <bibl resource="disco#s434n_1684" about="dbpedia:Soneto">
+                        <title property="dc:title">¡Oh, cuán te adoro!, con la luz del día</title>
+                        <title type="incipit" property="dc:alternative">¡Oh, cuán te adoro!, con la luz del día,</title>
+                     </bibl>
+                     <bibl resource="disco#s434n_1685" about="dbpedia:Soneto">
+                        <title property="dc:title">La rosa blanca</title>
+                        <title type="incipit" property="dc:alternative">¿Cuál de las hijas del verano ardiente,</title>
+                     </bibl>
+                     <bibl resource="disco#s434n_1686" about="dbpedia:Soneto">
+                        <title property="dc:title">Una corona, no, dadme una rama</title>
+                        <title type="incipit" property="dc:alternative">Una corona, no, dadme una rama</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Carolina Coronado</head>
-        <p>Almendralejo (Badajoz). 1823 - 1911</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s434n_1683">
-        <head>Siempre tú</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">La niebla del diciembre quebrantaba</l>
-          <l n="2">del sol los melancólicos fulgores</l>
-          <l n="3">cuando en mi corazón de tus amores</l>
-          <l n="4">el acento primero resonaba.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">El segundo diciembre se acercaba</l>
-          <l n="6">trayendo para mí nieblas mayores,</l>
-          <l n="7">que a merced de los vientos bramadores</l>
-          <l n="8">tu nave en el Atlántico bogaba.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Y el tercero diciembre aparecía</l>
-          <l n="10">templado, alegre como el mayo hermoso</l>
-          <l n="11">y eras tú mi suspiro todavía.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">El cuarto arrebatado, tempestuoso,</l>
-          <l n="13">vino a robarme la ventura mía,</l>
-          <l n="14">¡ay!, mas no a dar a mi pasión reposo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s434n_1684">
-        <head>¡Oh, cuán te adoro!, con la luz del día</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Oh, cuán te adoro!, con la luz del día,</l>
-          <l n="2">tu nombre invoco apasionada y triste,</l>
-          <l n="3">y cuando el cielo en sombras se reviste</l>
-          <l n="4">aun te llama exaltada el alma mía.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Tú eres el tiempo que mis horas guía,</l>
-          <l n="6">tú eres la idea que a mi mente asiste,</l>
-          <l n="7">porque en ti se concentra cuanto existe,</l>
-          <l n="8">mi pasión, mi esperanza, mi poesía.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">No hay canto que igualar pueda a tu acento</l>
-          <l n="10">cuando tu amor me cuentas y deliras</l>
-          <l n="11">revelando la fe de tu contento;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">tiemblo a tu voz y tiemblo si me miras;</l>
-          <l n="13">y quisiera exhalar mi último aliento</l>
-          <l n="14">abrasada en el aire que respiras.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s434n_1685">
-        <head>La rosa blanca</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¿Cuál de las hijas del verano ardiente,</l>
-          <l n="2">cándida rosa, iguala tu hermosura,</l>
-          <l n="3">la suavísima tez y la frescura</l>
-          <l n="4">que brotan de tu faz resplandeciente?</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La sonrosada luz de alba naciente</l>
-          <l n="6">no muestra al desplegarse más dulzura,</l>
-          <l n="7">ni el ala de los cisnes la blancura</l>
-          <l n="8">que el peregrino cerco de tu frente.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Así, gloria del huerto, en el pomposo</l>
-          <l n="10">ramo descuellas desde verde asiento,</l>
-          <l n="11">cuando llevado sobre el manso viento</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">a tu argentino cáliz oloroso,</l>
-          <l n="13">roba su aroma insecto silencioso</l>
-          <l n="14">y el puro esmalte empaña con su aliento.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s434n_1686">
-        <head>Una corona, no, dadme una rama</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Una corona, no, dadme una rama</l>
-          <l n="2">del adelfa del Gévora querido,</l>
-          <l n="3">y mi genio, si hay genio, habrá obtenido</l>
-          <l n="4">un galardón más grato que la fama.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">No importa al porvenir cómo se llama</l>
-          <l n="6">la que el mundo decís que dio al olvido;</l>
-          <l n="7">de mi patria en el alma está escondido</l>
-          <l n="8">ese nombre, que aún vive, sufre y ama.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Os oigo desde aquí, desde aquí os veo,</l>
-          <l n="10">y de vosotros hablo con las olas,</l>
-          <l n="11">que me dicen con lenguas españolas</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">vuestro afán, vuestra fe, vuestro deseo,</l>
-          <l n="13">y siento que mi espíritu es más fuerte</l>
-          <l n="14">en esta vida que os parece muerte.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Carolina Coronado</head>
+            <p>Almendralejo (Badajoz). 1823 - 1911</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s434n_1683">
+            <head>Siempre tú</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-------+-" enjamb="B-pb_verb_cprep">La niebla del diciembre quebrantaba</l>
+               <l n="2" met="-+---+---+-" enjamb="I-pb_verb_cprep">del sol los melancólicos fulgores</l>
+               <l n="3" met="-----+---+-">cuando en mi corazón de tus amores</l>
+               <l n="4" met="--+--+---+-">el acento primero resonaba.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+------+-" enjamb="B-pb_verb_chain">El segundo diciembre se acercaba</l>
+               <l n="6" met="-+---++--+-" enjamb="I-pb_verb_chain">trayendo para mí nieblas mayores,</l>
+               <l n="7" met="--+--+---+-" enjamb="B-ex_subj_verb">que a merced de los vientos bramadores</l>
+               <l n="8" met="-+---+---+-" enjamb="I-ex_subj_verb">tu nave en el Atlántico bogaba.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+------+-" enjamb="B-pb_verb_adv">Y el tercero diciembre aparecía</l>
+               <l n="10" met="-+-+-----+-" enjamb="I-pb_verb_adv">templado, alegre como el mayo hermoso</l>
+               <l n="11" met="+-+--+---+-">y eras tú mi suspiro todavía.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">El cuarto arrebatado, tempestuoso,</l>
+               <l n="13" met="+--++--+-+-">vino a robarme la ventura mía,</l>
+               <l n="14" met="--++---+-+-">¡ay!, mas no a dar a mi pasión reposo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s434n_1684">
+            <head>¡Oh, cuán te adoro!, con la luz del día</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+++---+-+-">¡Oh, cuán te adoro!, con la luz del día,</l>
+               <l n="2" met="-+-+---+-+-">tu nombre invoco apasionada y triste,</l>
+               <l n="3" met="---+-+---+-" enjamb="B-pb_verb_adv">y cuando el cielo en sombras se reviste</l>
+               <l n="4" met="+++--+-+-+-" enjamb="I-pb_verb_adv">aun te llama exaltada el alma mía.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-">Tú eres el tiempo que mis horas guía,</l>
+               <l n="6" met="+--+--+--+-">tú eres la idea que a mi mente asiste,</l>
+               <l n="7" met="--+--+-+-+-">porque en ti se concentra cuanto existe,</l>
+               <l n="8" met="--+--+---+-">mi pasión, mi esperanza, mi poesía.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++---++--+-" enjamb="B-ex_dobj_verb">No hay canto que igualar pueda a tu acento</l>
+               <l n="10" met="---+++---+-" enjamb="B-ex_subj_verb I-ex_dobj_verb">cuando tu amor me cuentas y deliras</l>
+               <l n="11" met="--+--+---+-" enjamb="I-ex_subj_verb">revelando la fe de tu contento;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+--++-">tiemblo a tu voz y tiemblo si me miras;</l>
+               <l n="13" met="--+--++--+-" enjamb="B-pb_adj_noun">y quisiera exhalar mi último aliento</l>
+               <l n="14" met="--+--+---+-" enjamb="I-pb_adj_noun">abrasada en el aire que respiras.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s434n_1685">
+            <head>La rosa blanca</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-">¿Cuál de las hijas del verano ardiente,</l>
+               <l n="2" met="+--+-+---+-">cándida rosa, iguala tu hermosura,</l>
+               <l n="3" met="--+--+---+-" enjamb="B-cc_crossclause">la suavísima tez y la frescura</l>
+               <l n="4" met="-+---+---+-" enjamb="I-cc_crossclause">que brotan de tu faz resplandeciente?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-++--+-" enjamb="B-pb_adj_adv">La sonrosada luz de alba naciente</l>
+               <l n="6" met="++---+++-+-" enjamb="I-pb_adj_adv">no muestra al desplegarse más dulzura,</l>
+               <l n="7" met="-+---+---+-" enjamb="B-cc_crossclause">ni el ala de los cisnes la blancura</l>
+               <l n="8" met="---+-+---+-" enjamb="I-cc_crossclause">que el peregrino cerco de tu frente.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--+---+-">Así, gloria del huerto, en el pomposo</l>
+               <l n="10" met="+--+---+-+-">ramo descuellas desde verde asiento,</l>
+               <l n="11" met="---+---+-+-">cuando llevado sobre el manso viento</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+---+-">a tu argentino cáliz oloroso,</l>
+               <l n="13" met="+--+-+---+-">roba su aroma insecto silencioso</l>
+               <l n="14" met="-+-+-+---+-">y el puro esmalte empaña con su aliento.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s434n_1686">
+            <head>Una corona, no, dadme una rama</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+++-+-" enjamb="B-pb_noun_prep">Una corona, no, dadme una rama</l>
+               <l n="2" met="--+--+---+-" enjamb="I-pb_noun_prep">del adelfa del Gévora querido,</l>
+               <l n="3" met="--+-++-+-+-" enjamb="B-ex_dobj_verb">y mi genio, si hay genio, habrá obtenido</l>
+               <l n="4" met="+--+++---+-" enjamb="I-ex_dobj_verb">un galardón más grato que la fama.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++---++--+-">No importa al porvenir cómo se llama</l>
+               <l n="6" met="--+--+-+-+-">la que el mundo decís que dio al olvido;</l>
+               <l n="7" met="--+--+-+-+-" enjamb="B-ex_subj_verb">de mi patria en el alma está escondido</l>
+               <l n="8" met="+-+-++-+-+-" enjamb="I-ex_subj_verb">ese nombre, que aún vive, sufre y ama.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++---+--++-">Os oigo desde aquí, desde aquí os veo,</l>
+               <l n="10" met="---+-+---+-">y de vosotros hablo con las olas,</l>
+               <l n="11" met="-++--+---+-" enjamb="B-pb_adj_noun">que me dicen con lenguas españolas</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-" enjamb="I-pb_adj_noun">vuestro afán, vuestra fe, vuestro deseo,</l>
+               <l n="13" met="-+---+-+++-" enjamb="B-pb_adj_prep">y siento que mi espíritu es más fuerte</l>
+               <l n="14" met="-+-+-+-+-+-" enjamb="I-pb_adj_prep">en esta vida que os parece muerte.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

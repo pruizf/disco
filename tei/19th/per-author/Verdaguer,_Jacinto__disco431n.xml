@@ -1,118 +1,187 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Jacinto Verdaguer</title>
-        <author>
-          <idno type="viaf" cert="high">9841818</idno>
-          <idno type="#disco" xml:id="disco_431n"/>
-          <name type="short">Verdaguer</name>
-          <name type="full">
-            <name type="first-name">Jacinto</name>
-            <name type="second-name">Verdaguer</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">190</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_431n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_431n" role="author" sex="M">
-            <persName>Jacinto Verdaguer</persName>
-            <birth><placeName type="place">Folgarolas (Barcelona)</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1845" cert="high">1845</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Vallvidrera (Barcelona)</placeName>, <date type="year" when="1902" cert="high">1902</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Jacinto Verdaguer</title>
+            <author corresp="#disco_431n">Jacinto Verdaguer</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">190</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_431n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_431n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/9841818"/>
+                  <persName type="short">Verdaguer</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Jacinto</forename>
+                     <surname property="foaf:familyName">Verdaguer</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Jacinto Verdaguer</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Folgarolas (Barcelona)</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1845" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Vallvidrera (Barcelona)</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1902" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s431n_1678" about="dbpedia:Soneto">
+                        <title property="dc:title">El canto materno</title>
+                        <title type="incipit" property="dc:alternative">Postrado el padre en miserable lecho</title>
+                     </bibl>
+                     <bibl resource="disco#s431n_1679" about="dbpedia:Soneto">
+                        <title property="dc:title">Ladrar a la luna</title>
+                        <title type="incipit" property="dc:alternative">¡No desmayes jamás ante una guerra</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Jacinto Verdaguer</head>
-        <p>Folgarolas (Barcelona). 1845 - 1902</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s431n_1678">
-        <head>El canto materno</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Postrado el padre en miserable lecho</l>
-          <l n="2">está por espantosa y cruel dolencia;</l>
-          <l n="3">cercano halla el final de su existencia</l>
-          <l n="4">y sollozos exhala de su pecho.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Piensa que, bajo el hoy paterno techo,</l>
-          <l n="6">mañana su familia , en la indigencia,</l>
-          <l n="7">por siempre llorará su eterna ausencia.</l>
-          <l n="8">de duelo horrible el corazón deshecho.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Allí, mientras se queja el infelice,</l>
-          <l n="10">la dulce esposa canta, y él le dice:</l>
-          <l n="11">¿Cómo cantas, mujer, mientras me aflijo?</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Muestra el niño que tiene entre los brazos,</l>
-          <l n="13">y dice: -con el alma hecha pedazos-:</l>
-          <l n="14">Canto... porque no llore nuestro hijo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s431n_1679">
-        <head>Ladrar a la luna</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡No desmayes jamás ante una guerra</l>
-          <l n="2">de torpe envidia y miserables celos!</l>
-          <l n="3">¿Qué le importa a la luna, allá en los cielos,</l>
-          <l n="4">que le ladren los perros a la tierra?</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Si alguien aspira a derribarte, yerra</l>
-          <l n="6">y puede ahorrase inútiles desvelos;</l>
-          <l n="7">no tan pronto de abate por los suelos</l>
-          <l n="8">el Escorial que tu talento encierra.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿Qué no cede el ataque ni un momento?</l>
-          <l n="10">¿Qué a todo trance buscan tu fracaso?</l>
-          <l n="11">¿Qué te cansa el luchar? ¡No lo disputo.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¡Mas oye, amigo, este refrán de paso:</l>
-          <l n="13">¡Se apedrean las plantas que dan fruto!</l>
-          <l n="14">¿Quién del árbol estéril hace caso?</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Jacinto Verdaguer</head>
+            <p>Folgarolas (Barcelona). 1845 - 1902</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s431n_1678">
+            <head>El canto materno</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-" enjamb="B-ex_subj_verb">Postrado el padre en miserable lecho</l>
+               <l n="2" met="-+---+-+-+-" enjamb="I-ex_subj_verb">está por espantosa y cruel dolencia;</l>
+               <l n="3" met="-++--+---+-">cercano halla el final de su existencia</l>
+               <l n="4" met="--+--+---+-">y sollozos exhala de su pecho.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+----+-+-+-">Piensa que, bajo el hoy paterno techo,</l>
+               <l n="6" met="-+---+---+-">mañana su familia , en la indigencia,</l>
+               <l n="7" met="-+---+-+-+-">por siempre llorará su eterna ausencia.</l>
+               <l n="8" met="-+-+---+-+-">de duelo horrible el corazón deshecho.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">Allí, mientras se queja el infelice,</l>
+               <l n="10" met="-+-+-+-+++-">la dulce esposa canta, y él le dice:</l>
+               <l n="11" met="+-+--+--++-">¿Cómo cantas, mujer, mientras me aflijo?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-">Muestra el niño que tiene entre los brazos,</l>
+               <l n="13" met="-+---++--+-">y dice: -con el alma hecha pedazos-:</l>
+               <l n="14" met="+---++--+-">Canto... porque no llore nuestro hijo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s431n_1679">
+            <head>Ladrar a la luna</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+-+-+-" enjamb="B-pb_noun_prep">¡No desmayes jamás ante una guerra</l>
+               <l n="2" met="-+-+---+-+-" enjamb="I-pb_noun_prep">de torpe envidia y miserables celos!</l>
+               <l n="3" met="+++--+-+-+-">¿Qué le importa a la luna, allá en los cielos,</l>
+               <l n="4" met="-++--+---+-">que le ladren los perros a la tierra?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+++-">Si alguien aspira a derribarte, yerra</l>
+               <l n="6" met="-+-+-+---+-">y puede ahorrase inútiles desvelos;</l>
+               <l n="7" met="+++--+---+-">no tan pronto de abate por los suelos</l>
+               <l n="8" met="---+---+-+-">el Escorial que tu talento encierra.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+++--+-+-+-">¿Qué no cede el ataque ni un momento?</l>
+               <l n="10" met="+--+-+---+-">¿Qué a todo trance buscan tu fracaso?</l>
+               <l n="11" met="+++---++-+-">¿Qué te cansa el luchar? ¡No lo disputo.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-++--+-+-">¡Mas oye, amigo, este refrán de paso:</l>
+               <l n="13" met="--+--+--++-">¡Se apedrean las plantas que dan fruto!</l>
+               <l n="14" met="+-+--+-+-+-">¿Quién del árbol estéril hace caso?</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

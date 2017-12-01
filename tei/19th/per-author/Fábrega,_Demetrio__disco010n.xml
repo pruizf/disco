@@ -1,93 +1,153 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Demetrio Fábrega</title>
-        <author>
-          <idno type="viaf" cert="high">316145857066022921786</idno>
-          <idno type="#disco" xml:id="disco_010n"/>
-          <name type="short">Fábrega</name>
-          <name type="full">
-            <name type="first-name">Demetrio</name>
-            <name type="second-name">Fábrega</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">118</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_010n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_010n" role="author" sex="M">
-            <persName>Demetrio Fábrega</persName>
-            <birth><placeName type="place">Santiago de Veraguas (Bogotá, Colombia)</placeName>, <placeName type="country">Colombia</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1881" cert="high">1881</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1932" cert="high">1932</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Demetrio Fábrega</title>
+            <author corresp="#disco_010n">Demetrio Fábrega</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">118</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_010n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_010n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/316145857066022921786"/>
+                  <persName type="short">Fábrega</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Demetrio</forename>
+                     <surname property="foaf:familyName">Fábrega</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Demetrio Fábrega</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Santiago de Veraguas (Bogotá)</settlement>
+                           <country>Colombia</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1881" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1932" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s010n_0030" about="dbpedia:Soneto">
+                        <title property="dc:title">Llanto mudo</title>
+                        <title type="incipit" property="dc:alternative">En la altiva y vetusta catedral de Toledo,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Demetrio Fábrega</head>
-        <p>Santiago de Veraguas (Bogotá, Colombia). 1881 - 1932</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s010n_0030">
-        <head>Llanto mudo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">En la altiva y vetusta catedral de Toledo,</l>
-          <l n="2">en la puerta que se abre por el lado de Oriente,</l>
-          <l n="3">he visto un cariátide que, al decir de la gente,</l>
-          <l n="4">de un hereje famoso era vivo remedo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Cuando la lluvia cae por entre el fino enredo</l>
-          <l n="6">de los frisos que adornan esa mole imponente,</l>
-          <l n="7">una gota resbala sobre la faz doliente</l>
-          <l n="8">y, al llegar a los ojos, se detiene con miedo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">El sol, al levantarse en su marcha gloriosa,</l>
-          <l n="10">en la muerta pupila, como lágrima viva,</l>
-          <l n="11">hace brillar la gota que rodó silenciosa.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y es así como ha siglos, sepultada entre yedra,</l>
-          <l n="13">la cariátide aquella, que del mundo se esquiva,</l>
-          <l n="14">viene llorando a solas con sus ojos de piedra.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Demetrio Fábrega</head>
+            <p>Santiago de Veraguas (Bogotá, Colombia). 1881 - 1932</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s010n_0030">
+            <head>Llanto mudo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+---+--+-">En la altiva y vetusta catedral de Toledo,</l>
+               <l n="2" met="--+--+---+--+-">en la puerta que se abre por el lado de Oriente,</l>
+               <l n="3" met="+++-+-------+-">he visto un cariátide que, al decir de la gente,</l>
+               <l n="4" met="+-+--++-+--+-">de un hereje famoso era vivo remedo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-+-" enjamb="B-pb_noun_prep">Cuando la lluvia cae por entre el fino enredo</l>
+               <l n="6" met="--+--+-+-+--+-" enjamb="I-pb_noun_prep">de los frisos que adornan esa mole imponente,</l>
+               <l n="7" met="+-+--+----+-+-">una gota resbala sobre la faz doliente</l>
+               <l n="8" met="--+--+---+--+-">y, al llegar a los ojos, se detiene con miedo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---++-+--+-">El sol, al levantarse en su marcha gloriosa,</l>
+               <l n="10" met="--+--+---+--+-">en la muerta pupila, como lágrima viva,</l>
+               <l n="11" met="+--+-+---+--+-">hace brillar la gota que rodó silenciosa.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+---++---+--+-">Y es así como ha siglos, sepultada entre yedra,</l>
+               <l n="13" met="--+--+---+--+-">la cariátide aquella, que del mundo se esquiva,</l>
+               <l n="14" met="+--+-+---+--+-">viene llorando a solas con sus ojos de piedra.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

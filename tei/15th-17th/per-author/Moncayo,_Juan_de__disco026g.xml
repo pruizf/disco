@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Juan de Moncayo</title>
+            <author corresp="#disco_026g">Juan de Moncayo</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">5</measure>
+            <measure unit="tokens">433</measure>
+            <measure unit="line">70</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_026g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_026g"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/91527798"/>
+                  <persName type="short">Moncayo</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Moncayo</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan de Moncayo</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Zaragoza</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1600" cert="high"/>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1656" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s026g_0047" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">¡Cómo se pasan, Lelio, las edades,</title>
+                     </bibl>
+                     <bibl resource="disco#s026g_0048" about="dbpedia:Soneto">
+                        <title property="dc:title">A una nave corriendo tormenta</title>
+                        <title type="incipit" property="dc:alternative">Surca la nave el húmedo alboroto</title>
+                     </bibl>
+                     <bibl resource="disco#s026g_0049" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Cual Ícaro subiste, pensamiento,</title>
+                     </bibl>
+                     <bibl resource="disco#s026g_0050" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Cantas con primor, tanto soberano,</title>
+                     </bibl>
+                     <bibl resource="disco#s026g_0051" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">En cuantos paralelos el Sol dora,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <div>
+            <head>Juan de Moncayo</head>
+            <p>Zaragoza. 1600 - 1656</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s026g_0047">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-">¡Cómo se pasan, Lelio, las edades,</l>
+               <l n="2" met="-+---+---+-">sujetas al rigor de la inconstancia,</l>
+               <l n="3" met="---+-+---+-">cuando del mundo, bárbara ignorancia,</l>
+               <l n="4" met="--+--+---+-">desconoce terrestres potestades!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+----+---+-">Funda sobre diversas voluntades,</l>
+               <l n="6" met="-+---+---+-">de prósperos sucesos, la arrogancia,</l>
+               <l n="7" met="--+--+---+-" enjamb="B-cc_crossclause">y verás en su misma vigilancia</l>
+               <l n="8" met="-++--+---+-" enjamb="I-cc_crossclause">que todo es vanidad de vanidades.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+--++-">Nace el sol, en el término de un día</l>
+               <l n="10" met="+--+-+---+-" enjamb="B-pb_adj_prep">muere y comienza el curso repetido</l>
+               <l n="11" met="---+-+-+-+-" enjamb="I-pb_adj_prep">por la estación del cielo más serena.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-">Sólo a tanta mudanza mi agonía,</l>
+               <l n="13" met="--+--+---+-">en el lóbrego centro del olvido,</l>
+               <l n="14" met="-+---+---+-">anima el contrapeso de mi pena.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s026g_0048">
+            <head>A una nave corriendo tormenta</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+-+---+-" enjamb="B-pb_noun_prep">Surca la nave el húmedo alboroto</l>
+               <l n="2" met="-+---+---+-" enjamb="I-pb_noun_prep">del mar, y en sus cristales sumergida,</l>
+               <l n="3" met="+--+-+---+-">náufraga, da ejemplares a la vida</l>
+               <l n="4" met="--+--+---+-">con la tarda experiencia del piloto.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++---+---+-">No bien, pues, a los ímpetus del Noto</l>
+               <l n="6" met="-+---+---+-">resiste, de sus furias compelida,</l>
+               <l n="7" met="---+-+---+-">cuando en el riesgo muestra dividida,</l>
+               <l n="8" met="+--+---+-+-">rotas las jarcias y el trinquete roto.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--+---+-">Surcó el mar, en peñascos desiguales,</l>
+               <l n="10" met="--+--+---+-">señoreó de su centro las arenas,</l>
+               <l n="11" met="+-+--+---+-">ya tocando los astros celestiales.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+++-+-" enjamb="B-ex_subj_verb">Mas al soplo veloz de un viento, apenas</l>
+               <l n="13" met="---+++---+-" enjamb="I-ex_subj_verb">de lo que fue no deja las señales,</l>
+               <l n="14" met="-+---+---+-">¡oh trágico retrato de mis penas!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s026g_0049">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">Cual Ícaro subiste, pensamiento,</l>
+               <l n="2" met="-+-+---+-+-">al bien mayor que idolatró el cuidado,</l>
+               <l n="3" met="--+--+---+-">y en el mar de tu llanto fulminado</l>
+               <l n="4" met="+++--+---+-">le da nombre tu mísero escarmiento.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-">Fuiste incapaz, y penetrando el viento</l>
+               <l n="6" met="+----+-+-+-">sólo las esperanzas te han dejado;</l>
+               <l n="7" met="-+---+---+-">padece tus fortunas, desdichado,</l>
+               <l n="8" met="--+--+---+-">porque en ellas conozcas lo que siento.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+---+-+-">Rompe las olas que, de engaños llenas,</l>
+               <l n="10" met="++---+---+-">no templan los volcanes de mi pecho,</l>
+               <l n="11" met="---+--+--+-">aumentando tus penas con mis penas.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+-+-+-">Mi corazón atiende ya, deshecho</l>
+               <l n="13" met="-----+---+-">entre la confusión de sus arenas,</l>
+               <l n="14" met="-+---+---+-">rigor en impiedades satisfecho.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s026g_0050">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+---++---+-">Cantas con primor, tanto soberano,</l>
+               <l n="2" met="--+--+---+-">que logrando las dichas del acierto,</l>
+               <l n="3" met="-----+-+-+-">en la posteridad tomaste Puerto,</l>
+               <l n="4" met="+--+------+-">gloria mayor del Territorio Hispano.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-">No el Camoens en las veras Lusitano,</l>
+               <l n="6" met="++-----+-+-">no el Píndaro Andaluz, en chanza experto,</l>
+               <l n="7" met="--+--+---+-">consiguieron en Ritmos el concierto,</l>
+               <l n="8" met="+--+-+-+-+-">que hoy con la pluma nos dictó tu mano.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+----+---+-">Canta, a pesar del odio, y de la envidia,</l>
+               <l n="10" met="+--+---+-+-">joven ilustre, cuya edad derrama,</l>
+               <l n="11" met="-+------+-">celestes por las Zonas Esplendores.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+-+-+-">Para triunfo mayor con todos lidia,</l>
+               <l n="13" met="--+--+---+-">y verás con las manos de la fama,</l>
+               <l n="14" met="-+---+-+-+-">tu Frente coronar de varias flores.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s026g_0051">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+--++-">En cuantos paralelos el Sol dora,</l>
+               <l n="2" met="+--+-+--++-">rompa el Clarín sonoro, que te aclama,</l>
+               <l n="3" met="--+--+---+-">los aplausos mayores de la fama,</l>
+               <l n="4" met="---+-+---+-">pues a tu luz sus glorias atesora.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+----">Canta, y beba en tus Nácares la Aurora,</l>
+               <l n="6" met="-+---+---+-" enjamb="B-ex_subj_verb">la suave Ambrosía, que derrama</l>
+               <l n="7" met="-+-+---+-+-" enjamb="I-ex_subj_verb">tu dulce voz y de la esquiva Rama,</l>
+               <l n="8" met="+--+---+-+-">teja guirnaldas a tus sienes, Flora.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">Lo jocoso alternando con las veras</l>
+               <l n="10" met="+--+-+---+-">dando al Parnaso lustres, y primores,</l>
+               <l n="11" met="-+-+-+---+-">del Sol adornen cándidas Esferas.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+---+-" enjamb="B-ex_subj_verb">Tantos en ti se miren superiores</l>
+               <l n="13" met="-+---+---+-" enjamb="I-ex_subj_verb">los rayos, que en tus aguas reverberas,</l>
+               <l n="14" met="+-+--+--++-">cuantas la Alba, a tu ingenio inspiró flores.</l>
+            </lg>
+         </lg>
+      </body>
+  </text>
+</TEI>

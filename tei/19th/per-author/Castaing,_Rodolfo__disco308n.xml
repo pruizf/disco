@@ -1,218 +1,294 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Rodolfo Castaing</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_308n"/>
-          <name type="short">Castaing</name>
-          <name type="full">
-            <name type="first-name">Rodolfo</name>
-            <name type="second-name">Castaing</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">6</measure>
-        <measure unit="tokens">524</measure>
-        <measure unit="line">84</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_308n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_308n" role="author" sex="M">
-            <persName>Rodolfo Castaing</persName>
-            <birth><placeName type="place">Costa Rica</placeName>, <placeName type="country">Costa Rica</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Rodolfo Castaing</title>
+            <author corresp="#disco_308n">Rodolfo Castaing</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">6</measure>
+            <measure unit="tokens">524</measure>
+            <measure unit="line">84</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_308n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_308n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Castaing</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Rodolfo</forename>
+                     <surname property="foaf:familyName">Castaing</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Rodolfo Castaing</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Costa Rica</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s308n_1003" about="dbpedia:Soneto">
+                        <title property="dc:title">Pasionaria</title>
+                        <title type="incipit" property="dc:alternative">Tú bien sabes que vivo para amarte</title>
+                     </bibl>
+                     <bibl resource="disco#s308n_1004" about="dbpedia:Soneto">
+                        <title property="dc:title">Madre mía</title>
+                        <title type="incipit" property="dc:alternative">En una de las vueltas del sombrío</title>
+                     </bibl>
+                     <bibl resource="disco#s308n_1005" about="dbpedia:Soneto">
+                        <title property="dc:title">Su pañuelo</title>
+                        <title type="incipit" property="dc:alternative">No pretendas, con fútiles engaños,</title>
+                     </bibl>
+                     <bibl resource="disco#s308n_1006" about="dbpedia:Soneto">
+                        <title property="dc:title">Sus caprichos</title>
+                        <title type="incipit" property="dc:alternative">Una vez, por saber si cumpliría</title>
+                     </bibl>
+                     <bibl resource="disco#s308n_1007" about="dbpedia:Soneto">
+                        <title property="dc:title">Vuelo supremo</title>
+                        <title type="incipit" property="dc:alternative">Cruza el ave rozando la sabana</title>
+                     </bibl>
+                     <bibl resource="disco#s308n_1008" about="dbpedia:Soneto">
+                        <title property="dc:title">Anhelos</title>
+                        <title type="incipit" property="dc:alternative">En la copa nevada de un jazmín,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Rodolfo Castaing</head>
-        <p>Costa Rica. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s308n_1003">
-        <head>Pasionaria</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Tú bien sabes que vivo para amarte</l>
-          <l n="2">con fervor, sin quebrantos ni medida;</l>
-          <l n="3">tú sabes que, al hacerte mi elegida,</l>
-          <l n="4">la existencia he querido consagrarte.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Tú sabes que jamás podré olvidarte,</l>
-          <l n="6">pues lo que bien se quiere, no se olvida</l>
-          <l n="7">y mientras tenga un hálito de vida,</l>
-          <l n="8">ese hálito será para adorarte.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Por tu amor yo he luchado con desvelo,</l>
-          <l n="10">desgarrándome el alma en los abrojos</l>
-          <l n="11">crecidos a la sombra de ese anhelo;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y cuando, al fin postrándome de hinojos,</l>
-          <l n="13">para no sucumbir buscaba el cielo,</l>
-          <l n="14">¡tú me diste dos cielos en tus ojos!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s308n_1004">
-        <head>Madre mía</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">En una de las vueltas del sombrío</l>
-          <l n="2">Maravilla, atrevido y turbulento,</l>
-          <l n="3">hay un roble tronchado por el viento,</l>
-          <l n="4">confundiendo sus ramas con el río.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Privado del salvaje poderío</l>
-          <l n="6">que guardaba en su leño corpulento,</l>
-          <l n="7">sólo anhela un consuelo a su tormento</l>
-          <l n="8">de aquella agua en el loco desvarío.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Al igual de ese roble destronado</l>
-          <l n="10">que en las linfas oculta la tortura</l>
-          <l n="11">de sentirse abatido y destrozado,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¡cuántas veces rendido de amargura,</l>
-          <l n="13">en tu pecho la frente he reclinado</l>
-          <l n="14">para ocultar allí mi desventura!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s308n_1005">
-        <head>Su pañuelo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">No pretendas, con fútiles engaños,</l>
-          <l n="2">rescatar el pañuelo tan deseado,</l>
-          <l n="3">que una noche, encontrándome a tu lado</l>
-          <l n="4">hice mío a pesar de tus regaños.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Emblema delicioso de tus años,</l>
-          <l n="6">ese tesoro, blanco y perfumado,</l>
-          <l n="7">sobre el pecho lo guardo apasionado,</l>
-          <l n="8">para enjugar posibles desengaños.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Porque en lúgubres horas de desvelo,</l>
-          <l n="10">cuando llevo a mi frente adolorida</l>
-          <l n="11">tu reliquia, en demanda de consuelo,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">me parecen que en ella viven presos,</l>
-          <l n="13">¡el encanto sonriente de tu vida</l>
-          <l n="14">y el rumor inefable de tus besos!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s308n_1006">
-        <head>Sus caprichos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Una vez, por saber si cumpliría</l>
-          <l n="2">lo que ella me ordenaba zalamera,</l>
-          <l n="3">arrojó en la prisión de una pantera</l>
-          <l n="4">el pañuelo que tanto le pedía.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Yo intenté, demostrando valentía,</l>
-          <l n="6">librar aquella prenda de la fiera,</l>
-          <l n="7">y, al hacerlo, una zarpa traicionera</l>
-          <l n="8">castigó duramente mi osadía.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Ella entonces, con paso vacilante</l>
-          <l n="10">vino a mí, de su hazaña arrepentida;</l>
-          <l n="11">y al mirar en mi pecho palpitante</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">el rastro de la garra maldecida,</l>
-          <l n="13">¡desató su cabello rutilante</l>
-          <l n="14">para limpiar la sangre de mi herida!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s308n_1007">
-        <head>Vuelo supremo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Cruza el ave rozando la sabana</l>
-          <l n="2">que le extiende una alfombra de verdor,</l>
-          <l n="3">y, al potente vibrar de su motor,</l>
-          <l n="4">se remonta, gallarda y soberana.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">En la gloria triunfal de la mañana</l>
-          <l n="6">es el cielo de luces una flor;</l>
-          <l n="7">y en los aires, audaz, el aviador,</l>
-          <l n="8">lanza un reto a la muerte tan lejana.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mas el ave que ha sido detenida</l>
-          <l n="10">en la rauda carrera de su vuelo,</l>
-          <l n="11">por la parca se siente sacudida;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y al hacerse pedazos contra el suelo,</l>
-          <l n="13">¡glorifica a dos bravos que, sin vida</l>
-          <l n="14">en su almas se vuelven hacia el cielo!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s308n_1008">
-        <head>Anhelos</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">En la copa nevada de un jazmín,</l>
-          <l n="2">donde el aura conviértese en rumores,</l>
-          <l n="3">un trono han fabricado a sus amores,</l>
-          <l n="4">dos gorriones que habitan el jardín.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Cuando el sol al perderse en el confín</l>
-          <l n="6">baña a la planta en suaves resplandores,</l>
-          <l n="7">ilumina un idilio entre las flores,</l>
-          <l n="8">cuyo ensueño de amor no tiene fin.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Deliciosa visión la de ese nido</l>
-          <l n="10">columbrado a los rayos del ocaso!</l>
-          <l n="11">¿Lograré yo, después de haber vivido</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">resignado al capricho del acaso,</l>
-          <l n="13">encontrar para siempre convertido</l>
-          <l n="14">de amor en casto nido tu regazo?</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Rodolfo Castaing</head>
+            <p>Costa Rica. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s308n_1003">
+            <head>Pasionaria</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+++--+---+-">Tú bien sabes que vivo para amarte</l>
+               <l n="2" met="--+--+---+-">con fervor, sin quebrantos ni medida;</l>
+               <l n="3" met="++---++--+-">tú sabes que, al hacerte mi elegida,</l>
+               <l n="4" met="--++-+---+-">la existencia he querido consagrarte.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++---+-+-+-">Tú sabes que jamás podré olvidarte,</l>
+               <l n="6" met="---+-+-+-+-">pues lo que bien se quiere, no se olvida</l>
+               <l n="7" met="---+++---+-">y mientras tenga un hálito de vida,</l>
+               <l n="8" met="++---+---+-">ese hálito será para adorarte.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--++-+---+-">Por tu amor yo he luchado con desvelo,</l>
+               <l n="10" met="--+-++---+-" enjamb="B-pb_adj_noun">desgarrándome el alma en los abrojos</l>
+               <l n="11" met="-+---+-+-+-" enjamb="I-pb_adj_noun">crecidos a la sombra de ese anhelo;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+-+-+-">y cuando, al fin postrándome de hinojos,</l>
+               <l n="13" met="--+--+-+-+-">para no sucumbir buscaba el cielo,</l>
+               <l n="14" met="+++-++---+-">¡tú me diste dos cielos en tus ojos!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s308n_1004">
+            <head>Madre mía</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">En una de las vueltas del sombrío</l>
+               <l n="2" met="--+--+---+-">Maravilla, atrevido y turbulento,</l>
+               <l n="3" met="+++--+---+-">hay un roble tronchado por el viento,</l>
+               <l n="4" met="--+--+---+-">confundiendo sus ramas con el río.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-" enjamb="B-cc_crossclause">Privado del salvaje poderío</l>
+               <l n="6" met="--+--+---+-" enjamb="I-cc_crossclause">que guardaba en su leño corpulento,</l>
+               <l n="7" met="+-++-+---+-" enjamb="B-pb_noun_prep">sólo anhela un consuelo a su tormento</l>
+               <l n="8" met="-++--+---+-" enjamb="I-pb_noun_prep">de aquella agua en el loco desvarío.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--++-+---+-" enjamb="B-cc_crossclause">Al igual de ese roble destronado</l>
+               <l n="10" met="--+--+---+-" enjamb="B-pb_noun_prep I-cc_crossclause">que en las linfas oculta la tortura</l>
+               <l n="11" met="--++-+---+-" enjamb="I-pb_noun_prep">de sentirse abatido y destrozado,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-">¡cuántas veces rendido de amargura,</l>
+               <l n="13" met="--+--++--+-" enjamb="B-pb_verb_chain">en tu pecho la frente he reclinado</l>
+               <l n="14" met="---+-+---+-" enjamb="I-pb_verb_chain">para ocultar allí mi desventura!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s308n_1005">
+            <head>Su pañuelo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-">No pretendas, con fútiles engaños,</l>
+               <l n="2" met="--+--+-+-+-">rescatar el pañuelo tan deseado,</l>
+               <l n="3" met="+-+--+-+-+-">que una noche, encontrándome a tu lado</l>
+               <l n="4" met="+-+------+-">hice mío a pesar de tus regaños.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">Emblema delicioso de tus años,</l>
+               <l n="6" met="+--+-+---+-">ese tesoro, blanco y perfumado,</l>
+               <l n="7" met="--+-++---+-">sobre el pecho lo guardo apasionado,</l>
+               <l n="8" met="---+-+---+-">para enjugar posibles desengaños.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">Porque en lúgubres horas de desvelo,</l>
+               <l n="10" met="--+--+---+-" enjamb="B-ex_dobj_verb">cuando llevo a mi frente adolorida</l>
+               <l n="11" met="--+------+-" enjamb="I-ex_dobj_verb">tu reliquia, en demanda de consuelo,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+-+-+-">me parecen que en ella viven presos,</l>
+               <l n="13" met="--+--+---+-">¡el encanto sonriente de tu vida</l>
+               <l n="14" met="--+--+---+-">y el rumor inefable de tus besos!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s308n_1006">
+            <head>Sus caprichos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-" enjamb="B-ex_subj_verb">Una vez, por saber si cumpliría</l>
+               <l n="2" met="-+-+-+---+-" enjamb="I-ex_subj_verb">lo que ella me ordenaba zalamera,</l>
+               <l n="3" met="--+--++--+-" enjamb="B-ex_subj_verb">arrojó en la prisión de una pantera</l>
+               <l n="4" met="--+--+-+-+-" enjamb="I-ex_subj_verb">el pañuelo que tanto le pedía.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-">Yo intenté, demostrando valentía,</l>
+               <l n="6" met="-+-+-+---+-">librar aquella prenda de la fiera,</l>
+               <l n="7" met="--++-+---+-" enjamb="B-ex_subj_verb">y, al hacerlo, una zarpa traicionera</l>
+               <l n="8" met="--++-+---+-" enjamb="I-ex_subj_verb">castigó duramente mi osadía.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+---+-" enjamb="B-ex_subj_verb">Ella entonces, con paso vacilante</l>
+               <l n="10" met="+-+--+---+-" enjamb="I-ex_subj_verb">vino a mí, de su hazaña arrepentida;</l>
+               <l n="11" met="--+--+---+-" enjamb="B-ex_dobj_verb">y al mirar en mi pecho palpitante</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-" enjamb="I-ex_dobj_verb">el rastro de la garra maldecida,</l>
+               <l n="13" met="--+--+---+-">¡desató su cabello rutilante</l>
+               <l n="14" met="---+-+---+-">para limpiar la sangre de mi herida!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s308n_1007">
+            <head>Vuelo supremo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+---+-" enjamb="B-cc_crossclause">Cruza el ave rozando la sabana</l>
+               <l n="2" met="-+++-+---+-" enjamb="I-cc_crossclause">que le extiende una alfombra de verdor,</l>
+               <l n="3" met="--+--+---+-">y, al potente vibrar de su motor,</l>
+               <l n="4" met="--+--+---+-">se remonta, gallarda y soberana.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-">En la gloria triunfal de la mañana</l>
+               <l n="6" met="+-+--+-+-+-">es el cielo de luces una flor;</l>
+               <l n="7" met="--+--+---+-">y en los aires, audaz, el aviador,</l>
+               <l n="8" met="+++--+-+-+-">lanza un reto a la muerte tan lejana.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+-++---+-">Mas el ave que ha sido detenida</l>
+               <l n="10" met="--+--+---+-">en la rauda carrera de su vuelo,</l>
+               <l n="11" met="--+--+---+-">por la parca se siente sacudida;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++-+---+-">y al hacerse pedazos contra el suelo,</l>
+               <l n="13" met="--+-++---+-" enjamb="B-pb_noun_prep">¡glorifica a dos bravos que, sin vida</l>
+               <l n="14" met="-+--+----+-" enjamb="I-pb_noun_prep">en su almas se vuelven hacia el cielo!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s308n_1008">
+            <head>Anhelos</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+-+-+-">En la copa nevada de un jazmín,</l>
+               <l n="2" met="--+--+-+-+-">donde el aura conviértese en rumores,</l>
+               <l n="3" met="+++--+---+-">un trono han fabricado a sus amores,</l>
+               <l n="4" met="+-+--+---+-">dos gorriones que habitan el jardín.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--++--+-" enjamb="B-ex_subj_verb">Cuando el sol al perderse en el confín</l>
+               <l n="6" met="+--+-+---+-" enjamb="I-ex_subj_verb">baña a la planta en suaves resplandores,</l>
+               <l n="7" met="--++-+---+-">ilumina un idilio entre las flores,</l>
+               <l n="8" met="--+--+++-+-">cuyo ensueño de amor no tiene fin.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+-+-+-" enjamb="B-pb_adj_noun">¡Deliciosa visión la de ese nido</l>
+               <l n="10" met="--+--+---+-" enjamb="I-pb_adj_noun">columbrado a los rayos del ocaso!</l>
+               <l n="11" met="--++---+-+-" enjamb="B-pb_verb_chain">¿Lograré yo, después de haber vivido</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-" enjamb="I-pb_verb_chain">resignado al capricho del acaso,</l>
+               <l n="13" met="--+--+---+-" enjamb="B-pb_adj_prep">encontrar para siempre convertido</l>
+               <l n="14" met="-+-+-+---+-" enjamb="I-pb_adj_prep">de amor en casto nido tu regazo?</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

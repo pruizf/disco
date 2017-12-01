@@ -1,118 +1,181 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de José María Posada</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_137n"/>
-          <name type="short">Posada</name>
-          <name type="full">
-            <name type="first-name">José María</name>
-            <name type="second-name">Posada</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">170</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_137n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_137n" role="author" sex="M">
-            <persName>José María Posada</persName>
-            <birth><placeName type="place">Vigo (Pontevedra)</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1817" cert="high">1817</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1886" cert="high">1886</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de José María Posada</title>
+            <author corresp="#disco_137n">José María Posada</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">170</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_137n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_137n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Posada</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">José María</forename>
+                     <surname property="foaf:familyName">Posada</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">José María Posada</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Vigo (Pontevedra)</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1817" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1886" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s137n_0396" about="dbpedia:Soneto">
+                        <title property="dc:title">Felicitación en el día del santo</title>
+                        <title type="incipit" property="dc:alternative">Dichoso yo, que por favor del cielo,</title>
+                     </bibl>
+                     <bibl resource="disco#s137n_0397" about="dbpedia:Soneto">
+                        <title property="dc:title">Al poeta José Benito Amado</title>
+                        <title type="incipit" property="dc:alternative">Nota de ingratitud yo mereciera,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>José María Posada</head>
-        <p>Vigo (Pontevedra). 1817 - 1886</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s137n_0396">
-        <head>Felicitación en el día del santo</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Dichoso yo, que por favor del cielo,</l>
-          <l n="2">encontré lo que tanto deseaba,</l>
-          <l n="3">para apagar la sed que me abrasaba,</l>
-          <l n="4">andando por los yermos de este suelo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Sed de un amor de paz y de consuelo</l>
-          <l n="6">tras de otro amor que el alma me angustiaba,</l>
-          <l n="7">ostentando el placer de verla esclava,</l>
-          <l n="8">rendida siempre a su imperioso anhelo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Al verme en tan penosa desventura</l>
-          <l n="10">guiado por impulso misterioso,</l>
-          <l n="11">ofrecí al Eterno mi amargura;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">miróme compasivo, y, bondadoso,</l>
-          <l n="13">entregóme a un Arcángel de dulzura,</l>
-          <l n="14">celoso de mi bien y mi reposo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s137n_0397">
-        <head>Al poeta José Benito Amado</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Nota de ingratitud yo mereciera,</l>
-          <l n="2">por falta de respeto y simpatía,</l>
-          <l n="3">si al cantor de la cándida María</l>
-          <l n="4">frases de admiración no dirigiera.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Reproduce lo bello de manera</l>
-          <l n="6">que el alma s embelesa y extasía</l>
-          <l n="7">ante cuadros que sólo pintaría</l>
-          <l n="8">quién tal misión del cielo recibiera.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Campiña, santuario, amor sublime,</l>
-          <l n="10">piadosa devoción, sentida historia...</l>
-          <l n="11">A todo, de verdad el sello imprime.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y, guiado del arte, por más gloria,</l>
-          <l n="13">cuanto del Genio por primor se estime,</l>
-          <l n="14">da, cual rico manjar, a mi memoria.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>José María Posada</head>
+            <p>Vigo (Pontevedra). 1817 - 1886</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s137n_0396">
+            <head>Felicitación en el día del santo</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-">Dichoso yo, que por favor del cielo,</l>
+               <l n="2" met="--+--+---+-">encontré lo que tanto deseaba,</l>
+               <l n="3" met="---+-+-+-+-">para apagar la sed que me abrasaba,</l>
+               <l n="4" met="-+---+-+-+-">andando por los yermos de este suelo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+-+---+-">Sed de un amor de paz y de consuelo</l>
+               <l n="6" met="-+-+-+-+-+-">tras de otro amor que el alma me angustiaba,</l>
+               <l n="7" met="--+--+-+++-">ostentando el placer de verla esclava,</l>
+               <l n="8" met="-+-+---+-+-">rendida siempre a su imperioso anhelo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+---+-">Al verme en tan penosa desventura</l>
+               <l n="10" met="-+---+---+-">guiado por impulso misterioso,</l>
+               <l n="11" met="--+-+----+-">ofrecí al Eterno mi amargura;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">miróme compasivo, y, bondadoso,</l>
+               <l n="13" met="--++-+---+-">entregóme a un Arcángel de dulzura,</l>
+               <l n="14" met="-+---+---+-">celoso de mi bien y mi reposo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s137n_0397">
+            <head>Al poeta José Benito Amado</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+----++--+-">Nota de ingratitud yo mereciera,</l>
+               <l n="2" met="-+---+---+-">por falta de respeto y simpatía,</l>
+               <l n="3" met="--+--+---+-" enjamb="B-ex_subj_verb">si al cantor de la cándida María</l>
+               <l n="4" met="+----++--+-" enjamb="I-ex_subj_verb">frases de admiración no dirigiera.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-" enjamb="B-cc_crossclause">Reproduce lo bello de manera</l>
+               <l n="6" met="-+-+--+--+-" enjamb="B-pb_noun_prep I-cc_crossclause">que el alma s embelesa y extasía</l>
+               <l n="7" met="--+--+---+-" enjamb="B-ex_dobj_verb I-pb_noun_prep">ante cuadros que sólo pintaría</l>
+               <l n="8" met="++-+-+---+-" enjamb="I-ex_dobj_verb">quién tal misión del cielo recibiera.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+--+--+-+-">Campiña, santuario, amor sublime,</l>
+               <l n="10" met="-+---+-+-+-">piadosa devoción, sentida historia...</l>
+               <l n="11" met="-+---+-+-+-">A todo, de verdad el sello imprime.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+--++-">Y, guiado del arte, por más gloria,</l>
+               <l n="13" met="+--+---+-+-">cuanto del Genio por primor se estime,</l>
+               <l n="14" met="+-+--+---+-">da, cual rico manjar, a mi memoria.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

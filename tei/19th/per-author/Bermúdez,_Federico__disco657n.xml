@@ -1,93 +1,153 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Federico Bermúdez</title>
-        <author>
-          <idno type="viaf" cert="high">17304327</idno>
-          <idno type="#disco" xml:id="disco_657n"/>
-          <name type="short">Bermúdez</name>
-          <name type="full">
-            <name type="first-name">Federico</name>
-            <name type="second-name">Bermúdez</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">89</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_657n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_657n" role="author" sex="M">
-            <persName>Federico Bermúdez</persName>
-            <birth><placeName type="place">San Pedro de Macorís</placeName>, <placeName type="country">República Dominicana</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1884" cert="high">1884</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1921" cert="high">1921</date>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Federico Bermúdez</title>
+            <author corresp="#disco_657n">Federico Bermúdez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">89</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_657n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_657n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/17304327"/>
+                  <persName type="short">Bermúdez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Federico</forename>
+                     <surname property="foaf:familyName">Bermúdez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Federico Bermúdez</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">San Pedro de Macorís</settlement>
+                           <country>República Dominicana</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1884" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1921" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s657n_2405" about="dbpedia:Soneto">
+                        <title property="dc:title">Ni a Bruto ni a Casca</title>
+                        <title type="incipit" property="dc:alternative">¡Con ímpetu febril se alzó una mano</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Federico Bermúdez</head>
-        <p>San Pedro de Macorís. 1884 - 1921</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s657n_2405">
-        <head>Ni a Bruto ni a Casca</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Con ímpetu febril se alzó una mano</l>
-          <l n="2">armada del Puñal, y a golpe fiero,</l>
-          <l n="3">cayó, bajo el ultraje del acero,</l>
-          <l n="4">como un ídolo roto, el Soberano!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">El pueblo aplaude la resuelta mano</l>
-          <l n="6">y bendice febril el golpe fiero,</l>
-          <l n="7">y grita, triunfador: ¡Hurra el acero!</l>
-          <l n="8">y prorrumpe, infeliz: ¡murió el Tirano!...</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Y, pasó que después del negro oficio,</l>
-          <l n="10">después del lamentable sacrificio,</l>
-          <l n="11">al remover la cresta del pantano</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">se vio, con gran asombro para el mundo,</l>
-          <l n="13">que la limpieza del pantano inmundo,</l>
-          <l n="14">¡se concretó a la muerte de un gusano!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Federico Bermúdez</head>
+            <p>San Pedro de Macorís. 1884 - 1921</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s657n_2405">
+            <head>Ni a Bruto ni a Casca</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+-+-+-" enjamb="B-pb_adj_noun">¡Con ímpetu febril se alzó una mano</l>
+               <l n="2" met="-+---+-+-+-" enjamb="I-pb_adj_noun">armada del Puñal, y a golpe fiero,</l>
+               <l n="3" met="-+---+---+-">cayó, bajo el ultraje del acero,</l>
+               <l n="4" met="-++--+---+-">como un ídolo roto, el Soberano!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-">El pueblo aplaude la resuelta mano</l>
+               <l n="6" met="--+--+-+-+-">y bendice febril el golpe fiero,</l>
+               <l n="7" met="-+---+---+-">y grita, triunfador: ¡Hurra el acero!</l>
+               <l n="8" met="--+--+-+-+-">y prorrumpe, infeliz: ¡murió el Tirano!...</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+----+-+-">Y, pasó que después del negro oficio,</l>
+               <l n="10" met="-----+---+-">después del lamentable sacrificio,</l>
+               <l n="11" met="---+-+---+-" enjamb="B-ex_subj_verb">al remover la cresta del pantano</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+---+-" enjamb="I-ex_subj_verb">se vio, con gran asombro para el mundo,</l>
+               <l n="13" met="---+---+-+-">que la limpieza del pantano inmundo,</l>
+               <l n="14" met="---+-+-+-+-">¡se concretó a la muerte de un gusano!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>El amor tardío</title>
+            <author corresp="#disco_616n">Ángel Lasso de la Vega Fiscowich</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">102</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_po_616n2280"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_616n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Lasso de la Vega Fiscowich</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ángel</forename>
+                     <surname property="foaf:familyName">Lasso de la Vega Fiscowich</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ángel Lasso de la Vega
+                  Fiscowich</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s616n2280" about="dbpedia:Soneto">
+                        <title property="dc:title">El amor tardío</title>
+                        <title type="incipit" property="dc:alternative">De nuevo amor, bajo sus negras cejas,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <head>El amor tardío</head>
+      </front>
+      <body>
+         <lg n="1" type="serventesio">
+            <l n="1" met="-+-+---+-+-">De nuevo amor, bajo sus negras cejas,</l>
+            <l n="2" met="++--++---+-" enjamb="B-ex_subj_verb">me mira de tal modo, que mi alma</l>
+            <l n="3" met="-+---+---+-" enjamb="I-ex_subj_verb">destroza, y con sus dulces llamamientos,</l>
+            <l n="4" met="-+--+--+++-" enjamb="B-ex_dobj_verb">por todos los medios de atraerme trata</l>
+         </lg>
+         <lg n="2" type="unknown">
+            <l n="5" met="--+--+-+-+-" enjamb="I-ex_dobj_verb">a las redes de Cipris tan temibles.</l>
+            <l n="6" met="+-++-+-+++-" enjamb="B-ex_subj_verb">Tiemblo al verle cercano; horror me causa</l>
+            <l n="7" met="+++--+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">cual un raudo corcel que en la carrera</l>
+            <l n="8" met="-+-+-+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">el premio obtuvo, y tiembla y se amilana</l>
+         </lg>
+         <lg n="3" type="terceto">
+            <l n="9" met="--+--+-+-+-" enjamb="B-ex_subj_verb I-ex_subj_verb">cuando inútil y viejo, le es forzoso</l>
+            <l n="10" met="--+--+---+-" enjamb="I-ex_subj_verb">recibir los arreos y las galas,</l>
+            <l n="11" met="-+-+---+-+-" enjamb="B-pb_noun_prep">y entrar en lid y en el raudo tiro</l>
+         </lg>
+         <lg n="4" type="terceto">
+            <l n="12" met="---+--+--+-" enjamb="I-pb_noun_prep">con el caballo ardiente que piafa,</l>
+            <l n="13" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">la rienda suelta; cuando ya conoce</l>
+            <l n="14" met="-+-+---+++-" enjamb="I-ex_dobj_verb">que al fin la fuerza y el vigor le falta.</l>
+         </lg>
+      </body>
+  </text>
+</TEI>

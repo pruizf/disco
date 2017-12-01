@@ -1,118 +1,182 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Juan Francisco Manzano</title>
-        <author>
-          <idno type="viaf" cert="high">69056604</idno>
-          <idno type="#disco" xml:id="disco_488n"/>
-          <name type="short">Manzano</name>
-          <name type="full">
-            <name type="first-name">Juan Francisco</name>
-            <name type="second-name">Manzano</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">189</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_488n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_488n" role="author" sex="M">
-            <persName>Juan Francisco Manzano</persName>
-            <birth><placeName type="place">La Habana (Cuba)</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1797" cert="high">1797</date>, <date type="century">18</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1857" cert="high">1857</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Juan Francisco Manzano</title>
+            <author corresp="#disco_488n">Juan Francisco Manzano</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">189</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_488n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_488n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/69056604"/>
+                  <persName type="short">Manzano</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan Francisco</forename>
+                     <surname property="foaf:familyName">Manzano</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan Francisco Manzano</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">La Habana</settlement>
+                           <country>Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1797" cert="high"/>
+                     <date type="century">18</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1857" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s488n_1835" about="dbpedia:Soneto">
+                        <title property="dc:title">Amor</title>
+                        <title type="incipit" property="dc:alternative">Azucena gentil, fragante y pura,</title>
+                     </bibl>
+                     <bibl resource="disco#s488n_1836" about="dbpedia:Soneto">
+                        <title property="dc:title">Mis treinta años</title>
+                        <title type="incipit" property="dc:alternative">Cuando miro el espacio que he corrido</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Juan Francisco Manzano</head>
-        <p>La Habana (Cuba). 1797 - 1857</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s488n_1835">
-        <head>Amor</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Azucena gentil, fragante y pura,</l>
-          <l n="2">que das galas al vergel, vertiendo amores,</l>
-          <l n="3">tú eres, flor, la más linda de las flores</l>
-          <l n="4">siendo igual tu modestia a tu hermosura.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La peregrina llama que fulgura</l>
-          <l n="6">en tus cubanos ojos brilladores,</l>
-          <l n="7">disipa en su expresión mis sinsabores</l>
-          <l n="8">como emblema de gloria y de ventura.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Yo te adoro, mi bien, como a la brisa</l>
-          <l n="10">ama el gentil sonoro riachuelo,</l>
-          <l n="11">como adora el sunsún a la floresta;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">pues en tu joven frente se divisa</l>
-          <l n="13">el timbre halagador que te dio el cielo</l>
-          <l n="14">de hermosa, de cubana y de modesta.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s488n_1836">
-        <head>Mis treinta años</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Cuando miro el espacio que he corrido</l>
-          <l n="2">desde la cuna hasta el presente día,</l>
-          <l n="3">tiemblo, y saludo a la fortuna mía,</l>
-          <l n="4">más de terror que de atención movido.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Sorpréndeme la lucha que he podido</l>
-          <l n="6">sostener contra suerte tan impía,</l>
-          <l n="7">si tal llamarse puede la porfía</l>
-          <l n="8">de mi infelice ser, al mal nacido.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Treinta años ha que conocí la tierra;</l>
-          <l n="10">treinta años ha que en gemidor estado</l>
-          <l n="11">triste infortunio por doquier me asalta.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mas nada es para mí la cruda guerra</l>
-          <l n="13">que en vano suspirar en soportado,</l>
-          <l n="14">si la calculo ¡oh Dios! con la que falta.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Juan Francisco Manzano</head>
+            <p>La Habana (Cuba). 1797 - 1857</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s488n_1835">
+            <head>Amor</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+-+-+-">Azucena gentil, fragante y pura,</l>
+               <l n="2" met="-++---+-+-+-">que das galas al vergel, vertiendo amores,</l>
+               <l n="3" met="+-+-++---+-">tú eres, flor, la más linda de las flores</l>
+               <l n="4" met="+-+--+---+-">siendo igual tu modestia a tu hermosura.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-">La peregrina llama que fulgura</l>
+               <l n="6" met="---+-+---+-">en tus cubanos ojos brilladores,</l>
+               <l n="7" met="-+---+---+-">disipa en su expresión mis sinsabores</l>
+               <l n="8" met="--+--+---+-">como emblema de gloria y de ventura.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+++--+---+-" enjamb="B-ex_subj_verb">Yo te adoro, mi bien, como a la brisa</l>
+               <l n="10" met="+---+-+--+-" enjamb="I-ex_subj_verb">ama el gentil sonoro riachuelo,</l>
+               <l n="11" met="--+--+---+-">como adora el sunsún a la floresta;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+---+-">pues en tu joven frente se divisa</l>
+               <l n="13" met="-+---+-+++-" enjamb="B-pb_noun_prep">el timbre halagador que te dio el cielo</l>
+               <l n="14" met="-+---+---+-" enjamb="I-pb_noun_prep">de hermosa, de cubana y de modesta.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s488n_1836">
+            <head>Mis treinta años</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+-+-+-">Cuando miro el espacio que he corrido</l>
+               <l n="2" met="---+---+-+-">desde la cuna hasta el presente día,</l>
+               <l n="3" met="+--+---+-+-">tiemblo, y saludo a la fortuna mía,</l>
+               <l n="4" met="+--+---+-+-">más de terror que de atención movido.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+-+-+-+-" enjamb="B-pb_verb_chain">Sorpréndeme la lucha que he podido</l>
+               <l n="6" met="--+--+-+-+-" enjamb="I-pb_verb_chain">sostener contra suerte tan impía,</l>
+               <l n="7" met="-+-+++---+-" enjamb="B-pb_noun_prep">si tal llamarse puede la porfía</l>
+               <l n="8" met="---+-+-+-+-" enjamb="I-pb_noun_prep">de mi infelice ser, al mal nacido.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++-+---+-+-">Treinta años ha que conocí la tierra;</l>
+               <l n="10" met="++-+---+-+-" enjamb="B-pb_adj_noun">treinta años ha que en gemidor estado</l>
+               <l n="11" met="+--+---+++-" enjamb="I-pb_adj_noun">triste infortunio por doquier me asalta.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+-+-+-" enjamb="B-cc_crossclause">Mas nada es para mí la cruda guerra</l>
+               <l n="13" met="-+---+---+-" enjamb="I-cc_crossclause">que en vano suspirar en soportado,</l>
+               <l n="14" met="-+-+-+---+-">si la calculo ¡oh Dios! con la que falta.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

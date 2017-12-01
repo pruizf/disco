@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Carlos Boyl</title>
+            <author corresp="#disco_255g">Carlos Boyl</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">4</measure>
+            <measure unit="tokens">411</measure>
+            <measure unit="line">62</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_255g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_255g"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/75938511"/>
+                  <persName type="short">Boyl</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Carlos</forename>
+                     <surname property="foaf:familyName">Boyl</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Carlos Boyl</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Valencia</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1577" cert="high"/>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1618" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s255g_0534" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto a la venida del ilustrísimo y excelentísimo señor Duque de Feria, virrey y capitán general en esta ciudad y reino de Valencia</title>
+                        <title type="incipit" property="dc:alternative">El sol de Feria envuelto en Ferias vino</title>
+                     </bibl>
+                     <bibl resource="disco#s255g_0535" about="dbpedia:Soneto">
+                        <title property="dc:title">Al nacimiento del señor Marqués de Villalba, su hijo del señor Duque de Feria, y de mi señora doña Isabel de Córdoba, hija del Duque de César</title>
+                        <title type="incipit" property="dc:alternative">La Cesarina excelsa hermosa Luna</title>
+                     </bibl>
+                     <bibl resource="disco#s255g_0536" about="dbpedia:Soneto">
+                        <title property="dc:title">A Lope de Vega cuyo nombre va en él cifrado</title>
+                        <title type="incipit" property="dc:alternative">Lacedemonia se honra de Bulides,</title>
+                     </bibl>
+                     <bibl resource="disco#s255g_0537" about="dbpedia:Soneto">
+                        <title property="dc:title">A Francisco Cascales, cuyo nombre va en el cifrado</title>
+                        <title type="incipit" property="dc:alternative">Famoso nombre Córdoba la llana</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <div>
+            <head>Carlos Boyl</head>
+            <p>Valencia. 1577 - 1618</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s255g_0534">
+            <head>Soneto a la venida del ilustrísimo y excelentísimo señor Duque de Feria, virrey y capitán general en esta ciudad y reino de Valencia</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+-+-+-">El sol de Feria envuelto en Ferias vino</l>
+               <l n="2" met="++-+---+-+-">delas grandezas de su insigne estado,</l>
+               <l n="3" met="--+--+---+-">por quien trae el que menos obligado,</l>
+               <l n="4" met="--+--+---+-">que contar de la feria de contino.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--++-+-+-+-" enjamb="B-ex_dobj_verb">Según le va en la Feria, me imagino</l>
+               <l n="6" met="+--+--+--+-" enjamb="I-ex_dobj_verb">que habla el deseo que obligó al Feriado,</l>
+               <l n="7" met="-+---+-+++-" enjamb="B-pb_verb_adv">y así en mi obligación en Feria he dado</l>
+               <l n="8" met="+--+-+-+-+-" enjamb="I-pb_verb_adv">loas al dueño desta Feria dino.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-++--+-" enjamb="B-pb_noun_prep">La tienda de esta Feria es la venida</l>
+               <l n="10" met="--+--+---+-" enjamb="B-ex_subj_verb I-pb_noun_prep">del mayor atributo que en el suelo</l>
+               <l n="11" met="-+-+---+-+-" enjamb="I-ex_subj_verb">prestó a la fama para hallar materia.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+-+---+-" enjamb="B-ex_subj_verb">Por quien la voz del bien agradecido</l>
+               <l n="13" met="-+---++--+-" enjamb="B-ex_dobj_verb I-ex_subj_verb">en Ferias de su amor puso en el Cielo</l>
+               <l n="14" met="-+-+--++-+-" enjamb="I-ex_dobj_verb">la tienda alegre que le dio esta Feria.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s255g_0535">
+            <head>Al nacimiento del señor Marqués de Villalba, su hijo del señor Duque de Feria, y de mi señora doña Isabel de Córdoba, hija del Duque de César</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+-+-+-">La Cesarina excelsa hermosa Luna</l>
+               <l n="2" met="-+-+-+-+-+-">del sol de Feria amando el nuptio asiento</l>
+               <l n="3" met="-+---+---+-">al alma ( de sus rayos movimiento)</l>
+               <l n="4" met="--+--++--+-">entre llamas de luz puso en la cuna.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-">Diole estado en naciendo la Fortuna,</l>
+               <l n="6" met="-+-+-+---+-">Mercurio y Marte, letras y ardimiento,</l>
+               <l n="7" met="-++-+----+-">Apolo y Iove raro entendimiento,</l>
+               <l n="8" met="++---+-+-+-">que es don que de los otros es columna.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-" enjamb="B-cc_crossclause">El Cielo (por remate de los bienes</l>
+               <l n="10" met="++-----+-+-" enjamb="I-cc_crossclause">que a esta Alba suya venturosa envía)</l>
+               <l n="11" met="--+--+-+-+-">al nacer en Valencia le hizo salva.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--++--+-">¡Oh suceso que a ser único vienes!</l>
+               <l n="13" met="-+-+-+-+-+-">pues vio Valencia al Alba en medio día,</l>
+               <l n="14" met="-+--++---+-">naciendo el marqués bello de Villaba.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s255g_0536">
+            <head>A Lope de Vega cuyo nombre va en él cifrado</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+---+-">Lacedemonia se honra de Bulides,</l>
+               <l n="2" met="-+---+---+-">Ortigia de su oráculo y su suerte,</l>
+               <l n="3" met="+-++---+-+-">Préciase Atenas de su Codro fuerte,</l>
+               <l n="4" met="-----+---+-">Esparta de Cleomenes y sus lides.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+--+--+-">Del gran Teseo y del famoso Alcides</l>
+               <l n="6" met="++-+-+---+-">Es Grecia madre, y tiene aunque, en la muerte,</l>
+               <l n="7" met="+--+-+---+-">Vivo al famoso hijo de Laerte,</l>
+               <l n="8" met="---+---+-+-">En el estado en que se vio su Euclides.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+---+-">Gentil renombre Córdoba la llana</l>
+               <l n="10" met="-+--++--++-">Adquiere, porque ha Séneca ha criado,</l>
+               <l n="11" met="-+-+---+-+-">Crisosl y espejo de la ciencia Hispana.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+---+-+--+-">Ahora, mejorando más su estado,</l>
+               <l n="13" met="-+-+-+-+-+-">Recibe honor Madrid, alegre, ufana</l>
+               <l n="14" met="---+-+-+-+-">Por el varón insigne que ha engendrado.</l>
+            </lg>
+            <lg n="5" type="terceto">
+               <l n="15" met="-----+-++-" enjamb="B-ex_dobj_verb">Y pues su cielo ha dado</l>
+               <l n="16" met="+--+-+-+-+-" enjamb="I-ex_dobj_verb">otro retrato de estas sombras vivo,</l>
+               <l n="17" met="+--+---+-+-">loen mis versos su saber altivo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s255g_0537">
+            <head>A Francisco Cascales, cuyo nombre va en el cifrado</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+---+-" enjamb="B-ex_subj_verb">Famoso nombre Córdoba la llana</l>
+               <l n="2" met="-+---+--++-" enjamb="I-ex_subj_verb">recibe, porque a Séneca ha criado.</l>
+               <l n="3" met="--+-+-+--+-" enjamb="B-pb_verb_adv">Apuleyo a Africa ha ensalzado</l>
+               <l n="4" met="++---+---+-" enjamb="I-pb_verb_adv">no menos que a su traza soberana.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-" enjamb="B-ex_subj_verb">Catón el sabio a la nación Romana</l>
+               <l n="6" met="-+-+---+++-" enjamb="I-ex_subj_verb">inmensa gloria con su ciencia ha dado.</l>
+               <l n="7" met="-+-+-++--+-">Sinón su humilde patria ha levantado.</l>
+               <l n="8" met="-+---+-+-+-">Crisipo estableció la ley Tebana.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+-+-+-">Homero a Grecia puso en gran alteza.</l>
+               <l n="10" met="-----++--+-">Cartago por Cresón fue ennoblecida.</l>
+               <l n="11" met="-+-+-+-+-+-">Apolo a Delfos dio dichosa suerte.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+--++-+-+-">Si en estas caber vemos tal grandeza,</l>
+               <l n="13" met="-+-+-+---+-">¿con cuánta más razón engrandecida</l>
+               <l n="14" met="--+--+-+-+-">a de ser Cartagena sabia y fuerte?</l>
+            </lg>
+            <lg n="5" type="terceto">
+               <l n="15" met="--+-----+-">Los cielos, porque acierte,</l>
+               <l n="16" met="-++-+-+--+-">en un poeta influyen arte y ciencia</l>
+               <l n="17" met="+----+---+-">sólo para que alabe su excelencia.</l>
+            </lg>
+         </lg>
+      </body>
+  </text>
+</TEI>

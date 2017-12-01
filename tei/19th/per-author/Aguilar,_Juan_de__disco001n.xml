@@ -1,169 +1,239 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Juan de Aguilar</title>
-        <author>
-          <idno type="viaf" cert="medium">17274770</idno>
-          <idno type="#disco" xml:id="disco_001n"/>
-          <name type="short">Aguilar</name>
-          <name type="full">
-            <name type="first-name">Juan</name>
-            <name type="preposition-name">de</name>
-            <name type="second-name">Aguilar</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">4</measure>
-        <measure unit="tokens">373</measure>
-        <measure unit="line">56</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_001n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_001n" role="author" sex="M">
-            <persName>Juan de Aguilar</persName>
-            <birth><placeName type="place">Rute</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Juan de Aguilar</title>
+            <author corresp="#disco_001n">Juan de Aguilar</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">4</measure>
+            <measure unit="tokens">373</measure>
+            <measure unit="line">56</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_001n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_001n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="medium" resource="https://viaf.org/viaf/17274770"/>
+                  <persName type="short">Aguilar</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Aguilar</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan de Aguilar</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Rute</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s001n_0001" about="dbpedia:Soneto">
+                        <title property="dc:title">A un avaro</title>
+                        <title type="incipit" property="dc:alternative">Donde jamás el sol sus rayos tira</title>
+                     </bibl>
+                     <bibl resource="disco#s001n_0002" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Perfecto Libro, que a la Estampa ha dado</title>
+                     </bibl>
+                     <bibl resource="disco#s001n_0003" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Al verte pobre ya, de amor inmundo,</title>
+                     </bibl>
+                     <bibl resource="disco#s001n_0004" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Raro Fénix de Amor, que en vivas llamas,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Juan de Aguilar</head>
-        <p>Rute. 19th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s001n_0001">
-        <head>A un avaro</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Donde jamás el sol sus rayos tira</l>
-          <l n="2">y todo es confusión eternamente,</l>
-          <l n="3">vive aquel, que con hambre y sed ardiente</l>
-          <l n="4">cerca el remedio, sin remedio, mira.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Fruta le ofrece y a cogerla aspira;</l>
-          <l n="6">mas ella de su mano diligente,</l>
-          <l n="7">se burla, y de sus labios la corriente</l>
-          <l n="8">al Eridano hondo se retira.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Di que admiras de Tántalo la pena,</l>
-          <l n="10">y género tan grave de tormento</l>
-          <l n="11">tu asombro advierta, porque más te asombre</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">que cuanto escuchas en la historia ajena</l>
-          <l n="13">por ti se dice, disfrazado el nombre.</l>
-          <l n="14">¡Oh, pobre en tus riquezas avariento!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s001n_0002">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Perfecto Libro, que a la Estampa ha dado</l>
-          <l n="2">bien entendido Autor, eres confieso,</l>
-          <l n="3">al Encarnarte, advierto estás impreso,</l>
-          <l n="4">como al Nacer al mundo, a luz sacado.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">En la Circuncisión, fuiste cortado,</l>
-          <l n="6">y al adorarte Reyes miro expreso,</l>
-          <l n="7">sabios, te leen Rey, Dios Hombre, y esto</l>
-          <l n="8">tu Autor, con una Estrella ha señalado.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Haciendo huyas a Egipto, hizo cubrirte,</l>
-          <l n="10">para en Jerusalén, después mostrarte</l>
-          <l n="11">tres días a sus Doctos, y aplaudirte:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">A una Columna, quiso rubricarte,</l>
-          <l n="13">y si en la Cruz, el Título inscribirte,</l>
-          <l n="14">en el monte Tabor; iluminarte.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s001n_0003">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Al verte pobre ya, de amor inmundo,</l>
-          <l n="2">y del divino amo, enriquecida,</l>
-          <l n="3">bienes del mundo, Magdalena olvida,</l>
-          <l n="4">porque es del mundo el bien, mal sin segundo.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">En lo que logra del amar del mundo,</l>
-          <l n="6">de lágrimas un mar, que arrepentida,</l>
-          <l n="7">anegando los yerros de su vida,</l>
-          <l n="8">de doloroso llanto, es mar profundo.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Las plantas riega con amante anhelo,</l>
-          <l n="10">del que en su voluntad, todo se encierra,</l>
-          <l n="11">¡o mil veces feliz, raro desvelo!</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">El modo natural en ti se yerra,</l>
-          <l n="13">que siempre le agua da a la Tierra, el Cielo,</l>
-          <l n="14">y hoy al Cielo le da el agua, la Tierra.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s001n_0004">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Raro Fénix de Amor, que en vivas llamas,</l>
-          <l n="2">esplendor inmortal tienes logrado,</l>
-          <l n="3">leños de aroma son, los que has juntado</l>
-          <l n="4">en olor de virtudes que derramas.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Alta Hoguera te eriges, que así amas</l>
-          <l n="6">afectos recogiendo enamorado,</l>
-          <l n="7">que el Pecho, en sacro amor, todo abrasado,</l>
-          <l n="8">hoguera es elevada, en que te inflamas.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">A rayos del Sol Cristo, Ave lucida,</l>
-          <l n="10">del corazón las alas, velozmente</l>
-          <l n="11">bates, por verte en fuego renacida.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Fénix te considero, en Pira ardiente,</l>
-          <l n="13">que él en su muerte nace a nueva vida,</l>
-          <l n="14">y es tu Ocaso en la Tierra, al Cielo, Oriente.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Juan de Aguilar</head>
+            <p>Rute. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s001n_0001">
+            <head>A un avaro</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+-+-+-">Donde jamás el sol sus rayos tira</l>
+               <l n="2" met="-++--+-+-+-">y todo es confusión eternamente,</l>
+               <l n="3" met="+-+--+-+-+-" enjamb="B-ex_subj_verb">vive aquel, que con hambre y sed ardiente</l>
+               <l n="4" met="+--+---+-+-" enjamb="I-ex_subj_verb">cerca el remedio, sin remedio, mira.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-++--++-+-">Fruta le ofrece y a cogerla aspira;</l>
+               <l n="6" met="-+---+---+-">mas ella de su mano diligente,</l>
+               <l n="7" met="-+---+---+-" enjamb="B-pb_noun_prep">se burla, y de sus labios la corriente</l>
+               <l n="8" met="---+-+---+-" enjamb="I-pb_noun_prep">al Eridano hondo se retira.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+---+-">Di que admiras de Tántalo la pena,</l>
+               <l n="10" met="-+--++---+-">y género tan grave de tormento</l>
+               <l n="11" met="-+-+---+++-">tu asombro advierta, porque más te asombre</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">que cuanto escuchas en la historia ajena</l>
+               <l n="13" met="-+-+---+-+-">por ti se dice, disfrazado el nombre.</l>
+               <l n="14" met="-----+---+-">¡Oh, pobre en tus riquezas avariento!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s001n_0002">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+---+++-" enjamb="B-pb_verb_adv">Perfecto Libro, que a la Estampa ha dado</l>
+               <l n="2" met="+--+-++--+-" enjamb="I-pb_verb_adv">bien entendido Autor, eres confieso,</l>
+               <l n="3" met="---+-+-+-+-">al Encarnarte, advierto estás impreso,</l>
+               <l n="4" met="---+-+-+-+-">como al Nacer al mundo, a luz sacado.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-----++--+-">En la Circuncisión, fuiste cortado,</l>
+               <l n="6" met="---+++-+-+-">y al adorarte Reyes miro expreso,</l>
+               <l n="7" met="+-+++-+--+-" enjamb="B-ex_dobj_verb">sabios, te leen Rey, Dios Hombre, y esto</l>
+               <l n="8" met="-+-+-++--+-" enjamb="I-ex_dobj_verb">tu Autor, con una Estrella ha señalado.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--++--+-">Haciendo huyas a Egipto, hizo cubrirte,</l>
+               <l n="10" met="-----+-+-+-" enjamb="B-ex_dobj_verb">para en Jerusalén, después mostrarte</l>
+               <l n="11" met="----+---++-" enjamb="I-ex_dobj_verb">tres días a sus Doctos, y aplaudirte:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+---+-">A una Columna, quiso rubricarte,</l>
+               <l n="13" met="---+-+---+-">y si en la Cruz, el Título inscribirte,</l>
+               <l n="14" met="--+--+---+-">en el monte Tabor; iluminarte.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s001n_0003">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+++-+-+-+-">Al verte pobre ya, de amor inmundo,</l>
+               <l n="2" met="---++----+-">y del divino amo, enriquecida,</l>
+               <l n="3" met="+--+---+-+-">bienes del mundo, Magdalena olvida,</l>
+               <l n="4" met="-+-+-++--+-">porque es del mundo el bien, mal sin segundo.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+---+-+-">En lo que logra del amar del mundo,</l>
+               <l n="6" met="-+--++---+-">de lágrimas un mar, que arrepentida,</l>
+               <l n="7" met="--+--+---+-">anegando los yerros de su vida,</l>
+               <l n="8" met="---+-+++-+-">de doloroso llanto, es mar profundo.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+---+-+-">Las plantas riega con amante anhelo,</l>
+               <l n="10" met="-----++--+-">del que en su voluntad, todo se encierra,</l>
+               <l n="11" met="-++--++--+-">¡o mil veces feliz, raro desvelo!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+-+-+-">El modo natural en ti se yerra,</l>
+               <l n="13" met="-+-+-+-+-+-">que siempre le agua da a la Tierra, el Cielo,</l>
+               <l n="14" met="++-++-+--+-">y hoy al Cielo le da el agua, la Tierra.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s001n_0004">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+----+-+-">Raro Fénix de Amor, que en vivas llamas,</l>
+               <l n="2" met="--+--++--+-">esplendor inmortal tienes logrado,</l>
+               <l n="3" met="+--+-+-+-+-">leños de aroma son, los que has juntado</l>
+               <l n="4" met="--+--+---+-">en olor de virtudes que derramas.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-++--+-" enjamb="B-ex_subj_verb">Alta Hoguera te eriges, que así amas</l>
+               <l n="6" met="-+---+---+-" enjamb="I-ex_subj_verb">afectos recogiendo enamorado,</l>
+               <l n="7" met="-+-+-++--+-">que el Pecho, en sacro amor, todo abrasado,</l>
+               <l n="8" met="-++--+--++-">hoguera es elevada, en que te inflamas.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---++--+-">A rayos del Sol Cristo, Ave lucida,</l>
+               <l n="10" met="---+-+--++-">del corazón las alas, velozmente</l>
+               <l n="11" met="+--+++---+-">bates, por verte en fuego renacida.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+-+-+-">Fénix te considero, en Pira ardiente,</l>
+               <l n="13" met="+--+-+-+-+-">que él en su muerte nace a nueva vida,</l>
+               <l n="14" met="+-+--+-+-+-">y es tu Ocaso en la Tierra, al Cielo, Oriente.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Francisco Benavides Manrique</title>
+            <author corresp="#disco_335g">Francisco Benavides Manrique</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">276</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_335g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_335g"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Benavides Manrique</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Francisco</forename>
+                     <surname property="foaf:familyName">Benavides Manrique</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Francisco Benavides Manrique</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s335g_0784" about="dbpedia:Soneto">
+                        <title property="dc:title">A la muerte del doctor Juan Pérez de Montalbán, insigne ingenio de España</title>
+                        <title type="incipit" property="dc:alternative">Vive oh grande Varona mayor fama</title>
+                     </bibl>
+                     <bibl resource="disco#s335g_0785" about="dbpedia:Soneto">
+                        <title property="dc:title">Al mismo tema</title>
+                        <title type="incipit" property="dc:alternative">Al Fin de España, si preciso fuera</title>
+                     </bibl>
+                     <bibl resource="disco#s335g_0786" about="dbpedia:Soneto">
+                        <title property="dc:title">Del mismo al mismo tema</title>
+                        <title type="incipit" property="dc:alternative">A pesar de la envidia repetida</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <div>
+            <head>Francisco Benavides Manrique</head>
+            <p>España. 17th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s335g_0784">
+            <head>A la muerte del doctor Juan Pérez de Montalbán, insigne ingenio de España</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+--+--++-" enjamb="B-cc_crossclause">Vive oh grande Varona mayor fama</l>
+               <l n="2" met="-++--+-+-+-" enjamb="I-cc_crossclause">que te sepa querer la Musa mía,</l>
+               <l n="3" met="+----+++++-">vive, que a tu ceniza, aún no bien fría,</l>
+               <l n="4" met="-+-+---+-+-">aliento induce repetida llama.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+-+-+-">Desprecio de la luz que el sol derrama</l>
+               <l n="6" met="++-+---+-+-">te presta ardientes mientras forma el día,</l>
+               <l n="7" met="----+---++-">y como a Fénix Átropos te fía,</l>
+               <l n="8" met="--+--+-+-+-">y a tu nuevo vivir Laquesis trama.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-++--+-+-+-" enjamb="B-ex_subj_verb">Oh tú siempre feliz, pues no es incierto</l>
+               <l n="10" met="-+-+-+---+-" enjamb="I-ex_subj_verb">que te fomenta Apolo como al ave,</l>
+               <l n="11" met="-+-+-+-+-+-">aquella que antes leve fue ceniza.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+-+++-">Oh tú siempre feliz, pues aun no has muerto,</l>
+               <l n="13" met="----+-+-++-">cuando empezando vida más suave</l>
+               <l n="14" met="--+--+---+-">en tu muerte tu vida se eterniza.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s335g_0785">
+            <head>Al mismo tema</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+---+-+-">Al Fin de España, si preciso fuera</l>
+               <l n="2" met="-++--+---+-">que más fama a la tuya superara;</l>
+               <l n="3" met="+--+-+-+-+-" enjamb="B-ex_dobj_verb">yo defendiera entonces, yo afirmara</l>
+               <l n="4" met="--+--+---+-" enjamb="I-ex_dobj_verb">que tu fama a tu fama se excediera.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-" enjamb="B-pb_verb_adv">Aquella pues sofística pudiera</l>
+               <l n="6" met="--++-++--+-" enjamb="B-ex_subj_verb I-pb_verb_adv">igualarte o vencerte, mas si hallara</l>
+               <l n="7" met="-++--+---+-" enjamb="I-ex_subj_verb">quien no la desmintiera cara a cara,</l>
+               <l n="8" met="+-++-++--+-">todo el tiempo a una vez la desmintiera.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-" enjamb="B-ex_subj_verb">Si el vulgo que profesa de ignorante</l>
+               <l n="10" met="++-+---+-+-" enjamb="I-ex_subj_verb">siente otra cosa, como vulgo siente</l>
+               <l n="11" met="-----+---+-">por mas que su mentira se adelante.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+-+-+-" enjamb="B-pb_verb_adv">Mas la igual atención eternamente</l>
+               <l n="13" met="-+-+---+-+-" enjamb="I-pb_verb_adv">tendrá tu fama por la más constante,</l>
+               <l n="14" met="-+---+-+-+-">y siempre volará de gente en gente.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s335g_0786">
+            <head>Del mismo al mismo tema</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-----+---+-">A pesar de la envidia repetida</l>
+               <l n="2" met="+-+--++--+-">goza heroico Varón nombre famoso,</l>
+               <l n="3" met="-+-+-+-+-+-">y cuéstete el vivir, que si es forzoso,</l>
+               <l n="4" met="+-+--+---+-">más importa la fama esclarecida.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-" enjamb="B-pb_noun_prep">Ya recobra tu gloria aborrecida</l>
+               <l n="6" met="--+--+---+-" enjamb="I-pb_noun_prep">del tumulto profano envidioso,</l>
+               <l n="7" met="---+-+-+-+-">que si en la vida fuiste no dichoso,</l>
+               <l n="8" met="-++--+---+-">feliz eres, y eterno sin la vida.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+-+-+-">Mientras vives las glorias te difieren:</l>
+               <l n="10" met="+--+-+---+-">Mueres en fin, y al odio satisfaces,</l>
+               <l n="11" met="-+---+-+++-">¡o cuántos con tu fin vengarse quieren!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+---+-">Mas vuelven a penar porque renaces,</l>
+               <l n="13" met="-+---+-+-+-">y así desde que nacen siempre mueren,</l>
+               <l n="14" met="-+---+-+-+-">y tú desde que mueres siempre naces.</l>
+            </lg>
+         </lg>
+      </body>
+  </text>
+</TEI>

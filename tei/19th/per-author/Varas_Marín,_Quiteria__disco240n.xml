@@ -1,118 +1,178 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Quiteria Varas Marín</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_240n"/>
-          <name type="short">Varas Marín</name>
-          <name type="full">
-            <name type="first-name">Quiteria</name>
-            <name type="second-name">Varas Marín</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">179</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_240n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_240n" role="author" sex="F">
-            <persName>Quiteria Varas Marín</persName>
-            <birth><placeName type="place">Chile</placeName>, <placeName type="country">Chile</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Quiteria Varas Marín</title>
+            <author corresp="#disco_240n">Quiteria Varas Marín</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">179</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_240n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_240n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Varas Marín</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Quiteria</forename>
+                     <surname property="foaf:familyName">Varas Marín</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Quiteria Varas Marín</persName>
+                  <sex property="foaf:gender" value="F"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Chile</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s240n_0786" about="dbpedia:Soneto">
+                        <title property="dc:title">A la muerte de don Lorenzo Sazie</title>
+                        <title type="incipit" property="dc:alternative">¿Por qué a la frente joven y lozana</title>
+                     </bibl>
+                     <bibl resource="disco#s240n_0787" about="dbpedia:Soneto">
+                        <title property="dc:title">A mi abuelo, don Gaspar Marín</title>
+                        <title type="incipit" property="dc:alternative">De opresión en el caos lastimero,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Quiteria Varas Marín</head>
-        <p>Chile. 19th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s240n_0786">
-        <head>A la muerte de don Lorenzo Sazie</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¿Por qué a la frente joven y lozana</l>
-          <l n="2">surcan las sombras do aterrante duelo</l>
-          <l n="3">y lágrimas de acerbo desconsuelo</l>
-          <l n="4">alumbra un sol de espléndida mañana?</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La flor que en la pradera se alza ufana</l>
-          <l n="6">mustia se inclina y dolorida al suelo,</l>
-          <l n="7">y hasta de la avecilla es triste el vuelo</l>
-          <l n="8">porque siente el plañir de una campana.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Es que se llora al sabio generoso,</l>
-          <l n="10">filantrópico y noble en su carrera,</l>
-          <l n="11">de mente altiva y corazón virtuoso.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Exenta su alma de ambición rastrera,</l>
-          <l n="13">al pobre siempre socorrió afectuoso,</l>
-          <l n="14">honro a la ciencia a la virtud austera.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s240n_0787">
-        <head>A mi abuelo, don Gaspar Marín</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">De opresión en el caos lastimero,</l>
-          <l n="2">la libertad soñabas inspirado,</l>
-          <l n="3">y a la patria serviste denodado,</l>
-          <l n="4">con alma grande y corazón sincero.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Sin ceñirte la espada del guerrero</l>
-          <l n="6">nobles triunfos también has alcanzado,</l>
-          <l n="7">ya del pueblo tribuno firme, osado,</l>
-          <l n="8">ya recto juez, valiente caballero.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Infatigable fuiste en tu carrera,</l>
-          <l n="10">y a la patria le es grata la memoria</l>
-          <l n="11">del hijo que ilustró su edad primera.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Virtuoso Marín, tu pura gloria</l>
-          <l n="13">exenta de odio y ambición rastrera,</l>
-          <l n="14">clara y sin mancha brillará en la historia.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Quiteria Varas Marín</head>
+            <p>Chile. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s240n_0786">
+            <head>A la muerte de don Lorenzo Sazie</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+---+-">¿Por qué a la frente joven y lozana</l>
+               <l n="2" met="+--+-+-+-+-">surcan las sombras do aterrante duelo</l>
+               <l n="3" met="-+---+---+-">y lágrimas de acerbo desconsuelo</l>
+               <l n="4" met="-+++-+---+-">alumbra un sol de espléndida mañana?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+-+-+-" enjamb="B-ex_subj_verb">La flor que en la pradera se alza ufana</l>
+               <l n="6" met="+--+---+-+-" enjamb="I-ex_subj_verb">mustia se inclina y dolorida al suelo,</l>
+               <l n="7" met="+----+++-+-">y hasta de la avecilla es triste el vuelo</l>
+               <l n="8" met="--+--++--+-">porque siente el plañir de una campana.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+-+---+-">Es que se llora al sabio generoso,</l>
+               <l n="10" met="--+--+---+-">filantrópico y noble en su carrera,</l>
+               <l n="11" met="-+-+---+-+-">de mente altiva y corazón virtuoso.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">Exenta su alma de ambición rastrera,</l>
+               <l n="13" met="-+-+---+-+-">al pobre siempre socorrió afectuoso,</l>
+               <l n="14" met="+--+---+-+-">honro a la ciencia a la virtud austera.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s240n_0787">
+            <head>A mi abuelo, don Gaspar Marín</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--+--+---+-">De opresión en el caos lastimero,</l>
+               <l n="2" met="---+-+---+-">la libertad soñabas inspirado,</l>
+               <l n="3" met="--+--+---+-">y a la patria serviste denodado,</l>
+               <l n="4" met="-+-+---+-+-">con alma grande y corazón sincero.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--++-+---+-" enjamb="B-pb_adj_noun">Sin ceñirte la espada del guerrero</l>
+               <l n="6" met="+-+--++--+-" enjamb="I-pb_adj_noun">nobles triunfos también has alcanzado,</l>
+               <l n="7" met="+-+--+-+-+-">ya del pueblo tribuno firme, osado,</l>
+               <l n="8" met="++-+-+---+-">ya recto juez, valiente caballero.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+-+---+-">Infatigable fuiste en tu carrera,</l>
+               <l n="10" met="--+-++---+-" enjamb="B-pb_noun_prep">y a la patria le es grata la memoria</l>
+               <l n="11" met="-+---+-+-+-" enjamb="I-pb_noun_prep">del hijo que ilustró su edad primera.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-----+-+-+-" enjamb="B-pb_adj_noun">Virtuoso Marín, tu pura gloria</l>
+               <l n="13" met="-+-+---+-+-" enjamb="I-pb_adj_noun">exenta de odio y ambición rastrera,</l>
+               <l n="14" met="+--+---+-+-">clara y sin mancha brillará en la historia.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

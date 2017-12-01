@@ -1,144 +1,209 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Francisco de Osuna</title>
-        <author>
-          <idno type="viaf" cert="medium">68992411</idno>
-          <idno type="#disco" xml:id="disco_106n"/>
-          <name type="short">Osuna</name>
-          <name type="full">
-            <name type="first-name">Francisco</name>
-            <name type="preposition-name">de</name>
-            <name type="second-name">Osuna</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">3</measure>
-        <measure unit="tokens">305</measure>
-        <measure unit="line">42</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_106n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_106n" role="author" sex="M">
-            <persName>Francisco de Osuna</persName>
-            <birth><placeName type="place">España</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Francisco de Osuna</title>
+            <author corresp="#disco_106n">Francisco de Osuna</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">305</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_106n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_106n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="medium" resource="https://viaf.org/viaf/68992411"/>
+                  <persName type="short">Osuna</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Francisco</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Osuna</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Francisco de Osuna</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s106n_0352" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Yo quiero revelarte en un soneto</title>
+                     </bibl>
+                     <bibl resource="disco#s106n_0353" about="dbpedia:Soneto">
+                        <title property="dc:title">Cálamo currante</title>
+                        <title type="incipit" property="dc:alternative">Si escribir te propones un soneto,</title>
+                     </bibl>
+                     <bibl resource="disco#s106n_0354" about="dbpedia:Soneto">
+                        <title property="dc:title">Chismografía</title>
+                        <title type="incipit" property="dc:alternative">Dícenme que decís, ex reina mía,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Francisco de Osuna</head>
-        <p>España. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s106n_0352">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Yo quiero revelarte en un soneto</l>
-          <l n="2">un secretillo a nadie confiado;</l>
-          <l n="3">pero ¿cómo, si, apenas comenzado,</l>
-          <l n="4">el fin ya toco del primer cuarteto?</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Empezaré el segundo, y me prometo</l>
-          <l n="6">ser en él mucho más afortunado;</l>
-          <l n="7">y es el caso, Juanilla, que he soñado...</l>
-          <l n="8">Mas se acabó también. ¡Vaya un aprieto!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Me avendré con seis versos, Juana mía;</l>
-          <l n="10">que aunque mi secretillo es importante...</l>
-          <l n="11">¿Con seis? ¡Si quedan tres, Virgen María!</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¿Hay en el mundo cosa más cargante</l>
-          <l n="13">que un soneto? Acabóse, no hay tu tía,</l>
-          <l n="14">con el verso que escribo en este instante.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s106n_0353">
-        <head>Cálamo currante</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Si escribir te propones un soneto,</l>
-          <l n="2">ve haciendo lo que yo, que, a fe, no es harto;</l>
-          <l n="3">tras el verso tercero saldrá el cuarto...</l>
-          <l n="4">¡Si es coser y cantar! ¡Mira: un cuarteto!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Haz otro igual después, que te prometo</l>
-          <l n="6">que si aquesto es parir, es fácil parto;</l>
-          <l n="7">van seis versos, y el séptimo ya ensarto;</l>
-          <l n="8">otro, y van ocho, y al primer terceto.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Todo es que el verso nono venga al baile</l>
-          <l n="10">y el décimo en la rueda esté metido.</l>
-          <l n="11">¿Hay consonante a baile y fraile? Haíle.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Pues entonces, ya es esto pan comido,</l>
-          <l n="13">y cata a Periquillo hecho fraile,</l>
-          <l n="14">y cata el sonetejo concluido.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s106n_0354">
-        <head>Chismografía</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Dícenme que decís, ex reina mía,</l>
-          <l n="2">que os dicen que yo he dicho aquel secreto.</l>
-          <l n="3">Y lo que yo os digo en un soneto,</l>
-          <l n="4">que es decir por decir, tal tontería.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¡Qué tal cosa digáis! ¡Quién lo diría!</l>
-          <l n="6">¿Digo? ¿Iba yo a decir? Digo y prometo</l>
-          <l n="7">que digan lo que digan, yo respeto</l>
-          <l n="8">lo que decís que dije el otro día.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">No digo que no digan (y me aflige)</l>
-          <l n="10">lo que decís que dije, pues barrunto</l>
-          <l n="11">que dicen que hay quien dice por capricho:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mas decís vos que digo que no dije</l>
-          <l n="13">lo que dicen que dije de este asunto;</l>
-          <l n="14">ni dije, ni diré. ¡Lo dicho, dicho!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Francisco de Osuna</head>
+            <p>España. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s106n_0352">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++---+++-+-" enjamb="B-ex_dobj_verb">Yo quiero revelarte en un soneto</l>
+               <l n="2" met="+--+--+--+-" enjamb="I-ex_dobj_verb">un secretillo a nadie confiado;</l>
+               <l n="3" met="--+--+---+-">pero ¿cómo, si, apenas comenzado,</l>
+               <l n="4" met="-+++---+-+-">el fin ya toco del primer cuarteto?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+-+-+-" enjamb="B-pb_verb_chain">Empezaré el segundo, y me prometo</l>
+               <l n="6" met="+-++-+---+-" enjamb="I-pb_verb_chain">ser en él mucho más afortunado;</l>
+               <l n="7" met="+-+--+-+-+-">y es el caso, Juanilla, que he soñado...</l>
+               <l n="8" met="----+-++-+-">Mas se acabó también. ¡Vaya un aprieto!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+-++-+-+-">Me avendré con seis versos, Juana mía;</l>
+               <l n="10" met="-----++--+-">que aunque mi secretillo es importante...</l>
+               <l n="11" met="--++-+---+-">¿Con seis? ¡Si quedan tres, Virgen María!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+-+-+-">¿Hay en el mundo cosa más cargante</l>
+               <l n="13" met="-+-+-++-+-">que un soneto? Acabóse, no hay tu tía,</l>
+               <l n="14" met="--+--+-+-+-">con el verso que escribo en este instante.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s106n_0353">
+            <head>Cálamo currante</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="--++-+-+-+-">Si escribir te propones un soneto,</l>
+               <l n="2" met="++---+-+++-">ve haciendo lo que yo, que, a fe, no es harto;</l>
+               <l n="3" met="--+--+--++-">tras el verso tercero saldrá el cuarto...</l>
+               <l n="4" met="-+-+--++-+-">¡Si es coser y cantar! ¡Mira: un cuarteto!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+-+-+-+-" enjamb="B-ex_dobj_verb">Haz otro igual después, que te prometo</l>
+               <l n="6" met="--++-+++-+-" enjamb="I-ex_dobj_verb">que si aquesto es parir, es fácil parto;</l>
+               <l n="7" met="+++--+--++-">van seis versos, y el séptimo ya ensarto;</l>
+               <l n="8" met="+-++---+-+-">otro, y van ocho, y al primer terceto.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++-+-+-+-+-">Todo es que el verso nono venga al baile</l>
+               <l n="10" met="-+---+-+-+-">y el décimo en la rueda esté metido.</l>
+               <l n="11" met="+--+--+--+-">¿Hay consonante a baile y fraile? Haíle.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+-++-+-+-">Pues entonces, ya es esto pan comido,</l>
+               <l n="13" met="-+---+-+-+-">y cata a Periquillo hecho fraile,</l>
+               <l n="14" met="-+----+--+-">y cata el sonetejo concluido.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s106n_0354">
+            <head>Chismografía</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+----+++-+-">Dícenme que decís, ex reina mía,</l>
+               <l n="2" met="++--++-+-+-">que os dicen que yo he dicho aquel secreto.</l>
+               <l n="3" met="---++--+-+-">Y lo que yo os digo en un soneto,</l>
+               <l n="4" met="+-+--++--+-">que es decir por decir, tal tontería.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+++--++-+-">¡Qué tal cosa digáis! ¡Quién lo diría!</l>
+               <l n="6" met="+-+--+--+-">¿Digo? ¿Iba yo a decir? Digo y prometo</l>
+               <l n="7" met="-+---+-+-+-" enjamb="B-ex_dobj_verb">que digan lo que digan, yo respeto</l>
+               <l n="8" met="---+-+-+-+-" enjamb="I-ex_dobj_verb">lo que decís que dije el otro día.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++--++--++-">No digo que no digan (y me aflige)</l>
+               <l n="10" met="---+-+---+-" enjamb="B-ex_dobj_verb">lo que decís que dije, pues barrunto</l>
+               <l n="11" met="-+-+-+---+-" enjamb="I-ex_dobj_verb">que dicen que hay quien dice por capricho:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++-+--++-" enjamb="B-ex_dobj_verb">Mas decís vos que digo que no dije</l>
+               <l n="13" met="--+--+-+-+-" enjamb="I-ex_dobj_verb">lo que dicen que dije de este asunto;</l>
+               <l n="14" met="++---+++-">ni dije, ni diré. ¡Lo dicho, dicho!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

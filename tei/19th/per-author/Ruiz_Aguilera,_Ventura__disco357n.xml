@@ -1,93 +1,158 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Ventura Ruiz Aguilera</title>
-        <author>
-          <idno type="viaf" cert="high">13513737</idno>
-          <idno type="#disco" xml:id="disco_357n"/>
-          <name type="short">Ruiz Aguilera</name>
-          <name type="full">
-            <name type="first-name">Ventura</name>
-            <name type="second-name">Ruiz Aguilera</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">93</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_357n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_357n" role="author" sex="M">
-            <persName>Ventura Ruiz Aguilera</persName>
-            <birth><placeName type="place">Salamanca</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="year" when="1820" cert="high">1820</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Madrid</placeName>, <date type="year" when="1881" cert="high">1881</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Ventura Ruiz Aguilera</title>
+            <author corresp="#disco_357n">Ventura Ruiz Aguilera</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">93</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_357n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_357n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/13513737"/>
+                  <persName type="short">Ruiz Aguilera</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ventura</forename>
+                     <surname property="foaf:familyName">Ruiz Aguilera</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ventura Ruiz Aguilera</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Salamanca</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1820" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1881" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s357n_1259" about="dbpedia:Soneto">
+                        <title property="dc:title">Episodio del cólera</title>
+                        <title type="incipit" property="dc:alternative">Ya el negro monstruo en el espacio gira</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Ventura Ruiz Aguilera</head>
-        <p>Salamanca. 1820 - 1881</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s357n_1259">
-        <head>Episodio del cólera</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Ya el negro monstruo en el espacio gira</l>
-          <l n="2">de esa desierta habitación callada;</l>
-          <l n="3">¡Huid!... ¡no haya piedad!... está apestada</l>
-          <l n="4">y en el revuelo lecho un hombre espira.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">El hijo, ingrato, con horror le mira;</l>
-          <l n="6">y lívida, y la frente desgreñada,</l>
-          <l n="7">lejos su madre arrástrale espantada...</l>
-          <l n="8">¡De entrambos el amor era mentira!</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Cunde el miedo en el tímido y el fuerte;</l>
-          <l n="10">y al grave riesgo el ánimo abatido,</l>
-          <l n="11">y en todos mudo el sentimiento humano.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">¿Habrá infeliz que llore por tu suerte?</l>
-          <l n="13">Sí, que exhalando lastimero aullido,</l>
-          <l n="14">lame un perro leal tu yerta mano.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Ventura Ruiz Aguilera</head>
+            <p>Salamanca. 1820 - 1881</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s357n_1259">
+            <head>Episodio del cólera</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+---+-+-" enjamb="B-pb_noun_prep">Ya el negro monstruo en el espacio gira</l>
+               <l n="2" met="+--+---+-+-" enjamb="I-pb_noun_prep">de esa desierta habitación callada;</l>
+               <l n="3" met="++--++-+-">¡Huid!... ¡no haya piedad!... está apestada</l>
+               <l n="4" met="---+-+++-+-">y en el revuelo lecho un hombre espira.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+++-">El hijo, ingrato, con horror le mira;</l>
+               <l n="6" met="-+---+---+-">y lívida, y la frente desgreñada,</l>
+               <l n="7" met="+--+-+-+-+-">lejos su madre arrástrale espantada...</l>
+               <l n="8" met="-+---++--+-">¡De entrambos el amor era mentira!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+---+-">Cunde el miedo en el tímido y el fuerte;</l>
+               <l n="10" met="-+-+-+---+-">y al grave riesgo el ánimo abatido,</l>
+               <l n="11" met="-+-+---+-+-">y en todos mudo el sentimiento humano.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+---+-">¿Habrá infeliz que llore por tu suerte?</l>
+               <l n="13" met="+--+---+-+-">Sí, que exhalando lastimero aullido,</l>
+               <l n="14" met="+++--+-+-+-">lame un perro leal tu yerta mano.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

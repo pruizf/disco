@@ -1,296 +1,360 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Miguel W. Garaycochea</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_387n"/>
-          <name type="short">Garaycochea</name>
-          <name type="full">
-            <name type="first-name">Miguel W.</name>
-            <name type="second-name">Garaycochea</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">9</measure>
-        <measure unit="tokens">807</measure>
-        <measure unit="line">126</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_387n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_387n" role="author" sex="M">
-            <persName>Miguel W. Garaycochea</persName>
-            <birth><placeName type="place">Arequipa (Perú)</placeName>, <placeName type="country">Perú</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1816" cert="high">1816</date>, <date type="century">19</date></birth>
-            <death><placeName type="place">Trujillo</placeName>, <date type="year" when="1861" cert="high">1861</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Miguel W. Garaycochea</title>
+            <author corresp="#disco_387n">Miguel W. Garaycochea</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">9</measure>
+            <measure unit="tokens">807</measure>
+            <measure unit="line">126</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_387n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_387n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Garaycochea</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Miguel W.</forename>
+                     <surname property="foaf:familyName">Garaycochea</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Miguel W. Garaycochea</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Arequipa</settlement>
+                           <country>Perú</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1816" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Trujillo</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1861" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s387n_1481" about="dbpedia:Soneto">
+                        <title property="dc:title">Sonetos</title>
+                        <title type="incipit" property="dc:alternative">¿No te ha buscado, Filis, un mancebo</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Miguel W. Garaycochea</head>
-        <p>Arequipa (Perú). 1816 - 1861</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet-sequence">
-        <head>Sonetos</head>
-        <lg type="sonnet" xml:id="s387n_1481_01">
-          <head>I</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">¿No te ha buscado, Filis, un mancebo</l>
-            <l n="2">de gallarda presencia, rostro hermoso,</l>
-            <l n="3">halagüeño mirar, lindo y gracioso,</l>
-            <l n="4">cual aparece por oriente Febo?</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Si a buscar tu beldad fuese de nuevo,</l>
-            <l n="6">recíbele de un modo cariñoso,</l>
-            <l n="7">pues, aunque niño tierno y amoroso,</l>
-            <l n="8">es el terrible amor, decirte debo.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Mi corazón te mando, entre tus manos,</l>
-            <l n="10">cual una pira ardiendo en la cruel llama</l>
-            <l n="11">que prendieron tus ojos soberanos,</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">que su quietud perdida te reclama;</l>
-            <l n="13">o que dejando los temores vanos</l>
-            <l n="14">le ames en recompensa cuanto te ama.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s387n_1481_02">
-          <head>II</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Como tremendo rayo que impaciente</l>
-            <l n="2">de verse en opresión, rompe furioso</l>
-            <l n="3">el seno de la nube y desdeñoso</l>
-            <l n="4">de la alta esfera baja reluciente;</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">e infundiendo terror al insolente</l>
-            <l n="6">ilumina y no daña al que medroso,</l>
-            <l n="7">en medio del silencio tenebroso,</l>
-            <l n="8">perdió la senda y huye de repente;</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">así este héroe inmortal de eterna fama</l>
-            <l n="10">viene y aterra al opresor cobarde,</l>
-            <l n="11">alumbra nuestra dicha, nos inflama</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">del entusiasmo patrio que en él arde,</l>
-            <l n="13">y cuando «Libertad» su voz proclama,</l>
-            <l n="14">muere aún haciendo del morir alarde.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s387n_1481_03">
-          <head>III</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">¿Qué fuego, ¡ay! Dios, acá en el pecho siento?</l>
-            <l n="2">¿Qué poderío tiene aún en mi mente?</l>
-            <l n="3">¿Qué incendio que me hiela de repente</l>
-            <l n="4">y hielo que me abrasa en el momento?</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">¿Qué agrado que me causa gran tormento</l>
-            <l n="6">y pesar que me agrada fuertemente?</l>
-            <l n="7">¿Qué dulce vida que amo diligente</l>
-            <l n="8">y muerte amarga es ya la que sustento?</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">¿Qué herida es esta igual con el remedio?</l>
-            <l n="10">¿Qué tormenta que al mismo tiempo es calma?</l>
-            <l n="11">¿Y qué deleite parecido al tedio?</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Este incógnito mal que sufre el alma</l>
-            <l n="13">es efecto de amor, que en el asedio</l>
-            <l n="14">que hizo a mi voluntad, ganó la palma.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s387n_1481_04">
-          <head>IV</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Nací y lloré sin haber aún sentido</l>
-            <l n="2">si tenía experiencia en ese estado,</l>
-            <l n="3">entré en razón, y entonces, desdichado,</l>
-            <l n="4">toda clase de penas he sufrido.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Mi juventud se acerca ya al olvido;</l>
-            <l n="6">la vejez llega a paso apresurado;</l>
-            <l n="7">y de la muerte el rostro descarnado</l>
-            <l n="8">veré patente un día no sabido.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">¿No es, pues, la vida un don bastante triste?</l>
-            <l n="10">¿No es un peso que abruma a los mortales?</l>
-            <l n="11">¡Nada se sufre cuando no se existe!</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Esto dicen los hombres inmorales</l>
-            <l n="13">a quienes ya la religión no asiste</l>
-            <l n="14">con la esperanza en premios inmortales.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s387n_1481_05">
-          <head>V</head>
-          <lg n="1" type="serventesio">
-            <l n="1">¿Para qué hacer, Adolfo, estudio serio</l>
-            <l n="2">de natura, sus obras y excelencia,</l>
-            <l n="3">si todo es un arcano y un misterio</l>
-            <l n="4">que supera a la humana inteligencia?</l>
-          </lg>
-          <lg n="2" type="serventesio">
-            <l n="5">¿Para qué sujetar a nuestro imperio</l>
-            <l n="6">los principios abstractos de la ciencia</l>
-            <l n="7">para sólo sacar, con magisterio,</l>
-            <l n="8">una oscura o errada consecuencia?</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">¿Para dar solución a los engaños</l>
-            <l n="10">de una inútil sofistica disputa</l>
-            <l n="11">con tono seco, retumbante y grave?</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Yo veo, Adolfo, que el mortal sus años</l>
-            <l n="13">a Minerva por más que los tributa,</l>
-            <l n="14">sólo llega a saber que sabe nada.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s387n_1481_06">
-          <head>VI</head>
-          <lg n="1" type="serventesio">
-            <l n="1">Cuando se llega a hacer estudio serio</l>
-            <l n="2">de natura, sus obras y excelencia,</l>
-            <l n="3">penetra sus arcanos y misterio</l>
-            <l n="4">el hombre que posee inteligencia.</l>
-          </lg>
-          <lg n="2" type="serventesio">
-            <l n="5">Sujetas las verdades a su imperio;</l>
-            <l n="6">conoce los principios de la ciencia;</l>
-            <l n="7">y de ellos, con prudente magisterio,</l>
-            <l n="8">deduce la inmediata consecuencia.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">El sofisma desata y los engaños</l>
-            <l n="10">que ocultan la verdad en la disputa,</l>
-            <l n="11">y su sentencia es dictamen grave.</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Adolfo mío, con placer tus años</l>
-            <l n="13">a Minerva, cual feudo, pues, tributa,</l>
-            <l n="14">que el hombre vive tanto cuanto sabe.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s387n_1481_07">
-          <head>VII</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Al campo de batalla va Panthea</l>
-            <l n="2">esperando encontrar su esposo vivo,</l>
-            <l n="3">mas su tormento fue tan excesivo</l>
-            <l n="4">al verlo muerto, que morir desea.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Toma la sangre que el suelo humea,</l>
-            <l n="6">con ella baña su semblante esquivo,</l>
-            <l n="7">sus bellas manos y su pecho altivo,</l>
-            <l n="8">y de este modo, ¡cielos!, se recrea.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">En fin... ¡horror!... su mano ensangrentada</l>
-            <l n="10">toma el acero; su animoso pecho</l>
-            <l n="11">rasga con furia ya desesperada;</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">sobre su esposo cae; y, bajo un techo</l>
-            <l n="13">en el sepulcro habiten, dice, airada,</l>
-            <l n="14">los que durmieron juntos en un lecho.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s387n_1481_08">
-          <head>VIII</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">¿Adónde, ¡oh, patria!, existe el brazo fuerte</l>
-            <l n="2">que te dio libertad o independencia?</l>
-            <l n="3">¿Adónde aquel que nunca cual herencia</l>
-            <l n="4">de tiranos injustos pudo verte?</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">¿Qué es de Boza, por fin...? ¡Oh dura suerte!</l>
-            <l n="6">Corrió su infausta sangre con violencia</l>
-            <l n="7">en el banco fatal, a la presencia</l>
-            <l n="8">de un pueblo todo que lloró su muerte.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Mas si su cuerpo yace en esta losa,</l>
-            <l n="10">su espíritu inmortal, allá en la gloria,</l>
-            <l n="11">de su heroica virtud el premio goza.</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">Y nunca borrará de su memoria</l>
-            <l n="13">el pueblo de Arequipa tan odiosa,</l>
-            <l n="14">tan lamentable, tan funesta historia.</l>
-          </lg>
-        </lg>
-        <lg type="sonnet" xml:id="s387n_1481_09">
-          <head>IX</head>
-          <lg n="1" type="cuarteto">
-            <l n="1">Al darte el corazón, dulce bien mío,</l>
-            <l n="2">no al influjo cedí de fatal hado</l>
-            <l n="3">n de torpes deseos dominado</l>
-            <l n="4">la llave te entregué de mi albedrío.</l>
-          </lg>
-          <lg n="2" type="cuarteto">
-            <l n="5">Ni culpo del amor al poderío,</l>
-            <l n="6">pues te quise y amé sobre pensado;</l>
-            <l n="7">ni un afecto tan tierno y delicado</l>
-            <l n="8">ha podido nacer de un desvarío.</l>
-          </lg>
-          <lg n="3" type="terceto">
-            <l n="9">Tampoco el esplendor de tu hermosura,</l>
-            <l n="10">tu juventud, tus gracias, fueron parte</l>
-            <l n="11">para que cautivaras mi ternura.</l>
-          </lg>
-          <lg n="4" type="terceto">
-            <l n="12">La belleza se gasta, pese al arte;</l>
-            <l n="13">pero el talento para siempre dura:</l>
-            <l n="14">el tuyo me prendó ¿podré olvidarte?</l>
-          </lg>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Miguel W. Garaycochea</head>
+            <p>Arequipa (Perú). 1816 - 1861</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s387n_1481">
+            <head>Sonetos</head>
+            <lg type="sonnet" xml:id="s387n_1481_01">
+               <head>I</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="++-+-+-+-+-" enjamb="B-pb_noun_prep">¿No te ha buscado, Filis, un mancebo</l>
+                  <l n="2" met="--+--+-+-+-" enjamb="I-pb_noun_prep">de gallarda presencia, rostro hermoso,</l>
+                  <l n="3" met="--+--++--+-">halagüeño mirar, lindo y gracioso,</l>
+                  <l n="4" met="+--+---+-+-">cual aparece por oriente Febo?</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="--+--++--+-">Si a buscar tu beldad fuese de nuevo,</l>
+                  <l n="6" met="-+-+++---+-">recíbele de un modo cariñoso,</l>
+                  <l n="7" met="---+-+---+-">pues, aunque niño tierno y amoroso,</l>
+                  <l n="8" met="+--+-+-+++-">es el terrible amor, decirte debo.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="---+++---+-">Mi corazón te mando, entre tus manos,</l>
+                  <l n="10" met="++-+-+--++-" enjamb="B-cc_crossclause">cual una pira ardiendo en la cruel llama</l>
+                  <l n="11" met="--+--+---+-" enjamb="I-cc_crossclause">que prendieron tus ojos soberanos,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="---+-+-+-+-">que su quietud perdida te reclama;</l>
+                  <l n="13" met="---+---+-+-" enjamb="B-ex_subj_verb">o que dejando los temores vanos</l>
+                  <l n="14" met="+----+---+-" enjamb="I-ex_subj_verb">le ames en recompensa cuanto te ama.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_02">
+               <head>II</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="---+-+---+-" enjamb="B-pb_adj_prep">Como tremendo rayo que impaciente</l>
+                  <l n="2" met="-++--++--+-" enjamb="B-ex_dobj_verb I-pb_adj_prep">de verse en opresión, rompe furioso</l>
+                  <l n="3" met="-+---+---+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">el seno de la nube y desdeñoso</l>
+                  <l n="4" met="-+-+-+---+-" enjamb="I-pb_noun_prep">de la alta esfera baja reluciente;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="--+--+---+-">e infundiendo terror al insolente</l>
+                  <l n="6" met="--+-++---+-">ilumina y no daña al que medroso,</l>
+                  <l n="7" met="-----+---+-">en medio del silencio tenebroso,</l>
+                  <l n="8" met="-+-+-+---+-">perdió la senda y huye de repente;</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-++--+-+-+-" enjamb="B-ex_subj_verb">así este héroe inmortal de eterna fama</l>
+                  <l n="10" met="+-+----+-+-" enjamb="I-ex_subj_verb">viene y aterra al opresor cobarde,</l>
+                  <l n="11" met="-+---+-+-+-" enjamb="B-pb_verb_cprep">alumbra nuestra dicha, nos inflama</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="---+-+--++-" enjamb="I-pb_verb_cprep">del entusiasmo patrio que en él arde,</l>
+                  <l n="13" met="-----+-+-+-">y cuando «Libertad» su voz proclama,</l>
+                  <l n="14" met="++-+---+-+-">muere aún haciendo del morir alarde.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_03">
+               <head>III</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="++--+--+-+-">¿Qué fuego, ¡ay! Dios, acá en el pecho siento?</l>
+                  <l n="2" met="+--++-+--+-">¿Qué poderío tiene aún en mi mente?</l>
+                  <l n="3" met="++--++---+-">¿Qué incendio que me hiela de repente</l>
+                  <l n="4" met="+--++----+-">y hielo que me abrasa en el momento?</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="++--++-+-+-">¿Qué agrado que me causa gran tormento</l>
+                  <l n="6" met="--+-++-+-+-">y pesar que me agrada fuertemente?</l>
+                  <l n="7" met="++-+-+---+-" enjamb="B-ex_subj_verb">¿Qué dulce vida que amo diligente</l>
+                  <l n="8" met="-+-+++---+-" enjamb="I-ex_subj_verb">y muerte amarga es ya la que sustento?</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="++++-+---+-">¿Qué herida es esta igual con el remedio?</l>
+                  <l n="10" met="+-+--+-+++-">¿Qué tormenta que al mismo tiempo es calma?</l>
+                  <l n="11" met="-+-+---+-+-">¿Y qué deleite parecido al tedio?</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+-+--+-+-+-" enjamb="B-ex_subj_verb">Este incógnito mal que sufre el alma</l>
+                  <l n="13" met="+-+--+---+-" enjamb="B-cc_crossclause I-ex_subj_verb">es efecto de amor, que en el asedio</l>
+                  <l n="14" met="+----+-+-+-" enjamb="I-cc_crossclause">que hizo a mi voluntad, ganó la palma.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_04">
+               <head>IV</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-+-+--++-+-">Nací y lloré sin haber aún sentido</l>
+                  <l n="2" met="--+-+-+--+-">si tenía experiencia en ese estado,</l>
+                  <l n="3" met="-+-+-+---+-">entré en razón, y entonces, desdichado,</l>
+                  <l n="4" met="+-+--+-+-+-">toda clase de penas he sufrido.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="---+-+-+-+-">Mi juventud se acerca ya al olvido;</l>
+                  <l n="6" met="--++-+---+-">la vejez llega a paso apresurado;</l>
+                  <l n="7" met="---+-+---+-" enjamb="B-ex_subj_verb">y de la muerte el rostro descarnado</l>
+                  <l n="8" met="-+-+++-+-+-" enjamb="I-ex_subj_verb">veré patente un día no sabido.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="+--+++-+-+-">¿No es, pues, la vida un don bastante triste?</l>
+                  <l n="10" met="+++--+---+-">¿No es un peso que abruma a los mortales?</l>
+                  <l n="11" met="+--+---+-+-">¡Nada se sufre cuando no se existe!</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+-+--+---+-">Esto dicen los hombres inmorales</l>
+                  <l n="13" met="---+---+++-">a quienes ya la religión no asiste</l>
+                  <l n="14" met="---+-+---+-">con la esperanza en premios inmortales.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_05">
+               <head>V</head>
+               <lg n="1" type="serventesio">
+                  <l n="1" met="--++-+-+-+-" enjamb="B-pb_noun_prep">¿Para qué hacer, Adolfo, estudio serio</l>
+                  <l n="2" met="--+--+---+-" enjamb="I-pb_noun_prep">de natura, sus obras y excelencia,</l>
+                  <l n="3" met="-+++-+-+-+-" enjamb="B-cc_crossclause">si todo es un arcano y un misterio</l>
+                  <l n="4" met="--+--+---+-" enjamb="I-cc_crossclause">que supera a la humana inteligencia?</l>
+               </lg>
+               <lg n="2" type="serventesio">
+                  <l n="5" met="--+--+---+-" enjamb="B-ex_dobj_verb">¿Para qué sujetar a nuestro imperio</l>
+                  <l n="6" met="--+--+---+-" enjamb="I-ex_dobj_verb">los principios abstractos de la ciencia</l>
+                  <l n="7" met="--+--+---+-">para sólo sacar, con magisterio,</l>
+                  <l n="8" met="+-+--+---+-">una oscura o errada consecuencia?</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="--+--+---+-" enjamb="B-pb_noun_prep">¿Para dar solución a los engaños</l>
+                  <l n="10" met="+-+---+--+-" enjamb="I-pb_noun_prep">de una inútil sofistica disputa</l>
+                  <l n="11" met="-+-+---+-+-">con tono seco, retumbante y grave?</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="+++----+-+-">Yo veo, Adolfo, que el mortal sus años</l>
+                  <l n="13" met="--+--+-+-+-">a Minerva por más que los tributa,</l>
+                  <l n="14" met="+-+--+-+-+-">sólo llega a saber que sabe nada.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_06">
+               <head>VI</head>
+               <lg n="1" type="serventesio">
+                  <l n="1" met="---+-+-+-+-" enjamb="B-pb_noun_prep">Cuando se llega a hacer estudio serio</l>
+                  <l n="2" met="--+--+---+-" enjamb="I-pb_noun_prep">de natura, sus obras y excelencia,</l>
+                  <l n="3" met="-+---+---+-" enjamb="B-ex_dobj_verb">penetra sus arcanos y misterio</l>
+                  <l n="4" met="-+---+---+-" enjamb="I-ex_dobj_verb">el hombre que posee inteligencia.</l>
+               </lg>
+               <lg n="2" type="serventesio">
+                  <l n="5" met="-+---+---+-">Sujetas las verdades a su imperio;</l>
+                  <l n="6" met="-+---+---+-">conoce los principios de la ciencia;</l>
+                  <l n="7" met="-+---+---+-">y de ellos, con prudente magisterio,</l>
+                  <l n="8" met="-+---+---+-">deduce la inmediata consecuencia.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="--+--+---+-" enjamb="B-cc_crossclause">El sofisma desata y los engaños</l>
+                  <l n="10" met="-+---+---+-" enjamb="I-cc_crossclause">que ocultan la verdad en la disputa,</l>
+                  <l n="11" met="---+-+-+-+-">y su sentencia es dictamen grave.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+-+---+-+-">Adolfo mío, con placer tus años</l>
+                  <l n="13" met="--+--+---+-">a Minerva, cual feudo, pues, tributa,</l>
+                  <l n="14" met="-+-+-+-+-+-">que el hombre vive tanto cuanto sabe.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_07">
+               <head>VII</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-+---+-+-+-">Al campo de batalla va Panthea</l>
+                  <l n="2" met="--+--+-+-+-">esperando encontrar su esposo vivo,</l>
+                  <l n="3" met="---+-++--+-">mas su tormento fue tan excesivo</l>
+                  <l n="4" met="-+++---+-+-">al verlo muerto, que morir desea.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="+--+--+--+-">Toma la sangre que el suelo humea,</l>
+                  <l n="6" met="-+-+---+-+-">con ella baña su semblante esquivo,</l>
+                  <l n="7" met="-+-+---+-+-">sus bellas manos y su pecho altivo,</l>
+                  <l n="8" met="-+-+-----+-">y de este modo, ¡cielos!, se recrea.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-++-+---+-" enjamb="B-ex_subj_verb">En fin... ¡horror!... su mano ensangrentada</l>
+                  <l n="10" met="+--+---+-+-" enjamb="B-ex_subj_verb I-ex_subj_verb">toma el acero; su animoso pecho</l>
+                  <l n="11" met="+--+-+---+-" enjamb="I-ex_subj_verb">rasga con furia ya desesperada;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="---+-+--++-">sobre su esposo cae; y, bajo un techo</l>
+                  <l n="13" met="---+-+-+-+-">en el sepulcro habiten, dice, airada,</l>
+                  <l n="14" met="---+-+--++-">los que durmieron juntos en un lecho.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_08">
+               <head>VIII</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-+-+-+-+-+-" enjamb="B-cc_crossclause">¿Adónde, ¡oh, patria!, existe el brazo fuerte</l>
+                  <l n="2" met="-++--+---+-" enjamb="I-cc_crossclause">que te dio libertad o independencia?</l>
+                  <l n="3" met="-+-+-+---+-" enjamb="B-pb_noun_prep">¿Adónde aquel que nunca cual herencia</l>
+                  <l n="4" met="--+--+-+-+-" enjamb="I-pb_noun_prep">de tiranos injustos pudo verte?</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="+-+--++-+-">¿Qué es de Boza, por fin...? ¡Oh dura suerte!</l>
+                  <l n="6" met="-+-+-+---+-" enjamb="B-pb_noun_prep">Corrió su infausta sangre con violencia</l>
+                  <l n="7" met="--+--+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">en el banco fatal, a la presencia</l>
+                  <l n="8" met="++-+---+-+-" enjamb="I-pb_noun_prep">de un pueblo todo que lloró su muerte.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="---+-+-+-+-">Mas si su cuerpo yace en esta losa,</l>
+                  <l n="10" met="-+---+-+-+-">su espíritu inmortal, allá en la gloria,</l>
+                  <l n="11" met="--+--+-+-+-">de su heroica virtud el premio goza.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="-+---+---+-" enjamb="B-ex_dobj_verb">Y nunca borrará de su memoria</l>
+                  <l n="13" met="-+---+-+-+-" enjamb="I-ex_dobj_verb">el pueblo de Arequipa tan odiosa,</l>
+                  <l n="14" met="+--+-+-+-+-">tan lamentable, tan funesta historia.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_09">
+               <head>IX</head>
+               <lg n="1" type="cuarteto">
+                  <l n="1" met="-++--++-++-">Al darte el corazón, dulce bien mío,</l>
+                  <l n="2" met="+-+--+--++-" enjamb="B-pb_adj_noun">no al influjo cedí de fatal hado</l>
+                  <l n="3" met="+-+--+---+-" enjamb="B-ex_dobj_verb I-pb_adj_noun">n de torpes deseos dominado</l>
+                  <l n="4" met="-+---+---+-" enjamb="I-ex_dobj_verb">la llave te entregué de mi albedrío.</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l n="5" met="-+---+---+-">Ni culpo del amor al poderío,</l>
+                  <l n="6" met="-++--+---+-">pues te quise y amé sobre pensado;</l>
+                  <l n="7" met="+-+-++---+-" enjamb="B-ex_subj_verb">ni un afecto tan tierno y delicado</l>
+                  <l n="8" met="+-+--++--+-" enjamb="I-ex_subj_verb">ha podido nacer de un desvarío.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l n="9" met="-+---+---+-">Tampoco el esplendor de tu hermosura,</l>
+                  <l n="10" met="---+-+-+-+-" enjamb="B-pb_noun_prep">tu juventud, tus gracias, fueron parte</l>
+                  <l n="11" met="-----+---+-" enjamb="I-pb_noun_prep">para que cautivaras mi ternura.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l n="12" met="--+--+---+-">La belleza se gasta, pese al arte;</l>
+                  <l n="13" met="---+---+-+-">pero el talento para siempre dura:</l>
+                  <l n="14" met="---+-+-+-+-">el tuyo me prendó ¿podré olvidarte?</l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

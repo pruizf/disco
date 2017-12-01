@@ -1,218 +1,296 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Ignacio María Acosta</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_099n"/>
-          <name type="short">Acosta</name>
-          <name type="full">
-            <name type="first-name">Ignacio María</name>
-            <name type="second-name">Acosta</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">6</measure>
-        <measure unit="tokens">535</measure>
-        <measure unit="line">84</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_099n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_099n" role="author" sex="M">
-            <persName>Ignacio María Acosta</persName>
-            <birth><placeName type="place">Cuba</placeName>, <placeName type="country">Cuba</placeName>, <placeName type="continent">América</placeName>, <date type="year" when="1814" cert="high">1814</date>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="year" when="1871" cert="high">1871</date>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Ignacio María Acosta</title>
+            <author corresp="#disco_099n">Ignacio María Acosta</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">6</measure>
+            <measure unit="tokens">535</measure>
+            <measure unit="line">84</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_099n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_099n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Acosta</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ignacio María</forename>
+                     <surname property="foaf:familyName">Acosta</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ignacio María Acosta</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Cuba</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1814" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1871" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s099n_0329" about="dbpedia:Soneto">
+                        <title property="dc:title">Dolencia de Iselia</title>
+                        <title type="incipit" property="dc:alternative">Esa inquietud que sin cesar te agita,</title>
+                     </bibl>
+                     <bibl resource="disco#s099n_0330" about="dbpedia:Soneto">
+                        <title property="dc:title">Un sueño</title>
+                        <title type="incipit" property="dc:alternative">Soñaba yo que por la senda hermosa</title>
+                     </bibl>
+                     <bibl resource="disco#s099n_0331" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Hay una Alondra en nuestro hermoso valle</title>
+                     </bibl>
+                     <bibl resource="disco#s099n_0332" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Nace fragante, delicada, hermosa,</title>
+                     </bibl>
+                     <bibl resource="disco#s099n_0333" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">No luce el sol en el oriente un día</title>
+                     </bibl>
+                     <bibl resource="disco#s099n_0334" about="dbpedia:Soneto">
+                        <title property="dc:title">Al plan de Matanzas</title>
+                        <title type="incipit" property="dc:alternative">¿Quién eres tú, gigante, en cuya frente</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Ignacio María Acosta</head>
-        <p>Cuba. 1814 - 1871</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s099n_0329">
-        <head>Dolencia de Iselia</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Esa inquietud que sin cesar te agita,</l>
-          <l n="2">ese tormento que te oprime el pecho,</l>
-          <l n="3">y pone abrojos al mullido lecho,</l>
-          <l n="4">y tu semblante virginal marchita.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Esa lucha fatal que se concita</l>
-          <l n="6">del corazón en el recinto estrecho,</l>
-          <l n="7">y le arranca suspiros al despecho</l>
-          <l n="8">en continua aflicción y amarga cuita;</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">ese dulce mirar, tu afecto tierno</l>
-          <l n="10">que revelan un alma candorosa</l>
-          <l n="11">que pugna por vencer un mal interno;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">esa delicia, en fin, que misteriosa</l>
-          <l n="13">con las penas se mezcla del infierno;</l>
-          <l n="14">esa es la llama del amor, hermosa.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s099n_0330">
-        <head>Un sueño</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Soñaba yo que por la senda hermosa</l>
-          <l n="2">de la virtud la humanidad corría,</l>
-          <l n="3">y el sol de la verdad resplandecía</l>
-          <l n="4">llenando el orbe de su luz radiosa.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La torpe envidia, la calumnia odiosa</l>
-          <l n="6">abaten su poder y bastardía;</l>
-          <l n="7">y a la voz del progreso se veía</l>
-          <l n="8">la sociedad aparecer dichosa.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Un pueblo sólo es el linaje humano,</l>
-          <l n="10">triunfa la ilustración, y por su empeño</l>
-          <l n="11">su templo cierra para siempre Jano...</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">A tan mágico cuadro y halagüeño,</l>
-          <l n="13">al arpa de oro le tendí la mano</l>
-          <l n="14">por cantar tanto bien... ¡mas era un sueño!...</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s099n_0331">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Hay una Alondra en nuestro hermoso valle</l>
-          <l n="2">que tierno atisba un cazador atento:</l>
-          <l n="3">Ave divina cuyo dulce acento</l>
-          <l n="4">al coro manda volador que calle.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Y calla, y se suspende el escuchalle...</l>
-          <l n="6">que de la Alondra al divinal concento</l>
-          <l n="7">plega sus alas de placer el viento,</l>
-          <l n="8">y no hay ave ni flor que no avasalle.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Triunfante su expresión desde su nido</l>
-          <l n="10">el valle todo con su voz encanta,</l>
-          <l n="11">y está el amor ante sus pies rendido.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Nada turba el trinar de su garganta,</l>
-          <l n="13">y si suena en el bosque algún gemido</l>
-          <l n="14">es de la voz del cazador que canta.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s099n_0332">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Nace fragante, delicada, hermosa,</l>
-          <l n="2">rica en colores, tímida y galana,</l>
-          <l n="3">entre perlas que riega la mañana</l>
-          <l n="4">en verde tallo la encendida rosa.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">El aura la acaricia voluptuosa;</l>
-          <l n="6">en agradarla el colibrí se afana;</l>
-          <l n="7">y la rosa gentil de la sabana</l>
-          <l n="8">es el hechizo y la adorada diosa.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Pero si envuelto en polvoroso aliento</l>
-          <l n="10">con torpe labio y bárbara inclemencia</l>
-          <l n="11">besa la flor el huracán violento,</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">entonces mustia, sin color ni esencia</l>
-          <l n="13">muere infeliz, cual muere en un momento</l>
-          <l n="14">al contacto del vicio la inocencia.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s099n_0333">
-        <head>Soneto</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">No luce el sol en el oriente un día</l>
-          <l n="2">sin que nazca en mi pecho una esperanza;</l>
-          <l n="3">mas ese bien de la ilusión no alcanza</l>
-          <l n="4">a dar consuelo a mi desgracia impía.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">El prisma hermoso de la infancia mía</l>
-          <l n="6">hízome ver la dicha en lontananza,</l>
-          <l n="7">y soñar ese bien que no se alcanza</l>
-          <l n="8">y con delirio el corazón ansía.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Pasaron mis risueñas mocedades:</l>
-          <l n="10">el cabello se encuentra encanecido,</l>
-          <l n="11">sin fuerza ni vigor mis facultades.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Despierto del letargo en que he dormido;</l>
-          <l n="13">quiero gozar al fin las realidades,</l>
-          <l n="14">y encuentro sólo que ilusión ha sido.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s099n_0334">
-        <head>Al plan de Matanzas</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¿Quién eres tú, gigante, en cuya frente</l>
-          <l n="2">se detienen las nieblas apiñadas,</l>
-          <l n="3">en tanto que a tus plantas, humilladas</l>
-          <l n="4">rugen las tempestades sordamente?...</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Tu fantástica forma sorprendente,</l>
-          <l n="6">tus crestas a los cielos levantadas,</l>
-          <l n="7">tus abismos, tus rocas despeñadas,</l>
-          <l n="8">¿qué misterios encubren a la mente?...</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¿Y pretendo tu origen misterioso</l>
-          <l n="10">penetrar, al través del tiempo inmenso</l>
-          <l n="11">que miraste pasar?... De luz un rayo</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">ilumina mi espíritu; y lloroso,</l>
-          <l n="13">que eres la tumba perdurable pienso</l>
-          <l n="14">del pueblo antiguo que habitó en Yucayo.</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Ignacio María Acosta</head>
+            <p>Cuba. 1814 - 1871</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s099n_0329">
+            <head>Dolencia de Iselia</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+++-">Esa inquietud que sin cesar te agita,</l>
+               <l n="2" met="+--+--++-+-">ese tormento que te oprime el pecho,</l>
+               <l n="3" met="-+-+---+-+-">y pone abrojos al mullido lecho,</l>
+               <l n="4" met="---+---+-+-">y tu semblante virginal marchita.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-" enjamb="B-pb_verb_cprep">Esa lucha fatal que se concita</l>
+               <l n="6" met="---+---+-+-" enjamb="I-pb_verb_cprep">del corazón en el recinto estrecho,</l>
+               <l n="7" met="-++--+---+-" enjamb="B-pb_noun_prep">y le arranca suspiros al despecho</l>
+               <l n="8" met="--+--+-+-+-" enjamb="I-pb_noun_prep">en continua aflicción y amarga cuita;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+-+-+-" enjamb="B-cc_crossclause">ese dulce mirar, tu afecto tierno</l>
+               <l n="10" met="--+-++---+-" enjamb="B-cc_crossclause I-cc_crossclause">que revelan un alma candorosa</l>
+               <l n="11" met="-+---+++-+-" enjamb="I-cc_crossclause">que pugna por vencer un mal interno;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+---+-" enjamb="B-ex_subj_verb">esa delicia, en fin, que misteriosa</l>
+               <l n="13" met="--+--+---+-" enjamb="I-ex_subj_verb">con las penas se mezcla del infierno;</l>
+               <l n="14" met="++-+---+-+-">esa es la llama del amor, hermosa.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s099n_0330">
+            <head>Un sueño</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-" enjamb="B-pb_noun_prep">Soñaba yo que por la senda hermosa</l>
+               <l n="2" met="---+---+-+-" enjamb="I-pb_noun_prep">de la virtud la humanidad corría,</l>
+               <l n="3" met="-+---+---+-" enjamb="B-pb_verb_chain">y el sol de la verdad resplandecía</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-pb_verb_chain">llenando el orbe de su luz radiosa.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-" enjamb="B-ex_subj_verb">La torpe envidia, la calumnia odiosa</l>
+               <l n="6" met="-+---+---+-" enjamb="I-ex_subj_verb">abaten su poder y bastardía;</l>
+               <l n="7" met="--+--+---+-" enjamb="B-ex_dobj_verb">y a la voz del progreso se veía</l>
+               <l n="8" met="---+---+-+-" enjamb="I-ex_dobj_verb">la sociedad aparecer dichosa.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++-++--+-+-">Un pueblo sólo es el linaje humano,</l>
+               <l n="10" met="+----+---+-">triunfa la ilustración, y por su empeño</l>
+               <l n="11" met="-+-+---+-+-">su templo cierra para siempre Jano...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+---+-">A tan mágico cuadro y halagüeño,</l>
+               <l n="13" met="-+-+-+-+-+-">al arpa de oro le tendí la mano</l>
+               <l n="14" met="--++-++++-">por cantar tanto bien... ¡mas era un sueño!...</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s099n_0331">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+-+----+-+-" enjamb="B-cc_crossclause">Hay una Alondra en nuestro hermoso valle</l>
+               <l n="2" met="-+-++--+-+-" enjamb="I-cc_crossclause">que tierno atisba un cazador atento:</l>
+               <l n="3" met="+--+---+-+-" enjamb="B-pb_noun_prep">Ave divina cuyo dulce acento</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-pb_noun_prep">al coro manda volador que calle.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">Y calla, y se suspende el escuchalle...</l>
+               <l n="6" met="---+---+-+-" enjamb="B-ex_subj_verb">que de la Alondra al divinal concento</l>
+               <l n="7" met="+--+---+-+-" enjamb="I-ex_subj_verb">plega sus alas de placer el viento,</l>
+               <l n="8" met="-+--+-+--+-">y no hay ave ni flor que no avasalle.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">Triunfante su expresión desde su nido</l>
+               <l n="10" met="-+-+---+-+-">el valle todo con su voz encanta,</l>
+               <l n="11" met="-+-+---+-+-">y está el amor ante sus pies rendido.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+-+--+---+-">Nada turba el trinar de su garganta,</l>
+               <l n="13" met="--+--+-+-+-">y si suena en el bosque algún gemido</l>
+               <l n="14" met="+--+---+-+-">es de la voz del cazador que canta.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s099n_0332">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="+--+---+-+-">Nace fragante, delicada, hermosa,</l>
+               <l n="2" met="+--+-+---+-">rica en colores, tímida y galana,</l>
+               <l n="3" met="--+--+---+-" enjamb="B-ex_dobj_verb">entre perlas que riega la mañana</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">en verde tallo la encendida rosa.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+---+---+-">El aura la acaricia voluptuosa;</l>
+               <l n="6" met="---++--+-+-">en agradarla el colibrí se afana;</l>
+               <l n="7" met="--+--+---+-" enjamb="B-ex_subj_verb">y la rosa gentil de la sabana</l>
+               <l n="8" met="+--+---+-+-" enjamb="I-ex_subj_verb">es el hechizo y la adorada diosa.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-" enjamb="B-pb_noun_prep">Pero si envuelto en polvoroso aliento</l>
+               <l n="10" met="-+-+-+---+-" enjamb="B-pb_adj_noun I-pb_noun_prep">con torpe labio y bárbara inclemencia</l>
+               <l n="11" met="+--+---+-+-" enjamb="I-pb_adj_noun">besa la flor el huracán violento,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+---+-+-">entonces mustia, sin color ni esencia</l>
+               <l n="13" met="+--+-+-+-+-" enjamb="B-ex_subj_verb">muere infeliz, cual muere en un momento</l>
+               <l n="14" met="--+--+---+-" enjamb="I-ex_subj_verb">al contacto del vicio la inocencia.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s099n_0333">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+---+++-">No luce el sol en el oriente un día</l>
+               <l n="2" met="--+--++--+-">sin que nazca en mi pecho una esperanza;</l>
+               <l n="3" met="-+-+---+++-" enjamb="B-pb_verb_chain">mas ese bien de la ilusión no alcanza</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-pb_verb_chain">a dar consuelo a mi desgracia impía.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">El prisma hermoso de la infancia mía</l>
+               <l n="6" met="+--+-+---+-" enjamb="I-ex_dobj_verb">hízome ver la dicha en lontananza,</l>
+               <l n="7" met="--++-+-+-+-">y soñar ese bien que no se alcanza</l>
+               <l n="8" met="---+---+-+-">y con delirio el corazón ansía.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">Pasaron mis risueñas mocedades:</l>
+               <l n="10" met="--+--+---+-">el cabello se encuentra encanecido,</l>
+               <l n="11" met="-+---+---+-">sin fuerza ni vigor mis facultades.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+-+-+-">Despierto del letargo en que he dormido;</l>
+               <l n="13" met="+--+-+---+-">quiero gozar al fin las realidades,</l>
+               <l n="14" met="-+-+---+++-">y encuentro sólo que ilusión ha sido.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s099n_0334">
+            <head>Al plan de Matanzas</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+-+---+-">¿Quién eres tú, gigante, en cuya frente</l>
+               <l n="2" met="--+--+---+-">se detienen las nieblas apiñadas,</l>
+               <l n="3" met="-----+---+-">en tanto que a tus plantas, humilladas</l>
+               <l n="4" met="+----+-+-+-">rugen las tempestades sordamente?...</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--+---+-">Tu fantástica forma sorprendente,</l>
+               <l n="6" met="-+---+---+-">tus crestas a los cielos levantadas,</l>
+               <l n="7" met="--+--+---+-">tus abismos, tus rocas despeñadas,</l>
+               <l n="8" met="+-+--+---+-">¿qué misterios encubren a la mente?...</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+---+-">¿Y pretendo tu origen misterioso</l>
+               <l n="10" met="--+--+-+-+-" enjamb="B-cc_crossclause">penetrar, al través del tiempo inmenso</l>
+               <l n="11" met="--+--+-+++-" enjamb="B-ex_subj_verb I-cc_crossclause">que miraste pasar?... De luz un rayo</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-" enjamb="I-ex_subj_verb">ilumina mi espíritu; y lloroso,</l>
+               <l n="13" met="+--+---+-+-" enjamb="B-pb_verb_cprep">que eres la tumba perdurable pienso</l>
+               <l n="14" met="-+-+---+-+-" enjamb="I-pb_verb_cprep">del pueblo antiguo que habitó en Yucayo.</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

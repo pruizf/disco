@@ -1,293 +1,382 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Vicente Colorado</title>
-        <author>
-          <idno type="viaf" cert="high">86777619</idno>
-          <idno type="#disco" xml:id="disco_238n"/>
-          <name type="short">Colorado</name>
-          <name type="full">
-            <name type="first-name">Vicente</name>
-            <name type="second-name">Colorado</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">9</measure>
-        <measure unit="tokens">852</measure>
-        <measure unit="line">126</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_238n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_238n" role="author" sex="M">
-            <persName>Vicente Colorado</persName>
-            <birth><placeName type="place">España</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Vicente Colorado</title>
+            <author corresp="#disco_238n">Vicente Colorado</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">9</measure>
+            <measure unit="tokens">852</measure>
+            <measure unit="line">126</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_238n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_238n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/86777619"/>
+                  <persName type="short">Colorado</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Vicente</forename>
+                     <surname property="foaf:familyName">Colorado</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Vicente Colorado</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s238n_0773" about="dbpedia:Soneto">
+                        <title property="dc:title">En el entierro de Fernández y González</title>
+                        <title type="incipit" property="dc:alternative">¡Buen viaje, maestro, buen viaje!</title>
+                     </bibl>
+                     <bibl resource="disco#s238n_0774" about="dbpedia:Soneto">
+                        <title property="dc:title">A un imbécil</title>
+                        <title type="incipit" property="dc:alternative">Contigo estoy conforme cuando dices,</title>
+                     </bibl>
+                     <bibl resource="disco#s238n_0775" about="dbpedia:Soneto">
+                        <title property="dc:title">La burra y el burro</title>
+                        <title type="incipit" property="dc:alternative">¿Por qué me pegas? a Balaam decía</title>
+                     </bibl>
+                     <bibl resource="disco#s238n_0776" about="dbpedia:Soneto">
+                        <title property="dc:title">A Dante</title>
+                        <title type="incipit" property="dc:alternative">También a mí tu sufrimiento alcanza</title>
+                     </bibl>
+                     <bibl resource="disco#s238n_0777" about="dbpedia:Soneto">
+                        <title property="dc:title">Anima stultorum</title>
+                        <title type="incipit" property="dc:alternative">¡El alma es inmortal!, me repetía</title>
+                     </bibl>
+                     <bibl resource="disco#s238n_0778" about="dbpedia:Soneto">
+                        <title property="dc:title">Viernes de cuaresma</title>
+                        <title type="incipit" property="dc:alternative">¡Potaje de espinacas y pescado!...</title>
+                     </bibl>
+                     <bibl resource="disco#s238n_0779" about="dbpedia:Soneto">
+                        <title property="dc:title">El Misterio de la Encarnación</title>
+                        <title type="incipit" property="dc:alternative">Halló un marido a su mujer preñada,</title>
+                     </bibl>
+                     <bibl resource="disco#s238n_0780" about="dbpedia:Soneto">
+                        <title property="dc:title">A un poeta católico</title>
+                        <title type="incipit" property="dc:alternative">A tres pesetas el volumen, vendes</title>
+                     </bibl>
+                     <bibl resource="disco#s238n_0781" about="dbpedia:Soneto">
+                        <title property="dc:title">De tal palo...</title>
+                        <title type="incipit" property="dc:alternative">Dios hizo al hombre, dice la Sagrada</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Vicente Colorado</head>
-        <p>España. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s238n_0773">
-        <head>En el entierro de Fernández y González</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Buen viaje, maestro, buen viaje!</l>
-          <l n="2">¡quién te ha visto a no ser en este día</l>
-          <l n="3">seguido de tan noble compañía</l>
-          <l n="4">con escolta de a pie, y a ti en carruaje!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">No llevas tras de ti mal equipaje:</l>
-          <l n="6">¡cuánta ilustre y soberbia medianía!</l>
-          <l n="7">contigo comparados, todavía</l>
-          <l n="8">algunos te aventajan... en el traje.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Todos ellos llegaron a la meta,</l>
-          <l n="10">y son ricos, y están en candelero,</l>
-          <l n="11">y el mundo les admira y les respeta:</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y tú, entre todos ellos el primero,</l>
-          <l n="13">engreído con ser un gran poeta,</l>
-          <l n="14">has muerto como muere un pordiosero.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s238n_0774">
-        <head>A un imbécil</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Contigo estoy conforme cuando dices,</l>
-          <l n="2">con más obstinación que perspicacia,</l>
-          <l n="3">«¡se puede ser feliz!» tú, verbi gratia,</l>
-          <l n="4">que eres el más feliz de los felices.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Mas penetrando bien en las raíces</l>
-          <l n="6">de tu felicidad, con pertinacia</l>
-          <l n="7">amará el desgraciado su desgracia,</l>
-          <l n="8">si es que ve más allá de sus narices.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Porque eres tú la prueba más patente</l>
-          <l n="10">que puede revelarnos a qué precio</l>
-          <l n="11">en el mundo es feliz la humana gente;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">pues de mil casos, en los mil aprecio</l>
-          <l n="13">que siendo la desgracia inteligente,</l>
-          <l n="14">no hay un hombre feliz que no sea un necio.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s238n_0775">
-        <head>La burra y el burro</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¿Por qué me pegas? a Balaam decía</l>
-          <l n="2">la mismísima burra que montaba,</l>
-          <l n="3">y el muy bruto, aun oyéndola, le daba</l>
-          <l n="4">cada palo de ciego que la hundía.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Años después, al trasponer el día,</l>
-          <l n="6">Jehová, por boca de Josué, paraba</l>
-          <l n="7">no a la tierra que en torno al sol giraba,</l>
-          <l n="8">sino al sol que ni un punto se movía.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Que haya la burra de Balaam hablado,</l>
-          <l n="10">aunque no lo comprendo, me lo explico,</l>
-          <l n="11">que hombres hay que al hablar han rebuznado.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Mas que Dios (con la Biblia testifico)</l>
-          <l n="13">mande parar al sol que está parado...</l>
-          <l n="14">¡eso no se le ocurre ni aun borrico!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s238n_0776">
-        <head>A Dante</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">También a mí tu sufrimiento alcanza</l>
-          <l n="2">cuando recorro la ciudad doliente,</l>
-          <l n="3">en donde llora la extinguida gente</l>
-          <l n="4">el eterno dolor sin esperanza.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Entre el espanto y el dolor avanza</l>
-          <l n="6">mi espíritu angustiado, tristemente,</l>
-          <l n="7">temeroso de un Dios que eternamente</l>
-          <l n="8">hace sentir al hombre su venganza.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Mas cuando al fin, tras sufrimiento tanto,</l>
-          <l n="10">el Paraíso a vislumbrar empiezo,</l>
-          <l n="11">en esperanzas truécase el quebranto;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">deténgome a su umbral, de hinojos rezo,</l>
-          <l n="13">penetro luego en su recinto santo,</l>
-          <l n="14">y en cruz los brazos... ante Dios bostezo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s238n_0777">
-        <head>Anima stultorum</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡El alma es inmortal!, me repetía</l>
-          <l n="2">un necio que conmigo disputaba;</l>
-          <l n="3">y mi razón ante él se sublevaba</l>
-          <l n="4">con frases de amarguísima ironía.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">¡Qué el alma es inmortal!, yo me decía;</l>
-          <l n="6">esa sola desdicha nos faltaba,</l>
-          <l n="7">que el necio (y de hito en hito le miraba)</l>
-          <l n="8">llegase a eternizar su tontería.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Después me habló de Dios (¡era preciso</l>
-          <l n="10">oírle) y de las penas del Infierno,</l>
-          <l n="11">y dijo lo que quiso y como quiso;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">mientras que yo, para mi fuero interno,</l>
-          <l n="13">como Dante, leí en el Paraíso</l>
-          <l n="14">estas palabras: Tonticomio eterno.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s238n_0778">
-        <head>Viernes de cuaresma</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Potaje de espinacas y pescado!...</l>
-          <l n="2">Lo mismo en el amor que en el puchero,</l>
-          <l n="3">en cuanto Dios se mete a medianero</l>
-          <l n="4">hace amable el infierno y el pecado.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">El amor y el placer han extenuado</l>
-          <l n="6">mi sangre, y renovarla es lo primero;</l>
-          <l n="7">dadme carne de vaca y de carnero</l>
-          <l n="8">y volveré a gozar como he gozado.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">No me habléis de ese Dios que nos propina</l>
-          <l n="10">ayunos y abstinencias, y difama</l>
-          <l n="11">el jamón y enaltece la sardina.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">La vida es el amor, y el hombre que ama,</l>
-          <l n="13">debe arrojar a Dios de la cocina</l>
-          <l n="14">y después arrojarle de la cama.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s238n_0779">
-        <head>El Misterio de la Encarnación</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Halló un marido a su mujer preñada,</l>
-          <l n="2">después de dos o tres años de ausencia,</l>
-          <l n="3">y la mujer, al verse en su presencia,</l>
-          <l n="4">se sintió doblemente embarazada.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">-¿Cómo fue? -dijo él. -Y ella, turbada:</l>
-          <l n="6">Sin detrimento fue de mi conciencia;</l>
-          <l n="7">concebí sin dolor ni violencia</l>
-          <l n="8">siendo antes y después siempre honrada.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Llevándose las manos a la frente</l>
-          <l n="10">el marido exclamó: ¡Mucho lo dudo!</l>
-          <l n="11">-¡Dudas de Dios! -dijo ella santamente.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y él, aterrado, resistir no pudo</l>
-          <l n="13">por más tiempo su error, y fue creyente,</l>
-          <l n="14">que viene a ser lo mismo que cornudo.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s238n_0780">
-        <head>A un poeta católico</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">A tres pesetas el volumen, vendes</l>
-          <l n="2">a Cristo en verso y a su Madre en prosa,</l>
-          <l n="3">y entre amigos, con frase licenciosa</l>
-          <l n="4">a Dios injurias y a su Iglesia ofendes.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Contra el ateo en público la emprendes</l>
-          <l n="6">siempre que te va en ello alguna cosa,</l>
-          <l n="7">porque, ¡eso sí!, tú tienes religiosa</l>
-          <l n="8">y santa fe... al negocio y lo defiendes.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Cómo te habrás reído el otro día</l>
-          <l n="10">de mí, cuando te dije como un loco</l>
-          <l n="11">que el buen Dios para nada nos servía!</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Ahora mi error y desventura toco,</l>
-          <l n="13">pues Dios sirve en el mundo todavía</l>
-          <l n="14">para que medre el necio, ¡qué no es poco!</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s238n_0781">
-        <head>De tal palo...</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Dios hizo al hombre, dice la Sagrada</l>
-          <l n="2">Escritura, a sí mismo semejante</l>
-          <l n="3">del que Adán por detrás y por delante</l>
-          <l n="4">era de Dios la imagen acabada.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Hoy la ciencia, en los hechos comprobada,</l>
-          <l n="6">dice que por el mono, en incesante</l>
-          <l n="7">transformación, allá en edad distante</l>
-          <l n="8">la humana criatura fue engendrada.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡De un mono, de una bestia, el hombre hechura!</l>
-          <l n="10">No creo que a la especie mortifico,</l>
-          <l n="11">la cual es en gran parte bestia pura.</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Y también el buen Dios así me explico,</l>
-          <l n="13">pues si Adán siendo un mono es su figura,</l>
-          <l n="14">Dios será otro que tal... ¡Valiente mico!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Vicente Colorado</head>
+            <p>España. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s238n_0773">
+            <head>En el entierro de Fernández y González</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+-+-+-">¡Buen viaje, maestro, buen viaje!</l>
+               <l n="2" met="+++-++-+-+-" enjamb="B-pb_adj_noun">¡quién te ha visto a no ser en este día</l>
+               <l n="3" met="-+--++---+-" enjamb="I-pb_adj_noun">seguido de tan noble compañía</l>
+               <l n="4" met="--+--++--+-">con escolta de a pie, y a ti en carruaje!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++---++--+-">No llevas tras de ti mal equipaje:</l>
+               <l n="6" met="+-+--+---+-">¡cuánta ilustre y soberbia medianía!</l>
+               <l n="7" met="-+---+---+-">contigo comparados, todavía</l>
+               <l n="8" met="-+-+-+--+-">algunos te aventajan... en el traje.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+--+---+-">Todos ellos llegaron a la meta,</l>
+               <l n="10" met="-++--+---+-">y son ricos, y están en candelero,</l>
+               <l n="11" met="-+-+-+-+-+-">y el mundo les admira y les respeta:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+-+-+---+-">y tú, entre todos ellos el primero,</l>
+               <l n="13" met="--+--+++-+-">engreído con ser un gran poeta,</l>
+               <l n="14" met="++---++--+-">has muerto como muere un pordiosero.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s238n_0774">
+            <head>A un imbécil</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+---+-">Contigo estoy conforme cuando dices,</l>
+               <l n="2" met="-+---+---+-">con más obstinación que perspicacia,</l>
+               <l n="3" met="-+-+-+++-+-">«¡se puede ser feliz!» tú, verbi gratia,</l>
+               <l n="4" met="+--+-+---+-">que eres el más feliz de los felices.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+---+-" enjamb="B-pb_noun_prep">Mas penetrando bien en las raíces</l>
+               <l n="6" met="-----+---+-" enjamb="I-pb_noun_prep">de tu felicidad, con pertinacia</l>
+               <l n="7" met="--+--+---+-">amará el desgraciado su desgracia,</l>
+               <l n="8" met="-+-+-----+-">si es que ve más allá de sus narices.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+-+-+-">Porque eres tú la prueba más patente</l>
+               <l n="10" met="-+---++-++-">que puede revelarnos a qué precio</l>
+               <l n="11" met="--++-+-+-+-">en el mundo es feliz la humana gente;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--++---+-+-" enjamb="B-cc_crossclause">pues de mil casos, en los mil aprecio</l>
+               <l n="13" met="-+---+---+-" enjamb="I-cc_crossclause">que siendo la desgracia inteligente,</l>
+               <l n="14" met="++--+-++++-">no hay un hombre feliz que no sea un necio.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s238n_0775">
+            <head>La burra y el burro</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+++---+-+-" enjamb="B-ex_subj_verb">¿Por qué me pegas? a Balaam decía</l>
+               <l n="2" met="--+--+---+-" enjamb="I-ex_subj_verb">la mismísima burra que montaba,</l>
+               <l n="3" met="-+++-+-+++-" enjamb="B-ex_subj_verb">y el muy bruto, aun oyéndola, le daba</l>
+               <l n="4" met="+-+--+--++-" enjamb="I-ex_subj_verb">cada palo de ciego que la hundía.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+---+-+-">Años después, al trasponer el día,</l>
+               <l n="6" met="-+-+---+-+-" enjamb="B-pb_verb_adv">Jehová, por boca de Josué, paraba</l>
+               <l n="7" met="+-+----+-+-" enjamb="I-pb_verb_adv">no a la tierra que en torno al sol giraba,</l>
+               <l n="8" met="--+-++---+-">sino al sol que ni un punto se movía.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+---+-+-">Que haya la burra de Balaam hablado,</l>
+               <l n="10" met="--++-+-+++-">aunque no lo comprendo, me lo explico,</l>
+               <l n="11" met="+-+--++--+-">que hombres hay que al hablar han rebuznado.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-">Mas que Dios (con la Biblia testifico)</l>
+               <l n="13" met="+--+-+-+-+-">mande parar al sol que está parado...</l>
+               <l n="14" met="+-+-++-+-+-">¡eso no se le ocurre ni aun borrico!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s238n_0776">
+            <head>A Dante</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">También a mí tu sufrimiento alcanza</l>
+               <l n="2" met="---+---+-+-" enjamb="I-ex_dobj_verb">cuando recorro la ciudad doliente,</l>
+               <l n="3" met="---+---+-+-">en donde llora la extinguida gente</l>
+               <l n="4" met="--+--+---+-">el eterno dolor sin esperanza.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+---+-+-" enjamb="B-ex_subj_verb">Entre el espanto y el dolor avanza</l>
+               <l n="6" met="-+---+-+-+-" enjamb="I-ex_subj_verb">mi espíritu angustiado, tristemente,</l>
+               <l n="7" met="--+-++-+-+-" enjamb="B-pb_verb_adv">temeroso de un Dios que eternamente</l>
+               <l n="8" met="+--+-+---+-" enjamb="I-pb_verb_adv">hace sentir al hombre su venganza.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="---+---+-+-">Mas cuando al fin, tras sufrimiento tanto,</l>
+               <l n="10" met="--+----+-+-">el Paraíso a vislumbrar empiezo,</l>
+               <l n="11" met="---+-+-+-+-">en esperanzas truécase el quebranto;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-+---+-+-+-">deténgome a su umbral, de hinojos rezo,</l>
+               <l n="13" met="-+-+---+-+-">penetro luego en su recinto santo,</l>
+               <l n="14" met="-+-+--+-+-">y en cruz los brazos... ante Dios bostezo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s238n_0777">
+            <head>Anima stultorum</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-++--++--+-" enjamb="B-ex_dobj_verb">¡El alma es inmortal!, me repetía</l>
+               <l n="2" met="++---+---+-" enjamb="I-ex_dobj_verb">un necio que conmigo disputaba;</l>
+               <l n="3" met="---+-+---+-">y mi razón ante él se sublevaba</l>
+               <l n="4" met="-+---+---+-">con frases de amarguísima ironía.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+++--+++-+-">¡Qué el alma es inmortal!, yo me decía;</l>
+               <l n="6" met="+-+--+-+-+-">esa sola desdicha nos faltaba,</l>
+               <l n="7" met="-+-+-+-+-+-">que el necio (y de hito en hito le miraba)</l>
+               <l n="8" met="-+---+---+-">llegase a eternizar su tontería.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+++-++--+-" enjamb="B-ex_subj_verb">Después me habló de Dios (¡era preciso</l>
+               <l n="10" met="++---+---+-" enjamb="I-ex_subj_verb">oírle) y de las penas del Infierno,</l>
+               <l n="11" met="-+---+---+-">y dijo lo que quiso y como quiso;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-">mientras que yo, para mi fuero interno,</l>
+               <l n="13" met="--+-+----+-" enjamb="B-ex_dobj_verb">como Dante, leí en el Paraíso</l>
+               <l n="14" met="+--+---+-+-" enjamb="I-ex_dobj_verb">estas palabras: Tonticomio eterno.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s238n_0778">
+            <head>Viernes de cuaresma</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-">¡Potaje de espinacas y pescado!...</l>
+               <l n="2" met="-+---+---+-">Lo mismo en el amor que en el puchero,</l>
+               <l n="3" met="---+-+---+-">en cuanto Dios se mete a medianero</l>
+               <l n="4" met="+-+--+---+-">hace amable el infierno y el pecado.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="--+--++--+-" enjamb="B-ex_dobj_verb">El amor y el placer han extenuado</l>
+               <l n="6" met="-+---++--+-" enjamb="I-ex_dobj_verb">mi sangre, y renovarla es lo primero;</l>
+               <l n="7" met="+++--+---+-">dadme carne de vaca y de carnero</l>
+               <l n="8" met="---+-+-+-+-">y volveré a gozar como he gozado.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++++-+-+-+-">No me habléis de ese Dios que nos propina</l>
+               <l n="10" met="-+---+---+-" enjamb="B-ex_subj_verb">ayunos y abstinencias, y difama</l>
+               <l n="11" met="--+--+---+-" enjamb="I-ex_subj_verb">el jamón y enaltece la sardina.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="-++--+-+-+-">La vida es el amor, y el hombre que ama,</l>
+               <l n="13" met="+--+-+---+-">debe arrojar a Dios de la cocina</l>
+               <l n="14" met="--+--++--+-">y después arrojarle de la cama.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s238n_0779">
+            <head>El Misterio de la Encarnación</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-">Halló un marido a su mujer preñada,</l>
+               <l n="2" met="---+-++--+-">después de dos o tres años de ausencia,</l>
+               <l n="3" met="---+-++--+-">y la mujer, al verse en su presencia,</l>
+               <l n="4" met="--++-+---+-">se sintió doblemente embarazada.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+++-+--+-">-¿Cómo fue? -dijo él. -Y ella, turbada:</l>
+               <l n="6" met="---+-+---+-">Sin detrimento fue de mi conciencia;</l>
+               <l n="7" met="--+--+---+-">concebí sin dolor ni violencia</l>
+               <l n="8" met="++---++--+-">siendo antes y después siempre honrada.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+-+-+---+-">Llevándose las manos a la frente</l>
+               <l n="10" met="--+--++-++-">el marido exclamó: ¡Mucho lo dudo!</l>
+               <l n="11" met="--+-++-+-+-">-¡Dudas de Dios! -dijo ella santamente.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+---+++-" enjamb="B-ex_dobj_verb">Y él, aterrado, resistir no pudo</l>
+               <l n="13" met="-++--+-+-+-" enjamb="I-ex_dobj_verb">por más tiempo su error, y fue creyente,</l>
+               <l n="14" met="-+-+-+---+-">que viene a ser lo mismo que cornudo.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s238n_0780">
+            <head>A un poeta católico</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-------+-+-" enjamb="B-pb_adj_prep">A tres pesetas el volumen, vendes</l>
+               <l n="2" met="-+-+--+--+-" enjamb="I-pb_adj_prep">a Cristo en verso y a su Madre en prosa,</l>
+               <l n="3" met="--+--+---+-" enjamb="B-pb_adj_prep">y entre amigos, con frase licenciosa</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-pb_adj_prep">a Dios injurias y a su Iglesia ofendes.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---++--+-+-" enjamb="B-ex_subj_verb">Contra el ateo en público la emprendes</l>
+               <l n="6" met="+--+++-+-+-" enjamb="I-ex_subj_verb">siempre que te va en ello alguna cosa,</l>
+               <l n="7" met="-+-+++---+-" enjamb="B-ex_dobj_verb">porque, ¡eso sí!, tú tienes religiosa</l>
+               <l n="8" met="-+-+-+-+-+-" enjamb="I-ex_dobj_verb">y santa fe... al negocio y lo defiendes.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+-+++--+-+-" enjamb="B-pb_noun_prep">¡Cómo te habrás reído el otro día</l>
+               <l n="10" met="-+--++--++-" enjamb="B-cc_crossclause I-pb_noun_prep">de mí, cuando te dije como un loco</l>
+               <l n="11" met="-++--+-+-+-" enjamb="I-cc_crossclause">que el buen Dios para nada nos servía!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+---+-+-">Ahora mi error y desventura toco,</l>
+               <l n="13" met="-++--+---+-">pues Dios sirve en el mundo todavía</l>
+               <l n="14" met="---+-+-+++-">para que medre el necio, ¡qué no es poco!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s238n_0781">
+            <head>De tal palo...</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+-+---+-">Dios hizo al hombre, dice la Sagrada</l>
+               <l n="2" met="--+-++---+-" enjamb="B-pb_adj_prep">Escritura, a sí mismo semejante</l>
+               <l n="3" met="--+--+---+-" enjamb="B-pb_verb_adv I-pb_adj_prep">del que Adán por detrás y por delante</l>
+               <l n="4" met="+--+-+---+-" enjamb="I-pb_verb_adv">era de Dios la imagen acabada.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+-+--+---+-">Hoy la ciencia, en los hechos comprobada,</l>
+               <l n="6" met="+----+---+-" enjamb="B-pb_adj_noun">dice que por el mono, en incesante</l>
+               <l n="7" met="---+-+-+-+-" enjamb="I-pb_adj_noun">transformación, allá en edad distante</l>
+               <l n="8" met="-+--+-+--+-">la humana criatura fue engendrada.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="++-+-+-+-+-">¡De un mono, de una bestia, el hombre hechura!</l>
+               <l n="10" met="++---+---+-">No creo que a la especie mortifico,</l>
+               <l n="11" met="--+-++-+-+-">la cual es en gran parte bestia pura.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+-++-+++-">Y también el buen Dios así me explico,</l>
+               <l n="13" met="--+++++--+-">pues si Adán siendo un mono es su figura,</l>
+               <l n="14" met="--+--+-+-+-">Dios será otro que tal... ¡Valiente mico!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

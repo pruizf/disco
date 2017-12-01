@@ -1,118 +1,178 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Rubén J. Mosquera</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_459n"/>
-          <name type="short">Mosquera</name>
-          <name type="full">
-            <name type="first-name">Rubén J.</name>
-            <name type="second-name">Mosquera</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">2</measure>
-        <measure unit="tokens">181</measure>
-        <measure unit="line">28</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_459n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_459n" role="author" sex="M">
-            <persName>Rubén J. Mosquera</persName>
-            <birth><placeName type="place">Colombia</placeName>, <placeName type="country">Colombia</placeName>, <placeName type="continent">América</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">20</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Rubén J. Mosquera</title>
+            <author corresp="#disco_459n">Rubén J. Mosquera</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">181</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_459n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_459n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Mosquera</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Rubén J.</forename>
+                     <surname property="foaf:familyName">Mosquera</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Rubén J. Mosquera</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">Colombia</country>
+                           <bloc>América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s459n_1759" about="dbpedia:Soneto">
+                        <title property="dc:title">España</title>
+                        <title type="incipit" property="dc:alternative">Si hervir entre mis venas no sintiera</title>
+                     </bibl>
+                     <bibl resource="disco#s459n_1760" about="dbpedia:Soneto">
+                        <title property="dc:title">Ante la estatua de Bolívar</title>
+                        <title type="incipit" property="dc:alternative">¡Vedlo! ¡Allí está! Parece que se anima</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Rubén J. Mosquera</head>
-        <p>Colombia. 19th century - 20th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s459n_1759">
-        <head>España</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">Si hervir entre mis venas no sintiera</l>
-          <l n="2">la enrojecida sangre de Castilla.</l>
-          <l n="3">SI ante el altar sagrado la rodilla</l>
-          <l n="4">con humilde fervor no se rindiera.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Si su sonoro idioma no tuviera,</l>
-          <l n="6">que gloria fue de Moratín y Ercilla,</l>
-          <l n="7">podría sin rubor en la mejilla</l>
-          <l n="8">negar que de españoles descendiera.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Arrostrando del mar rigor y saña,</l>
-          <l n="10">desde oculto repliegue de los Andes</l>
-          <l n="11">he venido hasta ti, gloriosa España;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">Vengo a inspirarme en tus recuerdos grandes,</l>
-          <l n="13">y ávido sitio contemplar, do un día,</l>
-          <l n="14">Colón, absorto, un mundo te ofrecía.</l>
-        </lg>
-      </lg>
-      <lg type="sonnet" xml:id="s459n_1760">
-        <head>Ante la estatua de Bolívar</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Vedlo! ¡Allí está! Parece que se anima</l>
-          <l n="2">su enjuto rostro, su nervudo brazo;</l>
-          <l n="3">súbdito de su genio, el Chimborazo</l>
-          <l n="4">a soportar su pie dobla la cima!</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">La Libertad que como a Dios estima,</l>
-          <l n="6">roto sintió de la opresión el lazo,</l>
-          <l n="7">y, Padre de la Patria, unió en abrazo</l>
-          <l n="8">los hijos del Rimac y del Tolima.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">¡Habla fundido bronce! Dinos cuántas</l>
-          <l n="10">al par que tristes, infecundas luchas</l>
-          <l n="11">murieron, al surgir, bajo las plantas;</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">y si la voz del patriotismo escuchas,</l>
-          <l n="13">yergue la frente, y en tus ojos muestra</l>
-          <l n="14">el ígneo rayo que blandió tu diestra!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Rubén J. Mosquera</head>
+            <p>Colombia. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s459n_1759">
+            <head>España</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+-+-+-" enjamb="B-ex_dobj_verb">Si hervir entre mis venas no sintiera</l>
+               <l n="2" met="---+-+---+-" enjamb="I-ex_dobj_verb">la enrojecida sangre de Castilla.</l>
+               <l n="3" met="---+-+---+-" enjamb="B-pb_noun_prep">SI ante el altar sagrado la rodilla</l>
+               <l n="4" met="--+--++--+-" enjamb="I-pb_noun_prep">con humilde fervor no se rindiera.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+-+-+-+-">Si su sonoro idioma no tuviera,</l>
+               <l n="6" met="-+-+---+-+-">que gloria fue de Moratín y Ercilla,</l>
+               <l n="7" met="-+---+---+-">podría sin rubor en la mejilla</l>
+               <l n="8" met="-+---+---+-">negar que de españoles descendiera.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+-+-+-">Arrostrando del mar rigor y saña,</l>
+               <l n="10" met="--+--+---+-">desde oculto repliegue de los Andes</l>
+               <l n="11" met="+-+--+-+-+-">he venido hasta ti, gloriosa España;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--++--+-+-">Vengo a inspirarme en tus recuerdos grandes,</l>
+               <l n="13" met="+--+---+++-">y ávido sitio contemplar, do un día,</l>
+               <l n="14" met="-+-+++-+-+-">Colón, absorto, un mundo te ofrecía.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s459n_1760">
+            <head>Ante la estatua de Bolívar</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+---+-" enjamb="B-ex_dobj_verb">¡Vedlo! ¡Allí está! Parece que se anima</l>
+               <l n="2" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">su enjuto rostro, su nervudo brazo;</l>
+               <l n="3" met="+----+---+-">súbdito de su genio, el Chimborazo</l>
+               <l n="4" met="---+-++--+-">a soportar su pie dobla la cima!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="---+---+-+-">La Libertad que como a Dios estima,</l>
+               <l n="6" met="+--+---+-+-">roto sintió de la opresión el lazo,</l>
+               <l n="7" met="-----+-+-+-" enjamb="B-ex_dobj_verb">y, Padre de la Patria, unió en abrazo</l>
+               <l n="8" met="-+---+---+-" enjamb="I-ex_dobj_verb">los hijos del Rimac y del Tolima.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="+--+-+-+-+-">¡Habla fundido bronce! Dinos cuántas</l>
+               <l n="10" met="---+---+-+-">al par que tristes, infecundas luchas</l>
+               <l n="11" met="-+---+---+-">murieron, al surgir, bajo las plantas;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="---+---+-+-">y si la voz del patriotismo escuchas,</l>
+               <l n="13" met="+--+---+-+-" enjamb="B-ex_subj_verb">yergue la frente, y en tus ojos muestra</l>
+               <l n="14" met="-+-+---+-+-" enjamb="I-ex_subj_verb">el ígneo rayo que blandió tu diestra!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

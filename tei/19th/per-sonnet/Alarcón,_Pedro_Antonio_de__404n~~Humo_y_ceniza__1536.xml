@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Humo y ceniza</title>
+            <author corresp="#disco_404n">Pedro Antonio de Alarcón</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">97</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_po_404n1536"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_404n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/44294383"/>
+                  <persName type="short">Alarcón</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Pedro Antonio</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Alarcón</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Pedro Antonio de Alarcón</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Guadix (Granada)</settlement>
+                           <country>España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1833" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location property="schema:deathPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" when="1891" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s404n1536" about="dbpedia:Soneto">
+                        <title property="dc:title">Humo y ceniza</title>
+                        <title type="incipit" property="dc:alternative">Fumaba yo, tendido en mi butaca,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <head>Humo y ceniza</head>
+      </front>
+      <body>
+         <lg n="1" type="cuarteto">
+            <l n="1" met="-+-+-+---+-">Fumaba yo, tendido en mi butaca,</l>
+            <l n="2" met="---+-+---+-">cuando, al sopor de plácido mareo,</l>
+            <l n="3" met="-+-+---+++-" enjamb="B-pb_verb_cprep">mis sueños de oro realizarse veo</l>
+            <l n="4" met="-+-+---+-+-" enjamb="I-pb_verb_cprep">del humo denso entre la niebla opaca.</l>
+         </lg>
+         <lg n="2" type="cuarteto">
+            <l n="5" met="---+---+-+-">Mas ni la gloria mi ambición aplaca,</l>
+            <l n="6" met="-+-+---+-+-" enjamb="B-pb_noun_prep">ni nada calma mi febril deseo</l>
+            <l n="7" met="---+---+-+-" enjamb="B-pb_verb_chain I-pb_noun_prep">hasta que, envuelta por el aire, creo</l>
+            <l n="8" met="++-+---+-+-" enjamb="I-pb_verb_chain">verte mecida en vaporosa hamaca.</l>
+         </lg>
+         <lg n="3" type="terceto">
+            <l n="9" met="+--+---+++-">Corro hacia ti, mi corazón te evoca,</l>
+            <l n="10" met="---+---+++-">y cuando el fuego de tu amor me hechiza</l>
+            <l n="11" met="-+-+---+-+-">y van mis labios a sellar tu boca,</l>
+         </lg>
+         <lg n="4" type="terceto">
+            <l n="12" met="+----+---+-">de ellos, ¡ay!, el cigarro se desliza</l>
+            <l n="13" met="-+-+---+++-">y sólo queda, de ilusión tan loca,</l>
+            <l n="14" met="+--+--+-+-">humo en el aire y, a mis pies... ceniza.</l>
+         </lg>
+      </body>
+  </text>
+</TEI>

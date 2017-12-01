@@ -1,93 +1,149 @@
-<?xml version="1.0" encoding="utf8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Sonetos de Esteban Fernández y González</title>
-        <author>
-          <idno type="viaf" cert="medium"/>
-          <idno type="#disco" xml:id="disco_483n"/>
-          <name type="short">Fernández y González</name>
-          <name type="full">
-            <name type="first-name">Esteban</name>
-            <name type="second-name">Fernández y González</name>
-          </name>
-        </author>
-        <principal xml:id="prf">Pablo Ruiz Fabo</principal>
-        <principal xml:id="jct">José Calvo Tello</principal>
-        <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
-      </titleStmt>
-      <extent>
-        <measure unit="sonnets">1</measure>
-        <measure unit="tokens">83</measure>
-        <measure unit="line">14</measure>
-      </extent>
-      <publicationStmt>
-        <publisher>Diachronic Spanish Sonnet Corpus</publisher>
-        <authority>POSTDATA Project</authority>
-        <pubPlace>Madrid</pubPlace>
-        <availability status="free">
-          <p>The text is freely available</p>
-        </availability>
-        <date when="2017">2017</date>
-        <idno type="#disco" xml:id="file_au_483n"/>
-      </publicationStmt>
-      <sourceDesc>
-        <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="es">Spanish</language>
-      </langUsage>
-      <particDesc>
-        <listPerson>
-          <person corresp="#au_483n" role="author" sex="M">
-            <persName>Esteban Fernández y González</persName>
-            <birth><placeName type="place">España</placeName>, <placeName type="country">España</placeName>, <placeName type="continent">Europa</placeName>, <date type="century">19</date></birth>
-            <death><placeName type="place"/>, <date type="century">19</date></death>
-          </person>
-        </listPerson>
-      </particDesc>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2017-11-02" who="#prf">Initial TEI version</change>
-    </revisionDesc>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Esteban Fernández y González</title>
+            <author corresp="#disco_483n">Esteban Fernández y González</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">83</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_483n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_483n"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <persName type="short">Fernández y González</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Esteban</forename>
+                     <surname property="foaf:familyName">Fernández y González</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Esteban Fernández y González</persName>
+                  <sex property="foaf:gender" value="M"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <country property="schema:name">España</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s483n_1828" about="dbpedia:Soneto">
+                        <title property="dc:title">¡1904!</title>
+                        <title type="incipit" property="dc:alternative">¡Un año más de acerbo sufrimiento</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div>
-        <head>Esteban Fernández y González</head>
-        <p>España. 19th century</p>
-      </div>
-    </front>
-    <body>
-      <lg type="sonnet" xml:id="s483n_1828">
-        <head>¡1904!</head>
-        <lg n="1" type="cuarteto">
-          <l n="1">¡Un año más de acerbo sufrimiento</l>
-          <l n="2">que añadir al horario de la vida,</l>
-          <l n="3">y una esperanza más, desvanecida</l>
-          <l n="4">en el hondo perfil del pensamiento.</l>
-        </lg>
-        <lg n="2" type="cuarteto">
-          <l n="5">Cual hoja seca que arrebata el viento</l>
-          <l n="6">al tronco añoso que le dio guarida,</l>
-          <l n="7">es la humana ilusión, al fin vencida</l>
-          <l n="8">de la verdad por el eterno aliento.</l>
-        </lg>
-        <lg n="3" type="terceto">
-          <l n="9">Ensueños, vanidades, ambiciones...</l>
-          <l n="10">¿Qué es lo que en suma sois? ¡Dichas mentidas!</l>
-          <l n="11">¡Vanos efluvios de fugaz esencia</l>
-        </lg>
-        <lg n="4" type="terceto">
-          <l n="12">que acrecientan efímeras pasiones!</l>
-          <l n="13">¡Partículas de arena, desprendidas</l>
-          <l n="14">del reloj de la mísera existencia!</l>
-        </lg>
-      </lg>
-    </body>
+      <front>
+         <div>
+            <head>Esteban Fernández y González</head>
+            <p>España. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s483n_1828">
+            <head>¡1904!</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="++-+-+---+-" enjamb="B-cc_crossclause">¡Un año más de acerbo sufrimiento</l>
+               <l n="2" met="--+--+---+-" enjamb="I-cc_crossclause">que añadir al horario de la vida,</l>
+               <l n="3" met="+--+-+---+-">y una esperanza más, desvanecida</l>
+               <l n="4" met="--+--+---+-">en el hondo perfil del pensamiento.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="++-+---+-+-">Cual hoja seca que arrebata el viento</l>
+               <l n="6" met="-+-+--++-+-">al tronco añoso que le dio guarida,</l>
+               <l n="7" met="+-+--+-+-+-" enjamb="B-pb_noun_prep">es la humana ilusión, al fin vencida</l>
+               <l n="8" met="---+---+-+-" enjamb="I-pb_noun_prep">de la verdad por el eterno aliento.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-">Ensueños, vanidades, ambiciones...</l>
+               <l n="10" met="++---+-+-+-">¿Qué es lo que en suma sois? ¡Dichas mentidas!</l>
+               <l n="11" met="+--+---+-+-" enjamb="B-cc_crossclause">¡Vanos efluvios de fugaz esencia</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="--+--+---+-" enjamb="I-cc_crossclause">que acrecientan efímeras pasiones!</l>
+               <l n="13" met="-+---+---+-" enjamb="B-pb_noun_prep">¡Partículas de arena, desprendidas</l>
+               <l n="14" met="--+--+---+-" enjamb="I-pb_noun_prep">del reloj de la mísera existencia!</l>
+            </lg>
+         </lg>
+      </body>
   </text>
 </TEI>

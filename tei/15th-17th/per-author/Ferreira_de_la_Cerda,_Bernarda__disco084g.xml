@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../../schema/constrictions-edition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sonetos de Bernarda Ferreira de la Cerda</title>
+            <author corresp="#disco_084g">Bernarda Ferreira de la Cerda</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">252</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <authority>POSTDATA Project</authority>
+            <pubPlace>Madrid</pubPlace>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2017">2017</date>
+            <idno type="#disco" xml:id="file_au_084g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_084g"
+                       property="dc:creator"
+                       typeOf="foaf:Person schema:Person dc:Agent">
+                  <idno cert="high" resource="https://viaf.org/viaf/28765051"/>
+                  <persName type="short">Ferreira de la Cerda</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Bernarda</forename>
+                     <surname property="foaf:familyName">Ferreira de la Cerda</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Bernarda Ferreira de la Cerda</persName>
+                  <sex property="foaf:gender" value="F"/>
+                  <birth>
+                     <location property="schema:birthPlace">
+                        <placeName typeOf="schema:Place">
+                           <settlement property="schema:name">Oporto</settlement>
+                           <country>Portugal</country>
+                           <bloc>Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" when="1595" cert="high"/>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" when="1644" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl>
+                     <bibl resource="disco#s084g_0145" about="dbpedia:Soneto">
+                        <title property="dc:title">Soneto al desierto de Buçaco</title>
+                        <title type="incipit" property="dc:alternative">Jardín cerrado, inundación de olores,</title>
+                     </bibl>
+                     <bibl resource="disco#s084g_0146" about="dbpedia:Soneto">
+                        <title property="dc:title">En la muerte del muy insigne varón doctor Juan Pérez de Montalbán</title>
+                        <title type="incipit" property="dc:alternative">Duplique mi dictamen la alabanza</title>
+                     </bibl>
+                     <bibl resource="disco#s084g_0147" about="dbpedia:Soneto">
+                        <title property="dc:title">A la muerte de Lope de Vega</title>
+                        <title type="incipit" property="dc:alternative">Cuando admirable al mundo enriqueciste</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <div>
+            <head>Bernarda Ferreira de la Cerda</head>
+            <p>Oporto (Portugal). 1595 - 0</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s084g_0145">
+            <head>Soneto al desierto de Buçaco</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+-+---+-+-">Jardín cerrado, inundación de olores,</l>
+               <l n="2" met="+--+---+-+-">fuente sellada, cristalina y pura;</l>
+               <l n="3" met="---+-+-+-+-" enjamb="B-pb_adj_prep">inexpugnable torre, do segura</l>
+               <l n="4" met="-+-+-+---+-" enjamb="I-pb_adj_prep">de asaltos, goza el alma sus amores.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+-+---+-+-">Intactas guardas tus hermosas flores,</l>
+               <l n="6" met="+--+-+---+-">matas la sed, destierras la secura,</l>
+               <l n="7" met="-+---+-+-+-">ostentas majestad, y desa altura</l>
+               <l n="8" met="+--+-+---+-">penden trofeos siempre vencedores.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+-+-+-">El verdor tuyo nunca el lustre pierde,</l>
+               <l n="10" met="+-+--+---+-">ni se enturbia el candor de tu corriente;</l>
+               <l n="11" met="+-+--+---+-">firme está tu invencible fortaleza.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="+--+-+-+-+-">Que es el jardín cerrado siempre verde,</l>
+               <l n="13" met="++-+---+-+-">es siempre clara la guardada fuente,</l>
+               <l n="14" met="++---+---+-">y es propia de la torre la firmeza.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s084g_0146">
+            <head>En la muerte del muy insigne varón doctor Juan Pérez de Montalbán</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="-+---+---+-" enjamb="B-pb_noun_prep">Duplique mi dictamen la alabanza</l>
+               <l n="2" met="++---++--+-" enjamb="I-pb_noun_prep">de un MONTE que erigió hondo desvelo</l>
+               <l n="3" met="--+--+-+-+-">a tomar la razón de todo el Cielo,</l>
+               <l n="4" met="---+-+---+-">a competir de estrellas semejanza.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="-+++-+---+-">Si bien no le venció la confianza,</l>
+               <l n="6" met="---+-+-+-+-">ni de Soberbia alada infausto vuelo,</l>
+               <l n="7" met="---+---+-+-" enjamb="B-pb_noun_prep">porque creció para ejemplar consuelo</l>
+               <l n="8" met="-------+-+-" enjamb="I-pb_noun_prep">de cuanto el DOCTO por MODESTO alcanza.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="-+---+---+-" enjamb="B-ex_subj_verb">Corone pues su frente de laureles</l>
+               <l n="10" met="+--------+-" enjamb="I-ex_subj_verb">este PENSIL de la Naturaleza</l>
+               <l n="11" met="+----+---+-">próspero de Retóricos claveles.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++---+---+-" enjamb="B-pb_noun_prep">No alteren de sus frutos la belleza</l>
+               <l n="13" met="---+--+-++-" enjamb="I-pb_noun_prep">de la ENVIDIA los dientes más crueles,</l>
+               <l n="14" met="-++--++--+-">que no puede ocultarse su GRANDEZA.</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s084g_0147">
+            <head>A la muerte de Lope de Vega</head>
+            <lg n="1" type="cuarteto">
+               <l n="1" met="---+-+---+-">Cuando admirable al mundo enriqueciste</l>
+               <l n="2" met="-+-+-+---+-">con dulce canto, Apolo soberano,</l>
+               <l n="3" met="---+-+-+-+-">mientras el tiempo te mentía humano,</l>
+               <l n="4" met="-+---+-+-+-">acciones de divino al tiempo diste.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l n="5" met="+--+-+-+-+-">Hoy que tu ausencia España llora triste,</l>
+               <l n="6" met="+-+---+--+-" enjamb="B-pb_noun_prep">muestras fénix que de Atropos la mano</l>
+               <l n="7" met="--+--+-+-+-" enjamb="I-pb_noun_prep">contra tanta deidad se opuso en vano,</l>
+               <l n="8" met="--+--+---+-">pues felice muriendo renaciste.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l n="9" met="--+--+-+-+-">De la muerte alcanzando así victoria,</l>
+               <l n="10" met="--+--+---+-">a tus obras, asombro del olvido,</l>
+               <l n="11" met="-+-+-+---+-">supremo altar conserva la memoria.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l n="12" met="++-+-+---+-">Tú ya a los mismos astros preferido</l>
+               <l n="13" met="--+--++--+-">entre mares de luz, golfos de gloria,</l>
+               <l n="14" met="+--+-+-+++-">eres eterno sol, si Apolo has sido.</l>
+            </lg>
+         </lg>
+      </body>
+  </text>
+</TEI>
