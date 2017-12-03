@@ -280,7 +280,7 @@ DISCO published in October 2017 its version 1.0 containing texts from the 19th C
 
 # Publication and Preservation
 
-The corpus has been published as a GitHub repository, which enables other researchers to clone, fork and keep track of changes. The data has been also kept in the [Zenodo](https://doi.org/10.5281/zenodo.1012567) project, with the DOI: tbd. 
+The corpus has been published as a GitHub repository, which enables other researchers to clone, fork and keep track of changes. The data has been also kept in the [Zenodo](https://doi.org/10.5281/zenodo.1069844) project, with DOI: <https://doi.org/10.5281/zenodo.1069844>. 
 
 # Licence and Citation
 
