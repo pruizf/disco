@@ -133,7 +133,9 @@
             <p>The values of the <att>enjamb</att> atributes were extracted automatically using
                     the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
                         (Automatic eNJambment Analysis)</ref> tool. For more information about the
-                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
          </metDecl>
       </encodingDesc>
       <revisionDesc>
@@ -155,26 +157,47 @@
          <lg type="sonnet" xml:id="s101n_0336">
             <head>Tú no sabrás jamás</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="++-+-++--+-" enjamb="B-ex_subj_verb">¡Tú no sabrás jamás! dice a mi grito</l>
-               <l n="2" met="-+---+---+-" enjamb="B-cc_crossclause I-ex_subj_verb">la esfinge silenciosa de granito</l>
-               <l n="3" met="-+---+---+-" enjamb="B-ex_dobj_verb I-cc_crossclause">que clava en la oquedad de lo infinito</l>
-               <l n="4" met="-+-+---+-+-" enjamb="I-ex_dobj_verb">sus ojos claros, de mirar prescito:</l>
+               <l n="1" met="++-+-++--+-" enjamb="B-ex_subj_verb" cert="low">¡Tú no sabrás jamás! dice a mi grito</l>
+               <l n="2"
+                  met="-+---+---+-"
+                  enjamb="B-cc_crossclause I-ex_subj_verb"
+                  cert="high low">la esfinge silenciosa de granito</l>
+               <l n="3"
+                  met="-+---+---+-"
+                  enjamb="B-ex_dobj_verb I-cc_crossclause"
+                  cert="low high">que clava en la oquedad de lo infinito</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-ex_dobj_verb" cert="low">sus ojos claros, de mirar prescito:</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="++-+-+---+-" enjamb="B-pb_adj_noun">¡Tú no sabrás jamás! Y en el maldito</l>
-               <l n="6" met="--+--++--+-" enjamb="B-ex_subj_verb I-pb_adj_noun">vacilar de mi fe va el exquisito</l>
-               <l n="7" met="--+--+++-+-" enjamb="B-pb_noun_prep I-ex_subj_verb">voluptuoso temblor que es un delito</l>
-               <l n="8" met="-+-+---+-+-" enjamb="B-ex_dobj_verb I-pb_noun_prep">de leso amor, porque con él suscito</l>
+               <l n="5" met="++-+-+---+-" enjamb="B-pb_adj_noun" cert="medium">¡Tú no sabrás jamás! Y en el maldito</l>
+               <l n="6"
+                  met="--+--++--+-"
+                  enjamb="B-ex_subj_verb I-pb_adj_noun"
+                  cert="low medium">vacilar de mi fe va el exquisito</l>
+               <l n="7"
+                  met="--+--+++-+-"
+                  enjamb="B-pb_noun_prep I-ex_subj_verb"
+                  cert="medium low">voluptuoso temblor que es un delito</l>
+               <l n="8"
+                  met="-+-+---+-+-"
+                  enjamb="B-ex_dobj_verb I-pb_noun_prep"
+                  cert="low medium">de leso amor, porque con él suscito</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="+-+--+-+-+-" enjamb="B-cc_crossclause I-ex_dobj_verb">ese miedo cerval que engendra el grito</l>
-               <l n="10" met="--+--+---+-" enjamb="B-ex_subj_verb I-cc_crossclause">que a los ojos tranquilos de granito</l>
-               <l n="11" met="+--+-+---+-" enjamb="I-ex_subj_verb">piden el cruel secreto de infinito,</l>
+               <l n="9"
+                  met="+-+--+-+-+-"
+                  enjamb="B-cc_crossclause I-ex_dobj_verb"
+                  cert="high low">ese miedo cerval que engendra el grito</l>
+               <l n="10"
+                  met="--+--+---+-"
+                  enjamb="B-ex_subj_verb I-cc_crossclause"
+                  cert="low high">que a los ojos tranquilos de granito</l>
+               <l n="11" met="+--+-+---+-" enjamb="I-ex_subj_verb" cert="low">piden el cruel secreto de infinito,</l>
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="-+-+---+-+-">pesar que causa mi dolor prescito.</l>
-               <l n="13" met="++-+-++--+-" enjamb="B-ex_subj_verb">¡Tú no sabrás jamás!...dice a mi grito</l>
-               <l n="14" met="-+---+---+-" enjamb="I-ex_subj_verb">la esfinge impenetrable de granito!....</l>
+               <l n="13" met="++-+-++--+-" enjamb="B-ex_subj_verb" cert="low">¡Tú no sabrás jamás!...dice a mi grito</l>
+               <l n="14" met="-+---+---+-" enjamb="I-ex_subj_verb" cert="low">la esfinge impenetrable de granito!....</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s101n_0337">
@@ -182,22 +205,28 @@
             <lg n="1" type="serventesio">
                <l n="1" met="-+---+---+-">Placeres mundanales que el sendero</l>
                <l n="2" met="--+--+---+-">esmaltáis de la vida fatigosa,</l>
-               <l n="3" met="-+---+-+-+-" enjamb="B-pb_verb_cprep">huid lejos de mí, que sólo quiero</l>
-               <l n="4" met="-----+-+-+-" enjamb="I-pb_verb_cprep">de mi tranquilidad la paz hermosa.</l>
+               <l n="3" met="-+---+-+-+-" enjamb="B-pb_verb_cprep" cert="medium">huid lejos de mí, que sólo quiero</l>
+               <l n="4" met="-----+-+-+-" enjamb="I-pb_verb_cprep" cert="medium">de mi tranquilidad la paz hermosa.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="-+---+---+-" enjamb="B-pb_noun_prep">Postrada ante las plantas virginales</l>
-               <l n="6" met="-+-------+-" enjamb="B-pb_noun_prep I-pb_noun_prep">del Mártir del Calvario, su clemente</l>
-               <l n="7" met="-++--+---+-" enjamb="B-ex_subj_verb I-pb_noun_prep">perdón quiero implorar. mientras mi frente</l>
-               <l n="8" met="-+---+---+-" enjamb="I-ex_subj_verb">se lava de su sangre en los raudales.</l>
+               <l n="5" met="-+---+---+-" enjamb="B-pb_noun_prep" cert="medium">Postrada ante las plantas virginales</l>
+               <l n="6"
+                  met="-+-------+-"
+                  enjamb="B-pb_noun_prep I-pb_noun_prep"
+                  cert="medium medium">del Mártir del Calvario, su clemente</l>
+               <l n="7"
+                  met="-++--+---+-"
+                  enjamb="B-ex_subj_verb I-pb_noun_prep"
+                  cert="low medium">perdón quiero implorar. mientras mi frente</l>
+               <l n="8" met="-+---+---+-" enjamb="I-ex_subj_verb" cert="low">se lava de su sangre en los raudales.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="+--++--+-+-" enjamb="B-pb_verb_adv">Quiero pedirle que mi vida acabe</l>
-               <l n="10" met="+--+++-+-+-" enjamb="I-pb_verb_adv">antes que yo le ofenda en algo grave.</l>
-               <l n="11" met="-+-+++---+-" enjamb="B-ex_dobj_verb">Que me de verla allá en el Paraíso</l>
+               <l n="9" met="+--++--+-+-" enjamb="B-pb_verb_adv" cert="medium">Quiero pedirle que mi vida acabe</l>
+               <l n="10" met="+--+++-+-+-" enjamb="I-pb_verb_adv" cert="medium">antes que yo le ofenda en algo grave.</l>
+               <l n="11" met="-+-+++---+-" enjamb="B-ex_dobj_verb" cert="low">Que me de verla allá en el Paraíso</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="+----+-+++-" enjamb="I-ex_dobj_verb">puesto que con su muerte así lo quiso.</l>
+               <l n="12" met="+----+-+++-" enjamb="I-ex_dobj_verb" cert="low">puesto que con su muerte así lo quiso.</l>
                <l n="13" met="---+++---+-">Que como me dio vida con su muerte</l>
                <l n="14" met="+--+-+-+-+-">me de morir en El con alma fuerte.</l>
             </lg>
@@ -233,10 +262,10 @@
                <l n="1" met="++-+-++--+-">Me abisma no entender, bello Narciso,</l>
                <l n="2" met="-+---+-+-+-">la ingenua admiración que te arrebata</l>
                <l n="3" met="-+-+-+-+-+-">y te fascina en la onda azul y plata...</l>
-               <l n="4" met="+----++--+-" enjamb="B-ex_subj_verb">Claro que para ti es un paraíso</l>
+               <l n="4" met="+----++--+-" enjamb="B-ex_subj_verb" cert="low">Claro que para ti es un paraíso</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="-+-+-+---+-" enjamb="I-ex_subj_verb">mirar tus ojos bellos y tu seno,</l>
+               <l n="5" met="-+-+-+---+-" enjamb="I-ex_subj_verb" cert="low">mirar tus ojos bellos y tu seno,</l>
                <l n="6" met="--+--+---+-">tu sonrisa, tu frente, tu figura,</l>
                <l n="7" met="+----+---+-">llena de majestad y de dulzura...</l>
                <l n="8" met="--++-++--+-">Pero ¿no piensas que haya algo de bueno</l>
@@ -247,24 +276,30 @@
                <l n="11" met="--+--+-+-+-">y entretenga tus horas dulcemente.</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="-+---++--+-" enjamb="B-ex_subj_verb">¡Quisiera comprender mi alma sencilla</l>
-               <l n="13" met="--+--+---+-" enjamb="I-ex_subj_verb">la perfecta hermosura de tu frente,</l>
+               <l n="12" met="-+---++--+-" enjamb="B-ex_subj_verb" cert="low">¡Quisiera comprender mi alma sencilla</l>
+               <l n="13" met="--+--+---+-" enjamb="I-ex_subj_verb" cert="low">la perfecta hermosura de tu frente,</l>
                <l n="14" met="---+---+-+-">donde jamás el pensamiento brilla!</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s101n_0340">
             <head>Ya no soy para ti</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="+++--++--+-" enjamb="B-cc_crossclause">¿Qué soy yo para ti? Sólo un guiñapo</l>
-               <l n="2" met="-+-+---+-+-" enjamb="I-cc_crossclause">que al aire ondeó cual gonfalón de ensueño.</l>
+               <l n="1" met="+++--++--+-" enjamb="B-cc_crossclause" cert="high">¿Qué soy yo para ti? Sólo un guiñapo</l>
+               <l n="2" met="-+-+---+-+-" enjamb="I-cc_crossclause" cert="high">que al aire ondeó cual gonfalón de ensueño.</l>
                <l n="3" met="-+---+-+-+-">Perdió la novedad, pasaste el rato,</l>
                <l n="4" met="+-++-+++-+-">y hoy dejarlo de ver sólo es tu empeño.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="++-+-+--+-" enjamb="B-ex_dobj_verb">¿Me has querido? ¡Jamás! Te ha deslumbrado</l>
-               <l n="6" met="-+---+-+-+-" enjamb="B-pb_adj_noun I-ex_dobj_verb">lo raro que encontraste en mí: la vida</l>
-               <l n="7" met="-+---++--+-" enjamb="B-pb_adj_prep I-pb_adj_noun">intensa e interior, no conocida</l>
-               <l n="8" met="-+-+-+---+-" enjamb="I-pb_adj_prep">por ti jamás en nadie. Y a mi lado</l>
+               <l n="5" met="++-+-+--+-" enjamb="B-ex_dobj_verb" cert="low">¿Me has querido? ¡Jamás! Te ha deslumbrado</l>
+               <l n="6"
+                  met="-+---+-+-+-"
+                  enjamb="B-pb_adj_noun I-ex_dobj_verb"
+                  cert="medium low">lo raro que encontraste en mí: la vida</l>
+               <l n="7"
+                  met="-+---++--+-"
+                  enjamb="B-pb_adj_prep I-pb_adj_noun"
+                  cert="low medium">intensa e interior, no conocida</l>
+               <l n="8" met="-+-+-+---+-" enjamb="I-pb_adj_prep" cert="low">por ti jamás en nadie. Y a mi lado</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="-+---+---+-">bebiste mis palabras cadenciosas,</l>
@@ -272,16 +307,16 @@
                <l n="11" met="---+-+---+-">aquilataste cántigas hermosas,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="-+-+---+-+-" enjamb="B-pb_adj_prep">mimó tu oído mi canción divina</l>
-               <l n="13" met="-+-+--++-+-" enjamb="I-pb_adj_prep">en horas dulces que te dio mi trato...,</l>
+               <l n="12" met="-+-+---+-+-" enjamb="B-pb_adj_prep" cert="low">mimó tu oído mi canción divina</l>
+               <l n="13" met="-+-+--++-+-" enjamb="I-pb_adj_prep" cert="low">en horas dulces que te dio mi trato...,</l>
                <l n="14" met="+++--+++-+-">¡y hoy... no soy para ti más que un guiñapo!</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s101n_0341">
             <head>Cuando las mariposas</head>
             <lg n="1" type="unknown">
-               <l n="1" met="-----+--+---+-" enjamb="B-pb_adj_noun">Cuando las mariposas doradas del recuerdo</l>
-               <l n="2" met="+----+---+--+-" enjamb="I-pb_adj_noun">traigan a tu memoria tu cobarde vileza,</l>
+               <l n="1" met="-----+--+---+-" enjamb="B-pb_adj_noun" cert="medium">Cuando las mariposas doradas del recuerdo</l>
+               <l n="2" met="+----+---+--+-" enjamb="I-pb_adj_noun" cert="medium">traigan a tu memoria tu cobarde vileza,</l>
                <l n="3" met="--+--+--+--+-">mi pesar silencioso y mi enorme tristeza;</l>
                <l n="4" met="-----+--+---+-">cuando las mariposas de fuego de la gloria</l>
             </lg>
@@ -305,26 +340,29 @@
          <lg type="sonnet" xml:id="s101n_0342">
             <head>¡Espero!</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="+-++-++--+-" enjamb="B-ex_dobj_verb">Yo, que a nadie hice mal, que he recogido</l>
-               <l n="2" met="---+-+-+-+-" enjamb="B-ex_dobj_verb I-ex_dobj_verb">el padecer ajeno, que he buscado</l>
-               <l n="3" met="-+---+-+-+-" enjamb="I-ex_dobj_verb">alivio a los pesares de otro, olvido</l>
+               <l n="1" met="+-++-++--+-" enjamb="B-ex_dobj_verb" cert="low">Yo, que a nadie hice mal, que he recogido</l>
+               <l n="2"
+                  met="---+-+-+-+-"
+                  enjamb="B-ex_dobj_verb I-ex_dobj_verb"
+                  cert="low low">el padecer ajeno, que he buscado</l>
+               <l n="3" met="-+---+-+-+-" enjamb="I-ex_dobj_verb" cert="low">alivio a los pesares de otro, olvido</l>
                <l n="4" met="-+---++--+-">a penas que jamás he ocasionado.</l>
             </lg>
             <lg n="2" type="serventesio">
-               <l n="5" met="+--+---+-+-" enjamb="B-ex_subj_verb">Yo que de Cristo la doctrina austera</l>
-               <l n="6" met="+--+---+-+-" enjamb="I-ex_subj_verb">he practicado, sin rendir tributo</l>
+               <l n="5" met="+--+---+-+-" enjamb="B-ex_subj_verb" cert="low">Yo que de Cristo la doctrina austera</l>
+               <l n="6" met="+--+---+-+-" enjamb="I-ex_subj_verb" cert="low">he practicado, sin rendir tributo</l>
                <l n="7" met="---+---+-+-">a la venganza ni al placer, severa,</l>
                <l n="8" met="---+---+-+-">sin esperar de mi conducta el fruto...</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="+--+-+-+-+-" enjamb="B-cc_crossclause">Ya conocí, por fin, la sierpe inmunda</l>
-               <l n="10" met="---+-+---+-" enjamb="I-cc_crossclause">que emponzoñóme artera y vagabunda,</l>
+               <l n="9" met="+--+-+-+-+-" enjamb="B-cc_crossclause" cert="high">Ya conocí, por fin, la sierpe inmunda</l>
+               <l n="10" met="---+-+---+-" enjamb="I-cc_crossclause" cert="high">que emponzoñóme artera y vagabunda,</l>
                <l n="11" met="-+---+---+-">y herido el corazón en la contienda,</l>
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="---+-++--+-">al comprender que ayer fue desacierto,</l>
-               <l n="13" met="+++--+---+-" enjamb="B-pb_noun_prep">¡hoy me siento a la puerta de mi tienda</l>
-               <l n="14" met="-+-+---+-+-" enjamb="I-pb_noun_prep">a ver pasar a mi enemigo muerto!</l>
+               <l n="13" met="+++--+---+-" enjamb="B-pb_noun_prep" cert="medium">¡hoy me siento a la puerta de mi tienda</l>
+               <l n="14" met="-+-+---+-+-" enjamb="I-pb_noun_prep" cert="medium">a ver pasar a mi enemigo muerto!</l>
             </lg>
          </lg>
       </body>

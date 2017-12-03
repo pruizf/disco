@@ -105,7 +105,9 @@
             <p>The values of the <att>enjamb</att> atributes were extracted automatically using
                     the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
                         (Automatic eNJambment Analysis)</ref> tool. For more information about the
-                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
          </metDecl>
       </encodingDesc>
       <revisionDesc>
@@ -127,34 +129,43 @@
          <lg type="sonnet" xml:id="s532n_1975">
             <head>Al digno y sabio intendente don Alejandro Ramírez</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="+--+--+--+-" enjamb="B-pb_verb_chain">Triste la hermosa Borinquen gemía</l>
-               <l n="2" met="--+--+---+-" enjamb="I-pb_verb_chain">arrastrando la mísera pobreza,</l>
-               <l n="3" met="+--+---+-+-" enjamb="B-ex_subj_verb">ella que el don de perenal riqueza</l>
-               <l n="4" met="--+--+---+-" enjamb="I-ex_subj_verb">en sus campos feraces contenía.</l>
+               <l n="1" met="+--+--+--+-" enjamb="B-pb_verb_chain" cert="high">Triste la hermosa Borinquen gemía</l>
+               <l n="2" met="--+--+---+-" enjamb="I-pb_verb_chain" cert="high">arrastrando la mísera pobreza,</l>
+               <l n="3" met="+--+---+-+-" enjamb="B-ex_subj_verb" cert="low">ella que el don de perenal riqueza</l>
+               <l n="4" met="--+--+---+-" enjamb="I-ex_subj_verb" cert="low">en sus campos feraces contenía.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="-+---+-+-+-" enjamb="B-pb_verb_adv">El cielo que amoroso la quería</l>
-               <l n="6" met="++---+---+-" enjamb="I-pb_verb_adv">no pudo consentir en su terneza</l>
+               <l n="5" met="-+---+-+-+-" enjamb="B-pb_verb_adv" cert="medium">El cielo que amoroso la quería</l>
+               <l n="6" met="++---+---+-" enjamb="I-pb_verb_adv" cert="medium">no pudo consentir en su terneza</l>
                <l n="7" met="--+-++---+-">que sufriese tan bárbara dureza,</l>
                <l n="8" met="--+--++--+-">la que el yugo del mal no merecía.</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="-+--+-+--+-">De Power escuchó la alta plegaria</l>
                <l n="10" met="--+--++--+-">(del patriótico amor grato suspiro)</l>
-               <l n="11" met="--+--++--+-" enjamb="B-ex_dobj_verb">y ordenó que a cambiar la era precaria</l>
+               <l n="11" met="--+--++--+-" enjamb="B-ex_dobj_verb" cert="low">y ordenó que a cambiar la era precaria</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="-+---++--+-" enjamb="B-ex_dobj_verb I-ex_dobj_verb">en rico bienestar, fuese Ramiro...</l>
-               <l n="13" met="-+---+-+-+-" enjamb="B-ex_subj_verb I-ex_dobj_verb">Ramiro bienhechor, tu noble historia</l>
-               <l n="14" met="--+--+---+-" enjamb="I-ex_subj_verb">grabará Puerto Rico en su memoria.</l>
+               <l n="12"
+                  met="-+---++--+-"
+                  enjamb="B-ex_dobj_verb I-ex_dobj_verb"
+                  cert="low low">en rico bienestar, fuese Ramiro...</l>
+               <l n="13"
+                  met="-+---+-+-+-"
+                  enjamb="B-ex_subj_verb I-ex_dobj_verb"
+                  cert="low low">Ramiro bienhechor, tu noble historia</l>
+               <l n="14" met="--+--+---+-" enjamb="I-ex_subj_verb" cert="low">grabará Puerto Rico en su memoria.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s532n_1976">
             <head>Los ojos de...</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="+-+--+-+-+-" enjamb="B-ex_dobj_verb">¿Me preguntas, pintor, que cómo quiero</l>
-               <l n="2" met="-+---+---+-" enjamb="B-pb_noun_prep I-ex_dobj_verb">que pintes el mirar y la hermosura</l>
-               <l n="3" met="-+-+-+-+-+-" enjamb="I-pb_noun_prep">de aquellos ojos do el Edén fulgura,</l>
+               <l n="1" met="+-+--+-+-+-" enjamb="B-ex_dobj_verb" cert="low">¿Me preguntas, pintor, que cómo quiero</l>
+               <l n="2"
+                  met="-+---+---+-"
+                  enjamb="B-pb_noun_prep I-ex_dobj_verb"
+                  cert="medium low">que pintes el mirar y la hermosura</l>
+               <l n="3" met="-+-+-+-+-+-" enjamb="I-pb_noun_prep" cert="medium">de aquellos ojos do el Edén fulgura,</l>
                <l n="4" met="-+-+--++-+-">de aquellos ojos por qué vivo y muero?</l>
             </lg>
             <lg n="2" type="cuarteto">
@@ -164,14 +175,17 @@
                <l n="8" met="-+---+---+-">el brillo del diamante lisonjero.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="--+--++--+-" enjamb="B-cc_crossclause">Los habrás de pintar grandes y vivos</l>
-               <l n="10" met="--+--+---+-" enjamb="B-pb_noun_prep I-cc_crossclause">donde luzca la antorcha bendecida</l>
-               <l n="11" met="-+---++--+-" enjamb="I-pb_noun_prep">del noble meditar, muy expresivos,</l>
+               <l n="9" met="--+--++--+-" enjamb="B-cc_crossclause" cert="high">Los habrás de pintar grandes y vivos</l>
+               <l n="10"
+                  met="--+--+---+-"
+                  enjamb="B-pb_noun_prep I-cc_crossclause"
+                  cert="medium high">donde luzca la antorcha bendecida</l>
+               <l n="11" met="-+---++--+-" enjamb="I-pb_noun_prep" cert="medium">del noble meditar, muy expresivos,</l>
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="-+---+---+-">con dulce vaguedad indefinida;</l>
-               <l n="13" met="+-++-++--+-" enjamb="B-pb_adj_prep">¿quieres darles aún más atractivos</l>
-               <l n="14" met="---+-+++-+-" enjamb="I-pb_adj_prep">de apasionado amor? dales la vida.</l>
+               <l n="13" met="+-++-++--+-" enjamb="B-pb_adj_prep" cert="low">¿quieres darles aún más atractivos</l>
+               <l n="14" met="---+-+++-+-" enjamb="I-pb_adj_prep" cert="low">de apasionado amor? dales la vida.</l>
             </lg>
          </lg>
       </body>

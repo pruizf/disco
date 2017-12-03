@@ -110,7 +110,9 @@
             <p>The values of the <att>enjamb</att> atributes were extracted automatically using
                     the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
                         (Automatic eNJambment Analysis)</ref> tool. For more information about the
-                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
          </metDecl>
       </encodingDesc>
       <revisionDesc>
@@ -129,14 +131,14 @@
          <lg n="1" type="cuarteto">
             <l n="1" met="-+---+-+-+-">Oh tú que en gradación eterna y muda</l>
             <l n="2" met="+--+-+---+-">has ostentado todos los colores,</l>
-            <l n="3" met="--+--+---+-" enjamb="B-ex_subj_verb">como el iris que el sol con sus fulgores</l>
-            <l n="4" met="+--+---+-+-" enjamb="I-ex_subj_verb">forma en la negra inmensidad desnuda!</l>
+            <l n="3" met="--+--+---+-" enjamb="B-ex_subj_verb" cert="low">como el iris que el sol con sus fulgores</l>
+            <l n="4" met="+--+---+-+-" enjamb="I-ex_subj_verb" cert="low">forma en la negra inmensidad desnuda!</l>
          </lg>
          <lg n="2" type="cuarteto">
-            <l n="5" met="+--+---+-+-" enjamb="B-pb_verb_cprep">Tú que conoces al varón que suda</l>
-            <l n="6" met="++---+---+-" enjamb="I-pb_verb_cprep">de un mísero destino los rigores;</l>
-            <l n="7" met="+-++-++--+-" enjamb="B-pb_noun_prep">tú, que ya no tendrás días mejores</l>
-            <l n="8" met="+--+---+-+-" enjamb="I-pb_noun_prep">de esta existencia en la batalla dura;</l>
+            <l n="5" met="+--+---+-+-" enjamb="B-pb_verb_cprep" cert="medium">Tú que conoces al varón que suda</l>
+            <l n="6" met="++---+---+-" enjamb="I-pb_verb_cprep" cert="medium">de un mísero destino los rigores;</l>
+            <l n="7" met="+-++-++--+-" enjamb="B-pb_noun_prep" cert="medium">tú, que ya no tendrás días mejores</l>
+            <l n="8" met="+--+---+-+-" enjamb="I-pb_noun_prep" cert="medium">de esta existencia en la batalla dura;</l>
          </lg>
          <lg n="3" type="terceto">
             <l n="9" met="+-+--+---+-">Tú, que verde y sutil como la malva</l>
@@ -149,16 +151,22 @@
             <l n="14" met="++-+---+-+-">Yo te diré como a la noche: ¡Baja!</l>
          </lg>
          <lg n="5" type="cuarteto">
-            <l n="15" met="+-+--+---+-" enjamb="B-pb_noun_prep">Duerme tú, que sufriste los sudores</l>
-            <l n="16" met="+--+-+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">de esa columna humana en cuya cumbre</l>
-            <l n="17" met="+-+--+-+-+-" enjamb="B-cc_crossclause I-pb_noun_prep">tanto el alma vertió candente lumbre</l>
-            <l n="18" met="--+--+---+-" enjamb="I-cc_crossclause">que hasta el pasto quemó con sus ardores.</l>
+            <l n="15" met="+-+--+---+-" enjamb="B-pb_noun_prep" cert="medium">Duerme tú, que sufriste los sudores</l>
+            <l n="16"
+               met="+--+-+---+-"
+               enjamb="B-pb_noun_prep I-pb_noun_prep"
+               cert="medium medium">de esa columna humana en cuya cumbre</l>
+            <l n="17"
+               met="+-+--+-+-+-"
+               enjamb="B-cc_crossclause I-pb_noun_prep"
+               cert="high medium">tanto el alma vertió candente lumbre</l>
+            <l n="18" met="--+--+---+-" enjamb="I-cc_crossclause" cert="high">que hasta el pasto quemó con sus ardores.</l>
          </lg>
          <lg n="6" type="cuarteto">
-            <l n="19" met="+-+--++--+-" enjamb="B-pb_adj_noun">Duerme tú, que jamás sucios favores</l>
-            <l n="20" met="-+---+---+-" enjamb="I-pb_adj_noun">lograste, como muchos, por costumbre;</l>
-            <l n="21" met="-+---+---+-" enjamb="B-ex_subj_verb">que toda tu asquerosa podredumbre</l>
-            <l n="22" met="-+-+---+-+-" enjamb="I-ex_subj_verb">se torne al cabo en perfumadas flores.</l>
+            <l n="19" met="+-+--++--+-" enjamb="B-pb_adj_noun" cert="medium">Duerme tú, que jamás sucios favores</l>
+            <l n="20" met="-+---+---+-" enjamb="I-pb_adj_noun" cert="medium">lograste, como muchos, por costumbre;</l>
+            <l n="21" met="-+---+---+-" enjamb="B-ex_subj_verb" cert="low">que toda tu asquerosa podredumbre</l>
+            <l n="22" met="-+-+---+-+-" enjamb="I-ex_subj_verb" cert="low">se torne al cabo en perfumadas flores.</l>
          </lg>
          <lg n="7" type="terceto">
             <l n="23" met="+-+-++++++-">No, la muerte no es noche; es luz, es alba</l>
@@ -167,36 +175,39 @@
          </lg>
          <lg n="8" type="terceto">
             <l n="26" met="---+---+-+-">Como el cadáver que la tumba encierra,</l>
-            <l n="27" met="+-+----+-+-" enjamb="B-pb_noun_prep">tú bajaras desde la estéril calva</l>
-            <l n="28" met="-+-----+-+-" enjamb="I-pb_noun_prep">de Carlos, ¡ay!, a fecundar la tierra.</l>
+            <l n="27" met="+-+----+-+-" enjamb="B-pb_noun_prep" cert="medium">tú bajaras desde la estéril calva</l>
+            <l n="28" met="-+-----+-+-" enjamb="I-pb_noun_prep" cert="medium">de Carlos, ¡ay!, a fecundar la tierra.</l>
          </lg>
          <lg n="9" type="cuarteto">
-            <l n="29" met="+--+---+++-" enjamb="B-pb_adj_noun">Tú, que la cumbre de Tamayo un día</l>
-            <l n="30" met="--+--+---+-" enjamb="I-pb_adj_noun">ocupaste como águila altanera,</l>
-            <l n="31" met="---+---+-+-" enjamb="B-ex_subj_verb">que bajo el dombo de la azul esfera</l>
-            <l n="32" met="+--+---+-+-" enjamb="I-ex_subj_verb">mira la muda inmensidad vacía;</l>
+            <l n="29" met="+--+---+++-" enjamb="B-pb_adj_noun" cert="medium">Tú, que la cumbre de Tamayo un día</l>
+            <l n="30" met="--+--+---+-" enjamb="I-pb_adj_noun" cert="medium">ocupaste como águila altanera,</l>
+            <l n="31" met="---+---+-+-" enjamb="B-ex_subj_verb" cert="low">que bajo el dombo de la azul esfera</l>
+            <l n="32" met="+--+---+-+-" enjamb="I-ex_subj_verb" cert="low">mira la muda inmensidad vacía;</l>
          </lg>
          <lg n="10" type="cuarteto">
-            <l n="33" met="+--+---+-+-" enjamb="B-ex_subj_verb">Tú, que en la noche tempestuosa y fría</l>
-            <l n="34" met="+-+--+---+-" enjamb="B-pb_noun_prep I-ex_subj_verb">diste abrigo en la calma y en la cuera</l>
-            <l n="35" met="-+++-+-+-+-" enjamb="I-pb_noun_prep">de aquel que es más delgado que una cera</l>
+            <l n="33" met="+--+---+-+-" enjamb="B-ex_subj_verb" cert="low">Tú, que en la noche tempestuosa y fría</l>
+            <l n="34"
+               met="+-+--+---+-"
+               enjamb="B-pb_noun_prep I-ex_subj_verb"
+               cert="medium low">diste abrigo en la calma y en la cuera</l>
+            <l n="35" met="-+++-+-+-+-" enjamb="I-pb_noun_prep" cert="medium">de aquel que es más delgado que una cera</l>
             <l n="36" met="-++--++--+-">y más largo tal vez, que una bujía.</l>
          </lg>
          <lg n="11" type="terceto">
-            <l n="37" met="+--+---+-+-" enjamb="B-pb_noun_prep">Debes dormir en el recinto oscuro</l>
-            <l n="38" met="--+-++---+-" enjamb="I-pb_noun_prep">de la tierra, que es madre bondadosa,</l>
+            <l n="37" met="+--+---+-+-" enjamb="B-pb_noun_prep" cert="medium">Debes dormir en el recinto oscuro</l>
+            <l n="38" met="--+-++---+-" enjamb="I-pb_noun_prep" cert="medium">de la tierra, que es madre bondadosa,</l>
             <l n="39" met="-+-+-+--++-">que lecho da a su huésped, jamás duro,</l>
          </lg>
          <lg n="12" type="terceto">
             <l n="40" met="-+---+-+-+-">y que hace al rededor nacer la rosa</l>
-            <l n="41" met="--+--+-+-+-" enjamb="B-ex_dobj_verb">y tornar en ambiente blando y puro</l>
-            <l n="42" met="+----++--+-" enjamb="I-ex_dobj_verb">todo lo que al morir rueda a la fosa.</l>
+            <l n="41" met="--+--+-+-+-" enjamb="B-ex_dobj_verb" cert="low">y tornar en ambiente blando y puro</l>
+            <l n="42" met="+----++--+-" enjamb="I-ex_dobj_verb" cert="low">todo lo que al morir rueda a la fosa.</l>
          </lg>
          <lg n="13" type="cuarteto">
-            <l n="43" met="-+-----+-+-" enjamb="B-cc_crossclause">Reposa, pues entre la tumba hueca</l>
-            <l n="44" met="-+-+---+-+-" enjamb="I-cc_crossclause">que va a cambiar tu singular destino;</l>
-            <l n="45" met="---+-+---+-" enjamb="B-ex_dobj_verb">ya que malezas no hubo en tu camino</l>
-            <l n="46" met="+----++--+-" enjamb="I-ex_dobj_verb">llevas al fenecer mucha manteca.</l>
+            <l n="43" met="-+-----+-+-" enjamb="B-cc_crossclause" cert="high">Reposa, pues entre la tumba hueca</l>
+            <l n="44" met="-+-+---+-+-" enjamb="I-cc_crossclause" cert="high">que va a cambiar tu singular destino;</l>
+            <l n="45" met="---+-+---+-" enjamb="B-ex_dobj_verb" cert="low">ya que malezas no hubo en tu camino</l>
+            <l n="46" met="+----++--+-" enjamb="I-ex_dobj_verb" cert="low">llevas al fenecer mucha manteca.</l>
          </lg>
          <lg n="14" type="cuarteto">
             <l n="47" met="--+--+-+++-">Aunque muerta, tu cinta no está seca;</l>
@@ -205,13 +216,16 @@
             <l n="50" met="--+--+-+-+-">como todas irá de Ceca en Meca.</l>
          </lg>
          <lg n="15" type="terceto">
-            <l n="51" met="---+-+-+-+-" enjamb="B-pb_adj_prep">Pero tal vez la savia oscura y sola</l>
-            <l n="52" met="---+-+---+-" enjamb="B-pb_adj_noun I-pb_adj_prep">de la fecunda tierra, cuyo aliento</l>
-            <l n="53" met="+--+---+-+-" enjamb="I-pb_adj_noun">vaga al acaso como inmensa ola,</l>
+            <l n="51" met="---+-+-+-+-" enjamb="B-pb_adj_prep" cert="low">Pero tal vez la savia oscura y sola</l>
+            <l n="52"
+               met="---+-+---+-"
+               enjamb="B-pb_adj_noun I-pb_adj_prep"
+               cert="medium low">de la fecunda tierra, cuyo aliento</l>
+            <l n="53" met="+--+---+-+-" enjamb="I-pb_adj_noun" cert="medium">vaga al acaso como inmensa ola,</l>
          </lg>
          <lg n="16" type="terceto">
-            <l n="54" met="-+-+---+-+-" enjamb="B-ex_dobj_verb">hará de ti, para halagar al viento</l>
-            <l n="55" met="-+-+-+---+-" enjamb="I-ex_dobj_verb">el cáliz de una trémula amapola</l>
+            <l n="54" met="-+-+---+-+-" enjamb="B-ex_dobj_verb" cert="low">hará de ti, para halagar al viento</l>
+            <l n="55" met="-+-+-+---+-" enjamb="I-ex_dobj_verb" cert="low">el cáliz de una trémula amapola</l>
             <l n="56" met="---+-++--+-">o la corola azul de un pensamiento.</l>
          </lg>
       </body>

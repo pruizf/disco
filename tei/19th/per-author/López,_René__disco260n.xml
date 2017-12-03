@@ -112,7 +112,9 @@
             <p>The values of the <att>enjamb</att> atributes were extracted automatically using
                     the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
                         (Automatic eNJambment Analysis)</ref> tool. For more information about the
-                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
          </metDecl>
       </encodingDesc>
       <revisionDesc>
@@ -136,18 +138,24 @@
             <lg n="1" type="cuarteto">
                <l n="1" met="-+---+--+---+-">¡Oh! tardes otoñales color de la violeta,</l>
                <l n="2" met="+----+----+-+-">bellas imitadoras de la tristeza mía,</l>
-               <l n="3" met="-+---+--+--+-" enjamb="B-ex_subj_verb">dejad que mis ensueños morbosos de poeta</l>
-               <l n="4" met="-+---+----+-+-" enjamb="I-ex_subj_verb">se pierdan en la sombra donde se esconde el día.</l>
+               <l n="3" met="-+---+--+--+-" enjamb="B-ex_subj_verb" cert="low">dejad que mis ensueños morbosos de poeta</l>
+               <l n="4" met="-+---+----+-+-" enjamb="I-ex_subj_verb" cert="low">se pierdan en la sombra donde se esconde el día.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l n="5" met="-+---+--+---+-">¡Oh! tardes barnizadas de gris melancolía,</l>
-               <l n="6" met="-++--+--+---+-" enjamb="B-ex_dobj_verb">llevadme en vuestras llamas cual bíblico profeta</l>
-               <l n="7" met="---+-+--+---+-" enjamb="B-cc_crossclause I-ex_dobj_verb">hacia el palacio negro, la clásica armería</l>
-               <l n="8" met="---+-+--+---+-" enjamb="I-cc_crossclause">donde el dolor se oculta como un anacoreta.</l>
+               <l n="6" met="-++--+--+---+-" enjamb="B-ex_dobj_verb" cert="low">llevadme en vuestras llamas cual bíblico profeta</l>
+               <l n="7"
+                  met="---+-+--+---+-"
+                  enjamb="B-cc_crossclause I-ex_dobj_verb"
+                  cert="high low">hacia el palacio negro, la clásica armería</l>
+               <l n="8"
+                  met="---+-+--+---+-"
+                  enjamb="I-cc_crossclause"
+                  cert="high">donde el dolor se oculta como un anacoreta.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="-+--+--++--+-" enjamb="B-ex_dobj_verb">Allí, en las tinieblas feroz le arrancaría</l>
-               <l n="10" met="---+-+--+---+-" enjamb="I-ex_dobj_verb">en titanesca lucha, la espada y la careta,</l>
+               <l n="9" met="-+--+--++--+-" enjamb="B-ex_dobj_verb" cert="low">Allí, en las tinieblas feroz le arrancaría</l>
+               <l n="10" met="---+-+--+---+-" enjamb="I-ex_dobj_verb" cert="low">en titanesca lucha, la espada y la careta,</l>
                <l n="11" met="-+---+--+--+-">el filtro donde guarda la santa poesía,</l>
             </lg>
             <lg n="4" type="terceto">
@@ -177,8 +185,8 @@
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="---+---+-+-">Y hasta la línea que su vista alcanza,</l>
-               <l n="13" met="---+---+++-" enjamb="B-ex_dobj_verb">en ademán de retador nos lanza</l>
-               <l n="14" met="+--+---+-+-" enjamb="I-ex_dobj_verb">todo el desdén de su mirar austero.</l>
+               <l n="13" met="---+---+++-" enjamb="B-ex_dobj_verb" cert="low">en ademán de retador nos lanza</l>
+               <l n="14" met="+--+---+-+-" enjamb="I-ex_dobj_verb" cert="low">todo el desdén de su mirar austero.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s260n_0848">
@@ -202,8 +210,14 @@
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="-+-+++--+---+-">Hermanos yo no tengo, ni escudo ni nobleza;</l>
-               <l n="13" met="+++--+---+--+-" enjamb="B-cc_crossclause">yo soy un sacerdote de la diosa Belleza</l>
-               <l n="14" met="+-+--+------+-" enjamb="I-cc_crossclause">que ha soñado tus versos y tu melancolía.</l>
+               <l n="13"
+                  met="+++--+---+--+-"
+                  enjamb="B-cc_crossclause"
+                  cert="high">yo soy un sacerdote de la diosa Belleza</l>
+               <l n="14"
+                  met="+-+--+------+-"
+                  enjamb="I-cc_crossclause"
+                  cert="high">que ha soñado tus versos y tu melancolía.</l>
             </lg>
          </lg>
       </body>

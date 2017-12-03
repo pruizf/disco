@@ -203,7 +203,9 @@
             <p>The values of the <att>enjamb</att> atributes were extracted automatically using
                     the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
                         (Automatic eNJambment Analysis)</ref> tool. For more information about the
-                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
          </metDecl>
       </encodingDesc>
       <revisionDesc>
@@ -225,16 +227,22 @@
          <lg type="sonnet" xml:id="s031n_0062">
             <head>Homero</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="+--+-+---+-" enjamb="B-pb_relword">Un gigantesco cíclope simula</l>
-               <l n="2" met="--+-++---+-" enjamb="I-pb_relword">cuya espalda no encorvan las edades,</l>
-               <l n="3" met="+-+--+---+-" enjamb="B-pb_noun_prep">y aun su lira de bronce a las deidades</l>
-               <l n="4" met="---+-+---+-" enjamb="I-pb_noun_prep">con sus estrofas clásicas adula.</l>
+               <l n="1" met="+--+-+---+-" enjamb="B-pb_relword" cert="high">Un gigantesco cíclope simula</l>
+               <l n="2" met="--+-++---+-" enjamb="I-pb_relword" cert="high">cuya espalda no encorvan las edades,</l>
+               <l n="3" met="+-+--+---+-" enjamb="B-pb_noun_prep" cert="medium">y aun su lira de bronce a las deidades</l>
+               <l n="4" met="---+-+---+-" enjamb="I-pb_noun_prep" cert="medium">con sus estrofas clásicas adula.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="-+-+-+---+-" enjamb="B-pb_verb_chain">El regio canto que épica modula</l>
-               <l n="6" met="--+--+---+-" enjamb="B-pb_verb_chain I-pb_verb_chain">estremece las ruinas de ciudades</l>
-               <l n="7" met="+----+---+-" enjamb="B-pb_noun_prep I-pb_verb_chain">muertas, o en las celestes soledades</l>
-               <l n="8" met="--+--+---+-" enjamb="I-pb_noun_prep">a los dioses proscriptos estimula.</l>
+               <l n="5" met="-+-+-+---+-" enjamb="B-pb_verb_chain" cert="high">El regio canto que épica modula</l>
+               <l n="6"
+                  met="--+--+---+-"
+                  enjamb="B-pb_verb_chain I-pb_verb_chain"
+                  cert="high high">estremece las ruinas de ciudades</l>
+               <l n="7"
+                  met="+----+---+-"
+                  enjamb="B-pb_noun_prep I-pb_verb_chain"
+                  cert="medium high">muertas, o en las celestes soledades</l>
+               <l n="8" met="--+--+---+-" enjamb="I-pb_noun_prep" cert="medium">a los dioses proscriptos estimula.</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="-+---+-+-+-">Supremo forjador de eterna joya,</l>
@@ -250,14 +258,14 @@
          <lg type="sonnet" xml:id="s031n_0063">
             <head>Byron</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="-+-+-++--+-" enjamb="B-pb_noun_prep">Nació de heroica estirpe ese poeta</l>
-               <l n="2" met="-+---+---+-" enjamb="I-pb_noun_prep">de bruna cabellera ensortijada,</l>
+               <l n="1" met="-+-+-++--+-" enjamb="B-pb_noun_prep" cert="medium">Nació de heroica estirpe ese poeta</l>
+               <l n="2" met="-+---+---+-" enjamb="I-pb_noun_prep" cert="medium">de bruna cabellera ensortijada,</l>
                <l n="3" met="-+---+---+-">brillando su pupila constelada</l>
                <l n="4" met="-++--++--+-">como un rayo que filtra una faceta.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="+-+-++---+-" enjamb="B-ex_dobj_verb">Fue su musa tan triste, que interpreta</l>
-               <l n="6" met="--+-++---+-" enjamb="I-ex_dobj_verb">la desdicha de un alma desolada</l>
+               <l n="5" met="+-+-++---+-" enjamb="B-ex_dobj_verb" cert="low">Fue su musa tan triste, que interpreta</l>
+               <l n="6" met="--+-++---+-" enjamb="I-ex_dobj_verb" cert="low">la desdicha de un alma desolada</l>
                <l n="7" met="---+-+---+-">o la expresión que anima la mirada</l>
                <l n="8" met="--+--+-+-+-">cuando rueda, vencido, de un atleta.</l>
             </lg>
@@ -267,24 +275,27 @@
                <l n="11" met="-+-+---+-+-">sonoras rimas de vibrantes ecos;</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="--+--+---+-" enjamb="B-pb_relword">y trazóle su horrenda desventura</l>
-               <l n="13" met="+-+--+---+-" enjamb="B-cc_crossclause I-pb_relword">hosca senda de tétrica amargura</l>
-               <l n="14" met="--++---+-+-" enjamb="I-cc_crossclause">donde halló sólo corazones secos.</l>
+               <l n="12" met="--+--+---+-" enjamb="B-pb_relword" cert="high">y trazóle su horrenda desventura</l>
+               <l n="13"
+                  met="+-+--+---+-"
+                  enjamb="B-cc_crossclause I-pb_relword"
+                  cert="high high">hosca senda de tétrica amargura</l>
+               <l n="14" met="--++---+-+-" enjamb="I-cc_crossclause" cert="high">donde halló sólo corazones secos.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0064">
             <head>Incoherentes</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="--+--+---+-" enjamb="B-ex_subj_verb">¡Los fervientes anhelos! los que hilan</l>
-               <l n="2" met="-+---+---+-" enjamb="I-ex_subj_verb">los flébiles amores celestiales</l>
+               <l n="1" met="--+--+---+-" enjamb="B-ex_subj_verb" cert="low">¡Los fervientes anhelos! los que hilan</l>
+               <l n="2" met="-+---+---+-" enjamb="I-ex_subj_verb" cert="low">los flébiles amores celestiales</l>
                <l n="3" met="--+--+---+-">y enervando el dolor de los mortales</l>
                <l n="4" met="++---+---+-">cual lánguidas visiones se perfilan;</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="--+--+---+-" enjamb="B-ex_dobj_verb">en mi alma nostálgica destilan</l>
-               <l n="6" met="--+--+---+-" enjamb="I-ex_dobj_verb">el aroma de goces ideales,</l>
-               <l n="7" met="-+---+---+-" enjamb="B-pb_noun_prep">y lívidos fantasmas, espectrales</l>
-               <l n="8" met="---+-+---+-" enjamb="I-pb_noun_prep">por mis ensueños cándidos, desfilan;</l>
+               <l n="5" met="--+--+---+-" enjamb="B-ex_dobj_verb" cert="low">en mi alma nostálgica destilan</l>
+               <l n="6" met="--+--+---+-" enjamb="I-ex_dobj_verb" cert="low">el aroma de goces ideales,</l>
+               <l n="7" met="-+---+---+-" enjamb="B-pb_noun_prep" cert="medium">y lívidos fantasmas, espectrales</l>
+               <l n="8" met="---+-+---+-" enjamb="I-pb_noun_prep" cert="medium">por mis ensueños cándidos, desfilan;</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="--+--+---+-">al cruzar por mi mente oscurecidos</l>
@@ -293,40 +304,46 @@
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="--+--+---+-">entumecen mis nervios doloridos</l>
-               <l n="13" met="---+---+-+-" enjamb="B-cc_crossclause">con la dulzura misteriosa y vaga</l>
-               <l n="14" met="-+---+---+-" enjamb="I-cc_crossclause">que engendran los delirios incoherentes.</l>
+               <l n="13" met="---+---+-+-" enjamb="B-cc_crossclause" cert="high">con la dulzura misteriosa y vaga</l>
+               <l n="14" met="-+---+---+-" enjamb="I-cc_crossclause" cert="high">que engendran los delirios incoherentes.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0065">
             <head>Los templos</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="--+--+---+-" enjamb="B-pb_adj_noun">En sus bóvedas guardan la infinita</l>
-               <l n="2" met="--+--+---+-" enjamb="I-pb_adj_noun">castidad que los sueños tornasola,</l>
+               <l n="1" met="--+--+---+-" enjamb="B-pb_adj_noun" cert="medium">En sus bóvedas guardan la infinita</l>
+               <l n="2" met="--+--+---+-" enjamb="I-pb_adj_noun" cert="medium">castidad que los sueños tornasola,</l>
                <l n="3" met="--+--+---+-">como guarda en su pálida corola</l>
                <l n="4" met="-+---+---+-">alburas la silvestre margarita.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="---+---+++-" enjamb="B-ex_dobj_verb">En su recinto protector no agita</l>
-               <l n="6" met="-+---+-+-+-" enjamb="I-ex_dobj_verb">el ansia terrenal su impura ola;</l>
-               <l n="7" met="-+-+---+-+-" enjamb="B-pb_noun_prep">del blanco cirio la dorada aureola</l>
-               <l n="8" met="---+-+---+-" enjamb="I-pb_noun_prep">a los delirios lánguidos excita.</l>
+               <l n="5" met="---+---+++-" enjamb="B-ex_dobj_verb" cert="low">En su recinto protector no agita</l>
+               <l n="6" met="-+---+-+-+-" enjamb="I-ex_dobj_verb" cert="low">el ansia terrenal su impura ola;</l>
+               <l n="7" met="-+-+---+-+-" enjamb="B-pb_noun_prep" cert="medium">del blanco cirio la dorada aureola</l>
+               <l n="8" met="---+-+---+-" enjamb="I-pb_noun_prep" cert="medium">a los delirios lánguidos excita.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="-+---+---+-" enjamb="B-pb_verb_cprep">Narcótico deleite se desprende</l>
-               <l n="10" met="---+-+---+-" enjamb="B-pb_relword I-pb_verb_cprep">del incensario fúlgido que al aura</l>
-               <l n="11" met="-+---+---+-" enjamb="I-pb_relword">impregna de balsámicos olores;</l>
+               <l n="9" met="-+---+---+-" enjamb="B-pb_verb_cprep" cert="medium">Narcótico deleite se desprende</l>
+               <l n="10"
+                  met="---+-+---+-"
+                  enjamb="B-pb_relword I-pb_verb_cprep"
+                  cert="high medium">del incensario fúlgido que al aura</l>
+               <l n="11" met="-+---+---+-" enjamb="I-pb_relword" cert="high">impregna de balsámicos olores;</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="-+---+---+-" enjamb="B-ex_subj_verb">y el ritmo melancólico que extiende</l>
-               <l n="13" met="--+--+---+-" enjamb="B-ex_dobj_verb I-ex_subj_verb">por la atmósfera el órgano, restaura</l>
-               <l n="14" met="--+--+---+-" enjamb="I-ex_dobj_verb">el piadoso fervor de mis mayores.</l>
+               <l n="12" met="-+---+---+-" enjamb="B-ex_subj_verb" cert="low">y el ritmo melancólico que extiende</l>
+               <l n="13"
+                  met="--+--+---+-"
+                  enjamb="B-ex_dobj_verb I-ex_subj_verb"
+                  cert="low low">por la atmósfera el órgano, restaura</l>
+               <l n="14" met="--+--+---+-" enjamb="I-ex_dobj_verb" cert="low">el piadoso fervor de mis mayores.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0066">
             <head>Julián del Casal</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="-++--+---+-" enjamb="B-pb_verb_chain">Amó el brillo sutil que reverbera</l>
-               <l n="2" met="--+--+---+-" enjamb="I-pb_verb_chain">aureolando las joyas fulgurantes,</l>
+               <l n="1" met="-++--+---+-" enjamb="B-pb_verb_chain" cert="high">Amó el brillo sutil que reverbera</l>
+               <l n="2" met="--+--+---+-" enjamb="I-pb_verb_chain" cert="high">aureolando las joyas fulgurantes,</l>
                <l n="3" met="-+---+---+-">los místicos deleites enervantes,</l>
                <l n="4" met="-+---+---+-">la tarde, de los sueños mensajera.</l>
             </lg>
@@ -342,49 +359,67 @@
                <l n="11" met="---+-+---+-">el firmamento azul de Poesía;</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="---+---+-+-" enjamb="B-ex_dobj_verb">a sus estrofas de bruñido oro</l>
-               <l n="13" met="-+---+---+-" enjamb="B-pb_adj_noun I-ex_dobj_verb">ungiendo con la esencia soñadora</l>
-               <l n="14" met="+----+---+-" enjamb="I-pb_adj_noun">alma de vesperal melancolía.</l>
+               <l n="12" met="---+---+-+-" enjamb="B-ex_dobj_verb" cert="low">a sus estrofas de bruñido oro</l>
+               <l n="13"
+                  met="-+---+---+-"
+                  enjamb="B-pb_adj_noun I-ex_dobj_verb"
+                  cert="medium low">ungiendo con la esencia soñadora</l>
+               <l n="14" met="+----+---+-" enjamb="I-pb_adj_noun" cert="medium">alma de vesperal melancolía.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0067">
             <head>In extremis</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="+--+-+---+-" enjamb="B-pb_noun_prep">Aura sutil su clámide olorosa</l>
-               <l n="2" met="-+---+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">de verde enredadera en los festones</l>
-               <l n="3" met="-+---+-" enjamb="B-pb_adj_noun I-pb_noun_prep">desgarra. Melancólicas canciones</l>
-               <l n="4" met="+--+---+-+-" enjamb="I-pb_adj_noun">flébiles surgen de la selva hojosa.</l>
+               <l n="1" met="+--+-+---+-" enjamb="B-pb_noun_prep" cert="medium">Aura sutil su clámide olorosa</l>
+               <l n="2"
+                  met="-+---+---+-"
+                  enjamb="B-pb_noun_prep I-pb_noun_prep"
+                  cert="medium medium">de verde enredadera en los festones</l>
+               <l n="3"
+                  met="-+---+-"
+                  enjamb="B-pb_adj_noun I-pb_noun_prep"
+                  cert="medium medium">desgarra. Melancólicas canciones</l>
+               <l n="4" met="+--+---+-+-" enjamb="I-pb_adj_noun" cert="medium">flébiles surgen de la selva hojosa.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l n="5" met="+-+--+---+-">Tiñe el cielo su bóveda azulosa</l>
                <l n="6" met="-+---+---+-">con lácteas tenuidades de jarrones,</l>
-               <l n="7" met="---+-+---+-" enjamb="B-pb_noun_prep">y en el ocaso humeantes bermellones</l>
-               <l n="8" met="-+-+-+---+-" enjamb="I-pb_noun_prep">del sol la veste esparce esplendorosa.</l>
+               <l n="7" met="---+-+---+-" enjamb="B-pb_noun_prep" cert="medium">y en el ocaso humeantes bermellones</l>
+               <l n="8" met="-+-+-+---+-" enjamb="I-pb_noun_prep" cert="medium">del sol la veste esparce esplendorosa.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="-++--+---+-" enjamb="B-ex_subj_verb">Como un pálido ejército las garzas</l>
-               <l n="10" met="+--+---+-+-" enjamb="B-cc_crossclause I-ex_subj_verb">van acampando en las punzantes zarzas</l>
-               <l n="11" met="-+---+---+-" enjamb="B-cc_crossclause I-cc_crossclause">que bordan los linderos del camino</l>
+               <l n="9" met="-++--+---+-" enjamb="B-ex_subj_verb" cert="low">Como un pálido ejército las garzas</l>
+               <l n="10"
+                  met="+--+---+-+-"
+                  enjamb="B-cc_crossclause I-ex_subj_verb"
+                  cert="high low">van acampando en las punzantes zarzas</l>
+               <l n="11"
+                  met="-+---+---+-"
+                  enjamb="B-cc_crossclause I-cc_crossclause"
+                  cert="high high">que bordan los linderos del camino</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="--+--+--++-" enjamb="B-cc_crossclause I-cc_crossclause">donde en áspero lecho de fría piedra</l>
-               <l n="13" met="-+-+---+-+-" enjamb="I-cc_crossclause">que alfombra crespa exuberante hiedra</l>
+               <l n="12"
+                  met="--+--+--++-"
+                  enjamb="B-cc_crossclause I-cc_crossclause"
+                  cert="high high">donde en áspero lecho de fría piedra</l>
+               <l n="13" met="-+-+---+-+-" enjamb="I-cc_crossclause" cert="high">que alfombra crespa exuberante hiedra</l>
                <l n="14" met="--+--+---+-">agoniza extenuado peregrino.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0068">
             <head>Un cruzado</head>
             <lg n="1" type="serventesio">
-               <l n="1" met="+-++--+--+-" enjamb="B-cc_crossclause">Nímbale el casco broncínea cimera</l>
-               <l n="2" met="---+--+--+-" enjamb="I-cc_crossclause">donde erizado feroz jabalí,</l>
-               <l n="3" met="-+-+--+--+-" enjamb="B-ex_dobj_verb">a la ígnea lumbre del sol reverbera</l>
-               <l n="4" met="+--+--+--+-" enjamb="I-ex_dobj_verb">chispas sangrientas de ardiente rubí.</l>
+               <l n="1" met="+-++--+--+-" enjamb="B-cc_crossclause" cert="high">Nímbale el casco broncínea cimera</l>
+               <l n="2" met="---+--+--+-" enjamb="I-cc_crossclause" cert="high">donde erizado feroz jabalí,</l>
+               <l n="3" met="-+-+--+--+-" enjamb="B-ex_dobj_verb" cert="low">a la ígnea lumbre del sol reverbera</l>
+               <l n="4" met="+--+--+--+-" enjamb="I-ex_dobj_verb" cert="low">chispas sangrientas de ardiente rubí.</l>
             </lg>
             <lg n="2" type="serventesio">
                <l n="5" met="+--+--+--+-">Pende bruñida tajante altanera</l>
                <l n="6" met="-+-+--+--+-">como un trofeo del marcial tahalí,</l>
-               <l n="7" met="---+-+---+-" enjamb="B-pb_adj_noun">y la acerada lóriga, severa</l>
-               <l n="8" met="+--+--+--+-" enjamb="I-pb_adj_noun">surca y blasona la cruz carmesí.</l>
+               <l n="7" met="---+-+---+-" enjamb="B-pb_adj_noun" cert="medium">y la acerada lóriga, severa</l>
+               <l n="8" met="+--+--+--+-" enjamb="I-pb_adj_noun" cert="medium">surca y blasona la cruz carmesí.</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="+--+--+--+-">Yergue su diestra cruzado orifloma,</l>
@@ -400,41 +435,41 @@
          <lg type="sonnet" xml:id="s031n_0069">
             <head>Vesperal</head>
             <lg n="1" type="serventesio">
-               <l n="1" met="-+-+---+-+-" enjamb="B-pb_noun_prep">El sol envuelve su caldeado escudo</l>
-               <l n="2" met="--+--+---+-" enjamb="I-pb_noun_prep">en sudario de brumas irisadas,</l>
-               <l n="3" met="+-+--+---+-" enjamb="B-pb_adj_noun">cual la púdica virgen el desnudo</l>
-               <l n="4" met="-+-+-+---+-" enjamb="I-pb_adj_noun">turgente busto en sedas sonrosadas;</l>
+               <l n="1" met="-+-+---+-+-" enjamb="B-pb_noun_prep" cert="medium">El sol envuelve su caldeado escudo</l>
+               <l n="2" met="--+--+---+-" enjamb="I-pb_noun_prep" cert="medium">en sudario de brumas irisadas,</l>
+               <l n="3" met="+-+--+---+-" enjamb="B-pb_adj_noun" cert="medium">cual la púdica virgen el desnudo</l>
+               <l n="4" met="-+-+-+---+-" enjamb="I-pb_adj_noun" cert="medium">turgente busto en sedas sonrosadas;</l>
             </lg>
             <lg n="2" type="serventesio">
-               <l n="5" met="+-+--+-+-+-" enjamb="B-cc_crossclause">rasga trémulo el aire el eco agudo</l>
-               <l n="6" met="-+---+---+-" enjamb="I-cc_crossclause">que lanzan los alciones en bandadas:</l>
+               <l n="5" met="+-+--+-+-+-" enjamb="B-cc_crossclause" cert="high">rasga trémulo el aire el eco agudo</l>
+               <l n="6" met="-+---+---+-" enjamb="I-cc_crossclause" cert="high">que lanzan los alciones en bandadas:</l>
                <l n="7" met="+-+--+-+-+-">quiebra en negro arrecife el mar sañudo</l>
                <l n="8" met="--+--+---+-">sus eréctiles ondas argentadas.</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="-++--+-+-+-">Como un ópalo níveo en ocre raso,</l>
-               <l n="10" met="+----+---+-" enjamb="B-ex_dobj_verb">mancha con su blancura del ocaso</l>
-               <l n="11" met="---+-+-+-+-" enjamb="I-ex_dobj_verb">la ensangrentada clámide, alba vela;</l>
+               <l n="10" met="+----+---+-" enjamb="B-ex_dobj_verb" cert="low">mancha con su blancura del ocaso</l>
+               <l n="11" met="---+-+-+-+-" enjamb="I-ex_dobj_verb" cert="low">la ensangrentada clámide, alba vela;</l>
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="+----+---+-">pájaro de plumaje marfileño</l>
-               <l n="13" met="+----+---+-" enjamb="B-ex_subj_verb">finge, que a las comarcas del Ensueño</l>
-               <l n="14" met="---+---+-+-" enjamb="I-ex_subj_verb">por encendidos firmamentos vuela.</l>
+               <l n="13" met="+----+---+-" enjamb="B-ex_subj_verb" cert="low">finge, que a las comarcas del Ensueño</l>
+               <l n="14" met="---+---+-+-" enjamb="I-ex_subj_verb" cert="low">por encendidos firmamentos vuela.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0070">
             <head>Velada</head>
             <lg n="1" type="cuarteto">
                <l n="1" met="--+--+---+-">En la blanca frialdad de la neblina</l>
-               <l n="2" met="-+---+---+-" enjamb="B-ex_dobj_verb">su lívido semblante verde-plata</l>
-               <l n="3" met="-+-+-+---+-" enjamb="I-ex_dobj_verb">la luna arropa, y tenue se retrata</l>
+               <l n="2" met="-+---+---+-" enjamb="B-ex_dobj_verb" cert="low">su lívido semblante verde-plata</l>
+               <l n="3" met="-+-+-+---+-" enjamb="I-ex_dobj_verb" cert="low">la luna arropa, y tenue se retrata</l>
                <l n="4" met="--+-+----+-">tras su manto de aérea muselina.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l n="5" met="---+-+---+-">Cuando en su curso agónico declina</l>
                <l n="6" met="---+---+-+-">hacia el ocaso, su cendal desata,</l>
-               <l n="7" met="-+---+---+-" enjamb="B-ex_dobj_verb">y el nítido sudario desbarata</l>
-               <l n="8" met="-+-+-+---+-" enjamb="I-ex_dobj_verb">su luz que argenta y pálida ilumina.</l>
+               <l n="7" met="-+---+---+-" enjamb="B-ex_dobj_verb" cert="low">y el nítido sudario desbarata</l>
+               <l n="8" met="-+-+-+---+-" enjamb="I-ex_dobj_verb" cert="low">su luz que argenta y pálida ilumina.</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="-+---+---+-">Filtrando el cortinaje de la bruma,</l>
@@ -442,29 +477,32 @@
                <l n="11" met="---+-+---+-">al irisar sus últimos fulgores,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="+--+---+-+-" enjamb="B-cc_crossclause">copia del tedio abrumador el astro</l>
-               <l n="13" met="--+--+-+-+-" enjamb="B-pb_noun_prep I-cc_crossclause">que al surgir en mi cielo, deja el rastro</l>
-               <l n="14" met="--+--+---+-" enjamb="I-pb_noun_prep">de su fúnebre brillo en mis amores.</l>
+               <l n="12" met="+--+---+-+-" enjamb="B-cc_crossclause" cert="high">copia del tedio abrumador el astro</l>
+               <l n="13"
+                  met="--+--+-+-+-"
+                  enjamb="B-pb_noun_prep I-cc_crossclause"
+                  cert="medium high">que al surgir en mi cielo, deja el rastro</l>
+               <l n="14" met="--+--+---+-" enjamb="I-pb_noun_prep" cert="medium">de su fúnebre brillo en mis amores.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0071">
             <head>Reminiscencia</head>
             <lg n="1" type="serventesio">
-               <l n="1" met="+----+---+-" enjamb="B-pb_noun_prep">Lánguida y melancólica sonrisa</l>
-               <l n="2" met="-+---+---+-" enjamb="I-pb_noun_prep">de cándidos infantes hechiceros;</l>
-               <l n="3" met="+-+--+---+-" enjamb="B-ex_subj_verb">flores de alba corola que la brisa</l>
-               <l n="4" met="+--+-+---+-" enjamb="I-ex_subj_verb">mece a la lumbre azul de los luceros;</l>
+               <l n="1" met="+----+---+-" enjamb="B-pb_noun_prep" cert="medium">Lánguida y melancólica sonrisa</l>
+               <l n="2" met="-+---+---+-" enjamb="I-pb_noun_prep" cert="medium">de cándidos infantes hechiceros;</l>
+               <l n="3" met="+-+--+---+-" enjamb="B-ex_subj_verb" cert="low">flores de alba corola que la brisa</l>
+               <l n="4" met="+--+-+---+-" enjamb="I-ex_subj_verb" cert="low">mece a la lumbre azul de los luceros;</l>
             </lg>
             <lg n="2" type="serventesio">
                <l n="5" met="-+---+---+-">amores de cruzados caballeros</l>
                <l n="6" met="-+---+---+-">y blondas castellanas, indecisa</l>
-               <l n="7" met="+----++--+-" enjamb="B-pb_adj_prep">luna que al resplandor blancos regueros</l>
-               <l n="8" met="--+--+-+-+-" enjamb="I-pb_adj_prep">con metálicos tintes la onda irisa;</l>
+               <l n="7" met="+----++--+-" enjamb="B-pb_adj_prep" cert="low">luna que al resplandor blancos regueros</l>
+               <l n="8" met="--+--+-+-+-" enjamb="I-pb_adj_prep" cert="low">con metálicos tintes la onda irisa;</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="-+-+---+-+-">a mi alma habláis con musicales voces,</l>
-               <l n="10" met="-+-+---+-+-" enjamb="B-pb_adj_prep">hacéis promesas de ideales goces</l>
-               <l n="11" met="--+--+---+-" enjamb="I-pb_adj_prep">a mi tétrico espíritu abatido;</l>
+               <l n="10" met="-+-+---+-+-" enjamb="B-pb_adj_prep" cert="low">hacéis promesas de ideales goces</l>
+               <l n="11" met="--+--+---+-" enjamb="I-pb_adj_prep" cert="low">a mi tétrico espíritu abatido;</l>
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="--+--+---+-">y, emisarios de ignotas lontananzas,</l>
@@ -483,13 +521,13 @@
             <lg n="2" type="cuarteto">
                <l n="5" met="--+--+-+-+-">La nostalgia del claustro mudo y frío</l>
                <l n="6" met="-+---+---+-">en mi alma soñadora y enfermiza,</l>
-               <l n="7" met="---+-+---+-" enjamb="B-ex_dobj_verb">como fragante flor, aromatiza</l>
-               <l n="8" met="-+---+---+-" enjamb="I-ex_dobj_verb">las ansias de mi espíritu sombrío.</l>
+               <l n="7" met="---+-+---+-" enjamb="B-ex_dobj_verb" cert="low">como fragante flor, aromatiza</l>
+               <l n="8" met="-+---+---+-" enjamb="I-ex_dobj_verb" cert="low">las ansias de mi espíritu sombrío.</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="-++--+---+-">¡Ay!, yo aspiro a las dichas ideales;</l>
-               <l n="10" met="--+--+---+-" enjamb="B-ex_subj_verb">los efímeros goces terrenales</l>
-               <l n="11" met="--+--+---+-" enjamb="I-ex_subj_verb">engendraron el tedio en mis placeres.</l>
+               <l n="10" met="--+--+---+-" enjamb="B-ex_subj_verb" cert="low">los efímeros goces terrenales</l>
+               <l n="11" met="--+--+---+-" enjamb="I-ex_subj_verb" cert="low">engendraron el tedio en mis placeres.</l>
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="+--+-+---+-">Pueblan mis sueños vírgenes con tocas,</l>
@@ -500,14 +538,14 @@
          <lg type="sonnet" xml:id="s031n_0073">
             <head>Desolación</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="---+---+-+-" enjamb="B-ex_subj_verb">Como el gallardo paladín caído</l>
-               <l n="2" met="+----+---+-" enjamb="I-ex_subj_verb">viendo inutilizada la cimera,</l>
-               <l n="3" met="-+---+---+-" enjamb="B-ex_dobj_verb">levanta desde el polvo su bandera</l>
-               <l n="4" met="---+-+---+-" enjamb="I-ex_dobj_verb">como postrer esfuerzo de vencido.</l>
+               <l n="1" met="---+---+-+-" enjamb="B-ex_subj_verb" cert="low">Como el gallardo paladín caído</l>
+               <l n="2" met="+----+---+-" enjamb="I-ex_subj_verb" cert="low">viendo inutilizada la cimera,</l>
+               <l n="3" met="-+---+---+-" enjamb="B-ex_dobj_verb" cert="low">levanta desde el polvo su bandera</l>
+               <l n="4" met="---+-+---+-" enjamb="I-ex_dobj_verb" cert="low">como postrer esfuerzo de vencido.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="-+---++--+-" enjamb="B-ex_subj_verb">Así mi corazón, mártir herido</l>
-               <l n="6" met="--+--+++-+-" enjamb="I-ex_subj_verb">por aciago pesar, ya nada espera,</l>
+               <l n="5" met="-+---++--+-" enjamb="B-ex_subj_verb" cert="low">Así mi corazón, mártir herido</l>
+               <l n="6" met="--+--+++-+-" enjamb="I-ex_subj_verb" cert="low">por aciago pesar, ya nada espera,</l>
                <l n="7" met="--+--+---+-">mas sostiene su fúlgida quimera</l>
                <l n="8" met="-++--+---+-">como un faro entre ruinas encendido.</l>
             </lg>
@@ -517,8 +555,8 @@
                <l n="11" met="+----+---+-">llevo mis ilusiones condolidas.</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="-+-+-+---+-" enjamb="B-ex_dobj_verb">¡Infúndele a mi espíritu agobiado</l>
-               <l n="13" met="-+---+---+-" enjamb="I-ex_dobj_verb">la fe de religiosos ideales</l>
+               <l n="12" met="-+-+-+---+-" enjamb="B-ex_dobj_verb" cert="low">¡Infúndele a mi espíritu agobiado</l>
+               <l n="13" met="-+---+---+-" enjamb="I-ex_dobj_verb" cert="low">la fe de religiosos ideales</l>
                <l n="14" met="--+--+---+-">o el heroico valor de los suicidas!</l>
             </lg>
          </lg>
@@ -527,19 +565,31 @@
             <lg n="1" type="cuarteto">
                <l n="1" met="---+-+----+-+-">En la penumbra incierta del historiado coro</l>
                <l n="2" met="-+-+-+------+-">disuélvese un perfume como de castidades,</l>
-               <l n="3" met="---+-+--+---+-" enjamb="B-ex_subj_verb">y de la nave inmensa las blancas soledades</l>
-               <l n="4" met="-+++-+----+-+-" enjamb="I-ex_subj_verb">invade un leve soplo de virginal decoro.</l>
+               <l n="3" met="---+-+--+---+-" enjamb="B-ex_subj_verb" cert="low">y de la nave inmensa las blancas soledades</l>
+               <l n="4" met="-+++-+----+-+-" enjamb="I-ex_subj_verb" cert="low">invade un leve soplo de virginal decoro.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="---+-+--+--+-" enjamb="B-ex_subj_verb">De los erguidos cirios la lágrima de oro</l>
-               <l n="6" met="+--+-+------+-" enjamb="B-cc_crossclause I-ex_subj_verb">tiembla al errar el vuelo de espiritualidades</l>
-               <l n="7" met="-+---+--+---+-" enjamb="B-pb_adj_noun I-cc_crossclause">que emana de las voces del coro, en suavidades</l>
-               <l n="8" met="-+-+-+--+---+-" enjamb="I-pb_adj_noun">flexibles, tenues, leves, como hálito sonoro.</l>
+               <l n="5" met="---+-+--+--+-" enjamb="B-ex_subj_verb" cert="low">De los erguidos cirios la lágrima de oro</l>
+               <l n="6"
+                  met="+--+-+------+-"
+                  enjamb="B-cc_crossclause I-ex_subj_verb"
+                  cert="high low">tiembla al errar el vuelo de espiritualidades</l>
+               <l n="7"
+                  met="-+---+--+---+-"
+                  enjamb="B-pb_adj_noun I-cc_crossclause"
+                  cert="medium high">que emana de las voces del coro, en suavidades</l>
+               <l n="8" met="-+-+-+--+---+-" enjamb="I-pb_adj_noun" cert="medium">flexibles, tenues, leves, como hálito sonoro.</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="---+-+--+---+-">La vibración postrera se extingue de las voces,</l>
-               <l n="10" met="+--+-+----+-+-" enjamb="B-cc_crossclause">y aun se perciben vagos, como sedosos roces</l>
-               <l n="11" met="-+---+----+-+-" enjamb="I-cc_crossclause">que pueblan el silencio de los sitiales almos;</l>
+               <l n="10"
+                  met="+--+-+----+-+-"
+                  enjamb="B-cc_crossclause"
+                  cert="high">y aun se perciben vagos, como sedosos roces</l>
+               <l n="11"
+                  met="-+---+----+-+-"
+                  enjamb="I-cc_crossclause"
+                  cert="high">que pueblan el silencio de los sitiales almos;</l>
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="-+---+--+---+-">y el ánimo interroga, si en la alta sillería</l>
@@ -550,14 +600,14 @@
          <lg type="sonnet" xml:id="s031n_0075">
             <head>De Carlos Pío y Federico Urbach</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="+--+-+---+-" enjamb="B-cc_crossclause">Somos nosotros pálido pintores</l>
-               <l n="2" met="---+-+---+-" enjamb="I-cc_crossclause">que diluyendo el alma en la paleta,</l>
+               <l n="1" met="+--+-+---+-" enjamb="B-cc_crossclause" cert="high">Somos nosotros pálido pintores</l>
+               <l n="2" met="---+-+---+-" enjamb="I-cc_crossclause" cert="high">que diluyendo el alma en la paleta,</l>
                <l n="3" met="--+--+---+-">esbozamos ensueños de poeta</l>
                <l n="4" met="-+---+---+-">con justas gradaciones de colores.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="-+---+---+-" enjamb="B-ex_subj_verb">La trágica expresión de los dolores</l>
-               <l n="6" met="+-+--+---+-" enjamb="I-ex_subj_verb">forja marco a la cláusula discreta,</l>
+               <l n="5" met="-+---+---+-" enjamb="B-ex_subj_verb" cert="low">La trágica expresión de los dolores</l>
+               <l n="6" met="+-+--+---+-" enjamb="I-ex_subj_verb" cert="low">forja marco a la cláusula discreta,</l>
                <l n="7" met="---+---+-+-">si la indomable aspiración, boceta</l>
                <l n="8" met="+----+---+-">iris de fugitivos resplandores.</l>
             </lg>
@@ -567,50 +617,59 @@
                <l n="11" met="-+---+---+-">simulan espejismos visionarios,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="---+---+-+-" enjamb="B-pb_adj_noun">y en el paisaje desolado, abiertos</l>
-               <l n="13" met="+-+--+---+-" enjamb="B-pb_adj_noun I-pb_adj_noun">lirios negros en cármenes desiertos</l>
-               <l n="14" met="+----+---+-" enjamb="I-pb_adj_noun">forja nuestra labor de solitarios.</l>
+               <l n="12" met="---+---+-+-" enjamb="B-pb_adj_noun" cert="medium">y en el paisaje desolado, abiertos</l>
+               <l n="13"
+                  met="+-+--+---+-"
+                  enjamb="B-pb_adj_noun I-pb_adj_noun"
+                  cert="medium medium">lirios negros en cármenes desiertos</l>
+               <l n="14" met="+----+---+-" enjamb="I-pb_adj_noun" cert="medium">forja nuestra labor de solitarios.</l>
             </lg>
             <lg n="5" type="cuarteto">
-               <l n="15" met="+--+-+---+-" enjamb="B-cc_crossclause">Somos nosotros pálidos pintores</l>
-               <l n="16" met="--+--+---+-" enjamb="I-cc_crossclause">que infundir anhelamos al bosquejo,</l>
-               <l n="17" met="--+--+---+-" enjamb="B-cc_crossclause">la expresión vacilante del reflejo</l>
-               <l n="18" met="--+--+---+-" enjamb="I-cc_crossclause">que agoniza entre lampos tembladores.</l>
+               <l n="15" met="+--+-+---+-" enjamb="B-cc_crossclause" cert="high">Somos nosotros pálidos pintores</l>
+               <l n="16" met="--+--+---+-" enjamb="I-cc_crossclause" cert="high">que infundir anhelamos al bosquejo,</l>
+               <l n="17" met="--+--+---+-" enjamb="B-cc_crossclause" cert="high">la expresión vacilante del reflejo</l>
+               <l n="18" met="--+--+---+-" enjamb="I-cc_crossclause" cert="high">que agoniza entre lampos tembladores.</l>
             </lg>
             <lg n="6" type="cuarteto">
                <l n="19" met="-+---+---+-">La dicha que difunden los amores</l>
                <l n="20" met="--+--+---+-">o el pesar que deforma el entrecejo,</l>
-               <l n="21" met="-+---+-+-+-" enjamb="B-pb_noun_prep">quisiéramos copiar, como un espejo</l>
-               <l n="22" met="+-+--+---+-" enjamb="I-pb_noun_prep">de una ninfa los rasgos turbadores.</l>
+               <l n="21" met="-+---+-+-+-" enjamb="B-pb_noun_prep" cert="medium">quisiéramos copiar, como un espejo</l>
+               <l n="22" met="+-+--+---+-" enjamb="I-pb_noun_prep" cert="medium">de una ninfa los rasgos turbadores.</l>
             </lg>
             <lg n="7" type="terceto">
                <l n="23" met="-----+---+-">Pero, como los copos invernales</l>
-               <l n="24" met="-+---+---+-" enjamb="B-ex_subj_verb">el diáfano fulgor de los cristales</l>
-               <l n="25" met="-+---+---+-" enjamb="I-ex_subj_verb">opacan con sus gélidos sudarios,</l>
+               <l n="24" met="-+---+---+-" enjamb="B-ex_subj_verb" cert="low">el diáfano fulgor de los cristales</l>
+               <l n="25" met="-+---+---+-" enjamb="I-ex_subj_verb" cert="low">opacan con sus gélidos sudarios,</l>
             </lg>
             <lg n="8" type="terceto">
-               <l n="26" met="--+--+---+-" enjamb="B-ex_subj_verb">implacable el olvido tenebroso</l>
-               <l n="27" met="---+-+---+-" enjamb="I-ex_subj_verb">opacará, cruzando misterioso,</l>
+               <l n="26" met="--+--+---+-" enjamb="B-ex_subj_verb" cert="low">implacable el olvido tenebroso</l>
+               <l n="27" met="---+-+---+-" enjamb="I-ex_subj_verb" cert="low">opacará, cruzando misterioso,</l>
                <l n="28" met="--+--+---+-">nuestra extraña labor de solitarios.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0076">
             <head>Para unas rosas</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="+--+-+--+---+-" enjamb="B-pb_adj_noun">Rosas que el rosa tenue de senos virginales</l>
-               <l n="2" met="-+---+--+---+-" enjamb="I-pb_adj_noun">mostráis, y la clausura del tiesto cristalino</l>
+               <l n="1" met="+--+-+--+---+-" enjamb="B-pb_adj_noun" cert="medium">Rosas que el rosa tenue de senos virginales</l>
+               <l n="2" met="-+---+--+---+-" enjamb="I-pb_adj_noun" cert="medium">mostráis, y la clausura del tiesto cristalino</l>
                <l n="3" met="---+-+--+---+-">ornamentáis con tono de lampo vespertino</l>
                <l n="4" met="---+-+--+---+-">o fugitivas luces de cielos otoñales.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="---+-+------+-" enjamb="B-pb_adj_noun">Espirituales rosas que a las espirituales</l>
-               <l n="6" met="-+---+--+---+-" enjamb="I-pb_adj_noun">contiendas amorosas unís vuestro destino,</l>
-               <l n="7" met="-+---+--+---+-" enjamb="B-pb_noun_prep">poniendo en las mejillas rubores, y en el vino</l>
-               <l n="8" met="-+-+-+--+---+-" enjamb="I-pb_noun_prep">de amor de rojas bocas los hálitos sensuales.</l>
+               <l n="5" met="---+-+------+-" enjamb="B-pb_adj_noun" cert="medium">Espirituales rosas que a las espirituales</l>
+               <l n="6" met="-+---+--+---+-" enjamb="I-pb_adj_noun" cert="medium">contiendas amorosas unís vuestro destino,</l>
+               <l n="7"
+                  met="-+---+--+---+-"
+                  enjamb="B-pb_noun_prep"
+                  cert="medium">poniendo en las mejillas rubores, y en el vino</l>
+               <l n="8"
+                  met="-+-+-+--+---+-"
+                  enjamb="I-pb_noun_prep"
+                  cert="medium">de amor de rojas bocas los hálitos sensuales.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="---++----+-+-" enjamb="B-ex_dobj_verb">En el fecundo huerto del corazón nacidas</l>
-               <l n="10" met="-+---+--+---+-" enjamb="I-ex_dobj_verb">las rosas del ensueño, dobléganse rendidas</l>
+               <l n="9" met="---++----+-+-" enjamb="B-ex_dobj_verb" cert="low">En el fecundo huerto del corazón nacidas</l>
+               <l n="10" met="-+---+--+---+-" enjamb="I-ex_dobj_verb" cert="low">las rosas del ensueño, dobléganse rendidas</l>
                <l n="11" met="-+---+----+-+-">al alma de las rosas que en el salón divaga,</l>
             </lg>
             <lg n="4" type="terceto">
@@ -624,14 +683,14 @@
             <lg n="1" type="cuarteto">
                <l n="1" met="---+---+-+-">Bajo el dosal de la esculpida arcada</l>
                <l n="2" met="+--+-+---+-">eres visión de blanca vestidura,</l>
-               <l n="3" met="-+-+-+---+-" enjamb="B-pb_noun_prep">que de una estrofa esquiva la clausura</l>
-               <l n="4" met="---+-+---+-" enjamb="I-pb_noun_prep">por suplicantes ritos evocada.</l>
+               <l n="3" met="-+-+-+---+-" enjamb="B-pb_noun_prep" cert="medium">que de una estrofa esquiva la clausura</l>
+               <l n="4" met="---+-+---+-" enjamb="I-pb_noun_prep" cert="medium">por suplicantes ritos evocada.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l n="5" met="-+---+---+-">Por locas inquietudes agitada,</l>
                <l n="6" met="-+---+---+-">tus ojos, que abrillantan la ternura,</l>
-               <l n="7" met="+----+---+-" enjamb="B-pb_adj_noun">fíjanse, escrutadores, en la oscura</l>
-               <l n="8" met="+----+---+-" enjamb="I-pb_adj_noun">sombra de la avenida enarenada.</l>
+               <l n="7" met="+----+---+-" enjamb="B-pb_adj_noun" cert="medium">fíjanse, escrutadores, en la oscura</l>
+               <l n="8" met="+----+---+-" enjamb="I-pb_adj_noun" cert="medium">sombra de la avenida enarenada.</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="---+---+-+-">En la tiniebla nocturnal imitas,</l>
@@ -640,23 +699,23 @@
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="+----+---+-">Viendo en el horizonte de tus cuitas</l>
-               <l n="13" met="-+---+---+-" enjamb="B-ex_dobj_verb">cruzar con resplandores de celaje</l>
-               <l n="14" met="+--+---+-+-" enjamb="I-ex_dobj_verb">la última rima del ausente bardo!</l>
+               <l n="13" met="-+---+---+-" enjamb="B-ex_dobj_verb" cert="low">cruzar con resplandores de celaje</l>
+               <l n="14" met="+--+---+-+-" enjamb="I-ex_dobj_verb" cert="low">la última rima del ausente bardo!</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0078">
             <head>En la partida</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="---+-+---+-" enjamb="B-pb_noun_prep">Cuando la inquieta nave, refractaria</l>
-               <l n="2" met="--+--+--++-" enjamb="I-pb_noun_prep">a indolentes perezas, dejó el puerto,</l>
-               <l n="3" met="--+--+---+-" enjamb="B-pb_adj_noun">e internóse en el náutico desierto</l>
-               <l n="4" met="+----+---+-" enjamb="I-pb_adj_noun">ávida de región hospitalaria;</l>
+               <l n="1" met="---+-+---+-" enjamb="B-pb_noun_prep" cert="medium">Cuando la inquieta nave, refractaria</l>
+               <l n="2" met="--+--+--++-" enjamb="I-pb_noun_prep" cert="medium">a indolentes perezas, dejó el puerto,</l>
+               <l n="3" met="--+--+---+-" enjamb="B-pb_adj_noun" cert="medium">e internóse en el náutico desierto</l>
+               <l n="4" met="+----+---+-" enjamb="I-pb_adj_noun" cert="medium">ávida de región hospitalaria;</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l n="5" met="+----+---+-">ella junto a la borda solitaria,</l>
                <l n="6" met="+--++--+-+-">viendo esfumarse el horizonte incierto,</l>
-               <l n="7" met="--+--+---+-" enjamb="B-ex_subj_verb">la frialdad homicida de lo yerto</l>
-               <l n="8" met="-+-+-+---+-" enjamb="I-ex_subj_verb">sintió invadir su dicha visionaria.</l>
+               <l n="7" met="--+--+---+-" enjamb="B-ex_subj_verb" cert="low">la frialdad homicida de lo yerto</l>
+               <l n="8" met="-+-+-+---+-" enjamb="I-ex_subj_verb" cert="low">sintió invadir su dicha visionaria.</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="-+---++--+-">Y entonces ¡del amor loca sublime!</l>
@@ -674,18 +733,21 @@
             <lg n="1" type="cuarteto">
                <l n="1" met="++---+---+-">Un vuelo melancólico de hojas</l>
                <l n="2" met="---+---+-+-">en las arcadas de la selva ondula,</l>
-               <l n="3" met="---+---+-+-" enjamb="B-ex_dobj_verb">como sonrisa virginal que adula</l>
-               <l n="4" met="-+---+---+-" enjamb="I-ex_dobj_verb">la muerte, de la vida en las congojas.</l>
+               <l n="3" met="---+---+-+-" enjamb="B-ex_dobj_verb" cert="low">como sonrisa virginal que adula</l>
+               <l n="4" met="-+---+---+-" enjamb="I-ex_dobj_verb" cert="low">la muerte, de la vida en las congojas.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l n="5" met="+--+---+-+-">tal en tu selva, corazón: despojas</l>
-               <l n="6" met="-+---+---+-" enjamb="B-ex_subj_verb">tus ramas de recuerdos, y simula</l>
-               <l n="7" met="+-+--+---+-" enjamb="B-ex_dobj_verb I-ex_subj_verb">un miraje engañoso que estimula</l>
-               <l n="8" met="--+--+---+-" enjamb="I-ex_dobj_verb">el manojo de ensueños que deshojas.</l>
+               <l n="6" met="-+---+---+-" enjamb="B-ex_subj_verb" cert="low">tus ramas de recuerdos, y simula</l>
+               <l n="7"
+                  met="+-+--+---+-"
+                  enjamb="B-ex_dobj_verb I-ex_subj_verb"
+                  cert="low low">un miraje engañoso que estimula</l>
+               <l n="8" met="--+--+---+-" enjamb="I-ex_dobj_verb" cert="low">el manojo de ensueños que deshojas.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="--+--+---+-" enjamb="B-ex_subj_verb">De otoñales tristeza se diluye</l>
-               <l n="10" met="++---+---+-" enjamb="I-ex_subj_verb">un algo espiritual en la contienda</l>
+               <l n="9" met="--+--+---+-" enjamb="B-ex_subj_verb" cert="low">De otoñales tristeza se diluye</l>
+               <l n="10" met="++---+---+-" enjamb="I-ex_subj_verb" cert="low">un algo espiritual en la contienda</l>
                <l n="11" met="---+---+-+-">en que el aroma de tu vida exhalas;</l>
             </lg>
             <lg n="4" type="terceto">
@@ -699,19 +761,19 @@
             <lg n="1" type="cuarteto">
                <l n="1" met="++-++--+-+-">Yo vengo de un país que el sol inflama</l>
                <l n="2" met="--+--+---+-">con su lluvia de ardiente pedrería,</l>
-               <l n="3" met="--+--+---+-" enjamb="B-pb_verb_cprep">que en regueros lumínicos envía</l>
-               <l n="4" met="-+-+---+-+-" enjamb="I-pb_verb_cprep">de su ígneo disco la caldeada llama.</l>
+               <l n="3" met="--+--+---+-" enjamb="B-pb_verb_cprep" cert="medium">que en regueros lumínicos envía</l>
+               <l n="4" met="-+-+---+-+-" enjamb="I-pb_verb_cprep" cert="medium">de su ígneo disco la caldeada llama.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="---+-+---+-" enjamb="B-pb_noun_prep">Donde susurra lánguida la rama</l>
-               <l n="6" met="-+---+---+-" enjamb="I-pb_noun_prep">del árbol de los sueños su elegía,</l>
+               <l n="5" met="---+-+---+-" enjamb="B-pb_noun_prep" cert="medium">Donde susurra lánguida la rama</l>
+               <l n="6" met="-+---+---+-" enjamb="I-pb_noun_prep" cert="medium">del árbol de los sueños su elegía,</l>
                <l n="7" met="--+--+---+-">y sus notas de rítmica armonía</l>
                <l n="8" met="---+-+---+-">en los delirios pálidos derrama.</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="-+---+---+-">Allí a través de mágico espejismo,</l>
-               <l n="10" met="-+-+-+---+-" enjamb="B-ex_dobj_verb">descúbrese del sacro misticismo</l>
-               <l n="11" met="-+---+---+-" enjamb="I-ex_dobj_verb">el séquito de goces ideales;</l>
+               <l n="10" met="-+-+-+---+-" enjamb="B-ex_dobj_verb" cert="low">descúbrese del sacro misticismo</l>
+               <l n="11" met="-+---+---+-" enjamb="I-ex_dobj_verb" cert="low">el séquito de goces ideales;</l>
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="-+---+---+-">y vírgenes de cándida hermosura</l>
@@ -722,59 +784,95 @@
          <lg type="sonnet" xml:id="s031n_0081">
             <head>Crisantemos</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="--+--+---+-" enjamb="B-ex_subj_verb">Fabulosas leyendas orientales</l>
-               <l n="2" met="+----+---+-" enjamb="I-ex_subj_verb">dicen del crisantemo la leyenda,</l>
-               <l n="3" met="-+-+-+---+-" enjamb="B-pb_noun_prep">que entraña en dulce símbolo la ofrenda</l>
-               <l n="4" met="--+--+---+-" enjamb="I-pb_noun_prep">de exaltadas primicias virginales.</l>
+               <l n="1" met="--+--+---+-" enjamb="B-ex_subj_verb" cert="low">Fabulosas leyendas orientales</l>
+               <l n="2" met="+----+---+-" enjamb="I-ex_subj_verb" cert="low">dicen del crisantemo la leyenda,</l>
+               <l n="3" met="-+-+-+---+-" enjamb="B-pb_noun_prep" cert="medium">que entraña en dulce símbolo la ofrenda</l>
+               <l n="4" met="--+--+---+-" enjamb="I-pb_noun_prep" cert="medium">de exaltadas primicias virginales.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="-+---+---+-" enjamb="B-ex_dobj_verb">Fingiendo atardeceres estivales</l>
-               <l n="6" met="--+--+---+-" enjamb="I-ex_dobj_verb">sus corolas deshójanse en la senda,</l>
-               <l n="7" met="--+--+---+-" enjamb="B-pb_noun_prep">que señala al encanto la contienda</l>
-               <l n="8" met="+----+---+-" enjamb="I-pb_noun_prep">de áureos deslumbramientos floreales.</l>
+               <l n="5" met="-+---+---+-" enjamb="B-ex_dobj_verb" cert="low">Fingiendo atardeceres estivales</l>
+               <l n="6" met="--+--+---+-" enjamb="I-ex_dobj_verb" cert="low">sus corolas deshójanse en la senda,</l>
+               <l n="7" met="--+--+---+-" enjamb="B-pb_noun_prep" cert="medium">que señala al encanto la contienda</l>
+               <l n="8" met="+----+---+-" enjamb="I-pb_noun_prep" cert="medium">de áureos deslumbramientos floreales.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="-+-------+-" enjamb="B-pb_noun_prep">Sus pétalos, a modo de venablos</l>
-               <l n="10" met="-++--+-+-+-" enjamb="I-pb_noun_prep">de mil luces, a zonas mil alcanzan</l>
+               <l n="9" met="-+-------+-" enjamb="B-pb_noun_prep" cert="medium">Sus pétalos, a modo de venablos</l>
+               <l n="10" met="-++--+-+-+-" enjamb="I-pb_noun_prep" cert="medium">de mil luces, a zonas mil alcanzan</l>
                <l n="11" met="--+-++---+-">como flechas de un sol iridiscente,</l>
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="--+--+---+-">y engarzando en sus pétalos vocablos</l>
-               <l n="13" met="---+---+-+-" enjamb="B-ex_dobj_verb">a las comarcas del ensueño lanzan</l>
-               <l n="14" met="--+--+---+-" enjamb="I-ex_dobj_verb">fabulosas leyendas del Oriente.</l>
+               <l n="13" met="---+---+-+-" enjamb="B-ex_dobj_verb" cert="low">a las comarcas del ensueño lanzan</l>
+               <l n="14" met="--+--+---+-" enjamb="I-ex_dobj_verb" cert="low">fabulosas leyendas del Oriente.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0082">
             <head>Budoir</head>
             <lg n="1" type="serventesio">
-               <l n="1" met="-+---+---+-" enjamb="B-pb_noun_prep">Alcoba. En los tapices, el ramaje</l>
-               <l n="2" met="--+--+-+-+-" enjamb="B-pb_noun_prep I-pb_noun_prep">sobre malva entreabre blancas rosas</l>
-               <l n="3" met="-++--+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">con un tinte enfermizo. Un oleaje</l>
-               <l n="4" met="-+-+--+-" enjamb="B-ex_subj_verb I-pb_noun_prep">de blondas cae del lecho. Temblorosas</l>
+               <l n="1" met="-+---+---+-" enjamb="B-pb_noun_prep" cert="medium">Alcoba. En los tapices, el ramaje</l>
+               <l n="2"
+                  met="--+--+-+-+-"
+                  enjamb="B-pb_noun_prep I-pb_noun_prep"
+                  cert="medium medium">sobre malva entreabre blancas rosas</l>
+               <l n="3"
+                  met="-++--+---+-"
+                  enjamb="B-pb_noun_prep I-pb_noun_prep"
+                  cert="medium medium">con un tinte enfermizo. Un oleaje</l>
+               <l n="4"
+                  met="-+-+--+-"
+                  enjamb="B-ex_subj_verb I-pb_noun_prep"
+                  cert="low medium">de blondas cae del lecho. Temblorosas</l>
             </lg>
             <lg n="2" type="serventesio">
-               <l n="5" met="--+--+---+-" enjamb="B-pb_noun_prep I-ex_subj_verb">parpadean las joyas. El paisaje</l>
-               <l n="6" met="++-+-+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">de un biombo irradia luces misteriosas</l>
-               <l n="7" met="--+--+-" enjamb="B-pb_noun_prep I-pb_noun_prep">de crepúsculo pálido. Salvaje</l>
-               <l n="8" met="---+-+---+-" enjamb="B-pb_adj_noun I-pb_noun_prep">y voluptuoso olor de resinosas</l>
+               <l n="5"
+                  met="--+--+---+-"
+                  enjamb="B-pb_noun_prep I-ex_subj_verb"
+                  cert="medium low">parpadean las joyas. El paisaje</l>
+               <l n="6"
+                  met="++-+-+---+-"
+                  enjamb="B-pb_noun_prep I-pb_noun_prep"
+                  cert="medium medium">de un biombo irradia luces misteriosas</l>
+               <l n="7"
+                  met="--+--+-"
+                  enjamb="B-pb_noun_prep I-pb_noun_prep"
+                  cert="medium medium">de crepúsculo pálido. Salvaje</l>
+               <l n="8"
+                  met="---+-+---+-"
+                  enjamb="B-pb_adj_noun I-pb_noun_prep"
+                  cert="medium medium">y voluptuoso olor de resinosas</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="-+---+--+-" enjamb="B-pb_adj_noun I-pb_adj_noun">maderas esculpidas. Grave escudo</l>
-               <l n="10" met="-+----+--+-" enjamb="B-pb_adj_noun I-pb_adj_noun">labrado en la cornisa. Espesa alfombra</l>
-               <l n="11" met="-+---+---+-" enjamb="B-pb_adj_noun I-pb_adj_noun">ahoga las pisadas. En la incierta</l>
+               <l n="9"
+                  met="-+---+--+-"
+                  enjamb="B-pb_adj_noun I-pb_adj_noun"
+                  cert="medium medium">maderas esculpidas. Grave escudo</l>
+               <l n="10"
+                  met="-+----+--+-"
+                  enjamb="B-pb_adj_noun I-pb_adj_noun"
+                  cert="medium medium">labrado en la cornisa. Espesa alfombra</l>
+               <l n="11"
+                  met="-+---+---+-"
+                  enjamb="B-pb_adj_noun I-pb_adj_noun"
+                  cert="medium medium">ahoga las pisadas. En la incierta</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="-+---+-+-+-" enjamb="B-ex_subj_verb I-pb_adj_noun">penumbra de la tarde, yace mudo</l>
-               <l n="13" met="--+--+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">el fastuosos budoir, donde la sombra</l>
-               <l n="14" met="+-+--+---+-" enjamb="I-ex_subj_verb">va envolviendo el recuerdo de la muerta!...</l>
+               <l n="12"
+                  met="-+---+-+-+-"
+                  enjamb="B-ex_subj_verb I-pb_adj_noun"
+                  cert="low medium">penumbra de la tarde, yace mudo</l>
+               <l n="13"
+                  met="--+--+---+-"
+                  enjamb="B-ex_subj_verb I-ex_subj_verb"
+                  cert="low low">el fastuosos budoir, donde la sombra</l>
+               <l n="14" met="+-+--+---+-" enjamb="I-ex_subj_verb" cert="low">va envolviendo el recuerdo de la muerta!...</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0083">
             <head>Lampo</head>
             <lg n="1" type="cuarteto">
                <l n="1" met="-++-++---+-">Si mi alma es como un ánfora de hastío</l>
-               <l n="2" met="-+-++--+-+-" enjamb="B-cc_crossclause">¿a qué brindarme con tu dulce entrega</l>
-               <l n="3" met="-+-+---+-+-" enjamb="I-cc_crossclause">que me encadena a la mundana brega</l>
+               <l n="2" met="-+-++--+-+-" enjamb="B-cc_crossclause" cert="high">¿a qué brindarme con tu dulce entrega</l>
+               <l n="3" met="-+-+---+-+-" enjamb="I-cc_crossclause" cert="high">que me encadena a la mundana brega</l>
                <l n="4" met="+--+---+-+-">cual el reposo ultraterrestre ansío?</l>
             </lg>
             <lg n="2" type="cuarteto">
@@ -784,14 +882,14 @@
                <l n="8" met="--+--+---+-">y se extingue en su propio desvarío.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="--+--+---+-" enjamb="B-cc_crossclause">Desatemos el lazo vacilante</l>
-               <l n="10" met="-+---+---+-" enjamb="I-cc_crossclause">que anuda mi tristeza a tu idealismo,</l>
-               <l n="11" met="--+--+---+-" enjamb="B-ex_subj_verb">que tu dulce visión consoladora</l>
+               <l n="9" met="--+--+---+-" enjamb="B-cc_crossclause" cert="high">Desatemos el lazo vacilante</l>
+               <l n="10" met="-+---+---+-" enjamb="I-cc_crossclause" cert="high">que anuda mi tristeza a tu idealismo,</l>
+               <l n="11" met="--+--+---+-" enjamb="B-ex_subj_verb" cert="low">que tu dulce visión consoladora</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="--+--+++-+-" enjamb="I-ex_subj_verb">se refleja en mi vida un solo instante,</l>
-               <l n="13" met="----++-+-+-" enjamb="B-ex_dobj_verb">como, sin dejar huella, en un abismo</l>
-               <l n="14" met="---+-+-+-+-" enjamb="I-ex_dobj_verb">el resplandor rosado de una aurora.</l>
+               <l n="12" met="--+--+++-+-" enjamb="I-ex_subj_verb" cert="low">se refleja en mi vida un solo instante,</l>
+               <l n="13" met="----++-+-+-" enjamb="B-ex_dobj_verb" cert="low">como, sin dejar huella, en un abismo</l>
+               <l n="14" met="---+-+-+-+-" enjamb="I-ex_dobj_verb" cert="low">el resplandor rosado de una aurora.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0084">
@@ -823,45 +921,60 @@
             <head>Melancolía</head>
             <lg n="1" type="serventesio">
                <l n="1" met="-+---+---+-">Crepúsculo. En el lívido paisaje</l>
-               <l n="2" met="---+-++--+-" enjamb="B-pb_noun_prep">la mortecina luz filtra las grietas</l>
-               <l n="3" met="---+-+--+-" enjamb="B-pb_adj_noun I-pb_noun_prep">de las errantes nubes. El celaje</l>
-               <l n="4" met="+--+-+---+-" enjamb="I-pb_adj_noun">sangra, al clavar sus últimas saetas.</l>
+               <l n="2" met="---+-++--+-" enjamb="B-pb_noun_prep" cert="medium">la mortecina luz filtra las grietas</l>
+               <l n="3"
+                  met="---+-+--+-"
+                  enjamb="B-pb_adj_noun I-pb_noun_prep"
+                  cert="medium medium">de las errantes nubes. El celaje</l>
+               <l n="4" met="+--+-+---+-" enjamb="I-pb_adj_noun" cert="medium">sangra, al clavar sus últimas saetas.</l>
             </lg>
             <lg n="2" type="serventesio">
-               <l n="5" met="-+---+---+-" enjamb="B-pb_noun_prep">El sol agonizante. En el encaje</l>
-               <l n="6" met="-+---+---+-" enjamb="B-pb_noun_prep I-pb_noun_prep">de piedra, que recortan las siluetas</l>
-               <l n="7" met="---+-+-+-+-" enjamb="B-ex_subj_verb I-pb_noun_prep">de las lejanas torres, un mensaje</l>
-               <l n="8" met="+----+---+-" enjamb="I-ex_subj_verb">cuelgan los melancólicos poetas.</l>
+               <l n="5" met="-+---+---+-" enjamb="B-pb_noun_prep" cert="medium">El sol agonizante. En el encaje</l>
+               <l n="6"
+                  met="-+---+---+-"
+                  enjamb="B-pb_noun_prep I-pb_noun_prep"
+                  cert="medium medium">de piedra, que recortan las siluetas</l>
+               <l n="7"
+                  met="---+-+-+-+-"
+                  enjamb="B-ex_subj_verb I-pb_noun_prep"
+                  cert="low medium">de las lejanas torres, un mensaje</l>
+               <l n="8" met="+----+---+-" enjamb="I-ex_subj_verb" cert="low">cuelgan los melancólicos poetas.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="---+-+-+-+-" enjamb="B-pb_noun_prep">¡Oh, la mortal tristeza, blanca novia</l>
-               <l n="10" met="--+--+---+-" enjamb="I-pb_noun_prep">de las almas, que tímidas, agobia!</l>
+               <l n="9" met="---+-+-+-+-" enjamb="B-pb_noun_prep" cert="medium">¡Oh, la mortal tristeza, blanca novia</l>
+               <l n="10" met="--+--+---+-" enjamb="I-pb_noun_prep" cert="medium">de las almas, que tímidas, agobia!</l>
                <l n="11" met="--+--+---+-">¡Oh, las castas promesas fugitivas!</l>
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="--+--+---+-">Los ensueños se alejan errabundos</l>
-               <l n="13" met="-+---+---+-" enjamb="B-pb_noun_prep">y surgen los recuerdos moribundos</l>
-               <l n="14" met="--+--+---+-" enjamb="I-pb_noun_prep">de las pálidas tardes pensativas.</l>
+               <l n="13" met="-+---+---+-" enjamb="B-pb_noun_prep" cert="medium">y surgen los recuerdos moribundos</l>
+               <l n="14" met="--+--+---+-" enjamb="I-pb_noun_prep" cert="medium">de las pálidas tardes pensativas.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s031n_0086">
             <head>Salammbo</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="---+---+-+-" enjamb="B-pb_relword">En el palacio de Megara, sobre</l>
-               <l n="2" met="--+--+---+-" enjamb="B-ex_dobj_verb I-pb_relword">la marmórea terraza que domina</l>
-               <l n="3" met="-+---+---+-" enjamb="B-ex_dobj_verb I-ex_dobj_verb">el golfo que Tanit alabastrina</l>
-               <l n="4" met="+--+-+---+-" enjamb="I-ex_dobj_verb">torna en bruñida ánima de cobre;</l>
+               <l n="1" met="---+---+-+-" enjamb="B-pb_relword" cert="high">En el palacio de Megara, sobre</l>
+               <l n="2"
+                  met="--+--+---+-"
+                  enjamb="B-ex_dobj_verb I-pb_relword"
+                  cert="low high">la marmórea terraza que domina</l>
+               <l n="3"
+                  met="-+---+---+-"
+                  enjamb="B-ex_dobj_verb I-ex_dobj_verb"
+                  cert="low low">el golfo que Tanit alabastrina</l>
+               <l n="4" met="+--+-+---+-" enjamb="I-ex_dobj_verb" cert="low">torna en bruñida ánima de cobre;</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="--+--+---+-" enjamb="B-pb_adj_noun">aspirando el efluvio de salobre</l>
-               <l n="6" met="+--+---+-+-" enjamb="I-pb_adj_noun">aura que surca la extensión marina,</l>
+               <l n="5" met="--+--+---+-" enjamb="B-pb_adj_noun" cert="medium">aspirando el efluvio de salobre</l>
+               <l n="6" met="+--+---+-+-" enjamb="I-pb_adj_noun" cert="medium">aura que surca la extensión marina,</l>
                <l n="7" met="--+--+---+-">y diadema con nimbos de neblina</l>
                <l n="8" met="+--+---+-+-">la árida cumbre de peñasco pobre;</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="--++-+---+-">Salammbó envuelta en túnica de gasa,</l>
-               <l n="10" met="+--+---+-+-" enjamb="B-pb_adj_noun">de un pebetero en la rojiza brasa</l>
-               <l n="11" met="+--+---+-+-" enjamb="I-pb_adj_noun">quema extasiada la fragante goma,</l>
+               <l n="10" met="+--+---+-+-" enjamb="B-pb_adj_noun" cert="medium">de un pebetero en la rojiza brasa</l>
+               <l n="11" met="+--+---+-+-" enjamb="I-pb_adj_noun" cert="medium">quema extasiada la fragante goma,</l>
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="---+---+-+-">y al adorar los siderales mitos</l>
@@ -872,10 +985,10 @@
          <lg type="sonnet" xml:id="s031n_0087">
             <head>Gabriel D'Annunzio</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="--+-+--+-+-" enjamb="B-pb_adj_prep">Gabriel D'Annunzio una visión hermosa</l>
-               <l n="2" met="---+-+---+-" enjamb="I-pb_adj_prep">en sus ensueños mágicos persigue,</l>
-               <l n="3" met="---+---+++-" enjamb="B-pb_verb_chain">sin que el temor a lo espectral le obligue</l>
-               <l n="4" met="---+-+---+-" enjamb="I-pb_verb_chain">a desandar la ruta fatigosa.</l>
+               <l n="1" met="--+-+--+-+-" enjamb="B-pb_adj_prep" cert="low">Gabriel D'Annunzio una visión hermosa</l>
+               <l n="2" met="---+-+---+-" enjamb="I-pb_adj_prep" cert="low">en sus ensueños mágicos persigue,</l>
+               <l n="3" met="---+---+++-" enjamb="B-pb_verb_chain" cert="high">sin que el temor a lo espectral le obligue</l>
+               <l n="4" met="---+-+---+-" enjamb="I-pb_verb_chain" cert="high">a desandar la ruta fatigosa.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l n="5" met="--+--+---+-">Por región ignorada y tenebrosa</l>
@@ -885,12 +998,12 @@
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="-+---+---+-">En éxtasis de sacro arrobamiento</l>
-               <l n="10" met="--+--+---+-" enjamb="B-pb_noun_prep">la hermosura ideal de su conquista</l>
-               <l n="11" met="--+--+-+-+-" enjamb="I-pb_noun_prep">con intensa embriaguez admira absorto,</l>
+               <l n="10" met="--+--+---+-" enjamb="B-pb_noun_prep" cert="medium">la hermosura ideal de su conquista</l>
+               <l n="11" met="--+--+-+-+-" enjamb="I-pb_noun_prep" cert="medium">con intensa embriaguez admira absorto,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="--+--+---+-" enjamb="B-ex_subj_verb">y al hallar la belleza, el sufrimiento</l>
-               <l n="13" met="--+--+---+-" enjamb="I-ex_subj_verb">la emoción de su júbilo conquista</l>
+               <l n="12" met="--+--+---+-" enjamb="B-ex_subj_verb" cert="low">y al hallar la belleza, el sufrimiento</l>
+               <l n="13" met="--+--+---+-" enjamb="I-ex_subj_verb" cert="low">la emoción de su júbilo conquista</l>
                <l n="14" met="+--+---+++-">viendo que el plazo de la vida es corto.</l>
             </lg>
          </lg>

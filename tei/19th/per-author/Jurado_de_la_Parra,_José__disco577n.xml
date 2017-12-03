@@ -119,7 +119,9 @@
             <p>The values of the <att>enjamb</att> atributes were extracted automatically using
                     the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
                         (Automatic eNJambment Analysis)</ref> tool. For more information about the
-                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
          </metDecl>
       </encodingDesc>
       <revisionDesc>
@@ -143,14 +145,20 @@
             <lg n="1" type="cuarteto">
                <l n="1" met="-+-+-+---+-">Imagen fiel del triste Prometeo,</l>
                <l n="2" met="--+---++-+-">amarrado a mi afán, hora tras hora,</l>
-               <l n="3" met="-+---+-+-+-" enjamb="B-ex_subj_verb">el buitre de tu amor que me devora</l>
-               <l n="4" met="---+---+-+-" enjamb="I-ex_subj_verb">sobre mi pecho desangrado veo.</l>
+               <l n="3" met="-+---+-+-+-" enjamb="B-ex_subj_verb" cert="low">el buitre de tu amor que me devora</l>
+               <l n="4" met="---+---+-+-" enjamb="I-ex_subj_verb" cert="low">sobre mi pecho desangrado veo.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="-+---+---+-" enjamb="B-ex_subj_verb">La sed inextinguible del deseo</l>
-               <l n="6" met="++---+---+-" enjamb="B-ex_subj_verb I-ex_subj_verb">me abrasa como a Tántalo y traidora</l>
-               <l n="7" met="--+--+---+-" enjamb="B-cc_crossclause I-ex_subj_verb">en tus labios la fuente seductora</l>
-               <l n="8" met="+--+---+-+-" enjamb="I-cc_crossclause">que huye a mis ansias amorosas, creo.</l>
+               <l n="5" met="-+---+---+-" enjamb="B-ex_subj_verb" cert="low">La sed inextinguible del deseo</l>
+               <l n="6"
+                  met="++---+---+-"
+                  enjamb="B-ex_subj_verb I-ex_subj_verb"
+                  cert="low low">me abrasa como a Tántalo y traidora</l>
+               <l n="7"
+                  met="--+--+---+-"
+                  enjamb="B-cc_crossclause I-ex_subj_verb"
+                  cert="high low">en tus labios la fuente seductora</l>
+               <l n="8" met="+--+---+-+-" enjamb="I-cc_crossclause" cert="high">que huye a mis ansias amorosas, creo.</l>
             </lg>
             <lg n="3" type="terceto">
                <l n="9" met="-----+---+-">Y en medio de la horrible desventura</l>
@@ -159,17 +167,17 @@
             </lg>
             <lg n="4" type="terceto">
                <l n="12" met="-+---+---+-">Por eso en mi pasión, o en mi locura,</l>
-               <l n="13" met="-+---+--++-" enjamb="B-ex_subj_verb">adoro la cadena que me oprime</l>
-               <l n="14" met="--+--+-+++-" enjamb="I-ex_subj_verb">y bendigo la sed que me da muerte.</l>
+               <l n="13" met="-+---+--++-" enjamb="B-ex_subj_verb" cert="low">adoro la cadena que me oprime</l>
+               <l n="14" met="--+--+-+++-" enjamb="I-ex_subj_verb" cert="low">y bendigo la sed que me da muerte.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s577n_2094">
             <head>El sermón moderno</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="+++--+-+-+-" enjamb="B-ex_subj_verb">Dale menos sermón y más harina</l>
-               <l n="2" met="-+-+-++--+-" enjamb="I-ex_subj_verb">e irá tras sí la grey, sabio prelado.</l>
-               <l n="3" met="+++--+++-+-" enjamb="B-pb_verb_chain">Ya no basta el sermón; la hora ha sonado</l>
-               <l n="4" met="-+---+---+-" enjamb="I-pb_verb_chain">de dar con picatostes la doctrina.</l>
+               <l n="1" met="+++--+-+-+-" enjamb="B-ex_subj_verb" cert="low">Dale menos sermón y más harina</l>
+               <l n="2" met="-+-+-++--+-" enjamb="I-ex_subj_verb" cert="low">e irá tras sí la grey, sabio prelado.</l>
+               <l n="3" met="+++--+++-+-" enjamb="B-pb_verb_chain" cert="high">Ya no basta el sermón; la hora ha sonado</l>
+               <l n="4" met="-+---+---+-" enjamb="I-pb_verb_chain" cert="high">de dar con picatostes la doctrina.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l n="5" met="-+---++-++-">Donde hay hambre y dolor, todo es mohina;</l>
@@ -191,10 +199,10 @@
          <lg type="sonnet" xml:id="s577n_2095">
             <head>Gretchen</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="--+--+---+-" enjamb="B-ex_dobj_verb">En el atrio del templo revendía</l>
-               <l n="2" met="+--+-+---+-" enjamb="I-ex_dobj_verb">cruces y estampas vieja repugnante,</l>
-               <l n="3" met="---+-+---+-" enjamb="B-pb_noun_prep">y en la arrugada tez de su semblante</l>
-               <l n="4" met="+--+-+---+-" enjamb="I-pb_noun_prep">de hampa o burdel el sello se veía.</l>
+               <l n="1" met="--+--+---+-" enjamb="B-ex_dobj_verb" cert="low">En el atrio del templo revendía</l>
+               <l n="2" met="+--+-+---+-" enjamb="I-ex_dobj_verb" cert="low">cruces y estampas vieja repugnante,</l>
+               <l n="3" met="---+-+---+-" enjamb="B-pb_noun_prep" cert="medium">y en la arrugada tez de su semblante</l>
+               <l n="4" met="+--+-+---+-" enjamb="I-pb_noun_prep" cert="medium">de hampa o burdel el sello se veía.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l n="5" met="---+-+---+-">Al pregonar su santa mercancía,</l>
@@ -203,8 +211,8 @@
                <l n="8" met="-+-+---+-+-">llegué curioso y pregunté a la arpía.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="+--+-+---+-" enjamb="B-pb_verb_adv">Fui Margarita, dijo, y al contado</l>
-               <l n="10" met="-+-+-+-+-+-" enjamb="I-pb_verb_adv">después que a Fausto amé, vendí mis besos,</l>
+               <l n="9" met="+--+-+---+-" enjamb="B-pb_verb_adv" cert="medium">Fui Margarita, dijo, y al contado</l>
+               <l n="10" met="-+-+-+-+-+-" enjamb="I-pb_verb_adv" cert="medium">después que a Fausto amé, vendí mis besos,</l>
                <l n="11" met="-++--+---+-">que al fin fueron desprecio de la gente.</l>
             </lg>
             <lg n="4" type="terceto">

@@ -100,7 +100,9 @@
             <p>The values of the <att>enjamb</att> atributes were extracted automatically using
                     the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
                         (Automatic eNJambment Analysis)</ref> tool. For more information about the
-                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>.</p>
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
          </metDecl>
       </encodingDesc>
       <revisionDesc>
@@ -117,10 +119,16 @@
       </front>
       <body>
          <lg n="1" type="cuarteto">
-            <l n="1" met="--+--+---+-" enjamb="B-cc_crossclause">Como el suave rumor de las cascadas</l>
-            <l n="2" met="---+-+---+-" enjamb="B-ex_subj_verb I-cc_crossclause">cuyo raudal fecundo y cristalino</l>
-            <l n="3" met="-+---+---+-" enjamb="B-pb_noun_prep I-ex_subj_verb">desciende en agitado torbellino</l>
-            <l n="4" met="--+--+---+-" enjamb="I-pb_noun_prep">de las fértiles cimas encumbradas,</l>
+            <l n="1" met="--+--+---+-" enjamb="B-cc_crossclause" cert="high">Como el suave rumor de las cascadas</l>
+            <l n="2"
+               met="---+-+---+-"
+               enjamb="B-ex_subj_verb I-cc_crossclause"
+               cert="low high">cuyo raudal fecundo y cristalino</l>
+            <l n="3"
+               met="-+---+---+-"
+               enjamb="B-pb_noun_prep I-ex_subj_verb"
+               cert="medium low">desciende en agitado torbellino</l>
+            <l n="4" met="--+--+---+-" enjamb="I-pb_noun_prep" cert="medium">de las fértiles cimas encumbradas,</l>
          </lg>
          <lg n="2" type="cuarteto">
             <l n="5" met="-+---+---+-">regando las llanuras asoladas,</l>
@@ -129,14 +137,17 @@
             <l n="8" met="--+--+---+-">y renazcan las flores agostadas;</l>
          </lg>
          <lg n="3" type="terceto">
-            <l n="9" met="-++--+---+-" enjamb="B-pb_adj_noun">así llegan a mí las rumorosas</l>
-            <l n="10" met="-+---+---+-" enjamb="I-pb_adj_noun">cadencias de las frases generosas</l>
+            <l n="9" met="-++--+---+-" enjamb="B-pb_adj_noun" cert="medium">así llegan a mí las rumorosas</l>
+            <l n="10" met="-+---+---+-" enjamb="I-pb_adj_noun" cert="medium">cadencias de las frases generosas</l>
             <l n="11" met="-+-------+-">vertidas en obsequio de mi númen;</l>
          </lg>
          <lg n="4" type="terceto">
-            <l n="12" met="-+---+---+-" enjamb="B-pb_noun_prep">nutriendo mi abatida fortaleza</l>
-            <l n="13" met="-----+---+-" enjamb="B-ex_dobj_verb I-pb_noun_prep">para resucitar de la tristeza</l>
-            <l n="14" met="--+--+-+-+-" enjamb="I-ex_dobj_verb">el desmayo mortal que me consumen.</l>
+            <l n="12" met="-+---+---+-" enjamb="B-pb_noun_prep" cert="medium">nutriendo mi abatida fortaleza</l>
+            <l n="13"
+               met="-----+---+-"
+               enjamb="B-ex_dobj_verb I-pb_noun_prep"
+               cert="low medium">para resucitar de la tristeza</l>
+            <l n="14" met="--+--+-+-+-" enjamb="I-ex_dobj_verb" cert="low">el desmayo mortal que me consumen.</l>
          </lg>
       </body>
   </text>
