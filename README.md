@@ -79,6 +79,7 @@ Numbers in parentheses indicate authors which were probably active in Europe.
     <th>Period</th>
     <th>Nbr of Sonnets</th>
     <th colspan="3">Nbr of Authors</th>
+    <th>Tokens</th>
   </tr>
   <tr>
     <td rowspan="4"><b>19th</b></td>
@@ -86,6 +87,7 @@ Numbers in parentheses indicate authors which were probably active in Europe.
     <td rowspan="4">685</td>
     <td>Female</td>
     <td>48</td>
+    <td rowspan="4">252,518</td>
   </tr>
   <tr>
     <td>Male</td>
@@ -105,6 +107,7 @@ Numbers in parentheses indicate authors which were probably active in Europe.
     <td rowspan="4">42</td>
     <td>Female</td>
     <td>1</td>
+    <td rowspan="4">29,006</td>
   </tr>
   <tr>
     <td>Male</td>
@@ -124,6 +127,7 @@ Numbers in parentheses indicate authors which were probably active in Europe.
     <td rowspan="4">477</td>
     <td>Female</td>
     <td>31</td>
+    <td rowspan="4">99,779</td>
   </tr>
   <tr>
     <td>Male</td>
