@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>El labrador</title>
-            <author corresp="#disco_005e">Francisco Gregorio de Salas</author>
+         <titleStmt about="disco:po_005e0017">
+            <title property="dc:title">El labrador</title>
+            <author property="dc:creator" resource="disco:005e" corresp="#disco_005e">Francisco Gregorio de Salas</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,14 +37,17 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:po_005e0017"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_005e"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="medium" resource="https://viaf.org/viaf/89410665"/>
+               <person xml:id="disco_005e" about="disco:005e" typeOf="foaf:Person">
+                  <idno cert="medium"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/89410665"/>
                   <persName type="short">Salas</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Francisco Gregorio</forename>
@@ -52,23 +55,23 @@
                      <surname property="foaf:familyName">Salas</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Francisco Gregorio de Salas</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Jaraicejo (Cáceres)</settlement>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Jaraicejo (Cáceres)</settlement>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1755" cert="medium"/>
+                     <date property="schema:birthDate" content="1755" cert="medium"/>
                      <date type="century">18</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1822" cert="medium"/>
+                     <date property="schema:deathDate" content="1822" cert="medium"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s005e0017" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s005e0017">
                         <title property="dc:title">El labrador</title>
                         <title type="incipit" property="dc:alternative">Al matutino canto valeroso</title>
                      </bibl>
@@ -91,6 +94,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -115,6 +124,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

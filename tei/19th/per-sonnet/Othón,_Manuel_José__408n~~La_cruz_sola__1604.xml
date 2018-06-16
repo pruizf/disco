@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>La cruz sola</title>
-            <author corresp="#disco_408n">Manuel José Othón</author>
+         <titleStmt about="disco:po_408n1604">
+            <title property="dc:title">La cruz sola</title>
+            <author property="dc:creator" resource="disco:408n" corresp="#disco_408n">Manuel José Othón</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,37 +37,40 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:po_408n1604"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_408n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/51709430"/>
+               <person xml:id="disco_408n" about="disco:408n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/51709430"/>
                   <persName type="short">Othón</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Manuel José</forename>
                      <surname property="foaf:familyName">Othón</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Manuel José Othón</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <country property="schema:name">México</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">México</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1858" cert="high"/>
+                     <date property="schema:birthDate" content="1858" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1906" cert="high"/>
+                     <date property="schema:deathDate" content="1906" cert="high"/>
                      <date type="century">20</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s408n1604" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s408n1604">
                         <title property="dc:title">La cruz sola</title>
                         <title type="incipit" property="dc:alternative">Negro el altar, la bóveda desierta,</title>
                      </bibl>
@@ -90,6 +93,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -114,6 +123,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

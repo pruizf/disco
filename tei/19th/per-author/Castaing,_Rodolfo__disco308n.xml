@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Rodolfo Castaing</title>
-            <author corresp="#disco_308n">Rodolfo Castaing</author>
+         <titleStmt about="disco:au_308n">
+            <title property="dc:title">Sonetos de Rodolfo Castaing</title>
+            <author property="dc:creator" resource="disco:308n" corresp="#disco_308n">Rodolfo Castaing</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,25 +37,26 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_308n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_308n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
+               <person xml:id="disco_308n" about="disco:308n" typeOf="foaf:Person">
                   <persName type="short">Castaing</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Rodolfo</forename>
                      <surname property="foaf:familyName">Castaing</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Rodolfo Castaing</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <country property="schema:name">Costa Rica</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Costa Rica</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
                      <date type="century">19</date>
@@ -63,28 +64,28 @@
                   <death>
                      <date type="century">20</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s308n_1003" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s308n_1003">
                         <title property="dc:title">Pasionaria</title>
                         <title type="incipit" property="dc:alternative">Tú bien sabes que vivo para amarte</title>
                      </bibl>
-                     <bibl resource="disco#s308n_1004" about="dbpedia:Soneto">
+                     <bibl resource="disco:s308n_1004">
                         <title property="dc:title">Madre mía</title>
                         <title type="incipit" property="dc:alternative">En una de las vueltas del sombrío</title>
                      </bibl>
-                     <bibl resource="disco#s308n_1005" about="dbpedia:Soneto">
+                     <bibl resource="disco:s308n_1005">
                         <title property="dc:title">Su pañuelo</title>
                         <title type="incipit" property="dc:alternative">No pretendas, con fútiles engaños,</title>
                      </bibl>
-                     <bibl resource="disco#s308n_1006" about="dbpedia:Soneto">
+                     <bibl resource="disco:s308n_1006">
                         <title property="dc:title">Sus caprichos</title>
                         <title type="incipit" property="dc:alternative">Una vez, por saber si cumpliría</title>
                      </bibl>
-                     <bibl resource="disco#s308n_1007" about="dbpedia:Soneto">
+                     <bibl resource="disco:s308n_1007">
                         <title property="dc:title">Vuelo supremo</title>
                         <title type="incipit" property="dc:alternative">Cruza el ave rozando la sabana</title>
                      </bibl>
-                     <bibl resource="disco#s308n_1008" about="dbpedia:Soneto">
+                     <bibl resource="disco:s308n_1008">
                         <title property="dc:title">Anhelos</title>
                         <title type="incipit" property="dc:alternative">En la copa nevada de un jazmín,</title>
                      </bibl>
@@ -107,6 +108,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -131,6 +138,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

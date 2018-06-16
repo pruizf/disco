@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Competencia entre la rosa y el sol</title>
-            <author corresp="#disco_478g">Isabel de Castro y Andrade</author>
+         <titleStmt about="disco:po_478g1003">
+            <title property="dc:title">Competencia entre la rosa y el sol</title>
+            <author property="dc:creator" resource="disco:478g" corresp="#disco_478g">Isabel de Castro y Andrade</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,14 +37,17 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:po_478g1003"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_478g"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/307512811"/>
+               <person xml:id="disco_478g" about="disco:478g" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/307512811"/>
                   <persName type="short">Castro y Andrade</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Isabel</forename>
@@ -52,24 +55,24 @@
                      <surname property="foaf:familyName">Castro y Andrade</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Isabel de Castro y Andrade</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Monforte de Lemos</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Monforte de Lemos</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1516" cert="high"/>
+                     <date property="schema:birthDate" content="1516" cert="high"/>
                      <date type="century">16</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1595" cert="high"/>
+                     <date property="schema:deathDate" content="1595" cert="high"/>
                      <date type="century">16</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s478g1003" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s478g1003">
                         <title property="dc:title">Competencia entre la rosa y el sol</title>
                         <title type="incipit" property="dc:alternative">Púrpura ostenta, disimula nieve,</title>
                      </bibl>
@@ -92,6 +95,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -116,6 +125,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

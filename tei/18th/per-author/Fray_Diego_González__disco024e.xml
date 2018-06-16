@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Fray Diego González</title>
-            <author corresp="#disco_024e">Fray Diego González</author>
+         <titleStmt about="disco:au_024e">
+            <title property="dc:title">Sonetos de Fray Diego González</title>
+            <author property="dc:creator" resource="disco:024e" corresp="#disco_024e">Fray Diego González</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,46 +37,47 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_024e"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_024e"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
+               <person xml:id="disco_024e" about="disco:024e" typeOf="foaf:Person">
                   <persName type="short">Fray Diego González</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Fray Diego</forename>
                      <surname property="foaf:familyName">González</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Fray Diego González</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Ciudad Rodrigo (Salamanca)</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Ciudad Rodrigo (Salamanca)</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1733" cert="high"/>
+                     <date property="schema:birthDate" content="1733" cert="high"/>
                      <date type="century">18</date>
                   </birth>
                   <death>
-                     <location property="schema:deathPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Madrid</settlement>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Madrid</settlement>
                         </placeName>
                      </location>
-                     <date property="schema:deathDate" when="1794" cert="high"/>
+                     <date property="schema:deathDate" content="1794" cert="high"/>
                      <date type="century">18</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s024e_0113" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s024e_0113">
                         <title property="dc:title">A un orador contrahecho, zazoso y satírico</title>
                         <title type="incipit" property="dc:alternative">Botijo con bonete clerical,</title>
                      </bibl>
-                     <bibl resource="disco#s024e_0114" about="dbpedia:Soneto">
+                     <bibl resource="disco:s024e_0114">
                         <title property="dc:title">A la paz</title>
                         <title type="incipit" property="dc:alternative">La guerra por un caso inevitable</title>
                      </bibl>
@@ -99,6 +100,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -123,6 +130,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

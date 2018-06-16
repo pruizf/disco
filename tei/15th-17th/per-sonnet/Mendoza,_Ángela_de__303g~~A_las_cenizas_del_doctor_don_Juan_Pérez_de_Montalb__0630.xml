@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>A las cenizas del doctor don Juan Pérez de Montalbán</title>
-            <author corresp="#disco_303g">Ángela de Mendoza</author>
+         <titleStmt about="disco:po_303g0630">
+            <title property="dc:title">A las cenizas del doctor don Juan Pérez de Montalbán</title>
+            <author property="dc:creator" resource="disco:303g" corresp="#disco_303g">Ángela de Mendoza</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,13 +37,14 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:po_303g0630"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_303g"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
+               <person xml:id="disco_303g" about="disco:303g" typeOf="foaf:Person">
                   <persName type="short">Mendoza</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Ángela</forename>
@@ -51,13 +52,13 @@
                      <surname property="foaf:familyName">Mendoza</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Ángela de Mendoza</persName>
-                  <sex property="foaf:gender" value="F"/>
+                  <sex property="foaf:gender" content="F"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Granada</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Granada</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
                      <date type="century">17</date>
@@ -65,8 +66,8 @@
                   <death>
                      <date type="century">17</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s303g0630" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s303g0630">
                         <title property="dc:title">A las cenizas del doctor don Juan Pérez de Montalbán</title>
                         <title type="incipit" property="dc:alternative">Culta pavesa ya, si antes alada,</title>
                      </bibl>
@@ -89,6 +90,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -113,6 +120,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

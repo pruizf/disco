@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de José Gautier Benítez</title>
-            <author corresp="#disco_601n">José Gautier Benítez</author>
+         <titleStmt about="disco:au_601n">
+            <title property="dc:title">Sonetos de José Gautier Benítez</title>
+            <author property="dc:creator" resource="disco:601n" corresp="#disco_601n">José Gautier Benítez</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,45 +37,48 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_601n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_601n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/48348151"/>
+               <person xml:id="disco_601n" about="disco:601n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/48348151"/>
                   <persName type="short">Gautier Benítez</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">José</forename>
                      <surname property="foaf:familyName">Gautier Benítez</surname>
                   </persName>
                   <persName type="source" property="foaf:name">José Gautier Benítez</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Caguas</settlement>
-                           <country>Puerto Rico</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Caguas</settlement>
+                           <country property="schema:birthPlace" inlist="">Puerto Rico</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1848" cert="high"/>
+                     <date property="schema:birthDate" content="1848" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <location property="schema:deathPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">San Juan</settlement>
-                           <country>Puerto Rico</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">San Juan</settlement>
+                           <country property="schema:deathPlace" inlist="">Puerto Rico</country>
+                           <bloc property="schema:deathPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:deathDate" when="1888" cert="high"/>
+                     <date property="schema:deathDate" content="1888" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s601n_2254" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s601n_2254">
                         <title property="dc:title">Un sueño</title>
                         <title type="incipit" property="dc:alternative">Soñé que la mujer a quien adoro</title>
                      </bibl>
@@ -98,6 +101,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -122,6 +131,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

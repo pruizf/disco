@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>El caballo del fabulista</title>
-            <author corresp="#disco_673n">Marqués de Casa Cagigal</author>
+         <titleStmt about="disco:po_673n2430">
+            <title property="dc:title">El caballo del fabulista</title>
+            <author property="dc:creator" resource="disco:673n" corresp="#disco_673n">Marqués de Casa Cagigal</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,42 +37,45 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:po_673n2430"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_673n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/177405994"/>
+               <person xml:id="disco_673n" about="disco:673n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/177405994"/>
                   <persName type="short">Marqués de Casa Cagigal</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Fernando</forename>
                      <surname property="foaf:familyName">Cagigal</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Marqués de Casa Cagigal</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Cantabria</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Cantabria</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1753" cert="medium"/>
+                     <date property="schema:birthDate" content="1753" cert="medium"/>
                      <date type="century">18</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1824" cert="medium"/>
+                     <date property="schema:deathDate" content="1824" cert="medium"/>
                      <date type="century">19</date>
                   </death>
                   <floruit>
-                     <date when="1817"/>
+                     <date content="1817"/>
                      <date type="century">19</date>
                   </floruit>
-                  <listBibl>
-                     <bibl resource="disco#s673n2430" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s673n2430">
                         <title property="dc:title">El caballo del fabulista</title>
                         <title type="incipit" property="dc:alternative">Más de cien veces he, señor, sufrido</title>
                      </bibl>
@@ -95,6 +98,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -119,6 +128,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

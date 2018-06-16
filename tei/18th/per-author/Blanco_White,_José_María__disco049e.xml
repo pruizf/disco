@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de José María Blanco White</title>
-            <author corresp="#disco_049e">José María Blanco White</author>
+         <titleStmt about="disco:au_049e">
+            <title property="dc:title">Sonetos de José María Blanco White</title>
+            <author property="dc:creator" resource="disco:049e" corresp="#disco_049e">José María Blanco White</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,63 +37,66 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_049e"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_049e"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="medium" resource="https://viaf.org/viaf/49268120"/>
+               <person xml:id="disco_049e" about="disco:049e" typeOf="foaf:Person">
+                  <idno cert="medium"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/49268120"/>
                   <persName type="short">Blanco White</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">José María</forename>
                      <surname property="foaf:familyName">Blanco White</surname>
                   </persName>
                   <persName type="source" property="foaf:name">José María Blanco White</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Sevilla</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Sevilla</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1775" cert="high"/>
+                     <date property="schema:birthDate" content="1775" cert="high"/>
                      <date type="century">18</date>
                   </birth>
                   <death>
-                     <location property="schema:deathPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Liverpool (Inglaterra)</settlement>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Liverpool (Inglaterra)</settlement>
                         </placeName>
                      </location>
-                     <date property="schema:deathDate" when="1851" cert="high"/>
+                     <date property="schema:deathDate" content="1851" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s049e_0299" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s049e_0299">
                         <title property="dc:title">Muerte y vida</title>
                         <title type="incipit" property="dc:alternative">Al ver la noche Adán por vez primera</title>
                      </bibl>
-                     <bibl resource="disco#s049e_0300" about="dbpedia:Soneto">
+                     <bibl resource="disco:s049e_0300">
                         <title property="dc:title">Soneto a la amistad</title>
                         <title type="incipit" property="dc:alternative">¿Qué resta al infeliz que acongojado</title>
                      </bibl>
-                     <bibl resource="disco#s049e_0301" about="dbpedia:Soneto">
+                     <bibl resource="disco:s049e_0301">
                         <title property="dc:title">El sol y la vida</title>
                         <title type="incipit" property="dc:alternative">¡Oh noche! Cuando a Adán fue revelado</title>
                      </bibl>
-                     <bibl resource="disco#s049e_0302" about="dbpedia:Soneto">
+                     <bibl resource="disco:s049e_0302">
                         <title property="dc:title">La revelación interna</title>
                         <title type="incipit" property="dc:alternative">¿Adónde te hallaré, Ser Infinito?</title>
                      </bibl>
-                     <bibl resource="disco#s049e_0303" about="dbpedia:Soneto">
+                     <bibl resource="disco:s049e_0303">
                         <title property="dc:title">Night and Death</title>
                         <title type="incipit" property="dc:alternative">¡Qué noche! Cuando Adán fue revelado</title>
                      </bibl>
-                     <bibl resource="disco#s049e_0407" about="dbpedia:Soneto">
+                     <bibl resource="disco:s049e_0407">
                         <title property="dc:title">A doña María Ana Beck</title>
                         <title type="incipit" property="dc:alternative">Cual tañedor de armónico instrumento</title>
                      </bibl>
@@ -116,6 +119,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -140,6 +149,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

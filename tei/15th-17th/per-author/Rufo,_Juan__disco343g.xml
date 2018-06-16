@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Juan Rufo</title>
-            <author corresp="#disco_343g">Juan Rufo</author>
+         <titleStmt about="disco:au_343g">
+            <title property="dc:title">Sonetos de Juan Rufo</title>
+            <author property="dc:creator" resource="disco:343g" corresp="#disco_343g">Juan Rufo</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,38 +37,41 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_343g"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_343g"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/100241087"/>
+               <person xml:id="disco_343g" about="disco:343g" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/100241087"/>
                   <persName type="short">Rufo</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Juan</forename>
                      <surname property="foaf:familyName">Rufo</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Juan Rufo</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Córdoba</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Córdoba</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1547" cert="high"/>
+                     <date property="schema:birthDate" content="1547" cert="high"/>
                      <date type="century">16</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1620" cert="high"/>
+                     <date property="schema:deathDate" content="1620" cert="high"/>
                      <date type="century">17</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s343g_0798" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s343g_0798">
                         <title property="dc:title">A una Ana</title>
                         <title type="incipit" property="dc:alternative">Di, Ana, ¿eres Diana? No es posible,</title>
                      </bibl>
@@ -91,6 +94,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -115,6 +124,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

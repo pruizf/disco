@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Luis Castillo Ledón</title>
-            <author corresp="#disco_411n">Luis Castillo Ledón</author>
+         <titleStmt about="disco:au_411n">
+            <title property="dc:title">Sonetos de Luis Castillo Ledón</title>
+            <author property="dc:creator" resource="disco:411n" corresp="#disco_411n">Luis Castillo Ledón</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,37 +37,40 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_411n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_411n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/68008087"/>
+               <person xml:id="disco_411n" about="disco:411n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/68008087"/>
                   <persName type="short">Castillo Ledón</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Luis</forename>
                      <surname property="foaf:familyName">Castillo Ledón</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Luis Castillo Ledón</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Santiago Ixcuintla</settlement>
-                           <country>México</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Santiago Ixcuintla</settlement>
+                           <country property="schema:birthPlace" inlist="">México</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1879" cert="high"/>
+                     <date property="schema:birthDate" content="1879" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
                      <date type="century">20</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s411n_1615" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s411n_1615">
                         <title property="dc:title">El alma de la fuente</title>
                         <title type="incipit" property="dc:alternative">Como símbolo fiel de la tristeza</title>
                      </bibl>
@@ -90,6 +93,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -114,6 +123,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

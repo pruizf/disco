@@ -9,7 +9,6 @@
         </rule>
         <rule context="tei:person">
             <assert test="@typeOf">Missing attribute: typeOf</assert>
-            <assert test="@property">Missing attribute: property</assert>
         </rule>
     </pattern>
 </schema>

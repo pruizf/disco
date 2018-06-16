@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>A las estrellas</title>
-            <author corresp="#disco_537n">Gertrudis Gómez de Avellaneda</author>
+         <titleStmt about="disco:po_537n1999">
+            <title property="dc:title">A las estrellas</title>
+            <author property="dc:creator" resource="disco:537n" corresp="#disco_537n">Gertrudis Gómez de Avellaneda</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,38 +37,41 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:po_537n1999"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_537n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/76328537"/>
+               <person xml:id="disco_537n" about="disco:537n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/76328537"/>
                   <persName type="short">Gómez de Avellaneda</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Gertrudis</forename>
                      <surname property="foaf:familyName">Gómez de Avellaneda</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Gertrudis Gómez de Avellaneda</persName>
-                  <sex property="foaf:gender" value="F"/>
+                  <sex property="foaf:gender" content="F"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Puerto Príncipe</settlement>
-                           <country>Haití</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Puerto Príncipe</settlement>
+                           <country property="schema:birthPlace" inlist="">Haití</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1814" cert="high"/>
+                     <date property="schema:birthDate" content="1814" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1836" cert="high"/>
+                     <date property="schema:deathDate" content="1836" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s537n1999" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s537n1999">
                         <title property="dc:title">A las estrellas</title>
                         <title type="incipit" property="dc:alternative">Reina el silencio: fulgidas en tanto</title>
                      </bibl>
@@ -91,6 +94,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -115,6 +124,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

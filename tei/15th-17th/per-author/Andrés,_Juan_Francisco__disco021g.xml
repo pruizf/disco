@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Juan Francisco Andrés</title>
-            <author corresp="#disco_021g">Juan Francisco Andrés</author>
+         <titleStmt about="disco:au_021g">
+            <title property="dc:title">Sonetos de Juan Francisco Andrés</title>
+            <author property="dc:creator" resource="disco:021g" corresp="#disco_021g">Juan Francisco Andrés</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,27 +37,30 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_021g"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_021g"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/59109710"/>
+               <person xml:id="disco_021g" about="disco:021g" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/59109710"/>
                   <persName type="short">Andrés</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Juan Francisco</forename>
                      <surname property="foaf:familyName">Andrés</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Juan Francisco Andrés</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Aragón</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Aragón</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
                      <date type="century">17</date>
@@ -65,24 +68,24 @@
                   <death>
                      <date type="century">17</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s021g_0037" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s021g_0037">
                         <title property="dc:title">Epigrama</title>
                         <title type="incipit" property="dc:alternative">El Ebro en su corriente cristalina,</title>
                      </bibl>
-                     <bibl resource="disco#s021g_0038" about="dbpedia:Soneto">
+                     <bibl resource="disco:s021g_0038">
                         <title property="dc:title">A la muerte del doctor Juan Pérez de Montalbán</title>
                         <title type="incipit" property="dc:alternative">El Monte excelso que la blanca Aurora</title>
                      </bibl>
-                     <bibl resource="disco#s021g_0039" about="dbpedia:Soneto">
+                     <bibl resource="disco:s021g_0039">
                         <title property="dc:title">A don Vicencio Juan de Lastanosa</title>
                         <title type="incipit" property="dc:alternative">Cuanto a tu ingenio toda España deba,</title>
                      </bibl>
-                     <bibl resource="disco#s021g_0040" about="dbpedia:Soneto">
+                     <bibl resource="disco:s021g_0040">
                         <title property="dc:title">A Raimundo de Peñafort</title>
                         <title type="incipit" property="dc:alternative">Peña fuerte es Raimundo en su apellido,</title>
                      </bibl>
-                     <bibl resource="disco#s021g_0041" about="dbpedia:Soneto">
+                     <bibl resource="disco:s021g_0041">
                         <title property="dc:title">A la santa paciencia</title>
                         <title type="incipit" property="dc:alternative">Del fuego abrasador la llama ardiente,</title>
                      </bibl>
@@ -105,6 +108,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -129,6 +138,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

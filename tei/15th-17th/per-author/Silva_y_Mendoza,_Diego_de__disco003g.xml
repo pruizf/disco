@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Diego de Silva y Mendoza</title>
-            <author corresp="#disco_003g">Diego de Silva y Mendoza</author>
+         <titleStmt about="disco:au_003g">
+            <title property="dc:title">Sonetos de Diego de Silva y Mendoza</title>
+            <author property="dc:creator" resource="disco:003g" corresp="#disco_003g">Diego de Silva y Mendoza</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,14 +37,17 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_003g"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_003g"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/19688235"/>
+               <person xml:id="disco_003g" about="disco:003g" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/19688235"/>
                   <persName type="short">Silva y Mendoza</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Diego</forename>
@@ -52,51 +55,51 @@
                      <surname property="foaf:familyName">Silva y Mendoza</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Diego de Silva y Mendoza</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <country property="schema:name">España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1564" cert="high"/>
+                     <date property="schema:birthDate" content="1564" cert="high"/>
                      <date type="century">16</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1630" cert="high"/>
+                     <date property="schema:deathDate" content="1630" cert="high"/>
                      <date type="century">17</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s003g_0004" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s003g_0004">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">De tu muerte que fue un breve suspiro,</title>
                      </bibl>
-                     <bibl resource="disco#s003g_0005" about="dbpedia:Soneto">
+                     <bibl resource="disco:s003g_0005">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Una, dos, tres estrellas, veinte, ciento,</title>
                      </bibl>
-                     <bibl resource="disco#s003g_0006" about="dbpedia:Soneto">
+                     <bibl resource="disco:s003g_0006">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Nunca ofendí la fe con la esperanza;</title>
                      </bibl>
-                     <bibl resource="disco#s003g_0007" about="dbpedia:Soneto">
+                     <bibl resource="disco:s003g_0007">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Estas lágrimas vivas que corriendo</title>
                      </bibl>
-                     <bibl resource="disco#s003g_0008" about="dbpedia:Soneto">
+                     <bibl resource="disco:s003g_0008">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Cuantas fueron, serán y son ahora</title>
                      </bibl>
-                     <bibl resource="disco#s003g_0009" about="dbpedia:Soneto">
+                     <bibl resource="disco:s003g_0009">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Este largo martirio de la vida,</title>
                      </bibl>
-                     <bibl resource="disco#s003g_0010" about="dbpedia:Soneto">
+                     <bibl resource="disco:s003g_0010">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Ni el corazón, ni el alma, ni la vida</title>
                      </bibl>
-                     <bibl resource="disco#s003g_0011" about="dbpedia:Soneto">
+                     <bibl resource="disco:s003g_0011">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Juraré que os amé todos mis días</title>
                      </bibl>
@@ -119,6 +122,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -143,6 +152,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

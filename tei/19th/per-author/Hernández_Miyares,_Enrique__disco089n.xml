@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Enrique Hernández Miyares</title>
-            <author corresp="#disco_089n">Enrique Hernández Miyares</author>
+         <titleStmt about="disco:au_089n">
+            <title property="dc:title">Sonetos de Enrique Hernández Miyares</title>
+            <author property="dc:creator" resource="disco:089n" corresp="#disco_089n">Enrique Hernández Miyares</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,67 +37,70 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_089n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_089n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/116145857085322922275"/>
+               <person xml:id="disco_089n" about="disco:089n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/116145857085322922275"/>
                   <persName type="short">Hernández Miyares</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Enrique</forename>
                      <surname property="foaf:familyName">Hernández Miyares</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Enrique Hernández Miyares</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Santiago de Cuba</settlement>
-                           <country>Cuba</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Santiago de Cuba</settlement>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1859" cert="high"/>
+                     <date property="schema:birthDate" content="1859" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <location property="schema:deathPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">La Habana</settlement>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">La Habana</settlement>
                         </placeName>
                      </location>
-                     <date property="schema:deathDate" when="1914" cert="high"/>
+                     <date property="schema:deathDate" content="1914" cert="high"/>
                      <date type="century">20</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s089n_0289" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s089n_0289">
                         <title property="dc:title">La más fermosa</title>
                         <title type="incipit" property="dc:alternative">Que siga el caballero su camino</title>
                      </bibl>
-                     <bibl resource="disco#s089n_0290" about="dbpedia:Soneto">
+                     <bibl resource="disco:s089n_0290">
                         <title property="dc:title">La hora verde</title>
                         <title type="incipit" property="dc:alternative">Del parisiense boulevard fastuoso</title>
                      </bibl>
-                     <bibl resource="disco#s089n_0291" about="dbpedia:Soneto">
+                     <bibl resource="disco:s089n_0291">
                         <title property="dc:title">Dos banderas</title>
                         <title type="incipit" property="dc:alternative">Luce esplendente el sol de la mañana,</title>
                      </bibl>
-                     <bibl resource="disco#s089n_0292" about="dbpedia:Soneto">
+                     <bibl resource="disco:s089n_0292">
                         <title property="dc:title">Poncio Pilatos</title>
                         <title type="incipit" property="dc:alternative">Ya de regreso en Roma, se pasea</title>
                      </bibl>
-                     <bibl resource="disco#s089n_0293" about="dbpedia:Soneto">
+                     <bibl resource="disco:s089n_0293">
                         <title property="dc:title">Carmen</title>
                         <title type="incipit" property="dc:alternative">Roja flor en la negra cabellera,</title>
                      </bibl>
-                     <bibl resource="disco#s089n_0294" about="dbpedia:Soneto">
+                     <bibl resource="disco:s089n_0294">
                         <title property="dc:title">Festín de Baltasar</title>
                         <title type="incipit" property="dc:alternative">Junto al blanco mantel, Inés me espera,</title>
                      </bibl>
-                     <bibl resource="disco#s089n_0295" about="dbpedia:Soneto">
+                     <bibl resource="disco:s089n_0295">
                         <title property="dc:title">Don Juan</title>
                         <title type="incipit" property="dc:alternative">Garrido, fanfarrón, audaz y mozo,</title>
                      </bibl>
@@ -120,6 +123,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -144,6 +153,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

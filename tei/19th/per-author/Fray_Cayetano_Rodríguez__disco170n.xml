@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Fray Cayetano Rodríguez</title>
-            <author corresp="#disco_170n">Fray Cayetano Rodríguez</author>
+         <titleStmt about="disco:au_170n">
+            <title property="dc:title">Sonetos de Fray Cayetano Rodríguez</title>
+            <author property="dc:creator" resource="disco:170n" corresp="#disco_170n">Fray Cayetano Rodríguez</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,57 +37,58 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_170n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_170n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
+               <person xml:id="disco_170n" about="disco:170n" typeOf="foaf:Person">
                   <persName type="short">Fray Cayetano Rodríguez</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Fray Cayetano</forename>
                      <surname property="foaf:familyName">Rodríguez</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Fray Cayetano Rodríguez</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Buenos Aires</settlement>
-                           <country>Argentina</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Buenos Aires</settlement>
+                           <country property="schema:birthPlace" inlist="">Argentina</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1761" cert="high"/>
+                     <date property="schema:birthDate" content="1761" cert="high"/>
                      <date type="century">18</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1823" cert="high"/>
+                     <date property="schema:deathDate" content="1823" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s170n_0537" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s170n_0537">
                         <title property="dc:title">I</title>
                         <title type="incipit" property="dc:alternative">En llanto amargo América gemía</title>
                      </bibl>
-                     <bibl resource="disco#s170n_0538" about="dbpedia:Soneto">
+                     <bibl resource="disco:s170n_0538">
                         <title property="dc:title">II</title>
                         <title type="incipit" property="dc:alternative">Veinte y cinco, feliz hoy tu victoria</title>
                      </bibl>
-                     <bibl resource="disco#s170n_0539" about="dbpedia:Soneto">
+                     <bibl resource="disco:s170n_0539">
                         <title property="dc:title">III</title>
                         <title type="incipit" property="dc:alternative">Arrebató la Parca ¡Parca fiera,</title>
                      </bibl>
-                     <bibl resource="disco#s170n_0540" about="dbpedia:Soneto">
+                     <bibl resource="disco:s170n_0540">
                         <title property="dc:title">IV</title>
                         <title type="incipit" property="dc:alternative">Lo arduo de la acción más peligrosa,</title>
                      </bibl>
-                     <bibl resource="disco#s170n_0541" about="dbpedia:Soneto">
+                     <bibl resource="disco:s170n_0541">
                         <title property="dc:title">V</title>
                         <title type="incipit" property="dc:alternative">¿Del gran sistema la contraria suerte</title>
                      </bibl>
-                     <bibl resource="disco#s170n_0542" about="dbpedia:Soneto">
+                     <bibl resource="disco:s170n_0542">
                         <title property="dc:title">VI</title>
                         <title type="incipit" property="dc:alternative">¿Tú lleno de pavor pasas el día</title>
                      </bibl>
@@ -110,6 +111,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -134,6 +141,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

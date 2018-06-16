@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Ángel Ganivet</title>
-            <author corresp="#disco_219n">Ángel Ganivet</author>
+         <titleStmt about="disco:au_219n">
+            <title property="dc:title">Sonetos de Ángel Ganivet</title>
+            <author property="dc:creator" resource="disco:219n" corresp="#disco_219n">Ángel Ganivet</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,46 +37,49 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_219n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_219n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/76339208"/>
+               <person xml:id="disco_219n" about="disco:219n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/76339208"/>
                   <persName type="short">Ganivet</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Ángel</forename>
                      <surname property="foaf:familyName">Ganivet</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Ángel Ganivet</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Granada</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Granada</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1865" cert="high"/>
+                     <date property="schema:birthDate" content="1865" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1898" cert="high"/>
+                     <date property="schema:deathDate" content="1898" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s219n_0715" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s219n_0715">
                         <title property="dc:title">A Numancia</title>
                         <title type="incipit" property="dc:alternative">Numancia la inmortal lágrimas vierte</title>
                      </bibl>
-                     <bibl resource="disco#s219n_0716" about="dbpedia:Soneto">
+                     <bibl resource="disco:s219n_0716">
                         <title property="dc:title">La venus de nieve</title>
                         <title type="incipit" property="dc:alternative">Los albos copos que al caer se mecen</title>
                      </bibl>
-                     <bibl resource="disco#s219n_0717" about="dbpedia:Soneto">
+                     <bibl resource="disco:s219n_0717">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Su fino rostro en luz azul bañado</title>
                      </bibl>
@@ -99,6 +102,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -123,6 +132,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

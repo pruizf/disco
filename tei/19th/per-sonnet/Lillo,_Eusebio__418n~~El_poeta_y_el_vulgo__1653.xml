@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>El poeta y el vulgo</title>
-            <author corresp="#disco_418n">Eusebio Lillo</author>
+         <titleStmt about="disco:po_418n1653">
+            <title property="dc:title">El poeta y el vulgo</title>
+            <author property="dc:creator" resource="disco:418n" corresp="#disco_418n">Eusebio Lillo</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,38 +37,41 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:po_418n1653"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_418n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/34341743"/>
+               <person xml:id="disco_418n" about="disco:418n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/34341743"/>
                   <persName type="short">Lillo</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Eusebio</forename>
                      <surname property="foaf:familyName">Lillo</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Eusebio Lillo</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Santiago</settlement>
-                           <country>Chile</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Santiago</settlement>
+                           <country property="schema:birthPlace" inlist="">Chile</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1826" cert="high"/>
+                     <date property="schema:birthDate" content="1826" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1910" cert="high"/>
+                     <date property="schema:deathDate" content="1910" cert="high"/>
                      <date type="century">20</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s418n1653" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s418n1653">
                         <title property="dc:title">El poeta y el vulgo</title>
                         <title type="incipit" property="dc:alternative">Al altanero y encumbrado pino</title>
                      </bibl>
@@ -91,6 +94,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -115,6 +124,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

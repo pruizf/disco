@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Soneto</title>
-            <author corresp="#disco_237n">Bernardo López García</author>
+         <titleStmt about="disco:po_237n0761">
+            <title property="dc:title">Soneto</title>
+            <author property="dc:creator" resource="disco:237n" corresp="#disco_237n">Bernardo López García</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,43 +37,46 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:po_237n0761"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_237n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/70966116"/>
+               <person xml:id="disco_237n" about="disco:237n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/70966116"/>
                   <persName type="short">López García</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Bernardo</forename>
                      <surname property="foaf:familyName">López García</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Bernardo López García</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Jaén</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Jaén</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1838" cert="high"/>
+                     <date property="schema:birthDate" content="1838" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <location property="schema:deathPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Madrid</settlement>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Madrid</settlement>
                         </placeName>
                      </location>
-                     <date property="schema:deathDate" when="1870" cert="high"/>
+                     <date property="schema:deathDate" content="1870" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s237n0761" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s237n0761">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Se alzó la cruz; su rayo soberano</title>
                      </bibl>
@@ -96,6 +99,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -120,6 +129,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

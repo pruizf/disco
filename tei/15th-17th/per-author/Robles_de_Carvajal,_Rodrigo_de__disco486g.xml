@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Rodrigo de Robles de Carvajal</title>
-            <author corresp="#disco_486g">Rodrigo de Robles de Carvajal</author>
+         <titleStmt about="disco:au_486g">
+            <title property="dc:title">Sonetos de Rodrigo de Robles de Carvajal</title>
+            <author property="dc:creator" resource="disco:486g" corresp="#disco_486g">Rodrigo de Robles de Carvajal</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,14 +37,17 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_486g"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_486g"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="medium" resource="https://viaf.org/viaf/69172800"/>
+               <person xml:id="disco_486g" about="disco:486g" typeOf="foaf:Person">
+                  <idno cert="medium"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/69172800"/>
                   <persName type="short">Robles de Carvajal</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Rodrigo</forename>
@@ -52,15 +55,15 @@
                      <surname property="foaf:familyName">Carvajal y Robles</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Rodrigo de Robles de Carvajal</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
                      <date type="century">16</date>
                   </birth>
                   <death>
                      <date type="century">17</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s486g_1013" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s486g_1013">
                         <title property="dc:title">Sonetos</title>
                         <title type="incipit" property="dc:alternative">No me duelo de mí porque mi duelo</title>
                      </bibl>
@@ -83,6 +86,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -107,6 +116,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

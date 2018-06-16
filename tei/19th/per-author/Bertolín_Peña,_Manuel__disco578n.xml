@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Manuel Bertolín Peña</title>
-            <author corresp="#disco_578n">Manuel Bertolín Peña</author>
+         <titleStmt about="disco:au_578n">
+            <title property="dc:title">Sonetos de Manuel Bertolín Peña</title>
+            <author property="dc:creator" resource="disco:578n" corresp="#disco_578n">Manuel Bertolín Peña</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,26 +37,29 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_578n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_578n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/88010957"/>
+               <person xml:id="disco_578n" about="disco:578n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/88010957"/>
                   <persName type="short">Bertolín Peña</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Manuel</forename>
                      <surname property="foaf:familyName">Bertolín Peña</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Manuel Bertolín Peña</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <country property="schema:name">España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
                      <date type="century">19</date>
@@ -64,24 +67,24 @@
                   <death>
                      <date type="century">20</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s578n_2096" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s578n_2096">
                         <title property="dc:title">En la noche romántica</title>
                         <title type="incipit" property="dc:alternative">Ven mujer y soñemos nuestro amor en la calma</title>
                      </bibl>
-                     <bibl resource="disco#s578n_2097" about="dbpedia:Soneto">
+                     <bibl resource="disco:s578n_2097">
                         <title property="dc:title">A Emilio Carrere</title>
                         <title type="incipit" property="dc:alternative">Nació con Heine y Murger el sentimentalismo</title>
                      </bibl>
-                     <bibl resource="disco#s578n_2098" about="dbpedia:Soneto">
+                     <bibl resource="disco:s578n_2098">
                         <title property="dc:title">A Santiago Rusiñol</title>
                         <title type="incipit" property="dc:alternative">Senderos al Ensueño adormecidos;</title>
                      </bibl>
-                     <bibl resource="disco#s578n_2099" about="dbpedia:Soneto">
+                     <bibl resource="disco:s578n_2099">
                         <title property="dc:title">Voe Soli</title>
                         <title type="incipit" property="dc:alternative">Tú que has vivido el tedio de la tarde aldeana,</title>
                      </bibl>
-                     <bibl resource="disco#s578n_2100" about="dbpedia:Soneto">
+                     <bibl resource="disco:s578n_2100">
                         <title property="dc:title">Cuadro</title>
                         <title type="incipit" property="dc:alternative">Lienzo español. Ambiente de Sevilla.</title>
                      </bibl>
@@ -104,6 +107,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -128,6 +137,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

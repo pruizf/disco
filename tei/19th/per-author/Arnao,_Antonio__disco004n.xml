@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Antonio Arnao</title>
-            <author corresp="#disco_004n">Antonio Arnao</author>
+         <titleStmt about="disco:au_004n">
+            <title property="dc:title">Sonetos de Antonio Arnao</title>
+            <author property="dc:creator" resource="disco:004n" corresp="#disco_004n">Antonio Arnao</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,69 +37,72 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_004n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_004n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/57415459"/>
+               <person xml:id="disco_004n" about="disco:004n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/57415459"/>
                   <persName type="short">Arnao</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Antonio</forename>
                      <surname property="foaf:familyName">Arnao</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Antonio Arnao</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <country property="schema:name">Cuba</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1828" cert="high"/>
+                     <date property="schema:birthDate" content="1828" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1889" cert="high"/>
+                     <date property="schema:deathDate" content="1889" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s004n_0008" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s004n_0008">
                         <title property="dc:title">La muerte del Czar</title>
                         <title type="incipit" property="dc:alternative">El que trocó la ley del despotismo</title>
                      </bibl>
-                     <bibl resource="disco#s004n_0009" about="dbpedia:Soneto">
+                     <bibl resource="disco:s004n_0009">
                         <title property="dc:title">El soneto</title>
                         <title type="incipit" property="dc:alternative">Tradición popular dice a la Historia</title>
                      </bibl>
-                     <bibl resource="disco#s004n_0010" about="dbpedia:Soneto">
+                     <bibl resource="disco:s004n_0010">
                         <title property="dc:title">El paje</title>
                         <title type="incipit" property="dc:alternative">Joven adolescente, o tierno mozo,</title>
                      </bibl>
-                     <bibl resource="disco#s004n_0011" about="dbpedia:Soneto">
+                     <bibl resource="disco:s004n_0011">
                         <title property="dc:title">A Manuel del Palacio</title>
                         <title type="incipit" property="dc:alternative">Manuel del corazón: hoy diecinueve</title>
                      </bibl>
-                     <bibl resource="disco#s004n_0012" about="dbpedia:Soneto">
+                     <bibl resource="disco:s004n_0012">
                         <title property="dc:title">A la Virgen Santísima</title>
                         <title type="incipit" property="dc:alternative">Madre inmortal, emblema de hermosura,</title>
                      </bibl>
-                     <bibl resource="disco#s004n_0013" about="dbpedia:Soneto">
+                     <bibl resource="disco:s004n_0013">
                         <title property="dc:title">Fray Luis de León</title>
                         <title type="incipit" property="dc:alternative">Del Horacio gentil copia cristiana,</title>
                      </bibl>
-                     <bibl resource="disco#s004n_0014" about="dbpedia:Soneto">
+                     <bibl resource="disco:s004n_0014">
                         <title property="dc:title">Quintana</title>
                         <title type="incipit" property="dc:alternative">Si conquistara yo, con lid ardiente,</title>
                      </bibl>
-                     <bibl resource="disco#s004n_0015" about="dbpedia:Soneto">
+                     <bibl resource="disco:s004n_0015">
                         <title property="dc:title">A Murcia</title>
                         <title type="incipit" property="dc:alternative">A ti, bella ciudad, reina de amores</title>
                      </bibl>
-                     <bibl resource="disco#s004n_0016" about="dbpedia:Soneto">
+                     <bibl resource="disco:s004n_0016">
                         <title property="dc:title">La hermana de la caridad</title>
                         <title type="incipit" property="dc:alternative">Casta su faz, bajo la blanca toca</title>
                      </bibl>
@@ -122,6 +125,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -146,6 +155,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

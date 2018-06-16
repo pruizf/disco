@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>La revolución</title>
-            <author corresp="#disco_272n">A. Alpanseque Blanco</author>
+         <titleStmt about="disco:po_272n0880">
+            <title property="dc:title">La revolución</title>
+            <author property="dc:creator" resource="disco:272n" corresp="#disco_272n">A. Alpanseque Blanco</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,24 +37,25 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:po_272n0880"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_272n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
+               <person xml:id="disco_272n" about="disco:272n" typeOf="foaf:Person">
                   <persName type="short">Alpanseque Blanco</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">A.</forename>
                      <surname property="foaf:familyName">Alpanseque Blanco</surname>
                   </persName>
                   <persName type="source" property="foaf:name">A. Alpanseque Blanco</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
                      <date type="century">19</date>
@@ -62,8 +63,8 @@
                   <death>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s272n0880" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s272n0880">
                         <title property="dc:title">La revolución</title>
                         <title type="incipit" property="dc:alternative">Odio en el pecho y en la mano tea,</title>
                      </bibl>
@@ -86,6 +87,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -110,6 +117,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

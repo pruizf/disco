@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Pedro de Oña</title>
-            <author corresp="#disco_028g">Pedro de Oña</author>
+         <titleStmt about="disco:au_028g">
+            <title property="dc:title">Sonetos de Pedro de Oña</title>
+            <author property="dc:creator" resource="disco:028g" corresp="#disco_028g">Pedro de Oña</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,14 +37,17 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_028g"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_028g"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/79140452"/>
+               <person xml:id="disco_028g" about="disco:028g" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/79140452"/>
                   <persName type="short">Oña</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Pedro</forename>
@@ -52,23 +55,23 @@
                      <surname property="foaf:familyName">Oña</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Pedro de Oña</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <country property="schema:name">Chile</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Chile</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1570" cert="high"/>
+                     <date property="schema:birthDate" content="1570" cert="high"/>
                      <date type="century">16</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1643" cert="high"/>
+                     <date property="schema:deathDate" content="1643" cert="high"/>
                      <date type="century">17</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s028g_0053" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s028g_0053">
                         <title property="dc:title">En nombre de la antártica academia de la ciudad de Lima en el Perú</title>
                         <title type="incipit" property="dc:alternative">Hasta ahora tuvimos por muy cierto</title>
                      </bibl>
@@ -91,6 +94,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -115,6 +124,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

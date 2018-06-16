@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Recuerdos tristes</title>
-            <author corresp="#disco_039e">Fray José Manuel de Navarrete</author>
+         <titleStmt about="disco:po_039e0219">
+            <title property="dc:title">Recuerdos tristes</title>
+            <author property="dc:creator" resource="disco:039e" corresp="#disco_039e">Fray José Manuel de Navarrete</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,14 +37,17 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:po_039e0219"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_039e"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/97252"/>
+               <person xml:id="disco_039e" about="disco:039e" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/97252"/>
                   <persName type="short">Fray José Manuel de Navarrete</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Fray José</forename>
@@ -52,24 +55,24 @@
                      <surname property="foaf:familyName">Manuel de Navarrete</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Fray José Manuel de Navarrete</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <date property="schema:birthDate" when="1768" cert="high"/>
+                     <date property="schema:birthDate" content="1768" cert="high"/>
                      <date type="century">18</date>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Michoacán</settlement>
-                           <country>México</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Michoacán</settlement>
+                           <country property="schema:birthPlace" inlist="">México</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1809" cert="high"/>
+                     <date property="schema:deathDate" content="1809" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s039e0219" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s039e0219">
                         <title property="dc:title">Recuerdos tristes</title>
                         <title type="incipit" property="dc:alternative">Cuando tu blanca frente yo ceñía</title>
                      </bibl>
@@ -92,6 +95,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -116,6 +125,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

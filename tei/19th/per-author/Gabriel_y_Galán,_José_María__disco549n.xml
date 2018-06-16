@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de José María Gabriel y Galán</title>
-            <author corresp="#disco_549n">José María Gabriel y Galán</author>
+         <titleStmt about="disco:au_549n">
+            <title property="dc:title">Sonetos de José María Gabriel y Galán</title>
+            <author property="dc:creator" resource="disco:549n" corresp="#disco_549n">José María Gabriel y Galán</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,55 +37,58 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_549n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_549n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/32014917"/>
+               <person xml:id="disco_549n" about="disco:549n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/32014917"/>
                   <persName type="short">Gabriel y Galán</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">José María</forename>
                      <surname property="foaf:familyName">Gabriel y Galán</surname>
                   </persName>
                   <persName type="source" property="foaf:name">José María Gabriel y Galán</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Frades de la Sierra (Salamanca)</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Frades de la Sierra (Salamanca)</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1870" cert="high"/>
+                     <date property="schema:birthDate" content="1870" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <location property="schema:deathPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Guijo de Granadilla (Cáceres)</settlement>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Guijo de Granadilla (Cáceres)</settlement>
                         </placeName>
                      </location>
-                     <date property="schema:deathDate" when="1905" cert="high"/>
+                     <date property="schema:deathDate" content="1905" cert="high"/>
                      <date type="century">20</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s549n_2028" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s549n_2028">
                         <title property="dc:title">Almas</title>
                         <title type="incipit" property="dc:alternative">Yo de un alma de luz estuve asido,</title>
                      </bibl>
-                     <bibl resource="disco#s549n_2029" about="dbpedia:Soneto">
+                     <bibl resource="disco:s549n_2029">
                         <title property="dc:title">A Teresa de Jesús</title>
                         <title type="incipit" property="dc:alternative">Mujer de inteligencia peregrina</title>
                      </bibl>
-                     <bibl resource="disco#s549n_2030" about="dbpedia:Soneto">
+                     <bibl resource="disco:s549n_2030">
                         <title property="dc:title">A un rico</title>
                         <title type="incipit" property="dc:alternative">¿Quién te ha dado tu hacienda o tu dinero?</title>
                      </bibl>
-                     <bibl resource="disco#s549n_2031" about="dbpedia:Soneto">
+                     <bibl resource="disco:s549n_2031">
                         <title property="dc:title">Soneto a un sabio</title>
                         <title type="incipit" property="dc:alternative">Tú de la ciencia a la región te alzaste</title>
                      </bibl>
@@ -108,6 +111,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -132,6 +141,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

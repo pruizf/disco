@@ -5,7 +5,7 @@
     <pattern>
         <rule context="tei:person">
             <!-- <assert test="tei:idno[@type eq 'viaf']/node()">VIAF identifier is absent</assert>-->
-            <assert test="tei:sex[@value = ('F', 'M')]">Gender required</assert>
+            <assert test="tei:sex[@content = ('F', 'M')]">Gender required</assert>
         </rule>
         <rule context="tei:placeName[parent::tei:birth]">
             <!--<assert test="tei:country/node()">Country element required</assert>-->

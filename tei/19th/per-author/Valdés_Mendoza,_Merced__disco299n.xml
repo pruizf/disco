@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Merced Valdés Mendoza</title>
-            <author corresp="#disco_299n">Merced Valdés Mendoza</author>
+         <titleStmt about="disco:au_299n">
+            <title property="dc:title">Sonetos de Merced Valdés Mendoza</title>
+            <author property="dc:creator" resource="disco:299n" corresp="#disco_299n">Merced Valdés Mendoza</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,25 +37,26 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_299n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_299n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
+               <person xml:id="disco_299n" about="disco:299n" typeOf="foaf:Person">
                   <persName type="short">Valdés Mendoza</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Merced</forename>
                      <surname property="foaf:familyName">Valdés Mendoza</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Merced Valdés Mendoza</persName>
-                  <sex property="foaf:gender" value="F"/>
+                  <sex property="foaf:gender" content="F"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <country property="schema:name">Cuba</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
                      <date type="century">19</date>
@@ -63,20 +64,20 @@
                   <death>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s299n_0980" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s299n_0980">
                         <title property="dc:title">Tú y mis versos</title>
                         <title type="incipit" property="dc:alternative">Celos te dan los plácidos cantares</title>
                      </bibl>
-                     <bibl resource="disco#s299n_0981" about="dbpedia:Soneto">
+                     <bibl resource="disco:s299n_0981">
                         <title property="dc:title">A Scevola</title>
                         <title type="incipit" property="dc:alternative">Tiende la mano Scévola, arrogante,</title>
                      </bibl>
-                     <bibl resource="disco#s299n_0982" about="dbpedia:Soneto">
+                     <bibl resource="disco:s299n_0982">
                         <title property="dc:title">Mi pensamiento</title>
                         <title type="incipit" property="dc:alternative">Duerme tranquilo, pensamiento mío,</title>
                      </bibl>
-                     <bibl resource="disco#s299n_0983" about="dbpedia:Soneto">
+                     <bibl resource="disco:s299n_0983">
                         <title property="dc:title">A mi amiga</title>
                         <title type="incipit" property="dc:alternative">Bellas las flores son, Dorila mía,</title>
                      </bibl>
@@ -99,6 +100,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -123,6 +130,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

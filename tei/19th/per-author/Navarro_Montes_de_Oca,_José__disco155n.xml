@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de José Navarro Montes de Oca</title>
-            <author corresp="#disco_155n">José Navarro Montes de Oca</author>
+         <titleStmt about="disco:au_155n">
+            <title property="dc:title">Sonetos de José Navarro Montes de Oca</title>
+            <author property="dc:creator" resource="disco:155n" corresp="#disco_155n">José Navarro Montes de Oca</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,25 +37,26 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_155n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_155n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
+               <person xml:id="disco_155n" about="disco:155n" typeOf="foaf:Person">
                   <persName type="short">Navarro Montes de Oca</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">José</forename>
                      <surname property="foaf:familyName">Navarro Montes de Oca</surname>
                   </persName>
                   <persName type="source" property="foaf:name">José Navarro Montes de Oca</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <country property="schema:name">Cuba</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
                      <date type="century">19</date>
@@ -63,32 +64,32 @@
                   <death>
                      <date type="century">20</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s155n_0465" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s155n_0465">
                         <title property="dc:title">En la playa</title>
                         <title type="incipit" property="dc:alternative">Se riza en el sonoro acantilado</title>
                      </bibl>
-                     <bibl resource="disco#s155n_0466" about="dbpedia:Soneto">
+                     <bibl resource="disco:s155n_0466">
                         <title property="dc:title">El mar...</title>
                         <title type="incipit" property="dc:alternative">El mar se prolongaba en tus pupilas</title>
                      </bibl>
-                     <bibl resource="disco#s155n_0467" about="dbpedia:Soneto">
+                     <bibl resource="disco:s155n_0467">
                         <title property="dc:title">Motivos del mar</title>
                         <title type="incipit" property="dc:alternative">El mar, sobre el brumoso arrecife costero,</title>
                      </bibl>
-                     <bibl resource="disco#s155n_0468" about="dbpedia:Soneto">
+                     <bibl resource="disco:s155n_0468">
                         <title property="dc:title">Las piedras preciosas</title>
                         <title type="incipit" property="dc:alternative">Es de un vivo matiz de roja flama,</title>
                      </bibl>
-                     <bibl resource="disco#s155n_0469" about="dbpedia:Soneto">
+                     <bibl resource="disco:s155n_0469">
                         <title property="dc:title">Otoño</title>
                         <title type="incipit" property="dc:alternative">Otoño. Se despojan las campiñas</title>
                      </bibl>
-                     <bibl resource="disco#s155n_0470" about="dbpedia:Soneto">
+                     <bibl resource="disco:s155n_0470">
                         <title property="dc:title">Crepúsculo</title>
                         <title type="incipit" property="dc:alternative">En el amplio confín la tarde trama,</title>
                      </bibl>
-                     <bibl resource="disco#s155n_0471" about="dbpedia:Soneto">
+                     <bibl resource="disco:s155n_0471">
                         <title property="dc:title">Alba</title>
                         <title type="incipit" property="dc:alternative">¡Oh, el blanco alborear de la mañana</title>
                      </bibl>
@@ -111,6 +112,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -135,6 +142,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

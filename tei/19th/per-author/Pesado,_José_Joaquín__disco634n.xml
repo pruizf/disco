@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de José Joaquín Pesado</title>
-            <author corresp="#disco_634n">José Joaquín Pesado</author>
+         <titleStmt about="disco:au_634n">
+            <title property="dc:title">Sonetos de José Joaquín Pesado</title>
+            <author property="dc:creator" resource="disco:634n" corresp="#disco_634n">José Joaquín Pesado</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,53 +37,56 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_634n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_634n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/63665754"/>
+               <person xml:id="disco_634n" about="disco:634n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/63665754"/>
                   <persName type="short">Pesado</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">José Joaquín</forename>
                      <surname property="foaf:familyName">Pesado</surname>
                   </persName>
                   <persName type="source" property="foaf:name">José Joaquín Pesado</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <country property="schema:name">México</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">México</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1801" cert="high"/>
+                     <date property="schema:birthDate" content="1801" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1861" cert="high"/>
+                     <date property="schema:deathDate" content="1861" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s634n_2336" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s634n_2336">
                         <title property="dc:title">Fin del impío</title>
                         <title type="incipit" property="dc:alternative">«Esta hora de tu vida es la postrera»,</title>
                      </bibl>
-                     <bibl resource="disco#s634n_2337" about="dbpedia:Soneto">
+                     <bibl resource="disco:s634n_2337">
                         <title property="dc:title">El molino y llano de escamela</title>
                         <title type="incipit" property="dc:alternative">Tibia en invierno, en el verano fría,</title>
                      </bibl>
-                     <bibl resource="disco#s634n_2338" about="dbpedia:Soneto">
+                     <bibl resource="disco:s634n_2338">
                         <title property="dc:title">La fuente de Ojozarco</title>
                         <title type="incipit" property="dc:alternative">Sonora, limpia, transparente, ondosa,</title>
                      </bibl>
-                     <bibl resource="disco#s634n_2339" about="dbpedia:Soneto">
+                     <bibl resource="disco:s634n_2339">
                         <title property="dc:title">A un río</title>
                         <title type="incipit" property="dc:alternative">Tú, cuyas aguas bajan sonorosas</title>
                      </bibl>
-                     <bibl resource="disco#s634n_2340" about="dbpedia:Soneto">
+                     <bibl resource="disco:s634n_2340">
                         <title property="dc:title">Sitios y escenas de Orizaba y Córdoba</title>
                         <title type="incipit" property="dc:alternative">Desciende de la excelsa cordillera</title>
                      </bibl>
@@ -106,6 +109,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -130,6 +139,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

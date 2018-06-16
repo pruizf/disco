@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de León de Arroyal</title>
-            <author corresp="#disco_058e">León de Arroyal</author>
+         <titleStmt about="disco:au_058e">
+            <title property="dc:title">Sonetos de León de Arroyal</title>
+            <author property="dc:creator" resource="disco:058e" corresp="#disco_058e">León de Arroyal</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,14 +37,17 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_058e"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_058e"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/18501071"/>
+               <person xml:id="disco_058e" about="disco:058e" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/18501071"/>
                   <persName type="short">León de Arroyal</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">León</forename>
@@ -52,48 +55,48 @@
                      <surname property="foaf:familyName">Arroyal</surname>
                   </persName>
                   <persName type="source" property="foaf:name">León de Arroyal</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Madrid</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Madrid</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1755" cert="high"/>
+                     <date property="schema:birthDate" content="1755" cert="high"/>
                      <date type="century">18</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1813" cert="high"/>
+                     <date property="schema:deathDate" content="1813" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s058e_0338" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s058e_0338">
                         <title property="dc:title">A Dios</title>
                         <title type="incipit" property="dc:alternative">Cuando alzando los ojos miro al cielo</title>
                      </bibl>
-                     <bibl resource="disco#s058e_0339" about="dbpedia:Soneto">
+                     <bibl resource="disco:s058e_0339">
                         <title property="dc:title">Al mundo</title>
                         <title type="incipit" property="dc:alternative">¿Qué eres, mundo falaz? ¿Por qué apetece</title>
                      </bibl>
-                     <bibl resource="disco#s058e_0340" about="dbpedia:Soneto">
+                     <bibl resource="disco:s058e_0340">
                         <title property="dc:title">Al cardenal Jiménez de Cisneros</title>
                         <title type="incipit" property="dc:alternative">Bajo esta losa yacen los despojos</title>
                      </bibl>
-                     <bibl resource="disco#s058e_0341" about="dbpedia:Soneto">
+                     <bibl resource="disco:s058e_0341">
                         <title property="dc:title">La iglesia perseguida</title>
                         <title type="incipit" property="dc:alternative">Suena el bárbaro edicto, desparece</title>
                      </bibl>
-                     <bibl resource="disco#s058e_0342" about="dbpedia:Soneto">
+                     <bibl resource="disco:s058e_0342">
                         <title property="dc:title">De la muerte</title>
                         <title type="incipit" property="dc:alternative">¡Oh sobre que principio tan incierto</title>
                      </bibl>
-                     <bibl resource="disco#s058e_0343" about="dbpedia:Soneto">
+                     <bibl resource="disco:s058e_0343">
                         <title property="dc:title">A don Jorge</title>
                         <title type="incipit" property="dc:alternative">Cuando sólo tenías un empleo,</title>
                      </bibl>
-                     <bibl resource="disco#s058e_0344" about="dbpedia:Soneto">
+                     <bibl resource="disco:s058e_0344">
                         <title property="dc:title">Del Soneto</title>
                         <title type="incipit" property="dc:alternative">Mandáis, Señora que un soneto os haga</title>
                      </bibl>
@@ -116,6 +119,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -140,6 +149,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

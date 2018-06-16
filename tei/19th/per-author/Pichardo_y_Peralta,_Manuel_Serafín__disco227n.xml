@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Manuel Serafín Pichardo y Peralta</title>
-            <author corresp="#disco_227n">Manuel Serafín Pichardo y Peralta</author>
+         <titleStmt about="disco:au_227n">
+            <title property="dc:title">Sonetos de Manuel Serafín Pichardo y Peralta</title>
+            <author property="dc:creator" resource="disco:227n" corresp="#disco_227n">Manuel Serafín Pichardo y Peralta</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,14 +37,17 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_227n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_227n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="low" resource="https://viaf.org/viaf/87163351"/>
+               <person xml:id="disco_227n" about="disco:227n" typeOf="foaf:Person">
+                  <idno cert="low"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/87163351"/>
                   <persName type="short">Pichardo y Peralta</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Manuel Serafín</forename>
@@ -52,36 +55,36 @@
                   </persName>
                   <persName type="source" property="foaf:name">Manuel Serafín Pichardo y
                   Peralta</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Santa Clara</settlement>
-                           <country>Cuba</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Santa Clara</settlement>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1863" cert="medium"/>
+                     <date property="schema:birthDate" content="1863" cert="medium"/>
                      <date type="century">19</date>
                   </birth>
-                  <listBibl>
-                     <bibl resource="disco#s227n_0732" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s227n_0732">
                         <title property="dc:title">Ex-libris</title>
                         <title type="incipit" property="dc:alternative">Ita y Urbina, en sus crónicas de las edades guerreras</title>
                      </bibl>
-                     <bibl resource="disco#s227n_0733" about="dbpedia:Soneto">
+                     <bibl resource="disco:s227n_0733">
                         <title property="dc:title">Metempsicosis</title>
                         <title type="incipit" property="dc:alternative">A veces me pregunto: ¿En otra edad he sido?</title>
                      </bibl>
-                     <bibl resource="disco#s227n_0734" about="dbpedia:Soneto">
+                     <bibl resource="disco:s227n_0734">
                         <title property="dc:title">Soy cubano</title>
                         <title type="incipit" property="dc:alternative">Visto calzón de dril y chamarreta</title>
                      </bibl>
-                     <bibl resource="disco#s227n_0735" about="dbpedia:Soneto">
+                     <bibl resource="disco:s227n_0735">
                         <title property="dc:title">El gallo</title>
                         <title type="incipit" property="dc:alternative">Firme y erguido en la escamosa pata,</title>
                      </bibl>
-                     <bibl resource="disco#s227n_0736" about="dbpedia:Soneto">
+                     <bibl resource="disco:s227n_0736">
                         <title property="dc:title">Sellos hispanos</title>
                         <title type="incipit" property="dc:alternative">Museo de Marte, en tu recinto guardas</title>
                      </bibl>
@@ -104,6 +107,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -128,6 +137,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

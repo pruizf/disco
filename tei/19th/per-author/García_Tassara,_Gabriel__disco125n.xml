@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Gabriel García Tassara</title>
-            <author corresp="#disco_125n">Gabriel García Tassara</author>
+         <titleStmt about="disco:au_125n">
+            <title property="dc:title">Sonetos de Gabriel García Tassara</title>
+            <author property="dc:creator" resource="disco:125n" corresp="#disco_125n">Gabriel García Tassara</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,51 +37,54 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_125n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_125n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/53997117"/>
+               <person xml:id="disco_125n" about="disco:125n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/53997117"/>
                   <persName type="short">García Tassara</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Gabriel</forename>
                      <surname property="foaf:familyName">García Tassara</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Gabriel García Tassara</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Sevilla</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Sevilla</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1817" cert="high"/>
+                     <date property="schema:birthDate" content="1817" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <location property="schema:deathPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Ávila</settlement>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Ávila</settlement>
                         </placeName>
                      </location>
-                     <date property="schema:deathDate" when="1875" cert="high"/>
+                     <date property="schema:deathDate" content="1875" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s125n_0380" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s125n_0380">
                         <title property="dc:title">La primavera</title>
                         <title type="incipit" property="dc:alternative">¡Oh campos!, ¡oh deleite!, ¡oh hermosura!</title>
                      </bibl>
-                     <bibl resource="disco#s125n_0381" about="dbpedia:Soneto">
+                     <bibl resource="disco:s125n_0381">
                         <title property="dc:title">El insomnio</title>
                         <title type="incipit" property="dc:alternative">El rayo azul de la naciente aurora</title>
                      </bibl>
-                     <bibl resource="disco#s125n_0382" about="dbpedia:Soneto">
+                     <bibl resource="disco:s125n_0382">
                         <title property="dc:title">La tribulación</title>
                         <title type="incipit" property="dc:alternative">Hay un Dios, me lo dice el alma mía,</title>
                      </bibl>
@@ -104,6 +107,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -128,6 +137,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

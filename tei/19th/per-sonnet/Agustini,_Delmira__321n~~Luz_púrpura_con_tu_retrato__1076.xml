@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Luz púrpura con tu retrato</title>
-            <author corresp="#disco_321n">Delmira Agustini</author>
+         <titleStmt about="disco:po_321n1076">
+            <title property="dc:title">Luz púrpura con tu retrato</title>
+            <author property="dc:creator" resource="disco:321n" corresp="#disco_321n">Delmira Agustini</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,38 +37,43 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:po_321n1076"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_321n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/72187462"/>
+               <person xml:id="disco_321n" about="disco:321n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/72187462"/>
                   <persName type="short">Agustini</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Delmira</forename>
                      <surname property="foaf:familyName">Agustini</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Delmira Agustini</persName>
-                  <sex property="foaf:gender" value="F"/>
+                  <sex property="foaf:gender" content="F"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Montevideo</settlement>
-                           <country>Uruguay</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Montevideo</settlement>
+                           <country property="schema:birthPlace" inlist="">Uruguay</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1886" cert="high"/>
+                     <date property="schema:birthDate" content="1886" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1914" cert="high"/>
+                     <country property="schema:deathPlace" inlist="">Uruguay</country>
+                     <bloc property="schema:deathPlace" inlist="">América</bloc>
+                     <date property="schema:deathDate" content="1914" cert="high"/>
                      <date type="century">20</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s321n1076" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s321n1076">
                         <title property="dc:title">Luz púrpura con tu retrato</title>
                         <title type="incipit" property="dc:alternative">Yo no sé si mis ojos o mis manos</title>
                      </bibl>
@@ -91,6 +96,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -115,6 +126,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

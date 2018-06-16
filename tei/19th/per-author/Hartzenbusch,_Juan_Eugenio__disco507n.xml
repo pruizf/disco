@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Juan Eugenio Hartzenbusch</title>
-            <author corresp="#disco_507n">Juan Eugenio Hartzenbusch</author>
+         <titleStmt about="disco:au_507n">
+            <title property="dc:title">Sonetos de Juan Eugenio Hartzenbusch</title>
+            <author property="dc:creator" resource="disco:507n" corresp="#disco_507n">Juan Eugenio Hartzenbusch</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,71 +37,74 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_507n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_507n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/71432575"/>
+               <person xml:id="disco_507n" about="disco:507n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/71432575"/>
                   <persName type="short">Hartzenbusch</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Juan Eugenio</forename>
                      <surname property="foaf:familyName">Hartzenbusch</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Juan Eugenio Hartzenbusch</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Madrid</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Madrid</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1806" cert="high"/>
+                     <date property="schema:birthDate" content="1806" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <location property="schema:deathPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Madrid</settlement>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Madrid</settlement>
                         </placeName>
                      </location>
-                     <date property="schema:deathDate" when="1880" cert="high"/>
+                     <date property="schema:deathDate" content="1880" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s507n_1907" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s507n_1907">
                         <title property="dc:title">A Calderón</title>
                         <title type="incipit" property="dc:alternative">Con voz clamaste de pesar profundo</title>
                      </bibl>
-                     <bibl resource="disco#s507n_1908" about="dbpedia:Soneto">
+                     <bibl resource="disco:s507n_1908">
                         <title property="dc:title">El pintor ciego</title>
                         <title type="incipit" property="dc:alternative">Faltó la luz al genio peregrino,</title>
                      </bibl>
-                     <bibl resource="disco#s507n_1909" about="dbpedia:Soneto">
+                     <bibl resource="disco:s507n_1909">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Puro y luciente sol, ¡oh qué consuelo</title>
                      </bibl>
-                     <bibl resource="disco#s507n_1910" about="dbpedia:Soneto">
+                     <bibl resource="disco:s507n_1910">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Canta, blanco palomo, y de la aurora</title>
                      </bibl>
-                     <bibl resource="disco#s507n_1911" about="dbpedia:Soneto">
+                     <bibl resource="disco:s507n_1911">
                         <title property="dc:title">A Lope de Vega</title>
                         <title type="incipit" property="dc:alternative">Único en el ingenio y en la fama,</title>
                      </bibl>
-                     <bibl resource="disco#s507n_1912" about="dbpedia:Soneto">
+                     <bibl resource="disco:s507n_1912">
                         <title property="dc:title">A la prematura muerte del venturoso joven y eminen</title>
                         <title type="incipit" property="dc:alternative">Para el mortal, en cuya sien fulgura</title>
                      </bibl>
-                     <bibl resource="disco#s507n_1913" about="dbpedia:Soneto">
+                     <bibl resource="disco:s507n_1913">
                         <title property="dc:title">A una romántica</title>
                         <title type="incipit" property="dc:alternative">Mujer: hazles la cruz de Caravaca</title>
                      </bibl>
-                     <bibl resource="disco#s507n_1914" about="dbpedia:Soneto">
+                     <bibl resource="disco:s507n_1914">
                         <title property="dc:title">A la batalla de Waterloo</title>
                         <title type="incipit" property="dc:alternative">Ea, quien tenga de valor un cacho,</title>
                      </bibl>
@@ -124,6 +127,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -148,6 +157,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

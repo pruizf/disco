@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Dionisio de Solís</title>
-            <author corresp="#disco_041e">Dionisio de Solís</author>
+         <titleStmt about="disco:au_041e">
+            <title property="dc:title">Sonetos de Dionisio de Solís</title>
+            <author property="dc:creator" resource="disco:041e" corresp="#disco_041e">Dionisio de Solís</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,14 +37,17 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_041e"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_041e"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="medium" resource="https://viaf.org/viaf/45406044"/>
+               <person xml:id="disco_041e" about="disco:041e" typeOf="foaf:Person">
+                  <idno cert="medium"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/45406044"/>
                   <persName type="short">Solís</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Dionisio</forename>
@@ -52,40 +55,40 @@
                      <surname property="foaf:familyName">Solís</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Dionisio de Solís</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Madrid</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Madrid</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1774" cert="high"/>
+                     <date property="schema:birthDate" content="1774" cert="high"/>
                      <date type="century">18</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1834" cert="high"/>
+                     <date property="schema:deathDate" content="1834" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s041e_0222" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s041e_0222">
                         <title property="dc:title">A un cortesano</title>
                         <title type="incipit" property="dc:alternative">Dicen que eres mudable, don Pepito,</title>
                      </bibl>
-                     <bibl resource="disco#s041e_0223" about="dbpedia:Soneto">
+                     <bibl resource="disco:s041e_0223">
                         <title property="dc:title">Pobre importuno</title>
                         <title type="incipit" property="dc:alternative">¿Por qué aspira sin fruto, Arnardi bella,</title>
                      </bibl>
-                     <bibl resource="disco#s041e_0224" about="dbpedia:Soneto">
+                     <bibl resource="disco:s041e_0224">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">¡En media hora un soneto! ¿A qué cristiano</title>
                      </bibl>
-                     <bibl resource="disco#s041e_0225" about="dbpedia:Soneto">
+                     <bibl resource="disco:s041e_0225">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Puro y Luciente sol, ¡oh, qué consuelo</title>
                      </bibl>
-                     <bibl resource="disco#s041e_0226" about="dbpedia:Soneto">
+                     <bibl resource="disco:s041e_0226">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Canta blanco palomo, y de la aurora</title>
                      </bibl>
@@ -108,6 +111,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -132,6 +141,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

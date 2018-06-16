@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Indalecio San Román</title>
-            <author corresp="#disco_069n">Indalecio San Román</author>
+         <titleStmt about="disco:au_069n">
+            <title property="dc:title">Sonetos de Indalecio San Román</title>
+            <author property="dc:creator" resource="disco:069n" corresp="#disco_069n">Indalecio San Román</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,25 +37,26 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_069n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_069n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
+               <person xml:id="disco_069n" about="disco:069n" typeOf="foaf:Person">
                   <persName type="short">San Román</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Indalecio</forename>
                      <surname property="foaf:familyName">San Román</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Indalecio San Román</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <country property="schema:name">Cuba</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
                      <date type="century">19</date>
@@ -63,24 +64,24 @@
                   <death>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s069n_0240" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s069n_0240">
                         <title property="dc:title">A Belisa</title>
                         <title type="incipit" property="dc:alternative">La primera de amor dulce metralla</title>
                      </bibl>
-                     <bibl resource="disco#s069n_0241" about="dbpedia:Soneto">
+                     <bibl resource="disco:s069n_0241">
                         <title property="dc:title">A una coqueta</title>
                         <title type="incipit" property="dc:alternative">Creísteme sin duda mentecato</title>
                      </bibl>
-                     <bibl resource="disco#s069n_0242" about="dbpedia:Soneto">
+                     <bibl resource="disco:s069n_0242">
                         <title property="dc:title">Al pueblo</title>
                         <title type="incipit" property="dc:alternative">No en mármoles, ni en bronces, te lo juro,</title>
                      </bibl>
-                     <bibl resource="disco#s069n_0243" about="dbpedia:Soneto">
+                     <bibl resource="disco:s069n_0243">
                         <title property="dc:title">A la noche</title>
                         <title type="incipit" property="dc:alternative">¡Oh tú Reina del mundo y gran señora</title>
                      </bibl>
-                     <bibl resource="disco#s069n_0244" about="dbpedia:Soneto">
+                     <bibl resource="disco:s069n_0244">
                         <title property="dc:title">A la alegría</title>
                         <title type="incipit" property="dc:alternative">Vida del alma, saludable encanto</title>
                      </bibl>
@@ -103,6 +104,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -127,6 +134,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

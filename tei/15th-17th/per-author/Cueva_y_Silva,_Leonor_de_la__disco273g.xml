@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Leonor de la Cueva y Silva</title>
-            <author corresp="#disco_273g">Leonor de la Cueva y Silva</author>
+         <titleStmt about="disco:au_273g">
+            <title property="dc:title">Sonetos de Leonor de la Cueva y Silva</title>
+            <author property="dc:creator" resource="disco:273g" corresp="#disco_273g">Leonor de la Cueva y Silva</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,14 +37,17 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_273g"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_273g"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="medium" resource="https://viaf.org/viaf/305230119"/>
+               <person xml:id="disco_273g" about="disco:273g" typeOf="foaf:Person">
+                  <idno cert="medium"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/305230119"/>
                   <persName type="short">Cueva y Silva</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Leonor</forename>
@@ -52,52 +55,52 @@
                      <surname property="foaf:familyName">Cueva y Silva</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Leonor de la Cueva y Silva</persName>
-                  <sex property="foaf:gender" value="F"/>
+                  <sex property="foaf:gender" content="F"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Medina del Campo</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Medina del Campo</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1650" cert="low"/>
+                     <date property="schema:birthDate" content="1650" cert="low"/>
                      <date type="century">17</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1705" cert="high"/>
+                     <date property="schema:deathDate" content="1705" cert="high"/>
                      <date type="century">18</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s273g_0557" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s273g_0557">
                         <title property="dc:title">¿De qué sirve querer un imposible?</title>
                         <title type="incipit" property="dc:alternative">Basta, Amor, el rigor con que me has muerto;</title>
                      </bibl>
-                     <bibl resource="disco#s273g_0558" about="dbpedia:Soneto">
+                     <bibl resource="disco:s273g_0558">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Ya ha salido el invierno: ¡albricias, flores,</title>
                      </bibl>
-                     <bibl resource="disco#s273g_0559" about="dbpedia:Soneto">
+                     <bibl resource="disco:s273g_0559">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Ni sé si muero ni si tengo vida,</title>
                      </bibl>
-                     <bibl resource="disco#s273g_0560" about="dbpedia:Soneto">
+                     <bibl resource="disco:s273g_0560">
                         <title property="dc:title">Soneto a Floris</title>
                         <title type="incipit" property="dc:alternative">Ausente estoy de tus divinos ojos;</title>
                      </bibl>
-                     <bibl resource="disco#s273g_0561" about="dbpedia:Soneto">
+                     <bibl resource="disco:s273g_0561">
                         <title property="dc:title">A los celos</title>
                         <title type="incipit" property="dc:alternative">Siempre guerra me dais, terribles celos;</title>
                      </bibl>
-                     <bibl resource="disco#s273g_0562" about="dbpedia:Soneto">
+                     <bibl resource="disco:s273g_0562">
                         <title property="dc:title">Introduce un pretendiente, desesperado de salir co</title>
                         <title type="incipit" property="dc:alternative">Sin esperanza en su tormenta esquiva</title>
                      </bibl>
-                     <bibl resource="disco#s273g_0563" about="dbpedia:Soneto">
+                     <bibl resource="disco:s273g_0563">
                         <title property="dc:title">Introduce a una dama que se aficionó a un galán...</title>
                         <title type="incipit" property="dc:alternative">Puse los ojos ¡ay! que no debiera,</title>
                      </bibl>
-                     <bibl resource="disco#s273g_0564" about="dbpedia:Soneto">
+                     <bibl resource="disco:s273g_0564">
                         <title property="dc:title">Soneto a la muerte de doña Isabel de Borbón</title>
                         <title type="incipit" property="dc:alternative">Este grandioso túmulo erigido,</title>
                      </bibl>
@@ -120,6 +123,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -144,6 +153,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

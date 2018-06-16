@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Lino Gutiérrez Alea</title>
-            <author corresp="#disco_548n">Lino Gutiérrez Alea</author>
+         <titleStmt about="disco:au_548n">
+            <title property="dc:title">Sonetos de Lino Gutiérrez Alea</title>
+            <author property="dc:creator" resource="disco:548n" corresp="#disco_548n">Lino Gutiérrez Alea</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,25 +37,26 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_548n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_548n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
+               <person xml:id="disco_548n" about="disco:548n" typeOf="foaf:Person">
                   <persName type="short">Gutiérrez Alea</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Lino</forename>
                      <surname property="foaf:familyName">Gutiérrez Alea</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Lino Gutiérrez Alea</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <country property="schema:name">Cuba</country>
-                           <bloc>América</bloc>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
                         </placeName>
                      </location>
                      <date type="century">19</date>
@@ -63,36 +64,36 @@
                   <death>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s548n_2020" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s548n_2020">
                         <title property="dc:title">Sentimental</title>
                         <title type="incipit" property="dc:alternative">Aquella tarde en que partí, veía</title>
                      </bibl>
-                     <bibl resource="disco#s548n_2021" about="dbpedia:Soneto">
+                     <bibl resource="disco:s548n_2021">
                         <title property="dc:title">Sinceridad</title>
                         <title type="incipit" property="dc:alternative">Mírame sin temor, así, de frente;</title>
                      </bibl>
-                     <bibl resource="disco#s548n_2022" about="dbpedia:Soneto">
+                     <bibl resource="disco:s548n_2022">
                         <title property="dc:title">Pensamiento de Metastasio</title>
                         <title type="incipit" property="dc:alternative">Si lleváramos todos en la frente</title>
                      </bibl>
-                     <bibl resource="disco#s548n_2023" about="dbpedia:Soneto">
+                     <bibl resource="disco:s548n_2023">
                         <title property="dc:title">Provinciana</title>
                         <title type="incipit" property="dc:alternative">Más que en la urbe engañadora, quiero</title>
                      </bibl>
-                     <bibl resource="disco#s548n_2024" about="dbpedia:Soneto">
+                     <bibl resource="disco:s548n_2024">
                         <title property="dc:title">In memorian</title>
                         <title type="incipit" property="dc:alternative">¿Qué prodigioso imán, que hechicería</title>
                      </bibl>
-                     <bibl resource="disco#s548n_2025" about="dbpedia:Soneto">
+                     <bibl resource="disco:s548n_2025">
                         <title property="dc:title">Estival</title>
                         <title type="incipit" property="dc:alternative">A la orilla del mar tengo mi casa.</title>
                      </bibl>
-                     <bibl resource="disco#s548n_2026" about="dbpedia:Soneto">
+                     <bibl resource="disco:s548n_2026">
                         <title property="dc:title">Nocturno</title>
                         <title type="incipit" property="dc:alternative">Ahora que tengo casa y me codeo</title>
                      </bibl>
-                     <bibl resource="disco#s548n_2027" about="dbpedia:Soneto">
+                     <bibl resource="disco:s548n_2027">
                         <title property="dc:title">Croquis de invierno</title>
                         <title type="incipit" property="dc:alternative">Tarde brumosa de diciembre. El frío</title>
                      </bibl>
@@ -115,6 +116,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -139,6 +146,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

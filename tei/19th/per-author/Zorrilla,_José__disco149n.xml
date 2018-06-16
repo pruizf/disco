@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de José Zorrilla</title>
-            <author corresp="#disco_149n">José Zorrilla</author>
+         <titleStmt about="disco:au_149n">
+            <title property="dc:title">Sonetos de José Zorrilla</title>
+            <author property="dc:creator" resource="disco:149n" corresp="#disco_149n">José Zorrilla</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,71 +37,74 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_149n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_149n"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/31991713"/>
+               <person xml:id="disco_149n" about="disco:149n" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/31991713"/>
                   <persName type="short">Zorrilla</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">José</forename>
                      <surname property="foaf:familyName">Zorrilla</surname>
                   </persName>
                   <persName type="source" property="foaf:name">José Zorrilla</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Valladolid</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Valladolid</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1817" cert="high"/>
+                     <date property="schema:birthDate" content="1817" cert="high"/>
                      <date type="century">19</date>
                   </birth>
                   <death>
-                     <location property="schema:deathPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Madrid</settlement>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Madrid</settlement>
                         </placeName>
                      </location>
-                     <date property="schema:deathDate" when="1893" cert="high"/>
+                     <date property="schema:deathDate" content="1893" cert="high"/>
                      <date type="century">19</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s149n_0429" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s149n_0429">
                         <title property="dc:title">A España artística</title>
                         <title type="incipit" property="dc:alternative">¡Torpe, mezquina y miserable España,</title>
                      </bibl>
-                     <bibl resource="disco#s149n_0430" about="dbpedia:Soneto">
+                     <bibl resource="disco:s149n_0430">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Cólmame, Juana, el cincelado vaso</title>
                      </bibl>
-                     <bibl resource="disco#s149n_0431" about="dbpedia:Soneto">
+                     <bibl resource="disco:s149n_0431">
                         <title property="dc:title">El picador</title>
                         <title type="incipit" property="dc:alternative">Con el hirviente resoplido moja</title>
                      </bibl>
-                     <bibl resource="disco#s149n_0432" about="dbpedia:Soneto">
+                     <bibl resource="disco:s149n_0432">
                         <title property="dc:title">A S. M. el rey Alfonso XII en la muerte de S. M. l</title>
                         <title type="incipit" property="dc:alternative">Iris de paz y de virtud lumbrera,</title>
                      </bibl>
-                     <bibl resource="disco#s149n_0433" about="dbpedia:Soneto">
+                     <bibl resource="disco:s149n_0433">
                         <title property="dc:title">II</title>
                         <title type="incipit" property="dc:alternative">De la luna de miel el alborozo</title>
                      </bibl>
-                     <bibl resource="disco#s149n_0434" about="dbpedia:Soneto">
+                     <bibl resource="disco:s149n_0434">
                         <title property="dc:title">Roma y Cristo</title>
                         <title type="incipit" property="dc:alternative">Roma, hija de una loba y dos ladrones,</title>
                      </bibl>
-                     <bibl resource="disco#s149n_0435" about="dbpedia:Soneto">
+                     <bibl resource="disco:s149n_0435">
                         <title property="dc:title">A Isabel la Católica por el descubrimiento de América</title>
                         <title type="incipit" property="dc:alternative">Vencedora en Granada, hallas mezquino</title>
                      </bibl>
-                     <bibl resource="disco#s149n_0436" about="dbpedia:Soneto">
+                     <bibl resource="disco:s149n_0436">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Siempre amé y amo aún, y desde ahora</title>
                      </bibl>
@@ -124,6 +127,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -148,6 +157,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

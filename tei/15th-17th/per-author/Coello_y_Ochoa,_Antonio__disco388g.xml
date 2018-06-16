@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Antonio Coello y Ochoa</title>
-            <author corresp="#disco_388g">Antonio Coello y Ochoa</author>
+         <titleStmt about="disco:au_388g">
+            <title property="dc:title">Sonetos de Antonio Coello y Ochoa</title>
+            <author property="dc:creator" resource="disco:388g" corresp="#disco_388g">Antonio Coello y Ochoa</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,46 +37,49 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_388g"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_388g"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/36927725"/>
+               <person xml:id="disco_388g" about="disco:388g" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/36927725"/>
                   <persName type="short">Coello y Ochoa</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Antonio</forename>
                      <surname property="foaf:familyName">Coello y Ochoa</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Antonio Coello y Ochoa</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Madrid</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Madrid</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1611" cert="high"/>
+                     <date property="schema:birthDate" content="1611" cert="high"/>
                      <date type="century">17</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1652" cert="high"/>
+                     <date property="schema:deathDate" content="1652" cert="high"/>
                      <date type="century">17</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s388g_0862" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s388g_0862">
                         <title property="dc:title">Reina</title>
                         <title type="incipit" property="dc:alternative">Quien callado de miedo o de respeto,</title>
                      </bibl>
-                     <bibl resource="disco#s388g_0863" about="dbpedia:Soneto">
+                     <bibl resource="disco:s388g_0863">
                         <title property="dc:title">A la muerte del doctor Juan Pérez de Montalbán</title>
                         <title type="incipit" property="dc:alternative">Vuela espíritu grande, y desasido</title>
                      </bibl>
-                     <bibl resource="disco#s388g_0864" about="dbpedia:Soneto">
+                     <bibl resource="disco:s388g_0864">
                         <title property="dc:title">Soneto (Conde)</title>
                         <title type="incipit" property="dc:alternative">Dentro está del silencio y del respeto</title>
                      </bibl>
@@ -99,6 +102,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -123,6 +132,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>

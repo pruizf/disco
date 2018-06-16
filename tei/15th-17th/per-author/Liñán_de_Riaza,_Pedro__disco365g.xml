@@ -4,9 +4,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title>Sonetos de Pedro Liñán de Riaza</title>
-            <author corresp="#disco_365g">Pedro Liñán de Riaza</author>
+         <titleStmt about="disco:au_365g">
+            <title property="dc:title">Sonetos de Pedro Liñán de Riaza</title>
+            <author property="dc:creator" resource="disco:365g" corresp="#disco_365g">Pedro Liñán de Riaza</author>
             <principal xml:id="prf">Pablo Ruiz Fabo</principal>
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="jct">José Calvo Tello</principal>
@@ -37,50 +37,53 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="es" property="dc:language" resource="dbpedia:Idioma_español">Spanish</language>
+            <language ident="es"
+                      about="disco:au_365g"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
          </langUsage>
          <particDesc>
             <listPerson>
-               <person xml:id="disco_365g"
-                       property="dc:creator"
-                       typeOf="foaf:Person schema:Person dc:Agent">
-                  <idno cert="high" resource="https://viaf.org/viaf/24596453"/>
+               <person xml:id="disco_365g" about="disco:365g" typeOf="foaf:Person">
+                  <idno cert="high"
+                        property="rdfs:seeAlso"
+                        resource="https://viaf.org/viaf/24596453"/>
                   <persName type="short">Liñán de Riaza</persName>
                   <persName type="full">
                      <forename property="foaf:givenName">Pedro</forename>
                      <surname property="foaf:familyName">Liñán de Riaza</surname>
                   </persName>
                   <persName type="source" property="foaf:name">Pedro Liñán de Riaza</persName>
-                  <sex property="foaf:gender" value="M"/>
+                  <sex property="foaf:gender" content="M"/>
                   <birth>
-                     <location property="schema:birthPlace">
-                        <placeName typeOf="schema:Place">
-                           <settlement property="schema:name">Toledo</settlement>
-                           <country>España</country>
-                           <bloc>Europa</bloc>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Toledo</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
                         </placeName>
                      </location>
-                     <date property="schema:birthDate" when="1540" cert="low"/>
+                     <date property="schema:birthDate" content="1540" cert="low"/>
                      <date type="century">16</date>
                   </birth>
                   <death>
-                     <date property="schema:deathDate" when="1607" cert="low"/>
+                     <date property="schema:deathDate" content="1607" cert="low"/>
                      <date type="century">17</date>
                   </death>
-                  <listBibl>
-                     <bibl resource="disco#s365g_0830" about="dbpedia:Soneto">
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s365g_0830">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Si el que es más desdichado alcanza muerte,</title>
                      </bibl>
-                     <bibl resource="disco#s365g_0831" about="dbpedia:Soneto">
+                     <bibl resource="disco:s365g_0831">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">La noche es madre de los pensamientos,</title>
                      </bibl>
-                     <bibl resource="disco#s365g_0832" about="dbpedia:Soneto">
+                     <bibl resource="disco:s365g_0832">
                         <title property="dc:title">Soneto</title>
                         <title type="incipit" property="dc:alternative">Es la amistad un empinado Atlante,</title>
                      </bibl>
-                     <bibl resource="disco#s365g_0833" about="dbpedia:Soneto">
+                     <bibl resource="disco:s365g_0833">
                         <title property="dc:title">Blanca</title>
                         <title type="incipit" property="dc:alternative">El blanco nácar que las perlas cría,</title>
                      </bibl>
@@ -103,6 +106,12 @@
             <prefixDef ident="dbpedia"
                        matchPattern="([A-Za-z]+(_[A-Za-z])*)"
                        replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -127,6 +136,7 @@
          <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
          <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
          <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
       </revisionDesc>
   </teiHeader>
   <text>
