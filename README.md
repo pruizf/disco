@@ -212,18 +212,42 @@ In order to add the RDFa layer to the TEI-encoded documents, a small number of m
 We use the attribute *@typeOf* to declare the domain of the properties defined with the attribute *@property* (these properties are generally the predicates). A subject IRI reference is indicated using *@about*. The objects which are IRI references are represented using *@resource*, whilst objects that are literals are the textual node of the element. Please see below  simplified version of our encoding with its RDF-like visualization.
 
 ```xml
-<person property="dc:creator" typeOf="foaf:Person" resource="https://viaf.org/viaf/29108480">
-   <persName property="foaf:name">Antonia Díaz de Lamarque</persName>
-   <gender property="foaf:gender" xml:lang="en">female</gender>
+<person xml:id="disco_100n" about="disco:100n" typeof="foaf:Person">
+    <idno cert="high"
+        property="rdfs:seeAlso"
+        resource="https://viaf.org/viaf/29108480"/>
+    <persName type="full">
+        <forename property="foaf:givenName">Antonia</forename>
+        <surname property="foaf:familyName">Díaz de Lamarque</surname>
+    </persName>
+    <sex property="foaf:gender" content="F"/>
+    <birth>
+        <location>
+            <placeName>
+                <settlement property="schema:birthPlace">Marchena (Sevilla)</settlement>
+            </placeName>
+        </location>
+        <date property="schema:birthDate" content="1837" cert="high"/>
+    </birth>
+    <death>
+        <date property="schema:deathDate" content="1892" cert="high"/>
+    </death>
+    <listBibl rel="blterms:hasCreated">
+        <bibl resource="disco:s100n_0335" typeof="schema:CreativeWork">
+            <title property="dc:title">A Dios en la Eucaristía</title>
+            <title type="incipit" property="dc:alternative">Tu infinito poder en la armonía</title>
+        </bibl>
+    </listBibl>
 </person>
 ```
-![rdf-graph](https://sites.google.com/site/ancillaryfiles/files/rdf-graph-example.png "Visualisation of the structured data in a brief author entry")
+![rdf-graph](https://sites.google.com/site/ancillaryfiles/files/pub-doc_graph.png?attredirects=0 "Visualisation of the structured data in a brief author entry")
 
 We looked for the vocabularies that would translate more accurately the TEI semantics. To increase readability and to more easily combine different vocabularies, we used prefixes to shorten the IRIs to the appropriate term. In a similar way to our use of the RDFa attribute *@prefix*, we declared all the vocabularies inside element *listPrefixDef*, available in the TEIheader. We implemented the following vocabularies:
 
 * [Dublin Core vocabulary](http://dublincore.org/documents/dcmi-terms/)
 * [FOAF](http://xmlns.com/foaf/spec/)
 * [schema.org](http://schema.org/)
+* [British Library Terms](http://www.bl.uk/bibliographic/datafree.html)
 
 Furthermore, besides linking to the VIAF and, in a small number of cases, to the [Wikidata](https://www.wikidata.org) datasets for the identification of authors, we added some links to the [esDBpedia](http://es.dbpedia.org/) dataset, so as to refer to some metrical concepts that were available in this resource.
 
