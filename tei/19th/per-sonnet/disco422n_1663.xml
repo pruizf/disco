@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s422n_1663">
+            <title property="dc:title">Soneto</title>
+            <author property="dc:creator" resource="disco:s422n_1663">Abilio Guerra Junqueiro</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">87</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s422n_1663"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_422n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_422n" about="disco:422n" typeOf="foaf:Person">
+                  <persName type="short">Junqueiro</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Abilio Guerra</forename>
+                     <surname property="foaf:familyName">Junqueiro</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Abilio Guerra Junqueiro</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Espada Cinta</settlement>
+                           <country property="schema:birthPlace" inlist="">Portugal</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1850" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Lisboa</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1923" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s422n_1663">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">No eres la flor olímpica y serena,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s422n_1663">
+            <head>Soneto</head>
+            <lg n="1" type="serventesio">
+               <l met="+--+-+---+-" rhyme="A">No eres la flor olímpica y <w type="rhyme">serena</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B">que en sueños ruge la amplitud <w type="rhyme">distante</w>;</l>
+               <l met="+-+---+--+-" rhyme="A">no hay el arranque escultural de <w type="rhyme">Helena</w>
+               </l>
+               <l met="---+---+-+-" rhyme="B">en tu equilibrio de beldad <w type="rhyme">triunfante</w>;</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="+--+-+---+-" rhyme="A">no eres, mujer, la mística <w type="rhyme">azucena</w>,</l>
+               <l met="-+-+-----+-" rhyme="B">la blanca y pura Beatriz del <w type="rhyme">Dante</w>;</l>
+               <l met="+--+-+-+-+-" rhyme="A">eres la artista rara, flor <w type="rhyme">morena</w>,</l>
+               <l met="+--+-+---+-" rhyme="B">llena de aroma casto y <w type="rhyme">penetrante</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+++-+---+-" rhyme="C" enjamb="pb_verb_adv">Y yo no sé que gracia, que <w type="rhyme">aleteo</w>
+               </l>
+               <l met="+----+---+-" rhyme="C" enjamb="ex_dobj_verb">siento, dentro del alma, cuando <w type="rhyme">veo</w>
+               </l>
+               <l met="-++--+---+-" rhyme="D">tu cuerpo áureo, magro, <w type="rhyme">cristalino</w>
+               </l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+-+---+-" rhyme="E">Recuerda ninfas núbiles, <w type="rhyme">serenas</w>,</l>
+               <l met="-+-+++---+-" rhyme="E" enjamb="pb_adj_noun">y me rodea un cerco de <w type="rhyme">sirenas</w>
+               </l>
+               <l met="-+---+---+-" rhyme="D">talladas en su bronce <w type="rhyme">florentino</w>
+               </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

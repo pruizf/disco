@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s157n_0478">
+            <title property="dc:title">¡Oh, tardes adorables!</title>
+            <author property="dc:creator" resource="disco:s157n_0478">Federico Bermúdez y Ortega</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">105</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s157n_0478"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_157n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_157n" about="disco:157n" typeOf="foaf:Person">
+                  <persName type="short">Bermúdez y Ortega</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Federico</forename>
+                     <surname property="foaf:familyName">Bermúdez y Ortega</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Federico Bermúdez y Ortega</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Puerto Rico</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1848" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1921" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s157n_0478">
+                        <title property="dc:title">¡Oh, tardes adorables!</title>
+                        <title type="incipit" property="dc:alternative">¡Oh, tardes adorables de aquel lejano estío!</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s157n_0478">
+            <head>¡Oh, tardes adorables!</head>
+            <lg n="1" type="serventesio">
+               <l met="-+---+--+-+-+-" rhyme="A" ana="approximate-rhyme">¡Oh, tardes adorables de aquel lejano <w type="rhyme">estío</w>!</l>
+               <l met="-+---+----+-+-" rhyme="B">¡Oh, siesta de mi sueño sobre su pecho en <w type="rhyme">flor</w>!</l>
+               <l met="-+-+-+--+---+-" rhyme="A" enjamb="ex_subj_verb">Venid rasgando brumas y sombras de mi <w type="rhyme">olvido</w>
+               </l>
+               <l met="-++--+--+-+-+-" rhyme="B">a orar cabe el sepulcro de aquel perdido <w type="rhyme">amor</w>
+               </l>
+            </lg>
+            <lg n="2" type="unknown">
+               <l met="-+---+--+---+-" rhyme="C" ana="approximate-rhyme">Orad en el divino lenguaje del <w type="rhyme">silencio</w>
+               </l>
+               <l met="-+---+--+-+-+-" rhyme="D" ana="approximate-rhyme">por todos los ensueños de aquella casta <w type="rhyme">edad</w>,</l>
+               <l met="-+---+--+-+-+-" rhyme="C" enjamb="ex_subj_verb">doliente margarita que aquellos blancos <w type="rhyme">dedos</w>
+               </l>
+               <l met="-+-+-+----+-+-" rhyme="D">acaso no recuerdan que deshojaron, <w type="rhyme">ya</w>...</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+--+-+-+-" rhyme="E" ana="approximate-rhyme">¡Oh, tardes adorables de aquel lejano <w type="rhyme">estío</w>!</l>
+               <l met="-+-+-+--+---+-" rhyme="E">Volar de blancos besos en alas del <w type="rhyme">idilio</w>,</l>
+               <l met="-+---+----+-+-" rhyme="F" ana="approximate-rhyme">arrullos de las almas bajo el sereno <w type="rhyme">azul</w>...</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+----+-+-" rhyme="E" ana="approximate-rhyme">Quiméricas visiones de mi universo <w type="rhyme">efímero</w>,</l>
+               <l met="+---+--+---+-" rhyme="E" enjamb="pb_adj_noun">¡traed a los oscuros rincones de mi <w type="rhyme">olvido</w>
+               </l>
+               <l met="+----+--+---+-" rhyme="F">blancas reminiscencias de aromas y de <w type="rhyme">luz</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

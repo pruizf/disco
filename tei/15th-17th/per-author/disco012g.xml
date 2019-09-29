@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_012g">
+            <title property="dc:title">Sonetos de Francisco Agustín Talega</title>
+            <author property="dc:creator" resource="disco:012g" corresp="#disco_012g">Francisco
+               Agustín Talega</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">4</measure>
+            <measure unit="tokens">369</measure>
+            <measure unit="line">59</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_012g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_012g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_012g" about="disco:012g" typeOf="foaf:Person">
+                  <persName type="short">Talega</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Francisco Agustín</forename>
+                     <surname property="foaf:familyName">Talega</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Francisco Agustín Talega</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Segorbe</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1553" cert="high"/>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1584" cert="high"/>
+                     <date type="century">16</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s012g_0021">
+                        <title property="dc:title">Soneto al nacimiento de Cristo Redentor
+                           Nuestro</title>
+                        <title type="incipit" property="dc:alternative">En medio del Silencio
+                           Temeroso</title>
+                     </bibl>
+                     <bibl resource="disco:s012g_0022">
+                        <title property="dc:title">De El prado de Valencia</title>
+                        <title type="incipit" property="dc:alternative">Esta ciudad, que el africano
+                           doma,</title>
+                     </bibl>
+                     <bibl resource="disco:s012g_0023">
+                        <title property="dc:title">De Las suertes trucadas y torneo
+                           venturoso</title>
+                        <title type="incipit" property="dc:alternative">Amor acobardado y sin
+                           firmeza,</title>
+                     </bibl>
+                     <bibl resource="disco:s012g_0024">
+                        <title property="dc:title">De La duquesa constante</title>
+                        <title type="incipit" property="dc:alternative">Contra la feroz hidra el
+                           brazo y clava</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Francisco Agustín Talega</head>
+            <p>Segorbe. 1553 - 1584</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s012g_0021">
+            <head>Soneto al nacimiento de Cristo Redentor Nuestro</head>
+            <lg n="1" type="cuarteto">
+               <l met="---------+-" rhyme="A">En medio del Silencio <w type="rhyme">Temeroso</w></l>
+               <l met="-+-+---+-+-" rhyme="B">quitando el Miedo y el Horror del <w type="rhyme"
+                     >suelo</w>,</l>
+               <l met="---+-+-+-+-" rhyme="B">por las Tinieblas nace el sol del <w type="rhyme"
+                     >cielo</w>,</l>
+               <l met="+-+--+---+-" rhyme="A">Fiel reparo del mundo <w type="rhyme"
+                  >tenebroso</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+---+-" rhyme="A">Y sacudiendo el sueño <w type="rhyme"
+                  >peligroso</w>,</l>
+               <l met="+--+-+---+-" rhyme="B">Sombra de aquel eterno <w type="rhyme"
+                  >desconsuelo</w>,</l>
+               <l met="--+--++--+-" rhyme="B">del Descuido común trueca el <w type="rhyme"
+                     >Recelo</w></l>
+               <l met="-+-+-+-+-+-" rhyme="A">en un Sosiego dulce y no <w type="rhyme"
+                  >costoso</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++-+-+-+++-" rhyme="C">Tan grande Estudio puso el Dios más <w type="rhyme"
+                     >alto</w></l>
+               <l met="---+-+---+-" rhyme="D">en reparar del hombre la <w type="rhyme"
+                  >Tristeza</w></l>
+               <l met="-----+-+-+-" rhyme="E">que su Temeridad cual hombre <w type="rhyme"
+                  >llora</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-----+-+-+-" rhyme="C">y de Recogimiento y ropa <w type="rhyme">falto</w></l>
+               <l met="++---+---+-" rhyme="D" enjamb="ex_subj_verb">a un tiempo la mortal <w
+                     type="rhyme">naturaleza</w></l>
+               <l met="++-+-+-+-+-" rhyme="E">lo aflige, lo obedece y lo <w type="rhyme"
+                  >enamora</w></l>
+            </lg>
+            <lg n="5" type="terceto">
+               <l met="---+-+-" rhyme="E">¡Oh, venturosa <w type="rhyme">hora</w>!</l>
+               <l met="-+-+---+-+-" rhyme="F" enjamb="ex_subj_verb">Nocturnos hechos cuya suerte y
+                     <w type="rhyme">nombre</w></l>
+               <l met="+--++---++-" rhyme="F">hacen los hombre dioses y a Dios <w type="rhyme"
+                     >hombre</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s012g_0022">
+            <head>De El prado de Valencia</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">Esta ciudad, que el africano <w type="rhyme"
+                  >doma</w>,</l>
+               <l met="--+--+---+-" rhyme="B">cuando más espantaban sus <w type="rhyme"
+                  >banderas</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B" enjamb="pb_noun_prep">y vio las armas y las huestes <w
+                     type="rhyme">fieras</w></l>
+               <l met="-+---+---+-" rhyme="A">de Júpiter, de Cristo y de <w type="rhyme"
+                  >Mahoma</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">esta muralla que en el monte <w type="rhyme"
+                  >asoma</w>,</l>
+               <l met="-++--+---+-" rhyme="B">que ya sirve de nidos en <w type="rhyme"
+                  >canteras</w>,</l>
+               <l met="--+---+-+-" rhyme="B">¿acabó? Sí; mas conservó de <w type="rhyme"
+                  >veras</w>,</l>
+               <l met="---+-+-+++-" rhyme="A">la consagrada fe que le dio <w type="rhyme"
+                  >Roma</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-++--+---+-" rhyme="C">¡Ah fe, sola entre piedras <w type="rhyme"
+                     >sostenida</w>,</l>
+               <l met="+-+--+---+-" rhyme="D">mal guardada en humanos <w type="rhyme"
+                  >corazones</w>,</l>
+               <l met="-----+-+-+-" rhyme="E">adonde mereciera estar tu <w type="rhyme"
+                  >punto</w>!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="++-+---+-+-" rhyme="C">Guarda esos muros donde estás <w type="rhyme"
+                     >asida</w>,</l>
+               <l met="---+-+---+-" rhyme="D" enjamb="pb_noun_prep">que acabarán tu nombre y tus <w
+                     type="rhyme">blasones</w></l>
+               <l met="---+-+-+-+-" rhyme="E">en acabando yo y faltar <w type="rhyme"
+                  >Sagunto</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s012g_0023">
+            <head>De Las suertes trucadas y torneo venturoso</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A">Amor acobardado y sin <w type="rhyme">firmeza</w>,</l>
+               <l met="-+---+---+-" rhyme="B">pesado en tus engaños, <w type="rhyme"
+                  >alevoso</w>,</l>
+               <l met="-+---+---+-" rhyme="B">de enredos fabricante y <w type="rhyme"
+                  >marañoso</w>,</l>
+               <l met="-+---+---+-" rhyme="A">denotas y demuestras tu <w type="rhyme">bajeza</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+-+-+-" rhyme="A" enjamb="pb_verb_chain" ana="seseo">Tu vil infame trato
+                  nunca <w type="rhyme">cesa</w></l>
+               <l met="-+-+-+-+-+-" rhyme="B">de dar al triste pena y mal <w type="rhyme"
+                  >dañoso</w>;</l>
+               <l met="-+-+-+---+-" rhyme="B">rapaz, mudable, ciego, <w type="rhyme"
+                  >mentiroso</w>,</l>
+               <l met="-+---+-+-+-" rhyme="A">pues causan tus traiciones gran <w type="rhyme"
+                     >flaqueza</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-" rhyme="C">¿Qué procuras? Responde, <w type="rhyme"
+                  >fementido</w></l>
+               <l met="++---+++-+-" rhyme="D">¿Qué ordenas contra mí y qué vas <w type="rhyme"
+                     >trazando</w>?</l>
+               <l met="-+---+-+-+-" rhyme="E">¿Despierto a mi dolor y me <w type="rhyme"
+                     >condenas</w>?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="++---+---+-" rhyme="C" enjamb="ex_dobj_verb">Cual loco sin sosiego y <w
+                     type="rhyme">atrevido</w></l>
+               <l met="-+---+-+-+-" rhyme="D">mis gustos y contentos vas <w type="rhyme"
+                     >borrando</w>,</l>
+               <l met="-+---+-+-+-" rhyme="E">y mudas lo que quise, en duras <w type="rhyme"
+                     >penas</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s012g_0024">
+            <head>De La duquesa constante</head>
+            <lg n="1" type="cuarteto">
+               <l met="----++-+-+-" rhyme="A" enjamb="ex_dobj_verb">Contra la feroz hidra el brazo y
+                     <w type="rhyme">clava</w></l>
+               <l met="+--+---+-+-" rhyme="B">que hasta en los reinos de Plutón <w type="rhyme"
+                     >vencían</w>,</l>
+               <l met="-+---++--+-" rhyme="B">Alcides, por mostrar cuánto <w type="rhyme"
+                  >podían</w>,</l>
+               <l met="--+--+---+-" rhyme="A">con extraño poder <w type="rhyme">ejecutaba</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+-+-+-" rhyme="A">y cuando más rendida la <w type="rhyme"
+                  >juzgaba</w>,</l>
+               <l met="---+-+---+-" rhyme="B">y a su rigor las fuerzas <w type="rhyme"
+                     >suspendían</w>,</l>
+               <l met="+--+-+-+-+-" rhyme="B">siete cabezas nuevas le <w type="rhyme">nacían</w></l>
+               <l met="-+--++-+-+-" rhyme="A">por una que de un cuello le <w type="rhyme"
+                     >cortaba</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++-+-----+-" rhyme="C" enjamb="ex_subj_verb">Tal es la fiera que en mi <w
+                     type="rhyme">pensamiento</w></l>
+               <l met="-+---+---+-" rhyme="D" enjamb="pb_verb_adv">pelea con la vida que <w
+                     type="rhyme">suspendo</w></l>
+               <l met="-+-+---+-+-" rhyme="E">injustamente para tal <w type="rhyme">combate</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+++-+-+-" rhyme="D">que cuando más la venzo y me <w type="rhyme"
+                     >defiendo</w>,</l>
+               <l met="+--+-+-+-+-" rhyme="C" enjamb="cc_crossclause">tantos martirios saco de un <w
+                     type="rhyme">tormento</w></l>
+               <l met="+-+-++--++-" rhyme="E">que es mejor que me ofrezca a que me <w type="rhyme"
+                     >mate</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

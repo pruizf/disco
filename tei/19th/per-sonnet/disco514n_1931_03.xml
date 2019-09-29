@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s514n_1931_03">
+            <title property="dc:title">Funeral bucólico – III</title>
+            <author property="dc:creator" resource="disco:s514n_1931_03">Justo Sierra</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">92</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s514n_1931_03"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_514n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_514n" about="disco:514n" typeOf="foaf:Person">
+                  <persName type="short">Sierra</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Justo</forename>
+                     <surname property="foaf:familyName">Sierra</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Justo Sierra</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Campeche</settlement>
+                           <country property="schema:birthPlace" inlist="">México</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1848" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1912" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s514n_1931">
+                        <title property="dc:title">Funeral bucólico</title>
+                        <title type="incipit" property="dc:alternative">Su esfera de cristal la luna apaga</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <head>Part of: <title>Funeral bucólico</title>
+         </head>
+         <lg type="sonnet" xml:id="s514n_1931_03">
+            <head>III</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+--+---+-" rhyme="A" enjamb="pb_noun_prep">Únese a los sollozos <w type="rhyme">convulsivos</w>
+               </l>
+               <l met="---+-+---+-" rhyme="B" enjamb="pb_adj_noun">de los abiertos labios, el <w type="rhyme">sonoro</w>
+               </l>
+               <l met="+-+-+---+-+-" rhyme="B" enjamb="ex_subj_verb">choque, ya recogen el caliente <w type="rhyme">lloro</w>
+               </l>
+               <l met="-+-+---+-+-" rhyme="A">las rojas bocas en los ojos <w type="rhyme">vivos</w>
+               </l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+---+--+-" rhyme="A" enjamb="pb_verb_chain">¡Homenaje a Mirtilo! ¿Cómo <w type="rhyme">esquivos</w>
+               </l>
+               <l met="-++-+--+-+-" rhyme="B">podrían ser sus manes a ese <w type="rhyme">coro</w>?</l>
+               <l met="-+---+-+-+-" rhyme="B">Al soplo del amor y en barca de <w type="rhyme">oro</w>
+               </l>
+               <l met="+-+--+---+-" rhyme="A">su alma huía los cármenes <w type="rhyme">nativos</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C" enjamb="ex_subj_verb">Las tazas nuevas en que hierve <w type="rhyme">pura</w>
+               </l>
+               <l met="-+-+---+-+-" rhyme="D" enjamb="pb_noun_prep">la leche vierten del redondo <w type="rhyme">seno</w>
+               </l>
+               <l met="--+--+---+-" rhyme="C">a torrentes su nítida <w type="rhyme">blancura</w>
+               </l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--+-+-+-" rhyme="D">Sobre el fúnebre altar de aromas <w type="rhyme">lleno</w>
+               </l>
+               <l met="-+-+-+-+-+-" rhyme="C">el fuego brota al fin la pira <w type="rhyme">oscura</w>
+               </l>
+               <l met="-+-+---+-+-" rhyme="D">y asciende el sol en el zafir <w type="rhyme">sereno</w>
+               </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

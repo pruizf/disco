@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_162n">
+            <title property="dc:title">Sonetos de Guillermo de Montagú</title>
+            <author property="dc:creator" resource="disco:162n" corresp="#disco_162n">Guillermo de
+               Montagú</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">324</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_162n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_162n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_162n" about="disco:162n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/70842407"/>
+                  <persName type="short">Montagú</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Guillermo</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Montagú</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Guillermo de Montagú</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s162n_0514">
+                        <title property="dc:title">El encuentro</title>
+                        <title type="incipit" property="dc:alternative">Hermano, aguarda. Quiero
+                           descansar a la sombra</title>
+                     </bibl>
+                     <bibl resource="disco:s162n_0515">
+                        <title property="dc:title">II</title>
+                        <title type="incipit" property="dc:alternative">Serenamente casta, la paz de
+                           su belleza,</title>
+                     </bibl>
+                     <bibl resource="disco:s162n_0516">
+                        <title property="dc:title">III</title>
+                        <title type="incipit" property="dc:alternative">Nos pusimos de acuerdo sin
+                           habernos hablado.</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Guillermo de Montagú</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s162n_0514">
+            <head>El encuentro</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+--+-" rhyme="A" enjamb="pb_noun_prep">Hermano, aguarda Quiero
+                  descansar a la <w type="rhyme">sombra</w></l>
+               <l met="-+---+--+--+-" rhyme="B" enjamb="ex_subj_verb">del árbol milenario Ya
+                  encontré en el <w type="rhyme">camino</w></l>
+               <l met="-+---+--+---+-" rhyme="B">el báculo amoroso que ayuda al <w type="rhyme"
+                     >peregrino</w></l>
+               <l met="--+--+----+-" rhyme="A">a rendir su jornada Aquí, sobre la <w type="rhyme"
+                     >alfombra</w>,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+--+-" rhyme="C">que bordan esmeraldas y violetas, <w type="rhyme"
+                     >espero</w></l>
+               <l met="---+-+---++-+-" rhyme="D">Bajo el manzano arrulla sosegada una <w
+                     type="rhyme">fuente</w></l>
+               <l met="+----+---+--+-" rhyme="D" enjamb="ex_dobj_verb">Deja que purifique su frescor
+                     <w type="rhyme">transparente</w></l>
+               <l met="-+---+--+---+-" rhyme="C">mis plantas de la sangre y el polvo del <w
+                     type="rhyme">sendero</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+-+--+-" rhyme="E" enjamb="ex_subj_verb">Hermano, marcha solo Un ensueño
+                     <w type="rhyme">apacible</w></l>
+               <l met="--+--+--+---+-" rhyme="F">encadena mi espíritu al árbol <w type="rhyme"
+                     >milenario</w></l>
+               <l met="+++--+-++---+-" rhyme="G">Hay un nido en las ramas y un ave que se <w
+                     type="rhyme">queja</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+++--+-++--+-" rhyme="E">Ya no temo el cansancio Ya me siento <w type="rhyme"
+                     >invencible</w></l>
+               <l met="-++---++---+-" rhyme="F">¡Porque he visto al abrigo de un techo <w
+                     type="rhyme">hospitalario</w>,</l>
+               <l met="--++-+--++-+-" rhyme="G">asomarse la vida, sonriendo, a una <w type="rhyme"
+                     >reja</w>!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s162n_0515">
+            <head>II</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-+--+---+-" rhyme="A">Serenamente casta, la paz de su <w type="rhyme"
+                     >belleza</w>,</l>
+               <l met="++-+-+---+--+-" rhyme="B">tiene ese dulce encanto que redime y <w
+                     type="rhyme">cautiva</w></l>
+               <l met="++---+---+--+-" rhyme="A">No sabe de rubores su inconsciente <w type="rhyme"
+                     >pureza</w>,</l>
+               <l met="++-+-+----+-+-" rhyme="B">ni sabe ser su amable sinceridad <w type="rhyme"
+                     >esquiva</w></l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="+-+--+--+---+-" rhyme="C">No provoca su carne las hambres del <w type="rhyme"
+                     >pecado</w></l>
+               <l met="--+--+---+--+-" rhyme="D">sino el místico anhelo de la santa <w type="rhyme"
+                     >ternura</w></l>
+               <l met="+--+-+---++-+-" rhyme="C">Nunca sus labios rojos el amor ha <w type="rhyme"
+                     >besado</w>,</l>
+               <l met="--+--+---++-+-" rhyme="D">ni en su seno de virgen palpitó el ansia <w
+                     type="rhyme">impura</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+---+--+-" rhyme="E" enjamb="ex_subj_verb">Sus miradas tranquilas, de la
+                  madre y la <w type="rhyme">esposa</w></l>
+               <l met="+----+---+-+-" rhyme="F" enjamb="cc_crossclause">tienen la mansedumbre
+                  espiritual y <w type="rhyme">quieta</w></l>
+               <l met="-+---+--+-+-+-" rhyme="G">que sana las heridas y extingue todo <w
+                     type="rhyme">fuego</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+--+---+-" rhyme="E" enjamb="pb_adj_prep">y en su caricia fulge la llama
+                     <w type="rhyme">misteriosa</w></l>
+               <l met="+-+--+---+--+-" rhyme="F" enjamb="pb_adj_prep">de esas lámparas suaves que en
+                  la noche <w type="rhyme">discreta</w></l>
+               <l met="---+-+---+--+-" rhyme="G">sobre el hogar derraman claridad y <w type="rhyme"
+                     >sosiego</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s162n_0516">
+            <head>III</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+--+---++-+-" rhyme="A">Nos pusimos de acuerdo sin habernos <w type="rhyme"
+                     >hablado</w></l>
+               <l met="++--+-++--++-" rhyme="B">Cada uno esperaba ya al otro; de tal <w type="rhyme"
+                     >modo</w></l>
+               <l met="-+---+--+---+-" rhyme="A">que fue nuestro saludo la vuelta del <w
+                     type="rhyme">pasado</w>,</l>
+               <l met="---+-+-+-+-+-" rhyme="B">y cuando nos miramos, lo sabíamos <w type="rhyme"
+                     >todo</w></l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="-+-+-+---+--+-" rhyme="C">Así, sencillamente, bajo el árbol <w type="rhyme"
+                     >divino</w></l>
+               <l met="---+-+------+-" rhyme="D">se celebró la misa de nuestros <w type="rhyme"
+                     >esponsales</w></l>
+               <l met="---+-+-+-+--+-" rhyme="C">Junto a la humilde fuente nos bendijo el <w
+                     type="rhyme">Destino</w></l>
+               <l met="+-+--+---+--+-" rhyme="D">y un diluvio de rosas floreció en los <w
+                     type="rhyme">rosales</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+--+---+-" rhyme="E" enjamb="ex_dobj_verb">Y después comulgaron unidas,
+                  en la <w type="rhyme">sombra</w></l>
+               <l met="--++------+-+-" rhyme="E">nuestras dos almas sobre la perfumada <w
+                     type="rhyme">alfombra</w>;</l>
+               <l met="---+-+--+---+-" rhyme="F">y, descifrando el viejo secreto de la <w
+                     type="rhyme">vida</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-----+---+--+-" rhyme="G" enjamb="ex_dobj_verb">a través de la noche
+                  silenciosa, <w type="rhyme">emprendieron</w></l>
+               <l met="-+-+-+-----+-" rhyme="G">la marcha lentamente hasta que se <w type="rhyme"
+                     >perdieron</w></l>
+               <l met="--+--+---+--+-" rhyme="F">en el santo refugio de la paz <w type="rhyme"
+                     >escondida</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

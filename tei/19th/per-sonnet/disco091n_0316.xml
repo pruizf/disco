@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s091n_0316">
+            <title property="dc:title">Memento homo</title>
+            <author property="dc:creator" resource="disco:s091n_0316">José Velarde</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">88</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s091n_0316"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_091n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_091n" about="disco:091n" typeOf="foaf:Person">
+                  <persName type="short">Velarde</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">José</forename>
+                     <surname property="foaf:familyName">Velarde</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">José Velarde</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Conil (Cádiz)</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1849" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1892" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s091n_0316">
+                        <title property="dc:title">Memento homo</title>
+                        <title type="incipit" property="dc:alternative">¡Ah, cuánto nombre de grandeza vana</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s091n_0316">
+            <head>Memento homo</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A" enjamb="cc_crossclause">¡Ah, cuánto nombre de grandeza <w type="rhyme">vana</w>
+               </l>
+               <l met="---+-+---+-" rhyme="B">que se creyó inmortal, <w type="rhyme">desvanecido</w>,</l>
+               <l met="---+-+---+-" rhyme="B">al extinguir el último <w type="rhyme">tañido</w>
+               </l>
+               <l met="--+--+---+-" rhyme="A">con que anuncia la muerte la <w type="rhyme">campana</w>!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+-++--+-" rhyme="A">¡Cuánto magnate de hoy, polvo <w type="rhyme">mañana</w>
+               </l>
+               <l met="---+-+---+-" rhyme="B">que barrerá la mano del <w type="rhyme">olvido</w>,</l>
+               <l met="--+-+----+-" rhyme="B">como barre el Simoun <w type="rhyme">embravecido</w>
+               </l>
+               <l met="-+---+---+-" rhyme="A">la huella de perdida <w type="rhyme">caravana</w>!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++-+-+-+-+-" rhyme="C">¿Qué gloria, qué poder que no <w type="rhyme">sucumba</w>?</l>
+               <l met="+-++-+-+-+-" rhyme="D">Cuanto más alto el muro, menos <w type="rhyme">fuerte</w>
+               </l>
+               <l met="---+-+---+-" rhyme="C">y con mayor estruendo se <w type="rhyme">derrumba</w>
+               </l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+-+--+---+-" rhyme="D" enjamb="ex_subj_verb">Todo al fin, en cenizas se <w type="rhyme">convierte</w>
+               </l>
+               <l met="-+-+-+---+-" rhyme="C" enjamb="ex_dobj_verb">y a todos deja iguales en la <w type="rhyme">tumba</w>
+               </l>
+               <l met="--+--+---+-" rhyme="D">el nivel del olvido y de la <w type="rhyme">muerte</w>
+               </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

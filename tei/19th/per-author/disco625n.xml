@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_625n">
+            <title property="dc:title">Sonetos de Jerónimo Ossa</title>
+            <author property="dc:creator" resource="disco:625n" corresp="#disco_625n">Jerónimo
+               Ossa</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">86</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_625n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_625n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_625n" about="disco:625n" typeOf="foaf:Person">
+                  <persName type="short">Ossa</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Jerónimo</forename>
+                     <surname property="foaf:familyName">Ossa</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Jerónimo Ossa</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Panamá</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1847" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1907" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s625n_2306">
+                        <title property="dc:title">La fuente del paraíso</title>
+                        <title type="incipit" property="dc:alternative">De una colina en la gentil
+                           ladera,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Jerónimo Ossa</head>
+            <p>Panamá. 1847 - 1907</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s625n_2306">
+            <head>La fuente del paraíso</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">De una colina en la gentil <w type="rhyme"
+                  >ladera</w>,</l>
+               <l met="-++--+---+-" rhyme="B">al fin de una quebrada <w type="rhyme"
+                  >primorosa</w>,</l>
+               <l met="+--+-+---+-" rhyme="B">hay una oculta fuente <w type="rhyme"
+                  >misteriosa</w></l>
+               <l met="-++--+---+-" rhyme="A">bajo un bosque de crespa <w type="rhyme"
+                     >enredadera</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-++--+---+-" rhyme="A">Feliz vive el amor en su <w type="rhyme"
+                  >ribera</w>,</l>
+               <l met="-+---+-+-+-" rhyme="B">el genio del placer allí <w type="rhyme"
+                  >reposa</w></l>
+               <l met="--+--+---+-" rhyme="B" enjamb="pb_adj_noun">y en su linfa escondida y <w
+                     type="rhyme">milagrosa</w></l>
+               <l met="+--+---+-+-" rhyme="A">calma su sed la humanidad <w type="rhyme"
+                  >entera</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+---+-+-" rhyme="-">Desde su fondo de pulida grama</l>
+               <l met="--+--+---+-" rhyme="C">en vivida corriente <w type="rhyme">inagotable</w></l>
+               <l met="-+-+---+-+-" rhyme="-">la ardiente savia de los goces mana.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-++--+---+-" rhyme="C">Produce una embriaguez <w type="rhyme"
+                     >inexplicable</w></l>
+               <l met="--+-++---+-" rhyme="D">Y aunque suele dar muerte su <w type="rhyme"
+                     >bebida</w></l>
+               <l met="-+-+-+---+-" rhyme="D">en ella está el principio de la <w type="rhyme"
+                     >vida</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

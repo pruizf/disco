@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s113g_0219">
+            <title property="dc:title">Soneto acróstico a Gracián</title>
+            <author property="dc:creator" resource="disco:s113g_0219">Manuel Salinas y Lizana</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">97</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s113g_0219"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_113g"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_113g" about="disco:113g" typeOf="foaf:Person">
+                  <persName type="short">Salinas y Lizana</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Manuel</forename>
+                     <surname property="foaf:familyName">Salinas y Lizana</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Manuel Salinas y Lizana</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s113g_0219">
+                        <title property="dc:title">Soneto acróstico a Gracián</title>
+                        <title type="incipit" property="dc:alternative">Benjamín de Minerva, no ya en vano</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s113g_0219">
+            <head>Soneto acróstico a Gracián</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+----+++-" rhyme="A" enjamb="pb_adj_prep">Benjamín de Minerva, no ya en <w type="rhyme">vano</w>
+               </l>
+               <l met="-+-+---+-+-" rhyme="B">Al mundo el nombre recatar <w type="rhyme">intentes</w>:</l>
+               <l met="+--+---+-+-" rhyme="B" enjamb="ex_subj_verb">Lauro, el laurel con que el nativo <w type="rhyme">mientes</w>
+               </l>
+               <l met="+-+-++-+-+-" rhyme="A">Te corona y te ostenta más <w type="rhyme">ufano</w>
+               </l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A" enjamb="pb_noun_prep">Hombre que, humilde, hazañas de su <w type="rhyme">mano</w>
+               </l>
+               <l met="---+-+---+-" rhyme="B">A la noticia esconde de las <w type="rhyme">gentes</w>,</l>
+               <l met="--+--+-+-+-" rhyme="B" enjamb="pb_adj_noun">Solicita con rayos más <w type="rhyme">lucientes</w>
+               </l>
+               <l met="-----+---+-" rhyme="A">Aplausos del Apolo <w type="rhyme">soberano</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+---+-" rhyme="C" enjamb="ex_subj_verb">Repetidos blasones, El <w type="rhyme">Discreto</w>
+               </l>
+               <l met="+-+--+---+-" rhyme="D" enjamb="ex_dobj_verb">Goce ya de la fama, que <w type="rhyme">ligera</w>
+               </l>
+               <l met="+-+--+---+-" rhyme="E">Rompe el aire tu nombre <w type="rhyme">publicando</w>
+               </l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+-+-+-+-" rhyme="C">Atento ya el Varón, varón <w type="rhyme">perfeto</w>,</l>
+               <l met="+--+---+-+-" rhyme="D">Corra en la prensa con veloz <w type="rhyme">carrera</w>,</l>
+               <l met="-+-+-+---+-" rhyme="E">Y váyase hasta doce <w type="rhyme">continuando</w>;</l>
+            </lg>
+            <lg n="5" type="pareado">
+               <l met="-+-+++-" rhyme="F">Así serás tú <w type="rhyme">solo</w>
+               </l>
+               <l met="+--+---+-+-" rhyme="F">Norte de ingenios y laurel de <w type="rhyme">Apolo</w>
+               </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

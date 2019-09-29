@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_320n">
+            <title property="dc:title">Sonetos de Benito Mas y Prat</title>
+            <author property="dc:creator" resource="disco:320n" corresp="#disco_320n">Benito Mas y
+               Prat</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">179</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_320n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_320n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_320n" about="disco:320n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/87478656"/>
+                  <persName type="short">Mas y Prat</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Benito</forename>
+                     <surname property="foaf:familyName">Mas y Prat</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Benito Mas y Prat</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Ecija
+                              (Sevilla)</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1846" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1892" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s320n_1045">
+                        <title property="dc:title">A Cervantes</title>
+                        <title type="incipit" property="dc:alternative">Si todo el peso del orgullo
+                           humano</title>
+                     </bibl>
+                     <bibl resource="disco:s320n_1046">
+                        <title property="dc:title">A un crítico</title>
+                        <title type="incipit" property="dc:alternative">Dícenme que denuestas a mi
+                           musa</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Benito Mas y Prat</head>
+            <p>Ecija (Sevilla). 1846 - 1892</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s320n_1045">
+            <head>A Cervantes</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A" enjamb="ex_subj_verb">Si todo el peso del orgullo <w
+                     type="rhyme">humano</w></l>
+               <l met="++---+---+-" rhyme="B">un tiempo gravitó sobre el «<w type="rhyme"
+                     >Quijote</w>»,</l>
+               <l met="-+-+-+---+-" rhyme="B" enjamb="ex_dobj_verb">alzándose en titánico <w
+                     type="rhyme">rebote</w></l>
+               <l met="-++--+++-+-" rhyme="A">al fin lo sacudió cual polvo <w type="rhyme"
+                  >vano</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A">Su autor, de los ingenios <w type="rhyme"
+                  >soberano</w>,</l>
+               <l met="-----+---+-" rhyme="B">y de la Edad Moderna <w type="rhyme"
+                  >sacerdote</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">venció a Roldán, Orlando y <w type="rhyme"
+                     >Lamarote</w>,</l>
+               <l met="--+--+-+-+-" rhyme="A">derribando a los tres con una <w type="rhyme"
+                  >mano</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+-+---+-" rhyme="C">Como el alud que rueda en la <w type="rhyme"
+                     >montaña</w>,</l>
+               <l met="-+---+---+-" rhyme="D">el libro sin rival y sin <w type="rhyme"
+                  >segundo</w>,</l>
+               <l met="-+---+---+-" rhyme="C">rodó desde el palacio a la <w type="rhyme"
+                  >cabaña</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+---+-+-" rhyme="D">Logrando el héroe, pensador <w type="rhyme"
+                     >profundo</w>,</l>
+               <l met="---+---+-+-" rhyme="C">con la tizona, contener a <w type="rhyme"
+                  >España</w></l>
+               <l met="---+---+-+-" rhyme="D">y con la pluma, conmover al <w type="rhyme"
+                  >mundo</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s320n_1046">
+            <head>A un crítico</head>
+            <lg n="1" type="cuarteto">
+               <l met="+----+---+-" rhyme="A" enjamb="pb_noun_prep">Dícenme que denuestas a mi <w
+                     type="rhyme">musa</w></l>
+               <l met="---+-+---+-" rhyme="B">sin el menor asomo de <w type="rhyme">respeto</w>,</l>
+               <l met="---+-+---+-" rhyme="B" enjamb="cc_crossclause">por esquivar el clásico <w
+                     type="rhyme">soneto</w></l>
+               <l met="-+-+---+-+-" rhyme="A">que todo vate por difícil <w type="rhyme">usa</w>:</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+++-+-" rhyme="A">Razón de tal valer no admite <w type="rhyme"
+                     >excusa</w>,</l>
+               <l met="+--+---+-+-" rhyme="B">yo ratifico el concienzudo <w type="rhyme"
+                  >veto</w>,</l>
+               <l met="---+-+-+-+-" rhyme="B">y resarcir la falta te <w type="rhyme">prometo</w></l>
+               <l met="--+--+++-+-" rhyme="A">si el rebelde laúd no lo <w type="rhyme"
+                  >rehúsa</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+---+-" rhyme="C">Diversos cobijaba en mi <w type="rhyme"
+                  >carpeta</w>,</l>
+               <l met="--++-+---+-" rhyme="D" enjamb="ex_dobj_verb">que tal vez los prohíja con <w
+                     type="rhyme">descoco</w></l>
+               <l met="-++--+---+-" rhyme="C">algún alto erudito a la <w type="rhyme"
+                  >violeta</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+++---+-+-" rhyme="D">mas yo no peco y tu indulgencia <w type="rhyme"
+                     >invoco</w>,</l>
+               <l met="-++--+++-+-" rhyme="C" enjamb="cc_crossclause">pues ha tiempo que dijo un
+                  buen <w type="rhyme">poeta</w></l>
+               <l met="---+---+-+-" rhyme="D">que para muestra y de lo malo <w type="rhyme"
+                  >poco</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

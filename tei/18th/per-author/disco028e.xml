@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_028e">
+            <title property="dc:title">Sonetos de Manuel José Quintana</title>
+            <author property="dc:creator" resource="disco:028e" corresp="#disco_028e">Manuel José
+               Quintana</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">100</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_028e"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XVIII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc12653"
+               />, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xviii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_028e" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_028e" about="disco:028e" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/73975529"/>
+                  <persName type="short">Quintana</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Manuel José</forename>
+                     <surname property="foaf:familyName">Quintana</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Manuel José Quintana</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Madrid</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1772" cert="high"/>
+                     <date type="century">18</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1857" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s028e_0119">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">No con vana lisonja y blando
+                           acento</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Manuel José Quintana</head>
+            <p>Madrid. 1772 - 1857</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s028e_0119">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+--+-+-+-" rhyme="A">No con vana lisonja y blando <w type="rhyme"
+                     >acento</w></l>
+               <l met="++---++--+-" rhyme="B">me quieras engañar, huésped del <w type="rhyme"
+                     >prado</w>;</l>
+               <l met="+++--+-+-+-" rhyme="B" enjamb="ex_subj_verb">yo no soy lo que fui: rigor del
+                     <w type="rhyme">hado</w></l>
+               <l met="+-+--+---+-" rhyme="A">me condena por siempre el <w type="rhyme"
+                     >escarmiento</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">Nunca lozana a su primer <w type="rhyme"
+                  >contento</w></l>
+               <l met="-+-+---+-+-" rhyme="B">la planta vuelve que truncó el <w type="rhyme"
+                     >arado</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="B">por más que al cielo le merezca <w type="rhyme"
+                     >agrado</w></l>
+               <l met="---+-+-+-+-" rhyme="A">y que amoroso la acaricie el <w type="rhyme"
+                     >viento</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+--+-+-+-" rhyme="C" enjamb="pb_adj_noun">Anda, pasa adelante; en otras <w
+                     type="rhyme">flores</w></l>
+               <l met="++---+-+-+-" rhyme="D">más ricas de fragancia y más <w type="rhyme"
+                     >felices</w></l>
+               <l met="+-+--+---+-" rhyme="C">pon tu dulce cuidado y tus <w type="rhyme"
+                  >amores</w>:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+++--+---+-" rhyme="D">Que es ya en mí por demás cuanto <w type="rhyme"
+                     >predices</w>,</l>
+               <l met="--+--+---+-" rhyme="C" enjamb="ex_subj_verb">pues el aire del sol con sus <w
+                     type="rhyme">ardores</w></l>
+               <l met="-+---+---+-" rhyme="D">quemó hasta la esperanza en sus <w type="rhyme"
+                     >raíces</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

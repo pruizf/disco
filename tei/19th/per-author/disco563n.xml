@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_563n">
+            <title property="dc:title">Sonetos de Adelina («Yolanda») Mariño de Riverón</title>
+            <author property="dc:creator" resource="disco:563n" corresp="#disco_563n">Adelina
+               («Yolanda») Mariño de Riverón</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">179</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_563n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_563n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_563n" about="disco:563n" typeOf="foaf:Person">
+                  <persName type="short">Mariño de Riverón</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Adelina («Yolanda»)</forename>
+                     <surname property="foaf:familyName">Mariño de Riverón</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Adelina («Yolanda») Mariño de
+                     Riverón</persName>
+                  <sex property="foaf:gender" content="F"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s563n_2063">
+                        <title property="dc:title">El sol</title>
+                        <title type="incipit" property="dc:alternative">Del Sol , bendigo el
+                           luminoso rayo,</title>
+                     </bibl>
+                     <bibl resource="disco:s563n_2064">
+                        <title property="dc:title">La luna</title>
+                        <title type="incipit" property="dc:alternative">Princesa de los Cielos,
+                           caprichosa</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Adelina («Yolanda») Mariño de Riverón</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s563n_2063">
+            <head>El sol</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A">Del Sol , bendigo el luminoso <w type="rhyme"
+                  >rayo</w>,</l>
+               <l met="--++-+---+-" rhyme="B">que quizá va marcando mi <w type="rhyme"
+                  >destino</w></l>
+               <l met="+-+--+---+-" rhyme="B">Luz divina, que das al <w type="rhyme"
+                  >peregrino</w>,</l>
+               <l met="+-+---+-+-" rhyme="A">pomas rosas en el fértil <w type="rhyme">mayo</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="C" enjamb="pb_adj_noun">Quiero tu luz, para alumbrar mi
+                     <w type="rhyme">senda</w></l>
+               <l met="-+---+---+-" rhyme="D" enjamb="pb_adj_noun">cegada por el oro de la <w
+                     type="rhyme">gloria</w></l>
+               <l met="--+--+-+-+-" rhyme="D" enjamb="ex_dobj_verb">De tu gloria sin par, que abrió
+                  en la <w type="rhyme">Historia</w></l>
+               <l met="++---+---+-" rhyme="C">un mundo generoso de <w type="rhyme">leyenda</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--++--+-+-" rhyme="E">Quiero envolverme en tu dorado <w type="rhyme"
+                     >manto</w>,</l>
+               <l met="--++-+---+-" rhyme="E">ofrendarte el lirismo de mi <w type="rhyme"
+                  >canto</w>,</l>
+               <l met="--+--++--+-" rhyme="F">y en el claro alborear de una <w type="rhyme"
+                     >mañana</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+++---+-+-" rhyme="G">si audaz te acercas a mi tibio <w type="rhyme"
+                     >nido</w>,</l>
+               <l met="-+---+-+-+-" rhyme="G">sentir que tu caricia me ha <w type="rhyme"
+                     >dormido</w>,</l>
+               <l met="---+-+---+-" rhyme="F">al penetrar sutil por mi <w type="rhyme"
+                  >ventana</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s563n_2064">
+            <head>La luna</head>
+            <lg n="1" type="cuarteto">
+               <l met="-----+---+-" rhyme="A">Princesa de los Cielos, <w type="rhyme"
+                  >caprichosa</w></l>
+               <l met="-----++--+-" rhyme="B">Margarita Gautier, pálida y <w type="rhyme"
+                  >bella</w>,</l>
+               <l met="-+---+--++-" rhyme="A" enjamb="ex_subj_verb">amiga del poeta que te <w
+                     type="rhyme">glosa</w></l>
+               <l met="--+--+---+-" rhyme="B">en estrofas azules su <w type="rhyme"
+                  >querella</w>;</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="--+--+---+-" rhyme="C" enjamb="pb_adj_noun">pizpireta feliz, que a los <w
+                     type="rhyme">luceros</w></l>
+               <l met="-+--+----+-" rhyme="D">flirteas, retadora entre el <w type="rhyme"
+                  >celaje</w>,</l>
+               <l met="--+--+---+-" rhyme="C">porque son tus galantes <w type="rhyme"
+                  >caballeros</w></l>
+               <l met="+-+--+-+-+-" rhyme="D">y uno muere de amor ¡Tu rubio <w type="rhyme"
+                  >paje</w>!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+---+-" rhyme="E" enjamb="cc_crossclause">Soñadora romántica y <w
+                     type="rhyme">divina</w></l>
+               <l met="--+-++---+-" rhyme="E">que discurres cual maga <w type="rhyme"
+                  >peregrina</w>,</l>
+               <l met="-++--+---+-" rhyme="F">por un reino que te unge <w type="rhyme"
+                  >soberana</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="++--+-+--+-" rhyme="G">ríete de Pierrot que en vano <w type="rhyme"
+                     >insiste</w>,</l>
+               <l met="+--+---+-+-" rhyme="G">vive en la noche que tu engaño <w type="rhyme"
+                     >viste</w>,</l>
+               <l met="+--+-+---+-" rhyme="F">y hurta tu rostro blanco a la <w type="rhyme"
+                     >mañana</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

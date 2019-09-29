@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_069g">
+            <title property="dc:title">Sonetos de Alonso García</title>
+            <author property="dc:creator" resource="disco:069g" corresp="#disco_069g">Alonso
+               García</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">84</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_069g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_069g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_069g" about="disco:069g" typeOf="foaf:Person">
+                  <idno cert="medium" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/32110832"/>
+                  <persName type="short">García</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Alonso</forename>
+                     <surname property="foaf:familyName">García</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Alonso García</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date type="century">16</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s069g_0129">
+                        <title property="dc:title">A la muerte del padre de Ramírez Pagan</title>
+                        <title type="incipit" property="dc:alternative">Ramírez yace aquí, padre
+                           dichoso</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Alonso García</head>
+            <p>España. 16th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s069g_0129">
+            <head>A la muerte del padre de Ramírez Pagan</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-++--+-" rhyme="A">Ramírez yace aquí, padre <w type="rhyme"
+                  >dichoso</w></l>
+               <l met="---+-+-+-+-" rhyme="B">a quien las musas llaman sacro <w type="rhyme"
+                     >abuelo</w>,</l>
+               <l met="-----+-+-+-" rhyme="B">y sobre su sepulcro hacen <w type="rhyme"
+                  >duelo</w></l>
+               <l met="--+--+---+-" rhyme="A">ayudando al poeta <w type="rhyme">misterioso</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A">Honra, viador, el túmulo <w type="rhyme"
+                  >lloroso</w>,</l>
+               <l met="-+---+-+-+-" rhyme="B" enjamb="cc_crossclause">siquiera por el santo amor y
+                     <w type="rhyme">celo</w></l>
+               <l met="-+---+-+-+-" rhyme="B" enjamb="pb_noun_prep">que debes a la pluma de alto <w
+                     type="rhyme">vuelo</w></l>
+               <l met="--+--++--+-" rhyme="A">de Dardanio el pastor más <w type="rhyme"
+                     >ingenioso</w>,</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+-+-+-" rhyme="C">y di al pasar, pisando <w type="rhyme"
+                  >blandamente</w>:</l>
+               <l met="-+-+---+-+-" rhyme="D" enjamb="ex_subj_verb">Holganza eterna y resplandor <w
+                     type="rhyme">ilustre</w></l>
+               <l met="+++--+---+-" rhyme="E">tenga esta alma en el cielo <w type="rhyme"
+                     >esclarecido</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+-+---+-" rhyme="C">y herede tanta vida tu <w type="rhyme"
+                  >simiente</w></l>
+               <l met="++-+---+-+-" rhyme="D" enjamb="pb_noun_prep">cual largo fruto del España y <w
+                     type="rhyme">lustre</w></l>
+               <l met="---+-+---+-" rhyme="E">en el Ibero verso <w type="rhyme">producido</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

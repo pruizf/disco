@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_207n">
+            <title property="dc:title">Sonetos de Luis Calvo Revilla</title>
+            <author property="dc:creator" resource="disco:207n" corresp="#disco_207n">Luis Calvo
+               Revilla</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">196</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_207n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_207n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_207n" about="disco:207n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/87726751"/>
+                  <persName type="short">Calvo Revilla</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Luis</forename>
+                     <surname property="foaf:familyName">Calvo Revilla</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Luis Calvo Revilla</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s207n_0691">
+                        <title property="dc:title">A una joven</title>
+                        <title type="incipit" property="dc:alternative">¿Verdad que ser amada te
+                           cautiva</title>
+                     </bibl>
+                     <bibl resource="disco:s207n_0692">
+                        <title property="dc:title">¡Necia investigación!</title>
+                        <title type="incipit" property="dc:alternative">Separado de ti, no sé
+                           explicarte</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Luis Calvo Revilla</head>
+            <p>España. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s207n_0691">
+            <head>A una joven</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-+-+-+-" rhyme="A" enjamb="ex_dobj_verb">¿Verdad que ser amada te <w
+                     type="rhyme">cautiva</w></l>
+               <l met="-----+---+-" rhyme="B" enjamb="pb_verb_chain">a la usanza de ayer; que te <w
+                     type="rhyme">recrea</w></l>
+               <l met="+++--+---+-" rhyme="B">ser tú, de un don Quijote, <w type="rhyme"
+                     >Dulcinea</w>,</l>
+               <l met="+--+-+-+-+-" rhyme="A">más que el amor que dicen que ahora <w type="rhyme"
+                     >priva</w>?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A" enjamb="pb_verb_adv">¿Verdad que lo ideal, aunque <w
+                     type="rhyme">reciba</w></l>
+               <l met="++---+---+-" rhyme="B">hoy mote de inocente, se <w type="rhyme">desea</w></l>
+               <l met="-+---+---+-" rhyme="B">como algo que en las almas <w type="rhyme"
+                  >señorea</w>,</l>
+               <l met="+--+---+-+-" rhyme="A">y hace que Dios en los humanos <w type="rhyme"
+                     >viva</w>?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+---+-" rhyme="C">Pues ríete de cuentos y de <w type="rhyme"
+                  >prosa</w>:</l>
+               <l met="++++-+--++-" rhyme="D" enjamb="ex_subj_verb">hoy o ayer no hay amante que no
+                     <w type="rhyme">note</w></l>
+               <l met="-+-+-+-+-+-" rhyme="D">por Panza que antes fuera que es <w type="rhyme"
+                     >Quijote</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+---+-+-" rhyme="C">que por amor de la mujer <w type="rhyme"
+                  >hermosa</w></l>
+               <l met="-+++-+---+-" rhyme="E">se harán siempre aún mayores <w type="rhyme"
+                     >desatinos</w></l>
+               <l met="--+--+---+-" rhyme="E">que tomar por gigantes los <w type="rhyme"
+                  >molinos</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s207n_0692">
+            <head>¡Necia investigación!</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--+++-+-" rhyme="A">Separado de ti, no sé <w type="rhyme"
+                  >explicarte</w></l>
+               <l met="-+---++--+-" rhyme="B">si en esta situación peno o <w type="rhyme"
+                     >disfruto</w>;</l>
+               <l met="-+++-+-+-+-" rhyme="B">si no verte es en mí constante <w type="rhyme"
+                     >luto</w></l>
+               <l met="--+--+---+-" rhyme="A">o esperanza preciosa de <w type="rhyme"
+                  >mirarte</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++++-+--++-" rhyme="A">Si es no oírte sufrir, o es <w type="rhyme"
+                     >adorarte</w>,</l>
+               <l met="---+---+-+-" rhyme="B">en el recuerdo que a tu voz <w type="rhyme"
+                     >tributo</w></l>
+               <l met="+----+---+-" rhyme="B">¿Vence la realidad en <w type="rhyme">absoluto</w></l>
+               <l met="-+---+---+-" rhyme="A">o vence la ilusión de <w type="rhyme"
+                  >contemplarte</w>?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+-++---+-" rhyme="C" enjamb="pb_noun_prep">¿Es que el llanto me alivia y
+                  con <w type="rhyme">encanto</w></l>
+               <l met="--+--++--+-" rhyme="D">por inmerso placer juzgo el <w type="rhyme"
+                     >consuelo</w></l>
+               <l met="---+-+-+-+-" rhyme="E">aunque el dolor con furia me <w type="rhyme"
+                     >encadena</w>?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+------+-+-" rhyme="C">¡Necia investigación! Martirio o <w type="rhyme"
+                     >llanto</w>,</l>
+               <l met="+-+---+--+-" rhyme="D">son por ti para mi luto mi <w type="rhyme"
+                  >duelo</w>?</l>
+               <l met="--++++---+-" rhyme="E">¡En amor es un goce hasta la <w type="rhyme"
+                  >pena</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

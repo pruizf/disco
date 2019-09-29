@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s256n_0837">
+            <title property="dc:title">Mi testamento</title>
+            <author property="dc:creator" resource="disco:s256n_0837">Nicolás Arnao</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">660</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s256n_0837"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_256n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_256n" about="disco:256n" typeOf="foaf:Person">
+                  <persName type="short">Arnao</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Nicolás</forename>
+                     <surname property="foaf:familyName">Arnao</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Nicolás Arnao</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1850" cert="medium"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century" cert="low">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s256n_0837">
+                        <title property="dc:title">Mi testamento</title>
+                        <title type="incipit" property="dc:alternative">Por esta voluntad que el cielo ha dado</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s256n_0837">
+            <head>Mi testamento</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+-+++-" rhyme="A">Por esta voluntad que el cielo ha <w type="rhyme">dado</w>
+               </l>
+               <l met="-+---+-+-+-" rhyme="B">a todo racional a ser de <w type="rhyme">instinto</w>,</l>
+               <l met="+--+---+-+-" rhyme="B" enjamb="ex_subj_verb">tan en ajuste como llevo el <w type="rhyme">cinto</w>
+               </l>
+               <l met="+-+--+---+-" rhyme="A">voy a dejar mi asunto <w type="rhyme">preparado</w>
+               </l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+-+-+-" rhyme="A" enjamb="pb_adj_adv">Y aunque a otro modo lo tenía <w type="rhyme">pensado</w>
+               </l>
+               <l met="++-+-+---+-" rhyme="B">no quiero el uso, quede, por mi <w type="rhyme">extinto</w>,</l>
+               <l met="---+-+---+-" rhyme="B" enjamb="pb_adj_noun">y antes de entrar al último <w type="rhyme">recinto</w>
+               </l>
+               <l met="--++---+-+-" rhyme="A">legaré el texto como pan <w type="rhyme">pintado</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+-+--++-" rhyme="C">Y en mi cabal sentido y mejor <w type="rhyme">juicio</w>,</l>
+               <l met="---+-+---+-" rhyme="D">ante testigos legos y <w type="rhyme">notario</w>,</l>
+               <l met="-++--+-+-+-" rhyme="C">haciendo un escribano el buen <w type="rhyme">servicio</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+-+---+-" rhyme="D">empiezo yo a dictar cual <w type="rhyme">legatario</w>,</l>
+               <l met="-+-+-+---+-" rhyme="E">y doy comienzo y pie del <w type="rhyme">testamento</w>,</l>
+               <l met="--+--+---+-" rhyme="E">según vaya encordando el <w type="rhyme">pensamiento</w>
+               </l>
+            </lg>
+            <lg n="5" type="cuarteto">
+               <l met="-+++-+++-+-" rhyme="F">Si acaso he dicho mal, no me <w type="rhyme">desdigo</w>
+               </l>
+               <l met="---+-+-+-+-" rhyme="G">y a mi razón sesuda doy de <w type="rhyme">abono</w>;</l>
+               <l met="-+-+-+--++-" rhyme="G">que así se alzó en la tierra el primer <w type="rhyme">trono</w>,</l>
+               <l met="-++--+---+-" rhyme="F">y aquí pongo la historia por <w type="rhyme">testigo</w>
+               </l>
+            </lg>
+            <lg n="6" type="cuarteto">
+               <l met="+--++--+-+-" rhyme="F">Siga escribiendo ahí que a Dios <w type="rhyme">bendigo</w>
+               </l>
+               <l met="--+--++--+-" rhyme="G">por su buena intención, que alto <w type="rhyme">pregono</w>;</l>
+               <l met="---+-----+-" rhyme="G">pero los hombres, a quienes <w type="rhyme">perdono</w>,</l>
+               <l met="-+++---+-+-" rhyme="F">el acta han dado al infernal <w type="rhyme">amigo</w>
+               </l>
+            </lg>
+            <lg n="7" type="terceto">
+               <l met="---+-+---+-" rhyme="H">Justificado o no, con mi <w type="rhyme">alegato</w>,</l>
+               <l met="+----+-+-+-" rhyme="I">dejo al sobreviviente el aire <w type="rhyme">puro</w>,</l>
+               <l met="-+-+-+---+-" rhyme="H">la luz, el agua, el cielo y por <w type="rhyme">contrato</w>
+               </l>
+            </lg>
+            <lg n="8" type="terceto">
+               <l met="-+---+---+-" rhyme="I">los dulces estrujones del <w type="rhyme">futuro</w>,</l>
+               <l met="+--+-+-+-+-" rhyme="J">do quedarán las mil cabezas <w type="rhyme">rotas</w>,</l>
+               <l met="+----+---+-" rhyme="J">cual la mía de ritmos y de <w type="rhyme">notas</w>
+               </l>
+            </lg>
+            <lg n="9" type="cuarteto">
+               <l met="+--+-++--+-" rhyme="K">Lego de modo igual miles <w type="rhyme">dobleces</w>,</l>
+               <l met="+--+-----+-" rhyme="L">tanto mentales como del <w type="rhyme">pellejo</w>;</l>
+               <l met="-+-+-+---+-" rhyme="L">mi andar solivio en ruta de <w type="rhyme">cangrejo</w>,</l>
+               <l met="-+---+--++-" rhyme="K">con cargas de joroba, las más <w type="rhyme">veces</w>
+               </l>
+            </lg>
+            <lg n="10" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="K" enjamb="pb_adj_noun">Cojo del alma, sus amargas <w type="rhyme">heces</w>
+               </l>
+               <l met="--+--++--+-" rhyme="L">apuradas del mal, triste y <w type="rhyme">complejo</w>,</l>
+               <l met="-+---+++-+-" rhyme="L">mi física armazón hecha un <w type="rhyme">reflejo</w>,</l>
+               <l met="+-+--+-+-+-" rhyme="K">do encorvadas las horas van en <w type="rhyme">creces</w>
+               </l>
+            </lg>
+            <lg n="11" type="terceto">
+               <l met="+-+--+---+-" rhyme="M">Un desarme completo de <w type="rhyme">molares</w>,</l>
+               <l met="-+-+---+-+-" rhyme="N">cerrado bosque de viajeros <w type="rhyme">canas</w>,</l>
+               <l met="--+--+---+-" rhyme="M" enjamb="pb_adj_adv">como huyendo a recintos <w type="rhyme">seculares</w>
+               </l>
+            </lg>
+            <lg n="12" type="terceto">
+               <l met="+----+---+-" rhyme="N">muy lejos de horizontes y <w type="rhyme">mañanas</w>;</l>
+               <l met="-----+---+-">detrás de las sonrisas <w type="rhyme">engañosas</w>
+               </l>
+               <l met="-+---+---+-">tal cual adiós, del mundo y de sus cosas </l>
+            </lg>
+            <lg n="13" type="cuarteto">
+               <l met="--+--++--+-" enjamb="cc_crossclause">Asimismo en la nota hago <w type="rhyme">presente</w>
+               </l>
+               <l met="-+---++--+-">que fui en la mocedad algo <w type="rhyme">amoroso</w>:</l>
+               <l met="-+-+---+-+-">Blasón y timbre que llevé <w type="rhyme">orgulloso</w>
+               </l>
+               <l met="-+-+-+-+-+-">por ser en esta secta el más creyente </l>
+            </lg>
+            <lg n="14" type="cuarteto">
+               <l met="-+-+-+---+-">Rendí al amor mi lauro <w type="rhyme">reverente</w>
+               </l>
+               <l met="-++--+-+-+-">y no tuve razón de estar <w type="rhyme">quejoso</w>,</l>
+               <l met="--++-++--+-">y si me quejo hoy, es que <w type="rhyme">brumoso</w>
+               </l>
+               <l met="+-+---+--+-">me despide a ultratumba sonriente </l>
+            </lg>
+            <lg n="15" type="terceto">
+               <l met="--+--+-+-+-" enjamb="pb_adj_prep">El consejo, por tanto, no es <w type="rhyme">extraño</w>
+               </l>
+               <l met="+-++--+-++-">de este bien puro que nos dejó el <w type="rhyme">cielo</w>:</l>
+               <l met="---+-+-+-+-">Y aparte de un revés o algún <w type="rhyme">engaño</w>
+               </l>
+            </lg>
+            <lg n="16" type="terceto">
+               <l met="+-+--+---+-">es mejor lo que existe sobre el suelo </l>
+               <l met="-+-+-+---+-">Por eso lo acotejo en <w type="rhyme">inventario</w>
+               </l>
+               <l met="--++-+-+-+-">y prosiga a otra línea el buen notario </l>
+            </lg>
+            <lg n="17" type="cuarteto">
+               <l met="--+--+---+-" enjamb="pb_noun_prep">Como parte del texto al <w type="rhyme">desligarme</w>
+               </l>
+               <l met="---+-+--++-">de la armazón huesosa que me <w type="rhyme">anima</w>,</l>
+               <l met="+----+--++-" enjamb="pb_verb_cprep">cumple a mi voluntad que se me <w type="rhyme">exima</w>
+               </l>
+               <l met="-+-+-+-+-+-">de al buen morir alguna ayuda darme </l>
+            </lg>
+            <lg n="18" type="cuarteto">
+               <l met="+--+-+---+-">Solo y tranquilo pienso <w type="rhyme">trasladarme</w>
+               </l>
+               <l met="---+---+-+-">cuando Natura la guadaña <w type="rhyme">esgrima</w>,</l>
+               <l met="-+++--++-+-">sin que un buen cura se me venga <w type="rhyme">encima</w>
+               </l>
+               <l met="--+--+---+-">con la santa intención de confesarme </l>
+            </lg>
+            <lg n="19" type="terceto">
+               <l met="-+-+-+---+-">Si acaso busca mi último <w type="rhyme">secreto</w>,</l>
+               <l met="++---+-+++-">no tengo inconveniente en darle <w type="rhyme">cita</w>,</l>
+               <l met="-+---+-+-+-" enjamb="pb_verb_chain">allá por ultratumba, do <w type="rhyme">prometo</w>
+               </l>
+            </lg>
+            <lg n="20" type="terceto">
+               <l met="-+++--+--+-">ponerlo al tanto si lo <w type="rhyme">solicita</w>,</l>
+               <l met="-++--+---+-" enjamb="cc_crossclause">y me encuentre a su vez los <w type="rhyme">pecadillos</w>
+               </l>
+               <l met="-+---+---+-">que echó de la sotana en los bolsillos </l>
+            </lg>
+            <lg n="21" type="cuarteto">
+               <l met="+-+--+---+-">Fáltame tributar al <w type="rhyme">auditorio</w>
+               </l>
+               <l met="+-+--+-+-+-">cual moderno orador, por más, <w type="rhyme">sesudo</w>,</l>
+               <l met="-+---+--++-" enjamb="pb_verb_adv">mi estilo original del que no <w type="rhyme">dudo</w>
+               </l>
+               <l met="-+-+-----+-">harán reliquias en conservatorio </l>
+            </lg>
+            <lg n="22" type="cuarteto">
+               <l met="---+-+---+-">En Bellas Letras prenda de <w type="rhyme">abalorio</w>
+               </l>
+               <l met="-+---+-+-+-">su juicio literario irá en <w type="rhyme">menudo</w>,</l>
+               <l met="-+---+---+-" enjamb="ex_subj_verb">basado en que cualquiera <w type="rhyme">tartamudo</w>
+               </l>
+               <l met="---+-+---+-">por literato pasa al purgatorio </l>
+            </lg>
+            <lg n="23" type="terceto">
+               <l met="-+-+-+---+-">Con letra igual y causa <w type="rhyme">semejante</w>,</l>
+               <l met="--+--+---+-">recomiendo mi clásico <w type="rhyme">discurso</w>,</l>
+               <l met="--+--+---+-">que por ser del sagrario <w type="rhyme">trashumante</w>,</l>
+            </lg>
+            <lg n="24" type="terceto">
+               <l met="-+---+--++-">en pena de destierro será <w type="rhyme">incurso</w>,</l>
+               <l met="-++--+---+-" enjamb="pb_noun_prep">y no me extrañará que en el <w type="rhyme">proceso</w>
+               </l>
+               <l met="-+-+++-+++-">a palos no le dejen sano un hueso </l>
+            </lg>
+            <lg n="25" type="cuarteto">
+               <l met="+++--+---+-">Este es, caro lector, mi <w type="rhyme">testamento</w>,</l>
+               <l met="--+-+---++-">tres días he tardado en <w type="rhyme">escribirlo</w>,</l>
+               <l met="-+---++--++-">lo dejo cual nació, no he de <w type="rhyme">vestirlo</w>,</l>
+               <l met="---+-+---+-">que al natural expreso lo que siento </l>
+            </lg>
+            <lg n="26" type="cuarteto">
+               <l met="+-+--++--+-">Bien comprendo que no es un <w type="rhyme">monumento</w>,</l>
+               <l met="--+--+--++-">ni el espacio traslado como un <w type="rhyme">mirlo</w>,</l>
+               <l met="---+---+-+-">y aunque del arte las celadas <w type="rhyme">birlo</w>,</l>
+               <l met="-+---+++-+-">de sabios que escasean, no es el cuento </l>
+            </lg>
+            <lg n="27" type="terceto">
+               <l met="---+++-+-+-">Si excomunión le cae o cosa <w type="rhyme">grave</w>,</l>
+               <l met="-+---+-+++-">diré que de melindres no me <w type="rhyme">visto</w>,</l>
+               <l met="---+-+-+-+-" enjamb="ex_subj_verb">y como a nada nuevo doy en <w type="rhyme">clave</w>
+               </l>
+            </lg>
+            <lg n="28" type="terceto">
+               <l met="+----+-+-+-">voy con la muchedumbre do <w type="rhyme">persisto</w>,</l>
+               <l met="---+++---+-">en derrocharles cantos a mi <w type="rhyme">antojo</w>
+               </l>
+               <l met="--+--+-+-+-">aunque algún preceptista muestre enojo </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

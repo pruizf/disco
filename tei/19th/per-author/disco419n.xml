@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_419n">
+            <title property="dc:title">Sonetos de Ricardo Carrasquilla</title>
+            <author property="dc:creator" resource="disco:419n" corresp="#disco_419n">Ricardo
+               Carrasquilla</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">268</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_419n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_419n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_419n" about="disco:419n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/34051230"/>
+                  <persName type="short">Carrasquilla</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ricardo</forename>
+                     <surname property="foaf:familyName">Carrasquilla</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ricardo Carrasquilla</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Colombia</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1827" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1885" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s419n_1656">
+                        <title property="dc:title">Soneto1</title>
+                        <title type="incipit" property="dc:alternative">Hoy ninguna maldad al hombre
+                           enloda,</title>
+                     </bibl>
+                     <bibl resource="disco:s419n_1657">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Dios es quien es; la
+                           inmensidad, su manto;</title>
+                     </bibl>
+                     <bibl resource="disco:s419n_1658">
+                        <title property="dc:title">Receta para hacer sonetos</title>
+                        <title type="incipit" property="dc:alternative">Ocho vocablos buscarás,
+                           diversos,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Ricardo Carrasquilla</head>
+            <p>Colombia. 1827 - 1885</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s419n_1656">
+            <head>Soneto1</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+--+-+-+-" rhyme="A">Hoy ninguna maldad al hombre <w type="rhyme"
+                     >enloda</w>,</l>
+               <l met="--+--+---+-" rhyme="B">y los nietos del mono y la <w type="rhyme"
+                  >monada</w></l>
+               <l met="+-+--+-+++-" rhyme="B">sólo saben el «sé que no sé <w type="rhyme"
+                  >nada</w>»,</l>
+               <l met="-+---+-+-+-" rhyme="A">y fundan en dudar la ciencia <w type="rhyme"
+                  >toda</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+++-+-" rhyme="A">La Esperanza y la fe no están de <w type="rhyme"
+                     >moda</w>;</l>
+               <l met="-+---++--+-" rhyme="B">la misma caridad es <w type="rhyme">anticuada</w>;</l>
+               <l met="--+--+---+-" rhyme="B">los sagrados derechos de la <w type="rhyme"
+                  >nada</w></l>
+               <l met="+-++-+-+-+-" rhyme="A">sólo los niega ya la gente <w type="rhyme"
+                  >goda</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+--+-+-+-" rhyme="C">Es preciso buscar alguna <w type="rhyme">idea</w>;</l>
+               <l met="--+--+++-+-" rhyme="D">pero debo advertirte acá, en <w type="rhyme"
+                     >secreto</w>,</l>
+               <l met="-+-+---+-+-" rhyme="C">que ni de fe ni de esperanza <w type="rhyme"
+                  >sea</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+-+-+-+-" rhyme="D">Musa, al revés hagamos un <w type="rhyme"
+                  >soneto</w>;</l>
+               <l met="+-+--+---+-" rhyme="C" enjamb="pb_noun_prep">es decir comencemos la <w
+                     type="rhyme">tarea</w></l>
+               <l met="---+-+---+-" rhyme="D">por escribir el último <w type="rhyme">terceto</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s419n_1657">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A">Dios es quien es; la inmensidad, su <w type="rhyme"
+                     >manto</w>;</l>
+               <l met="---+-+---+-" rhyme="B">la creación, diadema de su <w type="rhyme"
+                  >frente</w>;</l>
+               <l met="-+---+---+-" rhyme="B">las dos eternidades, su <w type="rhyme"
+                  >presente</w>;</l>
+               <l met="-+-+-+-+-+-" rhyme="A">verdad, belleza, amor, su nombre <w type="rhyme"
+                     >santo</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+---+-" rhyme="A" enjamb="ex_dobj_verb">Bajo sus pies se hunde con <w
+                     type="rhyme">espanto</w></l>
+               <l met="---+-+-+-+-" rhyme="B" enjamb="pb_adj_noun">los firmamentos; es la luz <w
+                     type="rhyme">ardiente</w></l>
+               <l met="+----+---+-" rhyme="B">sombra de su mirada <w type="rhyme"
+                  >omnipotente</w>;</l>
+               <l met="+--+---+-+-" rhyme="A">ángeles y hombres, de su gloria el <w type="rhyme"
+                     >canto</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+---+-" rhyme="-">Con innúmeros soles de diamantes</l>
+               <l met="+--+---+-+-" rhyme="C">vi su poder inmensurable <w type="rhyme"
+                  >escrito</w></l>
+               <l met="--+--+---+-" rhyme="D">en la cóncava esfera <w type="rhyme"
+                  >rutilante</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+-+-+-++-" rhyme="C">y de pasmo y amor lanzando un <w type="rhyme"
+                     >grito</w>,</l>
+               <l met="+--+-+---+-" rhyme="D">¿Dónde, exclamé, se oculta tu <w type="rhyme"
+                     >semblante</w>?</l>
+               <l met="---+---+-+-" rhyme="C">En las alturas de mi ser <w type="rhyme"
+                  >habito</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s419n_1658">
+            <head>Receta para hacer sonetos</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">Ocho vocablos buscarás, <w type="rhyme"
+                  >diversos</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="B">que acaben cuatro en oso y cuatro en <w type="rhyme"
+                     >unta</w>,</l>
+               <l met="---+++---+-" rhyme="B" enjamb="pb_noun_prep">para engastarlos todos en la <w
+                     type="rhyme">punta</w></l>
+               <l met="+--+---+-+-" rhyme="A">de ocho renglones que se llaman <w type="rhyme"
+                     >versos</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+-+-+-" rhyme="A" enjamb="pb_adj_prep">Entre adjetivos mil, los más <w
+                     type="rhyme">perversos</w></l>
+               <l met="-------+-+-" rhyme="B">en derredor de tu tintero <w type="rhyme"
+                  >junta</w>,</l>
+               <l met="++---+-+++-" rhyme="B">i a cada sustantivo dos le <w type="rhyme"
+                  >ayunta</w>;</l>
+               <l met="++---++-++-" rhyme="A">i párrafos tendrás puros i <w type="rhyme"
+                  >tersos</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C">Los dos cuartetos acabaste? En <w type="rhyme"
+                  >alo</w></l>
+               <l met="-+-+-+-+-+-" rhyme="D">recluta dos palabras, dos en <w type="rhyme"
+                  >unto</w>;</l>
+               <l met="+-+--+---+-" rhyme="C">i un terceto tendrás que de <w type="rhyme"
+                  >regalo</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+---+-+-" rhyme="D">Antes que ponga a mis preceptos <w type="rhyme"
+                     >punto</w>,</l>
+               <l met="-++--++-++-" rhyme="C" enjamb="ex_subj_verb">será bueno advertirte que no es
+                     <w type="rhyme">malo</w></l>
+               <l met="-+---+-+-+-" rhyme="D">buscar para el soneto algún <w type="rhyme"
+                  >asunto</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

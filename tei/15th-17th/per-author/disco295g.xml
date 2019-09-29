@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_295g">
+            <title property="dc:title">Sonetos de Pedro Castro y Anaya</title>
+            <author property="dc:creator" resource="disco:295g" corresp="#disco_295g">Pedro Castro y
+               Anaya</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">290</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_295g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_295g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_295g" about="disco:295g" typeOf="foaf:Person">
+                  <persName type="short">Castro y Anaya</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Pedro</forename>
+                     <surname property="foaf:familyName">Castro y Anaya</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Pedro Castro y Anaya</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Murcia</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1610" cert="high"/>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1644" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s295g_0615">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Copiaste en mármol la mayor
+                           belleza,</title>
+                     </bibl>
+                     <bibl resource="disco:s295g_0616">
+                        <title property="dc:title">No pises, no; detén el pie de nieve...</title>
+                        <title type="incipit" property="dc:alternative">No pises, no; detén el pie
+                           de nieve;</title>
+                     </bibl>
+                     <bibl resource="disco:s295g_0617">
+                        <title property="dc:title">La rosa en los cristales de una fuente...</title>
+                        <title type="incipit" property="dc:alternative">La rosa en los cristales de
+                           una fuente</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Pedro Castro y Anaya</head>
+            <p>Murcia. 1610 - 1644</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s295g_0615">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A">Copiaste en mármol la mayor <w type="rhyme"
+                     >belleza</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">oh Lauro, y tanto a Lisis <w type="rhyme"
+                  >parecida</w>,</l>
+               <l met="---+++-+-+-" rhyme="B">que de las dos es una ya la <w type="rhyme"
+                  >vida</w>,</l>
+               <l met="---+++---+-" rhyme="A">y de las dos es una la <w type="rhyme">dureza</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--+---+-" rhyme="A">Sola a Lisis formó <w type="rhyme">naturaleza</w>,</l>
+               <l met="-+++-+---+-" rhyme="B">y tú nos diste a Lisis <w type="rhyme"
+                  >repetida</w>,</l>
+               <l met="+--+-+---+-" rhyme="B">Lisi o la estatua en ella <w type="rhyme"
+                     >convertida</w>,</l>
+               <l met="+--+-+---+-" rhyme="A">¿cuál de las dos se debe a tu <w type="rhyme"
+                     >destreza</w>?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++-+-+---+-" rhyme="C">No fue el impulso, no, de la <w type="rhyme"
+                     >escultura</w>,</l>
+               <l met="--+--+---+-" rhyme="D" enjamb="ex_subj_verb">que en el mármol viviente y <w
+                     type="rhyme">sucesivo</w></l>
+               <l met="+--+---+-+-" rhyme="E">Lisis quedase de morir <w type="rhyme">ajena</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+-+-+-+-" rhyme="C" enjamb="ex_subj_verb">Arbitrio fue de Amor, que
+                  hermosa y <w type="rhyme">dura</w></l>
+               <l met="-+-+---+-+-" rhyme="D">formó otra Lisis, porque en mármol <w type="rhyme"
+                     >vivo</w></l>
+               <l met="+--+-+---+-" rhyme="E">viva inmortal la causa de mi <w type="rhyme"
+                  >pena</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s295g_0616">
+            <head>No pises, no; detén el pie de nieve...</head>
+            <lg n="1" type="cuarteto">
+               <l met="++-+-+-+-+-" rhyme="A">No pises, no; detén el pie de <w type="rhyme"
+                     >nieve</w>;</l>
+               <l met="++-+---+-+-" rhyme="B">no pises esta desmayada <w type="rhyme">rosa</w>,</l>
+               <l met="---+---+-+-" rhyme="B" enjamb="ex_subj_verb">que a los claveles de tu boca <w
+                     type="rhyme">hermosa</w></l>
+               <l met="-+-+-+--++-" rhyme="A">la ya marchita púrpura les <w type="rhyme"
+                  >debe</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+----++-++-" rhyme="A" enjamb="pb_adj_prep">Esta, que poseyó cetro tan <w
+                     type="rhyme">breve</w></l>
+               <l met="-+---+---+-" rhyme="B">del prado en la república <w type="rhyme"
+                  >olorosa</w>,</l>
+               <l met="+-++-+-+-+-" rhyme="B">hállete, oh Nise, alguna vez <w type="rhyme"
+                     >piadosa</w></l>
+               <l met="---+-+--++-" rhyme="A">si tu retrato a lástima te <w type="rhyme"
+                  >mueve</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+---+-+-" rhyme="C">Pero si acaso enternecida <w type="rhyme"
+                  >lloras</w></l>
+               <l met="-+-+-+-+-+-" rhyme="D">la muerte de una flor, oh dueño <w type="rhyme"
+                     >ingrato</w>,</l>
+               <l met="-++--+---+-" rhyme="C">por ser copia gentil de tus <w type="rhyme"
+                     >auroras</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+--++-+-" rhyme="D">Nise, Temed; en que, en tan breve <w type="rhyme"
+                     >rato</w>,</l>
+               <l met="---+-+---+-" rhyme="C">sin la prolija guerra de las <w type="rhyme"
+                  >horas</w>,</l>
+               <l met="+----+---+-" rhyme="D">falte el original como el <w type="rhyme"
+                  >retrato</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s295g_0617">
+            <head>La rosa en los cristales de una fuente...</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+-+-+-" rhyme="A" enjamb="ex_subj_verb">La rosa en los cristales de una
+                     <w type="rhyme">fuente</w></l>
+               <l met="+-++-+---+-" rhyme="B">flor a flor todo el prado <w type="rhyme"
+                  >desafía</w>;</l>
+               <l met="-+-+---+-+-" rhyme="B" enjamb="pb_verb_chain">hermosa en plumas de carmín se
+                     <w type="rhyme">abría</w></l>
+               <l met="-+-+---+-+-" rhyme="A">a ser narciso en el cristal <w type="rhyme"
+                     >luciente</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+---+-" rhyme="A" enjamb="ex_subj_verb">Y cuando más purpúrea y <w
+                     type="rhyme">floreciente</w></l>
+               <l met="-+---++--+-" rhyme="B">en copas de rubí perlas <w type="rhyme">bebía</w>,</l>
+               <l met="--+-++-+++-" rhyme="B">del achaque de un sol, del mal de un <w type="rhyme"
+                     >día</w>,</l>
+               <l met="-++--+-+-+-" rhyme="A">murió: que aun la hermosura en flores <w type="rhyme"
+                     >miente</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+--++---+-" rhyme="C" enjamb="ex_subj_verb">¡Oh flor!, el primer paso de tu
+                     <w type="rhyme">vida</w></l>
+               <l met="++---+-+-+-" rhyme="-">fue el último también que pudo darte,</l>
+               <l met="+----+---+-" rhyme="C">antes escarmentada que <w type="rhyme">nacida</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+---+-+-" rhyme="D">¡Oh documento de la humana <w type="rhyme"
+                  >suerte</w>!</l>
+               <l met="--+--+---+-" rhyme="C">¡Oh verdad de los campos <w type="rhyme"
+                  >escondida</w>!</l>
+               <l met="++---+---+-" rhyme="D">¿Quién no se desengaña con tu <w type="rhyme"
+                     >muerte</w>?</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

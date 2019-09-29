@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_180n">
+            <title property="dc:title">Sonetos de Carlos Alberto Boissier</title>
+            <author property="dc:creator" resource="disco:180n" corresp="#disco_180n">Carlos Alberto
+               Boissier</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">175</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_180n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_180n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_180n" about="disco:180n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/73540885"/>
+                  <persName type="short">Boissier</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Carlos Alberto</forename>
+                     <surname property="foaf:familyName">Boissier</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Carlos Alberto Boissier</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Matanzas</settlement>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1877" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Pinar del
+                              Río</settlement>
+                           <country property="schema:deathPlace" inlist="">Cuba</country>
+                           <bloc property="schema:deathPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1897" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s180n_0617">
+                        <title property="dc:title">Amémonos</title>
+                        <title type="incipit" property="dc:alternative">Amémonos. No pienses que la
+                           vida</title>
+                     </bibl>
+                     <bibl resource="disco:s180n_0618">
+                        <title property="dc:title">Blanco y rojo</title>
+                        <title type="incipit" property="dc:alternative">Envuelta en un ropaje
+                           vaporoso</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Carlos Alberto Boissier</head>
+            <p>Matanzas (Cuba). 1877 - 1897</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s180n_0617">
+            <head>Amémonos</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A" enjamb="pb_noun_prep">Amémonos No pienses que la <w
+                     type="rhyme">vida</w></l>
+               <l met="--+--++--+-" rhyme="B">en ansiar y esperar sólo <w type="rhyme"
+                  >consiste</w>;</l>
+               <l met="+--+---+-+-" rhyme="B" enjamb="ex_subj_verb">¡un corazón enamorado y <w
+                     type="rhyme">triste</w></l>
+               <l met="+--+-+---+-" rhyme="A">debe seguir la senda del <w type="rhyme"
+                  >suicida</w>!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A">Mañana, de tu amor <w type="rhyme"
+                  >arrepentida</w>,</l>
+               <l met="-++--+-+-+-" rhyme="B">tal vez niegues, mujer, que me <w type="rhyme"
+                     >quisiste</w>;</l>
+               <l met="--+--++--+-" rhyme="B">a la muerte cruel nada <w type="rhyme"
+                  >resiste</w>,</l>
+               <l met="-++--+---+-" rhyme="A">y al fin vemos la fe <w type="rhyme"
+                  >desvanecida</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+++-+-" rhyme="C">Los años que vendrán no importan <w type="rhyme"
+                     >nada</w>,</l>
+               <l met="+-+--+---+-" rhyme="C" enjamb="ex_subj_verb">y una sombra en el caos <w
+                     type="rhyme">condensada</w></l>
+               <l met="+-+--+-+-+-" rhyme="D">es el tiempo que rápido ha <w type="rhyme"
+                  >volado</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--++++---+-" rhyme="E">El futuro es un sueño de la <w type="rhyme"
+                  >mente</w>,</l>
+               <l met="+-+--+---+-" rhyme="E" enjamb="ex_subj_verb">y un instante de dicha en el <w
+                     type="rhyme">presente</w></l>
+               <l met="+-+--+---+-" rhyme="D">vale más que la gloria del <w type="rhyme"
+                  >pasado</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s180n_0618">
+            <head>Blanco y rojo</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A">Envuelta en un ropaje <w type="rhyme">vaporoso</w></l>
+               <l met="--+-++---+-" rhyme="B">transparente y más blanco que la <w type="rhyme"
+                     >espuma</w>,</l>
+               <l met="--+--+---+-" rhyme="B">de mi pena cruel entre la <w type="rhyme"
+                  >bruma</w></l>
+               <l met="+--+-+---+-" rhyme="A">surges como un ensueño <w type="rhyme"
+                  >delicioso</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A" enjamb="pb_adj_prep">A veces tu contorno <w
+                     type="rhyme">primoroso</w></l>
+               <l met="---+-+---+-" rhyme="B">en la penumbra rápido se <w type="rhyme"
+                  >esfuma</w>,</l>
+               <l met="-+---+-+-+-" rhyme="B" enjamb="ex_dobj_verb">y el fardo del pesar mi espalda
+                     <w type="rhyme">abruma</w></l>
+               <l met="--+--+---+-" rhyme="A">como el mundo la espalda del <w type="rhyme"
+                     >coloso</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+-+-+-" rhyme="C">Y luego reapareces, siempre <w type="rhyme"
+                  >bella</w>,</l>
+               <l met="-+---+-+-+-" rhyme="C">radiante como el disco de una <w type="rhyme"
+                     >estrella</w>,</l>
+               <l met="+--+-+---+-" rhyme="D">dulce, divina, casta y <w type="rhyme"
+                  >sonriente</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+---+-" rhyme="E">pero a tu níveo traje <w type="rhyme"
+                  >preferido</w>,</l>
+               <l met="+----+---+-" rhyme="E" enjamb="pb_noun_prep">luces mefistofélico <w
+                     type="rhyme">vestido</w></l>
+               <l met="++-+-+---+-" rhyme="D">de un rojo extraño, erótico y <w type="rhyme"
+                     >ardiente</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

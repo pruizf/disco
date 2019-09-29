@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_494n">
+            <title property="dc:title">Sonetos de José Wen Maury</title>
+            <author property="dc:creator" resource="disco:494n" corresp="#disco_494n">José Wen
+               Maury</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">12</measure>
+            <measure unit="tokens">1121</measure>
+            <measure unit="line">168</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_494n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_494n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_494n" about="disco:494n" typeOf="foaf:Person">
+                  <persName type="short">Wen Maury</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">José</forename>
+                     <surname property="foaf:familyName">Wen Maury</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">José Wen Maury</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s494n_1853">
+                        <title property="dc:title">Los doce meses</title>
+                        <title type="incipit" property="dc:alternative">Bate la nieve los tejados,
+                           dura,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>José Wen Maury</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s494n_1853">
+            <head>Los doce meses</head>
+            <lg type="sonnet" xml:id="s494n_1853_01">
+               <head>Enero</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+--+---+-+-" rhyme="A">Bate la nieve los tejados, <w type="rhyme"
+                     >dura</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="B">del aire hendiendo la flotante <w type="rhyme"
+                        >niebla</w>,</l>
+                  <l met="---+-+---+-" rhyme="B" enjamb="ex_dobj_verb">y de sus copos nítidos se <w
+                        type="rhyme">puebla</w></l>
+                  <l met="-+-+---+-+-" rhyme="A">la extensa tierra con sutil <w type="rhyme"
+                        >albura</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+-+---+-+-" rhyme="A" enjamb="ex_dobj_verb">Alfombra cubre, de vivaz <w
+                        type="rhyme">blancura</w></l>
+                  <l met="-+-+---+-+-" rhyme="B">el yerto suelo que mortal <w type="rhyme"
+                        >despuebla</w></l>
+                  <l met="---+---+-+-" rhyme="B">y de la noche en la letal <w type="rhyme"
+                        >tiniebla</w></l>
+                  <l met="-+-+---+-+-" rhyme="A">se oculta el mundo con fatal <w type="rhyme"
+                        >tristura</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+-+---+-+-" rhyme="C">Así el destino inexorable y <w type="rhyme"
+                        >rudo</w></l>
+                  <l met="-+-+---+-+-" rhyme="D">al hombre, el cielo de la dicha <w type="rhyme"
+                        >vela</w></l>
+                  <l met="---+---+-+-" rhyme="E">y con las nieves del dolor, <w type="rhyme"
+                        >austero</w>,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+---+-+-" rhyme="C">en el invierno de la vida, <w type="rhyme"
+                        >crudo</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="D">marchita el alma y de pesar la <w type="rhyme"
+                        >hiela</w></l>
+                  <l met="+-++---+--" rhyme="E">¡Qué también tiene el corazón su Enero !</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s494n_1853_02">
+               <head>Febrero</head>
+               <lg n="1" type="cuarteto">
+                  <l met="++-+-----+-" rhyme="A">Fue en una noche de Febrero <w type="rhyme"
+                        >umbría</w></l>
+                  <l met="-+-++++--+-" rhyme="B">cuando una vez te vi ¿Lo has <w type="rhyme"
+                        >olvidado</w>?</l>
+                  <l met="-+-+---+-+-" rhyme="B">Del Norte, el cierzo, que soplaba <w type="rhyme"
+                        >helado</w>,</l>
+                  <l met="---+-+---+-" rhyme="A">nuestros nerviosos cuerpos <w type="rhyme"
+                        >atería</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+--+-+---+-" rhyme="A">Tenue rubor, de púrpura <w type="rhyme"
+                     >teñía</w></l>
+                  <l met="---+-+---+-" rhyme="B">tu encantadora faz, y <w type="rhyme"
+                        >emocionado</w>,</l>
+                  <l met="+--+-+---+-" rhyme="B">vi que volviste el rostro <w type="rhyme"
+                        >avergonzado</w></l>
+                  <l met="---+---+-+-" rhyme="A">que de mi erótica mirada <w type="rhyme"
+                     >huía</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+------+++-" rhyme="C">Otro Febrero, para mí, muy <w type="rhyme"
+                        >triste</w>,</l>
+                  <l met="-+-+-+---+-" rhyme="D">con un Pierrot traidor y <w type="rhyme"
+                        >divertido</w></l>
+                  <l met="---+---+++-" rhyme="E">en tumultuoso Carnaval, -¡me <w type="rhyme"
+                        >acuerdo</w>!-</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+----++-" rhyme="C">mi amor burlaste, y de mi amor <w type="rhyme"
+                        >huiste</w></l>
+                  <l met="-+-+---+-+-" rhyme="D">Por eso, aun, de tu traición <w type="rhyme"
+                        >herido</w>,</l>
+                  <l met="-----+-+-+-" rhyme="E">cuando Febrero llega, te <w type="rhyme"
+                        >recuerdo</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s494n_1853_03">
+               <head>Marzo</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+-+---+-+-" rhyme="A" enjamb="pb_verb_cprep">Pasó por fin la tenebrosa <w
+                        type="rhyme">era</w></l>
+                  <l met="--+--+---+-" rhyme="B">de los fríos, las nieblas y la <w type="rhyme"
+                        >bruma</w>;</l>
+                  <l met="+--+---+-+-" rhyme="B" enjamb="pb_noun_prep">cantan las aves de dorada <w
+                        type="rhyme">pluma</w></l>
+                  <l met="---+---+-+-" rhyme="A">en la florígera y vivaz <w type="rhyme"
+                     >pradera</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="---+---+-+-" rhyme="A">Flagrante el Sol, en la celeste <w type="rhyme"
+                        >esfera</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="B">la tenue escarcha del albor <w type="rhyme"
+                        >abruma</w>,</l>
+                  <l met="---+-+---+-" rhyme="B">y en el espacio diáfano se <w type="rhyme"
+                        >esfuma</w>,</l>
+                  <l met="-+-+-+---+-" rhyme="A">dejando paso ya a la <w type="rhyme"
+                     >Primavera</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="---+---+-+-" rhyme="C" enjamb="pb_noun_prep">Naturaleza, embellecida, <w
+                        type="rhyme">torna</w></l>
+                  <l met="--++-+---+-" rhyme="D" enjamb="pb_noun_prep">a vestirse de galas y <w
+                        type="rhyme">primores</w></l>
+                  <l met="-+-+---+-+-" rhyme="D">de ingente luz y de gallardas <w type="rhyme"
+                        >flores</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+--+--+-" rhyme="C">Renueva el campo y el collado <w type="rhyme"
+                        >adorna</w></l>
+                  <l met="--+--+---+-" rhyme="D">con capullos de vívidos <w type="rhyme"
+                     >colores</w></l>
+                  <l met="--+--+---+-" rhyme="C">porque ya Marzo plácido <w type="rhyme"
+                     >retorna</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s494n_1853_04">
+               <head>Abril</head>
+               <lg n="1" type="cuarteto">
+                  <l met="---+---+-+-" rhyme="A" enjamb="pb_noun_prep">Como gallardo paladín, que al
+                        <w type="rhyme">freno</w></l>
+                  <l met="---+-+---+-" rhyme="B" enjamb="pb_noun_prep">de su corcel asido se <w
+                        type="rhyme">abalanza</w></l>
+                  <l met="-+---+-+-+-" rhyme="B" enjamb="pb_verb_chain">y el campo de la guerra,
+                     presto, <w type="rhyme">alcanza</w></l>
+                  <l met="-+---+-+-+-" rhyme="A">llevando el corazón de sueños <w type="rhyme"
+                        >lleno</w>,</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+-----+-+-" rhyme="A">del tiempo, Abril, en el eterno <w type="rhyme"
+                        >seno</w>,</l>
+                  <l met="--+--+---+-" rhyme="B" enjamb="pb_verb_cprep">en su carro flamígero se <w
+                        type="rhyme">lanza</w></l>
+                  <l met="-+---+-+-+-" rhyme="B">de rayos al través y alegre <w type="rhyme"
+                        >avanza</w>,</l>
+                  <l met="+--+-+-+-+-" rhyme="A">flores al mundo y luz brindando <w type="rhyme"
+                        >ameno</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+-----+-+-" rhyme="C" enjamb="pb_noun_prep">¡Oh, dulce Abril que iluminó
+                     los <w type="rhyme">días</w></l>
+                  <l met="---+-++++-" rhyme="C" enjamb="ex_dobj_verb">de mi niñez feliz ! ¿Por qué
+                     no <w type="rhyme">envías</w></l>
+                  <l met="---+---+-+-" rhyme="D">tu brillantez al corazón <w type="rhyme"
+                     >ajado</w>,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+---+-+-" rhyme="-">como a la fronda tus fulgores baña</l>
+                  <l met="---+-+---+-" rhyme="D" enjamb="ex_subj_verb">y de mi pecho apartas <w
+                        type="rhyme">empañado</w></l>
+                  <l met="-+-+---+-+-" rhyme="-">las negras brumas que mi vida empañan?</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s494n_1853_05">
+               <head>Mayo</head>
+               <lg n="1" type="cuarteto">
+                  <l met="---+---+-+-" rhyme="A">Mayo gentil, que el corazón <w type="rhyme"
+                        >renueva</w>,</l>
+                  <l met="+--+---+-+-" rhyme="B">cual de Natura renovó las <w type="rhyme"
+                     >rosas</w></l>
+                  <l met="-+-+-++--+-" rhyme="B">Tus frescas flores son más <w type="rhyme"
+                        >olorosas</w></l>
+                  <l met="---+---+++-" rhyme="A">que las que Dios en el Edén dio a <w type="rhyme"
+                        >Eva</w></l>
+               </lg>
+               <lg n="2" type="unknown">
+                  <l met="-+-+---+-+-" rhyme="-" enjamb="pb_adj_noun">¡Oh, mes que tornas, imperial,
+                     con nuevas</l>
+                  <l met="--+--+---+-" rhyme="B">vestiduras de galas <w type="rhyme"
+                     >ostentosas</w>,</l>
+                  <l met="-++--+---+-" rhyme="B" enjamb="ex_subj_verb">por ti exhala sus rimas <w
+                        type="rhyme">melodiosas</w></l>
+                  <l met="---+---+-+-" rhyme="A">el ruiseñor que el pensamiento eleva !</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="---+---+-+-" rhyme="C" enjamb="ex_subj_verb">Ya que disipas de la vida el
+                        <w type="rhyme">llanto</w></l>
+                  <l met="---+-+-+-+-" rhyme="C">que al corazón marchita, acoge el <w type="rhyme"
+                        >canto</w>,</l>
+                  <l met="-+-+---+++-" rhyme="D">si el alma al cielo de placer la <w type="rhyme"
+                        >encumbras</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="--++-+-+-+-" rhyme="D">Porque no al mundo sólo, tú deslumbras !</l>
+                  <l met="---+---+-+-" rhyme="C">que en misteriosa inspiración y <w type="rhyme"
+                        >encanto</w></l>
+                  <l met="-+-+--+--+-" rhyme="D">también la muerte del poeta <w type="rhyme"
+                        >alumbras</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s494n_1853_06">
+               <head>Junio</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+-+---+-+-" rhyme="A" enjamb="pb_noun_prep">Recuerdo bien, que en estival
+                        <w type="rhyme">aurora</w></l>
+                  <l met="-+-++----+-" rhyme="B">en un alegre huerta, en <w type="rhyme"
+                        >vacaciones</w>,</l>
+                  <l met="++-+-+-+-+-" rhyme="B">dado a un amor que me engendró <w type="rhyme"
+                        >ilusiones</w>,</l>
+                  <l met="---+-+---+-" rhyme="A">-¡Oh, abnegación felice del que <w type="rhyme"
+                        >adora</w>!-</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+-+---+-++-" rhyme="A">«-Mira A esta golondrina enseño, <w type="rhyme"
+                        >ahora</w>,</l>
+                  <l met="---+-+---+-" rhyme="B">a mensajera fiel de mis <w type="rhyme"
+                        >pasiones</w></l>
+                  <l met="--+--+---+-" rhyme="B" enjamb="ex_subj_verb">Cuando vuelvas al aula y las
+                        <w type="rhyme">lecciones</w></l>
+                  <l met="-+----++-+-" rhyme="A">embarguen tu atención, hora tras <w type="rhyme"
+                        >hora</w>,</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="++-+---+-+-" rhyme="C">no te verás de su presencia <w type="rhyme"
+                        >falto</w>,</l>
+                  <l met="-+---+---+-" rhyme="D">con nuevas en tu pico» Dijo, y, <w type="rhyme"
+                        >suelta</w>,</l>
+                  <l met="---+---+++-" rhyme="C">la golondrina de que habló, dio un <w type="rhyme"
+                        >salto</w>,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+---+++-" rhyme="C">crespó las plumas, y voló muy <w type="rhyme"
+                        >alto</w></l>
+                  <l met="+-+----+-+-" rhyme="D">Fue en Junio y hoy con la ilusión <w type="rhyme"
+                        >disuelta</w></l>
+                  <l met="-+-+---+-+-" rhyme="D">en vano espero su anhelada <w type="rhyme"
+                        >vuelta</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s494n_1853_07">
+               <head>Julio</head>
+               <lg n="1" type="cuarteto">
+                  <l met="---+-+---+-" rhyme="A">De tu divina efigie en la <w type="rhyme"
+                        >tarjeta</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="B">preciosa frase de pasión <w type="rhyme"
+                        >grabaste</w>;</l>
+                  <l met="---+-----+-" rhyme="B" enjamb="ex_subj_verb">y tras tu firma, luego que <w
+                        type="rhyme">fechaste</w></l>
+                  <l met="-+-+---+-+-" rhyme="A">besé la copia de tu faz <w type="rhyme"
+                     >coqueta</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+-+---+-+-" rhyme="A" enjamb="ex_dobj_verb">«-Por largos años estará <w
+                        type="rhyme">sujeta</w></l>
+                  <l met="-+---+---+-" rhyme="B">tu vida a mi existencia -<w type="rhyme"
+                        >suspiraste</w>-</l>
+                  <l met="--+--+---+-" rhyme="B">o apagárase, en mágico <w type="rhyme"
+                        >contraste</w>,</l>
+                  <l met="-+---++--+-" rhyme="A">mi firma, con mi amor, toda <w type="rhyme"
+                        >completa</w>»</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="++-+-+-+++-" rhyme="C">Ya ha vuelto el mes aquel, de mí, más <w
+                        type="rhyme">caro</w>;</l>
+                  <l met="+++----+++-" rhyme="D">más fiel es Julio, pues tu amor se ha <w
+                        type="rhyme">ido</w>,</l>
+                  <l met="---+---+++-" rhyme="C">como se apaga en lontananza un <w type="rhyme"
+                        >faro</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-----+-+-+-" rhyme="D">Mas, ¡ah!, tu juramento te ha <w type="rhyme"
+                        >vendido</w>,</l>
+                  <l met="-+---+++-+-" rhyme="D">tu firma, con tu amor, ya se ha <w type="rhyme"
+                        >extinguido</w>,</l>
+                  <l met="--+---+-++-" rhyme="C">y ¡qué casualidad! Julio está <w type="rhyme"
+                        >claro</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s494n_1853_08">
+               <head>Agosto</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+-+---+-+-" rhyme="A">Agosta el campo, desde el ígneo <w type="rhyme"
+                        >cielo</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="B">del sol la lumbre que vivaz <w type="rhyme"
+                        >fulgura</w></l>
+                  <l met="---+---+-+-" rhyme="B">y abrasador de la feraz <w type="rhyme"
+                     >llanura</w></l>
+                  <l met="-+-+---+-+-" rhyme="A">la flor marchita y descolora el <w type="rhyme"
+                        >suelo</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+-+---+-+-" rhyme="A">Detiene el águila caudal su <w type="rhyme"
+                        >vuelo</w>,</l>
+                  <l met="-+-+-+---+-" rhyme="B">buscando amiga sombra en la <w type="rhyme"
+                        >espesura</w>,</l>
+                  <l met="---+---+-+-" rhyme="B">y entre las breñas de la selva <w type="rhyme"
+                        >oscura</w></l>
+                  <l met="++---+---+-" rhyme="A">da tregua el pastorcillo a su <w type="rhyme"
+                        >desvelo</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+++---+-+-" rhyme="C">Así, es un campo el corazón <w type="rhyme"
+                        >humano</w>;</l>
+                  <l met="-+++---+-+-" rhyme="D" enjamb="ex_dobj_verb">amor, un sol que, fulgurante,
+                        <w type="rhyme">quita</w></l>
+                  <l met="-+---+---+-" rhyme="C">las sombras de su cielo <w type="rhyme"
+                        >soberano</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+---+-+-" rhyme="E">Mas nada agosta, en su feliz <w type="rhyme"
+                        >alarde</w>:</l>
+                  <l met="++-+-----+-" rhyme="E">¡qué el sol de amor, si como Agosto <w type="rhyme"
+                        >arde</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="D">jamás la flor del corazón marchita !</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s494n_1853_09">
+               <head>Septiembre</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+----+-+-+-" rhyme="A" enjamb="ex_subj_verb">Meses en que los mares dieron
+                        <w type="rhyme">perlas</w></l>
+                  <l met="-+---+---+-" rhyme="B">y bandos de corales <w type="rhyme"
+                     >arrastraron</w>,</l>
+                  <l met="--+--+---+-" rhyme="B" enjamb="pb_adj_noun">y que al par con la vida <w
+                        type="rhyme">germinaron</w></l>
+                  <l met="--+--+++-++-" rhyme="A">ilusiones que el mar no pudo <w type="rhyme"
+                        >henderlas</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+--+---+-++-" rhyme="A">¡Cómo gozara el corazón al <w type="rhyme"
+                        >verlas</w>,</l>
+                  <l met="+--+-+---+-" rhyme="B">meses que dulces dichas <w type="rhyme"
+                        >provocaron</w>,</l>
+                  <l met="--+--+---+-" rhyme="B">si las horas felices que <w type="rhyme"
+                        >pasaron</w>,</l>
+                  <l met="--+--+---++-" rhyme="A">con los meses pudiéramos volverlas !</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="---+---+-+-" rhyme="C" enjamb="pb_adj_noun">Que el corazón de zonación <w
+                        type="rhyme">escaso</w></l>
+                  <l met="+--+---+-+-" rhyme="C">guarda quimérico, por siempre, <w type="rhyme"
+                        >acaso</w>,</l>
+                  <l met="+--+---+-+-" rhyme="D">tristes recuerdos, de escapada <w type="rhyme"
+                        >gloria</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+---+-+-" rhyme="E">Así, en efluvios de ilusión, por <w type="rhyme"
+                        >eso</w>,</l>
+                  <l met="+----+---+-" rhyme="D">tengo a Septiembre siempre en la <w type="rhyme"
+                        >memoria</w>,</l>
+                  <l met="-++-----++-" rhyme="E">pues me diste en Septiembre el primer <w
+                        type="rhyme">beso</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s494n_1853_10">
+               <head>Octubre</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+--+---+-+-" rhyme="A">Pliegan las naves sus rendidas <w type="rhyme"
+                        >alas</w>,</l>
+                  <l met="---+-+-+-+-" rhyme="B">y de su garbo, Otoño, las <w type="rhyme"
+                        >despojas</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="B" enjamb="pb_adj_noun">y al aire dando sus marchitas
+                        <w type="rhyme">hojas</w></l>
+                  <l met="-+---+---+-" rhyme="A">denudas a Natura de sus <w type="rhyme"
+                     >galas</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="---+---+-+-" rhyme="A">De la pradera en las ardientes <w type="rhyme"
+                        >salas</w>,</l>
+                  <l met="+----+-+-+-" rhyme="B">hálitos de letal pereza <w type="rhyme"
+                     >arrojas</w>,</l>
+                  <l met="---+---+++-" rhyme="B">y cuando aquí, devorador, te <w type="rhyme"
+                        >alojas</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="A">mortales soplos, por doquier <w type="rhyme"
+                        >exhalas</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+-+---+-+-" rhyme="C">También de amor, el corazón se <w type="rhyme"
+                        >hastía</w>,</l>
+                  <l met="---+---+-+-" rhyme="D">y, por pasiones impelido, <w type="rhyme"
+                     >ciego</w>,</l>
+                  <l met="---+-+---+-" rhyme="C">en sus abismos hondos se <w type="rhyme"
+                     >desvía</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+---+-+-" rhyme="D" enjamb="ex_dobj_verb">Y al fin marchito y agostado
+                        <w type="rhyme">luego</w></l>
+                  <l met="-+-----+-+-" rhyme="C">¡tenemos!, ¡ay!, en la vejez impía ,</l>
+                  <l met="-+---+-+-+-" rhyme="D">marchito el corazón de tanto fuego !</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s494n_1853_11">
+               <head>Noviembre</head>
+               <lg n="1" type="cuarteto">
+                  <l met="---+-+---+-" rhyme="A">¡Oh, cementerio, templo de los yertos !</l>
+                  <l met="-----+---+-" rhyme="B">De Noviembre en el triste <w type="rhyme"
+                        >desvarío</w>,</l>
+                  <l met="---+-+---+-" rhyme="B">hacia tu seno tétrico y <w type="rhyme"
+                     >sombrío</w></l>
+                  <l met="+--+-+---+-" rhyme="A">nos arrastró el amor de nuestro <w type="rhyme"
+                        >muertos</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="---+---+-+-" rhyme="A">Sobre tus sauces de sopor <w type="rhyme"
+                        >cubiertos</w>,</l>
+                  <l met="---+-+---+-" rhyme="B" enjamb="ex_subj_verb">los agoreros pájaros de <w
+                        type="rhyme">estío</w></l>
+                  <l met="-+---+-+-+-" rhyme="B">discurren en tu seno, yerto y <w type="rhyme"
+                        >frío</w>,</l>
+                  <l met="--+--+---+-" rhyme="A">y salmodian sus lúgubres <w type="rhyme"
+                        >conciertos</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="---+---+-+-" rhyme="C">Entre las sombras de tu seno, <w type="rhyme"
+                        >inciertas</w>,</l>
+                  <l met="+--+---+-+-" rhyme="C">tristes presagios de pesar, <w type="rhyme"
+                        >despiertas</w>;</l>
+                  <l met="---+---+-+-" rhyme="D" enjamb="ex_subj_verb">porque la mente de dolor <w
+                        type="rhyme">transida</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="+--+---+-+-" rhyme="C">sufre por cosas que creyera <w type="rhyme"
+                        >inciertas</w></l>
+                  <l met="--+--+---+-" rhyme="D">¡Ay! En la lucha cruenta de la <w type="rhyme"
+                        >vida</w>,</l>
+                  <l met="+-+--+--++-" rhyme="C">¡cuántas almas que viven, están muertas !</l>
+               </lg>
+            </lg>
+            <!-- <lg type="sonnet" xml:id="s494n_1853_12">
+               <head>Diciembre</head>
+               <lg n="1" type="cuarteto">
+                  <l enjamb="pb_adj_noun">Diciembre dio de nieve a la alta <w type="rhyme">cumbre</w></l>
+                  <l>gruesa mortaja blanca y <w type="rhyme">aterida</w>,</l>
+                  <l>y en la ciudad alegre y <w type="rhyme">divertida</w></l>
+                  <l>se agita sin cesar la muchedumbre </l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l>Arde, el amor de la caldeante <w type="rhyme">lumbre</w>,</l>
+                  <l>de Noche Buena el pan Pascua es <w type="rhyme">florida</w>,</l>
+                  <l enjamb="ex_subj_verb">y Humanidad de regocijo <w type="rhyme">henchida</w></l>
+                  <l enjamb="ex_subj_verb">en cada hogar, de paz pone vislumbre </l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l enjamb="ex_subj_verb">Mas del festín en la feliz <w type="rhyme">locura</w></l>
+                  <l enjamb="ex_dobj_verb">no todos gozan Solitario <w type="rhyme">llora</w></l>
+                  <l>víctima triste de la suerte <w type="rhyme">impura</w>,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l>un pobre viejo que gimiendo <w type="rhyme">implora</w></l>
+                  <l>sin pan, ni lumbre; sin amor, ni cena ,-</l>
+                  <l>[ ]</l>
+               </lg>
+            </lg>-->
+         </lg>
+      </body>
+   </text>
+</TEI>

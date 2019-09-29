@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s633n_2331_06">
+            <title property="dc:title">Poemas del mar – Final</title>
+            <author property="dc:creator" resource="disco:s633n_2331_06">Tomás Morales</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">105</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s633n_2331_06"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_633n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_633n" about="disco:633n" typeOf="foaf:Person">
+                  <persName type="short">Morales</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Tomás</forename>
+                     <surname property="foaf:familyName">Morales</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Tomás Morales</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Moya (Gran Canaria)</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1885" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Las Palmas</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1921" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s633n_2331">
+                        <title property="dc:title">Poemas del mar</title>
+                        <title type="incipit" property="dc:alternative">Puerto de Gran Canaria sobre el sonoro Atlántico,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <head>Part of: <title>Poemas del mar</title>
+         </head>
+         <lg type="sonnet" xml:id="s633n_2331_06">
+            <head>Final</head>
+            <lg n="1" type="cuarteto">
+               <l met="+++--+----+-+-" rhyme="A">Yo fui el bravo piloto de mi bajel de <w type="rhyme">ensueño</w>,</l>
+               <l met="--+--+-++--+-" rhyme="B">argonauta ilusorio de un país <w type="rhyme">presentido</w>,</l>
+               <l met="-++--+---+--+-" rhyme="A">de alguna isla dorada de quimera o de <w type="rhyme">sueño</w>,</l>
+               <l met="-+---+------+-" rhyme="B">oculta entre las sombras de lo <w type="rhyme">desconocido</w>
+               </l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-++--+--+---+-" rhyme="C" enjamb="ex_dobj_verb">Acaso un cargamento magnífico <w type="rhyme">encerraba</w>
+               </l>
+               <l met="--+--+----+-+-" rhyme="D">en su cala mi barco; ni pregunté <w type="rhyme">siquiera</w>;</l>
+               <l met="-+---+---+--+-" rhyme="C">absorta mi pupila las tinieblas <w type="rhyme">sondaba</w>,</l>
+               <l met="++---++--+--+-" rhyme="D">y hasta hube de olvidarme de clavar mi <w type="rhyme">bandera</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--++-+----+-+-" rhyme="E">Y llegó el viento Norte, desapacible y <w type="rhyme">rudo</w>;</l>
+               <l met="---+-+---+--+-" rhyme="E" enjamb="ex_subj_verb">el poderoso esfuerzo de mi brazo <w type="rhyme">desnudo</w>
+               </l>
+               <l met="-+-+++--+---+-" rhyme="F">logró tener un punto la fuerza del <w type="rhyme">turbión</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+--+---+-" rhyme="G">para lograr el triunfo luché <w type="rhyme">desesperado</w>,</l>
+               <l met="---+-+----+-+-" rhyme="G">y cuando ya mi cuerpo desfalleció <w type="rhyme">cansado</w>,</l>
+               <l met="+-+--+-+--+-+-" rhyme="F">una mano en la noche me arrebató el <w type="rhyme">timón</w>
+               </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

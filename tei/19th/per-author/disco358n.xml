@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_358n">
+            <title property="dc:title">Sonetos de Modesto Moreno de la Rosa</title>
+            <author property="dc:creator" resource="disco:358n" corresp="#disco_358n">Modesto Moreno
+               de la Rosa</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">174</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_358n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_358n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_358n" about="disco:358n" typeOf="foaf:Person">
+                  <persName type="short">Moreno de la Rosa</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Modesto</forename>
+                     <surname property="foaf:familyName">Moreno de la Rosa</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Modesto Moreno de la Rosa</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Andalucía</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s358n_1260">
+                        <title property="dc:title">Mi gratitud al soneto</title>
+                        <title type="incipit" property="dc:alternative">Dicen, Soneto, que tormento
+                           eres</title>
+                     </bibl>
+                     <bibl resource="disco:s358n_1261">
+                        <title property="dc:title">Soneto al soneto</title>
+                        <title type="incipit" property="dc:alternative">En tus catorce líneas
+                           paralelas</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Modesto Moreno de la Rosa</head>
+            <p>Andalucía (España). 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s358n_1260">
+            <head>Mi gratitud al soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">Dicen, Soneto, que tormento <w type="rhyme"
+                  >eres</w></l>
+               <l met="---+-+---+-" rhyme="B">por las traviesas Musas <w type="rhyme"
+                  >inventado</w>,</l>
+               <l met="-++--+---+-" rhyme="B">y que es más que difícil tu <w type="rhyme"
+                     >trenzado</w>,</l>
+               <l met="+--+-+---+-" rhyme="A">si ha de tener los justos <w type="rhyme"
+                     >caracteres</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++-+-+---+-" rhyme="A">No me acomodo a tales <w type="rhyme"
+                  >pareceres</w>;</l>
+               <l met="+++--+---+-" rhyme="B">par mí fuiste el cáliz <w type="rhyme"
+                  >nacarado</w></l>
+               <l met="---+-+---+-" rhyme="B">con que brindó mi afán de <w type="rhyme"
+                     >enamorado</w></l>
+               <l met="--+--+---+-" rhyme="A">al placer y al amor y a las <w type="rhyme"
+                     >mujeres</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C">¡En un soneto entronicé a <w type="rhyme"
+                  >Conchita</w>!</l>
+               <l met="+--+---+-+-" rhyme="D">¡Otro forjé para la excelsa <w type="rhyme"
+                  >Pura</w>!</l>
+               <l met="+-+--+---+-" rhyme="C">¡Otro puse a los pies de Isabelita !</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--+---+-" rhyme="D">Y, cantando en sonetos su <w type="rhyme"
+                     >hermosura</w>,</l>
+               <l met="---+-+---+-" rhyme="C">con efusión romántica <w type="rhyme">infinita</w></l>
+               <l met="+-+--+---+-" rhyme="D">me colmaron de amor y de <w type="rhyme"
+                  >ventura</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s358n_1261">
+            <head>Soneto al soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="---+-+---+-" rhyme="A" enjamb="pb_adj_adv">En tus catorce líneas <w
+                     type="rhyme">paralelas</w></l>
+               <l met="-----+-+-+-" rhyme="B">debajo de tu nombre bien <w type="rhyme"
+                  >medidas</w>,</l>
+               <l met="--++-+-+-+-" rhyme="B">a llenarte de versos me <w type="rhyme"
+                  >convidas</w>,</l>
+               <l met="---+-+-+-+-" rhyme="A">a mi afición sirviéndole de <w type="rhyme"
+                     >espuelas</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+++---+-" rhyme="A">Sin sujetarme a rígidas <w type="rhyme"
+                  >escuelas</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B">y nunca nunca con placer <w type="rhyme"
+                  >nacidas</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B">y siempre siempre de amargura <w type="rhyme"
+                     >henchidas</w>,</l>
+               <l met="+--+-+---+-" rhyme="A">cuajo en tu nombre yo mis <w type="rhyme"
+                     >cantinelas</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+-+++-" rhyme="C">A mi musa rogándole, no en <w type="rhyme"
+                  >vano</w>,</l>
+               <l met="-+-+---+-+-" rhyme="C">que ponga pulso a mi nerviosa <w type="rhyme"
+                  >mano</w></l>
+               <l met="---+-+---+-" rhyme="D">para acoplar cuartetos y <w type="rhyme"
+                  >tercetos</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+---+-+-" rhyme="E">voy de mi vida por el mal <w type="rhyme"
+                  >camino</w>,</l>
+               <l met="---+---+-+-" rhyme="E">acadenado a mi fatal <w type="rhyme">destino</w>:</l>
+               <l met="-+-+---+-+-" rhyme="D">¡llorar mis penas y escribir <w type="rhyme"
+                     >sonetos</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

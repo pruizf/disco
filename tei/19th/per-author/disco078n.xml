@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_078n">
+            <title property="dc:title">Sonetos de Marqués de Dos Hermanas</title>
+            <author property="dc:creator" resource="disco:078n" corresp="#disco_078n">Marqués de Dos
+               Hermanas</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">101</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_078n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_078n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_078n" about="disco:078n" typeOf="foaf:Person">
+                  <idno cert="medium" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/101523539"/>
+                  <persName type="short">Marqués de Dos Hermanas</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Matías</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Velasco y Rojas</surname>
+                     <roleName>Marqués de Dos Hermanas</roleName>
+                  </persName>
+                  <persName type="source" property="foaf:name">Marqués de Dos Hermanas</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">La Habana</settlement>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1826"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s078n_0256">
+                        <title property="dc:title">Lo que veo</title>
+                        <title type="incipit" property="dc:alternative">Yo miro el cielo azul y tras
+                           su esfera</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Marqués de Dos Hermanas</head>
+            <p>Sevilla. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s078n_0256">
+            <head>Lo que veo</head>
+            <lg n="1" type="cuarteto">
+               <l met="++-+-+---+-" rhyme="A" enjamb="pb_adj_noun">Yo miro el cielo azul y tras su
+                     <w type="rhyme">esfera</w></l>
+               <l met="-+-+-+---+-" rhyme="B">velados mundos sueña mi <w type="rhyme"
+                  >ardimiento</w>;</l>
+               <l met="+-+--+---+-" rhyme="B">miro el sol que ilumina el <w type="rhyme"
+                     >firmamento</w></l>
+               <l met="-++-++---+-" rhyme="A">y hallar pienso más luz tras su <w type="rhyme"
+                     >lumbrera</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--+---+-" rhyme="A" enjamb="pb_noun_prep">Miro el mar y en fantástica <w
+                     type="rhyme">quimera</w></l>
+               <l met="-+-+-+---+-" rhyme="B">del mar trasluzco el ámbito <w type="rhyme"
+                     >opulento</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B" enjamb="ex_dobj_verb">y el monte miro, y sueña el <w
+                     type="rhyme">pensamiento</w></l>
+               <l met="-+-+---+-+-" rhyme="A">los mil enigmas de la edad <w type="rhyme"
+                  >primera</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+-+-+-" rhyme="C" enjamb="pb_adj_adv">Mas cielo y tierra y mar y sol <w
+                     type="rhyme">brillante</w></l>
+               <l met="++-+---+-+-" rhyme="D">no anuncian tanto a mi febril <w type="rhyme"
+                     >vehemencia</w></l>
+               <l met="--+--+---+-" rhyme="E">como anuncia el pudor de tus <w type="rhyme"
+                     >sonrojos</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+--++---+-" rhyme="C">Pues hallo, si me fijo en tu <w type="rhyme"
+                     >semblante</w>,</l>
+               <l met="++-+-+---+-" rhyme="D" enjamb="pb_noun_prep">más mundos, luz, misterios y <w
+                     type="rhyme">opulencia</w></l>
+               <l met="--+--+---+-" rhyme="E">tras los limpios cristales de tus <w type="rhyme"
+                     >ojos</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

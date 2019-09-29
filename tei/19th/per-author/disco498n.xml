@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_498n">
+            <title property="dc:title">Sonetos de Rafael Verson Brunet</title>
+            <author property="dc:creator" resource="disco:498n" corresp="#disco_498n">Rafael Verson
+               Brunet</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">218</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_498n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_498n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_498n" about="disco:498n" typeOf="foaf:Person">
+                  <persName type="short">Verson Brunet</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Rafael</forename>
+                     <surname property="foaf:familyName">Verson Brunet</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Rafael Verson Brunet</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s498n_1857">
+                        <title property="dc:title">Algo extraño...</title>
+                        <title type="incipit" property="dc:alternative">Algo extraño se anuncia en
+                           mi cuerpo sensible</title>
+                     </bibl>
+                     <bibl resource="disco:s498n_1858">
+                        <title property="dc:title">Rosas rojas</title>
+                        <title type="incipit" property="dc:alternative">Estas rosas, pletóricas de
+                           escarlata violenta,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Rafael Verson Brunet</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s498n_1857">
+            <head>Algo extraño...</head>
+            <lg n="1" type="serventesio">
+               <l met="+-+--+--+--+-" rhyme="A" enjamb="cc_crossclause">Algo extraño se anuncia en
+                  mi cuerpo <w type="rhyme">sensible</w></l>
+               <l met="-+--+--+--+-" rhyme="B">que en lo íntimo turba y conmueve mi <w type="rhyme"
+                     >vida</w>,</l>
+               <l met="-++--++-+--+-" rhyme="A" enjamb="ex_subj_verb">y me clava, en la carne, una
+                  garra <w type="rhyme">invisible</w></l>
+               <l met="--+--+---+--+-" rhyme="B">el recuerdo lejano de tu cuerpo <w type="rhyme"
+                     >suicida</w></l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="--+--+---+--+-" rhyme="C" enjamb="cc_crossclause">Y se anima la llama del
+                  anhelo <w type="rhyme">inextinto</w></l>
+               <l met="-+--+---+-+-" rhyme="D">que antaño, insinuante, me obsedía por <w
+                     type="rhyme">verte</w>:</l>
+               <l met="--+--++-+--+-" rhyme="C" enjamb="cc_crossclause">en mi ser inferior me
+                  predice el <w type="rhyme">instinto</w></l>
+               <l met="--++++-----+-" rhyme="D">que de hallarte muy pronto a través de la <w
+                     type="rhyme">muerte</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+---+-+-" rhyme="E" enjamb="ex_subj_verb">De mi cuerpo terreno, se diría
+                  que <w type="rhyme">vibra</w></l>
+               <l met="+----+-+--+-" rhyme="E" enjamb="pb_noun_prep">un estremecimiento, en la
+                  íntima <w type="rhyme">fibra</w></l>
+               <l met="--+--+----+--" rhyme="F">por tu ser abolido, por tu psiqui <w type="rhyme"
+                     >olvidada</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--+---+--+-" rhyme="G">Y al lejano conjuro que mi interno <w type="rhyme"
+                     >conmueve</w>,</l>
+               <l met="+-+--+-+-++++-" rhyme="G" enjamb="ex_dobj_verb">me revela el instinto que he
+                  de hallarte muy <w type="rhyme">breve</w></l>
+               <l met="-----+---+--+-" rhyme="F">a través de la muerte, del abismo y la <w
+                     type="rhyme">nada</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s498n_1858">
+            <head>Rosas rojas</head>
+            <lg n="1" type="serventesio">
+               <l met="+-+--+----+--+" rhyme="A">Estas rosas, pletóricas de escarlata <w
+                     type="rhyme">violenta</w>,</l>
+               <l met="+-+-++-+-+-" rhyme="B">rojas, cual el deseo, cual la venganza y <w
+                     type="rhyme">cual</w></l>
+               <l met="-+---+-+-+--+-" rhyme="A">las púrpuras intensas de una herida <w type="rhyme"
+                     >sangrienta</w>,</l>
+               <l met="--+--+-+-+--+-" rhyme="B">y que dan sensaciones de un veneno <w type="rhyme"
+                     >mortal</w>,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+-+-+--+-" rhyme="C">semejan, entreabiertas, crueles bocas <w
+                     type="rhyme">malignas</w>,</l>
+               <l met="-+---+--+---+-" rhyme="D">espléndidas en hondas lujurias <w type="rhyme"
+                     >venenosas</w></l>
+               <l met="+-+--+-+-+-++-" rhyme="C" enjamb="pb_adj_prep">Estas rosas extrañas, estas
+                  rosas son <w type="rhyme">dignas</w></l>
+               <l met="--+--+---+--+-" rhyme="D">de los vasos de nieve de tus manos <w type="rhyme"
+                     >nerviosas</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+--+--+---+-" rhyme="-">Porque ellas florecen en raros maleficios,</l>
+               <l met="--+--+---+--+-" rhyme="-">y tus manos florecen en ofrendas al vicio</l>
+               <l met="--+-+---+--+-" rhyme="E">como ideas gemelas, como sueños que <w type="rhyme"
+                     >rimen</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+-+---+--+-" rhyme="F">A veces he sentido que se crispan mis <w
+                     type="rhyme">nervios</w>,</l>
+               <l met="-++--++-+--+-" rhyme="F" enjamb="ex_dobj_verb">pues he visto asomarse a tus
+                  ojos <w type="rhyme">soberbios</w></l>
+               <l met="--+--+---+--+-" rhyme="E">el fantasma silente del pecado y del <w
+                     type="rhyme">crimen</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

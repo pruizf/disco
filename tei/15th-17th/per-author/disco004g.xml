@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_004g">
+            <title property="dc:title">Sonetos de Cosme Gómez Tejada de los Reyes</title>
+            <author property="dc:creator" resource="disco:004g" corresp="#disco_004g">Cosme Gómez
+               Tejada de los Reyes</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">256</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_004g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_004g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_004g" about="disco:004g" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/22497996"/>
+                  <persName type="short">Gómez Tejada de los Reyes</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Cosme</forename>
+                     <surname property="foaf:familyName">Gómez Tejada de los Reyes</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Cosme Gómez Tejada de los
+                     Reyes</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date type="century">16</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s004g_0012">
+                        <title property="dc:title">Sonetos burlescos al suspiro de Crisaura</title>
+                        <title type="incipit" property="dc:alternative">Tiemble la tierra, y con
+                           furor horrendo</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Cosme Gómez Tejada de los Reyes</head>
+            <p>España. 16th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s004g_0012">
+            <head>Sonetos burlescos al suspiro de Crisaura</head>
+            <lg type="sonnet" xml:id="s004g_0012_01">
+               <head>- I -</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+--+---+-+-" rhyme="A" enjamb="ex_dobj_verb">Tiemble la tierra, y con
+                     furor <w type="rhyme">horrendo</w></l>
+                  <l met="+--+---+-+-" rhyme="B">Euro los montes de su gruta <w type="rhyme"
+                        >rompa</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="B" enjamb="pb_relword">al arma toque, y de su vana <w
+                        type="rhyme">trompa</w></l>
+                  <l met="+--+---+-+-" rhyme="A">huyan las nubes al horrible <w type="rhyme"
+                        >estruendo</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+--+-+-+-+-" rhyme="A">Tema volver al mundo al caos <w type="rhyme"
+                        >tremendo</w>,</l>
+                  <l met="-+---+---+-" rhyme="B" enjamb="ex_dobj_verb">y el móvil que sus cursos <w
+                        type="rhyme">interrumpa</w></l>
+                  <l met="-+-+---+-+-" rhyme="B">victoria clame, y con gloriosa <w type="rhyme"
+                        >pompa</w></l>
+                  <l met="-+-+-+---+-" rhyme="A">celebre el triunfo bravo y <w type="rhyme"
+                        >estupendo</w>;</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="--+--++--+-" rhyme="C" enjamb="ex_subj_verb">que si a toda la tierra es <w
+                        type="rhyme">formidable</w></l>
+                  <l met="-+-+-+---+-" rhyme="D">el viento bravo, vano y <w type="rhyme"
+                        >furibundo</w>,</l>
+                  <l met="+-+--+-+-+-" rhyme="C" enjamb="ex_subj_verb">un suspiro de amor con aura
+                        <w type="rhyme">afable</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+---+---+-" rhyme="D">suspende las esferas y el <w type="rhyme"
+                        >profundo</w>,</l>
+                  <l met="-+-+-+---+-" rhyme="C">sujeta al bruto más <w type="rhyme"
+                        >inexpugnable</w>,</l>
+                  <l met="--+--+++-+-" rhyme="D">y con él la razón, que es más que el <w
+                        type="rhyme">mundo</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s004g_0012_02">
+               <head>- II -</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+---+---+-" rhyme="A">Clarín, que rosicleres <w type="rhyme"
+                        >troglodita</w>,</l>
+                  <l met="+----+---+-" rhyme="B">no empero su tridente <w type="rhyme"
+                     >jovenetos</w>,</l>
+                  <l met="---+-+---+-" rhyme="B">acrocerauna prole de <w type="rhyme"
+                     >esqueletos</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="A">cristal anhela de esplendor <w type="rhyme"
+                        >cocita</w>;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+-+-+---+-" rhyme="A">Candar, si no pirausta, que <w type="rhyme"
+                        >anfitrita</w>,</l>
+                  <l met="+-+--+-+-+-" rhyme="B">poco cede, si mucho adunca <w type="rhyme"
+                        >abetos</w>,</l>
+                  <l met="+--+-+---+-" rhyme="B">Marte al amor construya <w type="rhyme"
+                        >parapetos</w>,</l>
+                  <l met="-+---+-+-+-" rhyme="A">crepúsculos vibrando impulso <w type="rhyme"
+                        >escita</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="---+-+-+-+-" rhyme="C" enjamb="pb_adj_prep">Sus, que penetra piro diente
+                        <w type="rhyme">eburno</w></l>
+                  <l met="--+--+---+-" rhyme="D" enjamb="ex_dobj_verb">al murice diseña y <w
+                        type="rhyme">colorido</w></l>
+                  <l met="+--+---+-+-" rhyme="E">brasas de Porcia, de Lucrecia <w type="rhyme"
+                        >copos</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="++-+---+-+-" rhyme="C">Dime, Favonio de cordial <w type="rhyme"
+                        >coturno</w>,</l>
+                  <l met="-++--+-+-+-" rhyme="D">¿posible es que a los astros te has <w type="rhyme"
+                        >mentido</w>?</l>
+                  <l met="--++---+-+-" rhyme="E">¡Oh, amor! Si piras, ¿para qué <w type="rhyme"
+                        >piropos</w>?</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s004g_0012_03">
+               <head>- III -</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+---+---+-" rhyme="A">Suspira el avariento por <w type="rhyme"
+                     >dinero</w>,</l>
+                  <l met="--+--+---+-" rhyme="B">por venganza el cobarde y <w type="rhyme"
+                        >desalmado</w>,</l>
+                  <l met="--+---++--+-" rhyme="B">el lascivo en sus vivios <w type="rhyme"
+                        >obstinado</w>,</l>
+                  <l met="--+--+---+-" rhyme="A">de ambición combatido el <w type="rhyme"
+                        >caballero</w>;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+---+---+-" rhyme="A">suspira por comer el <w type="rhyme"
+                     >escudero</w>,</l>
+                  <l met="-+---+---+-" rhyme="B">por pleitos y discordias el <w type="rhyme"
+                        >letrado</w>,</l>
+                  <l met="--+--+---+-" rhyme="B">por enfermos el médico <w type="rhyme"
+                     >olvidado</w>,</l>
+                  <l met="-++--+---+-" rhyme="A">por un príncipe necio el <w type="rhyme"
+                        >lisonjero</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+---+-+-+-" rhyme="C">Suspira por su dama el pobre <w type="rhyme"
+                        >ausente</w>,</l>
+                  <l met="-+---+---+-" rhyme="D">quien goza porque vive <w type="rhyme"
+                     >temeroso</w>,</l>
+                  <l met="+----+-+-+-" rhyme="E">ella porque su gusto no <w type="rhyme"
+                     >acomoda</w>;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+---+-+-" rhyme="C">suspiran todos, o su mal <w type="rhyme"
+                        >presente</w>,</l>
+                  <l met="-+-+-+---+-" rhyme="D">o el bien que falta siempre <w type="rhyme"
+                        >perezoso</w>;</l>
+                  <l met="-+---+---+-" rhyme="E">Crisaura por la noche de la <w type="rhyme"
+                        >boda</w></l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_555n">
+            <title property="dc:title">Sonetos de Alberto Valero Martín</title>
+            <author property="dc:creator" resource="disco:555n" corresp="#disco_555n">Alberto Valero
+               Martín</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">276</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_555n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_555n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_555n" about="disco:555n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/107017554"/>
+                  <persName type="short">Valero Martín</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Alberto</forename>
+                     <surname property="foaf:familyName">Valero Martín</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Alberto Valero Martín</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s555n_2038">
+                        <title property="dc:title">Nunca mi labio...</title>
+                        <title type="incipit" property="dc:alternative">Nunca mi labio romperá el
+                           secreto,</title>
+                     </bibl>
+                     <bibl resource="disco:s555n_2039">
+                        <title property="dc:title">Y muriendo por ti...</title>
+                        <title type="incipit" property="dc:alternative">Voy a morir... Mi espíritu
+                           me advierte</title>
+                     </bibl>
+                     <bibl resource="disco:s555n_2040">
+                        <title property="dc:title">Haga Dios...</title>
+                        <title type="incipit" property="dc:alternative">Haga Dios que de un hombre
+                           te enamores</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Alberto Valero Martín</head>
+            <p>España. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s555n_2038">
+            <head>Nunca mi labio...</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">Nunca mi labio romperá el <w type="rhyme"
+                  >secreto</w>,</l>
+               <l met="--+-++---+-" rhyme="B">que por mí será siempre <w type="rhyme"
+                     >indescifrable</w>,</l>
+               <l met="--++-+---+-" rhyme="B">del dolor me traspasa, <w type="rhyme"
+                  >inexorable</w>,</l>
+               <l met="+--+-+---+-" rhyme="A">toda mi entraña, todo mi <w type="rhyme"
+                  >esqueleto</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+-+-+-" rhyme="C">Mas si rompiendo esta cruel <w type="rhyme"
+                  >cadena</w></l>
+               <l met="-+-+---+-+-" rhyme="D">mi fin abrevio con mi propia <w type="rhyme"
+                  >mano</w>,</l>
+               <l met="--+--+---+-" rhyme="D" enjamb="pb_noun_prep">y queréis penetrar en el <w
+                     type="rhyme">arcano</w></l>
+               <l met="-+---+-+-+-" rhyme="C">del íntimo por qué de tanta <w type="rhyme"
+                  >pena</w>,</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+++----+-" rhyme="E" enjamb="ex_dobj_verb">preguntadle a la hembra <w
+                     type="rhyme">olvidadiza</w></l>
+               <l met="--+--+--++-" rhyme="F" enjamb="pb_noun_prep">que mi vida amustió con los dos
+                     <w type="rhyme">trazos</w></l>
+               <l met="+-+--+---+-" rhyme="E">de una cruz de traición y de <w type="rhyme"
+                     >ceniza</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--++--+-" rhyme="F" enjamb="ex_dobj_verb">A la mala mujer que hizo <w
+                     type="rhyme">pedazos</w></l>
+               <l met="---+++-+-+-" rhyme="E">mi juventud, que es sólo ya una <w type="rhyme"
+                     >triza</w>,</l>
+               <l met="---+-+---+-" rhyme="F">y el corazón también, entre tus <w type="rhyme"
+                     >brazos</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s555n_2039">
+            <head>Y muriendo por ti...</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+-+--++-" rhyme="A" enjamb="ex_dobj_verb">Voy a morir Mi espíritu me <w
+                     type="rhyme">advierte</w></l>
+               <l met="---+---+-+-" rhyme="B">que silenciosa, imperturbable y <w type="rhyme"
+                     >fiera</w></l>
+               <l met="--+--+---+-" rhyme="B">con pisar cauteloso de <w type="rhyme"
+                  >pantera</w>,</l>
+               <l met="++---+---+-" rhyme="A">me acosa persigiéndome la <w type="rhyme"
+                  >muerte</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--++--+-" rhyme="A">¡Y muriendo por ti, muero sin <w type="rhyme"
+                     >verte</w>!</l>
+               <l met="++---++--+-" rhyme="B">¡Qué triste llegará mi hora <w type="rhyme"
+                     >postrera</w>!</l>
+               <l met="+--+-+---+-" rhyme="B">¡No cerrarás mis ojos cuando <w type="rhyme"
+                  >muera</w></l>
+               <l met="---+---+-+-" rhyme="A">ni llorarás sobre mi cuerpo <w type="rhyme"
+                  >inerte</w>!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+---+-+-" rhyme="C">Yo era dichoso cuando eras <w type="rhyme">mía</w></l>
+               <l met="++-+---+-+-" rhyme="D" enjamb="pb_adj_noun">Hoy me traicionas, y mi amor <w
+                     type="rhyme">gigante</w></l>
+               <l met="+--+---+-+-" rhyme="C">término pone a mi existencia <w type="rhyme"
+                  >fría</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+-+---+-" rhyme="D">¡Y sabe Dios si acaso en el <w type="rhyme"
+                     >instante</w></l>
+               <l met="--+--+---+-" rhyme="C">en que sufro mi bárbara <w type="rhyme">agonía</w></l>
+               <l met="-+---+-+-+-" rhyme="D">deliras en los brazos de otro <w type="rhyme"
+                     >amante</w>!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s555n_2040">
+            <head>Haga Dios...</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+-++-+-+-" rhyme="A" enjamb="ex_subj_verb">Haga Dios que de un hombre te <w
+                     type="rhyme">enamores</w></l>
+               <l met="-++--++--+-" rhyme="B">y te deje buscando otras <w type="rhyme"
+                  >mujeres</w>,</l>
+               <l met="-++-++--++-" rhyme="B" enjamb="ex_dobj_verb">que te quiera tan mal como me <w
+                     type="rhyme">quieres</w></l>
+               <l met="-+-+-+-+++-" rhyme="A">que le seduzcan cuanto más le <w type="rhyme"
+                     >adores</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---++--+-" rhyme="A">Que sólo para ti tenga <w type="rhyme">rigores</w></l>
+               <l met="-+---+---+-" rhyme="B">y olvide desdeñoso tus <w type="rhyme"
+                  >quereres</w></l>
+               <l met="--+--+--++-" rhyme="B" enjamb="ex_dobj_verb">y contemple impasible que te <w
+                     type="rhyme">mueres</w></l>
+               <l met="+-+--+---+-" rhyme="A">hecha trizas el alma de <w type="rhyme"
+                  >dolores</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+++-+-+-" rhyme="C">Que tu clamor no llegue nunca al <w type="rhyme"
+                     >cielo</w>,</l>
+               <l met="-+--+----+-" rhyme="D">que sea tu infortunio su <w type="rhyme"
+                  >alegría</w>,</l>
+               <l met="-+-+---+-+-" rhyme="C">que tenga el alma para ti de <w type="rhyme"
+                  >hielo</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--+++-+-" rhyme="D">Que aborrezca tu amor más cada <w type="rhyme"
+                  >día</w>,</l>
+               <l met="--+--+---+-" rhyme="C">que te niegue hasta el último <w type="rhyme"
+                     >consuelo</w></l>
+               <l met="--++-++--+-" rhyme="D">¡y que te escupa al verte en la <w type="rhyme"
+                     >agonía</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

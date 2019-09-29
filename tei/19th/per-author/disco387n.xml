@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_387n">
+            <title property="dc:title">Sonetos de Miguel W. Garaycochea</title>
+            <author property="dc:creator" resource="disco:387n" corresp="#disco_387n">Miguel W.
+               Garaycochea</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">9</measure>
+            <measure unit="tokens">807</measure>
+            <measure unit="line">126</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_387n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_387n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_387n" about="disco:387n" typeOf="foaf:Person">
+                  <persName type="short">Garaycochea</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Miguel W.</forename>
+                     <surname property="foaf:familyName">Garaycochea</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Miguel W. Garaycochea</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Arequipa</settlement>
+                           <country property="schema:birthPlace" inlist="">Perú</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1816" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Trujillo</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1861" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s387n_1481">
+                        <title property="dc:title">Sonetos</title>
+                        <title type="incipit" property="dc:alternative">¿No te ha buscado, Filis, un
+                           mancebo</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Miguel W. Garaycochea</head>
+            <p>Arequipa (Perú). 1816 - 1861</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s387n_1481">
+            <head>Sonetos</head>
+            <lg type="sonnet" xml:id="s387n_1481_01">
+               <head>I</head>
+               <lg n="1" type="cuarteto">
+                  <l met="++-+-+-+-+-" rhyme="A" enjamb="pb_noun_prep">¿No te ha buscado, Filis, un
+                        <w type="rhyme">mancebo</w></l>
+                  <l met="--+--+-+-+-" rhyme="B">de gallarda presencia, rostro <w type="rhyme"
+                        >hermoso</w>,</l>
+                  <l met="--+--++--+-" rhyme="B">halagüeño mirar, lindo y <w type="rhyme"
+                        >gracioso</w>,</l>
+                  <l met="+--+---+-+-" rhyme="A">cual aparece por oriente <w type="rhyme"
+                     >Febo</w>?</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="--+--++--+-" rhyme="A">Si a buscar tu beldad fuese de <w type="rhyme"
+                        >nuevo</w>,</l>
+                  <l met="-+-+++---+-" rhyme="B">recíbele de un modo <w type="rhyme"
+                     >cariñoso</w>,</l>
+                  <l met="---+-+---+-" rhyme="B">pues, aunque niño tierno y <w type="rhyme"
+                        >amoroso</w>,</l>
+                  <l met="+--+-+-+++-" rhyme="A">es el terrible amor, decirte <w type="rhyme"
+                        >debo</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="---+++---+-" rhyme="C">Mi corazón te mando, entre tus <w type="rhyme"
+                        >manos</w>,</l>
+                  <l met="++-+-+--++-" rhyme="D" enjamb="cc_crossclause">cual una pira ardiendo en
+                     la cruel <w type="rhyme">llama</w></l>
+                  <l met="--+--+---+-" rhyme="C">que prendieron tus ojos <w type="rhyme"
+                        >soberanos</w>,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+-+-+-+-" rhyme="D">que su quietud perdida te <w type="rhyme"
+                        >reclama</w>;</l>
+                  <l met="---+---+-+-" rhyme="C" enjamb="ex_subj_verb">o que dejando los temores <w
+                        type="rhyme">vanos</w></l>
+                  <l met="+----+---+-" rhyme="D">le ames en recompensa cuanto te <w type="rhyme"
+                        >ama</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_02">
+               <head>II</head>
+               <lg n="1" type="cuarteto">
+                  <l met="---+-+---+-" rhyme="A" enjamb="pb_adj_prep">Como tremendo rayo que <w
+                        type="rhyme">impaciente</w></l>
+                  <l met="-++--++--+-" rhyme="B" enjamb="ex_dobj_verb">de verse en opresión, rompe
+                        <w type="rhyme">furioso</w></l>
+                  <l met="-+---+---+-" rhyme="B" enjamb="pb_noun_prep">el seno de la nube y <w
+                        type="rhyme">desdeñoso</w></l>
+                  <l met="-+-+-+---+-" rhyme="A">de la alta esfera baja <w type="rhyme"
+                        >reluciente</w>;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="--+--+---+-" rhyme="A">e infundiendo terror al <w type="rhyme"
+                        >insolente</w></l>
+                  <l met="--+-++---+-" rhyme="B">ilumina y no daña al que <w type="rhyme"
+                        >medroso</w>,</l>
+                  <l met="-----+---+-" rhyme="B">en medio del silencio <w type="rhyme"
+                     >tenebroso</w>,</l>
+                  <l met="-+-+-+---+-" rhyme="A">perdió la senda y huye de <w type="rhyme"
+                        >repente</w>;</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-++--+-+-+-" rhyme="C" enjamb="ex_subj_verb">así este héroe inmortal de
+                     eterna <w type="rhyme">fama</w></l>
+                  <l met="+-+----+-+-" rhyme="D">viene y aterra al opresor <w type="rhyme"
+                        >cobarde</w>,</l>
+                  <l met="-+---+-+-+-" rhyme="C" enjamb="pb_verb_cprep">alumbra nuestra dicha, nos
+                        <w type="rhyme">inflama</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+-+--++-" rhyme="D">del entusiasmo patrio que en él <w type="rhyme"
+                        >arde</w>,</l>
+                  <l met="-----+-+-+-" rhyme="C">y cuando «Libertad» su voz <w type="rhyme"
+                        >proclama</w>,</l>
+                  <l met="++-+---+-+-" rhyme="D">muere aún haciendo del morir <w type="rhyme"
+                        >alarde</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_03">
+               <head>III</head>
+               <lg n="1" type="cuarteto">
+                  <l met="++--+--+-+-" rhyme="A">¿Qué fuego, ¡ay! Dios, acá en el pecho <w
+                        type="rhyme">siento</w>?</l>
+                  <l met="+--++-+--+-" rhyme="B">¿Qué poderío tiene aún en mi <w type="rhyme"
+                        >mente</w>?</l>
+                  <l met="++--++---+-" rhyme="B">¿Qué incendio que me hiela de <w type="rhyme"
+                        >repente</w></l>
+                  <l met="+--++----+-" rhyme="A">y hielo que me abrasa en el <w type="rhyme"
+                        >momento</w>?</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="++--++-+-+-" rhyme="A">¿Qué agrado que me causa gran <w type="rhyme"
+                        >tormento</w></l>
+                  <l met="--+-++-+-+-" rhyme="B">y pesar que me agrada <w type="rhyme"
+                        >fuertemente</w>?</l>
+                  <l met="++-+-+---+-" rhyme="B" enjamb="ex_subj_verb">¿Qué dulce vida que amo <w
+                        type="rhyme">diligente</w></l>
+                  <l met="-+-+++---+-" rhyme="A">y muerte amarga es ya la que <w type="rhyme"
+                        >sustento</w>?</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="++++-+---+-" rhyme="C">¿Qué herida es esta igual con el <w type="rhyme"
+                        >remedio</w>?</l>
+                  <l met="+-+--+-+++-" rhyme="D">¿Qué tormenta que al mismo tiempo es <w
+                        type="rhyme">calma</w>?</l>
+                  <l met="-+-+---+-+-" rhyme="C">¿Y qué deleite parecido al <w type="rhyme"
+                        >tedio</w>?</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="+-+--+-+-+-" rhyme="D" enjamb="ex_subj_verb">Este incógnito mal que sufre
+                     el <w type="rhyme">alma</w></l>
+                  <l met="+-+--+---+-" rhyme="C" enjamb="cc_crossclause">es efecto de amor, que en
+                     el <w type="rhyme">asedio</w></l>
+                  <l met="+----+-+-+-" rhyme="D">que hizo a mi voluntad, ganó la <w type="rhyme"
+                        >palma</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_04">
+               <head>IV</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+-+--++-+-" rhyme="A">Nací y lloré sin haber aún <w type="rhyme"
+                        >sentido</w></l>
+                  <l met="--+-+-+--+-" rhyme="B">si tenía experiencia en ese <w type="rhyme"
+                        >estado</w>,</l>
+                  <l met="-+-+-+---+-" rhyme="B">entré en razón, y entonces, <w type="rhyme"
+                        >desdichado</w>,</l>
+                  <l met="+-+--+-+-+-" rhyme="A">toda clase de penas he <w type="rhyme"
+                     >sufrido</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="---+-+-+-+-" rhyme="A">Mi juventud se acerca ya al <w type="rhyme"
+                        >olvido</w>;</l>
+                  <l met="--++-+---+-" rhyme="B">la vejez llega a paso <w type="rhyme"
+                        >apresurado</w>;</l>
+                  <l met="---+-+---+-" rhyme="B" enjamb="ex_subj_verb">y de la muerte el rostro <w
+                        type="rhyme">descarnado</w></l>
+                  <l met="-+-+++-+-+-" rhyme="A">veré patente un día no <w type="rhyme"
+                     >sabido</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+--+++-+-+-" rhyme="C">¿No es, pues, la vida un don bastante <w
+                        type="rhyme">triste</w>?</l>
+                  <l met="+++--+---+-" rhyme="D">¿No es un peso que abruma a los <w type="rhyme"
+                        >mortales</w>?</l>
+                  <l met="+--+---+-+-" rhyme="C">¡Nada se sufre cuando no se <w type="rhyme"
+                        >existe</w>!</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="+-+--+---+-" rhyme="D">Esto dicen los hombres <w type="rhyme"
+                        >inmorales</w></l>
+                  <l met="---+---+++-" rhyme="C">a quienes ya la religión no <w type="rhyme"
+                        >asiste</w></l>
+                  <l met="---+-+---+-" rhyme="D">con la esperanza en premios <w type="rhyme"
+                        >inmortales</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_05">
+               <head>V</head>
+               <lg n="1" type="serventesio">
+                  <l met="--++-+-+-+-" rhyme="A" enjamb="pb_noun_prep">¿Para qué hacer, Adolfo,
+                     estudio <w type="rhyme">serio</w></l>
+                  <l met="--+--+---+-" rhyme="B">de natura, sus obras y <w type="rhyme"
+                        >excelencia</w>,</l>
+                  <l met="-+++-+-+-+-" rhyme="A" enjamb="cc_crossclause">si todo es un arcano y un
+                        <w type="rhyme">misterio</w></l>
+                  <l met="--+--+---+-" rhyme="B">que supera a la humana <w type="rhyme"
+                        >inteligencia</w>?</l>
+               </lg>
+               <lg n="2" type="serventesio">
+                  <l met="--+--+---+-" rhyme="A" enjamb="ex_dobj_verb">¿Para qué sujetar a nuestro
+                        <w type="rhyme">imperio</w></l>
+                  <l met="--+--+---+-" rhyme="B">los principios abstractos de la <w type="rhyme"
+                        >ciencia</w></l>
+                  <l met="--+--+---+-" rhyme="A">para sólo sacar, con <w type="rhyme"
+                     >magisterio</w>,</l>
+                  <l met="+-+--+---+-" rhyme="B">una oscura o errada <w type="rhyme"
+                        >consecuencia</w>?</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="--+--+---+-" rhyme="C" enjamb="pb_noun_prep">¿Para dar solución a los <w
+                        type="rhyme">engaños</w></l>
+                  <l met="+-+---+--+-" rhyme="D">de una inútil sofistica <w type="rhyme"
+                     >disputa</w></l>
+                  <l met="-+-+---+-+-" rhyme="-">con tono seco, retumbante y grave?</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="+++----+-+-" rhyme="C">Yo veo, Adolfo, que el mortal sus <w type="rhyme"
+                        >años</w></l>
+                  <l met="--+--+-+-+-" rhyme="D">a Minerva por más que los <w type="rhyme"
+                        >tributa</w>,</l>
+                  <l met="+-+--+-+-+-" rhyme="-">sólo llega a saber que sabe nada.</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_06">
+               <head>VI</head>
+               <lg n="1" type="serventesio">
+                  <l met="---+-+-+-+-" rhyme="A" enjamb="pb_noun_prep">Cuando se llega a hacer
+                     estudio <w type="rhyme">serio</w></l>
+                  <l met="--+--+---+-" rhyme="B">de natura, sus obras y <w type="rhyme"
+                        >excelencia</w>,</l>
+                  <l met="-+---+---+-" rhyme="A" enjamb="ex_dobj_verb">penetra sus arcanos y <w
+                        type="rhyme">misterio</w></l>
+                  <l met="-+---+---+-" rhyme="B">el hombre que posee <w type="rhyme"
+                        >inteligencia</w></l>
+               </lg>
+               <lg n="2" type="serventesio">
+                  <l met="-+---+---+-" rhyme="A">Sujetas las verdades a su <w type="rhyme"
+                        >imperio</w>;</l>
+                  <l met="-+---+---+-" rhyme="B">conoce los principios de la <w type="rhyme"
+                        >ciencia</w>;</l>
+                  <l met="-+---+---+-" rhyme="A">y de ellos, con prudente <w type="rhyme"
+                        >magisterio</w>,</l>
+                  <l met="-+---+---+-" rhyme="B">deduce la inmediata <w type="rhyme"
+                        >consecuencia</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="--+--+---+-" rhyme="C" enjamb="cc_crossclause">El sofisma desata y los <w
+                        type="rhyme">engaños</w></l>
+                  <l met="-+---+---+-" rhyme="D">que ocultan la verdad en la <w type="rhyme"
+                        >disputa</w>,</l>
+                  <l met="---+-+-+-+-" rhyme="E">y su sentencia es dictamen <w type="rhyme"
+                        >grave</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+---+-+-" rhyme="C">Adolfo mío, con placer tus <w type="rhyme"
+                     >años</w></l>
+                  <l met="--+--+---+-" rhyme="D">a Minerva, cual feudo, pues, <w type="rhyme"
+                        >tributa</w>,</l>
+                  <l met="-+-+-+-+-+-" rhyme="E">que el hombre vive tanto cuanto <w type="rhyme"
+                        >sabe</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_07">
+               <head>VII</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+---+-+-+-" rhyme="A">Al campo de batalla va <w type="rhyme"
+                     >Panthea</w></l>
+                  <l met="--+--+-+-+-" rhyme="B">esperando encontrar su esposo <w type="rhyme"
+                        >vivo</w>,</l>
+                  <l met="---+-++--+-" rhyme="B">mas su tormento fue tan <w type="rhyme"
+                        >excesivo</w></l>
+                  <l met="-+++---+-+-" rhyme="A">al verlo muerto, que morir <w type="rhyme"
+                        >desea</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+--+--+--+-" rhyme="A">Toma la sangre que el suelo <w type="rhyme"
+                        >humea</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="B">con ella baña su semblante <w type="rhyme"
+                        >esquivo</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="B">sus bellas manos y su pecho <w type="rhyme"
+                        >altivo</w>,</l>
+                  <l met="-+-+-----+-" rhyme="A">y de este modo, ¡cielos!, se <w type="rhyme"
+                        >recrea</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-++-+---+-" rhyme="C" enjamb="ex_subj_verb">En fin ¡horror! su mano <w
+                        type="rhyme">ensangrentada</w></l>
+                  <l met="+--+---+-+-" rhyme="D" enjamb="ex_subj_verb">toma el acero; su animoso <w
+                        type="rhyme">pecho</w></l>
+                  <l met="+--+-+---+-" rhyme="C">rasga con furia ya <w type="rhyme"
+                     >desesperada</w>;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+-+--++-" rhyme="D">sobre su esposo cae; y, bajo un <w type="rhyme"
+                        >techo</w></l>
+                  <l met="---+-+-+-+-" rhyme="C">en el sepulcro habiten, dice, <w type="rhyme"
+                        >airada</w>,</l>
+                  <l met="---+-+--++-" rhyme="D">los que durmieron juntos en un <w type="rhyme"
+                        >lecho</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_08">
+               <head>VIII</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+-+-+-+-+-" rhyme="A" enjamb="cc_crossclause">¿Adónde, ¡oh, patria!,
+                     existe el brazo <w type="rhyme">fuerte</w></l>
+                  <l met="-++--+---+-" rhyme="B">que te dio libertad o <w type="rhyme"
+                        >independencia</w>?</l>
+                  <l met="-+-+-+---+-" rhyme="B" enjamb="pb_noun_prep">¿Adónde aquel que nunca cual
+                        <w type="rhyme">herencia</w></l>
+                  <l met="--+--+-+-+-" rhyme="A">de tiranos injustos pudo <w type="rhyme"
+                     >verte</w>?</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+-+--++-+-" rhyme="A">¿Qué es de Boza, por fin ? ¡Oh dura <w type="rhyme"
+                        >suerte</w>!</l>
+                  <l met="-+-+-+---+-" rhyme="B" enjamb="pb_noun_prep">Corrió su infausta sangre con
+                        <w type="rhyme">violencia</w></l>
+                  <l met="--+--+---+-" rhyme="B" enjamb="pb_noun_prep">en el banco fatal, a la <w
+                        type="rhyme">presencia</w></l>
+                  <l met="++-+---+-+-" rhyme="A">de un pueblo todo que lloró su <w type="rhyme"
+                        >muerte</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="---+-+-+-+-" rhyme="C">Mas si su cuerpo yace en esta <w type="rhyme"
+                        >losa</w>,</l>
+                  <l met="-+---+-+-+-" rhyme="D">su espíritu inmortal, allá en la <w type="rhyme"
+                        >gloria</w>,</l>
+                  <l met="--+--+-+-+-" rhyme="-">de su heroica virtud el premio goza.</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+---+---+-" rhyme="D" enjamb="ex_dobj_verb">Y nunca borrará de su <w
+                        type="rhyme">memoria</w></l>
+                  <l met="-+---+-+-+-" rhyme="C">el pueblo de Arequipa tan <w type="rhyme"
+                        >odiosa</w>,</l>
+                  <l met="+--+-+-+-+-" rhyme="D">tan lamentable, tan funesta <w type="rhyme"
+                        >historia</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s387n_1481_09">
+               <head>IX</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-++--++-++-" rhyme="A">Al darte el corazón, dulce bien <w type="rhyme"
+                        >mío</w>,</l>
+                  <l met="+-+--+--++-" rhyme="B" enjamb="pb_adj_noun">no al influjo cedí de fatal <w
+                        type="rhyme">hado</w></l>
+                  <l met="+-+--+---+-" rhyme="B" enjamb="ex_dobj_verb">n de torpes deseos <w
+                        type="rhyme">dominado</w></l>
+                  <l met="-+---+---+-" rhyme="A">la llave te entregué de mi <w type="rhyme"
+                        >albedrío</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+---+---+-" rhyme="A">Ni culpo del amor al <w type="rhyme"
+                     >poderío</w>,</l>
+                  <l met="-++--+---+-" rhyme="B">pues te quise y amé sobre <w type="rhyme"
+                        >pensado</w>;</l>
+                  <l met="+-+-++---+-" rhyme="B" enjamb="ex_subj_verb">ni un afecto tan tierno y <w
+                        type="rhyme">delicado</w></l>
+                  <l met="+-+--++--+-" rhyme="A">ha podido nacer de un <w type="rhyme"
+                     >desvarío</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+---+---+-" rhyme="C">Tampoco el esplendor de tu <w type="rhyme"
+                        >hermosura</w>,</l>
+                  <l met="---+-+-+-+-" rhyme="D" enjamb="pb_noun_prep">tu juventud, tus gracias,
+                     fueron <w type="rhyme">parte</w></l>
+                  <l met="-----+---+-" rhyme="C">para que cautivaras mi <w type="rhyme"
+                     >ternura</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="--+--+---+-" rhyme="D">La belleza se gasta, pese al <w type="rhyme"
+                        >arte</w>;</l>
+                  <l met="---+---+-+-" rhyme="C">pero el talento para siempre <w type="rhyme"
+                        >dura</w>:</l>
+                  <l met="---+-+-+-+-" rhyme="D">el tuyo me prendó ¿podré <w type="rhyme"
+                        >olvidarte</w>?</l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

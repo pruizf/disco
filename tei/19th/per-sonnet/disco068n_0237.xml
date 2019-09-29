@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s068n_0237">
+            <title property="dc:title">A los estudiantes</title>
+            <author property="dc:creator" resource="disco:s068n_0237">Julián del Casal</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">79</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s068n_0237"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_068n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_068n" about="disco:068n" typeOf="foaf:Person">
+                  <persName type="short">Casal</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Julián</forename>
+                     <nameLink>del</nameLink>
+                     <surname property="foaf:familyName">Casal</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Julián del Casal</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">La Habana</settlement>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1863" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1893" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s068n_0237">
+                        <title property="dc:title">A los estudiantes</title>
+                        <title type="incipit" property="dc:alternative">Víctimas de la cruenta alevosía</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s068n_0237">
+            <head>A los estudiantes</head>
+            <lg n="1" type="cuarteto">
+               <l met="+----+---+-" rhyme="A" enjamb="ex_subj_verb">Víctimas de la cruenta <w type="rhyme">alevosía</w>
+               </l>
+               <l met="-+---+---+-" rhyme="B">doblásteis en la tierra vuestras <w type="rhyme">frentes</w>,</l>
+               <l met="---+-+---+-" rhyme="B" enjamb="pb_adj_noun">como en los campos llenos de <w type="rhyme">simientes</w>
+               </l>
+               <l met="+--+---+-+-" rhyme="A">palmas que troncha tempestad <w type="rhyme">bravía</w>
+               </l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++---+---+-" rhyme="A" enjamb="pb_adj_noun">Aun vagan en la atmósfera <w type="rhyme">sombría</w>
+               </l>
+               <l met="--+--+---+-" rhyme="B">vuestros últimos gritos <w type="rhyme">inocentes</w>,</l>
+               <l met="-+---+---+-" rhyme="B" enjamb="pb_noun_prep">mezclados a los golpes <w type="rhyme">estridentes</w>
+               </l>
+               <l met="-+---+---+-" rhyme="A">del látigo que suena <w type="rhyme">todavía</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+---+-" rhyme="C" enjamb="pb_adj_prep">¡Dormid en paz los sueños <w type="rhyme">postrimeros</w>
+               </l>
+               <l met="--+--+---+-" rhyme="D">en el seno profundo de la <w type="rhyme">nada</w>,</l>
+               <l met="-++--+---++-" rhyme="E">que nadie ha de venir a <w type="rhyme">perturbaros</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--++-+---++-" rhyme="C">los que ayer no supieron <w type="rhyme">defenderos</w>
+               </l>
+               <l met="+-+--+---+-" rhyme="D">solo pueden con alma <w type="rhyme">resignada</w>,</l>
+               <l met="--+--+---++-" rhyme="E">soportar la vergüenza de <w type="rhyme">lloraros</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

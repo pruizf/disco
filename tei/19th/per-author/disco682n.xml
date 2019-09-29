@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_682n">
+            <title property="dc:title">Sonetos de Patricio Perera Álvarez</title>
+            <author property="dc:creator" resource="disco:682n" corresp="#disco_682n">Patricio
+               Perera Álvarez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">173</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_682n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_682n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_682n" about="disco:682n" typeOf="foaf:Person">
+                  <persName type="short">Perera Álvarez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Patricio</forename>
+                     <surname property="foaf:familyName">Perera Álvarez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Patricio Perera Álvarez</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Tenerife</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1856" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1899" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s682n_2454">
+                        <title property="dc:title">Muerte de Tinguaro</title>
+                        <title type="incipit" property="dc:alternative">Con pujanza el isleño y
+                           vigor raro</title>
+                     </bibl>
+                     <bibl resource="disco:s682n_2455">
+                        <title property="dc:title">A Fabio</title>
+                        <title type="incipit" property="dc:alternative">Si no comprendes lo que
+                           digo, Fabio,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Patricio Perera Álvarez</head>
+            <p>Tenerife. 1856 - 1899</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s682n_2454">
+            <head>Muerte de Tinguaro</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--+--++-" rhyme="A" enjamb="ex_subj_verb">Con pujanza el isleño y vigor <w
+                     type="rhyme">raro</w></l>
+               <l met="---+---+-+-" rhyme="B">su independencia sostener <w type="rhyme"
+                  >pretende</w>,</l>
+               <l met="--++---+-+-" rhyme="B" enjamb="pb_verb_cprep">que el amor santo de la patria
+                     <w type="rhyme">enciende</w></l>
+               <l met="---+---+-+-" rhyme="A">de su valor el esplendente <w type="rhyme"
+                  >faro</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+--+--+-" rhyme="A">¡Mas todo inútil fue! Cayó <w type="rhyme"
+                     >Tinguaro</w>,</l>
+               <l met="-+---+-+-+-" rhyme="B">el fuerte campeón que la <w type="rhyme"
+                  >defiende</w>,</l>
+               <l met="--++---+-+-" rhyme="B">y sin él ya, la retirada <w type="rhyme"
+                  >emprende</w>,</l>
+               <l met="-+-+---+-+-" rhyme="A">dejando el campo al español <w type="rhyme"
+                     >preclaro</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+---+-+-" rhyme="C">Nada se opone a su triunfante <w type="rhyme"
+                  >paso</w>,</l>
+               <l met="---+---+-+-" rhyme="D" enjamb="pb_adj_noun">abandonando la encantada <w
+                     type="rhyme">vega</w></l>
+               <l met="--+--+---+-" rhyme="C">temerario adelanta hacia el <w type="rhyme"
+                  >ocaso</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--++-++-" rhyme="D">Al abrupto Acentejo otra vez <w type="rhyme"
+                  >llega</w></l>
+               <l met="-+---++--+-" rhyme="C">y allí donde sufrió duro <w type="rhyme"
+                  >fracaso</w></l>
+               <l met="---+---+-+-" rhyme="D">su victorioso pabellón <w type="rhyme"
+                  >despliega</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s682n_2455">
+            <head>A Fabio</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A">Si no comprendes lo que digo, <w type="rhyme"
+                     >Fabio</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="B">¿por qué tu lengua me critica <w type="rhyme"
+                     >fiera</w>?</l>
+               <l met="-++--+---+-" rhyme="B">Si no puedes llegar hasta la <w type="rhyme"
+                     >esfera</w></l>
+               <l met="---+-+-+-+-" rhyme="A">en donde giro, cállese tu <w type="rhyme"
+                  >labio</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+++--++--+-" rhyme="A" enjamb="ex_dobj_verb">No creas, necio, que me infiere
+                     <w type="rhyme">agravio</w></l>
+               <l met="-+---++--+-" rhyme="B">tu crítica mordaz, simple y <w type="rhyme"
+                  >artera</w>,</l>
+               <l met="---+++---+-" rhyme="B" enjamb="pb_verb_adv">pues en verdad te digo que <w
+                     type="rhyme">quisiera</w></l>
+               <l met="+----+-+-+-" rhyme="A">más que tu parabién, castigo <w type="rhyme"
+                  >sabio</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+----+---+-" rhyme="C" enjamb="ex_subj_verb">¿Piensas que por tener en la <w
+                     type="rhyme">memoria</w></l>
+               <l met="-+-+---+-+-" rhyme="D" enjamb="pb_adj_noun">trilladas reglas del divino <w
+                     type="rhyme">arte</w></l>
+               <l met="-+-+-+---+-" rhyme="C" enjamb="ex_subj_verb">conoces ya la senda de la <w
+                     type="rhyme">gloria</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+-+---+-" rhyme="D">y puedes sabio y crítico <w type="rhyme"
+                  >llamarte</w>?</l>
+               <l met="-+--+-+--+-" rhyme="C">Tu creencia, ¡oh, pedante, es <w type="rhyme"
+                     >ilusoria</w>:</l>
+               <l met="++-+-+---+-" rhyme="D">no olvides, no, la fábula de <w type="rhyme"
+                     >Iriarte</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

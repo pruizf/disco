@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s580n_2142">
+            <title property="dc:title">Mi retiro en el monte</title>
+            <author property="dc:creator" resource="disco:s580n_2142">Julio Flores Roa</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">556</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s580n_2142"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_580n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_580n" about="disco:580n" typeOf="foaf:Person">
+                  <persName type="short">Flores Roa</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Julio</forename>
+                     <surname property="foaf:familyName">Flores Roa</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Julio Flores Roa</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Chiquinquirá</settlement>
+                           <country property="schema:birthPlace" inlist="">Colombia</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1867" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Usiacurí</settlement>
+                           <country property="schema:deathPlace" inlist="">Colombia</country>
+                           <bloc property="schema:deathPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1923" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s580n_2142">
+                        <title property="dc:title">Mi retiro en el monte</title>
+                        <title type="incipit" property="dc:alternative">He quemado las naves de mi gloria.</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s580n_2142">
+            <head>Mi retiro en el monte</head>
+            <lg n="1" type="serventesio">
+               <l met="+-+--+---+-" rhyme="A">He quemado las naves de mi <w type="rhyme">gloria</w>
+               </l>
+               <l met="+-++---+-+-" rhyme="B">Hoy en un monte milenario <w type="rhyme">vivo</w>
+               </l>
+               <l met="-+-+-+---+-" rhyme="A">el resto de esta vida <w type="rhyme">transitoria</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B">a todo halago mundanal <w type="rhyme">esquivo</w>
+               </l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="--+--+-+-+-" rhyme="C">En la gran soledad del bosque <w type="rhyme">inmenso</w>
+               </l>
+               <l met="+-+--+---+-" rhyme="D" enjamb="pb_verb_chain">este resto de vida se <w type="rhyme">consume</w>
+               </l>
+               <l met="--+--+---+-" rhyme="C" enjamb="pb_noun_prep">exhalando, lo mismo que el <w type="rhyme">incienso</w>
+               </l>
+               <l met="---+-+---+-" rhyme="D">en los altares, todo su <w type="rhyme">perfume</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+---+-" rhyme="E">El monte, prodigioso <w type="rhyme">laberinto</w>,</l>
+               <l met="++-+---+-+-" rhyme="F">es hoy mi patria, mi ciudad, mi <w type="rhyme">centro</w>:</l>
+               <l met="+--+---+-+-" rhyme="E">hállome en él hasta en mi mal <w type="rhyme">distinto</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+---+-+-" rhyme="F" enjamb="ex_subj_verb">pues me parece que la dicha <w type="rhyme">encuentro</w>
+               </l>
+               <l met="--++-+---+-" rhyme="E">mientras más solo estoy en su <w type="rhyme">recinto</w>,</l>
+               <l met="--++---+-+-" rhyme="F">mientras más hondo en sus arcadas <w type="rhyme">entro</w>
+               </l>
+            </lg>
+            <lg n="5" type="cuarteto">
+               <l met="-+---+---+-" rhyme="G" enjamb="pb_noun_prep">Huyendo de las míseras <w type="rhyme">pasiones</w>
+               </l>
+               <l met="--+----+-+-" rhyme="H">de los hombres, en pos de ambientes <w type="rhyme">puros</w>,</l>
+               <l met="---+-+---+-" rhyme="G" enjamb="pb_adj_noun">con mi morral henchido de <w type="rhyme">canciones</w>
+               </l>
+               <l met="---+---+-+-" rhyme="H">abandoné los solariegos <w type="rhyme">muros</w>
+               </l>
+            </lg>
+            <lg n="6" type="serventesio">
+               <l met="--+--+--++-" rhyme="I">La mentira social, el placer <w type="rhyme">mismo</w>
+               </l>
+               <l met="++---+-+-+-" rhyme="J">cien veces apurado en una <w type="rhyme">hora</w>,</l>
+               <l met="+-+--+---+-" rhyme="I">me arrancaron del fondo del <w type="rhyme">abismo</w>
+               </l>
+               <l met="-+-+-+---+-" rhyme="J">lanzándome a la selva <w type="rhyme">redentora</w>
+               </l>
+            </lg>
+            <lg n="7" type="terceto">
+               <l met="++---+---+-" rhyme="K" enjamb="pb_adj_noun">He entrado como el monje en «la <w type="rhyme">escondida</w>
+               </l>
+               <l met="+--+-+---+-" rhyme="L" enjamb="pb_noun_prep">senda» a vivir las horas <w type="rhyme">placenteras</w>
+               </l>
+               <l met="-+-+---+-+-" rhyme="K">de aquella dulce y sosegada <w type="rhyme">vida</w>,</l>
+            </lg>
+            <lg n="8" type="terceto">
+               <l met="--+--++--+-" rhyme="M">convencido a la luz de otro <w type="rhyme">horizonte</w>,</l>
+               <l met="-+---++-++-" rhyme="L">de que hay en la ciudad muchas más <w type="rhyme">fieras</w>
+               </l>
+               <l met="-++-++---+-" rhyme="M">¡oh sí! muchas más fieras que en el <w type="rhyme">monte</w>
+               </l>
+            </lg>
+            <lg n="9" type="cuarteto">
+               <l met="-++--+---+-" rhyme="N">Cerré todas las puertas a los <w type="rhyme">vicios</w>,</l>
+               <l met="---+-+---+-">abandoné las brocas <w type="rhyme">bacanales</w>
+               </l>
+               <l met="-+---+---+-" rhyme="N">y huí de los inmensos <w type="rhyme">precipicios</w>
+               </l>
+               <l met="-+-+-+---+-">lanzándome a regiones inmortales </l>
+            </lg>
+            <lg n="10" type="cuarteto">
+               <l met="+++-++---+-" enjamb="cc_crossclause">Ya no canto aquel canto <w type="rhyme">atormentado</w>
+               </l>
+               <l met="-+---++-++-">que abrió en mi corazón surco tan <w type="rhyme">hondo</w>,</l>
+               <l met="++---+++-+-">tan hondo, que aunque a verle me he <w type="rhyme">asomado</w>,</l>
+               <l met="+-++---+++-">nunca le he visto al asomarme el fondo </l>
+            </lg>
+            <lg n="11" type="terceto">
+               <l met="+-++++++-+-">Hoy mi canto es más puro, es más <w type="rhyme">sereno</w>
+               </l>
+               <l met="-+-+---+++-">porque es ahora mi pesar más sano </l>
+               <l met="+----+--++-">Canto en la soledad a pulmón pleno </l>
+            </lg>
+            <lg n="12" type="terceto">
+               <l met="---+-+++-+-">Y aunque en el monte estoy no canto en <w type="rhyme">vano</w>:</l>
+               <l met="++-+---+-+-">me aplaude arriba con su salva el trueno </l>
+               <l met="-+---+---+-">y abajo, con su trueno el océano </l>
+            </lg>
+            <lg n="13" type="cuarteto">
+               <l met="---+-+---+-" enjamb="pb_adj_noun">Porque está el mar con su <w type="rhyme">llanura</w>
+               </l>
+               <l met="+-+-+----+-">verde o azul, rojiza o cenicienta </l>
+               <l met="-++--+---+-">El mar, mi único hermano en <w type="rhyme">amargura</w>,</l>
+               <l met="+----+---+-">cómplice rugidor de la tormenta </l>
+            </lg>
+            <lg n="14" type="serventesio">
+               <l met="+--+---+-+-" enjamb="ex_dobj_verb">Ora tranquilo y sin vigor, <w type="rhyme">inerme</w>
+               </l>
+               <l met="--+--+---+-">se arrebuja en los velos de las <w type="rhyme">brumas</w>
+               </l>
+               <l met="--++---+-+-">y en su gran lecho de coral se <w type="rhyme">aduerme</w>
+               </l>
+               <l met="---+---+-+-">bajo su frágil edredón de espumas </l>
+            </lg>
+            <lg n="15" type="terceto">
+               <l met="+-+--+---+-">Ora ronco y fatal cuando se <w type="rhyme">enoja</w>,</l>
+               <l met="-+-+---+-+-">aúlla, brama, se retuerce, <w type="rhyme">grita</w>,</l>
+               <l met="---+---+-+-">y espumarajos de coraje arroja </l>
+            </lg>
+            <lg n="16" type="terceto">
+               <l met="+--+-+---++-" enjamb="ex_dobj_verb">Rompe sus anchas olas, y al <w type="rhyme">romperlas</w>
+               </l>
+               <l met="+----+---+-">finge bajo la bóveda <w type="rhyme">infinita</w>,</l>
+               <l met="-+-+-++--+-">enorme cofre azul lleno de perlas </l>
+            </lg>
+            <lg n="17" type="cuarteto">
+               <l met="-+-+---+-+-" enjamb="pb_adj_adv">Ni falso amigo ni mujer <w type="rhyme">liviana</w>
+               </l>
+               <l met="+--+-+---+-">cerca de mí; la azul <w type="rhyme">enredadera</w>
+               </l>
+               <l met="-+-+---+-+-">y el roble rico de vejez <w type="rhyme">lozana</w>
+               </l>
+               <l met="+--+-+---+-">son y serán mi amigo y compañera </l>
+            </lg>
+            <lg n="18" type="cuarteto">
+               <l met="---+-+---+-" enjamb="pb_noun_prep">Lejos del miasma, en vértigo <w type="rhyme">inefable</w>
+               </l>
+               <l met="-+-+---+-+-">del monte aspiro el secular <w type="rhyme">perfume</w>
+               </l>
+               <l met="+--+-+---+-">y -águila enferma en jaula <w type="rhyme">miserable</w>-</l>
+               <l met="-+---+---+-">mi espíritu las alas desentume </l>
+            </lg>
+            <lg n="19" type="terceto">
+               <l met="-+---+---+-" enjamb="pb_noun_prep">Al fin bajo el magnífico <w type="rhyme">frondaje</w>
+               </l>
+               <l met="--+--+---+-">de la selva sonora y <w type="rhyme">afligida</w>
+               </l>
+               <l met="-+-+---+-+-">hallé la paz, aunque al rendir el viaje </l>
+            </lg>
+            <lg n="20" type="terceto">
+               <l met="-+-+-+---+-">¡Por qué por un sarcasmo de la <w type="rhyme">suerte</w>,</l>
+               <l met="+-+-+-+--+-">hoy por vez primera amo la <w type="rhyme">vida</w>
+               </l>
+               <l met="+--+-+-+-+-">es cuando está acercándose la <w type="rhyme">muerte</w>!</l>
+            </lg>
+            <lg n="21" type="cuarteto">
+               <l met="--++--+--+-" enjamb="ex_subj_verb">¡Pero no importa! Mi ventura <w type="rhyme">entera</w>
+               </l>
+               <l met="-+-+-+---+-" enjamb="pb_noun_prep">será dormir allí, tras la <w type="rhyme">borrasca</w>
+               </l>
+               <l met="---+-+---+-">de mi pasado, en una <w type="rhyme">primavera</w>,</l>
+               <l met="-+---+---+-">oyendo el susurrar de la hojarasca </l>
+            </lg>
+            <lg n="22" type="serventesio">
+               <l met="+----+---+-" enjamb="ex_subj_verb">Sé que la enredadera <w type="rhyme">cariñosa</w>
+               </l>
+               <l met="---+-+---+-" enjamb="ex_subj_verb">y el corpulento roble <w type="rhyme">centenario</w>
+               </l>
+               <l met="--+--+---+-">hundirán sus raíces en mi <w type="rhyme">fosa</w>
+               </l>
+               <l met="---+-+---+-">para estrechar mi cuerpo solitario </l>
+            </lg>
+            <lg n="23" type="terceto">
+               <l met="--+--+-+-+-">Cristalinas mañanas, tardes <w type="rhyme">blondas</w>,</l>
+               <l met="+--+---+-+-">noches azules de luctuoso <w type="rhyme">velo</w>
+               </l>
+               <l met="+--+---+-+-">y albas estrellas de miradas <w type="rhyme">hondas</w>
+               </l>
+            </lg>
+            <lg n="24" type="terceto">
+               <l met="--+--++--+-">llorarán sobre mí Y alzando el <w type="rhyme">vuelo</w>,</l>
+               <l met="---+---+-+-">desde las altas y tupidas <w type="rhyme">frondas</w>
+               </l>
+               <l met="+--+-+---+-">me cantarán los pájaros del cielo </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

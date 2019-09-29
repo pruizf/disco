@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s346g_0801">
+            <title property="dc:title">A las obras de don Agustín Salazar y Torres</title>
+            <author property="dc:creator" resource="disco:s346g_0801">Félix de Lucio Espinosa y Malo</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">85</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s346g_0801"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_346g"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_346g" about="disco:346g" typeOf="foaf:Person">
+                  <persName type="short">Espinosa y Malo</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Félix de Lucio</forename>
+                     <surname property="foaf:familyName">Espinosa y Malo</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Félix de Lucio Espinosa y
+                  Malo</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s346g_0801">
+                        <title property="dc:title">A las obras de don Agustín Salazar y Torres</title>
+                        <title type="incipit" property="dc:alternative">Este docto Volumen, que hoy alcanza</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s346g_0801">
+            <head>A las obras de don Agustín Salazar y Torres</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+--+-+-+-" rhyme="A" enjamb="ex_dobj_verb">Este docto Volumen, que hoy <w type="rhyme">alcanza</w>
+               </l>
+               <l met="---+--+--+-" rhyme="B">veneración, y envidia <w type="rhyme">gloriosa</w>,</l>
+               <l met="-----++--+-" rhyme="B">para la imitación más <w type="rhyme">cuidadosa</w>
+               </l>
+               <l met="+--+-+---+-" rhyme="A">da el ejemplar, y quita la <w type="rhyme">esperanza</w>
+               </l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+---+--+-" rhyme="A" enjamb="ex_subj_verb">El pincel de su Autor la <w type="rhyme">confianza</w>
+               </l>
+               <l met="+--++--+-+-" rhyme="B">sólo tendría, en línea tan <w type="rhyme">dudosa</w>,</l>
+               <l met="--++-++--+-" rhyme="B" enjamb="ex_dobj_verb">de pasar más sutil, más <w type="rhyme">ingeniosa</w>
+               </l>
+               <l met="+-+--+---+-" rhyme="A">otra línea, entre asombro, y <w type="rhyme">alabanza</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+++-+-++-+-" rhyme="C" enjamb="ex_dobj_verb">Tú nos muestras, don Juan, tú nos <w type="rhyme">revelas</w>
+               </l>
+               <l met="-+-+-+---+-" rhyme="D">(haciéndole inmortal con tus <w type="rhyme">cinceles</w>)</l>
+               <l met="-+---+-+-+-" rhyme="C">la estatua, que a dejar labrada <w type="rhyme">anhelas</w>
+               </l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+-+-+-" rhyme="D" enjamb="ex_subj_verb">Y de este numeroso, y dulce <w type="rhyme">Apeles</w>
+               </l>
+               <l met="-++--+-+-+-" rhyme="C">serán más veneradas hoy sus <w type="rhyme">telas</w>,</l>
+               <l met="---+-+---+-" rhyme="D">pues sepultó contigo sus <w type="rhyme">pinceles</w>
+               </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

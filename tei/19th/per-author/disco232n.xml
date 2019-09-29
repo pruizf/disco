@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_232n">
+            <title property="dc:title">Sonetos de Juan Antonio Cavestany</title>
+            <author property="dc:creator" resource="disco:232n" corresp="#disco_232n">Juan Antonio
+               Cavestany</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">180</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_232n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_232n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_232n" about="disco:232n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/68762294"/>
+                  <persName type="short">Cavestany</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan Antonio</forename>
+                     <surname property="foaf:familyName">Cavestany</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan Antonio Cavestany</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Sevilla</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1861" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1902" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s232n_0743">
+                        <title property="dc:title">Calles entoldadas</title>
+                        <title type="incipit" property="dc:alternative">El sol de Junio impiedad
+                           fulgura</title>
+                     </bibl>
+                     <bibl resource="disco:s232n_0744">
+                        <title property="dc:title">El primer hijo</title>
+                        <title type="incipit" property="dc:alternative">En rosa de magnífica
+                           opulencia</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Juan Antonio Cavestany</head>
+            <p>Sevilla. 1861 - 1902</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s232n_0743">
+            <head>Calles entoldadas</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-----+-+-" rhyme="A" enjamb="pb_noun_prep">El sol de Junio impiedad <w
+                     type="rhyme">fulgura</w></l>
+               <l met="-+-+---+-+-" rhyme="B">del claro Betis sobre la ancha <w type="rhyme"
+                     >orilla</w>,</l>
+               <l met="---+-+---+-" rhyme="B">y las alegres calles de <w type="rhyme"
+                  >Sevilla</w></l>
+               <l met="-+---++--+-" rhyme="A">ofrecen por doquier sombra y <w type="rhyme"
+                     >frescura</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-----+-+-+-" rhyme="A" enjamb="ex_subj_verb">La semioscuridad que les <w
+                     type="rhyme">procura</w></l>
+               <l met="-+-+-----+-" rhyme="B">la blanca vela, a modo de <w type="rhyme"
+                     >sombrilla</w>,</l>
+               <l met="++-+---+-+-" rhyme="B">es una triste lobreguez que <w type="rhyme"
+                  >brilla</w>,</l>
+               <l met="++-+---+-+-" rhyme="A">es una alegre claridad <w type="rhyme">oscura</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+-+-+-" rhyme="C">Al todo protector clemente y <w type="rhyme"
+                  >pío</w>,</l>
+               <l met="+--+-+---+-" rhyme="D">todo se acoge mustio y <w type="rhyme"
+                  >sofocado</w></l>
+               <l met="---+-+---+-" rhyme="C">Desde que empieza el fuego del <w type="rhyme"
+                     >estío</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+---+-" rhyme="E">con nardos y claveles por <w type="rhyme"
+                  >alfombra</w>,</l>
+               <l met="+----+-+-+-" rhyme="D">harto de claridad, de sol <w type="rhyme"
+                  >hastiado</w>,</l>
+               <l met="-+---++--+-" rhyme="E">el pueblo de la luz vive en la <w type="rhyme"
+                     >sombra</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s232n_0744">
+            <head>El primer hijo</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A">En rosa de magnífica <w type="rhyme">opulencia</w></l>
+               <l met="--+--++--+-" rhyme="B">el capullo de ayer se ha <w type="rhyme"
+                     >convertido</w></l>
+               <l met="++-+-++-+-" rhyme="B" enjamb="pb_verb_chain">¡Tan niña y madre ya ! Dios ha
+                     <w type="rhyme">querido</w></l>
+               <l met="-+-+-+---+-" rhyme="A">partir en dos mitades tu <w type="rhyme"
+                     >existencia</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+++--+---+-" rhyme="A">Yo te he visto nacer, y en tu <w type="rhyme"
+                     >presencia</w></l>
+               <l met="+++--+---+-" rhyme="B">hoy me siento turbado y <w type="rhyme"
+                  >conmovido</w>;</l>
+               <l met="-+---+-+-+-" rhyme="B" enjamb="ex_subj_verb">¿por qué la que en mis brazos he
+                     <w type="rhyme">tenido</w></l>
+               <l met="---+++---+-" rhyme="A">veneración me inspira y <w type="rhyme"
+                  >reverencia</w>?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+---+-+-" rhyme="C" enjamb="pb_noun_prep">¡Ah! Porque emblemas del amor <w
+                     type="rhyme">sagrado</w></l>
+               <l met="---+---+-+-" rhyme="D">del sacrificio que con él se <w type="rhyme"
+                  >aduna</w>,</l>
+               <l met="++-+-+---+-" rhyme="C">de un bien perfecto, puro, <w type="rhyme"
+                     >inmaculado</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+-++-+---+-" rhyme="D">sólo dos nos ofrece la <w type="rhyme"
+                  >fortuna</w>:</l>
+               <l met="-+--+----+-" rhyme="C">primero, el Hombre Dios <w type="rhyme"
+                     >crucificado</w>;</l>
+               <l met="-++--+-+-+-" rhyme="D">después, una mujer junto a una <w type="rhyme"
+                     >cuna</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

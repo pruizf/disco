@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_656n">
+            <title property="dc:title">Sonetos de Elías Calisto Pompa</title>
+            <author property="dc:creator" resource="disco:656n" corresp="#disco_656n">Elías Calisto
+               Pompa</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">291</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_656n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_656n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_656n" about="disco:656n" typeOf="foaf:Person">
+                  <persName type="short">Pompa</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Elías Calisto</forename>
+                     <surname property="foaf:familyName">Pompa</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Elías Calisto Pompa</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Caracas</settlement>
+                           <country property="schema:birthPlace" inlist="">Venezuela</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s656n_2404">
+                        <title property="dc:title">Estudia, trabaja, descansa</title>
+                        <title type="incipit" property="dc:alternative">Es puerta de la luz un libro
+                           abierto:</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Elías Calisto Pompa</head>
+            <p>Caracas (Venezuela). 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s656n_2404">
+            <head>Estudia, trabaja, descansa</head>
+            <lg type="sonnet" xml:id="s656n_2404_01">
+               <head>Estudia</head>
+               <lg n="1" type="cuarteto">
+                  <l met="++---+++-+-" rhyme="A">Es puerta de la luz un libro <w type="rhyme"
+                        >abierto</w>:</l>
+                  <l met="+--+-+---+-" rhyme="B" enjamb="ex_dobj_verb">entra por ella, niño, y de <w
+                        type="rhyme">aseguro</w></l>
+                  <l met="---+-+---+-" rhyme="B">que para ti serán en lo <w type="rhyme"
+                     >futuro</w></l>
+                  <l met="-+-+---+++-" rhyme="A">Dios más visible, su poder más <w type="rhyme"
+                        >cierto</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="---+-+---+-" rhyme="A" enjamb="cc_crossclause">El ignorante vive en el <w
+                        type="rhyme">desierto</w></l>
+                  <l met="-+-+-+-+-+-" rhyme="B">donde es el agua poca, el aire <w type="rhyme"
+                        >impuro</w>:</l>
+                  <l met="++-+-+-+-+-" rhyme="B">un grano le detiene el pie <w type="rhyme"
+                        >inseguro</w>;</l>
+                  <l met="-+---+-+-+-" rhyme="A">camina tropezando: ¡vive <w type="rhyme"
+                     >muerto</w>!</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+---+---+-" rhyme="C" enjamb="ex_subj_verb">En ese de tu edad Abril <w
+                        type="rhyme">florido</w></l>
+                  <l met="-+---+---+-" rhyme="D">recibe el corazón las <w type="rhyme"
+                        >impresiones</w></l>
+                  <l met="---+-+---+-" rhyme="E">como la cera el toque de las <w type="rhyme"
+                        >manos</w>;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+-+---+-" rhyme="C">estudia y no serás cuando <w type="rhyme"
+                        >crecido</w></l>
+                  <l met="--+--+---+-" rhyme="D">ni el juguete vulgar de las <w type="rhyme"
+                        >pasiones</w>,</l>
+                  <l met="--+--+---+-" rhyme="E">ni el esclavo servil de los <w type="rhyme"
+                        >tiranos</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s656n_2404_02">
+               <head>Trabaja</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+-+---+-+-" rhyme="A">Trabaja, joven, sin cesar <w type="rhyme"
+                        >trabaja</w>;</l>
+                  <l met="-+-+---+-+-" rhyme="B">la frente honrada que en sudor se <w type="rhyme"
+                        >moja</w>,</l>
+                  <l met="-+-+-+---+-" rhyme="B">jamás ante otra frente se <w type="rhyme"
+                        >sonroja</w></l>
+                  <l met="+-+--+--++-" rhyme="A">ni se rinde servil a quien la <w type="rhyme"
+                        >ultraja</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+--+---+-+-" rhyme="A">Tarde la nieve de los años <w type="rhyme"
+                        >cuaja</w></l>
+                  <l met="---+---+-+-" rhyme="B">sobre quien lejos la indolencia <w type="rhyme"
+                        >arroja</w>;</l>
+                  <l met="-+-+---+-+-" rhyme="B">su cuerpo al roble, por lo fuerte, <w type="rhyme"
+                        >enoja</w>;</l>
+                  <l met="+--+---+++-" rhyme="A">su alma del mundo al lodazal no <w type="rhyme"
+                        >baja</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+-+-+++-+-" rhyme="C">El pan que da el trabajo es más <w type="rhyme"
+                        >sabroso</w></l>
+                  <l met="---+-+---+-" rhyme="D">que la escondida miel que con <w type="rhyme"
+                        >empeño</w></l>
+                  <l met="+--+---+-+-" rhyme="C">liba la abeja en el rosal <w type="rhyme"
+                        >frondoso</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+-+-+-+-" rhyme="D">Si comes ese pan serás tu <w type="rhyme"
+                     >dueño</w>,</l>
+                  <l met="---+-+---+-" rhyme="E">mas si del ocio ruedas al <w type="rhyme"
+                        >abismo</w>,</l>
+                  <l met="+-++-++-++-" rhyme="E">¡todos serlo podrán, menos tú <w type="rhyme"
+                        >mismo</w>!</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s656n_2404_03">
+               <head>Descansa</head>
+               <lg n="1" type="cuarteto">
+                  <l met="++---+-+-+-" rhyme="A">Ya es blanca tu cabeza, pobre <w type="rhyme"
+                        >anciano</w>;</l>
+                  <l met="-+---+---+-" rhyme="B">tu cuerpo, cual la espiga al <w type="rhyme"
+                        >torbellino</w>,</l>
+                  <l met="-+-+-+-+-+-" rhyme="A">se dobla y rinde fácil; ya tu <w type="rhyme"
+                        >mano</w></l>
+                  <l met="--+--+---+-" rhyme="B" enjamb="ex_subj_verb">el amigo bordón del <w
+                        type="rhyme">peregrino</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+---+-+-+-" rhyme="A" enjamb="ex_subj_verb">maneja sin compás, y el aire
+                        <w type="rhyme">sano</w></l>
+                  <l met="+--+---+-+-" rhyme="B">es a tu enfermo corazón <w type="rhyme"
+                        >mezquino</w></l>
+                  <l met="+--+-+-+-+-" rhyme="A">Deja la alforja, ve, descansa <w type="rhyme"
+                        >ufano</w></l>
+                  <l met="---+-+---+-" rhyme="B">en la sombreada orilla del <w type="rhyme"
+                        >camino</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+-+---+-+-" rhyme="C">Descansa, sí, mas como el sol se <w type="rhyme"
+                        >acuesta</w></l>
+                  <l met="-+---+---+-" rhyme="D">viajero como tú, sobre el <w type="rhyme"
+                     >ocaso</w></l>
+                  <l met="-+--++++-+-" rhyme="C">y el astro que le sigue un rayo <w type="rhyme"
+                        >presta</w>:</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="+-+--+-+-+-" rhyme="E">Abre así con amor tus labios <w type="rhyme"
+                        >viejos</w></l>
+                  <l met="-+-+--++-+-" rhyme="D">y alumbra al joven que te sigue el <w type="rhyme"
+                        >paso</w></l>
+                  <l met="---+-+---+-" rhyme="E">¡con la bendita luz de tus <w type="rhyme"
+                        >consejos</w>!</l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

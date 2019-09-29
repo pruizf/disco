@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_518n">
+            <title property="dc:title">Sonetos de Antonio Osete</title>
+            <author property="dc:creator" resource="disco:518n" corresp="#disco_518n">Antonio
+               Osete</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">11</measure>
+            <measure unit="tokens">968</measure>
+            <measure unit="line">154</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_518n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_518n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_518n" about="disco:518n" typeOf="foaf:Person">
+                  <persName type="short">Osete</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Antonio</forename>
+                     <surname property="foaf:familyName">Osete</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Antonio Osete</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Murcia</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s518n_1938">
+                        <title property="dc:title">¡Bien hallados todos!</title>
+                        <title type="incipit" property="dc:alternative">Al volver al lugar de mis
+                           amores,</title>
+                     </bibl>
+                     <bibl resource="disco:s518n_1939">
+                        <title property="dc:title">Los dolores de la Virgen</title>
+                        <title type="incipit" property="dc:alternative">Ecos fugaces de la selva
+                           umbría,</title>
+                     </bibl>
+                     <bibl resource="disco:s518n_1940">
+                        <title property="dc:title">En la Catedral de Toledo</title>
+                        <title type="incipit" property="dc:alternative">Al mirar este gótico
+                           portento</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Antonio Osete</head>
+            <p>Murcia. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s518n_1938">
+            <head>¡Bien hallados todos!</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A">Al volver al lugar de mis <w type="rhyme"
+                  >amores</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B">tras una ausencia por demás <w type="rhyme"
+                  >penosa</w>,</l>
+               <l met="+-+--+---+-" rhyme="B" enjamb="ex_dobj_verb">me buscaron en turba <w
+                     type="rhyme">presurosa</w></l>
+               <l met="+--+-+---+-" rhyme="A">deudos, amigos, siervos y <w type="rhyme"
+                  >señores</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--++--+-" rhyme="A">Nunca pude esperar tales <w type="rhyme"
+                  >favores</w>;</l>
+               <l met="-+-+-+-+-+-" rhyme="B">jamás soñé acogida tan <w type="rhyme"
+                  >hermosa</w>;</l>
+               <l met="-+---++-++-" rhyme="B">hicieron de mi vuelta una gran <w type="rhyme"
+                     >cosa</w>;</l>
+               <l met="+-+--++--+-" rhyme="A">¿dónde, cómo y por qué tantos <w type="rhyme"
+                     >honores</w>?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-++++-+-+-" rhyme="C">Todos, cuál más cuál menos, ya en <w type="rhyme"
+                     >sencillas</w></l>
+               <l met="+--+-+---+-" rhyme="D">frases o ya entre rasgos de <w type="rhyme"
+                     >elocuencia</w></l>
+               <l met="++-+-+---+-" rhyme="C">me dieron un saludo a <w type="rhyme"
+                  >maravillas</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-++--+-" rhyme="D" enjamb="ex_subj_verb">Mas lo que me causó gran <w
+                     type="rhyme">complacencia</w></l>
+               <l met="+-+--+---+-" rhyme="C" enjamb="pb_noun_prep">fue la banda de azules <w
+                     type="rhyme">campanillas</w></l>
+               <l met="---+-+---+-" rhyme="D">de mi balcón temblando a mi <w type="rhyme"
+                     >presencia</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet-sequence" xml:id="s518n_1939">
+            <head>Los dolores de la Virgen</head>
+            <lg type="sonnet" xml:id="s518n_1939_01">
+               <head>Invocación</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+--+---+-+-" rhyme="A">Ecos fugaces de la selva <w type="rhyme"
+                     >umbría</w>,</l>
+                  <l met="-+---+---+-" rhyme="B">murmullos de arroyuelos <w type="rhyme"
+                        >bullidores</w>,</l>
+                  <l met="-+---+---+-" rhyme="B">suspiros de canoros <w type="rhyme"
+                     >ruiseñores</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="A">confusas notas de la mar <w type="rhyme"
+                     >bravía</w>;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+---+-+-+-" rhyme="A">venid a secundar la lira <w type="rhyme"
+                     >mía</w>,</l>
+                  <l met="+--+-+---+-" rhyme="B">que ha menester de fuerzas <w type="rhyme"
+                        >superiores</w>,</l>
+                  <l met="-+---+---+-" rhyme="B">y en mágico conjunto de <w type="rhyme"
+                        >primores</w></l>
+                  <l met="--+--+---+-" rhyme="A">cantaré los tormentos de <w type="rhyme"
+                     >María</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="++---+---+-" rhyme="C" enjamb="ex_subj_verb">Tú, Madre celestial, a cuyo
+                        <w type="rhyme">manto</w></l>
+                  <l met="-+-+---+-+-" rhyme="D">se acoge el triste trovador <w type="rhyme"
+                        >sincero</w>;</l>
+                  <l met="+-+--+---+-" rhyme="C">muéstrame las grandezas de tu <w type="rhyme"
+                        >llanto</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+---+-+-" rhyme="D">Cantar tus penas cual merecen <w type="rhyme"
+                        >quiero</w>;</l>
+                  <l met="-+-+---+-+-" rhyme="C">dirige tú mi plañidero <w type="rhyme"
+                     >canto</w></l>
+                  <l met="---+-+-+-+-" rhyme="D">y escuchará mi voz el mundo <w type="rhyme"
+                        >entero</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_02">
+               <head>I</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+---+---+-" rhyme="A">Apenas el lucero <w type="rhyme">matutino</w>,</l>
+                  <l met="--+--+---+-" rhyme="B">presentóse en la bóveda <w type="rhyme"
+                     >azulada</w>,</l>
+                  <l met="+--+-+---+-" rhyme="B">dejan José y María su <w type="rhyme"
+                     >morada</w></l>
+                  <l met="-+-+---+-+-" rhyme="A">llevando en brazos a Jesús <w type="rhyme"
+                        >divino</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+---+---+-" rhyme="A" enjamb="ex_subj_verb">Las flores que guarnecen el
+                        <w type="rhyme">camino</w></l>
+                  <l met="-+---++--+-" rhyme="B">se yerguen para verlos de <w type="rhyme"
+                        >pasada</w>,</l>
+                  <l met="+-+--+---+-" rhyme="B">y Ellos siguen su marcha <w type="rhyme"
+                        >acelerada</w></l>
+                  <l met="---+-+---+-" rhyme="A">sin presentir los triste de su <w type="rhyme"
+                        >sino</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-----++-+-" rhyme="C" enjamb="pb_noun_prep">¡Oh Templo de Sión! Yo te <w
+                        type="rhyme">saludo</w></l>
+                  <l met="-+-+---+-+-" rhyme="D">con voz ferviente, de suspiros <w type="rhyme"
+                        >llena</w>,</l>
+                  <l met="---+-+-+-+-" rhyme="C">y ante tus gradas me prosterno <w type="rhyme"
+                        >mudo</w>;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="++--+-+--+-" rhyme="D">que hoy en ti se consuma la alta <w type="rhyme"
+                        >escena</w></l>
+                  <l met="---+---+-+-" rhyme="C" enjamb="ex_dobj_verb">en que, a la voz de Simeón,
+                        <w type="rhyme">sacudo</w></l>
+                  <l met="--+--+---+-" rhyme="D">el primer eslabón de mi <w type="rhyme"
+                     >cadena</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_03">
+               <head>II</head>
+               <lg n="1" type="cuarteto">
+                  <l met="---+---+-+-" rhyme="A">Obedeciendo celestial <w type="rhyme"
+                     >aviso</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="B">con alma triste y con el cuerpo <w type="rhyme"
+                        >yerto</w>,</l>
+                  <l met="-----++--+-" rhyme="B">la Sagrada Familia huye al <w type="rhyme"
+                        >desierto</w>,</l>
+                  <l met="---++-++-+-" rhyme="A">sin prepararse ni lo más <w type="rhyme"
+                        >preciso</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="--+--+---+-" rhyme="A">En su curso anhelante e <w type="rhyme"
+                        >indeciso</w>,</l>
+                  <l met="+--+---+-+-" rhyme="B">siempre a sus ojos el abismo <w type="rhyme"
+                        >abierto</w>,</l>
+                  <l met="-+-+---+++-" rhyme="B">cuando es su rudo parecer más <w type="rhyme"
+                        >cierto</w></l>
+                  <l met="-+---+--++-" rhyme="A">exclama resignada: -Dios lo <w type="rhyme"
+                        >quiso</w>-</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+-+--+---+-" rhyme="C">¡Flor la más delicada de las <w type="rhyme"
+                        >flores</w>!</l>
+                  <l met="-+--+---+-" rhyme="D" enjamb="ex_dobj_verb">¡Oh Virgen! ¿Cómo puede tu <w
+                        type="rhyme">ternura</w></l>
+                  <l met="-+-+-+---+-" rhyme="C">sufrir de tanto daño los <w type="rhyme"
+                        >rigores</w>?</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+---+-+-" rhyme="D">Mas ¡ay! el cáliz de vapor <w type="rhyme"
+                        >apura</w></l>
+                  <l met="+-+--+---+-" rhyme="C" enjamb="pb_noun_prep">¿Qué sería sin eso tus <w
+                        type="rhyme">dolores</w></l>
+                  <l met="--+---+--+-" rhyme="D">de aquesta miserable <w type="rhyme"
+                     >criatura</w>?</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_04">
+               <head>III</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-++--+-+-+-" rhyme="A">-¿Habéis visto al amor del alma <w type="rhyme"
+                        >mía</w>?-</l>
+                  <l met="-+-+---+-+-" rhyme="B">pregunta a todos con afán <w type="rhyme"
+                        >prolijo</w></l>
+                  <l met="-+++---+-+-" rhyme="B">al verse sola sin su amado <w type="rhyme"
+                     >hijo</w>,</l>
+                  <l met="-+---+---+-" rhyme="A">la tan afligidísima <w type="rhyme">María</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="++---+-+-+-" rhyme="A">Un vértigo de amor sus pasos <w type="rhyme"
+                        >guía</w></l>
+                  <l met="-+---+-+-+-" rhyme="B">y busca por doquier sin rumbo <w type="rhyme"
+                        >fijo</w>,</l>
+                  <l met="-++--+---+-" rhyme="B" enjamb="cc_crossclause">y no hay calle ni plaza ni
+                        <w type="rhyme">escondrijo</w></l>
+                  <l met="--+--+---+-" rhyme="A">que se cierre a su bárbara <w type="rhyme"
+                        >agonía</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="--+--+---+-" rhyme="C">Sapientísima y alta <w type="rhyme"
+                     >Providencia</w>:</l>
+                  <l met="++-+-+-+-+-" rhyme="D">¿do está Jesús que no oye tanto <w type="rhyme"
+                        >duelo</w>?</l>
+                  <l met="+-+--+---+-" rhyme="C">¿qué lugar santifica su <w type="rhyme"
+                        >presencia</w>?</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="++-+-+---+-" rhyme="D" enjamb="ex_dobj_verb">Vedle en el templo: esparce
+                     con <w type="rhyme">anhelo</w></l>
+                  <l met="--+--+-+-+-" rhyme="C" enjamb="cc_crossclause">las primeras semillas de
+                     una <w type="rhyme">ciencia</w></l>
+                  <l met="-+-+---+++-" rhyme="D">que puede hacer de nuestro mundo un <w type="rhyme"
+                        >cielo</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_05">
+               <head>IV</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+-+--++--+-" rhyme="A">Todo inspira doquier duelo y <w type="rhyme"
+                        >pavura</w>:</l>
+                  <l met="-+-+-+-+-+-" rhyme="B" enjamb="pb_noun_prep">el sol que apenas arde, el
+                     triste <w type="rhyme">acento</w></l>
+                  <l met="-+---+---+-" rhyme="B" enjamb="pb_noun_prep">del aire enrarecido, y el <w
+                        type="rhyme">lamento</w></l>
+                  <l met="--+--+---+-" rhyme="A">de Jesús en la calle de <w type="rhyme"
+                        >Amargura</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+---+---+-" rhyme="A">Rompiendo de la turba la <w type="rhyme"
+                        >espesura</w>,</l>
+                  <l met="+--+-+---+-" rhyme="B">ya sin color y casi sin <w type="rhyme"
+                     >aliento</w>,</l>
+                  <l met="+-+--+---+-" rhyme="B">cual paloma impedida por el <w type="rhyme"
+                        >viento</w></l>
+                  <l met="+------+-+-" rhyme="A">corre hacia el Salvador la Virgen <w type="rhyme"
+                        >pura</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="--+-++---+-" rhyme="C">Anhelosa lo llama a su <w type="rhyme"
+                     >regazo</w>,</l>
+                  <l met="--+--+--++-" rhyme="D">y, aunque a entrambos el paso se les <w
+                        type="rhyme">cierra</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="C">al fin se funden en estrecho <w type="rhyme"
+                        >abrazo</w>;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+---+-+-" rhyme="D">y el miserable pecador se <w type="rhyme"
+                        >aterra</w>,</l>
+                  <l met="--++-+++-+-" rhyme="C" enjamb="cc_crossclause">sin saber que ese nudo es
+                     un <w type="rhyme">abrazo</w></l>
+                  <l met="-+++-+---+-" rhyme="D">que sen dan hoy los cielos con la <w type="rhyme"
+                        >tierra</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_06">
+               <head>V</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+--++--+-+-" rhyme="A" enjamb="ex_dobj_verb">¿Cómo podrá expresa mi baja
+                        <w type="rhyme">lira</w></l>
+                  <l met="-+---+---+-" rhyme="B" enjamb="pb_noun_prep">con fieles vibraciones el <w
+                        type="rhyme">quebranto</w></l>
+                  <l met="----+-++-+-" rhyme="B" enjamb="cc_crossclause">de la Madre del Dios tres
+                     veces <w type="rhyme">santo</w></l>
+                  <l met="--+--++--+-" rhyme="A">que abrazada a la cruz hondo <w type="rhyme"
+                        >suspira</w>?</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+--+---+-+-" rhyme="A" enjamb="cc_crossclause">¡Nube de horrores por la
+                     mente <w type="rhyme">gira</w></l>
+                  <l met="-+---+-+-+-" rhyme="B">que baja al corazón trocada en <w type="rhyme"
+                        >llanto</w>,</l>
+                  <l met="--+--++--+-" rhyme="B">y, al querer entonar fúnebre <w type="rhyme"
+                        >canto</w>,</l>
+                  <l met="---+---+-+-" rhyme="A">sobreexcitada la razón <w type="rhyme"
+                     >delira</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="--+--+-+-+-" rhyme="C">¡Oh de Dios y los hombres santa <w type="rhyme"
+                        >Madre</w>!</l>
+                  <l met="+----+---+-" rhyme="D" enjamb="cc_crossclause">Plegue a tu sacratísimo <w
+                        type="rhyme">derecho</w></l>
+                  <l met="--+--+-+-+-" rhyme="C">que tu negra aflicción a mi alma <w type="rhyme"
+                        >cuadre</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+---+-+-" rhyme="D">y que, en mi llanto abrasador <w type="rhyme"
+                        >deshecho</w>,</l>
+                  <l met="-+-+--++-+-" rhyme="C" enjamb="ex_subj_verb">la misma espada que te hirió
+                        <w type="rhyme">taladre</w></l>
+                  <l met="-+---+---+-" rhyme="D">la víscera amorosa de mi <w type="rhyme"
+                     >pecho</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_07">
+               <head>VI</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+-+--+---+-" rhyme="A">Cubre negro crespón el <w type="rhyme"
+                        >firmamento</w>,</l>
+                  <l met="+--+---+-+-" rhyme="B">riñen los mundos infernal <w type="rhyme"
+                        >batalla</w>,</l>
+                  <l met="---+-++--+-" rhyme="B">embravecido el mar rompe su <w type="rhyme"
+                        >valla</w></l>
+                  <l met="-+---+-+-+-" rhyme="A">y silba desatado y seco el <w type="rhyme"
+                        >viento</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="--+--+-+-+-" rhyme="A">De las piedras escúchase el <w type="rhyme"
+                        >lamento</w>,</l>
+                  <l met="-+-+-+-+-+-" rhyme="B">el trueno airado zumba, el rayo <w type="rhyme"
+                        >estalla</w>,</l>
+                  <l met="--+--+---+-" rhyme="B">y, temblando la cruz en que se <w type="rhyme"
+                        >halla</w>,</l>
+                  <l met="+---+-+--+-" rhyme="A">lanza el Hijo de Dios su último <w type="rhyme"
+                        >aliento</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-----+---+-" rhyme="C">En medio del desorden y la <w type="rhyme"
+                        >muerte</w></l>
+                  <l met="-+-+-+---+-" rhyme="D">preséntase la Madre <w type="rhyme"
+                     >dolorida</w></l>
+                  <l met="--+--+-+-+-" rhyme="C">y en sus brazos recoge a su hijo <w type="rhyme"
+                        >inerte</w>;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-++-++---+-" rhyme="D">y lo oprime y lo besa <w type="rhyme"
+                        >estremecida</w></l>
+                  <l met="+-++-+-+-+-" rhyme="C" enjamb="cc_crossclause">cual si le fuese dada tanta
+                        <w type="rhyme">suerte</w></l>
+                  <l met="--++-+++-+-" rhyme="D">que pudiese otra vez darle la <w type="rhyme"
+                        >vida</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_08">
+               <head>VII</head>
+               <lg n="1" type="cuarteto">
+                  <l met="++-+--++-" rhyme="A" enjamb="ex_subj_verb">¡Ya no existe Jesús! Pesada <w
+                        type="rhyme">losa</w></l>
+                  <l met="--+--+---+-" rhyme="B">aprisiona sus lívidos <w type="rhyme"
+                     >despojos</w></l>
+                  <l met="--+-+--+-" rhyme="B">¿Y María? Doquier lanza los <w type="rhyme"
+                     >ojos</w></l>
+                  <l met="+----++--+-" rhyme="A">halla la soledad más <w type="rhyme"
+                     >espantosa</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+++---+-+-" rhyme="A" enjamb="ex_subj_verb">Al ver tal duelo, la
+                     encendida <w type="rhyme">rosa</w></l>
+                  <l met="-+-+---+-+-" rhyme="B">temblando oculta sus colores <w type="rhyme"
+                        >rojos</w>,</l>
+                  <l met="---+-+---+-" rhyme="B" enjamb="ex_subj_verb">y al presenciar el ave sus <w
+                        type="rhyme">enojos</w></l>
+                  <l met="+-+--+---+-" rhyme="A">pliega el vuelo y se oculta <w type="rhyme"
+                        >silenciosa</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+-+--+---+-" rhyme="C">Todo ofrece señales de <w type="rhyme"
+                     >tristeza</w>:</l>
+                  <l met="--+--+---+-" rhyme="D">desde el negro crespón del <w type="rhyme"
+                        >firmamento</w></l>
+                  <l met="--+--+---+-" rhyme="C">hasta el frío tapiz de la <w type="rhyme"
+                        >maleza</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="+--+-++--+-" rhyme="D">se oye con voz sin timbre este <w type="rhyme"
+                        >lamento</w>:</l>
+                  <l met="-++--+---+-" rhyme="C">-Si así siente la gran <w type="rhyme"
+                        >naturaleza</w>,</l>
+                  <l met="++---+---+-" rhyme="D">¿quién mide de María el <w type="rhyme"
+                        >sufrimiento</w>?</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s518n_1939_09">
+               <head>Conclusión</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+--+---+-+-" rhyme="A">Ecos fugaces de la selva <w type="rhyme"
+                     >umbría</w>,</l>
+                  <l met="-+---+---+-" rhyme="B">murmullos de arroyuelos <w type="rhyme"
+                        >bullidores</w>,</l>
+                  <l met="-+---+---+-" rhyme="B">suspiros de canoros <w type="rhyme"
+                     >ruiseñores</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="A">confusas notas de la mar <w type="rhyme"
+                     >bravía</w>;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="---+---+-+-" rhyme="A">los que auxiliasteis a la lira <w type="rhyme"
+                        >mía</w>,</l>
+                  <l met="--+--+---+-" rhyme="B">al cantar de la Virgen los <w type="rhyme"
+                        >dolores</w>,</l>
+                  <l met="--+--+---+-" rhyme="B" enjamb="cc_crossclause">recibir de mi pecho los <w
+                        type="rhyme">favores</w></l>
+                  <l met="+-+--+-+-+-" rhyme="A">que os devuelvo dichoso en este <w type="rhyme"
+                        >día</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="++---+---+-" rhyme="C" enjamb="ex_subj_verb">Tú, Madre celestial, a cuyo
+                        <w type="rhyme">manto</w></l>
+                  <l met="-+-+---+-+-" rhyme="D">se acoge el triste trovador <w type="rhyme"
+                        >sincero</w>;</l>
+                  <l met="-+---+-+-+-" rhyme="C">recibe con amor mi pobre <w type="rhyme"
+                     >canto</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="+-+--++--+-" rhyme="D">Yo, en la empresa, feliz me <w type="rhyme"
+                        >considero</w>;</l>
+                  <l met="---+-+++-+-" rhyme="C" enjamb="pb_adj_noun">pues si pensé morirme al ver
+                     tu <w type="rhyme">llanto</w></l>
+                  <l met="-+-+---+-+-" rhyme="D">eterna vida por tu llanto <w type="rhyme"
+                        >espero</w></l>
+               </lg>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s518n_1940">
+            <head>En la Catedral de Toledo</head>
+            <lg n="1" type="cuarteto">
+               <l met="--++-+---+-" rhyme="A" enjamb="cc_crossclause">Al mirar este gótico <w
+                     type="rhyme">portento</w></l>
+               <l met="--+--+---+-" rhyme="B">que el poder de los siglos <w type="rhyme"
+                  >desafía</w>,</l>
+               <l met="-+---+---+-" rhyme="B">a impulsos de exaltada <w type="rhyme"
+                  >fantasía</w></l>
+               <l met="--+--+---+-" rhyme="A">se estremece el humano <w type="rhyme"
+                  >pensamiento</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A" enjamb="pb_noun_prep">Desde el mármol del rico <w
+                     type="rhyme">pavimento</w></l>
+               <l met="--+--+---+-" rhyme="B">a la cruz que las nubes <w type="rhyme"
+                  >desafía</w>,</l>
+               <l met="+++--+---+-" rhyme="B">todo es arte y amor y <w type="rhyme">poesía</w></l>
+               <l met="--+--+---+-" rhyme="A">y hermosura y belleza y <w type="rhyme"
+                     >sentimiento</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+-+-+-" rhyme="C">Absorta el alma ve su mole <w type="rhyme"
+                  >ingente</w>;</l>
+               <l met="---+---+-+-" rhyme="D">como leyendo en insondable <w type="rhyme"
+                  >arcano</w>,</l>
+               <l met="-+-+-+---+-" rhyme="C">humíllase con pasmo <w type="rhyme">reverente</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+---+-+-" rhyme="D">y, de su autor al bendecir la <w type="rhyme"
+                  >mano</w>,</l>
+               <l met="-+-------+-" rhyme="C">adora en el Señor <w type="rhyme">Omnipotente</w>,</l>
+               <l met="-++--++--+-" rhyme="D">que dio al hombre poder tan <w type="rhyme"
+                     >soberano</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

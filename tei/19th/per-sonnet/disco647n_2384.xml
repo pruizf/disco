@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s647n_2384">
+            <title property="dc:title">El habla de Cervantes</title>
+            <author property="dc:creator" resource="disco:s647n_2384">Ricardo del Monte</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">91</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s647n_2384"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_647n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_647n" about="disco:647n" typeOf="foaf:Person">
+                  <persName type="short">Monte</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ricardo</forename>
+                     <nameLink>del</nameLink>
+                     <surname property="foaf:familyName">Monte</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ricardo del Monte</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Matanzas</settlement>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1828" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">La Habana</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1909" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s647n_2384">
+                        <title property="dc:title">El habla de Cervantes</title>
+                        <title type="incipit" property="dc:alternative">¡Pueblos, en ambos mundos moradores,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s647n_2384">
+            <head>El habla de Cervantes</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A">¡Pueblos, en ambos mundos <w type="rhyme">moradores</w>,</l>
+               <l met="---+-+---+-" rhyme="B" enjamb="pb_noun_prep">que la que fue de América <w type="rhyme">señora</w>
+               </l>
+               <l met="--+--+---+-" rhyme="B" enjamb="ex_subj_verb">con su genio y su sangre <w type="rhyme">bullidora</w>
+               </l>
+               <l met="+--+-+---+-" rhyme="A">crió, de inquietos padres <w type="rhyme">sucesores</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A">guardad su lengua henchida de <w type="rhyme">primores</w>,</l>
+               <l met="---+-+---+-" rhyme="B">como el diamante límpida y <w type="rhyme">sonora</w>
+               </l>
+               <l met="---++----+-" rhyme="B" enjamb="ex_subj_verb">como clarín de oro y que <w type="rhyme">atesora</w>
+               </l>
+               <l met="+--+-+---+-" rhyme="A">fuerza, esplendor, esmaltes y <w type="rhyme">colores</w>!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+--+-+-+-" rhyme="C">Roto el yugo que esclavos nos <w type="rhyme">uncía</w>,</l>
+               <l met="++-+-+---+-" rhyme="D">sea -libres ya y hermanos como <w type="rhyme">antes</w>-</l>
+               <l met="+--+-+--++-" rhyme="E">la habla materna el lazo que nos <w type="rhyme">una</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+-+---+-" rhyme="C">dulce su acento al alma y su <w type="rhyme">armonía</w>;</l>
+               <l met="--+--+---+-" rhyme="D">y el homérico libro de <w type="rhyme">Cervantes</w>
+               </l>
+               <l met="+--+-+---+-" rhyme="E">joya de honor, blasón de nuestra <w type="rhyme">cuna</w>
+               </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

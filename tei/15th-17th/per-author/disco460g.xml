@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_460g">
+            <title property="dc:title">Sonetos de Santa Teresa de Jesús</title>
+            <author property="dc:creator" resource="disco:460g" corresp="#disco_460g">Santa Teresa
+               de Jesús</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">98</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_460g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_460g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_460g" about="disco:460g" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/95217173"/>
+                  <persName type="short">Santa Teresa de Jesús</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Teresa</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Cepeda y Ahumada</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Santa Teresa de Jesús</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Ávila</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1515" cert="high"/>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Alba de
+                              Tormes</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1582" cert="high"/>
+                     <date type="century">16</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s460g_0976">
+                        <title property="dc:title">El amor a Jesús</title>
+                        <title type="incipit" property="dc:alternative">No me mueve ¡mi Dios! para
+                           quererte</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Santa Teresa de Jesús</head>
+            <p>Ávila. 1515 - 1582</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s460g_0976">
+            <head>El amor a Jesús</head>
+            <lg n="1" type="cuarteto">
+               <l met="+++--+---+-" rhyme="A" enjamb="ex_dobj_verb">No me mueve ¡mi Dios! para <w
+                     type="rhyme">quererte</w></l>
+               <l met="-+--++---+-" rhyme="B">el cielo que me tienes <w type="rhyme"
+                  >prometido</w>,</l>
+               <l met="-++--+-+-+-" rhyme="B">ni me mueve el infierno tan <w type="rhyme"
+                  >temido</w></l>
+               <l met="---+-+---+-" rhyme="A">para dejar por eso de <w type="rhyme"
+                  >ofenderte</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+++--++-++-" rhyme="A">Tú me mueves, Señor, muéveme el <w type="rhyme"
+                     >verte</w></l>
+               <l met="-+-+-+---+-" rhyme="B">clavado en esa cruz y <w type="rhyme"
+                  >escarnecido</w>;</l>
+               <l met="+-++-+-+-+-" rhyme="B">muéveme el ver tu cuerpo tan <w type="rhyme"
+                     >herido</w>,</l>
+               <l met="+----+---+-" rhyme="A">muévenme tus afrentas y tu <w type="rhyme"
+                  >muerte</w>;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+-+-+-+-" rhyme="C">muévenme, en fin, tu amor, y en tal <w type="rhyme"
+                     >manera</w>,</l>
+               <l met="--++-+-+++-" rhyme="D">que aunque no hubiera cielo yo te <w type="rhyme"
+                     >amara</w>,</l>
+               <l met="--++-+-+-+-" rhyme="C">y aunque no hubiera infierno te <w type="rhyme"
+                     >temiera</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+++--+---+-" rhyme="C">No me tienes que dar porque te <w type="rhyme"
+                     >quiera</w>;</l>
+               <l met="-----+-+-+-" rhyme="D">pues aunque lo que espero no <w type="rhyme"
+                     >esperara</w>,</l>
+               <l met="-+--++-+-+-" rhyme="C">lo mismo que te quiero te <w type="rhyme"
+                  >quisiera</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_568n">
+            <title property="dc:title">Sonetos de Carlos Guido y Spano</title>
+            <author property="dc:creator" resource="disco:568n" corresp="#disco_568n">Carlos Guido y
+               Spano</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">189</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_568n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_568n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_568n" about="disco:568n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/28390605"/>
+                  <persName type="short">Guido y Spano</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Carlos</forename>
+                     <surname property="foaf:familyName">Guido y Spano</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Carlos Guido y Spano</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Buenos
+                              Aires</settlement>
+                           <country property="schema:birthPlace" inlist="">Argentina</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1827" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1918" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s568n_2079">
+                        <title property="dc:title">Fuego sagrado</title>
+                        <title type="incipit" property="dc:alternative">¡Lámpara misteriosa, que
+                           encendida</title>
+                     </bibl>
+                     <bibl resource="disco:s568n_2080">
+                        <title property="dc:title">Sensualismo</title>
+                        <title type="incipit" property="dc:alternative">¿Será un crimen rasgar la
+                           tenue gasa</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Carlos Guido y Spano</head>
+            <p>Buenos Aires (Argentina). 1827 - 1918</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s568n_2079">
+            <head>Fuego sagrado</head>
+            <lg n="1" type="cuarteto">
+               <l met="+----+---+-" rhyme="A">¡Lámpara misteriosa, que <w type="rhyme"
+                  >encendida</w></l>
+               <l met="--+--+-+-+-" rhyme="B">en el alma gentil <w type="rhyme"
+                  >perpetuamente</w>,</l>
+               <l met="+--+-+-+-+-" rhyme="B" enjamb="ex_dobj_verb">tornas en flor, y aroma, y rica
+                     <w type="rhyme">fuente</w></l>
+               <l met="---+-+---+-" rhyme="A">la vibración inmensa de la <w type="rhyme"
+                  >vida</w>!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--+---+-" rhyme="A">Brilla pura, serena y <w type="rhyme"
+                  >escondida</w>,</l>
+               <l met="-+--+--+-+-" rhyme="B">regando de ideal la humana <w type="rhyme"
+                  >mente</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B" enjamb="ex_subj_verb">y abrasa y funde en tu esplendor
+                     <w type="rhyme">ardiente</w></l>
+               <l met="+--+---+-+-" rhyme="A">toda la escoria que en el mundo <w type="rhyme"
+                     >anida</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+---+-+-" rhyme="C" enjamb="pb_noun_prep">Brilla en la lid, en el taller,
+                  en la <w type="rhyme">onda</w></l>
+               <l met="+--+---+-+-" rhyme="D">de alta armonía que el poeta <w type="rhyme"
+                  >crea</w>,</l>
+               <l met="---+---+-+-" rhyme="E">en la verdad que el pensador <w type="rhyme"
+                     >revela</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+---+-+-" rhyme="C">Y el corazón al corazón <w type="rhyme"
+                  >responda</w>;</l>
+               <l met="-+---+-+-+-" rhyme="D" enjamb="ex_subj_verb">y toda actividad trascienda, y
+                     <w type="rhyme">sea</w></l>
+               <l met="+--+---+-+-" rhyme="E">flecha de amor que hacia lo eterno <w type="rhyme"
+                     >vuele</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s568n_2080">
+            <head>Sensualismo</head>
+            <lg n="1" type="cuarteto">
+               <l met="-++--+-+-+-" rhyme="A">¿Será un crimen rasgar la tenue <w type="rhyme"
+                     >gasa</w></l>
+               <l met="--+--++--+-" rhyme="B">con que oculta el amor gracias <w type="rhyme"
+                     >terrenas</w>,</l>
+               <l met="---+-+---+-" rhyme="B" enjamb="pb_adj_noun">o en la pomposa viña las <w
+                     type="rhyme">ajenas</w></l>
+               <l met="+--+-+-+-+-" rhyme="A">uvas gustar y el bien que raudo <w type="rhyme"
+                     >pasa</w>?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+-+-+-" rhyme="A">Cuando el amor el alma nos <w type="rhyme"
+                  >abrasa</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B">que Venus arde en las henchidas <w type="rhyme"
+                     >venas</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B" enjamb="pb_adj_noun">desciende el cielo mismo a las <w
+                     type="rhyme">amenas</w></l>
+               <l met="+--+---+-+-" rhyme="A">ígneas regiones del placer sin <w type="rhyme"
+                     >tasa</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+-+---+-" rhyme="C" enjamb="ex_subj_verb">Júpiter sumo el trono <w
+                     type="rhyme">esplendoroso</w></l>
+               <l met="-++--+---+-" rhyme="D" enjamb="pb_adj_noun">dejó, y a Leda en cisne <w
+                     type="rhyme">transformado</w></l>
+               <l met="-+--+-+--+-" rhyme="E">sedujo, y a la tiria Europa en <w type="rhyme"
+                     >toro</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+---+-" rhyme="C" enjamb="pb_adj_prep">¡y en la prisión entrando <w
+                     type="rhyme">voluptuoso</w></l>
+               <l met="--+--+---+-" rhyme="D" enjamb="ex_subj_verb">de la blanca Danae, <w
+                     type="rhyme">derramado</w></l>
+               <l met="-+---+-+-+-" rhyme="E">sobre ella se deshizo en lluvia de <w type="rhyme"
+                     >oro</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

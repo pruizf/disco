@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s362g_0826">
+            <title property="dc:title">Soneto</title>
+            <author property="dc:creator" resource="disco:s362g_0826">Diego (Padre) Murillo</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">288</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s362g_0826"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_362g"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_362g" about="disco:362g" typeOf="foaf:Person">
+                  <persName type="short">Murillo</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Diego (Padre)</forename>
+                     <surname property="foaf:familyName">Murillo</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Diego (Padre) Murillo</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s362g_0826">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">El paso lento, ahora acelerado,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s362g_0826">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-++----+-" rhyme="A">El paso lento, ahora <w type="rhyme">acelerado</w>,</l>
+               <l met="---+-+---+-" rhyme="B">de virginal vergüenza <w type="rhyme">acompañada</w>,</l>
+               <l met="-+-+--+--+-" rhyme="B">la rubia crencha al tranzado <w type="rhyme">echada</w>
+               </l>
+               <l met="+--+--+--+-" rhyme="A">busca la oveja al cordero <w type="rhyme">amado</w>
+               </l>
+            </lg>
+            <lg n="2" type="unknown">
+               <l met="-+---+-+-+-" rhyme="A">El rastro de la sangre que ha <w type="rhyme">dejado</w>,</l>
+               <l met="+--+--+--+-" rhyme="A">sigue la madre de su hijo <w type="rhyme">amado</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B" enjamb="ex_subj_verb">sin duda le hallará, porque <w type="rhyme">bañada</w>
+               </l>
+               <l met="+--+---+-+-" rhyme="A">queda la calle, y lo demás <w type="rhyme">bañado</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++-+---+-+-" rhyme="C">Cual va la cierva con ardor <w type="rhyme">buscando</w>,</l>
+               <l met="-+-+---+-+-" rhyme="D">la clara fuente, donde bañe y <w type="rhyme">riegue</w>,</l>
+               <l met="-+-+---+-+-" rhyme="E">de flechas cruel la peligrosa <w type="rhyme">herida</w>
+               </l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-++--+---+-" rhyme="C">Así corre la Virgen <w type="rhyme">suspirando</w>,</l>
+               <l met="-++--+---+-" rhyme="D">y no la detendrán hasta que <w type="rhyme">llegue</w>
+               </l>
+               <l met="-+-+-+---+-" rhyme="E">al hijo, que es la fuente de su <w type="rhyme">vida</w>
+               </l>
+            </lg>
+            <lg n="5" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="F">Llega la Virgen donde el Hijo <w type="rhyme">estaba</w>;</l>
+               <l met="+-+++-+--+-" rhyme="G">Ella le mira y El la mira a <w type="rhyme">Ella</w>;</l>
+               <l met="+-+--+--+-" rhyme="G">Ella llora por El y El por <w type="rhyme">Ella</w>,</l>
+               <l met="---+-+---+-" rhyme="F">y por los dos la tierra se <w type="rhyme">regaba</w>
+               </l>
+            </lg>
+            <lg n="6" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="F">Ambos se miran, mas ninguno <w type="rhyme">hablaba</w>;</l>
+               <l met="--+--+---+-" rhyme="G">con los ojos publica su <w type="rhyme">querella</w>;</l>
+               <l met="-+-+--+--+-" rhyme="G">El ve su muerte en los ojos de <w type="rhyme">Ella</w>
+               </l>
+               <l met="+--+-+---+-" rhyme="F">y Ella en los ojos de El lo que <w type="rhyme">mataba</w>
+               </l>
+            </lg>
+            <lg n="7" type="terceto">
+               <l met="---++----+-" rhyme="H" enjamb="ex_dobj_verb">Mas el impío pueblo, que <w type="rhyme">entendía</w>
+               </l>
+               <l met="--+--+-+-+-" rhyme="I">que aliviaba su pena en tal <w type="rhyme">jornada</w>,</l>
+               <l met="+--+---+-+-" rhyme="J">ver a su madre en el dolor <w type="rhyme">presente</w>,</l>
+            </lg>
+            <lg n="8" type="terceto">
+               <l met="-+-+------+-" rhyme="H">al punto apartan al Hijo de <w type="rhyme">María</w>,</l>
+               <l met="-+-+---+-+-" rhyme="I">del Hijo apartan a su Madre <w type="rhyme">amada</w>
+               </l>
+               <l met="+-++-+++-+-" rhyme="J">¡Juzgue quién sabe quién más pena <w type="rhyme">siente</w>!</l>
+            </lg>
+            <lg n="9" type="cuarteto">
+               <l met="-+-+-+-+-+-" rhyme="K">El Verbo eterno al cielo el rostro <w type="rhyme">alzado</w>,</l>
+               <l met="-+-+-+---+-" rhyme="H">estando ya en la cruz donde <w type="rhyme">moría</w>,</l>
+               <l met="-+-+---+-+-" rhyme="H" enjamb="pb_noun_prep">al Padre ruega por la culpa <w type="rhyme">impía</w>
+               </l>
+               <l met="-+--++-+-+-" rhyme="K">del pueblo que le tiene allí <w type="rhyme">enclavado</w>
+               </l>
+            </lg>
+            <lg n="10" type="cuarteto">
+               <l met="-+-+-+-+-+-" rhyme="K" enjamb="ex_dobj_verb">Prométele al ladrón que está a su <w type="rhyme">lado</w>
+               </l>
+               <l met="+--+-+-+-+-" rhyme="H">mucho mayor merced que le <w type="rhyme">pedía</w>,</l>
+               <l met="-----+----" rhyme="H">y a su Madre Santísima <w type="rhyme">María</w>
+               </l>
+               <l met="++-+---+-+-" rhyme="K">le da por hijo a Juan <w type="rhyme">amado</w>
+               </l>
+            </lg>
+            <lg n="11" type="terceto">
+               <l met="-+-+-+-+++-" rhyme="L" enjamb="pb_verb_chain">Pregunta al Padre: «¿Qué ocasión ha <w type="rhyme">habido</w>
+               </l>
+               <l met="-----++--+-" rhyme="M">para desampararme, Eterno <w type="rhyme">Padre</w>?»</l>
+               <l met="-+---+-+-+-" rhyme="-">y vuelto al pueblo dice: «Sitio».</l>
+            </lg>
+            <lg n="12" type="terceto">
+               <l met="-+---+-+-+-" rhyme="L">Y viendo que lo escrito está <w type="rhyme">cumplido</w>,</l>
+               <l met="--+--+---+-" rhyme="M">inclinando su rostro hacia su <w type="rhyme">Madre</w>,</l>
+               <l met="-+-+-+---+-" rhyme="-">ofrece al Padre el alma en sacrificio.</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s299n_0982">
+            <title property="dc:title">Mi pensamiento</title>
+            <author property="dc:creator" resource="disco:s299n_0982">Merced Valdés Mendoza</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">84</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s299n_0982"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_299n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_299n" about="disco:299n" typeOf="foaf:Person">
+                  <persName type="short">Valdés Mendoza</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Merced</forename>
+                     <surname property="foaf:familyName">Valdés Mendoza</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Merced Valdés Mendoza</persName>
+                  <sex property="foaf:gender" content="F"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s299n_0982">
+                        <title property="dc:title">Mi pensamiento</title>
+                        <title type="incipit" property="dc:alternative">Duerme tranquilo, pensamiento mío,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s299n_0982">
+            <head>Mi pensamiento</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">Duerme tranquilo, pensamiento <w type="rhyme">mío</w>,</l>
+               <l met="---+-+---+-" rhyme="B">en tu feliz y suave <w type="rhyme">indiferencia</w>,</l>
+               <l met="--+--+---+-" rhyme="B">y tus cándidas horas de <w type="rhyme">inocencia</w>
+               </l>
+               <l met="+-+--+-+-+-" rhyme="A">no perturbe jamás el hado <w type="rhyme">impío</w>
+               </l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A" enjamb="pb_noun_prep">No aprisionado mires tu <w type="rhyme">albedrío</w>
+               </l>
+               <l met="--+--+---+-" rhyme="B">por el vano oropel de la <w type="rhyme">opulencia</w>;</l>
+               <l met="+----+---+-" rhyme="B" enjamb="ex_subj_verb">todo cuanto seduce la <w type="rhyme">existencia</w>
+               </l>
+               <l met="++-+---+-+-" rhyme="A">te encuentre siempre como el mármol <w type="rhyme">frío</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+---+-" rhyme="C" enjamb="pb_noun_prep">Y no despiertes nunca <w type="rhyme">pensamiento</w>
+               </l>
+               <l met="--+--+---+-" rhyme="D">de tu sueño sublime y <w type="rhyme">apacible</w>,</l>
+               <l met="-+-+---+-+-" rhyme="C">y sé del mundo al engañoso <w type="rhyme">acento</w>
+               </l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+----++--+-" rhyme="D">roca en mitad del mar, dura y <w type="rhyme">terrible</w>,</l>
+               <l met="---+---+-+-" rhyme="C">que despreciando el espantoso <w type="rhyme">viento</w>
+               </l>
+               <l met="--+-+-+--+-" rhyme="D">a su fuerza y pode res <w type="rhyme">insensible</w>
+               </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

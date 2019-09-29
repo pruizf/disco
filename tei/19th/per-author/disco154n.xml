@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_154n">
+            <title property="dc:title">Sonetos de José de Maturana</title>
+            <author property="dc:creator" resource="disco:154n" corresp="#disco_154n">José de
+               Maturana</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">4</measure>
+            <measure unit="tokens">411</measure>
+            <measure unit="line">56</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_154n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_154n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_154n" about="disco:154n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/106987631"/>
+                  <persName type="short">Maturana</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">José</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Maturana</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">José de Maturana</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Argentina</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s154n_0461">
+                        <title property="dc:title">Las castillas</title>
+                        <title type="incipit" property="dc:alternative">Son hermanas de amor, van de
+                           la mano</title>
+                     </bibl>
+                     <bibl resource="disco:s154n_0462">
+                        <title property="dc:title">Las dos primaveras</title>
+                        <title type="incipit" property="dc:alternative">Rubia y gallarda viene,
+                           mostrando en su carruaje</title>
+                     </bibl>
+                     <bibl resource="disco:s154n_0463">
+                        <title property="dc:title">Carne florida</title>
+                        <title type="incipit" property="dc:alternative">Puñal de oro, brillante y
+                           florentino,</title>
+                     </bibl>
+                     <bibl resource="disco:s154n_0464">
+                        <title property="dc:title">En la sala de juego</title>
+                        <title type="incipit" property="dc:alternative">Rodeada está la mesa de
+                           atentos jugadores</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>José de Maturana</head>
+            <p>Argentina. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s154n_0461">
+            <head>Las castillas</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+--++--+-" rhyme="A">Son hermanas de amor, van de la <w type="rhyme"
+                     >mano</w></l>
+               <l met="--+--+---+-" rhyme="B">por la estepa del fondo <w type="rhyme"
+                  >levantino</w>,</l>
+               <l met="-+---+---+-" rhyme="B" enjamb="pb_relword">llevando en polvoriento <w
+                     type="rhyme">pergamino</w></l>
+               <l met="--+--+---+-" rhyme="A">las memorias del mundo <w type="rhyme"
+                  >castellano</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++-+-+-+-+-" rhyme="A" enjamb="cc_crossclause">Son dos hidalgas de un orgullo
+                     <w type="rhyme">anciano</w></l>
+               <l met="---+-+---+-" rhyme="B">que, en los inermes yunques del <w type="rhyme"
+                     >destino</w>,</l>
+               <l met="---+---+-+-" rhyme="B" enjamb="ex_dobj_verb">firmes, batieron con afán <w
+                     type="rhyme">contino</w></l>
+               <l met="-+-+---+-+-" rhyme="A">la vieja cruz del abolengo <w type="rhyme"
+                  >hispano</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+----+---+-" rhyme="C">¿Viven de ensueños? ¿Cantan <w type="rhyme"
+                     >añoranzas</w>?</l>
+               <l met="++--+----+-" rhyme="C" enjamb="cc_crossclause">¿No hay un verde racimo de <w
+                     type="rhyme">esperanzas</w></l>
+               <l met="-+-+---+-+-" rhyme="D">que allá en sus viñas desoladas <w type="rhyme"
+                     >brote?</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+---+++-" rhyme="E">¡Tal vez la voz del porvenir les <w type="rhyme"
+                     >grite</w>,</l>
+               <l met="--++-+---+-" rhyme="E" enjamb="ex_dobj_verb">cuando en bien de otros fueros
+                     <w type="rhyme">resucite</w></l>
+               <l met="-+-+-+---+-" rhyme="D">con otra adarga olímpica el <w type="rhyme"
+                     >Quijote</w>!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s154n_0462">
+            <head>Las dos primaveras</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-+--+---+-" rhyme="A" enjamb="ex_dobj_verb">Rubia y gallarda viene,
+                  mostrando en su <w type="rhyme">carruaje</w></l>
+               <l met="-+-+-+--+---+-" rhyme="B">la luz de mil colores y el sol de sus <w
+                     type="rhyme">jazmines</w>,</l>
+               <l met="-+-+-+--+---+-" rhyme="B">como una blanca Venus de rústicos <w type="rhyme"
+                     >jardines</w></l>
+               <l met="---+-+-++---+-" rhyme="A">a quien las flores todas le rinden <w type="rhyme"
+                     >vasallaje</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+--+-+-+-" rhyme="A">La mansa maravilla del campo está en su <w
+                     type="rhyme">traje</w>,</l>
+               <l met="---+-+--+---+-" rhyme="B">y en su cantar de aurora la voz de los <w
+                     type="rhyme">violines</w></l>
+               <l met="+--+-+-+-+-" rhyme="B">Tiene los hombros griegos España va en sus <w
+                     type="rhyme">crines</w>,</l>
+               <l met="-+---+--+---+-" rhyme="A">Italia en sus pupilas y el mundo en su <w
+                     type="rhyme">homenaje</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+--+---+-" rhyme="C" enjamb="ex_subj_verb">Tú eres así Por eso mi potro de
+                     <w type="rhyme">conquista</w></l>
+               <l met="+----+----+-+-" rhyme="D">llega a la escalinata del pastoral <w type="rhyme"
+                     >palacio</w></l>
+               <l met="---+-+----+-+-" rhyme="C">con la tristeza errante de mi dolor de <w
+                     type="rhyme">artista</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-----+----+++-" rhyme="E">Y tras la primavera que tu placer me <w
+                     type="rhyme">arroja</w>,</l>
+               <l met="---+-+-++---+-" rhyme="D">con la altivez de siempre, te ofrezco su <w
+                     type="rhyme">topacio</w></l>
+               <l met="-+---+----+-+-" rhyme="E">como una mordedura de mi serpiente <w type="rhyme"
+                     >roja</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s154n_0463">
+            <head>Carne florida</head>
+            <lg n="1" type="cuarteto">
+               <l met="-++--+---+-" rhyme="A">Puñal de oro, brillante y <w type="rhyme"
+                     >florentino</w>,</l>
+               <l met="-+---+++-+-" rhyme="B">quisiera para hundírtelo en el <w type="rhyme"
+                     >seno</w>,</l>
+               <l met="-+---++--+-" rhyme="B">y ardiente de pasión, loco sin <w type="rhyme"
+                     >freno</w>,</l>
+               <l met="-+-+---+++-" rhyme="A">tu sangre fuese mi licor más <w type="rhyme"
+                  >fino</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A" enjamb="ex_subj_verb">Quisiera que tu cuerpo <w
+                     type="rhyme">diamantino</w></l>
+               <l met="---+-++--+-" rhyme="B">se convirtiese en flor -nardo <w type="rhyme"
+                     >sereno</w>-</l>
+               <l met="---+-+---+-" rhyme="B">para aspirar su esencia o su <w type="rhyme"
+                     >veneno</w></l>
+               <l met="---+-+---+-" rhyme="A">como postrer caricia del <w type="rhyme"
+                  >destino</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+---+-" rhyme="C">Pintor quisiera ser, de tus <w type="rhyme"
+                     >perfiles</w>,</l>
+               <l met="--++-+---+-" rhyme="C" enjamb="pb_noun_prep">para verte, desnuda, en los <w
+                     type="rhyme">marfiles</w></l>
+               <l met="-++--++--+-" rhyme="D">de algún blanco taller, carne <w type="rhyme"
+                     >florida</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+---+-+-" rhyme="E">y allá en el mármol de tu busto <w type="rhyme"
+                     >amante</w>,</l>
+               <l met="-+-+---+-+-" rhyme="E" enjamb="ex_dobj_verb">dejar mi nombre de laurel, <w
+                     type="rhyme">triunfante</w></l>
+               <l met="+++--+---+-" rhyme="D">¡cómo un beso de Sol para la <w type="rhyme"
+                  >vida</w>!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s154n_0464">
+            <head>En la sala de juego</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-+--+---+-" rhyme="A">Rodeada está la mesa de atentos <w type="rhyme"
+                     >jugadores</w></l>
+               <l met="---+-+--+-+-+-" rhyme="B">sobre el tapete oscuro la luz discreta <w
+                     type="rhyme">baja</w>;</l>
+               <l met="++-+--+---+-" rhyme="B">cien ponen toda su vida en la <w type="rhyme"
+                     >baraja</w></l>
+               <l met="+++-+--+---+-" rhyme="A">y ella es laca suerte que brinda sus <w type="rhyme"
+                     >amores</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++-+-+-+---+-" rhyme="A" enjamb="ex_subj_verb">Hay un silencio extraño Los
+                  graves <w type="rhyme">talladores</w></l>
+               <l met="-+---+----+-+-" rhyme="B">revuelven de su mazo la pintoresca <w type="rhyme"
+                     >faja</w>;</l>
+               <l met="-+-+-+---+--+-" rhyme="B">las manos dan posturas, el cerebro <w type="rhyme"
+                     >trabaja</w>,</l>
+               <l met="-+---+--+---+-" rhyme="A">y suenan las monedas y fichas de <w type="rhyme"
+                     >colores</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++-+-+--+---+-" rhyme="C">Ya así, la muda reina, Fortuna la <w type="rhyme"
+                     >inconstante</w>,</l>
+               <l met="-+-+----+---+-" rhyme="D">girando se halla en torno de cada <w type="rhyme"
+                     >concurrente</w></l>
+               <l met="-----+----+-+-" rhyme="C">como en torno a las luces la mariposa <w
+                     type="rhyme">errante</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+--+-+-+-" rhyme="E">Y entre monedas, fichas, baraja y suerte <w
+                     type="rhyme">loca</w>,</l>
+               <l met="-+-+-+--+---+-" rhyme="D">el hombre allí clavado, cual bestia <w type="rhyme"
+                     >impenitente</w>,</l>
+               <l met="++-+-+----+-+-" rhyme="E">¡no sabe alzar al triunfo la voluntad de <w
+                     type="rhyme">roca</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s578n_2100">
+            <title property="dc:title">Cuadro</title>
+            <author property="dc:creator" resource="disco:s578n_2100">Manuel Bertolín Peña</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">94</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s578n_2100"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_578n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_578n" about="disco:578n" typeOf="foaf:Person">
+                  <persName type="short">Bertolín Peña</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Manuel</forename>
+                     <surname property="foaf:familyName">Bertolín Peña</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Manuel Bertolín Peña</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s578n_2100">
+                        <title property="dc:title">Cuadro</title>
+                        <title type="incipit" property="dc:alternative">Lienzo español. Ambiente de Sevilla.</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s578n_2100">
+            <head>Cuadro</head>
+            <lg n="1" type="serventesio">
+               <l met="-+---+-" rhyme="A">Lienzo español Ambiente de <w type="rhyme">Sevilla</w>
+               </l>
+               <l met="--+--+-+-+-" rhyme="B">-Entre luz y misterio te <w type="rhyme">contemplo-</w>
+               </l>
+               <l met="+--+-+---+-" rhyme="A">Una mujer tocada de <w type="rhyme">mantilla</w>
+               </l>
+               <l met="-+-+---+++-" rhyme="B">y allá en el fondo la piedad de un <w type="rhyme">templo</w>
+               </l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="-+---+---+-" rhyme="C">Perfume de plegarias y <w type="rhyme">oraciones</w>,</l>
+               <l met="++--+----+-" rhyme="D">y una onda de cielo y de <w type="rhyme">incensario</w>
+               </l>
+               <l met="-++--+---+-" rhyme="C" enjamb="ex_subj_verb">Junto a un rojo fulgor de <w type="rhyme">corazones</w>
+               </l>
+               <l met="--+--+---+-" rhyme="D">la emoción silenciosa del <w type="rhyme">Calvario</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--++--+-" rhyme="E">Milagrosa mujer fuerte y <w type="rhyme">morena</w>,</l>
+               <l met="+-+--++--+-" rhyme="E">de ojos negros de amor, de odio y de <w type="rhyme">pena</w>,</l>
+               <l met="-+---+-+-+-" rhyme="F">que evocan con su luz la raza <w type="rhyme">inquieta</w>
+               </l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+++--+---+-" rhyme="G">Yo te he visto piadosa y <w type="rhyme">penitente</w>
+               </l>
+               <l met="---+---+-+-" rhyme="G">con la humildad de tu mirar <w type="rhyme">doliente</w>,</l>
+               <l met="--+--++--+-" rhyme="F">encarnar el dolor de una <w type="rhyme">saeta</w>
+               </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

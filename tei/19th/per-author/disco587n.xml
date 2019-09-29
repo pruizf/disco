@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_587n">
+            <title property="dc:title">Sonetos de Bruno Valdés Miranda</title>
+            <author property="dc:creator" resource="disco:587n" corresp="#disco_587n">Bruno Valdés
+               Miranda</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">93</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_587n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_587n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_587n" about="disco:587n" typeOf="foaf:Person">
+                  <persName type="short">Valdés Miranda</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Bruno</forename>
+                     <surname property="foaf:familyName">Valdés Miranda</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Bruno Valdés Miranda</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s587n_2191">
+                        <title property="dc:title">Una vieja verde</title>
+                        <title type="incipit" property="dc:alternative">Es esta vieja verde, una
+                           tarasca</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Bruno Valdés Miranda</head>
+            <p>Cuba. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s587n_2191">
+            <head>Una vieja verde</head>
+            <lg n="1" type="cuarteto">
+               <l met="++-+-++--+-" rhyme="A" enjamb="cc_crossclause">Es esta vieja verde, una <w
+                     type="rhyme">tarasca</w></l>
+               <l met="-++--+---+-" rhyme="A">que tiene una mirada <w type="rhyme"
+                  >picaresca</w>,</l>
+               <l met="--+-++---+-" rhyme="A">que se enciende más pronto que la <w type="rhyme"
+                     >yesca</w></l>
+               <l met="---+---+-+-" rhyme="A">y que palitos de tabaco <w type="rhyme">masca</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A" enjamb="ex_subj_verb">Suele de vez en cuando su <w
+                     type="rhyme">borrasca</w></l>
+               <l met="-+-+-+-+-+-" rhyme="A">correr a palo seco y brisa <w type="rhyme"
+                  >fresca</w>;</l>
+               <l met="-+---+-+-+-" rhyme="A" enjamb="pb_noun_prep">armar con la vecina alguna <w
+                     type="rhyme">gresca</w></l>
+               <l met="--+--+---+-" rhyme="A">con su mal, su pimienta y su <w type="rhyme"
+                     >hojarasca</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+---+-+-" rhyme="A">Aún por los valles de Cupido <w type="rhyme"
+                     >trisca</w>;</l>
+               <l met="--+--+-+-+-" rhyme="A">y si logra atrapar alguna <w type="rhyme"
+                  >mosca</w>,</l>
+               <l met="+-+-++-+-+-" rhyme="A">la acorrala, la envuelve y la <w type="rhyme"
+                     >chamusca</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+-++--+-" rhyme="A">Dicen que fue en sus quince una <w type="rhyme"
+                     >odalisca</w>,</l>
+               <l met="-+---+-+-+-" rhyme="A" enjamb="pb_verb_chain">mas hoy, que la vejez su cuerpo
+                     <w type="rhyme">enrosca</w></l>
+               <l met="++---+---+-" rhyme="A">es una miserable <w type="rhyme">pelandusca</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

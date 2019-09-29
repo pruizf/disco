@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_454g">
+            <title property="dc:title">Sonetos de Antonio de Silva</title>
+            <author property="dc:creator" resource="disco:454g" corresp="#disco_454g">Antonio de
+               Silva</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">306</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_454g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_454g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_454g" about="disco:454g" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso" resource="https://viaf.org/viaf/2835367"/>
+                  <persName type="short">Silva</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Antonio</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Silva</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Antonio de Silva</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s454g_0967">
+                        <title property="dc:title">Soneto de disparates manejando una mujer a un
+                           homb</title>
+                        <title type="incipit" property="dc:alternative">Para pintarte, empiezo por
+                           la boca,</title>
+                     </bibl>
+                     <bibl resource="disco:s454g_0968">
+                        <title property="dc:title">Respuesta del galán a la dama</title>
+                        <title type="incipit" property="dc:alternative">Es tal tu gracia, y aunque
+                           yo al probarla</title>
+                     </bibl>
+                     <bibl resource="disco:s454g_0969">
+                        <title property="dc:title">A San Isidro</title>
+                        <title type="incipit" property="dc:alternative">Los campos de Madrid, Isidro
+                           santo,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Antonio de Silva</head>
+            <p>España. 17th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s454g_0967">
+            <head>Soneto de disparates manejando una mujer a un homb</head>
+            <lg n="1" type="cuarteto">
+               <l met="---+++---+-" rhyme="A">Para pintarte, empiezo por la <w type="rhyme"
+                  >boca</w>,</l>
+               <l met="+----+++++-" rhyme="B">que es como de costal, más no tan <w type="rhyme"
+                     >seca</w>;</l>
+               <l met="-----+-+-+-" rhyme="B" enjamb="ex_subj_verb">porque de aficionada, y no a <w
+                     type="rhyme">manteca</w></l>
+               <l met="++-+-+--++-" rhyme="A">trae siempre tanto moño, que me <w type="rhyme"
+                     >coca</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+-+-+-" rhyme="C">Tus vigores, y lados son de <w type="rhyme"
+                  >estopa</w>,</l>
+               <l met="---+-+-+-+-" rhyme="B">a quien tu espalda le sirvió de <w type="rhyme"
+                     >rueca</w>,</l>
+               <l met="--++---+-+-" rhyme="B">en tu pie miro el zacarrón de <w type="rhyme"
+                  >Meca</w>,</l>
+               <l met="---+-----+-" rhyme="C">y en tu nariz el Albañil de <w type="rhyme"
+                  >Moca</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+----+++-+-" rhyme="C">Toda tu habilidad es mala <w type="rhyme"
+                  >cuca</w>,</l>
+               <l met="-+---+---+-" rhyme="D">contigo la limpieza se <w type="rhyme"
+                  >salpica</w>,</l>
+               <l met="-++--+-+--+-" rhyme="D">el talle es de babieca, el juicio de <w type="rhyme"
+                     >acá</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+--++-+-" rhyme="D">Es el pesebre quien te da en la <w type="rhyme"
+                     >nuca</w>,</l>
+               <l met="+--+---+++-" rhyme="D">y este retrato mi pincel te <w type="rhyme"
+                  >aplica</w></l>
+               <l met="-+-+-+-+-+-" rhyme="D">en rueca, boca, Meca, cuca, y <w type="rhyme"
+                  >caca</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s454g_0968">
+            <head>Respuesta del galán a la dama</head>
+            <lg n="1" type="cuarteto">
+               <l met="++-+--+-++-" rhyme="A" enjamb="pb_verb_chain">Es tal tu gracia, y aunque yo
+                  al <w type="rhyme">probarla</w></l>
+               <l met="++---+---++-" rhyme="A">di gloria a cuantos tratan de <w type="rhyme"
+                     >verterla</w>,</l>
+               <l met="--++++-+-+-" rhyme="A">y tu rostro es un pez llamado <w type="rhyme"
+                     >merla</w>,</l>
+               <l met="-+---+-+-+-" rhyme="A">que nace en la laguna que hay en <w type="rhyme"
+                     >Parla</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+---++-" rhyme="A">Tus ojos son de aguja, que al <w type="rhyme"
+                     >pasarla</w>,</l>
+               <l met="-+--++---++-" rhyme="A">se pica cualquier sastre por <w type="rhyme"
+                     >meterla</w>,</l>
+               <l met="--+--+-+-+-" rhyme="A">pues lo que es tu nariz, si fuera <w type="rhyme"
+                     >perla</w>,</l>
+               <l met="+-++-+---++-" rhyme="A">no tuviera oro Ofir para <w type="rhyme"
+                  >pagarla</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+--+-+-++-" rhyme="A">Cierta bola interior tu boca <w type="rhyme"
+                     >verla</w>,</l>
+               <l met="-+--++-+-+-" rhyme="A" enjamb="ex_dobj_verb">tu barba a tener barbas fuera <w
+                     type="rhyme">borla</w></l>
+               <l met="--++-+-+-+-" rhyme="-">al pendón de una cara que almas turba.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+-+-+-" rhyme="A">A toda tu beldad tu boca <w type="rhyme"
+                  >merla</w>,</l>
+               <l met="-+-+-+---+-" rhyme="A">y ves aquí tu rostro, aunque sin <w type="rhyme"
+                     >orla</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="A">en parla, perla, borla, merla, y <w type="rhyme"
+                     >burla</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s454g_0969">
+            <head>A San Isidro</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+-+-+-" rhyme="A">Los campos de Madrid, Isidro <w type="rhyme"
+                  >santo</w>,</l>
+               <l met="++---+---+-" rhyme="B">no cura de surcar con el <w type="rhyme"
+                  >arado</w>,</l>
+               <l met="+-+--+--++-" rhyme="B">que este oficio a los Ángeles ha <w type="rhyme"
+                     >dado</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="A">porque él con ruegos los cultive en <w type="rhyme"
+                     >tanto</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+-+++-" rhyme="A">El exceso de amor en Dios es <w type="rhyme"
+                  >tanto</w>,</l>
+               <l met="--+--+---+-" rhyme="B">que con él su atributo a <w type="rhyme"
+                  >conmutado</w>,</l>
+               <l met="---+-++--+-" rhyme="B">pues si de arar el cielo hace <w type="rhyme"
+                     >cuidado</w>,</l>
+               <l met="-+++---+-+-" rhyme="A">Isidro es cielo en fecundar con <w type="rhyme"
+                     >llanto</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C" enjamb="ex_subj_verb">Pues estos campos para más <w
+                     type="rhyme">consuelo</w></l>
+               <l met="-+-+-+-+-+-" rhyme="D">orando riega Isidro, Dios los <w type="rhyme"
+                  >ara</w>,</l>
+               <l met="-++--+---+-" rhyme="E">dejad, valle de lágrimas, el <w type="rhyme"
+                  >luto</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--++-----+-" rhyme="C">Que exhaló Dios las suyas hasta el <w type="rhyme"
+                     >cielo</w>,</l>
+               <l met="-+---+-+-+-" rhyme="D">y allá de los trabajos nos <w type="rhyme"
+                  >prepara</w>,</l>
+               <l met="-+-+-+---+-" rhyme="E">sembrando aquí sus lágrimas, el <w type="rhyme"
+                     >fruto</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

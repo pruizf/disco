@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_519n">
+            <title property="dc:title">Sonetos de Ventura de la Vega</title>
+            <author property="dc:creator" resource="disco:519n" corresp="#disco_519n">Ventura de la
+               Vega</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">5</measure>
+            <measure unit="tokens">441</measure>
+            <measure unit="line">70</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_519n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_519n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_519n" about="disco:519n" typeOf="foaf:Person">
+                  <persName type="short">Vega</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ventura</forename>
+                     <nameLink>de la</nameLink>
+                     <surname property="foaf:familyName">Vega</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ventura de la Vega</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Buenos
+                              Aires</settlement>
+                           <country property="schema:birthPlace" inlist="">Argentina</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1807" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1865" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s519n_1941">
+                        <title property="dc:title">Sonetos</title>
+                        <title type="incipit" property="dc:alternative">«Cruza sin mí los espumosos
+                           mares;</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Ventura de la Vega</head>
+            <p>Buenos Aires. 1807 - 1865</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s519n_1941">
+            <head>Sonetos</head>
+            <lg type="sonnet" xml:id="s519n_1941_01">
+               <head>I</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+--+---+-+-" rhyme="A">«Cruza sin mí los espumosos <w type="rhyme"
+                        >mares</w>;</l>
+                  <l met="-+-+---+-+-" rhyme="B">saluda, ¡oh nave!, de mi patria el <w type="rhyme"
+                        >muro</w>,</l>
+                  <l met="-+-+-++--+-" rhyme="B" enjamb="pb_adj_prep">y déjame vagar triste y <w
+                        type="rhyme">oscuro</w></l>
+                  <l met="--+--+---+-" rhyme="A">por la orilla del lento <w type="rhyme"
+                        >Manzanares</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+--+-+---+-" rhyme="A" enjamb="pb_noun_prep">Si osa turbar la paz de tus
+                        <w type="rhyme">hogares</w></l>
+                  <l met="--+--+-+-+-" rhyme="B">de soberbio extranjero el soplo <w type="rhyme"
+                        >impuro</w>,</l>
+                  <l met="+--+---+-+-" rhyme="B" enjamb="ex_dobj_verb">otra defienda con el hierro
+                        <w type="rhyme">duro</w></l>
+                  <l met="---+---+-+-" rhyme="A">su libertad y mis nativos lares »</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+--+-+---+-" rhyme="C" enjamb="ex_subj_verb">Esto decía yo cuando las <w
+                        type="rhyme">olas</w></l>
+                  <l met="-+-+---+-+-" rhyme="D">surcó la nave en que partir <w type="rhyme"
+                        >debía</w>,</l>
+                  <l met="---+-+---+-" rhyme="C">y abandonó las costas <w type="rhyme"
+                     >españolas</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="+--+-+---+-" rhyme="E" enjamb="ex_subj_verb">Ella al impulso plácido del
+                        <w type="rhyme">aura</w></l>
+                  <l met="-+-+---+-" rhyme="D">voló a la orilla de la patria <w type="rhyme"
+                     >mía</w></l>
+                  <l met="-+-+---+-+-" rhyme="E">y yo en los brazos me volví de <w type="rhyme"
+                        >Laura</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s519n_1941_02">
+               <head>II</head>
+               <lg n="1" type="cuarteto">
+                  <l met="--+--++--+-" rhyme="A" enjamb="ex_subj_verb">El Parnaso tembló: Febo <w
+                        type="rhyme">indignado</w></l>
+                  <l met="---+-+---+-" rhyme="B">despedazó su cítara de <w type="rhyme">oro</w>,</l>
+                  <l met="---+---+-+-" rhyme="B">y en abundante y encendido <w type="rhyme"
+                        >lloro</w></l>
+                  <l met="-+---+-+-+-" rhyme="A">Melpómene bañó su rostro <w type="rhyme"
+                     >airado</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="--+--+---+-" rhyme="A">Carnerero, de berros <w type="rhyme"
+                     >coronado</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="B">conduce al ara el furibundo <w type="rhyme"
+                        >coro</w>;</l>
+                  <l met="-+-+-+---+-" rhyme="B">Comella, oyendo el cántico <w type="rhyme"
+                        >sonoro</w>,</l>
+                  <l met="--+--+---+-" rhyme="A">desde el limbo sonríe <w type="rhyme"
+                        >alborozado</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+-+---+-+-" rhyme="C">Intenso y fiero, con osada <w type="rhyme"
+                        >planta</w>,</l>
+                  <l met="---+-+-+-+-" rhyme="D">ante el marmóreo altar Solís <w type="rhyme"
+                        >parece</w></l>
+                  <l met="---+-+---+-" rhyme="C">y la segur de Góngora <w type="rhyme"
+                     >levanta</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+-++--+-" rhyme="D">Triste Racine al verla se <w type="rhyme"
+                        >estremece</w>;</l>
+                  <l met="+-+--+---+-" rhyme="C">baja Alfiere desnuda la <w type="rhyme"
+                        >garganta</w>,</l>
+                  <l met="---+-+--++-" rhyme="D">y al sacrifico bárbaro la <w type="rhyme"
+                        >ofrece</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s519n_1941_03">
+               <head>III</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+-+----+-+-" rhyme="A">«Este tronco que mayo adorna y <w type="rhyme"
+                        >viste</w>,</l>
+                  <l met="--+--+---+-" rhyme="B">donde grabas tu nombre <w type="rhyme"
+                        >idolatrado</w>,</l>
+                  <l met="+--+-+---+-" rhyme="B">Laura, verasle pronto <w type="rhyme"
+                     >deshojado</w>,</l>
+                  <l met="--+--+-+-+-" rhyme="A">que a la furia del tiempo no <w type="rhyme"
+                        >resiste</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+-----+-+-" rhyme="A">Vendrá el noviembre con sus lluvias <w type="rhyme"
+                        >triste</w>,</l>
+                  <l met="-+-----+-+-" rhyme="B">vendrá el enero con su escarcha <w type="rhyme"
+                        >helado</w>,</l>
+                  <l met="---+---+++-" rhyme="B">o el huracán a desgajarle <w type="rhyme"
+                        >airado</w>,</l>
+                  <l met="---+-+---+-" rhyme="A">arrebatando el nombre que <w type="rhyme"
+                        >esculpiste</w></l>
+               </lg>
+               <lg n="3" type="unknown">
+                  <l met="+-++---+-+-" rhyme="C">Templo más digno que tu nombre <w type="rhyme"
+                        >lleve</w></l>
+                  <l met="--++-+---+-" rhyme="D">donde no le destrocen <w type="rhyme"
+                        >vendavales</w>,</l>
+                  <l met="--+-++---+-" rhyme="C">ni el invierno le cubra con su <w type="rhyme"
+                        >nieve</w>,</l>
+                  <l met="+--+-+-+-+-" rhyme="E">un corazón será que te ame ciego »</l>
+               </lg>
+               <lg n="4" type="pareado">
+                  <l met="+-+--+---+-" rhyme="D" enjamb="pb_adj_noun">Dijo Amor, y con rasgos <w
+                        type="rhyme">eternales</w></l>
+                  <l met="-+-+---+-+-" rhyme="E">grabole aquí con su buril de <w type="rhyme"
+                        >fuego</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s519n_1941_04">
+               <head>IV</head>
+               <lg n="1" type="cuarteto">
+                  <l met="--+--+-+-+-" rhyme="A" enjamb="ex_subj_verb">Si atrevida tal vez la lira
+                        <w type="rhyme">mía</w></l>
+                  <l met="+--+---+-+-" rhyme="B" enjamb="ex_dobj_verb">osa turbar con importuno <w
+                        type="rhyme">acento</w></l>
+                  <l met="-+-+-+---+-" rhyme="B">el noble afán del alto <w type="rhyme"
+                        >pensamiento</w></l>
+                  <l met="---+---+-+-" rhyme="A">en que la patria sus destinos <w type="rhyme"
+                        >fía</w>;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+-+-+-+-+-" rhyme="A">perdóname, Señor, que en este <w type="rhyme"
+                        >día</w></l>
+                  <l met="+-+--+-+-+-" rhyme="B">mal sintiera de Apolo el sacro <w type="rhyme"
+                        >aliento</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="B" enjamb="pb_adj_adv">si al fiel clamor del popular
+                        <w type="rhyme">contento</w></l>
+                  <l met="+-+--+---+-" rhyme="A">no mezclase mis cantos de <w type="rhyme"
+                        >alegría</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+---+---+-" rhyme="C">Que nunca de tu aurora <w type="rhyme"
+                        >bienhadada</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="D">por más que corran los veloces <w type="rhyme"
+                        >años</w>,</l>
+                  <l met="--+--+-+-+-" rhyme="E">la memoria feliz España <w type="rhyme"
+                     >pierde</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="+--+---+-+-" rhyme="C" enjamb="ex_subj_verb">No: que la patria que salvó
+                     tu <w type="rhyme">espada</w></l>
+                  <l met="-+-+-+---+-" rhyme="D">jamás recuerde el nombre de <w type="rhyme"
+                        >Castaños</w></l>
+                  <l met="---+---+-+-" rhyme="E">sin que los lauros de Bailén <w type="rhyme"
+                        >recuerde</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s519n_1941_05">
+               <head>V</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+--+---+-+-" rhyme="A">Musas, alcemos de victoria el <w type="rhyme"
+                        >canto</w>:</l>
+                  <l met="-+---+-+++-" rhyme="B">España despertó: su honor la <w type="rhyme"
+                        >inspira</w>;</l>
+                  <l met="-+-+---+-+-" rhyme="B" enjamb="pb_noun_prep">y fue el arranque de su noble
+                        <w type="rhyme">ira</w></l>
+                  <l met="-+---++--+-" rhyme="A">del mundo admiración, de África <w type="rhyme"
+                        >espanto</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="---+-+-+-+-" rhyme="A">En desagravio al fin de ultraje <w type="rhyme"
+                        >tanto</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="B">Tetuán postrada a nuestros pies se <w type="rhyme"
+                        >mira</w></l>
+                  <l met="+--+-+---+-" rhyme="B" enjamb="ex_subj_verb">Musas, cantad y al eco de la
+                        <w type="rhyme">lira</w></l>
+                  <l met="--+--+---+-" rhyme="A">reverdezcan los lauros de <w type="rhyme"
+                        >Lepanto</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+-+--+---+-" rhyme="C">Sí; que al ver por las ondas del <w type="rhyme"
+                        >Tirreno</w></l>
+                  <l met="-+-++--+-+-" rhyme="D" enjamb="pb_adj_noun">allá lanzarse en la guerrera
+                        <w type="rhyme">popa</w></l>
+                  <l met="+--+---+-+-" rhyme="C">hueste arrojada y adalid <w type="rhyme"
+                     >sereno</w>;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+---+-+-" rhyme="D" enjamb="ex_subj_verb">y que a sus antros con terror
+                        <w type="rhyme">galopa</w></l>
+                  <l met="+--+-+---+-" rhyme="C">roto y vencido el bárbaro <w type="rhyme"
+                        >agareno</w></l>
+                  <l met="+--+-+-+-+-" rhyme="D">ya con respeto nos saluda <w type="rhyme"
+                        >Europa</w></l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_398g">
+            <title property="dc:title">Sonetos de Juan López de Úbeda</title>
+            <author property="dc:creator" resource="disco:398g" corresp="#disco_398g">Juan López de
+               Úbeda</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">184</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_398g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_398g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_398g" about="disco:398g" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/89240356"/>
+                  <persName type="short">López de Úbeda</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan</forename>
+                     <surname property="foaf:familyName">López de Úbeda</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan López de Úbeda</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Toledo</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date type="century">16</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s398g_0889">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Dulcísimo Jesús, mi amor
+                           festina,</title>
+                     </bibl>
+                     <bibl resource="disco:s398g_0890">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">De aquel vellón que nunca se
+                           mojaba,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Juan López de Úbeda</head>
+            <p>Toledo. 16th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s398g_0889">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-----+-+-" rhyme="A">Dulcísimo Jesús, mi amor <w type="rhyme"
+                  >festina</w>,</l>
+               <l met="-+---+++-+-" rhyme="B">festina que por verte peno y <w type="rhyme"
+                  >muero</w>;</l>
+               <l met="+--++--+++-" rhyme="B">muero por ti, y ansí, mi amor, lo <w type="rhyme"
+                     >quiero</w>;</l>
+               <l met="+----++-++-" rhyme="A">quiérolo porque amor a esto me <w type="rhyme"
+                     >inclina</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+-+-+-" rhyme="A">Inclíname a decir: Mi amor, <w type="rhyme"
+                  >camina</w>,</l>
+               <l met="-+-+-++-+-+-" rhyme="B">camina más que le gamo muy <w type="rhyme"
+                  >ligero</w>,</l>
+               <l met="-+---++--+-" rhyme="B">ligero y sin tardarte, porque <w type="rhyme"
+                     >espero</w>,</l>
+               <l met="-+---+-+-+-" rhyme="A">espero que esperando amor se <w type="rhyme"
+                  >afina</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+-+-+-" rhyme="C">Enfermo estoy de amor y muy <w type="rhyme"
+                     >sediento</w>,</l>
+               <l met="-+---+---+-" rhyme="D">sediento como el siervo <w type="rhyme"
+                  >fatigado</w>;</l>
+               <l met="--+--++--+-" rhyme="E">fatigado de amor tengo mi <w type="rhyme"
+                  >pecho</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+-+++-+-" rhyme="C">mi pecho sólo en verte está <w type="rhyme"
+                     >contento</w>;</l>
+               <l met="-+-+-+-+-+-" rhyme="D">contento no hay sin ti, Jesús <w type="rhyme"
+                     >amado</w>,</l>
+               <l met="-+---++--+-" rhyme="E">amado con amor fuerte y <w type="rhyme"
+                  >estrecho</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s398g_0890">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A">De aquel vellón que nunca se <w type="rhyme"
+                     >mojaba</w>,</l>
+               <l met="-+-+-++--+-" rhyme="B">estando el campo en pura agua <w type="rhyme"
+                     >bañado</w>,</l>
+               <l met="-++--+---+-" rhyme="B">el ser vos engendrada sin <w type="rhyme"
+                  >pecado</w>,</l>
+               <l met="+-+--+---+-" rhyme="A">Virgen madre de Dios <w type="rhyme"
+                  >representaba</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+-+-+-" rhyme="A">Y cuando el agua todo lo <w type="rhyme"
+                  >bañaba</w>,</l>
+               <l met="-+-+++---+-" rhyme="B" enjamb="pb_noun_prep">enjuto el campo, es un <w
+                     type="rhyme">significado</w></l>
+               <l met="-+-+-+---+-" rhyme="B">del bien, que no cabiendo en lo <w type="rhyme"
+                     >criado</w>,</l>
+               <l met="++---+-+-+-" rhyme="A">un sí en vuestras entrañas lo <w type="rhyme"
+                     >encerraba</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+--+-+-+-" rhyme="C" enjamb="pb_verb_adv">Fue la zarza también señal que <w
+                     type="rhyme">fuiste</w></l>
+               <l met="+-+--+-+-+-" rhyme="D">tan perfecta, que no os igualan <w type="rhyme"
+                     >santos</w></l>
+               <l met="-+---+---+-" rhyme="E">ni espíritus angélicos <w type="rhyme"
+                  >tampoco</w>:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-++--+---+-" rhyme="C">Pues ser virgen y madre <w type="rhyme"
+                  >mereciste</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="D" enjamb="pb_relword">Alaben os sin fin, por bienes <w
+                     type="rhyme">tantos</w></l>
+               <l met="-+---+-+++-" rhyme="E">los ángeles y Dios, que el hombre es <w type="rhyme"
+                     >poco</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

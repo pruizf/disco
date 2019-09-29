@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_406n">
+            <title property="dc:title">Sonetos de Emilio Menéndez Barriola</title>
+            <author property="dc:creator" resource="disco:406n" corresp="#disco_406n">Emilio
+               Menéndez Barriola</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">201</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_406n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_406n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_406n" about="disco:406n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/79145856858722920225"/>
+                  <persName type="short">Menéndez Barriola</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Emilio</forename>
+                     <surname property="foaf:familyName">Menéndez Barriola</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Emilio Menéndez Barriola</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Argentina</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s406n_1577">
+                        <title property="dc:title">Los «nuevos ricos»</title>
+                        <title type="incipit" property="dc:alternative">La tragedia fue horrible: la
+                           humanidad, demente,</title>
+                     </bibl>
+                     <bibl resource="disco:s406n_1578">
+                        <title property="dc:title">El dinero</title>
+                        <title type="incipit" property="dc:alternative">Áureo disco, sonoro, que
+                           embellece la vida,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Emilio Menéndez Barriola</head>
+            <p>Argentina. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s406n_1577">
+            <head>Los «nuevos ricos»</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+-++----+-+-" rhyme="A">La tragedia fue horrible: la humanidad, <w
+                     type="rhyme">demente</w>,</l>
+               <l met="---+-+-----+-+" rhyme="B">amontonó cadáveres, paralizó los <w type="rhyme"
+                     >puertos</w>,</l>
+               <l met="--+--+--+---+-" rhyme="B">convirtió las ciudades en páramos <w type="rhyme"
+                     >desiertos</w>,</l>
+               <l met="+--+-+--++--+-" rhyme="A">e hizo temblar los muros de todo un <w type="rhyme"
+                     >continente</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+---+--+-" rhyme="A">Al resplandor siniestro de la hoguera <w
+                     type="rhyme">imponente</w>,</l>
+               <l met="+-+--+---+--+-" rhyme="B">hubo seres astutos, negociantes <w type="rhyme"
+                     >despiertos</w>,</l>
+               <l met="--+--+---+--+-" rhyme="B">que, entre el hambre, las ruinas, los heridos, los
+                     <w type="rhyme">muertos</w>,</l>
+               <l met="--+--+-+-+--+-" rhyme="A">recogieron el oro, y hoy levantan la <w
+                     type="rhyme">frente</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+--+---+--+-" rhyme="C" enjamb="cc_crossclause">Yo también: en la ruda
+                  silenciosa <w type="rhyme">contienda</w></l>
+               <l met="--+--+--+---+-" rhyme="C">que pasiones e instintos libraron en mi <w
+                     type="rhyme">senda</w>,</l>
+               <l met="---+-+---+--+-" rhyme="D">acaparé un tesoro de infinito <w type="rhyme"
+                     >valor</w>:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+-++---+-" rhyme="E">Mi corazón, que antaño fue mísero y <w type="rhyme"
+                     >austero</w>,</l>
+               <l met="+++--+----+-+-" rhyme="E">es hoy una manopla de reluciente <w type="rhyme"
+                     >acero</w></l>
+               <l met="---+-+--+---+-" rhyme="D">maravillosamente forjado en el <w type="rhyme"
+                     >dolor</w>!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s406n_1578">
+            <head>El dinero</head>
+            <lg n="1" type="serventesio">
+               <l met="+-+--+---+--+-" rhyme="A">Áureo disco, sonoro, que embellece la <w
+                     type="rhyme">vida</w>,</l>
+               <l met="--+--+---+--+-" rhyme="B">sugestión rutilante del mundano <w type="rhyme"
+                     >vaivén</w>;</l>
+               <l met="--+--+---+--+-" rhyme="A">al tintín armonioso de su danza <w type="rhyme"
+                     >atrevida</w></l>
+               <l met="--+--+---+--+-" rhyme="B">se trasforman los hombres y doblegan la <w
+                     type="rhyme">sien</w></l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="--+--+-+-+--+-" rhyme="A">Su poder y virtudes colman toda <w type="rhyme"
+                     >medida</w>,</l>
+               <l met="--+--+---+--+-" rhyme="B">pues trasmuta valores con egregio <w type="rhyme"
+                     >desdén</w>;</l>
+               <l met="+++--+---+--+-" rhyme="A">es un dios arbitrario de conciencia <w type="rhyme"
+                     >torcida</w>:</l>
+               <l met="-++--+---+--+-" rhyme="B">se da al Mal con argucias, con dolores al <w
+                     type="rhyme">Bien</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+-+-+--+-" rhyme="C">Prodigioso amuleto, brinda locas <w type="rhyme"
+                     >mercedes</w>;</l>
+               <l met="+-+--+-+-+--+-" rhyme="C">va sembrando tragedias, cuelga pérfidas <w
+                     type="rhyme">redes</w>,</l>
+               <l met="--+--+-+-+--+-" rhyme="D">y con guiños aviesos rinde todo a su <w
+                     type="rhyme">afán</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+-+-++-+-+--+-" rhyme="E">Todo, no , pues hay cosas tan sutiles <w
+                     type="rhyme">baluartes</w>,</l>
+               <l met="--+--+---+--+-" rhyme="E" enjamb="ex_dobj_verb">y jamás don Dinero logrará
+                  con sus <w type="rhyme">artes</w></l>
+               <l met="--+--+---+--+-" rhyme="D">ni la lira de Apolo ni la flauta de <w type="rhyme"
+                     >Pan</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

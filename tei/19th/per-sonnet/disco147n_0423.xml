@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s147n_0423">
+            <title property="dc:title">¡Madre locura!</title>
+            <author property="dc:creator" resource="disco:s147n_0423">Arturo Borja</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">104</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s147n_0423"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_147n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_147n" about="disco:147n" typeOf="foaf:Person">
+                  <persName type="short">Borja</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Arturo</forename>
+                     <surname property="foaf:familyName">Borja</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Arturo Borja</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Quito</settlement>
+                           <country property="schema:birthPlace" inlist="">Ecuador</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1852" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1910" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s147n_0423">
+                        <title property="dc:title">¡Madre locura!</title>
+                        <title type="incipit" property="dc:alternative">¡Madre Locura! Quiero ponerme tus caretas.</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s147n_0423">
+            <head>¡Madre locura!</head>
+            <lg n="1" type="serventesio">
+               <l met="---+--++--+-" rhyme="A">¡Madre Locura! Quiero ponerme tus <w type="rhyme">caretas</w>.</l>
+               <l met="+----+--+--+-" rhyme="B">Quiero en tus cascabeles beber la <w type="rhyme">incoherencia</w>,</l>
+               <l met="-+---+------+-" rhyme="A">y al son de las sonajas y de las <w type="rhyme">panderetas</w>
+               </l>
+               <l met="---+-+---+--+-" rhyme="B">frivolizar la vida con divina <w type="rhyme">inconsciencia</w>
+               </l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="---+-++--+--+-" rhyme="C" enjamb="pb_noun_prep">¡Madre Locura! da me la sardónica <w type="rhyme">gracia</w>
+               </l>
+               <l met="-----+----+-+-" rhyme="D">de las peroraciones y las palabras <w type="rhyme">rotas</w>
+               </l>
+               <l met="-+---+--+---+-" rhyme="C" enjamb="pb_noun_prep">Tus hijos pertenecen a la alta <w type="rhyme">aristocracia</w>
+               </l>
+               <l met="--+--+--+-+-+-" rhyme="D">de la risa que llora, danzando alegres <w type="rhyme">jotas</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+-+--+--+-" rhyme="E">Sólo amargura traje del país de <w type="rhyme">Citeres</w>
+               </l>
+               <l met="+--+++-+---+-" rhyme="E" enjamb="ex_subj_verb">Sé que la vida es dura y sé que los <w type="rhyme">placeres</w>
+               </l>
+               <l met="+-+--+-+-+-++-" rhyme="F">son libélulas vanas, son bostezos, son <w type="rhyme">tedio</w>
+               </l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--+-++---+-" rhyme="F">Y por esto, Locura, yo anhelo tu <w type="rhyme">remedio</w>,</l>
+               <l met="--+--+-+----+-" rhyme="G">que disipa tristezas, borra <w type="rhyme">melancolías</w>,</l>
+               <l met="-+---+---+---+" rhyme="G">y puebla los espíritus de olvido y <w type="rhyme">alegrías</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

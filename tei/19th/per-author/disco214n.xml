@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_214n">
+            <title property="dc:title">Sonetos de Juan Ramón Molina</title>
+            <author property="dc:creator" resource="disco:214n" corresp="#disco_214n">Juan Ramón
+               Molina</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">4</measure>
+            <measure unit="tokens">358</measure>
+            <measure unit="line">56</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_214n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_214n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_214n" about="disco:214n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/42031399"/>
+                  <persName type="short">Molina</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan Ramón</forename>
+                     <surname property="foaf:familyName">Molina</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan Ramón Molina</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist=""
+                              >Comayagüela</settlement>
+                           <country property="schema:birthPlace" inlist="">Honduras</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1875" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">San
+                              Salvador</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1908" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s214n_0700">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Esquivando miradas
+                           indiscretas,</title>
+                     </bibl>
+                     <bibl resource="disco:s214n_0701">
+                        <title property="dc:title">Sursum</title>
+                        <title type="incipit" property="dc:alternative">No nos separaremos un
+                           momento</title>
+                     </bibl>
+                     <bibl resource="disco:s214n_0702">
+                        <title property="dc:title">La araña</title>
+                        <title type="incipit" property="dc:alternative">Ved con que natural
+                           sabiduría</title>
+                     </bibl>
+                     <bibl resource="disco:s214n_0703">
+                        <title property="dc:title">Péscame una sirena</title>
+                        <title type="incipit" property="dc:alternative">Péscame una sirena, pescador
+                           sin fortuna,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Juan Ramón Molina</head>
+            <p>Comayagüela (Honduras). 1875 - 1908</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s214n_0700">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A">Esquivando miradas <w type="rhyme"
+                  >indiscretas</w>,</l>
+               <l met="--+--+---+-" rhyme="B">por oscuros y negros <w type="rhyme"
+                  >callejones</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B" enjamb="pb_adj_noun">al fin logré llegar a tus <w
+                     type="rhyme">balcones</w></l>
+               <l met="-+---+---+-" rhyme="A">cargados de oloríferas <w type="rhyme">macetas</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--+---+-" rhyme="A">¡Cuántas pláticas dulces y <w type="rhyme"
+                     >secretas</w></l>
+               <l met="+----+---+-" rhyme="B">llenas de juramentos e <w type="rhyme"
+                  >ilusiones</w>,</l>
+               <l met="-+---+---+-" rhyme="B" enjamb="ex_dobj_verb">tuvimos en aquellas <w
+                     type="rhyme">ocasiones</w></l>
+               <l met="---+-+---+-" rhyme="A">al voluptuoso olor de las <w type="rhyme"
+                  >violetas</w>!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+---+-" rhyme="C">¿En dónde estás, oh casta <w type="rhyme"
+                     >Margarita</w>,</l>
+               <l met="---+---+-+-" rhyme="D" enjamb="ex_subj_verb">que en mi azarosa juventud <w
+                     type="rhyme">lejana</w></l>
+               <l met="+--+---+-+-" rhyme="C">me concediste la primera <w type="rhyme">cita</w>?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+---+-+-" rhyme="D">Te evaporaste como sombra <w type="rhyme"
+                  >vana</w>,</l>
+               <l met="++-+---+-+-" rhyme="C">y hoy, hecha polvo tu feliz <w type="rhyme"
+                  >casita</w>,</l>
+               <l met="-+-+-+---+-" rhyme="D">se ignora dónde estuvo tu <w type="rhyme"
+                  >ventana</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s214n_0701">
+            <head>Sursum</head>
+            <lg n="1" type="cuarteto">
+               <l met="++---+-+-+-" rhyme="A">No nos separaremos un <w type="rhyme">momento</w></l>
+               <l met="-----+---+-" rhyme="B">porque -cuando se extingan nuestras <w type="rhyme"
+                     >vidas</w>-</l>
+               <l met="--++---+-+-" rhyme="B" enjamb="ex_dobj_verb">nuestras dos almas cruzarán <w
+                     type="rhyme">unidas</w></l>
+               <l met="-+---+---+-" rhyme="A">el éter, en continuo <w type="rhyme"
+                  >ascendimiento</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A">Ajenas al humano <w type="rhyme">sufrimiento</w>,</l>
+               <l met="---+-+---+-" rhyme="B">de las innobles carnes <w type="rhyme"
+                     >desprendidas</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">serán en una llama <w type="rhyme">confundidas</w></l>
+               <l met="---+-+---+-" rhyme="A">en la región azul del <w type="rhyme"
+                  >firmamento</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--++---+-+-" rhyme="C">Sin dejar huellas ni invisibles <w type="rhyme"
+                     >rastros</w>,</l>
+               <l met="----+----+-" rhyme="C">más allá de la gloria de los <w type="rhyme"
+                     >astros</w>,</l>
+               <l met="--+--+---+-" rhyme="D">entre auroras de eternos <w type="rhyme"
+                  >arreboles</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+---+-" rhyme="E" enjamb="pb_adj_noun">a obedecer iremos la <w
+                     type="rhyme">divina</w></l>
+               <l met="+-+--+---+-" rhyme="E" enjamb="ex_dobj_verb">ley fatal y suprema que <w
+                     type="rhyme">domina</w></l>
+               <l met="--+--+---+-" rhyme="D">los espacios, las almas y los <w type="rhyme"
+                     >soles</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s214n_0702">
+            <head>La araña</head>
+            <lg n="1" type="cuarteto">
+               <l met="+----+---+-" rhyme="A">Ved con que natural <w type="rhyme">sabiduría</w></l>
+               <l met="-+-+---+-+-" rhyme="B">las finas hebras a las hojas <w type="rhyme"
+                  >ata</w>,</l>
+               <l met="+-++---+-+-" rhyme="B" enjamb="cc_crossclause">y una red teje de fulgor de <w
+                     type="rhyme">plata</w></l>
+               <l met="---+-+---+-" rhyme="A">que la infeliz Aracne <w type="rhyme"
+                  >envidiaría</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A" enjamb="ex_subj_verb">Mas si el viento soplante con <w
+                     type="rhyme">porfía</w></l>
+               <l met="---+-+---+-" rhyme="B">la prodigiosa tela <w type="rhyme">desbarata</w>,</l>
+               <l met="++-+---+-+-" rhyme="B">vuelve otra vez a su labor <w type="rhyme"
+                  >ingrata</w>,</l>
+               <l met="+-+-++-+-+-" rhyme="A">y una malla más tenue alumbra el <w type="rhyme"
+                     >día</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-----+-+-+-" rhyme="C">Hombre, que tus empresas no <w type="rhyme"
+                     >coronas</w></l>
+               <l met="---+-+---+-" rhyme="D" enjamb="pb_noun_prep">porque al primer fracaso o <w
+                     type="rhyme">desperfecto</w></l>
+               <l met="+-+--+-+-+-" rhyme="C">a un estéril desmayo te <w type="rhyme"
+                  >abandonas</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+---+-+-" rhyme="E">ten de tu vida y tu rigor <w type="rhyme"
+                     >conciencia</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="D">y aprende al ver el triunfo de ese <w type="rhyme"
+                     >insecto</w></l>
+               <l met="+--+-+---+-" rhyme="E">una lección sublime de <w type="rhyme"
+                  >paciencia</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s214n_0703">
+            <head>Péscame una sirena</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+--+---+--+-" rhyme="A">Péscame una sirena, pescador sin <w type="rhyme"
+                     >fortuna</w>,</l>
+               <l met="-+---+--+---+-" rhyme="B">que yaces pensativo del mar junto a la <w
+                     type="rhyme">orilla</w></l>
+               <l met="-++--+----+-+-" rhyme="A" enjamb="ex_subj_verb">Propicio es el momento,
+                  porque la vieja <w type="rhyme">luna</w></l>
+               <l met="-++--+---+-+-" rhyme="B">como un mágico espejo entre las olas <w type="rhyme"
+                     >brilla</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+-+--++--+-" rhyme="A">Han de venir hasta esta ribera, una tras <w
+                     type="rhyme">una</w>,</l>
+               <l met="-+--+-+---+-" rhyme="B">mostrando a flor de agua el seno sin <w type="rhyme"
+                     >mancilla</w>,</l>
+               <l met="---+-+-+----+-" rhyme="A">y cantarán en coro, no lejos de la <w type="rhyme"
+                     >duna</w>,</l>
+               <l met="-+---+--+---+-" rhyme="B">su canto, que a los pobres marinos <w type="rhyme"
+                     >maravilla</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+--+--++-" rhyme="C">Penetra el mar entonces y coge la más <w
+                     type="rhyme">bella</w>,</l>
+               <l met="--+--+-++---+-" rhyme="C">con tu red envolviéndola No escuches su <w
+                     type="rhyme">querella</w>,</l>
+               <l met="+---+----++-" rhyme="D" enjamb="ex_dobj_verb">que es como el aleve de la
+                  mujer El <w type="rhyme">sol</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+---+-+-" rhyme="E">la mirará mañana entre mis brazos <w type="rhyme"
+                     >loca</w>,</l>
+               <l met="-+---+--+---+-" rhyme="E">morir bajo el divino martirio de mi <w type="rhyme"
+                     >boca</w>,</l>
+               <l met="-+---+--+---+-" rhyme="D">moviendo entre mis piernas su cola <w type="rhyme"
+                     >tornasol</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

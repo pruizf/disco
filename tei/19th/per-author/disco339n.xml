@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_339n">
+            <title property="dc:title">Sonetos de Enrique Gronlier</title>
+            <author property="dc:creator" resource="disco:339n" corresp="#disco_339n">Enrique
+               Gronlier</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">5</measure>
+            <measure unit="tokens">443</measure>
+            <measure unit="line">70</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_339n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_339n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_339n" about="disco:339n" typeOf="foaf:Person">
+                  <persName type="short">Gronlier</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Enrique</forename>
+                     <surname property="foaf:familyName">Gronlier</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Enrique Gronlier</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s339n_1135">
+                        <title property="dc:title">A la señora doña Gertrudis Gómez de Avellaneda en
+                           su feliz llegada</title>
+                        <title type="incipit" property="dc:alternative">En blanca nube que esmaltada
+                           brilla,</title>
+                     </bibl>
+                     <bibl resource="disco:s339n_1136">
+                        <title property="dc:title">A Isabel</title>
+                        <title type="incipit" property="dc:alternative">Toma, Lesbia, las páginas
+                           preciosas</title>
+                     </bibl>
+                     <bibl resource="disco:s339n_1137">
+                        <title property="dc:title">Tus cartas</title>
+                        <title type="incipit" property="dc:alternative">Como de un bosque tétrico en
+                           el seno</title>
+                     </bibl>
+                     <bibl resource="disco:s339n_1138">
+                        <title property="dc:title">Al distinguido aeronauta Mr. A. Boudrias de
+                           Morat,</title>
+                        <title type="incipit" property="dc:alternative">Alzose el genio y con serena
+                           frente</title>
+                     </bibl>
+                     <bibl resource="disco:s339n_1139">
+                        <title property="dc:title">A Rafael María Mendive</title>
+                        <title type="incipit" property="dc:alternative">Como brilla una estrella
+                           silenciosa</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Enrique Gronlier</head>
+            <p>Cuba. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s339n_1135">
+            <head>A la señora doña Gertrudis Gómez de Avellaneda en su feliz llegada</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A">En blanca nube que esmaltada <w type="rhyme"
+                     >brilla</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B" enjamb="pb_noun_prep">conduce Apolo en su triunfante
+                     <w type="rhyme">carro</w></l>
+               <l met="-+-+---+-+-" rhyme="B" enjamb="pb_noun_prep">a Tula noble en ademán <w
+                     type="rhyme">bizarro</w></l>
+               <l met="---+---+-+-" rhyme="A">hacia las playas de la indiana <w type="rhyme"
+                     >orilla</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">Cuba cantando a su llegar se <w type="rhyme"
+                     >humilla</w>,</l>
+               <l met="---+---+-+-" rhyme="B">y entre su choza de palmera y <w type="rhyme"
+                     >barro</w></l>
+               <l met="+--+---+-+-" rhyme="B" enjamb="ex_dobj_verb">hace resuene de Almendar al <w
+                     type="rhyme">Darro</w></l>
+               <l met="-+---+-+-+-" rhyme="A">el corvo caracol que da la <w type="rhyme"
+                  >Antilla</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+---+++-" rhyme="C" enjamb="ex_subj_verb">Himnos de gloria en su oblación
+                  le <w type="rhyme">envía</w></l>
+               <l met="-+---+---+-" rhyme="D">el turbio y perezoso <w type="rhyme"
+                  >Manzanares</w>,</l>
+               <l met="+-+--+---+-" rhyme="C" enjamb="ex_subj_verb">y un torrente de célica <w
+                     type="rhyme">armonía</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+---+-" rhyme="D" enjamb="ex_subj_verb">desprende la matrona de <w
+                     type="rhyme">Almendares</w></l>
+               <l met="-+---+---+-" rhyme="C" enjamb="ex_subj_verb">diciendo con placer: «La <w
+                     type="rhyme">poesía</w></l>
+               <l met="-+-+---+-+-" rhyme="D">tornó risueña a sus paternos lares »</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s339n_1136">
+            <head>A Isabel</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+--+---+-" rhyme="A" enjamb="pb_noun_prep">Toma, Lesbia, las páginas <w
+                     type="rhyme">preciosas</w></l>
+               <l met="-+-+---+-+-" rhyme="B">del bello libro que a tu mano <w type="rhyme"
+                     >envío</w>,</l>
+               <l met="++-+-+-+-+-" rhyme="B">cual santa prueba de un recuerdo <w type="rhyme"
+                     >mío</w>,</l>
+               <l met="---++--+-+-" rhyme="A">en vez de darte mis mezquinas <w type="rhyme"
+                     >glosas</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A" enjamb="cc_crossclause">en él verás las plantas <w
+                     type="rhyme">olorosas</w></l>
+               <l met="-+-+---+-+-" rhyme="B">que besan ledas el sonante <w type="rhyme"
+                  >río</w>;</l>
+               <l met="-+-+---+-+-" rhyme="B" enjamb="cc_crossclause">la rubia espiga del ardiente
+                     <w type="rhyme">Estío</w></l>
+               <l met="---+---+-+-" rhyme="A">que se doblega entre fragantes <w type="rhyme"
+                     >rosas</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+--+---+-" rhyme="C" enjamb="pb_adj_noun">Es historia de férvidos <w
+                     type="rhyme">amores</w></l>
+               <l met="++---+-+-+-" rhyme="D">do marca la virtud su noble <w type="rhyme"
+                  >paso</w>:</l>
+               <l met="+-+--+---+-" rhyme="C">Es poema de lágrimas y <w type="rhyme">flores</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+---+-+-" rhyme="D">Una pasión que floreció en su <w type="rhyme"
+                     >ocaso</w>;</l>
+               <l met="-+-+++---+-" rhyme="C" enjamb="pb_noun_prep">porque es, Belisa, un cuento de
+                     <w type="rhyme">pastores</w></l>
+               <l met="--+--+---+-" rhyme="D">del amante y sensible <w type="rhyme"
+                  >Garcilaso</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s339n_1137">
+            <head>Tus cartas</head>
+            <lg n="1" type="cuarteto">
+               <l met="--++-+---+-" rhyme="A">Como de un bosque tétrico en el <w type="rhyme"
+                     >seno</w></l>
+               <l met="+-+-+-+---+-" rhyme="B">suena l rumor melódico del <w type="rhyme"
+                  >río</w></l>
+               <l met="--+--+---+-" rhyme="B" enjamb="cc_crossclause">y parece al sonar su <w
+                     type="rhyme">murmurío</w></l>
+               <l met="-+-+---+-+-" rhyme="A">que está de orquesta bullicioso <w type="rhyme"
+                     >lleno</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---++--+-" rhyme="A" enjamb="pb_adj_prep">así en mi corazón triste y <w
+                     type="rhyme">sereno</w></l>
+               <l met="--+--+---+-" rhyme="B">de impresiones eróticas <w type="rhyme">vacío</w>,</l>
+               <l met="-+---+---+-" rhyme="B">nacieron los calores del <w type="rhyme">estío</w></l>
+               <l met="---+-+-+++-" rhyme="A">al traducir tu acento que es tan <w type="rhyme"
+                     >bueno</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C">En cada frase de tus cartas <w type="rhyme"
+                  >bellas</w></l>
+               <l met="+++-+----+-" rhyme="D">hallo un poema célico de <w type="rhyme"
+                  >amores</w>,</l>
+               <l met="--+--+-+-+-" rhyme="C">porque observo que tierna te <w type="rhyme"
+                     >querellas</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+---+-" rhyme="D" enjamb="ex_dobj_verb">como ave que suspira entre las
+                     <w type="rhyme">flores</w></l>
+               <l met="-----+--++-" rhyme="C">y ya que con tus lágrimas las <w type="rhyme"
+                     >sellas</w></l>
+               <l met="-+-+-+--++-" rhyme="D">acuérdate de mí, pero no <w type="rhyme"
+                  >llores</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s339n_1138">
+            <head>Al distinguido aeronauta Mr. A. Boudrias de Morat,</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A" enjamb="pb_verb_adv">Alzose el genio y con serena <w
+                     type="rhyme">frente</w></l>
+               <l met="+--+---+-+-" rhyme="B">surca valiente la región <w type="rhyme"
+                  >vacía</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B" enjamb="ex_subj_verb">y el cielo alegre de la patria
+                     <w type="rhyme">mía</w></l>
+               <l met="-+-+---+-+-" rhyme="A">derrama flores con placer <w type="rhyme"
+                     >vehemente</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-++--++--+-" rhyme="A" enjamb="cc_crossclause">Y es solo Morat, astro <w
+                     type="rhyme">fulgente</w></l>
+               <l met="-+-+---+-+-" rhyme="B">que en ciencia brilla como en claro <w type="rhyme"
+                     >día</w>,</l>
+               <l met="++--+-++-+-" rhyme="B" enjamb="pb_verb_chain">y un rayo de luz el sol le <w
+                     type="rhyme">envía</w></l>
+               <l met="-+-+---+-+-" rhyme="A">formando mole de carmín <w type="rhyme"
+                  >luciente</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+++-+-" rhyme="C">Viajero sin igual, tuya es la <w type="rhyme"
+                     >gloria</w></l>
+               <l met="--+-++-+-+-" rhyme="D">que Minerva te da con fe <w type="rhyme"
+                  >sincera</w>;</l>
+               <l met="-+---+-+-+-" rhyme="C">empuña el pabellón de tal <w type="rhyme"
+                  >victoria</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+---+-+-" rhyme="D">que cante Cuba con su ley <w type="rhyme"
+                  >primera</w>,</l>
+               <l met="---+--+--+-" rhyme="C">y en los blasones que te de la <w type="rhyme"
+                     >historia</w></l>
+               <l met="-+---++--+-" rhyme="D">el águila tendrás, rey de la <w type="rhyme"
+                     >esfera</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s339n_1139">
+            <head>A Rafael María Mendive</head>
+            <lg n="1" type="cuarteto">
+               <l met="--++-+---+-" rhyme="A">Como brilla una estrella <w type="rhyme"
+                     >silenciosa</w></l>
+               <l met="---+---+-+-" rhyme="B">cuando termina el espirante <w type="rhyme"
+                  >día</w>,</l>
+               <l met="--++-+---+-" rhyme="B" enjamb="pb_adj_noun">como exhala una dulce <w
+                     type="rhyme">melodía</w></l>
+               <l met="-+-+---+-+-" rhyme="A">errante el ave de mi patria <w type="rhyme"
+                     >hermosa</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--+-+-+-" rhyme="A">cual esparce su olor la suave <w type="rhyme"
+                  >rosa</w>,</l>
+               <l met="--+-++---+-" rhyme="B" enjamb="pb_noun_prep">como suena en un arpa la <w
+                     type="rhyme">armonía</w></l>
+               <l met="-+---+---+-" rhyme="B" enjamb="ex_subj_verb">del alma que en feliz <w
+                     type="rhyme">melancolía</w></l>
+               <l met="-+-+-+---+-" rhyme="A">la vida no apetece <w type="rhyme">bulliciosa</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C" enjamb="ex_subj_verb">Así tu canto, como arroyo <w
+                     type="rhyme">lento</w></l>
+               <l met="++-+---+-+-" rhyme="D">me duerme ledo en el tendido <w type="rhyme"
+                  >llano</w>,</l>
+               <l met="++---+---+-" rhyme="C">es música feliz del <w type="rhyme"
+                  >sentimiento</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---++--+-+-" rhyme="D">porque al oírte, trovador <w type="rhyme"
+                  >cubano</w>,</l>
+               <l met="+-++-+---+-" rhyme="C" enjamb="pb_adj_noun">me parece un Edén tu <w
+                     type="rhyme">pensamiento</w></l>
+               <l met="-+---+---+-" rhyme="D">poblado por tu genio <w type="rhyme">soberano</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

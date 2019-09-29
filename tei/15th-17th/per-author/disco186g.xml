@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_186g">
+            <title property="dc:title">Sonetos de Fabio</title>
+            <author property="dc:creator" resource="disco:186g" corresp="#disco_186g">Fabio</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">5</measure>
+            <measure unit="tokens">493</measure>
+            <measure unit="line">70</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_186g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_186g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_186g" about="disco:186g" typeOf="foaf:Person">
+                  <idno cert="low" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/115610805"/>
+                  <persName type="short">Fabio</persName>
+                  <persName type="source" property="foaf:name">Fabio</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s186g_0403">
+                        <title property="dc:title">Sonetos</title>
+                        <title type="incipit" property="dc:alternative">Alegre, rico, venturoso
+                           lecho,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Fabio</head>
+            <p>España. 16th century - 17th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s186g_0403">
+            <head>Sonetos</head>
+            <lg type="sonnet" xml:id="s186g_0403_01">
+               <head>- I -</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+-+---+-+-">Alegre, rico, venturoso <w type="rhyme">lecho</w>,</l>
+                  <l met="+--+-+---+-">cuán desigual que va vuestro <w type="rhyme">partido</w>,</l>
+                  <l met="-+-+-+---+-">habiendo yo tu gloria <w type="rhyme">merecido</w></l>
+                  <l met="--+--+---+-">por amor, por razón y por <w type="rhyme">derecho</w>;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-++--+-+-+-">que yo traigo continuo dentro el <w type="rhyme"
+                     >pecho</w></l>
+                  <l met="-+-+---+-+-">la que esta noche sobre ti a <w type="rhyme">dormido</w>;</l>
+                  <l met="++-+---+-+-">tú estás desecho porque la has <w type="rhyme"
+                     >tenido</w>,</l>
+                  <l met="+--+++-+-+-">yo porque no la tengo estoy desecho </l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="--+-+-++-+-">Concertémonos pues, dame tu <w type="rhyme">gloria</w>,</l>
+                  <l met="-++--+---+-">o yo te prestaré mi <w type="rhyme">sentimiento</w></l>
+                  <l met="---+++--++-">para que el bien te goce, como es <w type="rhyme"
+                     >justo</w>;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-++--+---+-" enjamb="pb_noun_prep">mas no quieras, que sólo la <w
+                        type="rhyme">memoria</w></l>
+                  <l met="-++--+-+-+-">de no haber conocido tal <w type="rhyme">contento</w></l>
+                  <l met="+--+++-+-+-">te bastará a dar muerte a tanto gusto </l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s186g_0403_02">
+               <head>- II -</head>
+               <lg n="1" type="cuarteto">
+                  <l met="++---+-+-+-">Vi un cierto gentilhombre el otro <w type="rhyme">día</w></l>
+                  <l met="--+--+-+-+-">en la calle, mondándose los <w type="rhyme">dientes</w>,</l>
+                  <l met="--+--+-+-+-">y quizás con malicia pare en <w type="rhyme">mientes</w>,</l>
+                  <l met="---+-+-+-+-">porque pensaba yo que no comía </l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="++-+---+++-">Dime a pensar que por cumplir lo <w type="rhyme"
+                     >hacía</w>,</l>
+                  <l met="--+-++---+-">pues consigo no puede, con las <w type="rhyme"
+                     >gentes</w>,</l>
+                  <l met="-++--+--++-">y dije a otro estudiante: «Si lo <w type="rhyme"
+                     >sientes</w>,</l>
+                  <l met="++++-+---+-">dime, ¿aquello es verdad o <w type="rhyme"
+                     >hipocresía</w>?</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+-+++-+-+-">«Que si es verdad, no dura mucho el <w type="rhyme"
+                     >juego</w>;</l>
+                  <l met="-++--+-+-+-">que muy presto hallará lo que ha <w type="rhyme"
+                     >perdido</w>,</l>
+                  <l met="-++--+-+-+-">pues poco hay que perder en dos bocados </l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="+-+--+-+++-">No los monda por eso, dijo él <w type="rhyme">luego</w>,</l>
+                  <l met="-----+-+-+-">ni para que entendamos que ha <w type="rhyme">comido</w>,</l>
+                  <l met="+--+-+-+-+-">más porque están, de no comer tomados »</l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s186g_0403_03">
+               <head>- III -</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+-+-+++-+-">En fin, el fin del fin es ya <w type="rhyme">llegado</w></l>
+                  <l met="--++-+-+-+-">en donde he visto el fin que amor <w type="rhyme"
+                     >ordena</w>,</l>
+                  <l met="-+++-+---+-">y a todo han dado el fin sino a mi <w type="rhyme"
+                     >pena</w>,</l>
+                  <l met="-+-+++---+-">que a fin sin fin me tiene <w type="rhyme">condenado</w>;</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+-+-++--+-">principio tuvo el fin no <w type="rhyme">comenzado</w>,</l>
+                  <l met="--+--++--+-">que de fin que poseo me <w type="rhyme">enajena</w>;</l>
+                  <l met="-+-+-+-+-+-">buscando voy el fin que me <w type="rhyme">condena</w></l>
+                  <l met="-+-+-+---+-">a fin dudoso y lleno de cuidado </l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="---+-+-+-+-">Sin comenzar el triste fin <w type="rhyme">poseo</w>,</l>
+                  <l met="-+--+--+-+-">y no hallo remedio al fin <w type="rhyme">precito</w>;</l>
+                  <l met="++-+-++--+-">tal es el fin que amor me significa </l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+-+---+-" enjamb="ex_dobj_verb">mas como no preceda a lo <w
+                        type="rhyme">infinito</w></l>
+                  <l met="-+-+-++--+-">el fin que tal dolor me <w type="rhyme">multiplica</w>,</l>
+                  <l met="-+--++---+-">espero de dar fin a mis deseos </l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s186g_0403_04">
+               <head>- IV -</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+-+--+---+-">Torne Duero hacia atrás con su <w type="rhyme"
+                     >corriente</w>,</l>
+                  <l met="+--+---+-+-">dejen los peces el amado <w type="rhyme">río</w>,</l>
+                  <l met="+-+--+-+-+-">hiélese en la mitad del seco <w type="rhyme">estío</w>,</l>
+                  <l met="-----+-+-+-">y en el diciembre esté cual fuego ardiente </l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+-++-+---+-">Póngasenos el sol en el <w type="rhyme">oriente</w>,</l>
+                  <l met="-+-+---+-+-">la noche alumbre como el rayo <w type="rhyme">frío</w>,</l>
+                  <l met="-+-+-+---+-">su casta hermana tome el <w type="rhyme">señorío</w>,</l>
+                  <l met="-+-+---+-+-">y alumbre el día con menguada frente </l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+-++-+-+-+-">Quiébrese el eje do se funda el <w type="rhyme"
+                     >mundo</w>,</l>
+                  <l met="-+-+-+-+-+-">y de él el orden tan sin orden <w type="rhyme">quede</w>,</l>
+                  <l met="-+-+-+--++-">que nada acuda a nada que le toca </l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="+-+--+---+-">Gocen gloria las almas del <w type="rhyme">profundo</w>;</l>
+                  <l met="+--+-+--++-">que esto y el mismo tiempo faltar <w type="rhyme"
+                     >puede</w>,</l>
+                  <l met="-+---+---+-">pues faltan las palabras de tu boca </l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s186g_0403_05">
+               <head>- V -</head>
+               <lg n="1" type="cuarteto">
+                  <l met="---++--+-+-">Valladolid, tan peligrosa y <w type="rhyme">fiera</w></l>
+                  <l met="----+--+-+-">como la que en mi alma estáis <w type="rhyme"
+                     >haciendo</w>,</l>
+                  <l met="-+---+---+-" enjamb="pb_verb_chain">amores y temores, <w type="rhyme"
+                        >pretendiendo</w></l>
+                  <l met="-+-+----++-">vivir entrambos para que yo muera </l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+--+-+-+-+-">Si he de acabar, procúrame <w type="rhyme">siquiera</w>,</l>
+                  <l met="--++++---+-">ya que al fin yo no alcance que <w type="rhyme"
+                     >pretendo</w>,</l>
+                  <l met="---+-+-+-+-">que la que nunca me miró <w type="rhyme">viviendo</w>,</l>
+                  <l met="-+++---+-+-">mirarme en brazos de la muerte quiera </l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+--+---+-+-">Yo con aquesto viviré <w type="rhyme">contento</w>,</l>
+                  <l met="-+-+-+--++-" enjamb="ex_subj_verb">y tú, dichoso valle, que habrás <w
+                        type="rhyme">dado</w></l>
+                  <l met="-+-+-++--+-">a tantos vida, dame sepultura </l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="--+--+---+-" enjamb="cc_crossclause">Y verá cuanto cubre el <w
+                        type="rhyme">firmamento</w></l>
+                  <l met="-+---+-+++-">que sólo en el lugar piedad ha <w type="rhyme"
+                     >hallado</w></l>
+                  <l met="-+++-+---+-">quien no lo halló en el tiempo ni en ventura </l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

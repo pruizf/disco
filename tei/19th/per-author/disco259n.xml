@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_259n">
+            <title property="dc:title">Sonetos de Milagros Esquijarosa</title>
+            <author property="dc:creator" resource="disco:259n" corresp="#disco_259n">Milagros
+               Esquijarosa</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">264</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_259n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_259n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_259n" about="disco:259n" typeOf="foaf:Person">
+                  <persName type="short">Esquijarosa</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Milagros</forename>
+                     <surname property="foaf:familyName">Esquijarosa</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Milagros Esquijarosa</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s259n_0843">
+                        <title property="dc:title">Talión</title>
+                        <title type="incipit" property="dc:alternative">Y tú serás juzgado, sí,
+                           algún día,</title>
+                     </bibl>
+                     <bibl resource="disco:s259n_0844">
+                        <title property="dc:title">¡Culpable...!</title>
+                        <title type="incipit" property="dc:alternative">Y tú, infame, tendrás el
+                           merecido</title>
+                     </bibl>
+                     <bibl resource="disco:s259n_0845">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Copia el hombre celajes
+                           purpurinos,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Milagros Esquijarosa</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s259n_0843">
+            <head>Talión</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-+-+++-" rhyme="A">Y tú serás juzgado, sí, algún <w type="rhyme"
+                  >día</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">por un severo juez: por tu <w type="rhyme"
+                     >conciencia</w></l>
+               <l met="+--+-+---+-" rhyme="B">Te llevará, infalible, a su <w type="rhyme"
+                     >presencia</w></l>
+               <l met="-+---+---+-" rhyme="A">delitos de traición y de <w type="rhyme"
+                  >falsía</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++--++---+-" rhyme="A" enjamb="ex_subj_verb">De un alma que te amaba, la <w
+                     type="rhyme">agonía</w></l>
+               <l met="+-+--+---+-" rhyme="B">te ha de hacer recordar, con su <w type="rhyme"
+                     >elocuencia</w>;</l>
+               <l met="---+-+---+-" rhyme="B">y temblarás oyendo la <w type="rhyme"
+                  >sentencia</w>,</l>
+               <l met="-+++---+-+-" rhyme="A">de Ley tan justa, inexorable y <w type="rhyme"
+                     >fría</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+++--+++-+-" rhyme="C">No te puedes quejar: tú lo <w type="rhyme"
+                     >quisiste</w>:</l>
+               <l met="-+---+---+-" rhyme="C">pues loco, entusiasmado, <w type="rhyme"
+                     >preferiste</w></l>
+               <l met="-+-++--+-+-" rhyme="D">fingido amor, a una pasión <w type="rhyme"
+                  >sincera</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="++---+---+-" rhyme="E">Ya sabes, tu condena <w type="rhyme"
+                  >irrevocable</w></l>
+               <l met="---+-+---+-" rhyme="E">Se cumplirá el axioma <w type="rhyme"
+                  >inexorable</w>:</l>
+               <l met="++--+--+-+-" rhyme="D">«¡Quién a hierro mató que a hierro <w type="rhyme"
+                     >muera</w>!»</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s259n_0844">
+            <head>¡Culpable...!</head>
+            <lg n="1" type="cuarteto">
+               <l met="-++--+---+-" rhyme="A" enjamb="pb_verb_cprep">Y tú, infame, tendrás el <w
+                     type="rhyme">merecido</w></l>
+               <l met="--++-+---+-" rhyme="B">de tu acción baja y vil, <w type="rhyme"
+                     >engañadora</w>;</l>
+               <l met="+++--+---+-" rhyme="B">él no tuvo la culpa Tú, <w type="rhyme"
+                  >traidora</w>,</l>
+               <l met="--+-+--+-+-" rhyme="A">pisoteaste un corazón <w type="rhyme">herido</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++++-+---+-" rhyme="A" enjamb="pb_adj_prep">Yo no le culpo, no; pues, <w
+                     type="rhyme">seducido</w></l>
+               <l met="---+-+---+-" rhyme="B" enjamb="ex_subj_verb">por tus halagos, Circe <w
+                     type="rhyme">engañadora</w></l>
+               <l met="-++--+---+-" rhyme="B">cayó ciego en la red <w type="rhyme"
+                  >apresadora</w>,</l>
+               <l met="---+---+-+-" rhyme="A">y se entregó cual vencedor <w type="rhyme"
+                  >vencido</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+++-+-" rhyme="C">Tu castigo tendrás, te lo <w type="rhyme"
+                  >mereces</w>;</l>
+               <l met="+--+++---+-" rhyme="C" enjamb="ex_dobj_verb">tú, que apurar le hiciste hasta
+                  las <w type="rhyme">heces</w></l>
+               <l met="-+---+-+-+-" rhyme="D">el cáliz del dolor, mujer <w type="rhyme"
+                  >ligera</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+---+-" rhyme="E">Y tu conciencia, juez <w type="rhyme"
+                  >inexorable</w>,</l>
+               <l met="+--+-+---+-" rhyme="E">te dictará su fallo <w type="rhyme"
+                  >irrevocable</w>:»</l>
+               <l met="++--+--+-+-" rhyme="D">¡Quién a hierro mató que a hierro <w type="rhyme"
+                     >muera</w>!»</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s259n_0845">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+--+---+-" rhyme="A">Copia el hombre celajes <w type="rhyme"
+                  >purpurinos</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B">estatuas hace de la dura <w type="rhyme"
+                  >piedra</w>,</l>
+               <l met="-+---+---+-" rhyme="B">y en número a las hojas de la <w type="rhyme"
+                     >hiedra</w></l>
+               <l met="-+---+---+-" rhyme="A">exceden sus inventos <w type="rhyme"
+                  >peregrinos</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A">Arrebata con cánticos <w type="rhyme">divinos</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B">la «Iliada» escribe, «Don Quijote» y «<w type="rhyme"
+                     >Fedra</w>»,</l>
+               <l met="-+-+---+-+-" rhyme="B">y cuanto más el adelanto <w type="rhyme"
+                  >medra</w>,</l>
+               <l met="++---++--+-" rhyme="A">más busca del saber nuevos <w type="rhyme"
+                  >caminos</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+-++---+-" rhyme="C">A su patria da timbres con su <w type="rhyme"
+                     >gloria</w>,</l>
+               <l met="-+---+---+-" rhyme="D">liberta y engrandece las <w type="rhyme"
+                  >naciones</w>,</l>
+               <l met="--+--+---+-" rhyme="C">los secretos descubre de la <w type="rhyme"
+                     >historia</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+-+--+---+-" rhyme="D" enjamb="ex_subj_verb">Y este ser, que mandando a las
+                     <w type="rhyme">naciones</w></l>
+               <l met="+-+--+---+-" rhyme="C">sólo piensa en la muerte o la <w type="rhyme"
+                     >victoria</w>,</l>
+               <l met="+--+-+---+-" rhyme="D">¡es el juguete vil de las <w type="rhyme"
+                  >pasiones</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

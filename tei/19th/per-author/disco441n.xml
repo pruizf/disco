@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_441n">
+            <title property="dc:title">Sonetos de Fernando de Gabriel y Ruiz de Apodaca</title>
+            <author property="dc:creator" resource="disco:441n" corresp="#disco_441n">Fernando de
+               Gabriel y Ruiz de Apodaca</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">4</measure>
+            <measure unit="tokens">357</measure>
+            <measure unit="line">56</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_441n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_441n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_441n" about="disco:441n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/87044003"/>
+                  <persName type="short">Gabriel y Ruiz de Apodaca</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Fernando</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Gabriel y Ruiz de Apodaca</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Fernando de Gabriel y Ruiz de
+                     Apodaca</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s441n_1698">
+                        <title property="dc:title">En la fiesta de la Eucaristía</title>
+                        <title type="incipit" property="dc:alternative">¡Gloria a ti, Señor Dios! En
+                           las alturas</title>
+                     </bibl>
+                     <bibl resource="disco:s441n_1699">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Cuando rota en pedazos se
+                           mostraba</title>
+                     </bibl>
+                     <bibl resource="disco:s441n_1700">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Allá en las costas de Turana
+                           envías</title>
+                     </bibl>
+                     <bibl resource="disco:s441n_1701">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">¡No mi afán me engañó! Musa
+                           que inspira</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Fernando de Gabriel y Ruiz de Apodaca</head>
+            <p>España. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s441n_1698">
+            <head>En la fiesta de la Eucaristía</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A">¡Gloria a ti, Señor Dios! En las <w type="rhyme"
+                     >alturas</w></l>
+               <l met="+--+---+-+-" rhyme="B">himnos el ángel de alabanza <w type="rhyme"
+                  >entone</w>,</l>
+               <l met="---+-+-+-+-" rhyme="B" enjamb="ex_dobj_verb">y tu ternura ensalce y la <w
+                     type="rhyme">pregone</w></l>
+               <l met="-+---+---+-" rhyme="A">la voz de las humanas <w type="rhyme"
+                  >criaturas</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A">Hoy, presagiando célicas <w type="rhyme"
+                  >venturas</w>,</l>
+               <l met="+++--+-+-+-" rhyme="B">darse al hombre en manjar tu amor <w type="rhyme"
+                     >dispone</w>,</l>
+               <l met="---+-+---+-" rhyme="B" enjamb="ex_dobj_verb">y por que más su dicha se <w
+                     type="rhyme">corone</w></l>
+               <l met="+--+-+-+-+-" rhyme="A">bienes sin fin y gracias le <w type="rhyme"
+                     >aseguras</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+--+--+-" rhyme="C">¡Oh inefable misterio! Jamás <w type="rhyme"
+                  >pudo</w></l>
+               <l met="+--+---+-+-" rhyme="D" enjamb="ex_dobj_verb">tal maravilla imaginar <w
+                     type="rhyme">siquiera</w></l>
+               <l met="--+---+--+-" rhyme="E">el misterio mortal ¡Solo el <w type="rhyme"
+                     >potente</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--++--+-" rhyme="C">que, de sacra piedad nunca <w type="rhyme"
+                  >desnudo</w>,</l>
+               <l met="-+-+---+-+-" rhyme="D" enjamb="pb_verb_chain">por dar la vida a quien en él
+                     <w type="rhyme">espera</w></l>
+               <l met="+--+---+-+-" rhyme="E">es de clemencia portentosa <w type="rhyme"
+                  >fuente</w>!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s441n_1699">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A" enjamb="ex_dobj_verb">Cuando rota en pedazos se <w
+                     type="rhyme">mostraba</w></l>
+               <l met="--+--+---+-" rhyme="B">la unidad de la hispana <w type="rhyme"
+                  >monarquía</w>,</l>
+               <l met="-+---+---+-" rhyme="B" enjamb="ex_subj_verb">y rota entre sus redes la <w
+                     type="rhyme">armonía</w></l>
+               <l met="-----+---+-" rhyme="A">Segundo Guadalete <w type="rhyme">amenazaba</w>,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A">de Alcántara, Santiago y <w type="rhyme"
+                  >Calatrava</w>,</l>
+               <l met="---+-+-+-+-" rhyme="B">y de Montesa, luego, a luz <w type="rhyme"
+                  >nacía</w></l>
+               <l met="--+--+---+-" rhyme="B">la sagrada, marcial <w type="rhyme"
+                  >caballería</w>,</l>
+               <l met="--+--+---+-" rhyme="A">y de nuevo la patria se <w type="rhyme"
+                  >salvaba</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+--+---+-" rhyme="C">Cuatro siglos sus lides <w type="rhyme"
+                     >contemplaron</w>;</l>
+               <l met="-+---+-+-+-" rhyme="D">de Lasso, Calderón, Quevedo, <w type="rhyme"
+                     >Ercilla</w>,</l>
+               <l met="--+--+-+-+-" rhyme="C">sus insignias después el pecho <w type="rhyme"
+                     >ornaron</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+---+-" rhyme="D" enjamb="ex_dobj_verb">Si en armas como en letras <w
+                     type="rhyme">maravilla</w></l>
+               <l met="-+---+---+-" rhyme="C">su historia, y nuestros tiempos <w type="rhyme"
+                     >alcanzaron</w>,</l>
+               <l met="+--++--+-+-" rhyme="D">¿Quién extinguirlas osará en <w type="rhyme"
+                     >Castilla</w>?</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s441n_1700">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A" enjamb="pb_relword">Allá en las costas de Turana <w
+                     type="rhyme">envías</w></l>
+               <l met="+--+---+-+-" rhyme="B">muestra brillante del valor <w type="rhyme"
+                  >natío</w>,</l>
+               <l met="-+---+-+-+-" rhyme="B" enjamb="pb_adj_noun">y a México y al Riff con noble <w
+                     type="rhyme">brío</w></l>
+               <l met="+--+---+-+-" rhyme="A">naves y huestes presurosa <w type="rhyme"
+                  >guías</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A" enjamb="pb_noun_prep">¿Será que tornan los antiguos <w
+                     type="rhyme">días</w></l>
+               <l met="-+-+-+---+-" rhyme="B">de gloria insigne y alto <w type="rhyme"
+                  >poderío</w>,</l>
+               <l met="-++--++-++-" rhyme="B">y el hado antes adverso,, hora ya <w type="rhyme"
+                     >pío</w>,</l>
+               <l met="-+-+-+---+-" rhyme="A">tus duelos trueca ¡oh patria! en <w type="rhyme"
+                     >alegrías</w>?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+---+--" rhyme="C">Sí; que los mares de Guzmán el <w type="rhyme"
+                     >Bueno</w>,</l>
+               <l met="-+-++----+-" rhyme="D">del gran Cortés, Córdoba y <w type="rhyme"
+                  >Pizarro</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="E">por ti constantes velan, madre <w type="rhyme"
+                     >España</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C">y el mundo todo de respeto <w type="rhyme"
+                  >lleno</w>,</l>
+               <l met="++-++--+-+-" rhyme="D">aun ha de verte en el triunfante <w type="rhyme"
+                     >carro</w>,</l>
+               <l met="+---+-+--+-" rhyme="E">y ha de admirar hazaña tras <w type="rhyme"
+                  >hazaña</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s441n_1701">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-++--+--+-" rhyme="A" enjamb="pb_verb_chain">¡No mi afán me engañó! Musa que
+                     <w type="rhyme">inspira</w></l>
+               <l met="+-+--+-+-+-" rhyme="B">es de amor de la patria el sacro <w type="rhyme"
+                     >fuego</w>,</l>
+               <l met="+-+--+--++-" rhyme="B">yo a su influjo vivífico me <w type="rhyme"
+                     >entrego</w>,</l>
+               <l met="-+---++--+-" rhyme="A">y nuncio de verdad vibro mi <w type="rhyme"
+                  >lira</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-++-+--+-+-" rhyme="A" enjamb="pb_verb_cprep">España aún España: el Orbe <w
+                     type="rhyme">mira</w></l>
+               <l met="-+-+---+-+-" rhyme="B">de noble sangre el fecundante <w type="rhyme"
+                     >riego</w>,</l>
+               <l met="++-+++---+-" rhyme="B" enjamb="pb_adj_noun">cual torna a alzarse fuerte la
+                  que <w type="rhyme">ciego</w></l>
+               <l met="+--+---+-+-" rhyme="A">presa juzgaba de funérea <w type="rhyme">pira</w>:</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+-+---+-" rhyme="C">Annan sucumbe, cede el <w type="rhyme"
+                  >mejicano</w>,</l>
+               <l met="---+---+-+-" rhyme="D">y en la ciudad al marroquí <w type="rhyme"
+                  >sagrada</w></l>
+               <l met="-+-+-+---+-" rhyme="E">al aire flota hispánica <w type="rhyme"
+                  >bandera</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+---+-" rhyme="D" enjamb="pb_adj_prep">al par que Europa ensalza <w
+                     type="rhyme">entusiasmada</w></l>
+               <l met="--++-+---+-" rhyme="C">de O'Donell, Prim, Bustillo y Ros de <w type="rhyme"
+                     >Olano</w></l>
+               <l met="-+-+---+-+-" rhyme="E">los nombres caros a la gente <w type="rhyme"
+                  >ibera</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

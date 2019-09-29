@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_039e">
+            <title property="dc:title">Sonetos de Fray José Manuel de Navarrete</title>
+            <author property="dc:creator" resource="disco:039e" corresp="#disco_039e">Fray José
+               Manuel de Navarrete</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">249</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_039e"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XVIII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc12653"
+               />, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xviii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_039e" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_039e" about="disco:039e" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso" resource="https://viaf.org/viaf/97252"/>
+                  <persName type="short">Fray José Manuel de Navarrete</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Fray José</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Manuel de Navarrete</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Fray José Manuel de
+                     Navarrete</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <date property="schema:birthDate" content="1768" cert="high"/>
+                     <date type="century">18</date>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Michoacán</settlement>
+                           <country property="schema:birthPlace" inlist="">México</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1809" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s039e_0217">
+                        <title property="dc:title">Influjo de amor</title>
+                        <title type="incipit" property="dc:alternative">Célebres calles de la corte
+                           indiana,</title>
+                     </bibl>
+                     <bibl resource="disco:s039e_0218">
+                        <title property="dc:title">La triste ausencia</title>
+                        <title type="incipit" property="dc:alternative">Su manto recogió la noche
+                           oscura</title>
+                     </bibl>
+                     <bibl resource="disco:s039e_0219">
+                        <title property="dc:title">Recuerdos tristes</title>
+                        <title type="incipit" property="dc:alternative">Cuando tu blanca frente yo
+                           ceñía</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Fray José Manuel de Navarrete</head>
+            <p>Michoacán. 1768 - 1809</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s039e_0217">
+            <head>Influjo de amor</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">Célebres calles de la corte <w type="rhyme"
+                     >indiana</w>,</l>
+               <l met="+-+--+---+-" rhyme="B">grandes plazas, soberbios <w type="rhyme"
+                     >edificios</w>,</l>
+               <l met="+----+---+-" rhyme="B">templos de milagrosos <w type="rhyme"
+                     >frontispicios</w>,</l>
+               <l met="--+--+-+-+-" rhyme="A">elevados torreones de arte <w type="rhyme"
+                  >ufana</w>,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">altos palacios de la gloria <w type="rhyme"
+                  >humana</w>,</l>
+               <l met="+----+---+-" rhyme="B">fuentes de primorosos <w type="rhyme"
+                  >artificios</w>,</l>
+               <l met="--+--+---+-" rhyme="B">chapiteles, pirámides, <w type="rhyme"
+                  >hospicios</w>,</l>
+               <l met="-+---+---+-" rhyme="A">que arguyen la grandeza <w type="rhyme"
+                  >americana</w>:</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+-+-+-" rhyme="C" enjamb="pb_verb_cprep">¡Oh México!, sin duda yo <w
+                     type="rhyme">gozara</w></l>
+               <l met="-+--++---+-" rhyme="D">del gusto que me brinda tu <w type="rhyme"
+                     >grandeza</w>,</l>
+               <l met="-+---+++-+-" rhyme="C">si causa superior no lo <w type="rhyme"
+                  >estorbara</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+-++---+-" rhyme="D" enjamb="ex_dobj_verb">De tu suelo me arranca con <w
+                     type="rhyme">presteza</w></l>
+               <l met="-+-+---+-+-" rhyme="C" enjamb="pb_noun_prep">el suave influjo de la dulce <w
+                     type="rhyme">cara</w></l>
+               <l met="+--+-+---+-" rhyme="D">de una agraciada rústica <w type="rhyme"
+                  >belleza</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s039e_0218">
+            <head>La triste ausencia</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+-+-+-" rhyme="A" enjamb="cc_crossclause">Su manto recogió la noche <w
+                     type="rhyme">oscura</w></l>
+               <l met="--+--+-+-+-" rhyme="B">que cobija al mundo <w type="rhyme"
+                  >tristemente</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">y abriéndose las puertas del <w type="rhyme"
+                     >oriente</w></l>
+               <l met="-+---+-+-+-" rhyme="A">se asoma a su balcón la aurora <w type="rhyme"
+                     >pura</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A">De la fresca arboleda en la <w type="rhyme"
+                     >espesura</w></l>
+               <l met="-+---+-+-+-" rhyme="B">los céfiros susurran <w type="rhyme"
+                  >blandamente</w>;</l>
+               <l met="-+---+---+-" rhyme="B">desata el arroyuelo su <w type="rhyme"
+                  >corriente</w>,</l>
+               <l met="--+--+---+-" rhyme="A">y por márgenes verdes se <w type="rhyme"
+                  >apresura</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+-+-+-" rhyme="C">Sus fragancias respiran flores <w type="rhyme"
+                     >suaves</w>,</l>
+               <l met="--+--+---+-" rhyme="D">y llenando los vientos de <w type="rhyme"
+                  >armonía</w></l>
+               <l met="-+-+---+-+-" rhyme="C">requiebros trinan las parleras <w type="rhyme"
+                     >aves</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+-+--+---+-" rhyme="D">Todo el mundo se llena de <w type="rhyme"
+                  >alegría</w>,</l>
+               <l met="+-+--+-+-+-" rhyme="C">menos yo, que en mis penas siempre <w type="rhyme"
+                     >graves</w>,</l>
+               <l met="-+-+---+-+-" rhyme="D">ausente estoy de la zagala <w type="rhyme">mía</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s039e_0219">
+            <head>Recuerdos tristes</head>
+            <lg n="1" type="cuarteto">
+               <l met="---+-+-+-+-" rhyme="A" enjamb="pb_noun_prep">Cuando tu blanca frente yo <w
+                     type="rhyme">ceñía</w></l>
+               <l met="-+-+---+-+-" rhyme="B">de yedra azul y de encarnada <w type="rhyme"
+                  >rosa</w>;</l>
+               <l met="---+-+-+-+-" rhyme="B">cuando en el fértil prado y selva <w type="rhyme"
+                     >umbrosa</w></l>
+               <l met="+-+-++-+-+-" rhyme="A">mil cariños muy dulces te <w type="rhyme"
+                  >decía</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+-+-+-" rhyme="A">cuando de agresta flauta me <w type="rhyme"
+                  >servía</w></l>
+               <l met="---+-+---+-" rhyme="B">para cantar tu cara <w type="rhyme">milagrosa</w>;</l>
+               <l met="-----+---+-" rhyme="B">cuando en nuestra cabaña <w type="rhyme"
+                  >venturosa</w></l>
+               <l met="+-+----+-+-" rhyme="A">me nombraba por tuyo, y tú por <w type="rhyme"
+                  >mía</w>;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+++-+-+-" rhyme="C">cuando mas no, no quieras, Clori <w type="rhyme"
+                     >amada</w>,</l>
+               <l met="--+-++--++-" rhyme="D" enjamb="ex_dobj_verb">que refiera más gustos, pues no
+                     <w type="rhyme">intento</w></l>
+               <l met="-+---+---+-" rhyme="C">que gima la memoria <w type="rhyme">lastimada</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--++--+-+-" rhyme="D" enjamb="cc_crossclause">Iba a decirle que en aquel <w
+                     type="rhyme">momento</w></l>
+               <l met="--+--+-+-+-" rhyme="C">que recuerdo la vida ya <w type="rhyme"
+                  >pasada</w>,</l>
+               <l met="++--++---+-" rhyme="D">no sé como no muero de <w type="rhyme"
+                  >tormento</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

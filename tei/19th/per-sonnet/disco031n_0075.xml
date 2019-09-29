@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s031n_0075">
+            <title property="dc:title">De Carlos Pío y Federico Urbach</title>
+            <author property="dc:creator" resource="disco:s031n_0075">Carlos Póo Urbach</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">142</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s031n_0075"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_031n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_031n" about="disco:031n" typeOf="foaf:Person">
+                  <persName type="short">Urbach</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Carlos Póo</forename>
+                     <surname property="foaf:familyName">Urbach</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Carlos Póo Urbach</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Matanzas</settlement>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1872" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1897" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s031n_0075">
+                        <title property="dc:title">De Carlos Pío y Federico Urbach</title>
+                        <title type="incipit" property="dc:alternative">Somos nosotros pálido pintores</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s031n_0075">
+            <head>De Carlos Pío y Federico Urbach</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A" enjamb="cc_crossclause">Somos nosotros pálido <w type="rhyme">pintores</w>
+               </l>
+               <l met="---+-+---+-" rhyme="B">que diluyendo el alma en la <w type="rhyme">paleta</w>,</l>
+               <l met="--+--+---+-" rhyme="B">esbozamos ensueños de <w type="rhyme">poeta</w>
+               </l>
+               <l met="-+---+---+-" rhyme="A">con justas gradaciones de <w type="rhyme">colores</w>
+               </l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A" enjamb="ex_subj_verb">La trágica expresión de los <w type="rhyme">dolores</w>
+               </l>
+               <l met="+-+--+---+-" rhyme="B">forja marco a la cláusula <w type="rhyme">discreta</w>,</l>
+               <l met="---+---+-+-" rhyme="B">si la indomable aspiración, <w type="rhyme">boceta</w>
+               </l>
+               <l met="+----+---+-" rhyme="A">iris de fugitivos <w type="rhyme">resplandores</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+---+-" rhyme="C">En el cielo del arte, los <w type="rhyme">matices</w>
+               </l>
+               <l met="-+-+-+---+-" rhyme="C">cruzándose en artísticos <w type="rhyme">deslices</w>
+               </l>
+               <l met="-+---+---+-" rhyme="D">simulan espejismos <w type="rhyme">visionarios</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+---+-+-" rhyme="E" enjamb="pb_adj_noun">y en el paisaje desolado, <w type="rhyme">abiertos</w>
+               </l>
+               <l met="+-+--+---+-" rhyme="E" enjamb="pb_adj_noun">lirios negros en cármenes <w type="rhyme">desiertos</w>
+               </l>
+               <l met="+----+---+-" rhyme="D">forja nuestra labor de <w type="rhyme">solitarios</w>
+               </l>
+            </lg>
+            <lg n="5" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="F" enjamb="cc_crossclause">Somos nosotros pálidos <w type="rhyme">pintores</w>
+               </l>
+               <l met="--+--+---+-" rhyme="G">que infundir anhelamos al <w type="rhyme">bosquejo</w>,</l>
+               <l met="--+--+---+-" rhyme="G" enjamb="cc_crossclause">la expresión vacilante del <w type="rhyme">reflejo</w>
+               </l>
+               <l met="--+--+---+-" rhyme="F">que agoniza entre lampos <w type="rhyme">tembladores</w>
+               </l>
+            </lg>
+            <lg n="6" type="cuarteto">
+               <l met="-+---+---+-" rhyme="F">La dicha que difunden los <w type="rhyme">amores</w>
+               </l>
+               <l met="--+--+---+-" rhyme="G">o el pesar que deforma el <w type="rhyme">entrecejo</w>,</l>
+               <l met="-+---+-+-+-" rhyme="G" enjamb="pb_noun_prep">quisiéramos copiar, como un <w type="rhyme">espejo</w>
+               </l>
+               <l met="+-+--+---+-" rhyme="F">de una ninfa los rasgos <w type="rhyme">turbadores</w>
+               </l>
+            </lg>
+            <lg n="7" type="terceto">
+               <l met="-----+---+-" rhyme="H">Pero, como los copos <w type="rhyme">invernales</w>
+               </l>
+               <l met="-+---+---+-" rhyme="H" enjamb="ex_subj_verb">el diáfano fulgor de los <w type="rhyme">cristales</w>
+               </l>
+               <l met="-+---+---+-" rhyme="I">opacan con sus gélidos <w type="rhyme">sudarios</w>,</l>
+            </lg>
+            <lg n="8" type="terceto">
+               <l met="--+--+---+-" rhyme="J" enjamb="ex_subj_verb">implacable el olvido <w type="rhyme">tenebroso</w>
+               </l>
+               <l met="---+-+---+-" rhyme="J">opacará, cruzando <w type="rhyme">misterioso</w>,</l>
+               <l met="--+--+---+-" rhyme="I">nuestra extraña labor de <w type="rhyme">solitarios</w>
+               </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

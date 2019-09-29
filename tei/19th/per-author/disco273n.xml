@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_273n">
+            <title property="dc:title">Sonetos de Juan de Mallara</title>
+            <author property="dc:creator" resource="disco:273n" corresp="#disco_273n">Juan de
+               Mallara</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">268</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_273n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_273n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_273n" about="disco:273n" typeOf="foaf:Person">
+                  <idno cert="medium" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/34621373"/>
+                  <persName type="short">Mallara</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Mallara</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan de Mallara</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s273n_0881">
+                        <title property="dc:title">A la invención del reloj español</title>
+                        <title type="incipit" property="dc:alternative">Febo la clara España
+                           contemplando</title>
+                     </bibl>
+                     <bibl resource="disco:s273n_0882">
+                        <title property="dc:title">El médico y el ciego</title>
+                        <title type="incipit" property="dc:alternative">Un hombre enfermo de ojos se
+                           dolía,</title>
+                     </bibl>
+                     <bibl resource="disco:s273n_0883">
+                        <title property="dc:title">Diálogo entre el autor y un celoso</title>
+                        <title type="incipit" property="dc:alternative">¿De dónde te ha venido tal
+                           locura,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Juan de Mallara</head>
+            <p>España. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s273n_0881">
+            <head>A la invención del reloj español</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A">Febo la clara España <w type="rhyme"
+                  >contemplando</w></l>
+               <l met="---+-+---+-" rhyme="B">para mejor en ella <w type="rhyme">declararse</w>,</l>
+               <l met="+--+-+---+-" rhyme="B" enjamb="ex_dobj_verb">quiso por un artífice <w
+                     type="rhyme">reglarse</w></l>
+               <l met="-+-+---+-+-" rhyme="A">el cómo y cuándo de su luz <w type="rhyme"
+                  >notando</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+--++-" rhyme="A">En las armas de Rojas reloj <w type="rhyme"
+                  >dando</w>,</l>
+               <l met="+--+-+---+-" rhyme="B">hizo los signos meses <w type="rhyme"
+                  >divulgarse</w></l>
+               <l met="---+-+---+-" rhyme="B">el calendario santos <w type="rhyme"
+                  >celebrarse</w>,</l>
+               <l met="-+-+-+---+-" rhyme="A">las horas, día y noche <w type="rhyme"
+                  >señalando</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+----++--+-" rhyme="C">Letra dominical, fiestas <w type="rhyme"
+                  >movibles</w>,</l>
+               <l met="---+-+---+-" rhyme="D">elevación del sol sobre <w type="rhyme"
+                  >horizontes</w>,</l>
+               <l met="-+---+---+-" rhyme="E">los puntos que de eclíptica se <w type="rhyme"
+                     >aparte</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+-+-+-" rhyme="C">altor de las estrella más <w type="rhyme"
+                  >visibles</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="D">largura de una torre, pozo o <w type="rhyme"
+                     >montes</w></l>
+               <l met="+--+---+++-" rhyme="E">Es Hugo Frisio quien escribe este <w type="rhyme"
+                     >arte</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s273n_0882">
+            <head>El médico y el ciego</head>
+            <lg n="1" type="cuarteto">
+               <l met="++-+-+---+-" rhyme="A">Un hombre enfermo de ojos se <w type="rhyme"
+                  >dolía</w>,</l>
+               <l met="++---+-+-+-" rhyme="B">y un médico tirano lo <w type="rhyme">curaba</w>,</l>
+               <l met="-+---+++-+-" rhyme="B" enjamb="ex_dobj_verb">y entrando a visitarlo, le <w
+                     type="rhyme">hurtaba</w></l>
+               <l met="+-+--+-+-+-" rhyme="A">una alhaja de casa cada <w type="rhyme">día</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-++--+-" rhyme="A">Y por poder llevarle cuanto <w type="rhyme"
+                  >había</w>,</l>
+               <l met="-+---+---+-" rhyme="B">la cura de los ojos <w type="rhyme">dilataba</w></l>
+               <l met="---+-+-+-+-" rhyme="B" enjamb="ex_subj_verb">hasta que ya entendió que no <w
+                     type="rhyme">quedaba</w></l>
+               <l met="+-+--+---+-" rhyme="A">cosa alguna que fuese de <w type="rhyme">valía</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-++--+-" rhyme="C">Los parches le quitó muy <w type="rhyme"
+                  >denodado</w>,</l>
+               <l met="-+---++--+-" rhyme="D">y díjole: «Cumplido es tu <w type="rhyme"
+                  >deseo</w>;</l>
+               <l met="+-+-+-++-+-" rhyme="C">págame, pues ves que te he sanado »</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--++-+-+-+-" rhyme="D">El miró acá y allá; «mas antes <w type="rhyme"
+                     >creo</w>,</l>
+               <l met="+--+++-+-+-" rhyme="C">le respondió, que es cierto que he <w type="rhyme"
+                     >cegado</w>,</l>
+               <l met="--+--+-+-+-" rhyme="D">porque en toda mi casa nada veo »</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s273n_0883">
+            <head>Diálogo entre el autor y un celoso</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-+-+-+-" rhyme="A">¿De dónde te ha venido tal <w type="rhyme"
+                  >locura</w>,</l>
+               <l met="+--+-+---+-" rhyme="B">hombre ciego, cruel y <w type="rhyme"
+                  >sospechoso</w>?</l>
+               <l met="-+++-+-+-+-" rhyme="B">-De verme en tanto bien estoy <w type="rhyme"
+                     >medroso</w>;</l>
+               <l met="-+-+-+-+-+-" rhyme="A">y así, cualquier dolor se me <w type="rhyme"
+                     >figura</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+-++---+-" rhyme="A">-Pues gozando tan alta <w type="rhyme"
+                  >hermosura</w></l>
+               <l met="-+-+-++--+-" rhyme="B">y tanto bien, ¿estás tan sin <w type="rhyme"
+                     >reposo</w>?</l>
+               <l met="-+-+-++--+-" rhyme="B">-Por ser en ese don tan <w type="rhyme"
+                  >venturoso</w>,</l>
+               <l met="-+---++--+-" rhyme="A">principio de mi mal fue mi <w type="rhyme"
+                  >ventura</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+++-+-+-+-" rhyme="C">-Si tú te muestras pobre en gran <w type="rhyme"
+                     >bajeza</w>,</l>
+               <l met="-+-+-++--+-" rhyme="D">que tan precioso don no <w type="rhyme"
+                  >mereciste</w>,</l>
+               <l met="++---+--++-" rhyme="E">no es bien que de entre manos se te <w type="rhyme"
+                     >huya</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+---+-+-" rhyme="D">-Antes haré como avariento <w type="rhyme"
+                  >triste</w>,</l>
+               <l met="-++--+---+-" rhyme="C">que ni goza, guardando la <w type="rhyme"
+                  >riqueza</w>,</l>
+               <l met="+-+-+--+-+-" rhyme="E">ni a otro le consiente que sea <w type="rhyme"
+                     >suya</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

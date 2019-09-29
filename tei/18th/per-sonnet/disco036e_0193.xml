@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s036e_0193">
+            <title property="dc:title">Contra el amor</title>
+            <author property="dc:creator" resource="disco:s036e_0193">Manuel de Zequeira y Arango</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">88</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s036e_0193"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Wikisource, <hi rend="italics">Sonetos por autor</hi>, <date when="2017">2017</date>, <ref target="https://es.wikisource.org/wiki/Categoría:Sonetos_por_autor"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_036e"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_036e" about="disco:036e" typeOf="foaf:Person">
+                  <persName type="short">Zequeira y Arango</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Manuel</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Zequeira y Arango</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Manuel de Zequeira y Arango</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">La Habana</settlement>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1764" cert="high"/>
+                     <date type="century">18</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Matanzas</settlement>
+                           <country property="schema:deathPlace" inlist="">Cuba</country>
+                           <bloc property="schema:deathPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1846" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s036e_0193">
+                        <title property="dc:title">Contra el amor</title>
+                        <title type="incipit" property="dc:alternative">Huye, Climene, deja los encantos</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s036e_0193">
+            <head>Contra el amor</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A" enjamb="pb_noun_prep">Huye, Climene, deja los <w type="rhyme">encantos</w>
+               </l>
+               <l met="--+-++---+-" rhyme="B">del amor, que no son sino <w type="rhyme">dolores</w>;</l>
+               <l met="++-+-+---+-" rhyme="B" enjamb="cc_crossclause">es una oculta sierpe entre las <w type="rhyme">flores</w>
+               </l>
+               <l met="--+--+-+-+-" rhyme="A">cuyos silbos parecen dulces <w type="rhyme">cantos</w>:</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+++--+-+-+-" rhyme="A">es un néctar que quema y da <w type="rhyme">quebrantos</w>,</l>
+               <l met="+-+--+---+-" rhyme="B">es Vesubio que esconde sus <w type="rhyme">ardores</w>,</l>
+               <l met="+-+--+---+-" rhyme="B">es delicia mezclada con <w type="rhyme">rigores</w>
+               </l>
+               <l met="+-+--+---+-" rhyme="A">es jardín que se riega con los <w type="rhyme">llantos</w>:</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+----+---+-" rhyme="C" enjamb="pb_noun_prep">Es del entendimiento <w type="rhyme">laberinto</w>
+               </l>
+               <l met="-+-+---+-+-" rhyme="D">de entrada fácil y salida <w type="rhyme">estrecha</w>,</l>
+               <l met="--+--++--+-" rhyme="C">donde el más racional pierde su <w type="rhyme">instinto</w>:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-++--+---+-" rhyme="D">Jamás mira su llama <w type="rhyme">satisfecha</w>,</l>
+               <l met="--+--+-+-+-" rhyme="C">y en fingiendo que está su ardor <w type="rhyme">extinto</w>,</l>
+               <l met="+--+-++--+-" rhyme="D">es cuando más estrago hace su <w type="rhyme">flecha</w>
+               </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s580n_2144">
+            <title property="dc:title">Son...sone...tes</title>
+            <author property="dc:creator" resource="disco:s580n_2144">Julio Flores Roa</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">392</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s580n_2144"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_580n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_580n" about="disco:580n" typeOf="foaf:Person">
+                  <persName type="short">Flores Roa</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Julio</forename>
+                     <surname property="foaf:familyName">Flores Roa</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Julio Flores Roa</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Chiquinquirá</settlement>
+                           <country property="schema:birthPlace" inlist="">Colombia</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1867" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Usiacurí</settlement>
+                           <country property="schema:deathPlace" inlist="">Colombia</country>
+                           <bloc property="schema:deathPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1923" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s580n_2144">
+                        <title property="dc:title">Son...sone...tes</title>
+                        <title type="incipit" property="dc:alternative">Oh tú que en gradación eterna y muda</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s580n_2144">
+            <head>Son...sone...tes</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+-+-+-" rhyme="A">Oh tú que en gradación eterna y <w type="rhyme">muda</w>
+               </l>
+               <l met="+--+-+---+-" rhyme="B">has ostentado todos los <w type="rhyme">colores</w>,</l>
+               <l met="--+--+---+-" rhyme="B" enjamb="ex_subj_verb">como el iris que el sol con sus <w type="rhyme">fulgores</w>
+               </l>
+               <l met="+--+---+-+-" rhyme="A">forma en la negra inmensidad <w type="rhyme">desnuda</w>!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A" enjamb="pb_verb_cprep">Tú que conoces al varón que <w type="rhyme">suda</w>
+               </l>
+               <l met="++---+---+-" rhyme="B">de un mísero destino los <w type="rhyme">rigores</w>;</l>
+               <l met="+-++-++--+-" rhyme="B" enjamb="pb_noun_prep">tú, que ya no tendrás días <w type="rhyme">mejores</w>
+               </l>
+               <l met="+--+---+-+-" rhyme="-">de esta existencia en la batalla dura;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+--+---+-" rhyme="C">Tú, que verde y sutil como la <w type="rhyme">malva</w>
+               </l>
+               <l met="-+-+---+-+-" rhyme="D">cubrir osaste como al sol la <w type="rhyme">nube</w>,</l>
+               <l met="---+---+-+-" rhyme="C">de nuestro amigo la luciente <w type="rhyme">calva</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+---+-+-" rhyme="E">Hoy que el sepulcro tu carrera <w type="rhyme">ataja</w>,</l>
+               <l met="++-+---+-+-" rhyme="D">no te diré como a la niebla: ¡<w type="rhyme">Sube</w>!</l>
+               <l met="++-+---+-+-" rhyme="E">Yo te diré como a la noche: ¡<w type="rhyme">Baja</w>!</l>
+            </lg>
+            <lg n="5" type="cuarteto">
+               <l met="+-+--+---+-" rhyme="F" enjamb="pb_noun_prep">Duerme tú, que sufriste los <w type="rhyme">sudores</w>
+               </l>
+               <l met="+--+-+---+-" rhyme="G" enjamb="pb_noun_prep">de esa columna humana en cuya <w type="rhyme">cumbre</w>
+               </l>
+               <l met="+-+--+-+-+-" rhyme="G" enjamb="cc_crossclause">tanto el alma vertió candente <w type="rhyme">lumbre</w>
+               </l>
+               <l met="--+--+---+-" rhyme="F">que hasta el pasto quemó con sus <w type="rhyme">ardores</w>
+               </l>
+            </lg>
+            <lg n="6" type="cuarteto">
+               <l met="+-+--++--+-" rhyme="F" enjamb="pb_adj_noun">Duerme tú, que jamás sucios <w type="rhyme">favores</w>
+               </l>
+               <l met="-+---+---+-" rhyme="G">lograste, como muchos, por <w type="rhyme">costumbre</w>;</l>
+               <l met="-+---+---+-" rhyme="G" enjamb="ex_subj_verb">que toda tu asquerosa <w type="rhyme">podredumbre</w>
+               </l>
+               <l met="-+-+---+-+-" rhyme="F">se torne al cabo en perfumadas <w type="rhyme">flores</w>
+               </l>
+            </lg>
+            <lg n="7" type="terceto">
+               <l met="+-+-++++++-" rhyme="H">No, la muerte no es noche; es luz, es <w type="rhyme">alba</w>
+               </l>
+               <l met="--+---+--+-" rhyme="I">que a la niebla de la nada <w type="rhyme">aterra</w>
+               </l>
+               <l met="---+---+++-" rhyme="H">y de la sombra sepulcral nos <w type="rhyme">salva</w>;</l>
+            </lg>
+            <lg n="8" type="terceto">
+               <l met="---+---+-+-" rhyme="I">Como el cadáver que la tumba <w type="rhyme">encierra</w>,</l>
+               <l met="+-+----+-+-" rhyme="H" enjamb="pb_noun_prep">tú bajaras desde la estéril <w type="rhyme">calva</w>
+               </l>
+               <l met="-+-----+-+-" rhyme="I">de Carlos, ¡ay!, a fecundar la <w type="rhyme">tierra</w>
+               </l>
+            </lg>
+            <lg n="9" type="cuarteto">
+               <l met="+--+---+++-" rhyme="J" enjamb="pb_adj_noun">Tú, que la cumbre de Tamayo un <w type="rhyme">día</w>
+               </l>
+               <l met="--+--+---+-" rhyme="K">ocupaste como águila <w type="rhyme">altanera</w>,</l>
+               <l met="---+---+-+-" rhyme="K" enjamb="ex_subj_verb">que bajo el dombo de la azul <w type="rhyme">esfera</w>
+               </l>
+               <l met="+--+---+-+-" rhyme="J">mira la muda inmensidad <w type="rhyme">vacía</w>;</l>
+            </lg>
+            <lg n="10" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="J" enjamb="ex_subj_verb">Tú, que en la noche tempestuosa y <w type="rhyme">fría</w>
+               </l>
+               <l met="+-+--+---+-" rhyme="K" enjamb="pb_noun_prep">diste abrigo en la calma y en la <w type="rhyme">cuera</w>
+               </l>
+               <l met="-+++-+-+-+-" rhyme="K">de aquel que es más delgado que una <w type="rhyme">cera</w>
+               </l>
+               <l met="-++--++--+-" rhyme="J">y más largo tal vez, que una <w type="rhyme">bujía</w>
+               </l>
+            </lg>
+            <lg n="11" type="terceto">
+               <l met="+--+---+-+-" rhyme="L" enjamb="pb_noun_prep">Debes dormir en el recinto <w type="rhyme">oscuro</w>
+               </l>
+               <l met="--+-++---+-" rhyme="M">de la tierra, que es madre <w type="rhyme">bondadosa</w>,</l>
+               <l met="-+-+-+--++-" rhyme="L">que lecho da a su huésped, jamás <w type="rhyme">duro</w>,</l>
+            </lg>
+            <lg n="12" type="terceto">
+               <l met="-+---+-+-+-" rhyme="M">y que hace al rededor nacer la <w type="rhyme">rosa</w>
+               </l>
+               <l met="--+--+-+-+-" rhyme="L" enjamb="ex_dobj_verb">y tornar en ambiente blando y <w type="rhyme">puro</w>
+               </l>
+               <l met="+----++--+-" rhyme="M">todo lo que al morir rueda a la <w type="rhyme">fosa</w>
+               </l>
+            </lg>
+            <lg n="13" type="cuarteto">
+               <l met="-+-----+-+-" rhyme="N" enjamb="cc_crossclause">Reposa, pues entre la tumba <w type="rhyme">hueca</w>
+               </l>
+               <l met="-+-+---+-+-">que va a cambiar tu singular <w type="rhyme">destino</w>;</l>
+               <l met="---+-+---+-" enjamb="ex_dobj_verb">ya que malezas no hubo en tu <w type="rhyme">camino</w>
+               </l>
+               <l met="+----++--+-" rhyme="N">llevas al fenecer mucha <w type="rhyme">manteca</w>
+               </l>
+            </lg>
+            <lg n="14" type="cuarteto">
+               <l met="--+--+-+++-" rhyme="N">Aunque muerta, tu cinta no está <w type="rhyme">seca</w>;</l>
+               <l met="-+-+---+-+-">quizás untada de aguardiente o <w type="rhyme">vino</w>,</l>
+               <l met="--+--+---+-">de la muerte en el raudo <w type="rhyme">torbellino</w>,</l>
+               <l met="--+--+-+-+-" rhyme="N">como todas irá de Ceca en <w type="rhyme">Meca</w>
+               </l>
+            </lg>
+            <lg n="15" type="terceto">
+               <l met="---+-+-+-+-" enjamb="pb_adj_prep">Pero tal vez la savia oscura y <w type="rhyme">sola</w>
+               </l>
+               <l met="---+-+---+-" enjamb="pb_adj_noun">de la fecunda tierra, cuyo <w type="rhyme">aliento</w>
+               </l>
+               <l met="+--+---+-+-">vaga al acaso como inmensa <w type="rhyme">ola</w>,</l>
+            </lg>
+            <lg n="16" type="terceto">
+               <l met="-+-+---+-+-" enjamb="ex_dobj_verb">hará de ti, para halagar al <w type="rhyme">viento</w>
+               </l>
+               <l met="-+-+-+---+-">el cáliz de una trémula <w type="rhyme">amapola</w>
+               </l>
+               <l met="---+-++--+-">o la corola azul de un pensamiento </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

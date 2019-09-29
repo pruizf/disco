@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_198n">
+            <title property="dc:title">Sonetos de Luis Brun</title>
+            <author property="dc:creator" resource="disco:198n" corresp="#disco_198n">Luis
+               Brun</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">195</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_198n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_198n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_198n" about="disco:198n" typeOf="foaf:Person">
+                  <idno cert="low" property="rdfs:seeAlso" resource="https://viaf.org/viaf/98984937"/>
+                  <persName type="short">Brun</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Luis</forename>
+                     <surname property="foaf:familyName">Brun</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Luis Brun</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s198n_0680">
+                        <title property="dc:title">Dafnis y Cloe</title>
+                        <title type="incipit" property="dc:alternative">Cloe la virgen, sobre el
+                           campo heleno</title>
+                     </bibl>
+                     <bibl resource="disco:s198n_0681">
+                        <title property="dc:title">El medio ambiente</title>
+                        <title type="incipit" property="dc:alternative">Hoy como ayer... Los días en
+                           esta ciudad muerta</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Luis Brun</head>
+            <p>España. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s198n_0680">
+            <head>Dafnis y Cloe</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+---+--+-" rhyme="A" enjamb="ex_subj_verb">Cloe la virgen, sobre el campo
+                     <w type="rhyme">heleno</w></l>
+               <l met="-+--+---+-" rhyme="B" enjamb="ex_subj_verb">duerme tranquila Lejos el <w
+                     type="rhyme">ganado</w></l>
+               <l met="-+---++--+-" rhyme="B">sestea a su placer De Cloe al <w type="rhyme"
+                  >lado</w></l>
+               <l met="+--+-+-+-+-" rhyme="A">Dafnis está, de amor y dicha <w type="rhyme"
+                  >lleno</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A">El sol abraza en el azul <w type="rhyme"
+                  >sereno</w></l>
+               <l met="+--+---+-+-" rhyme="B">Una cigarra que alegró el <w type="rhyme"
+                  >sembrado</w>,</l>
+               <l met="--+--+---+-" rhyme="B">perseguida, con vuelo <w type="rhyme"
+                  >arrebatado</w>,</l>
+               <l met="-+---+---+-" rhyme="A">se oculta de la Virgen en el <w type="rhyme"
+                  >seno</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C">El susto a Cloe despertar <w type="rhyme"
+                  >consigue</w></l>
+               <l met="--+--+---+-" rhyme="D">De los tímidos pechos <w type="rhyme"
+                  >temblorosos</w></l>
+               <l met="+-++---+-+-" rhyme="E">Dafnis la coge con su mano <w type="rhyme"
+                  >recia</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+-+-+-" rhyme="C">Mas la cigarra audaz su canto <w type="rhyme"
+                     >sigue</w></l>
+               <l met="--+--+---+-" rhyme="D" enjamb="ex_subj_verb">mientras Pan y las ninfas <w
+                     type="rhyme">victoriosos</w></l>
+               <l met="+----+---+-" rhyme="E">ríen bajo los cielos de la <w type="rhyme"
+                  >Grecia</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s198n_0681">
+            <head>El medio ambiente</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-+-+--++-" rhyme="A" enjamb="pb_adj_adv">Hoy como ayer Los días en esta
+                  ciudad <w type="rhyme">muerta</w></l>
+               <l met="-+-+-+-+-+--+-" rhyme="B">constantemente iguales nunca traen <w type="rhyme"
+                     >alegría</w>,</l>
+               <l met="--+--+---+--+-" rhyme="A">por las calles silentes, por la plaza <w
+                     type="rhyme">desierta</w></l>
+               <l met="+-+--+------+-" rhyme="B">corre el viento enervante de la <w type="rhyme"
+                     >melancolía</w></l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="-+++++-+--+-" rhyme="C">¿Luchar? ¡Pero es tan dulce esta plácida <w
+                     type="rhyme">calma</w>!</l>
+               <l met="+--+-+--+---+-" rhyme="D">No ambicionemos gloria, fortuna y <w type="rhyme"
+                     >poderío</w>,</l>
+               <l met="---+-+---+--+-" rhyme="C">después de cada instante generoso, en el <w
+                     type="rhyme">alma</w></l>
+               <l met="+--+-+-+-+--+-" rhyme="D">un ¿para qué? implacable pone siempre el <w
+                     type="rhyme">hastío</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-++-+--++--+-" rhyme="E">Tibio sol, pobres flores en un campo <w
+                     type="rhyme">sediento</w>,</l>
+               <l met="-+-+-+---+--+-" rhyme="F">amor vulgar, que nunca se convierte en <w
+                     type="rhyme">pasión</w>,</l>
+               <l met="---+-+-+---+-" rhyme="E">bajo el celaje triste, igual y <w type="rhyme"
+                     >ceniciento</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+----+------+-" rhyme="F">huyen las ilusiones de nuestro <w type="rhyme"
+                     >corazón</w></l>
+               <l met="+++-+++----+-" rhyme="E" enjamb="cc_crossclause">y es tan hondo y tan grande
+                  este <w type="rhyme">renunciamiento</w></l>
+               <l met="-+-+-+------+-" rhyme="F">que no se siente pena por la <w type="rhyme"
+                     >renunciación</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

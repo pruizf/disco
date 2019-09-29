@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_143g">
+            <title property="dc:title">Sonetos de Luis Manuel Figueroa</title>
+            <author property="dc:creator" resource="disco:143g" corresp="#disco_143g">Luis Manuel
+               Figueroa</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">96</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_143g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_143g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_143g" about="disco:143g" typeOf="foaf:Person">
+                  <persName type="short">Figueroa</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Luis Manuel</forename>
+                     <surname property="foaf:familyName">Figueroa</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Luis Manuel Figueroa</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s143g_0281">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Por montes canos con el
+                           yerto invierno,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Luis Manuel Figueroa</head>
+            <p>España. 16th century - 17th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s143g_0281">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A">Por montes canos con el yerto <w type="rhyme"
+                     >invierno</w>,</l>
+               <l met="---+-+---+-" rhyme="B">de mi prisión arrastro la <w type="rhyme"
+                  >cadena</w>,</l>
+               <l met="-+---+-+-+-" rhyme="B" enjamb="ex_dobj_verb">y sólo mi gemido ronco <w
+                     type="rhyme">suena</w></l>
+               <l met="-+-+-+-+-+-" rhyme="A">por huecos valles, no mi llanto <w type="rhyme"
+                     >tierno</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++-+---+-+-" rhyme="A">Que aun no merezco, por mi mal <w type="rhyme"
+                     >gobierno</w>,</l>
+               <l met="---+---+-+-" rhyme="B">con mis gemidos publicar mi <w type="rhyme"
+                  >pena</w>;</l>
+               <l met="--+--+-+-+-" rhyme="B" enjamb="ex_subj_verb">que la justa ocasión que me <w
+                     type="rhyme">condena</w></l>
+               <l met="+--+---+-+-" rhyme="A">sella mi boca con silencio <w type="rhyme"
+                  >eterno</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-++--+---+-" rhyme="C" enjamb="pb_adj_noun">Así, a costa de penas <w
+                     type="rhyme">inmortales</w></l>
+               <l met="-+-+---+-+-" rhyme="D">sustento el fuego que en mis venas <w type="rhyme"
+                     >arde</w>;</l>
+               <l met="-+++---+++-" rhyme="E">mas no me quejo de dolor tan <w type="rhyme"
+                     >fuerte</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--++--+-+-" rhyme="C">Quiero morirme y publicar mis <w type="rhyme"
+                     >males</w>;</l>
+               <l met="---+---+-+-" rhyme="D">mas ¡ay! que llega el recuerdo <w type="rhyme"
+                     >tarde</w></l>
+               <l met="--+--+---+-" rhyme="E">cuando el mal se descubre con la <w type="rhyme"
+                     >muerte</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

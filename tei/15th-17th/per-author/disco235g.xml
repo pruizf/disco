@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_235g">
+            <title property="dc:title">Sonetos de Luis Belmonte Bermúdez</title>
+            <author property="dc:creator" resource="disco:235g" corresp="#disco_235g">Luis Belmonte
+               Bermúdez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">554</measure>
+            <measure unit="line">71</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_235g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_235g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_235g" about="disco:235g" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/91253227"/>
+                  <persName type="short">Belmonte Bermúdez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Luis</forename>
+                     <surname property="foaf:familyName">Belmonte Bermúdez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Luis Belmonte Bermúdez</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Sevilla</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1587" cert="high"/>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1650" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s235g_0492">
+                        <title property="dc:title">De <title>El mejor tutor es Dios</title></title>
+                        <title type="incipit" property="dc:alternative">Imágenes confusas del
+                           deseo.</title>
+                     </bibl>
+                     <bibl resource="disco:s235g_0493">
+                        <title property="dc:title">A San Isidro</title>
+                        <title type="incipit" property="dc:alternative">Los campos de Madrid, Isidro
+                           santo,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Luis Belmonte Bermúdez</head>
+            <p>Sevilla. 1587 - 1650</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s235g_0492">
+            <head>De <title>El mejor tutor es Dios</title></head>
+            <lg type="sonnet" xml:id="s235g_0492-1">
+               <head>Dialogado: Serafina y Carlos</head>
+               <lg n="1" type="cuarteto">
+                  <milestone unit="name"/>
+                  <l met="-+---+---+-" rhyme="A"><name>[Car]</name> Imágenes confusas del <w
+                        type="rhyme">deseo</w></l>
+                  <milestone unit="name"/>
+                  <l met="--+--+---+-" rhyme="B"><name>[Ser]</name> Ilusiones de amor, y de los <w
+                        type="rhyme">ojos</w></l>
+                  <milestone unit="name"/>
+                  <l met="+++-+--+-+-" rhyme="B"><name>[Car]</name> Alma, es esto verdad o son <w
+                        type="rhyme">enrojos</w>?</l>
+                  <milestone unit="name"/>
+                  <l met="+-+---+--+-" rhyme="A"><name>[Ser]</name> Es fantástico bien esto que <w
+                        type="rhyme">veo</w>?</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <milestone unit="name"/>
+                  <l met="-+---+-+-+-" rhyme="A"><name>[Car]</name> Conozco mi desdicha, no lo <w
+                        type="rhyme">creo</w></l>
+                  <milestone unit="name"/>
+                  <l met="+--+-+---+-" rhyme="B"><name>[Ser]</name> No renovéis engaños mis <w
+                        type="rhyme">enojos</w></l>
+                  <milestone unit="name"/>
+                  <l met="-+-+-+---+-" rhyme="B"><name>[Car]</name> O muerte, no me muestres tus <w
+                        type="rhyme">despojos</w>!</l>
+                  <milestone unit="name"/>
+                  <l met="-+-+-----+-" rhyme="A"><name>[Ser]</name> Memoria baste y a tu <w
+                        type="rhyme">devaneo</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <milestone unit="name"/>
+                  <l met="++-+-+---+-" rhyme="C"><name>[Car]</name> Qué miro? No es aquella <w
+                        type="rhyme">Serafina</w>?</l>
+                  <milestone unit="name"/>
+                  <l met="+-++-+-+-+-" rhyme="D"><name>[Ser]</name> Carlos, no es ese, el qué
+                     perdido <w type="rhyme">lloro</w>?</l>
+                  <milestone unit="name"/>
+                  <l met="--+--+---+-" rhyme="C"><name>[Car]</name> Me conoces, imagen <w
+                        type="rhyme">peregrina</w>?</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <milestone unit="name"/>
+                  <l met="++-+-+-+-+-" rhyme="D"><name>[Ser]</name> Sí, que eres vida tú del bien
+                     que <w type="rhyme">ignoro</w></l>
+                  <milestone unit="name"/>
+                  <l met="+-+--+-+-+-" rhyme="C"><name>[Car]</name> No me mates placer, mi luz <w
+                        type="rhyme">divina</w></l>
+                  <milestone unit="name"/>
+                  <l met="-+-+++-++++" rhyme="D"><name>[Ser]</name> Mi dueño Vida esta? Ven, te <w
+                        type="rhyme">adoro</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s235g_0492-2">
+               <head>Dialogado: Ricardo e Irene</head>
+               <lg n="1" type="cuarteto">
+                  <milestone unit="name"/>
+                  <l met="-++--++--+-" rhyme="A"><name>[Ri]</name> De qué modo será, dulce, mi <w
+                        type="rhyme">suerte</w></l>
+                  <l met="-+---+---+-" rhyme="B">el yugo de mujer <w type="rhyme"
+                     >aborrecida</w>?</l>
+                  <milestone unit="name"/>
+                  <l met="---+++---+-" rhyme="B"><name>[Ir]</name> El matrimonio es luz de nuestra
+                        <w type="rhyme">vida</w>,</l>
+                  <l met="---+-+++-+-" rhyme="A">pero faltando amor, es sombra, y <w type="rhyme"
+                        >muerte</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <milestone unit="name"/>
+                  <l met="++-+-+---+-" rhyme="A"><name>[Ri]</name> Qué culpa tengo yo en <w
+                        type="rhyme">aborrecerte</w>?</l>
+                  <l met="-+-+-++--+-" rhyme="B">Pasión fatal será no <w type="rhyme"
+                     >pretendida</w></l>
+                  <milestone unit="name"/>
+                  <l met="--++-+-+-+-" rhyme="B"><name>[Ir]</name> La ambición de un imperio me <w
+                        type="rhyme">convida</w></l>
+                  <l met="---+---+-+-" rhyme="A">y el desengaño su peligro <w type="rhyme"
+                        >advierte</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <milestone unit="name"/>
+                  <l met="-+---+---+-" rhyme="C"><name>[Ri]</name> Si fueras semejante a <w
+                        type="rhyme">Serafina</w></l>
+                  <milestone unit="name"/>
+                  <l met="-+---+---+-" rhyme="D" enjamb="ex_subj_verb"><name>[Ir]</name> Si fueras a
+                     Alejandro <w type="rhyme">semejante</w></l>
+                  <milestone unit="name"/>
+                  <l met="-+-+-+-+-+-" rhyme="E">
+                     <name>[Ri]</name> Te amara siempre Amor tuviera <w type="rhyme">eterno</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+-+++-+-" rhyme="C">Si amor en esta unión no nos <w type="rhyme"
+                        >inclina</w></l>
+                  <milestone unit="name"/>
+                  <l met="--+-+++--+-" rhyme="D"><name>[Ir]</name> Si el marido no tiene algo de <w
+                        type="rhyme">amante</w></l>
+                  <milestone unit="name"/>
+                  <l met="++-+++-+++-" rhyme="E"><name>[Ri]</name> Es muerte Es pena Es rabia Y es
+                        <w type="rhyme">infierno</w></l>
+               </lg>
+            </lg>
+
+         </lg>
+         <lg type="sonnet" xml:id="s235g_0493">
+            <head>A San Isidro</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+-+-+-" rhyme="A">Los campos de Madrid, Isidro <w type="rhyme"
+                  >santo</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B">suspensa el alma en oración <w type="rhyme"
+                     >dichosa</w></l>
+               <l met="-+---+-+-+-" rhyme="B">angélico escuadrón con planta <w type="rhyme"
+                     >hermosa</w></l>
+               <l met="+--+-+-+-+-" rhyme="A">labra por vos, que le obligáis a <w type="rhyme"
+                     >tanto</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+++---+-+-" rhyme="A">¿A quién no causa venerable <w type="rhyme"
+                     >espanto</w>,</l>
+               <l met="-+---+-+-+-" rhyme="B" enjamb="ex_subj_verb">si el fruto de la tierra más <w
+                     type="rhyme">copiosa</w></l>
+               <l met="-+-+---+-+-" rhyme="B">responde siempre a la semilla <w type="rhyme"
+                     >ociosa</w>,</l>
+               <l met="-+-+-+---+-" rhyme="A">y vos sembráis el fruto en vuestro <w type="rhyme"
+                     >llanto</w>?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+-+---+-" rhyme="C">Mas el que labra campos de los <w type="rhyme"
+                     >cielos</w>,</l>
+               <l met="-+-+---+-+-" rhyme="D">cogiendo siembra, sin que espere en <w type="rhyme"
+                     >vano</w>,</l>
+               <l met="--+--++--+-" rhyme="E">porque el mismo sembrar es el <w type="rhyme"
+                     >tributo</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="++++---+-+-" rhyme="C">Todo es a un tiempo, sin temer <w type="rhyme"
+                     >desvelos</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="D">y así en el cielo Isidro coge <w type="rhyme"
+                     >ufano</w>,</l>
+               <l met="-+-+-+---+-" rhyme="E">sembrando aquí sus lágrimas, el <w type="rhyme"
+                     >fruto</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

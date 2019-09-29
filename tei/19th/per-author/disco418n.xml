@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_418n">
+            <title property="dc:title">Sonetos de Eusebio Lillo</title>
+            <author property="dc:creator" resource="disco:418n" corresp="#disco_418n">Eusebio
+               Lillo</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">295</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_418n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_418n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_418n" about="disco:418n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/34341743"/>
+                  <persName type="short">Lillo</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Eusebio</forename>
+                     <surname property="foaf:familyName">Lillo</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Eusebio Lillo</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Santiago</settlement>
+                           <country property="schema:birthPlace" inlist="">Chile</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1826" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1910" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s418n_1653">
+                        <title property="dc:title">El poeta y el vulgo</title>
+                        <title type="incipit" property="dc:alternative">Al altanero y encumbrado
+                           pino</title>
+                     </bibl>
+                     <bibl resource="disco:s418n_1654">
+                        <title property="dc:title">A la niña M.</title>
+                        <title type="incipit" property="dc:alternative">Hay algo en ti del serafín
+                           que mora</title>
+                     </bibl>
+                     <bibl resource="disco:s418n_1655">
+                        <title property="dc:title">Consejo</title>
+                        <title type="incipit" property="dc:alternative">Goza, bien mío, en tanto que
+                           en la vida</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Eusebio Lillo</head>
+            <p>Santiago (Chile). 1826 - 1910</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s418n_1653">
+            <head>El poeta y el vulgo</head>
+            <lg n="1" type="cuarteto">
+               <l met="---+---+-+-" rhyme="A">Al altanero y encumbrado <w type="rhyme">pino</w></l>
+               <l met="+-++---+-+-" rhyme="B">díjole un día la rastrera <w type="rhyme"
+                  >grama</w>:</l>
+               <l met="-++--++--+-" rhyme="B">-¿Por qué tan orgulloso alzas tu <w type="rhyme"
+                     >rama</w></l>
+               <l met="--++---+-+-" rhyme="A">cuando no alfombras como yo el <w type="rhyme"
+                     >camino</w>?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+++---+-" rhyme="A" enjamb="ex_dobj_verb">Y él respondió: -Yo doy al <w
+                     type="rhyme">peregrino</w></l>
+               <l met="+----+-+-+-" rhyme="B">sombra, cuando su luz el sol <w type="rhyme"
+                     >derrama</w>,</l>
+               <l met="--+--+---+-" rhyme="B" enjamb="ex_subj_verb">y cobijo las flores cuando <w
+                     type="rhyme">brama</w></l>
+               <l met="-+---+---+-" rhyme="A">el ronco y desatado <w type="rhyme">torbellino</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-++-+--+++-" rhyme="C">Así el vulgo al poeta gritó un <w type="rhyme"
+                  >día</w>:</l>
+               <l met="-+-+---+-+-" rhyme="D">-¿Por qué miráis indiferente el <w type="rhyme"
+                     >suelo</w>?</l>
+               <l met="+++--+---+-" rhyme="C">¿Qué hacéis? ¿Quién sois? - Y el bardo <w type="rhyme"
+                     >respondía</w>:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="++-+---+-+-" rhyme="D">-Soy más que tú porque tal vez <w type="rhyme"
+                     >recelo</w></l>
+               <l met="-+---+---+-" rhyme="C" enjamb="ex_subj_verb">que sólo de mi canto a la <w
+                     type="rhyme">armonía</w></l>
+               <l met="-+-++--+++-" rhyme="D">comprendes que hay un Dios y que hay un <w
+                     type="rhyme">cielo</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s418n_1654">
+            <head>A la niña M.</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">Hay algo en ti del serafín que <w type="rhyme"
+                     >mora</w></l>
+               <l met="---+-+---+-" rhyme="B">en la mansión eterna y <w type="rhyme"
+                  >esplendente</w>;</l>
+               <l met="---+-++--+-" rhyme="B">en tu serena faz, niña <w type="rhyme"
+                  >inocente</w>,</l>
+               <l met="---+---+-+-" rhyme="A">y en el azul que tu mirar <w type="rhyme"
+                  >colora</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">Fresco botón que al despertar la <w type="rhyme"
+                     >Aurora</w></l>
+               <l met="-+-+---+-+-" rhyme="B">y al casto beso del fugaz <w type="rhyme"
+                  >ambiente</w>,</l>
+               <l met="+--+---+-+-" rhyme="B">alza su pura y delicada <w type="rhyme"
+                  >frente</w>,</l>
+               <l met="++-+-+---+-" rhyme="A">tal eres tú, Matilde <w type="rhyme"
+                  >encantadora</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C">De aquesta vida en el camino <w type="rhyme"
+                     >estrecho</w></l>
+               <l met="+--+---+-+-" rhyme="D" enjamb="ex_dobj_verb">se abra a tu paso florecida <w
+                     type="rhyme">senda</w></l>
+               <l met="-+-+---+-+-" rhyme="C">y paz respire y bienestar tu <w type="rhyme"
+                  >pecho</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+++--+---+-" rhyme="D">Un alma halles que te ame y te <w type="rhyme"
+                     >comprenda</w>;</l>
+               <l met="-+-+---+-+-" rhyme="C" enjamb="ex_subj_verb">y grato abrigo del paterno <w
+                     type="rhyme">techo</w></l>
+               <l met="+--+-+-+-+-" rhyme="D">sé de feliz unión, hermosa <w type="rhyme"
+                  >prenda</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s418n_1655">
+            <head>Consejo</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+------+-" rhyme="A">Goza, bien mío, en tanto que en la <w type="rhyme"
+                     >vida</w></l>
+               <l met="-+---++--+-" rhyme="B">la fresca lozanía te <w type="rhyme">acompaña</w>,</l>
+               <l met="++---+-+-+-" rhyme="B">que es flor la juventud que el tiempo <w type="rhyme"
+                     >daña</w></l>
+               <l met="-++--++-++-" rhyme="A">y no vuelve jamás una vez <w type="rhyme">ida</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+---+-+-" rhyme="A" enjamb="ex_subj_verb">Mientras gozamos de la edad <w
+                     type="rhyme">florida</w></l>
+               <l met="-+-+---+++-" rhyme="B">en mil deleites el amor nos <w type="rhyme"
+                  >baña</w>;</l>
+               <l met="++-+---+-+-" rhyme="B" enjamb="ex_subj_verb">más tarde, ¡ay tristes! la vejez
+                     <w type="rhyme">huraña</w></l>
+               <l met="++-+---+-+-" rhyme="A">nos roba el fuego que en el alma <w type="rhyme"
+                     >anida</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--++--+-" rhyme="C">El amor, como Dios, tiene su <w type="rhyme"
+                  >cielo</w>;</l>
+               <l met="-+-+---+-+-" rhyme="D">olvida allí del corazón <w type="rhyme">enojos</w></l>
+               <l met="----+-+--+-" rhyme="C">pues para gozar viniste al <w type="rhyme"
+                  >suelo</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--++-+-+-+-" rhyme="D">Y si presa han de ser aquesos <w type="rhyme"
+                  >ojos</w></l>
+               <l met="-+-+---+-+-" rhyme="C">y el seno aquel de la vejez de <w type="rhyme"
+                     >hielo</w>,</l>
+               <l met="+++--++--+-" rhyme="D">sean más bien de amor dulces <w type="rhyme"
+                     >despojos</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

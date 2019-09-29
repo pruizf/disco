@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_510n">
+            <title property="dc:title">Sonetos de Guillermo Matta</title>
+            <author property="dc:creator" resource="disco:510n" corresp="#disco_510n">Guillermo
+               Matta</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">173</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_510n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_510n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_510n" about="disco:510n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso" resource="https://viaf.org/viaf/9767860"/>
+                  <persName type="short">Matta</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Guillermo</forename>
+                     <surname property="foaf:familyName">Matta</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Guillermo Matta</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Copiapó</settlement>
+                           <country property="schema:birthPlace" inlist="">Chile</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1829" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Santiago de
+                              Chile</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1857" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s510n_1924">
+                        <title property="dc:title">A España</title>
+                        <title type="incipit" property="dc:alternative">España es una tierra en que
+                           germina</title>
+                     </bibl>
+                     <bibl resource="disco:s510n_1925">
+                        <title property="dc:title">Paisaje nocturno</title>
+                        <title type="incipit" property="dc:alternative">La luna, misteriosa
+                           peregrina,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Guillermo Matta</head>
+            <p>Copiapó (Chile). 1829 - 1857</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s510n_1924">
+            <head>A España</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+++-+---+-" rhyme="A" enjamb="ex_subj_verb">España es una tierra en que <w
+                     type="rhyme">germina</w></l>
+               <l met="--+--+---+-" rhyme="B">hermanado el valor con la <w type="rhyme"
+                  >nobleza</w>;</l>
+               <l met="-----+---+-" rhyme="B">a través de los siglos su <w type="rhyme"
+                  >grandeza</w></l>
+               <l met="---+-+---+-" rhyme="A">el horizonte histórico <w type="rhyme">ilumina</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--++--+-" rhyme="A">Si la suerte vencerla <w type="rhyme"
+                  >determina</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">revístete de heroica <w type="rhyme"
+                  >fortaleza</w>;</l>
+               <l met="-+-+-++--+-" rhyme="B">señala en cada sitio una <w type="rhyme"
+                  >proeza</w>,</l>
+               <l met="+++--+-+-+-" rhyme="A">muestra un templo de gloria en cada <w type="rhyme"
+                     >ruina</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+++-+---+-" rhyme="-">España es una tierra de gigante,</l>
+               <l met="---+-+---+-" rhyme="C" enjamb="ex_subj_verb">que en los agrestes picos del <w
+                     type="rhyme">Moncayo</w></l>
+               <l met="+-+--+---+-" rhyme="D">aún tremolan sus lábaros <w type="rhyme"
+                     >triunfantes</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+-+--+---+-" rhyme="C">Es el pueblo inmortal del Dos de <w type="rhyme"
+                     >Mayo</w>,</l>
+               <l met="-+---+---+-" rhyme="D">que enseña con la pluma de <w type="rhyme"
+                     >Cervantes</w></l>
+               <l met="-+---+---+-" rhyme="C">y vence con la espada de <w type="rhyme"
+                  >Pelayo</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s510n_1925">
+            <head>Paisaje nocturno</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A">La luna, misteriosa <w type="rhyme">peregrina</w>,</l>
+               <l met="--+--+---+-" rhyme="B">entre sombra y crepúsculo <w type="rhyme"
+                  >fulgura</w>;</l>
+               <l met="+--+---+-+-" rhyme="B">pálida tiembla en la montaña <w type="rhyme"
+                     >oscura</w></l>
+               <l met="-+-+-+---+-" rhyme="A">y blanca luz esparce en la <w type="rhyme"
+                  >colina</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A" enjamb="pb_adj_noun">En los valles profundos <w
+                     type="rhyme">ilumina</w></l>
+               <l met="+-++-+-+-+-" rhyme="B">flor naciente, hoja verde, roca <w type="rhyme"
+                     >dura</w>;</l>
+               <l met="+--+---+-+-" rhyme="B">y ángeles vuelan por el aura <w type="rhyme"
+                  >pura</w></l>
+               <l met="-+-++--+-+-" rhyme="A">y el alma arroba una visión <w type="rhyme"
+                  >divina</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+---+-" rhyme="C" enjamb="pb_adj_noun">¿Nuestras almas de tierra sus <w
+                     type="rhyme">inquietas</w></l>
+               <l met="-+---+---+-" rhyme="D">zozobras con la luna <w type="rhyme"
+                  >satisfacen</w>,</l>
+               <l met="--+--+---+-" rhyme="C">y las guía la atracción de los <w type="rhyme"
+                     >planetas</w>?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+----+-+-" rhyme="D">¡Ah! Locos sueños, que en la mente <w type="rhyme"
+                     >nacen</w>,</l>
+               <l met="+----+---+-" rhyme="C">países que imaginan los <w type="rhyme"
+                  >poetas</w>,</l>
+               <l met="+--+---+-+-" rhyme="D">lunas perdidas que en su ocaso <w type="rhyme"
+                     >yacen</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

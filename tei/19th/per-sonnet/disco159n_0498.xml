@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="file_po_s159n_0498">
+            <title property="dc:title">Amor y querer</title>
+            <author property="dc:creator" resource="disco:s159n_0498">Ramón de Campoamor</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="tokens">105</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_po_s159n_0498"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del siglo XIX</hi> / editados por Ramón García González, <date when="2006">2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>, <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"/>.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es"
+                      about="disco:au_159n"
+                      property="dc:language"
+                      resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_159n" about="disco:159n" typeOf="foaf:Person">
+                  <persName type="short">Campoamor</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ramón</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Campoamor</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ramón de Campoamor</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Navia (Asturias)</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1817" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1901" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s159n_0498">
+                        <title property="dc:title">Amor y querer</title>
+                        <title type="incipit" property="dc:alternative">A la infiel más infiel de las hermosas</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia"
+                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                       replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs"
+                       matchPattern="([A-Za-z]+)"
+                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref>
+                    tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref target="https://sites.google.com/site/spanishenjambment/enjambment-types">documentation</ref>. In addition, a <att>cert</att> was added to express the
+                    degree of certainty concerning the characterisation of the enjambment. The following 
+                    <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values">report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp">Plecháč</name>
+         </change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="sonnet" xml:id="s159n_0498">
+            <head>Amor y querer</head>
+            <lg n="1" type="cuarteto">
+               <l met="--++-+---+-" rhyme="A" enjamb="ex_dobj_verb">A la infiel más infiel de las <w type="rhyme">hermosas</w>
+               </l>
+               <l met="++-+-+++-+-" rhyme="B">un hombre la quería y yo la <w type="rhyme">amaba</w>;</l>
+               <l met="+++--++--+-" rhyme="B">y ella a un tiempo a los dos nos <w type="rhyme">encantaba</w>
+               </l>
+               <l met="--+--+---+-" rhyme="A">con la miel de sus frases <w type="rhyme">engañosas</w>
+               </l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A">Mientras él, con sus flores <w type="rhyme">venenosas</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">queriéndola, su aliento <w type="rhyme">emponzoñaba</w>,</l>
+               <l met="++---+---+-" rhyme="B">yo de ella ante los pies, que <w type="rhyme">idolatraba</w>,</l>
+               <l met="--+--+-+-+-" rhyme="A">acabadas de abrir echaba <w type="rhyme">rosas</w>
+               </l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+++-+-+-" rhyme="C">De su favor ya en vano el aire <w type="rhyme">arrecia</w>;</l>
+               <l met="-+-+---+-+-" rhyme="D" enjamb="cc_crossclause">mintió a los dos, y sufrirá el <w type="rhyme">castigo</w>
+               </l>
+               <l met="+-++-++--+-" rhyme="C">que uno la da por vil, y otro por <w type="rhyme">necia</w>
+               </l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+-++-+-+-+-" rhyme="D">No hallará paz con él, ni bien <w type="rhyme">conmigo</w>:</l>
+               <l met="+-+-++-+-+-" rhyme="C">él, que sólo la quiso, la <w type="rhyme">desprecia</w>;</l>
+               <l met="+-+-++-+-+-" rhyme="D">yo, que tanto la amaba, la <w type="rhyme">maldigo</w>
+               </l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>
