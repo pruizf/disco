@@ -262,22 +262,26 @@ The TEIheader also encodes additional information, unavailable in the sources:
 
 ### Metadata in the plain-text version
 
-In the plain-text version, an external [table](https://github.com/pruizf/disco/blob/master/author_metadata.tsv) can be used to access author-metadata (dates, origin, etc.). The table's fields are explained [here](https://github.com/pruizf/disco/blob/master/metadata_fields.md). Poems' titles and IDs are encoded in the file names. The file names also encode the most basic author information: their name and author-ID in the corpus. The metadata table matches those authors' names and IDs, so that the file names can be crossed with the table. 
+#### From [v3 release](https://github.com/pruizf/disco/releases) onwards
 
-Here are some examples of the way file names encode metadata:
+In the plain-text version, an external [table](https://github.com/pruizf/disco/blob/master/author_metadata.tsv) can be used to access author-metadata (dates, origin, etc.). The table's fields are explained [here](https://github.com/pruizf/disco/blob/master/metadata_fields.md). Poems' IDs as well their author's ID in the corpus are also encoded in the file names. The metadata table matches those authors' IDs, so that the file names can be crossed with the table. 
+
+Here are some examples of the way file names encode IDs:
 
 ```
-Template: LastName,_FirstName__AuthorID~~Title's_first_50_characters__PoemID.txt
-Example: Acuña,_Rosario_de__182n~~Soneto_escrito_para_ser_grabado_en_la_tumba_de_mi___0622.txt
+Template: disco{AuthorID}_{PoemID}.txt
+Example: disco182n_0622.txt
 ```
 For sonnets within a sonnet-sequence, an additional ID indicates the poem's position in the sequence:
 
 ```
-Template: LastName,_FirstName__AuthorID~~SequenceTitle's_first_50_characters__PoemID__PoemTitle__IDInSequence.txt
-Example: Querolt,_Vicente_Wenceslao__263n~~La_fiesta_de_Venus__0853__I__01.txt
+Template: disco{AuthorID}_{PoemID}_{PositionInSequence}.txt
+Example: disco263n_0853_01.txt
 ```
 
-As the examples show, the \~\~ delimiter separates author from poem information. Double underscores separate metadata types (e.g. author name from its ID).
+#### For the v2 and v1 releases
+
+The file names also included the author names and the first characters of a poem's title; see [here](https://github.com/pruizf/disco/tree/1350233c1af8409f34b727f5396de11d4a9a4cb9) for the v2 documentation. This format gave problems for some XML editors. Accordingly, it was modified in v3, keeping only IDs rather than actual names or titles.
 
 ## Literary Annotations
 
@@ -304,7 +308,11 @@ Details about the conventions used to represent enjambment types and the criteri
 
 # Versions
 
-DISCO published in October 2017 its version 1.0 containing texts from the 19th Century. In December 2017 a second version was published, which additionally contains onnets between the 15th to the 18th Century, reinforcing the corpus' diachronic dimension. The second version also contains metadata in RDFa and literary annotations for metrics and enjambment. 
+DISCO published in October 2017 its version 1.0 containing texts from the 19th Century.
+
+In December 2017 a second version was published, which additionally contains onnets between the 15th to the 18th Century, reinforcing the corpus' diachronic dimension. The second version also contains metadata in RDFa and literary annotations for metrics and enjambment. 
+
+Version 3 was published in October 2019. The main changes are the addition of rhyme-word and rhyme-scheme annotations, besides some text corrections and markup improvements, e.g. in dialogue poems.
 
 # Publication and Preservation
 
