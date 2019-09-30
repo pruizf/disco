@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_260n">
+            <title property="dc:title">Sonetos de René López</title>
+            <author property="dc:creator" resource="disco:260n" corresp="#disco_260n">René
+               López</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">290</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_260n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_260n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_260n" about="disco:260n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/266268636"/>
+                  <persName type="short">López</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">René</forename>
+                     <surname property="foaf:familyName">López</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">René López</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">La Habana</settlement>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1882" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1909" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s260n_0846">
+                        <title property="dc:title">Las tribulaciones</title>
+                        <title type="incipit" property="dc:alternative">¡Oh! tardes otoñales color
+                           de la violeta,</title>
+                     </bibl>
+                     <bibl resource="disco:s260n_0847">
+                        <title property="dc:title">Retrato</title>
+                        <title type="incipit" property="dc:alternative">Nariz gascona de afilada
+                           punta,</title>
+                     </bibl>
+                     <bibl resource="disco:s260n_0848">
+                        <title property="dc:title">Homenaje lírico a Rubén Darío</title>
+                        <title type="incipit" property="dc:alternative">Yo saludo al poeta de las
+                           «Prosas profanas»,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>René López</head>
+            <p>La Habana (Cuba). 1882 - 1909</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s260n_0846">
+            <head>Las tribulaciones</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+--+---+-" rhyme="A">¡Oh! tardes otoñales color de la <w type="rhyme"
+                     >violeta</w>,</l>
+               <l met="+----+----+-+-" rhyme="B">bellas imitadoras de la tristeza <w type="rhyme"
+                     >mía</w>,</l>
+               <l met="-+---+--+--+-" rhyme="A" enjamb="ex_subj_verb">dejad que mis ensueños
+                  morbosos de <w type="rhyme">poeta</w></l>
+               <l met="-+---+----+-+-" rhyme="B">se pierdan en la sombra donde se esconde el <w
+                     type="rhyme">día</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+--+---+-" rhyme="B">¡Oh! tardes barnizadas de gris <w type="rhyme"
+                     >melancolía</w>,</l>
+               <l met="-++--+--+---+-" rhyme="A" enjamb="ex_dobj_verb">llevadme en vuestras llamas
+                  cual bíblico <w type="rhyme">profeta</w></l>
+               <l met="---+-+--+---+-" rhyme="B" enjamb="cc_crossclause">hacia el palacio negro, la
+                  clásica <w type="rhyme">armería</w></l>
+               <l met="---+-+--+---+-" rhyme="A">donde el dolor se oculta como un <w type="rhyme"
+                     >anacoreta</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+--+--++--+-" rhyme="B" enjamb="ex_dobj_verb">Allí, en las tinieblas feroz
+                  le <w type="rhyme">arrancaría</w></l>
+               <l met="---+-+--+---+-" rhyme="A">en titanesca lucha, la espada y la <w type="rhyme"
+                     >careta</w>,</l>
+               <l met="-+---+--+--+-" rhyme="B">el filtro donde guarda la santa <w type="rhyme"
+                     >poesía</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+-+--+-+-" rhyme="A">(la peregrina novia de ese infernal <w type="rhyme"
+                     >atleta)</w></l>
+               <l met="-+---+--+---+-" rhyme="A">¡Oh! tardes otoñales color de la <w type="rhyme"
+                     >violeta</w>,</l>
+               <l met="+----+----+-+-" rhyme="B">bellas imitadoras de la tristeza <w type="rhyme"
+                     >mía</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s260n_0847">
+            <head>Retrato</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A">Nariz gascona de afilada <w type="rhyme"
+                  >punta</w>,</l>
+               <l met="+--+---+-+-" rhyme="B">rubia, sedosa, medieval <w type="rhyme"
+                  >melena</w>;</l>
+               <l met="-+-+---+-+-" rhyme="B">redonda cara que la carne <w type="rhyme"
+                  >llena</w>,</l>
+               <l met="+--+---+-+-" rhyme="A">rudo entrecejo que las cejas <w type="rhyme"
+                  >junta</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A">Mirada torva, fiera y <w type="rhyme"
+                  >cejijunta</w>;</l>
+               <l met="+--+---+-+-" rhyme="B">boca delgada que al hablar <w type="rhyme"
+                  >ordena</w>,</l>
+               <l met="---+---+-+-" rhyme="B">y en cuyos labios de elegancia <w type="rhyme"
+                     >helena</w></l>
+               <l met="-+-+---+-+-" rhyme="A">ligero bozo juvenil <w type="rhyme">despunta</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+---+-+-" rhyme="C">Anchas espaldas y robustos <w type="rhyme"
+                  >brazos</w>;</l>
+               <l met="-+-+---+-+-" rhyme="C">jubón que adornan brilladores <w type="rhyme"
+                     >lazos</w>;</l>
+               <l met="-+-+---+-+-" rhyme="D">oscuras botas, toledano <w type="rhyme">acero</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+---+-+-" rhyme="E">Y hasta la línea que su vista <w type="rhyme"
+                     >alcanza</w>,</l>
+               <l met="---+---+++-" rhyme="E" enjamb="ex_dobj_verb">en ademán de retador nos <w
+                     type="rhyme">lanza</w></l>
+               <l met="+--+---+-+-" rhyme="D">todo el desdén de su mirar <w type="rhyme"
+                  >austero</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s260n_0848">
+            <head>Homenaje lírico a Rubén Darío</head>
+            <lg n="1" type="unknown">
+               <l met="+-+-+---+--+-" rhyme="A">Yo saludo al poeta de las «Prosas <w type="rhyme"
+                     >profanas</w>»,</l>
+               <l met="--+--+---+-+-" rhyme="B">al Apolo moderno de los versos de <w type="rhyme"
+                     >oro</w>,</l>
+               <l met="---+-++--+-+-" rhyme="B">en cuyo escudo se halla un caracol <w type="rhyme"
+                     >sonoro</w>,</l>
+               <l met="-+---+--+-+-+-" rhyme="C">la máscara de Grecia, la flor de lis de <w
+                     type="rhyme">Francia</w></l>
+            </lg>
+            <lg n="2" type="unknown">
+               <l met="+++--+---+--+-" rhyme="A">Dime, mago risueño de las urnas <w type="rhyme"
+                     >paganas</w>,</l>
+               <l met="++---+----+-+-" rhyme="B">¿qué espíritu visita tu corazón -<w type="rhyme"
+                     >tesoro</w>,</l>
+               <l met="+---+-+-+-+-" rhyme="B">que hace que tu mano escriba versos de <w
+                     type="rhyme">oro</w></l>
+               <l met="---+-+--+---+-" rhyme="C">en cuya urdimbre juega la risa de la <w
+                     type="rhyme">Francia</w>?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+-+---+++-" rhyme="D">Emperador del ritmo, ante tus pies me <w
+                     type="rhyme">postro</w>;</l>
+               <l met="+--+-+---+-+-" rhyme="D">vuelve tu altivo rostro hacia mi triste <w
+                     type="rhyme">rostro</w>;</l>
+               <l met="-+-+-+-+-+--+-" rhyme="-">concédeme la gracia de una dulce sonrisa.</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+++--+---+-" rhyme="E">Hermanos yo no tengo, ni escudo ni <w type="rhyme"
+                     >nobleza</w>;</l>
+               <l met="+++--+---+--+-" rhyme="E" enjamb="cc_crossclause">yo soy un sacerdote de la
+                  diosa <w type="rhyme">Belleza</w></l>
+               <l met="+-+--+------+-" rhyme="-">que ha soñado tus versos y tu melancolía.</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

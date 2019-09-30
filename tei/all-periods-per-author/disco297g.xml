@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_297g">
+            <title property="dc:title">Sonetos de Juan del Valle y Caviedes</title>
+            <author property="dc:creator" resource="disco:297g" corresp="#disco_297g">Juan del Valle
+               y Caviedes</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">165</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_297g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_297g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_297g" about="disco:297g" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/51722780"/>
+                  <persName type="short">Valle y Caviedes</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan</forename>
+                     <nameLink>del</nameLink>
+                     <surname property="foaf:familyName">Valle y Caviedes</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan del Valle y Caviedes</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Porcuna</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1652" cert="high"/>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1697" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s297g_0619">
+                        <title property="dc:title">Remedio para ser caballeros los que no lo
+                           son</title>
+                        <title type="incipit" property="dc:alternative">Para ser caballero, de
+                           accidentes</title>
+                     </bibl>
+                     <bibl resource="disco:s297g_0620">
+                        <title property="dc:title">Para hallar fortuna en los palacios</title>
+                        <title type="incipit" property="dc:alternative">Para encontrar fortuna,
+                           estimaciones,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Juan del Valle y Caviedes</head>
+            <p>Porcuna. 1652 - 1697</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s297g_0619">
+            <head>Remedio para ser caballeros los que no lo son</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A">Para ser caballero, de <w type="rhyme"
+                  >accidentes</w></l>
+               <l met="+--+-+---+-" rhyme="B" enjamb="pb_verb_chain">te has de vestir , en voces, y
+                     <w type="rhyme">mesura</w></l>
+               <l met="-++--+---+-" rhyme="B">sacar pecho, derecha la <w type="rhyme"
+                  >estatura</w></l>
+               <l met="-+---+---+-" rhyme="A">hablando de hidalguías y <w type="rhyme"
+                  >parientes</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A" enjamb="ex_dobj_verb">Despreciando linajes entre <w
+                     type="rhyme">dientes</w></l>
+               <l met="-+-+-+---+-" rhyme="B">andar despacio, grave y con <w type="rhyme"
+                  >tesura</w></l>
+               <l met="--+-++---+-" rhyme="B">y aunque venga o no venga a <w type="rhyme"
+                     >coyuntura</w>,</l>
+               <l met="--+--+---+-" rhyme="A">usarás de las cláusulas <w type="rhyme"
+                  >siguientes</w>:</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C">El punto, el garbo, la razón de <w type="rhyme"
+                     >estado</w>,</l>
+               <l met="--+-+----+-" rhyme="D">etiquetas, V S , <w type="rhyme">obligaciones</w>,</l>
+               <l met="--+--+---+-" rhyme="C">continencia, Vuecencia, mi <w type="rhyme"
+                  >criado</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+---+-" rhyme="D">mis méritos, mis tardas <w type="rhyme"
+                     >pretensiones</w>;</l>
+               <l met="---+-+---+-" rhyme="C">y caballero quedas <w type="rhyme">entablado</w></l>
+               <l met="-----+---+-" rhyme="D">desde la coronilla a los <w type="rhyme"
+                  >talones</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s297g_0620">
+            <head>Para hallar fortuna en los palacios</head>
+            <lg n="1" type="cuarteto">
+               <l met="---+-+---+-" rhyme="A">Para encontrar fortuna, <w type="rhyme"
+                     >estimaciones</w>,</l>
+               <l met="+--+++---+-" rhyme="B">se ha de tener un poco de <w type="rhyme"
+                     >embusteros</w>,</l>
+               <l met="+-+--+---+-" rhyme="B">poco y medio de infames <w type="rhyme"
+                  >lisonjeros</w>,</l>
+               <l met="-++--+---+-" rhyme="A">y dos pocos cabales de <w type="rhyme"
+                  >bufones</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++-+-+---+-" rhyme="A">Tres pocos, y un poquito de <w type="rhyme"
+                     >soplones</w></l>
+               <l met="-+---+---+-" rhyme="B">y cuatro de alcahuetes <w type="rhyme"
+                  >recaderos</w>,</l>
+               <l met="+-+-++---+-" rhyme="B">cinco pocos, y un mucho de <w type="rhyme"
+                     >parleros</w>;</l>
+               <l met="-+---+---+-" rhyme="A">las obras censurando, y las <w type="rhyme"
+                     >acciones</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+---+-" rhyme="C" enjamb="ex_subj_verb">Será un amén continuo a cuanto
+                     <w type="rhyme">hablare</w></l>
+               <l met="--+--+---+-" rhyme="D" enjamb="ex_subj_verb">el señor, o el virrey a quien <w
+                     type="rhyme">sirviere</w></l>
+               <l met="-+-+-+---+-" rhyme="C" enjamb="ex_subj_verb">y cuanto más el tal <w
+                     type="rhyme">disparatare</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+-++---+-" rhyme="D">aplaudir con más fuerza se <w type="rhyme"
+                     >requiere</w>;</l>
+               <l met="---+-+---+-" rhyme="C">y si con esta ganga <w type="rhyme">continuare</w></l>
+               <l met="--+--+---+-" rhyme="D">en palacio tendrá cuanto <w type="rhyme"
+                  >quisiere</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

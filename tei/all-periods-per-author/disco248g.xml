@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_248g">
+            <title property="dc:title">Sonetos de Isabel de Vega</title>
+            <author property="dc:creator" resource="disco:248g" corresp="#disco_248g">Isabel de
+               Vega</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">173</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_248g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_248g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_248g" about="disco:248g" typeOf="foaf:Person">
+                  <persName type="short">Vega</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Isabel</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Vega</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Isabel de Vega</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Madrid</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date type="century">16</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s248g_0523">
+                        <title property="dc:title">Soneto a la muerte del emperador Carlos V</title>
+                        <title type="incipit" property="dc:alternative">¡Oh muerte! cuánta gloria
+                           has alcanzado</title>
+                     </bibl>
+                     <bibl resource="disco:s248g_0524">
+                        <title property="dc:title">Soneto al príncipe don Carlos de España, sobre
+                           este verso de David: (Omnia excelsa tua et fluctus tui super me
+                           transierunt.)</title>
+                        <title type="incipit" property="dc:alternative">Divino ingenio, lengua casi
+                           muda,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Isabel de Vega</head>
+            <p>Madrid. 16th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s248g_0523">
+            <head>Soneto a la muerte del emperador Carlos V</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-++--+-" rhyme="A" enjamb="pb_verb_chain">¡Oh muerte! cuánta gloria has
+                     <w type="rhyme">alcanzado</w></l>
+               <l met="-+---+-+++-" rhyme="B">triunfando del que triunfos par no <w type="rhyme"
+                     >tiene</w>;</l>
+               <l met="-+-+-+-+-+-" rhyme="B">que triunfes más de nadie no <w type="rhyme"
+                     >conviene</w>,</l>
+               <l met="-+++---+-+-" rhyme="A">pues no hay plus ultra adonde has <w type="rhyme"
+                     >llegado</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+++--+-+-" rhyme="A">Sosiéguese de hoy más tu pecado <w type="rhyme"
+                     >airado</w>,</l>
+               <l met="--+---++++-" rhyme="B">que el daño que por ti cruel nos <w type="rhyme"
+                     >viene</w></l>
+               <l met="-+---+-+++-" rhyme="B" enjamb="pb_verb_adv">ni el nombre del que en tal dolor
+                  nos <w type="rhyme">tiene</w></l>
+               <l met="++---+-+-+-" rhyme="A">no temas que jamás será <w type="rhyme"
+                  >olvidado</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+---+-" rhyme="C" enjamb="pb_verb_adv">¡Oh César y Alejandro! que <w
+                     type="rhyme">ganaste</w></l>
+               <l met="++-+---+-+-" rhyme="D">tan clara fama por los hechos <w type="rhyme"
+                     >raros</w></l>
+               <l met="--+--+---+-" rhyme="E">y con ellos triunfáis en el <w type="rhyme"
+                  >abismo</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+-+-+-+-" rhyme="C" enjamb="ex_dobj_verb">¡Oh Carlos! clara luz, que vos
+                     <w type="rhyme">volaste</w></l>
+               <l met="-+-+---+-+-" rhyme="D" enjamb="pb_adj_adv">al sumo cielo con triunfos <w
+                     type="rhyme">claros</w></l>
+               <l met="---+-+--++-" rhyme="E">después de haber triunfado de vos <w type="rhyme"
+                     >mismo</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s248g_0524">
+            <head>Soneto al príncipe don Carlos de España, sobre este verso de David: (Omnia excelsa
+               tua et fluctus tui super me transierunt.)</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-+-+-+-" rhyme="A">Divino ingenio, lengua casi <w type="rhyme"
+                  >muda</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">hermoso rostro, cuerpo <w type="rhyme"
+                  >desgraciado</w>,</l>
+               <l met="-+---+-+-+-" rhyme="B">valor inestimable no <w type="rhyme">estimado</w>,</l>
+               <l met="-+-+---+-+-" rhyme="A">con mano larga y de poder <w type="rhyme"
+                  >desnuda</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A">Virtud resplandeciente sin <w type="rhyme"
+                  >ayuda</w>,</l>
+               <l met="-+---++--+-" rhyme="B">rigor y ejecución bien <w type="rhyme"
+                  >empleado</w>;</l>
+               <l met="-+-+-+---+-" rhyme="B">benigno, afable, nunca <w type="rhyme"
+                     >espirmentado</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="A">palabra firme, fe que no se <w type="rhyme"
+                  >muda</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+--+---+-" rhyme="C">Alto estrado, grandeza, <w type="rhyme"
+                     >abatimiento</w>,</l>
+               <l met="-+---++--+-" rhyme="D" enjamb="pb_noun_prep">prisión y libertad, poca <w
+                     type="rhyme">salud</w></l>
+               <l met="-+---+---+-" rhyme="C">con ánimo constante y <w type="rhyme"
+                  >sufrimiento</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+--++---+-" rhyme="D" enjamb="ex_subj_verb">Pasó sin hacer daño a su <w
+                     type="rhyme">virtud</w></l>
+               <l met="-+---+---+-" rhyme="B">el Príncipe don Carlos <w type="rhyme"
+                  >desdichado</w>,</l>
+               <l met="---+-+-+-+-" rhyme="B">a quien Fortuna rostro no ha <w type="rhyme"
+                     >mostrado</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

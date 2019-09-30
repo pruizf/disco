@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_224n">
+            <title property="dc:title">Sonetos de Armando D. García</title>
+            <author property="dc:creator" resource="disco:224n" corresp="#disco_224n">Armando D.
+               García</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">5</measure>
+            <measure unit="tokens">498</measure>
+            <measure unit="line">70</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_224n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_224n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_224n" about="disco:224n" typeOf="foaf:Person">
+                  <persName type="short">García</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Armando D.</forename>
+                     <surname property="foaf:familyName">García</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Armando D. García</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1895" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1918" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s224n_0723">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">¿Y sabes por qué fue? Yo era
+                           un proscrito</title>
+                     </bibl>
+                     <bibl resource="disco:s224n_0724">
+                        <title property="dc:title">Vida</title>
+                        <title type="incipit" property="dc:alternative">Prolífica planicie, sembrada
+                           de promesas,</title>
+                     </bibl>
+                     <bibl resource="disco:s224n_0725">
+                        <title property="dc:title">Lucha</title>
+                        <title type="incipit" property="dc:alternative">Loa brotes tienen vida;
+                           gallardamente erguidos</title>
+                     </bibl>
+                     <bibl resource="disco:s224n_0726">
+                        <title property="dc:title">Triunfo</title>
+                        <title type="incipit" property="dc:alternative">Amainan los rigores; renace
+                           en el ambiente</title>
+                     </bibl>
+                     <bibl resource="disco:s224n_0727">
+                        <title property="dc:title">Muerte</title>
+                        <title type="incipit" property="dc:alternative">Mas ¡oh! la turbulenta hora
+                           de los derrumbes</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Armando D. García</head>
+            <p>Cuba. 1895 - 1918</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s224n_0723">
+            <head>Soneto</head>
+            <lg n="1" type="serventesio">
+               <l met="-+--++-+-+-" rhyme="A" enjamb="pb_adj_noun">¿Y sabes por qué fue? Yo era un
+                     <w type="rhyme">proscrito</w></l>
+               <l met="--+--+---+-" rhyme="B">visionario de sendas <w type="rhyme"
+                  >prometidas</w>,</l>
+               <l met="--+--+---+-" rhyme="A" enjamb="pb_noun_prep">desterrado del bien por el <w
+                     type="rhyme">delito</w></l>
+               <l met="--+--+---+-" rhyme="B">de llevar mis antorchas <w type="rhyme"
+                  >encendidas</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---++--+-" rhyme="C">El duelo de la Vida, hecha <w type="rhyme"
+                     >calvario</w></l>
+               <l met="---+-+---+-" rhyme="D">por el desierto gris del <w type="rhyme"
+                  >abandono</w>,</l>
+               <l met="-+---+---+-" rhyme="C" enjamb="ex_dobj_verb">llevó a mi corazón de <w
+                     type="rhyme">visionario</w></l>
+               <l met="--+--+---+-" rhyme="D">la amargura secreta del <w type="rhyme">encono</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+---+-" rhyme="E" enjamb="pb_noun_prep">Y tú, bajo la clámide <w
+                     type="rhyme">divina</w></l>
+               <l met="---+---+-+-" rhyme="F" enjamb="pb_adj_adv">de tu ternura fraternal y <w
+                     type="rhyme">humana</w></l>
+               <l met="-+-+---+-+-" rhyme="E">trocaste en santa mi obsesión <w type="rhyme"
+                     >felina</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+---+-" rhyme="G">Y refrenando anárquicos <w type="rhyme"
+                  >furores</w></l>
+               <l met="+----+---+-" rhyme="F" enjamb="cc_crossclause">fuiste, para mi vida, como <w
+                     type="rhyme">hermana</w></l>
+               <l met="--+--+---+-" rhyme="G">que sembrara de rosas mis <w type="rhyme"
+                  >dolores</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s224n_0724">
+            <head>Vida</head>
+            <lg n="1" type="serventesio">
+               <l met="-+---+--+---+-" rhyme="-">Prolífica planicie, sembrada de promesas,</l>
+               <l met="-+---+----+-+-" rhyme="A">la tierra, fecundada como materno <w type="rhyme"
+                     >seno</w>,</l>
+               <l met="+----+-+-+--+-" rhyme="-">tiembla, cual si en la vida no existieran
+                  tristezas</l>
+               <l met="++-+-+-++---+-" rhyme="A">ni hubiera en cada cáliz un sorbo de <w
+                     type="rhyme">veneno</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+-+----+-" rhyme="B" enjamb="ex_subj_verb">El Sol, sobre el prodigio
+                  fértil de la <w type="rhyme">semilla</w></l>
+               <l met="-+---+-+---+-" rhyme="C">bendice la fecunda entraña que <w type="rhyme"
+                     >procrea</w>,</l>
+               <l met="---+-+-+----+-" rhyme="B">y a su calor bendito surge la <w type="rhyme"
+                     >maravilla</w></l>
+               <l met="+----+--+-+-+-" rhyme="C">rásganse las entrañas y el germen dice: ¡<w
+                     type="rhyme">sea</w>!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+--+---+-" rhyme="D">En un desbordamiento de pródigos <w type="rhyme"
+                     >vigores</w></l>
+               <l met="+----+-+----+-" rhyme="D" enjamb="pb_noun_prep">nacen los saludables brotes,
+                  entre <w type="rhyme">esplendores</w></l>
+               <l met="+--+--+---+-" rhyme="E">de una apoteosis floral y <w type="rhyme"
+                     >providente</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+------+-" rhyme="F">Y en la inviolable regla de las <w type="rhyme"
+                     >fecundaciones</w></l>
+               <l met="-+---+-----+-" rhyme="F">se inicia la tarea de las <w type="rhyme"
+                     >germinaciones</w></l>
+               <l met="--+--+-----+-" rhyme="E">bajo el ojo invisible del Gran <w type="rhyme"
+                     >Omnipotente</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s224n_0725">
+            <head>Lucha</head>
+            <lg n="1" type="serventesio">
+               <l met="++-+-+--+-+-+-" rhyme="A" enjamb="ex_subj_verb">Loa brotes tienen vida;
+                  gallardamente <w type="rhyme">erguidos</w></l>
+               <l met="-+---+------+-" rhyme="B">elevan el penacho de su <w type="rhyme"
+                     >florecimiento</w>,</l>
+               <l met="-+---+--+---+-" rhyme="A">y mueven de sus pomas los cálices <w type="rhyme"
+                     >henchidos</w></l>
+               <l met="---+-+----+-+-" rhyme="B">a la caricia artera de traicionero <w type="rhyme"
+                     >viento</w></l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="++--+-+----+-" rhyme="C" enjamb="pb_adj_noun">Y un día en que el Zodíaco
+                  marca el <w type="rhyme">inevitable</w></l>
+               <l met="+----+---+---+" rhyme="D">cambio de la magnánima bondad de la <w type="rhyme"
+                     >estación</w>,</l>
+               <l met="-+---+-++---+-" rhyme="C">se inician las tristezas de un duelo <w
+                     type="rhyme">irremediable</w></l>
+               <l met="-+-+-+--++--+-" rhyme="D">y en cada espiga tiembla también un <w type="rhyme"
+                     >corazón</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++---+--+---+-" rhyme="E">Y hay raros crujimientos de tallos <w type="rhyme"
+                     >destrozados</w>;</l>
+               <l met="-+---+--++--+-" rhyme="E" enjamb="pb_verb_cprep">los cármenes se mecen y son
+                  hasta <w type="rhyme">arrancados</w></l>
+               <l met="-+---+--+---+-" rhyme="F">del tallo que inclinado se humilla ante el <w
+                     type="rhyme">rigor</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+--+---+-" rhyme="G">Y empieza la zozobra fatal de lo <w type="rhyme"
+                     >imprevisto</w></l>
+               <l met="-+-++--+-+-+-" rhyme="G" enjamb="ex_dobj_verb">y tiene cada árbol como un
+                  divino <w type="rhyme">Cristo</w></l>
+               <l met="---+-+--+---+-" rhyme="F">su inevitable y triste calvario de <w type="rhyme"
+                     >dolor</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s224n_0726">
+            <head>Triunfo</head>
+            <lg n="1" type="serventesio">
+               <l met="-+---+--+---+-" rhyme="A" enjamb="ex_dobj_verb">Amainan los rigores; renace
+                  en el <w type="rhyme">ambiente</w></l>
+               <l met="-+---+----+-+-" rhyme="B">la plácida excelencia de la envidiable <w
+                     type="rhyme">paz</w>,</l>
+               <l met="++---+--+-+-+-" rhyme="A" enjamb="ex_subj_verb">y hay un renacimiento de fe,
+                  que <w type="rhyme">dulcemente</w></l>
+               <l met="---+-+----+-+-" rhyme="B">de la campiña envuelve la promisión <w type="rhyme"
+                     >feraz</w></l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="-+---+--+---+-" rhyme="C">Repica en el espacio celeste <w type="rhyme"
+                     >epifanía</w>;</l>
+               <l met="---+-+--+----+" rhyme="D">angelicales pífanos tocan a <w type="rhyme"
+                     >redención</w></l>
+               <l met="++---+--+---+-" rhyme="C">y hay un deslumbramiento de luz y de <w
+                     type="rhyme">alegría</w>,</l>
+               <l met="-+---+------+-" rhyme="D">magnánima apoteosis de <w type="rhyme"
+                     >remuneración</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++---+--+---+-" rhyme="E" enjamb="ex_subj_verb">Es hora en que las locas
+                  campanas del <w type="rhyme">contento</w></l>
+               <l met="-+---+--+---+-" rhyme="E" enjamb="pb_adj_noun">derraman por el éter la gloria
+                  del <w type="rhyme">violento</w></l>
+               <l met="-+---+---+--+-" rhyme="D">repique de sus áureos Badajoz de <w type="rhyme"
+                     >efusión</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+--+---+-" rhyme="F">Y en un florecimiento de dicha <w type="rhyme"
+                     >transitoria</w></l>
+               <l met="-+---+--+---+-" rhyme="F">se vierten en el templo los cánticos de <w
+                     type="rhyme">gloria</w></l>
+               <l met="---+-+------+-" rhyme="D">por la divina gracia de la <w type="rhyme"
+                     >compensación</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s224n_0727">
+            <head>Muerte</head>
+            <lg n="1" type="serventesio">
+               <l met="-----++----+-" rhyme="A">Mas ¡oh! la turbulenta hora de los <w type="rhyme"
+                     >derrumbes</w></l>
+               <l met="---+-+-+-+-+-" rhyme="B">en que se trueca el surco en un terrible <w
+                     type="rhyme">abismo</w></l>
+               <l met="+--+-+-+---+-" rhyme="A">(Tú eres humano, hermano, y sabes que <w
+                     type="rhyme">sucumbes</w>:</l>
+               <l met="+--+-+-+--+-+-" rhyme="B">es el destino injusto, ¡siempre será lo <w
+                     type="rhyme">mismo</w>!)</l>
+            </lg>
+            <lg n="2" type="serventesio">
+               <l met="---+-+--+---+-" rhyme="C" enjamb="pb_adj_noun">La exactitud severa del
+                  término <w type="rhyme">marcado</w></l>
+               <l met="-+-+----+---+-" rhyme="D">destácase por sobre la meta del <w type="rhyme"
+                     >vivir</w></l>
+               <l met="-+++-+--+---+-" rhyme="C" enjamb="pb_adj_prep">La Vida es un perenne dominio
+                     <w type="rhyme">limitado</w></l>
+               <l met="-----+--+---+-" rhyme="D">por sobre cuyos muros cruzamos al <w type="rhyme"
+                     >morir</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+--+---+-" rhyme="E">Dejemos ante el grande poder de lo <w type="rhyme"
+                     >insondable</w></l>
+               <l met="-+---+--+--+-" rhyme="E">-que tiene su designio severo e <w type="rhyme"
+                     >inmutable</w>-</l>
+               <l met="---+-+-+---+-" rhyme="F">la vanidad que exalta el odio y el <w type="rhyme"
+                     >rencor</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+--++----+-+-" rhyme="G">Que Cristo, con ser Cristo, divinizó su <w
+                     type="rhyme">vida</w></l>
+               <l met="-----+----+-+-" rhyme="G" enjamb="cc_crossclause">por el acatamiento de la
+                  fatal <w type="rhyme">medida</w></l>
+               <l met="-+-+-+--+---+-" rhyme="F">que eternamente iguala la Gloria y el <w
+                     type="rhyme">Dolor</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

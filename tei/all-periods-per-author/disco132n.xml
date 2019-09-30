@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_132n">
+            <title property="dc:title">Sonetos de Walterio F. Leza</title>
+            <author property="dc:creator" resource="disco:132n" corresp="#disco_132n">Walterio F.
+               Leza</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">236</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_132n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_132n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_132n" about="disco:132n" typeOf="foaf:Person">
+                  <persName type="short">Leza</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Walterio F.</forename>
+                     <surname property="foaf:familyName">Leza</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Walterio F. Leza</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s132n_0390">
+                        <title property="dc:title">Estrellas vespertinas</title>
+                        <title type="incipit" property="dc:alternative">Bajo el nirvana de la tarde
+                           quieta,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Walterio F. Leza</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s132n_0390">
+            <head>Estrellas vespertinas</head>
+            <lg type="sonnet" xml:id="s132n_0390_01">
+               <head>El triunfo</head>
+               <lg n="1" type="cuarteto">
+                  <l met="---+---+-+-" rhyme="A">Bajo el nirvana de la tarde <w type="rhyme"
+                        >quieta</w>,</l>
+                  <l met="--+--+---+-" rhyme="B">que amaraba el letargo del <w type="rhyme"
+                        >villaje</w>,</l>
+                  <l met="--+--+---+-" rhyme="B" enjamb="ex_subj_verb">otorgóme la gloria de su <w
+                        type="rhyme">ultraje</w></l>
+                  <l met="-+---+---+-" rhyme="A">tu enojo de dulcísima <w type="rhyme"
+                     >Julieta</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="--+--+---+-" rhyme="A">Desmayaba el crepúsculo <w type="rhyme"
+                     >violeta</w></l>
+                  <l met="-+---+---+-" rhyme="B">-radioso panorama de <w type="rhyme"
+                     >miraje</w>-</l>
+                  <l met="--+--+---+-" rhyme="B">en el sueño encantado del <w type="rhyme"
+                        >paisaje</w>,</l>
+                  <l met="-+-+---+-+-" rhyme="A">que hirió de Febo la postrer <w type="rhyme"
+                        >saeta</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="--+--+---+-" rhyme="C">Sollozó tu pueril <w type="rhyme"
+                     >resentimiento</w></l>
+                  <l met="---+---+-+-" rhyme="C">en la cadencia de tu suave <w type="rhyme"
+                        >acento</w>,</l>
+                  <l met="--+-++---+-" rhyme="D">deshaciéndose en gamas <w type="rhyme"
+                        >melodiosas</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="--+--+-+-+-" rhyme="E">Desarmado quedó mi anhelo <w type="rhyme"
+                        >impuro</w>;</l>
+                  <l met="--+--+-+-+-" rhyme="E" enjamb="ex_subj_verb">y puntearon de luz el cielo
+                        <w type="rhyme">oscuro</w></l>
+                  <l met="-+---+---+-" rhyme="D">las rútilas estrellas <w type="rhyme"
+                        >temblorosas</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s132n_0390_02">
+               <head>El ruego</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+---+---+-" rhyme="A" enjamb="pb_adj_noun">Vagábamos, sin rumbo, en la <w
+                        type="rhyme">pradera</w></l>
+                  <l met="-+---+---+-" rhyme="B" enjamb="pb_adj_noun">lozana y rutilante de <w
+                        type="rhyme">verdura</w></l>
+                  <l met="+-+--+---+-" rhyme="B" enjamb="ex_subj_verb">Yo encontraba en tu mórbida
+                        <w type="rhyme">ternura</w></l>
+                  <l met="+-+--+---+-" rhyme="A" enjamb="ex_subj_verb">un fragante dulzor de <w
+                        type="rhyme">primavera</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+-+--+---+-" rhyme="A" enjamb="cc_crossclause">Me arrobaba la gracia <w
+                        type="rhyme">milagrera</w></l>
+                  <l met="--+--+---+-" rhyme="B" enjamb="cc_crossclause">que prestigia tu heráldica
+                        <w type="rhyme">hermosura</w></l>
+                  <l met="--+--+-+-+-" rhyme="B" enjamb="ex_dobj_verb">cuando, grave, lanzó en la
+                     villa <w type="rhyme">oscura</w></l>
+                  <l met="-+---+---+-" rhyme="A" enjamb="ex_dobj_verb">el Ángelus su nota <w
+                        type="rhyme">lastimera</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+---+---+-" rhyme="C" enjamb="ex_subj_verb">Corrió por la llanura <w
+                        type="rhyme">solitaria</w></l>
+                  <l met="-+---+---+-" rhyme="C">el ritmo angelical de tu <w type="rhyme"
+                        >plegaria</w>,</l>
+                  <l met="-++--+---+-" rhyme="D">en un vuelo de súplicas <w type="rhyme"
+                        >piadosas</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="--+--+---+-" rhyme="E" enjamb="ex_dobj_verb">Y ascendió hasta los cielos
+                        <w type="rhyme">encantados</w></l>
+                  <l met="-+---+---+-" rhyme="E">la dulce ingenuidad de tus <w type="rhyme"
+                        >pecados</w>,</l>
+                  <l met="-+---+---+-" rhyme="D">buscando absoluciones <w type="rhyme"
+                        >milagrosas</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s132n_0390_03">
+               <head>La ruptura</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+-+---+-+-" rhyme="A">Bajo un radioso oscintilar de <w type="rhyme"
+                        >estrellas</w></l>
+                  <l met="-+---+---+-" rhyme="B" enjamb="ex_dobj_verb">lloraban los melífluos <w
+                        type="rhyme">surtidores</w></l>
+                  <l met="--+--+---+-" rhyme="B">la divina canción de sus <w type="rhyme"
+                        >dolores</w>,</l>
+                  <l met="+-+--+---+-" rhyme="A">hecha ruegos, suspiros y <w type="rhyme"
+                        >querellas</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+---+-+-+-" rhyme="A" enjamb="ex_dobj_verb">Dejaban en la grama tenues <w
+                        type="rhyme">huellas</w></l>
+                  <l met="--+--+---+-" rhyme="B">tus levísimos pasos Y las <w type="rhyme"
+                        >flores</w></l>
+                  <l met="+--+--+--+-" rhyme="B">-iris de seda embriaguez de <w type="rhyme"
+                        >olores</w>-</l>
+                  <l met="-+-+-+--++-" rhyme="A">se erguían más lozanas y más <w type="rhyme"
+                        >bellas</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+-+---+-+-" rhyme="C">Rompió la calma tu feral <w type="rhyme"
+                        >servicia</w>,</l>
+                  <l met="-+---+---+-" rhyme="C" enjamb="pb_noun_prep">quedando sepultada la <w
+                        type="rhyme">caricia</w></l>
+                  <l met="--+-++---+-" rhyme="D">de tu voz en un áspero <w type="rhyme"
+                     >reproche</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+---+-+-" rhyme="E">Lloró angustiada mi esperanza <w type="rhyme"
+                        >rota</w>,</l>
+                  <l met="-+---++--+-" rhyme="E">y en vuelo fantasmal de ave en <w type="rhyme"
+                        >derrota</w></l>
+                  <l met="--+--+---+-" rhyme="D">se internó en la tiniebla de la <w type="rhyme"
+                        >noche</w></l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

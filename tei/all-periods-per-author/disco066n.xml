@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_066n">
+            <title property="dc:title">Sonetos de Atenógenes Segale</title>
+            <author property="dc:creator" resource="disco:066n" corresp="#disco_066n">Atenógenes
+               Segale</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">280</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_066n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_066n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_066n" about="disco:066n" typeOf="foaf:Person">
+                  <persName type="short">Segale</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Atenógenes</forename>
+                     <surname property="foaf:familyName">Segale</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Atenógenes Segale</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">México</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1868" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1903" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s066n_0195">
+                        <title property="dc:title">El primer viático</title>
+                        <title type="incipit" property="dc:alternative">Fue la primera vez esa
+                           mañana</title>
+                     </bibl>
+                     <bibl resource="disco:s066n_0196">
+                        <title property="dc:title">Corona de espinas</title>
+                        <title type="incipit" property="dc:alternative">Cuando piensas a solas hijo
+                           mío,</title>
+                     </bibl>
+                     <bibl resource="disco:s066n_0197">
+                        <title property="dc:title">A Santa Teresa en éxtasis</title>
+                        <title type="incipit" property="dc:alternative">Te habla la voz divina,
+                           resonando</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Atenógenes Segale</head>
+            <p>México. 1868 - 1903</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s066n_0195">
+            <head>El primer viático</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-++--+-" rhyme="A">Fue la primera vez esa <w type="rhyme">mañana</w></l>
+               <l met="---+-+---+-" rhyme="B" enjamb="pb_noun_prep">que a mi Señor llevé junto a mi
+                     <w type="rhyme">pecho</w></l>
+               <l met="+--+---+-+-" rhyme="B">de un moribundo al doloroso <w type="rhyme"
+                  >lecho</w>;</l>
+               <l met="--+--++--+-" rhyme="A">y la que iba a partir era mi <w type="rhyme"
+                     >hermana</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++---+-+-+-" rhyme="A">Lo pongo en el altar, que olores <w type="rhyme"
+                     >mana</w>,</l>
+               <l met="+--+-+-+-+-" rhyme="B">todo de prendas muy queridas <w type="rhyme"
+                  >hecho</w>;</l>
+               <l met="--+-++---+-" rhyme="B">y recibo, ya en lágrimas <w type="rhyme"
+                  >deshecho</w>,</l>
+               <l met="---+---+-+-" rhyme="A">las confesiones de su fe <w type="rhyme"
+                  >cristiana</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+---+-" rhyme="C">Calló su voz que dulce <w type="rhyme"
+                  >respondía</w>,</l>
+               <l met="---+-+---+-" rhyme="D">y en su semblante de ángel <w type="rhyme"
+                     >resignado</w>,</l>
+               <l met="-+---+---+-" rhyme="C">la luz de la esperanza <w type="rhyme">sonreía</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-++----+-+-" rhyme="D" enjamb="ex_subj_verb">Y le di el Cuerpo del Señor (que
+                     <w type="rhyme">alado</w></l>
+               <l met="+--+---+-+-" rhyme="C">le acompañase por la eterna <w type="rhyme"
+                  >vía</w>),</l>
+               <l met="-+---+---+-" rhyme="D">con gotas de mis ojos <w type="rhyme">empapado</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s066n_0196">
+            <head>Corona de espinas</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--+-+-+-" rhyme="A">Cuando piensas a solas hijo <w type="rhyme"
+                  >mío</w>,</l>
+               <l met="--+--+---+-" rhyme="B">con deleite visiones de <w type="rhyme"
+                  >impureza</w>,</l>
+               <l met="+-+--+---+-" rhyme="B">yo contemplo de Cristo la <w type="rhyme"
+                  >cabeza</w>,</l>
+               <l met="-+-+---+-+-" rhyme="A">que vas de abrojos a ceñir <w type="rhyme"
+                  >impío</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+++--++-" rhyme="A" enjamb="ex_dobj_verb">Oigo crujir de un modo que da <w
+                     type="rhyme">frío</w></l>
+               <l met="-+---+---+-" rhyme="B" enjamb="ex_dobj_verb">las puntas que rechinan con <w
+                     type="rhyme">fiereza</w></l>
+               <l met="--+--+---+-" rhyme="B" enjamb="pb_verb_cprep">resbalando en el cráneo, que <w
+                     type="rhyme">empieza</w></l>
+               <l met="--+--++--+-" rhyme="A">de carmín a brotar tibio <w type="rhyme">rocío</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+++--+---+-" rhyme="C" enjamb="ex_subj_verb">Ya te miran de lágrimas <w
+                     type="rhyme">bañados</w></l>
+               <l met="-+---+++-+-" rhyme="D">los ojos del Señor, tan <w type="rhyme"
+                  >dulcemente</w>,</l>
+               <l met="--+--+-+-+-" rhyme="C">que ablandaran a tigres no <w type="rhyme"
+                  >domados</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-++--+-+-+-" rhyme="D" enjamb="ex_dobj_verb">Y, ¿tú sientes placer, y tu alma
+                     <w type="rhyme">siente</w></l>
+               <l met="-++--+---+-" rhyme="C">que está bien, repitiendo los <w type="rhyme"
+                     >pecados</w>,</l>
+               <l met="-+-+---+-+-" rhyme="D">de tales rosas coronar su <w type="rhyme"
+                  >frente</w>?</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s066n_0197">
+            <head>A Santa Teresa en éxtasis</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A" enjamb="pb_verb_adv">Te habla la voz divina, <w
+                     type="rhyme">resonando</w></l>
+               <l met="---+---+-+-" rhyme="B">dentro del alma, que en dulzor se <w type="rhyme"
+                     >anega</w>,</l>
+               <l met="---+---+-+-" rhyme="B" enjamb="ex_subj_verb">y los sentidos de tu cuerpo <w
+                     type="rhyme">ciega</w></l>
+               <l met="++-+---+-+-" rhyme="A">un mar de luz en tu interior <w type="rhyme"
+                     >brotando</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A" enjamb="ex_dobj_verb">Suspéndese la vida, <w
+                     type="rhyme">retemblando</w></l>
+               <l met="---+---+-+-" rhyme="B">a la presencia de su Dios que <w type="rhyme"
+                     >llega</w>;</l>
+               <l met="-+-+---+-+-" rhyme="B">y Dios al alma su virtud <w type="rhyme"
+                  >allega</w>,</l>
+               <l met="---+---+-+-" rhyme="A">como airecillo de la tarde <w type="rhyme"
+                  >blando</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+-+-+-" rhyme="C" enjamb="ex_dobj_verb">De toda ciencia, y todo amor <w
+                     type="rhyme">traspasa</w></l>
+               <l met="-+-+-++--+-" rhyme="D">la esfera tu alma, y luz no <w type="rhyme"
+                     >conocida</w>,</l>
+               <l met="-+-+---+++-" rhyme="C">suprema luz a iluminarla <w type="rhyme">pasa</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+++---+-" rhyme="D" enjamb="pb_verb_chain">Toda verdad a un punto <w
+                     type="rhyme">reducida</w></l>
+               <l met="-+-+---+-+-" rhyme="C">contempla, y de ella en el amor se <w type="rhyme"
+                     >abrasa</w>:</l>
+               <l met="--+--+-+-+-" rhyme="D">oh desmayo feliz, oh muerte ¡oh <w type="rhyme"
+                     >vida</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

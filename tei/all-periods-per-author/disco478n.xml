@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_478n">
+            <title property="dc:title">Sonetos de Pedro Duany Méndez</title>
+            <author property="dc:creator" resource="disco:478n" corresp="#disco_478n">Pedro Duany
+               Méndez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">218</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_478n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_478n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_478n" about="disco:478n" typeOf="foaf:Person">
+                  <persName type="short">Duany Méndez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Pedro</forename>
+                     <surname property="foaf:familyName">Duany Méndez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Pedro Duany Méndez</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s478n_1818">
+                        <title property="dc:title">Las urnas</title>
+                        <title type="incipit" property="dc:alternative">Sois como aquella caja que
+                           adoraba Pandora,</title>
+                     </bibl>
+                     <bibl resource="disco:s478n_1819">
+                        <title property="dc:title">Sombra de los siglos</title>
+                        <title type="incipit" property="dc:alternative">¡Triste sombra que vagas!
+                           ¿De qué Tártaro emerges;</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Pedro Duany Méndez</head>
+            <p>Cuba. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s478n_1818">
+            <head>Las urnas</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-+---+--+-" rhyme="A">Sois como aquella caja que adoraba <w type="rhyme"
+                     >Pandora</w>,</l>
+               <l met="-----+---+-+-" rhyme="B">y como el fabuloso Vellocino de <w type="rhyme"
+                     >oro</w>:</l>
+               <l met="--+--+---+--+-" rhyme="B" enjamb="pb_noun_prep">en vosotras el Pueblo
+                  deposita el <w type="rhyme">tesoro</w></l>
+               <l met="--+--+----+-+-" rhyme="A">del sufragio que al Hombre su libertad <w
+                     type="rhyme">valora</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--+---+--+-" rhyme="-">¡Cuántas veces, oh cofres misteriosos, guardáis</l>
+               <l met="-+---+--+--+-" rhyme="C" enjamb="cc_crossclause">el voto del cretino elector
+                     <w type="rhyme">inconsciente</w></l>
+               <l met="--+--+--+-++-" rhyme="C">que vendió su derecho y votó por un <w type="rhyme"
+                     >ente</w>,</l>
+               <l met="---+-+---+-++-" rhyme="-">a quien vosotras, urnas, la victoria le dais!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+-+-+-+--+-" rhyme="D" enjamb="cc_crossclause">De una elección espuria
+                  surgen riñas <w type="rhyme">sangrientas</w></l>
+               <l met="-+---+---+--+-" rhyme="D" enjamb="cc_crossclause">que son para la Patria las
+                  terribles <w type="rhyme">tormentas</w></l>
+               <l met="-+---+-+----+-" rhyme="E">que dejan indelebles manchas sobre la <w
+                     type="rhyme">Historia</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+--+---+-" rhyme="F">y en ese remolino «la nada» se <w type="rhyme"
+                     >subleva</w></l>
+               <l met="--+--+--++--+-" rhyme="F" enjamb="ex_dobj_verb">por el voto del paria, que no
+                  sabe que <w type="rhyme">eleva</w></l>
+               <l met="-----+--+---+-" rhyme="E">a Juan de los Palotes que sueña con la <w
+                     type="rhyme">Gloria</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s478n_1819">
+            <head>Sombra de los siglos</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+--+-++--+-" rhyme="A">¡Triste sombra que vagas! ¿De qué Tártaro <w
+                     type="rhyme">emerges</w>;</l>
+               <l met="--+--+-+-+--+-" rhyme="B">hacia dónde caminas; fuiste el alma de <w
+                     type="rhyme">Jove</w>?,</l>
+               <l met="-+---+---+--+-" rhyme="B">¿padeces la mudeza de la fúlgida <w type="rhyme"
+                     >Niove</w>,</l>
+               <l met="-++--+---++-+-" rhyme="A">o en qué piélago inmenso de dolor te <w
+                     type="rhyme">sumerges</w>?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--+-+-+--+-" rhyme="C" enjamb="pb_adj_noun">¿Dónde está tu palabra, viste
+                  tú las <w type="rhyme">remotas</w></l>
+               <l met="--+--+-+--+-" rhyme="D" enjamb="pb_verb_cprep">primaveras de Cadmo? ¿Cuántas
+                  veces <w type="rhyme">viniste</w></l>
+               <l met="--+--+----+-+-" rhyme="D">del abismo insondable donde Sisifo <w type="rhyme"
+                     >existe</w>,</l>
+               <l met="--+--+---+--+-" rhyme="C">y dejaste tus carnes inservibles y <w type="rhyme"
+                     >rotas</w>?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+--+--++--+-" rhyme="E">¿Qué imperfecta materia será, acaso, la <w
+                     type="rhyme">tuya</w>?</l>
+               <l met="--+--+---+--+-" rhyme="E">¡Ha de ser la tangible que la Nada <w type="rhyme"
+                     >construya</w></l>
+               <l met="--+--+---+--+-" rhyme="F">con el mísero barro, con la esencia del <w
+                     type="rhyme">Todo</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-----+---+--+-" rhyme="G">para que recompenses las maldades que <w
+                     type="rhyme">olvidas</w></l>
+               <l met="--+--+---+--+-" rhyme="G">en el mágico curso de millares de <w type="rhyme"
+                     >vidas</w>,</l>
+               <l met="--+--+-+-+-++-" rhyme="F">y que sepas que el cuerpo torna siempre a ser <w
+                     type="rhyme">lodo</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

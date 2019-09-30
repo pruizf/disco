@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_369g">
+            <title property="dc:title">Sonetos de Francisco de Juñent y de Vergos</title>
+            <author property="dc:creator" resource="disco:369g" corresp="#disco_369g">Francisco de
+               Juñent y de Vergos</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">79</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_369g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_369g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_369g" about="disco:369g" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/304734416"/>
+                  <persName type="short">Juñent y de Vergos</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Francisco</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Juñent y de Vergos</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Francisco de Juñent y de
+                     Vergos</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s369g_0837">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Corre ligero a la Celeste
+                           Esfera,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Francisco de Juñent y de Vergos</head>
+            <p>España. 17th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s369g_0837">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-----+-" rhyme="A">Corre ligero a la Celeste <w type="rhyme"
+                  >Esfera</w>,</l>
+               <l met="-+---+-+-+-" rhyme="B">Amante girasol del ser <w type="rhyme">Divino</w>,</l>
+               <l met="+-+--+---+-" rhyme="B" enjamb="ex_dobj_verb">Reina en Solio mejor, que se <w
+                     type="rhyme">previno</w></l>
+               <l met="--+--+---+-" rhyme="A">La constancia feliz de tu <w type="rhyme"
+                  >carrera</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+-+-+-" rhyme="A">Oficioso el respeto te <w type="rhyme">venera</w>:</l>
+               <l met="--+--+---+-" rhyme="B">Superior a los fueros del <w type="rhyme"
+                  >destino</w>,</l>
+               <l met="--+--+---+-" rhyme="B">Regentado del orbe <w type="rhyme">cristalino</w></l>
+               <l met="-+---+---+-" rhyme="A">Eclécticas de luz desde tu <w type="rhyme"
+                  >hoguera</w>;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-----+---+-" rhyme="C">Inalterable España en <w type="rhyme"
+                  >adorarte</w>;</l>
+               <l met="---+-+---+-" rhyme="D">Jurisdiciones busca que <w type="rhyme"
+                  >cederte</w>,</l>
+               <l met="+--+-+--++-" rhyme="C" enjamb="ex_subj_verb">Viendo perdida en ti su mejor <w
+                     type="rhyme">parte</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--+-+-+-" rhyme="D">Solicita su Amor, eterno <w type="rhyme"
+                  >hacerte</w>,</l>
+               <l met="-+--+-+---+" rhyme="C">Throno formando en sí, que <w type="rhyme"
+                     >dedicarte</w>,</l>
+               <l met="--++-+---+-" rhyme="D">O en la gloria otra España, que <w type="rhyme"
+                     >ofrecerte</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

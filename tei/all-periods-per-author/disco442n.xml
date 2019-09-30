@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_442n">
+            <title property="dc:title">Sonetos de Benito Blanco Fernández</title>
+            <author property="dc:creator" resource="disco:442n" corresp="#disco_442n">Benito Blanco
+               Fernández</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">91</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_442n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_442n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_442n" about="disco:442n" typeOf="foaf:Person">
+                  <persName type="short">Blanco Fernández</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Benito</forename>
+                     <surname property="foaf:familyName">Blanco Fernández</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Benito Blanco Fernández</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s442n_1702">
+                        <title property="dc:title">A mi amigo Pantaleón Saurina</title>
+                        <title type="incipit" property="dc:alternative">Rebelde Satanás se alzó en
+                           altura,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Benito Blanco Fernández</head>
+            <p>España. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s442n_1702">
+            <head>A mi amigo Pantaleón Saurina</head>
+            <lg n="1" type="cuarteto">
+               <l met="-----+-+-+-" rhyme="A">Rebelde Satanás se alzó en <w type="rhyme"
+                  >altura</w>,</l>
+               <l met="---+-++--+-" rhyme="B">y en el profundo, Dios le <w type="rhyme"
+                     >precipita</w></l>
+               <l met="+--+---+-+-" rhyme="B">Genio del mal, a la mujer <w type="rhyme"
+                  >incita</w>,</l>
+               <l met="-+-+-----+-" rhyme="A">y origen es de nuestra <w type="rhyme"
+                  >desventura</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+-+----+-" rhyme="A">Eva y Adán, llorando su <w type="rhyme"
+                  >amargura</w>,</l>
+               <l met="+--+-++--+-" rhyme="B">van, del perdido edén raza <w type="rhyme"
+                  >precita</w>,</l>
+               <l met="--+--+-+-+-" rhyme="B">la sentencia de Aquel llevando <w type="rhyme"
+                     >escrita</w></l>
+               <l met="-+-+---+-+-" rhyme="A">en su alma, llena de mortal <w type="rhyme"
+                  >pavura</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C">Si, engendro el hombre del primer <w type="rhyme"
+                     >pecado</w>,</l>
+               <l met="--+--+---+-" rhyme="-">a arrastrar su existencia por el suelo,</l>
+               <l met="-+---+-+-+-" rhyme="D">expulso del Edén, se ve <w type="rhyme"
+                  >preciso</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--+-+++-" rhyme="C" enjamb="pb_verb_chain">al poder de las Artes le fue <w
+                     type="rhyme">dado</w></l>
+               <l met="-+-+---+++-" rhyme="-">cerner sus alas, remontarse al viento,</l>
+               <l met="---+-+---+-" rhyme="D">y convertir la Tierra en <w type="rhyme"
+                  >Paraíso</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

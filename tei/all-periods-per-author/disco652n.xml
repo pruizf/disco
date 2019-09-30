@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_652n">
+            <title property="dc:title">Sonetos de S. Fernández Vanga</title>
+            <author property="dc:creator" resource="disco:652n" corresp="#disco_652n">S. Fernández
+               Vanga</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">183</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_652n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_652n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_652n" about="disco:652n" typeOf="foaf:Person">
+                  <persName type="short">Fernández Vanga</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">S.</forename>
+                     <surname property="foaf:familyName">Fernández Vanga</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">S. Fernández Vanga</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Puerto Rico</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s652n_2399">
+                        <title property="dc:title">Hacia la sima</title>
+                        <title type="incipit" property="dc:alternative">¡Treinta años!... Las nubes
+                           en el cielo</title>
+                     </bibl>
+                     <bibl resource="disco:s652n_2400">
+                        <title property="dc:title">Sevillana</title>
+                        <title type="incipit" property="dc:alternative">¿Es ave esa mujer, o flor o
+                           estrella?</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>S. Fernández Vanga</head>
+            <p>Puerto Rico. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s652n_2399">
+            <head>Hacia la sima</head>
+            <lg n="1" type="cuarteto">
+               <l met="++--+---+-" rhyme="A" enjamb="ex_subj_verb">¡Treinta años! Las nubes en el <w
+                     type="rhyme">cielo</w></l>
+               <l met="-+-+-+---+-" rhyme="B" enjamb="ex_subj_verb">se espesan más; los seres y las
+                     <w type="rhyme">cosas</w></l>
+               <l met="+-++-+---+-" rhyme="B">van tomando ese tinte de las <w type="rhyme"
+                  >rosas</w></l>
+               <l met="---+-+-+-+-" rhyme="A">cuando, marchitas, las reclama el <w type="rhyme"
+                     >suelo</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--++--+-" rhyme="A">Cuanto diera placer, causa <w type="rhyme"
+                  >develo</w>;</l>
+               <l met="-++--+---+-" rhyme="B">y se han vuelto -por arte <w type="rhyme"
+                     >misteriosas</w>-</l>
+               <l met="--+--+---+-" rhyme="B">moscardones las áureas <w type="rhyme"
+                  >mariposas</w>;</l>
+               <l met="+--+---+-+-" rhyme="A">cardo la flor, y el entusiasmo, <w type="rhyme"
+                     >hielo</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C">Y el mundo sigue su correr, en <w type="rhyme"
+                     >tanto</w>;</l>
+               <l met="-+-+---+-+-" rhyme="C" enjamb="ex_subj_verb">ni amor, ni risa, ni dolor, ni
+                     <w type="rhyme">llanto</w></l>
+               <l met="---+---+-+-" rhyme="D">obstaculizan su fatal <w type="rhyme">jornada</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+---+++-" rhyme="E" enjamb="pb_verb_adv">¡Ay! Si posible al corazón le <w
+                     type="rhyme">fuera</w></l>
+               <l met="--+--+---+-" rhyme="E" enjamb="pb_noun_prep">detener, en su espléndida <w
+                     type="rhyme">carrera</w></l>
+               <l met="-+--++---+-" rhyme="D">al Tiempo, que nos lleva hacia la <w type="rhyme"
+                     >Nada</w>!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s652n_2400">
+            <head>Sevillana</head>
+            <lg n="1" type="cuarteto">
+               <l met="+++--+-+-+-" rhyme="A">¿Es ave esa mujer, o flor o <w type="rhyme"
+                     >estrella</w>?</l>
+               <l met="+---+-" rhyme="B">¿Náyade, acaso? ¿musa? ¿palma? ¿<w type="rhyme"
+                  >lirio</w>?</l>
+               <l met="+--+---+-+-" rhyme="B">¡Brilla en sus ojos el fulgor de <w type="rhyme"
+                     >Sirio</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="A">y el alma de un jazmín palpita en <w type="rhyme"
+                     >ella</w>!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A" enjamb="pb_relword">En sus labios de púrpura, <w
+                     type="rhyme">destella</w></l>
+               <l met="---+-+-+-+-" rhyme="B">el resplandor sangriento de un <w type="rhyme"
+                     >martirio</w>;</l>
+               <l met="--+--+---+-" rhyme="B" enjamb="ex_subj_verb">y en su carne fantástica, el <w
+                     type="rhyme">delirio</w></l>
+               <l met="-+-+---+-+-" rhyme="A">dejó estelada su incitante <w type="rhyme"
+                  >huella</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+---+-" rhyme="C">Al andar, sus caderas de <w type="rhyme"
+                  >sultana</w></l>
+               <l met="-+-+-+---+-" rhyme="C" enjamb="pb_noun_prep">entonan una música <w
+                     type="rhyme">pagana</w></l>
+               <l met="-+-+---+-+-" rhyme="D">de tibias notas que al amor <w type="rhyme"
+                     >conspiran</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-----+---+-" rhyme="E">Y detrás de sus curvas de <w type="rhyme"
+                  >española</w></l>
+               <l met="+--+-+-+-+-" rhyme="E">casi se pueden ver, formando <w type="rhyme"
+                  >cola</w>,</l>
+               <l met="-+---+--++-" rhyme="D">los besos de los hombres que la <w type="rhyme"
+                     >miran</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

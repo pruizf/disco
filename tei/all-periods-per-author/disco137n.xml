@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_137n">
+            <title property="dc:title">Sonetos de José María Posada</title>
+            <author property="dc:creator" resource="disco:137n" corresp="#disco_137n">José María
+               Posada</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">170</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_137n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_137n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_137n" about="disco:137n" typeOf="foaf:Person">
+                  <persName type="short">Posada</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">José María</forename>
+                     <surname property="foaf:familyName">Posada</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">José María Posada</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Vigo
+                              (Pontevedra)</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1817" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1886" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s137n_0396">
+                        <title property="dc:title">Felicitación en el día del santo</title>
+                        <title type="incipit" property="dc:alternative">Dichoso yo, que por favor
+                           del cielo,</title>
+                     </bibl>
+                     <bibl resource="disco:s137n_0397">
+                        <title property="dc:title">Al poeta José Benito Amado</title>
+                        <title type="incipit" property="dc:alternative">Nota de ingratitud yo
+                           mereciera,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>José María Posada</head>
+            <p>Vigo (Pontevedra). 1817 - 1886</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s137n_0396">
+            <head>Felicitación en el día del santo</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A">Dichoso yo, que por favor del <w type="rhyme"
+                     >cielo</w>,</l>
+               <l met="--+--+---+-" rhyme="B">encontré lo que tanto <w type="rhyme">deseaba</w>,</l>
+               <l met="---+-+-+-+-" rhyme="B">para apagar la sed que me <w type="rhyme"
+                  >abrasaba</w>,</l>
+               <l met="-+---+-+-+-" rhyme="A">andando por los yermos de este <w type="rhyme"
+                     >suelo</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++-+-+---+-" rhyme="A">Sed de un amor de paz y de <w type="rhyme"
+                     >consuelo</w></l>
+               <l met="-+-+-+-+-+-" rhyme="B">tras de otro amor que el alma me <w type="rhyme"
+                     >angustiaba</w>,</l>
+               <l met="--+--+-+++-" rhyme="B">ostentando el placer de verla <w type="rhyme"
+                     >esclava</w>,</l>
+               <l met="-+-+---+-+-" rhyme="A">rendida siempre a su imperioso <w type="rhyme"
+                     >anhelo</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+---+-" rhyme="C">Al verme en tan penosa <w type="rhyme"
+                  >desventura</w></l>
+               <l met="-+---+---+-" rhyme="D">guiado por impulso <w type="rhyme">misterioso</w>,</l>
+               <l met="--+-+----+-" rhyme="C">ofrecí al Eterno mi <w type="rhyme">amargura</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+---+-" rhyme="D">miróme compasivo, y, <w type="rhyme"
+                  >bondadoso</w>,</l>
+               <l met="--++-+---+-" rhyme="C">entregóme a un Arcángel de <w type="rhyme"
+                  >dulzura</w>,</l>
+               <l met="-+---+---+-" rhyme="D">celoso de mi bien y mi <w type="rhyme">reposo</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s137n_0397">
+            <head>Al poeta José Benito Amado</head>
+            <lg n="1" type="cuarteto">
+               <l met="+----++--+-" rhyme="A">Nota de ingratitud yo <w type="rhyme"
+                  >mereciera</w>,</l>
+               <l met="-+---+---+-" rhyme="B">por falta de respeto y <w type="rhyme"
+                  >simpatía</w>,</l>
+               <l met="--+--+---+-" rhyme="B" enjamb="ex_subj_verb">si al cantor de la cándida <w
+                     type="rhyme">María</w></l>
+               <l met="+----++--+-" rhyme="A">frases de admiración no <w type="rhyme"
+                  >dirigiera</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A" enjamb="cc_crossclause">Reproduce lo bello de <w
+                     type="rhyme">manera</w></l>
+               <l met="-+-+--+--+-" rhyme="B" enjamb="pb_noun_prep">que el alma s embelesa y <w
+                     type="rhyme">extasía</w></l>
+               <l met="--+--+---+-" rhyme="B" enjamb="ex_dobj_verb">ante cuadros que sólo <w
+                     type="rhyme">pintaría</w></l>
+               <l met="++-+-+---+-" rhyme="A">quién tal misión del cielo <w type="rhyme"
+                     >recibiera</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+--+--+-+-" rhyme="C">Campiña, santuario, amor <w type="rhyme"
+                  >sublime</w>,</l>
+               <l met="-+---+-+-+-" rhyme="D">piadosa devoción, sentida <w type="rhyme"
+                  >historia</w></l>
+               <l met="-+---+-+-+-" rhyme="C">A todo, de verdad el sello <w type="rhyme"
+                  >imprime</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--+--++-" rhyme="D">Y, guiado del arte, por más <w type="rhyme"
+                  >gloria</w>,</l>
+               <l met="+--+---+-+-" rhyme="C">cuanto del Genio por primor se <w type="rhyme"
+                     >estime</w>,</l>
+               <l met="+-+--+---+-" rhyme="D">da, cual rico manjar, a mi <w type="rhyme"
+                  >memoria</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

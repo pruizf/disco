@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_633n">
+            <title property="dc:title">Sonetos de Tomás Morales</title>
+            <author property="dc:creator" resource="disco:633n" corresp="#disco_633n">Tomás
+               Morales</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">12</measure>
+            <measure unit="tokens">1282</measure>
+            <measure unit="line">168</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_633n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_633n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_633n" about="disco:633n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/62356317"/>
+                  <persName type="short">Morales</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Tomás</forename>
+                     <surname property="foaf:familyName">Morales</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Tomás Morales</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Moya (Gran
+                              Canaria)</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1885" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Las
+                              Palmas</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1921" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s633n_2331">
+                        <title property="dc:title">Poemas del mar</title>
+                        <title type="incipit" property="dc:alternative">Puerto de Gran Canaria sobre
+                           el sonoro Atlántico,</title>
+                     </bibl>
+                     <bibl resource="disco:s633n_2332">
+                        <title property="dc:title">Marinos de los fiordos</title>
+                        <title type="incipit" property="dc:alternative">Marinos de los fiordos, de
+                           enigmático porte,</title>
+                     </bibl>
+                     <bibl resource="disco:s633n_2333">
+                        <title property="dc:title">Vamos llegando en medio...</title>
+                        <title type="incipit" property="dc:alternative">Vamos llegando en medio de
+                           un poniente dorado;</title>
+                     </bibl>
+                     <bibl resource="disco:s633n_2334">
+                        <title property="dc:title">Puerto desconocido...</title>
+                        <title type="incipit" property="dc:alternative">Puerto desconocido, desde
+                           donde partimos</title>
+                     </bibl>
+                     <bibl resource="disco:s633n_2335">
+                        <title property="dc:title">Poemas del mar</title>
+                        <title type="incipit" property="dc:alternative">Esta noche, la lluvia,
+                           pertinaz ha caído,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Tomás Morales</head>
+            <p>Moya (Gran Canaria). 1885 - 1921</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s633n_2331">
+            <head>Poemas del mar</head>
+            <lg type="sonnet" xml:id="s633n_2331_01">
+               <head>I</head>
+               <lg n="1" type="serventesio">
+                  <l met="-----+----+-+-" rhyme="A">Puerto de Gran Canaria sobre el sonoro <w
+                        type="rhyme">Atlántico</w>,</l>
+                  <l met="---+-+---+--+-" rhyme="B">con sus faroles rojos en la noche <w
+                        type="rhyme">calina</w>,</l>
+                  <l met="-+---+----+-+-" rhyme="A">y el disco de la luna bajo el azul <w
+                        type="rhyme">romántico</w>,</l>
+                  <l met="-+---+----+-+-" rhyme="B">rielando en la movible serenidad <w type="rhyme"
+                        >marina</w></l>
+               </lg>
+               <lg n="2" type="serventesio">
+                  <l met="-+---+---+--+-" rhyme="C">Silencio de los muelles en la paz <w
+                        type="rhyme">bochornosa</w>,</l>
+                  <l met="+--+-+----+-+-" rhyme="D">lento compás de remos en el confín <w
+                        type="rhyme">perdido</w>,</l>
+                  <l met="-+---+-+---+-" rhyme="C">y el leve chapoteo del agua <w type="rhyme"
+                        >verdinosa</w></l>
+                  <l met="-+---+----+-+-" rhyme="D">lamiendo los sillares del malecón <w
+                        type="rhyme">dormido</w>;</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+----+--+---+-" rhyme="E" enjamb="pb_relword">fingen en la penumbra
+                     fosfóricos <w type="rhyme">trenzados</w></l>
+                  <l met="---+-+---+--+-" rhyme="E">las mortecinas luces de los barcos <w
+                        type="rhyme">anclados</w>,</l>
+                  <l met="-+---+-+---+-" rhyme="F">brillando entre las ondas muertas de la bahía
+                     ;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="--+--+--+---+-" rhyme="G">y de pronto, rasgando la calma, <w type="rhyme"
+                        >sosegado</w>,</l>
+                  <l met="+-+--+--+---+-" rhyme="G">un cantar marinero, monótono y <w type="rhyme"
+                        >cansado</w>,</l>
+                  <l met="+--+-+------+-" rhyme="F">vierte en la noche el dejo de su <w type="rhyme"
+                        >melancolía</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s633n_2331_02">
+               <head>II</head>
+               <lg n="1" type="serventesio">
+                  <l met="--+--+-+----+-" rhyme="A">La taberna del muelle tiene mis <w type="rhyme"
+                        >atracciones</w></l>
+                  <l met="-+---++----+-" rhyme="B">en esta silenciosa hora <w type="rhyme"
+                        >crepuscular</w></l>
+                  <l met="+----+------+-" rhyme="A">Yo amo los juramentos de la <w type="rhyme"
+                        >conversaciones</w>,</l>
+                  <l met="-+---+---+--+-" rhyme="B">y el humo de las pipas de los hombres de <w
+                        type="rhyme">mar</w></l>
+               </lg>
+               <lg n="2" type="serventesio">
+                  <l met="++----+--+-+-" rhyme="C" enjamb="ex_subj_verb">Es tarde de domingo, esta
+                     sencilla <w type="rhyme">gente</w></l>
+                  <l met="-+---+----+-+-" rhyme="D">la fiesta del descanso tradicional <w
+                        type="rhyme">celebra</w>;</l>
+                  <l met="++---+--+-+-+-" rhyme="C">son viejos marineros que apuran <w type="rhyme"
+                        >lentamente</w>,</l>
+                  <l met="--+--+--+---+-" rhyme="D">pensativos y graves, sus copas de <w
+                        type="rhyme">ginebra</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+-++-+--+---+-" rhyme="E">Uno muy viejo cuenta su historia: de <w
+                        type="rhyme">grumete</w></l>
+                  <l met="+---++-----+-" rhyme="E">hizo su primer viaje el año treinta y <w
+                        type="rhyme">siete</w>,</l>
+                  <l met="-+-+-+--+---+-" rhyme="F">en un patache blanco, fletado en <w type="rhyme"
+                        >Singapur</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+-+--+---+-" rhyme="G" enjamb="ex_dobj_verb">Y, contemplando el humo,
+                     relata <w type="rhyme">conmovido</w></l>
+                  <l met="++---+--+---+-" rhyme="G">un cuento de piratas, de fijo <w type="rhyme"
+                        >sucedido</w></l>
+                  <l met="---+-+--+---" rhyme="F">en las lejanas costas de América del <w
+                        type="rhyme">Sur</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s633n_2331_03">
+               <head>III</head>
+               <lg n="1" type="serventesio">
+                  <l met="--+--+----+-+-" rhyme="A">Y volvieron de nuevo las febricientes <w
+                        type="rhyme">horas</w>;</l>
+                  <l met="-+-+-+-----+-" rhyme="B">el sol vertió su lumbre sobre la <w type="rhyme"
+                        >pleamar</w>,</l>
+                  <l met="---+-+------+-" rhyme="A">y resonó el aullido de las <w type="rhyme"
+                        >locomotoras</w></l>
+                  <l met="--+--+--+---+-" rhyme="B">y el adiós de los buques dispuestos a <w
+                        type="rhyme">zarpar</w></l>
+               </lg>
+               <lg n="2" type="serventesio">
+                  <l met="-+-+----+-+-" rhyme="C" enjamb="ex_subj_verb">Jadean chirriantes en el
+                     trajín <w type="rhyme">creciente</w></l>
+                  <l met="---+-+--+--+-" rhyme="D">las poderosas grúas y a remolque, <w type="rhyme"
+                        >tardías</w>,</l>
+                  <l met="--+--+-+--+-+-" rhyme="C">las disformes barcazas andan <w type="rhyme"
+                        >pesadamente</w></l>
+                  <l met="---+-+-+----+-" rhyme="D">con sus hinchados vientres llenos de <w
+                        type="rhyme">mercancías</w>;</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+-+--+---++-+-" rhyme="E">nos saluda a lo lejos el blancor de una <w
+                        type="rhyme">vela</w>,</l>
+                  <l met="-+---+----+-+-" rhyme="E">las hélices revuelven la luminosa <w
+                        type="rhyme">estela</w></l>
+                  <l met="--+--+--+---+-" rhyme="F">Y entre el sol de la tarde y el humo del <w
+                        type="rhyme">carbón</w>,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="--+--+-+--+-+-" rhyme="G" enjamb="ex_subj_verb">la graciosa silueta de un
+                     bergantín <w type="rhyme">latino</w></l>
+                  <l met="-+-+-+----+-+-" rhyme="G">se aleja lentamente por el confín <w
+                        type="rhyme">marino</w>,</l>
+                  <l met="-+-+-+----+-+-" rhyme="F">como una nube blanca sobre el azul <w
+                        type="rhyme">plafón</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s633n_2331_04">
+               <head>IV</head>
+               <lg n="1" type="serventesio">
+                  <l met="-+---+--+---+-" rhyme="A">Llegaron invadiendo las horas <w type="rhyme"
+                        >vespertinas</w>;</l>
+                  <l met="-+-+-+--+-+-+-" rhyme="B">el humo denso y negro manchó el azul del <w
+                        type="rhyme">mar</w>,</l>
+                  <l met="-+---+---+--+-" rhyme="A" enjamb="ex_subj_verb">y el agrio resoplido de
+                     sus broncas <w type="rhyme">bocinas</w></l>
+                  <l met="--+--+---+--+-" rhyme="B">resonó en el silencio de la puesta <w
+                        type="rhyme">solar</w></l>
+               </lg>
+               <lg n="2" type="unknown">
+                  <l met="+-+-+----+--+-" rhyme="C">Hombres de ojos de ópalos y de fuerzas <w
+                        type="rhyme">titánicas</w>,</l>
+                  <l met="-+--+---++-+-" rhyme="-">que arriban de países donde no luce el sol:</l>
+                  <l met="-+---+------+-" rhyme="C">acaso de las nieblas de las Islas <w
+                        type="rhyme">Británicas</w>,</l>
+                  <l met="-----+-+----+-" rhyme="-">o de las cenicientas radas de Nueva York.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+-+--+----+-+-" rhyme="D">Esta tarde, borrachos, con caminar <w
+                        type="rhyme">incierto</w>,</l>
+                  <l met="---+-+---+--+-" rhyme="D">en desmayados grupos se dirigen al <w
+                        type="rhyme">puerto</w>,</l>
+                  <l met="--+-++--+---+-" rhyme="E">entonando el Good save con ritmo <w type="rhyme"
+                        >desigual</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+---+--+---+-" rhyme="F">Y en un ¡hurra! prorrumpen con voz <w
+                        type="rhyme">estentorosa</w></l>
+                  <l met="-+---+---+--+-" rhyme="F" enjamb="ex_dobj_verb">al ver sobre los mástiles
+                     ondear <w type="rhyme">victoriosa</w></l>
+                  <l met="-+---+----+-+-" rhyme="E">la púrpura violeta del pabellón <w type="rhyme"
+                        >Royal</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s633n_2331_05">
+               <head>V</head>
+               <lg n="1" type="serventesio">
+                  <l met="+-+--+-+----+-" rhyme="A" enjamb="ex_dobj_verb">Esta vieja fragata tiene
+                     sobre el <w type="rhyme">sollado</w></l>
+                  <l met="+-+--+--+-+-+-" rhyme="B">un fanal primoroso como una imagen <w
+                        type="rhyme">linda</w>;</l>
+                  <l met="--+--+---+--+-" rhyme="A">y en la popa, en barrocos caracteres <w
+                        type="rhyme">grabado</w>,</l>
+                  <l met="---++-++-+-+-" rhyme="B">sobre el Lisboa clásico, un dulce nombre: <w
+                        type="rhyme">Olinda</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-+-+-+-++---+-" rhyme="C">Como es de mucho porte y es cara la <w
+                        type="rhyme">estadía</w>,</l>
+                  <l met="-+---+----+-+-" rhyme="D">alija el cargamento con profusión <w
+                        type="rhyme">liviana</w>:</l>
+                  <l met="-+-+-+--+---+-" rhyme="C">Llegó anteayer de Porto, filando el <w
+                        type="rhyme">Mediodía</w>,</l>
+                  <l met="--+-+-+--+-+-" rhyme="D">y hacia el cabo de Hornos ha de salir <w
+                        type="rhyme">mañana</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+---+--+--+-" rhyme="E">¡Con qué desenvoltura ceñía la <w type="rhyme"
+                        >ribera</w>!</l>
+                  <l met="+-+--+-+-+--+-" rhyme="E">Y era tan femenina, y era tan <w type="rhyme"
+                        >marinera</w>,</l>
+                  <l met="-+-+-+---+--+-" rhyme="F">entrando, a todo trapo, bajo el sol <w
+                        type="rhyme">cenital</w>,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+-++-+---+-" rhyme="G">que se creyera al verla, velívola y <w
+                        type="rhyme">sonora</w>,</l>
+                  <l met="+-+-+--+---+-" rhyme="G" enjamb="pb_noun_prep">una nao almirante que torna
+                        <w type="rhyme">vencedora</w></l>
+                  <l met="--+--+-+-+--+-" rhyme="F">de la insigne epopeya de un combate <w
+                        type="rhyme">naval</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s633n_2331_06">
+               <head>Final</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+++--+----+-+-" rhyme="A">Yo fui el bravo piloto de mi bajel de <w
+                        type="rhyme">ensueño</w>,</l>
+                  <l met="--+--+-++--+-" rhyme="B">argonauta ilusorio de un país <w type="rhyme"
+                        >presentido</w>,</l>
+                  <l met="-++--+---+--+-" rhyme="A">de alguna isla dorada de quimera o de <w
+                        type="rhyme">sueño</w>,</l>
+                  <l met="-+---+------+-" rhyme="B">oculta entre las sombras de lo <w type="rhyme"
+                        >desconocido</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="-++--+--+---+-" rhyme="C" enjamb="ex_dobj_verb">Acaso un cargamento
+                     magnífico <w type="rhyme">encerraba</w></l>
+                  <l met="--+--+----+-+-" rhyme="D">en su cala mi barco; ni pregunté <w type="rhyme"
+                        >siquiera</w>;</l>
+                  <l met="-+---+---+--+-" rhyme="C">absorta mi pupila las tinieblas <w type="rhyme"
+                        >sondaba</w>,</l>
+                  <l met="++---++--+--+-" rhyme="D">y hasta hube de olvidarme de clavar mi <w
+                        type="rhyme">bandera</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="--++-+----+-+-" rhyme="E">Y llegó el viento Norte, desapacible y <w
+                        type="rhyme">rudo</w>;</l>
+                  <l met="---+-+---+--+-" rhyme="E" enjamb="ex_subj_verb">el poderoso esfuerzo de mi
+                     brazo <w type="rhyme">desnudo</w></l>
+                  <l met="-+-+++--+---+-" rhyme="F">logró tener un punto la fuerza del <w
+                        type="rhyme">turbión</w>;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+-+--+---+-" rhyme="G">para lograr el triunfo luché <w type="rhyme"
+                        >desesperado</w>,</l>
+                  <l met="---+-+----+-+-" rhyme="G">y cuando ya mi cuerpo desfalleció <w
+                        type="rhyme">cansado</w>,</l>
+                  <l met="+-+--+-+--+-+-" rhyme="F">una mano en la noche me arrebató el <w
+                        type="rhyme">timón</w></l>
+               </lg>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s633n_2332">
+            <head>Marinos de los fiordos</head>
+            <lg n="1" type="serventesio">
+               <l met="-+---+---+--+-" rhyme="A">Marinos de los fiordos, de enigmático <w
+                     type="rhyme">porte</w>,</l>
+               <l met="-+---+-----+-+" rhyme="B" enjamb="ex_dobj_verb">que llevan en lo pálido de
+                  sus semblantes <w type="rhyme">bravos</w></l>
+               <l met="+-+--+---+--+-" rhyme="A">todo el alma serena de las nieves del <w
+                     type="rhyme">Norte</w></l>
+               <l met="-+--+-+----+-" rhyme="B">y el frío de los quietos mares <w type="rhyme"
+                     >escandinavos</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+---+--+-" rhyme="C">En un invierno, acaso, por los hielos <w
+                     type="rhyme">cautivos</w>,</l>
+               <l met="--+--+---+--+-" rhyme="D">en el vasto silencio de las noches <w type="rhyme"
+                     >glaciales</w>,</l>
+               <l met="---+-+--+---+-" rhyme="C">sus apagados ojos miraron, <w type="rhyme"
+                     >pensativos</w>,</l>
+               <l met="-+---+--+--+-" rhyme="D">surgir las luminosas auroras <w type="rhyme"
+                     >boreales</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++---+--+--+-" rhyme="E">Yo vi vuestros navíos arribar en la <w type="rhyme"
+                     >bruma</w>;</l>
+               <l met="---+-+-+---+-" rhyme="E">el mascarón de proa brotaba de la <w type="rhyme"
+                     >espuma</w></l>
+               <l met="---+-+-+-+--+-" rhyme="F">con la solemne pompa de una diosa del <w
+                     type="rhyme">mar</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-----+--+---+-" rhyme="G" enjamb="ex_subj_verb">y los atarazados velámenes <w
+                     type="rhyme">severos</w></l>
+               <l met="+----+--+---+-" rhyme="G" enjamb="pb_adj_noun">eran para el ensueño cual
+                  témpanos <w type="rhyme">viajeros</w></l>
+               <l met="-+---+---+--+-" rhyme="F">venidos del misterio de la noche <w type="rhyme"
+                     >polar</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s633n_2333">
+            <head>Vamos llegando en medio...</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+---+-+--+-" rhyme="A">Vamos llegando en medio de un poniente <w
+                     type="rhyme">dorado</w>;</l>
+               <l met="--+-+--+-+-+-" rhyme="B">el océano brilla como una intensa <w type="rhyme"
+                     >llama</w>,</l>
+               <l met="---+-+--+---+-" rhyme="B">y poco a poco, lenta, la noche se <w type="rhyme"
+                     >derrama</w></l>
+               <l met="--+--+--+---+-" rhyme="A">en la paz infinita del puerto <w type="rhyme"
+                     >abandonado</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+-+-+----+-" rhyme="C">Nada perturba el seno de esta <w type="rhyme"
+                     >melancolía</w>;</l>
+               <l met="++-+-+---+--+-" rhyme="A">sólo un falucho cuelga su velamen <w type="rhyme"
+                     >cansado</w>,</l>
+               <l met="++---+--+--+-" rhyme="A" enjamb="cc_crossclause">y hay tal desesperanza en el
+                  aire <w type="rhyme">pesado</w></l>
+               <l met="--+--+-++--+-" rhyme="C" enjamb="cc_crossclause">que hasta el viento parece
+                  que ha muerto en la <w type="rhyme">bahía</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+---+-+-" rhyme="D" enjamb="ex_subj_verb">Entramos lentamente; a nuestro
+                  lado <w type="rhyme">quedan</w></l>
+               <l met="-+-+-+---+--+-" rhyme="D" enjamb="ex_dobj_verb">algunas lonas blancas, que en
+                  la noche <w type="rhyme">remedan</w></l>
+               <l met="+--+-+-+--++-" rhyme="E">aves de mar que emprenden una medrosa <w
+                     type="rhyme">huida</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+-------+-+-" rhyme="F">y a lo lejos, en medio de la desierta <w
+                     type="rhyme">rada</w>,</l>
+               <l met="-+---+--++--+-" rhyme="E">del fondo de la noche, como un soplo de <w
+                     type="rhyme">vida</w>,</l>
+               <l met="+-+--+--+---+-" rhyme="F">va surgiendo la blanca ciudad, <w type="rhyme"
+                     >iluminada</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s633n_2334">
+            <head>Puerto desconocido...</head>
+            <lg n="1" type="serventesio">
+               <l met="+----+------+-" rhyme="A">Puerto desconocido, desde donde <w type="rhyme"
+                     >partimos</w></l>
+               <l met="+-+--+-+---+-+" rhyme="B">esta noche, llevándonos el corazón <w type="rhyme"
+                     >opreso</w>;</l>
+               <l met="--+--+---+--+-" rhyme="A" enjamb="pb_verb_chain">cuando estamos a bordo, y en
+                  el alma <w type="rhyme">sentimos</w></l>
+               <l met="-+---+---+---+" rhyme="B">brotar la melancólica ternura del <w type="rhyme"
+                     >regreso</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+---+" rhyme="C">Silencio; tras los mástiles la luna, <w
+                     type="rhyme">pensativa</w>,</l>
+               <l met="---+-+----+-+-" rhyme="D">en las inquietas ondas su plenitud <w type="rhyme"
+                     >dilata</w>;</l>
+               <l met="--+--+----+-+-" rhyme="C">y en el cielo invadido por la pereza <w
+                     type="rhyme">estiva</w>,</l>
+               <l met="--+--+---+--+-" rhyme="D">las estrellas fulguran como clavos de <w
+                     type="rhyme">plata</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--++++-+-+--+-" rhyme="E">¡Oh, sentirnos tan solos esta noche <w type="rhyme"
+                     >infinita</w>,</l>
+               <l met="--++-+----+-+-" rhyme="E" enjamb="ex_subj_verb">cuando, acaso, un suspiro de
+                  nuestra fe <w type="rhyme">marchita</w></l>
+               <l met="+++--+--+--+-" rhyme="F">va a unirse al encantado rumor del <w type="rhyme"
+                     >oleaje</w>!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--+---+--+-" rhyme="G">Y emprender, agobiados, la penosa <w type="rhyme"
+                     >partida</w></l>
+               <l met="-++--+-+----+-" rhyme="G">sin que un blanco pañuelo nos de la <w type="rhyme"
+                     >despedida</w></l>
+               <l met="++-+-+--++-++-" rhyme="F">ni haya una voz amiga que nos grite: ¡Buen <w
+                     type="rhyme">viaje</w>!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet-sequence" xml:id="s633n_2335">
+            <head>Poemas del mar</head>
+            <lg type="sonnet" xml:id="s633n_2335_01">
+               <head>I</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+-+--+---+++-" rhyme="A">Esta noche, la lluvia, pertinaz ha <w
+                        type="rhyme">caído</w>,</l>
+                  <l met="--+--+----+-+-" rhyme="B">desgranando en el muelle su crepitar <w
+                        type="rhyme">eterno</w>,</l>
+                  <l met="---+-+----+-+-" rhyme="A">y el encharcado puerto se sumergió <w
+                        type="rhyme">aterido</w></l>
+                  <l met="--+--+---+--+-" rhyme="B">en la intensa negrura de las noches de <w
+                        type="rhyme">invierno</w></l>
+               </lg>
+               <lg n="2" type="serventesio">
+                  <l met="--+--+--+---+-" rhyme="C">En la playa, confusa, rezonga la <w type="rhyme"
+                        >marea</w>,</l>
+                  <l met="-+---+----+-+-" rhyme="D">las olas acrecientan en el turbión su <w
+                        type="rhyme">brío</w>,</l>
+                  <l met="---+-+--+---+-" rhyme="C">y hasta el medroso faro que lejos <w
+                        type="rhyme">parpadea</w>,</l>
+                  <l met="--+--+---+--+-" rhyme="D">se acurruca en la niebla tiritando de <w
+                        type="rhyme">frío</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="+--+-+---+--+-" rhyme="E">Noche en que nos asaltan pavorosos <w
+                        type="rhyme">presagios</w></l>
+                  <l met="--+--+---+--+-" rhyme="E">y tememos por todos los posibles <w type="rhyme"
+                        >naufragios</w>,</l>
+                  <l met="--++-+-----+-+" rhyme="F">al brillar un relámpago tras la extensión <w
+                        type="rhyme">sombría</w>,</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="---+-+---+--+-" rhyme="G">y en que, al través del viento, clamoroso <w
+                        type="rhyme">resuena</w></l>
+                  <l met="-+---+--++--+-" rhyme="G">ahogada por la bruma, la voz de una <w
+                        type="rhyme">sirena</w>,</l>
+                  <l met="-+---+--+---+-" rhyme="F">como un desesperado lamento de <w type="rhyme"
+                        >agonía</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s633n_2335_02">
+               <head>II</head>
+               <lg n="1" type="serventesio">
+                  <l met="++++-+---+--+-" rhyme="A">Es todo un viejo lobo; con sus grises <w
+                        type="rhyme">pupilas</w>,</l>
+                  <l met="--+--+---+-+-" rhyme="B">las maneras calmosas y la tez <w type="rhyme"
+                        >bronceada</w></l>
+                  <l met="-+--++---+--+-" rhyme="A">Solemos vagar juntos en las tardes <w
+                        type="rhyme">tranquilas</w>;</l>
+                  <l met="++++++--+---+-" rhyme="B">yo le estimo, él me llama su joven <w
+                        type="rhyme">camarada</w></l>
+               </lg>
+               <lg n="2" type="serventesio">
+                  <l met="-++--+----+-+-" rhyme="C">Está bien orgulloso de su pasado <w type="rhyme"
+                        >inquieto</w>;</l>
+                  <l met="+--+-+---+-+-" rhyme="D">ama las noches tibias y los días de <w
+                        type="rhyme">sol</w>;</l>
+                  <l met="-+-+-+-+----+-" rhyme="C">y entre otras grandes cosas, dignas de su <w
+                        type="rhyme">respeto</w>,</l>
+                  <l met="++--++-++---+-" rhyme="D">es una, la más alta, ser súbdito <w type="rhyme"
+                        >español</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+-+-+----+-+-" rhyme="E">En tanto el mar se estrella contra las rocas <w
+                        type="rhyme">duras</w>,</l>
+                  <l met="++---++-+---+-" rhyme="E" enjamb="pb_noun_prep">él gusta referirme
+                     curiosas <w type="rhyme">aventuras</w></l>
+                  <l met="---+-+-------+" rhyme="F">de cuando fue soldado de la Marina <w
+                        type="rhyme">Real</w>;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="-+-+-+-+----+-" rhyme="G">de aquel famoso tiempo guarda como <w
+                        type="rhyme">regalo</w>,</l>
+                  <l met="---+-+---+--+-" rhyme="G">la invalidez honrosa de su pierna de <w
+                        type="rhyme">palo</w></l>
+                  <l met="--+--+--+---" rhyme="F">y su cruz pensionada del Mérito <w type="rhyme"
+                        >Naval</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s633n_2335_03">
+               <head>III</head>
+               <lg n="1" type="cuarteto">
+                  <l met="--+--+-+-+-+-" rhyme="A">Navegamos rodeados de una intensa <w type="rhyme"
+                        >niebla</w>;</l>
+                  <l met="+++--+--+---+-" rhyme="B">no hay un astro que anime la negra <w
+                        type="rhyme">lontananza</w>;</l>
+                  <l met="-+++-----+--+-" rhyme="A">y nos da el buque, en medio de la noche de <w
+                        type="rhyme">niebla</w>,</l>
+                  <l met="---+++---+--+-" rhyme="B">la sensación de un monstruo que trepida y <w
+                        type="rhyme">avanza</w></l>
+               </lg>
+               <lg n="2" type="serventesio">
+                  <l met="+--+-+---+--+-" rhyme="C">Baten las olas lentas su canción <w type="rhyme"
+                        >marinera</w>,</l>
+                  <l met="--+--+--+--+-" rhyme="D">el piloto pasea, silencioso, en el <w
+                        type="rhyme">puente</w>;</l>
+                  <l met="+--+-+---+--+-" rhyme="C">y un centinela, a popa, junto al asta <w
+                        type="rhyme">bandera</w>,</l>
+                  <l met="--+--+-+--+-+-" rhyme="D">apoyado en la borda, fuma <w type="rhyme"
+                        >tranquilamente</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="++++++----+--+" rhyme="E">Tiene un no sé qué indómito su mirada <w
+                        type="rhyme">perdida</w>,</l>
+                  <l met="---+-+---+--+-" rhyme="E" enjamb="ex_subj_verb">el resplandor rojizo de su
+                     pipa <w type="rhyme">encendida</w></l>
+                  <l met="---+-+-++-+-+-" rhyme="F">en la toldilla a oscuras pone un candente <w
+                        type="rhyme">broche</w>;</l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="--+--+--+---+-" rhyme="G">y al mirar su silueta de rudo <w type="rhyme"
+                        >aventurero</w>,</l>
+                  <l met="+--+-+--++--+-" rhyme="G">sueña que viaja a bordo de algún barco <w
+                        type="rhyme">negrero</w>,</l>
+                  <l met="-+-+-+--+---+-" rhyme="F">nuestra alma, que es gemela del alma de la <w
+                        type="rhyme">noche</w></l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

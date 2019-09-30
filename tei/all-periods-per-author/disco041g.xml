@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_041g">
+            <title property="dc:title">Sonetos de Antonia Jacinta Barreda</title>
+            <author property="dc:creator" resource="disco:041g" corresp="#disco_041g">Antonia
+               Jacinta Barreda</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">278</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_041g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_041g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_041g" about="disco:041g" typeOf="foaf:Person">
+                  <persName type="short">Barreda</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Antonia Jacinta</forename>
+                     <surname property="foaf:familyName">Barreda</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Antonia Jacinta Barreda</persName>
+                  <sex property="foaf:gender" content="F"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist=""
+                              >Villalpando</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s041g_0067">
+                        <title property="dc:title">A Alonso Pérez de Montalbán, en la muerte del
+                           doctor Juan Pérez de Montalbán, su hijo</title>
+                        <title type="incipit" property="dc:alternative">No cubra el rostro,
+                           venerable anciano,</title>
+                     </bibl>
+                     <bibl resource="disco:s041g_0068">
+                        <title property="dc:title">Al sepulcro de don Juan Pérez de
+                           Montalbán</title>
+                        <title type="incipit" property="dc:alternative">Aquí vive, aquí muere, aquí
+                           renace,</title>
+                     </bibl>
+                     <bibl resource="disco:s041g_0069">
+                        <title property="dc:title">Al mismo tema</title>
+                        <title type="incipit" property="dc:alternative">Suspende el sentimiento, o
+                           Caminante,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Antonia Jacinta Barreda</head>
+            <p>Villalpando. 17th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s041g_0067">
+            <head>A Alonso Pérez de Montalbán, en la muerte del doctor Juan Pérez de Montalbán, su
+               hijo</head>
+            <lg n="1" type="cuarteto">
+               <l met="++-+---+-+-" rhyme="A">No cubra el rostro, venerable <w type="rhyme"
+                     >anciano</w>,</l>
+               <l met="--+--+---+-" rhyme="B">el diluvio de lágrimas que <w type="rhyme"
+                  >viertes</w>,</l>
+               <l met="--+--+--++-" rhyme="B" enjamb="cc_crossclause">que serán con tu lástima dos
+                     <w type="rhyme">muertes</w></l>
+               <l met="--+--+-+-+-" rhyme="A">que enternezcan el pecho más <w type="rhyme"
+                     >tirano</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++++---+-+-" rhyme="A">Ya no te obliga sentimiento <w type="rhyme"
+                  >humano</w></l>
+               <l met="-+-+---+-+-" rhyme="B">si a tanto extremo prodigioso <w type="rhyme"
+                     >adviertes</w>,</l>
+               <l met="---+-+--++-" rhyme="B" enjamb="ex_dobj_verb">porque llorando el mundo de mil
+                     <w type="rhyme">suertes</w></l>
+               <l met="-+-+-+---+-" rhyme="A">tu llanto suple el cielo <w type="rhyme"
+                  >soberano</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+-+---+-" rhyme="C" enjamb="pb_adj_prep">Mas ¡ay! que no es consuelo <w
+                     type="rhyme">suficiente</w></l>
+               <l met="--+-++-+-+-" rhyme="D">al dolor que te oprime, tan <w type="rhyme"
+                     >prolijo</w>,</l>
+               <l met="----+--+++-" rhyme="E">aunque a la piedad mía más le <w type="rhyme"
+                     >cuadre</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+-+-+-" rhyme="C">Porque, aunque llore el mundo <w type="rhyme"
+                     >amargamente</w>,</l>
+               <l met="+-++-+--++-" rhyme="D">no hay quien a un padre llore como un <w type="rhyme"
+                     >hijo</w></l>
+               <l met="--++-+--++-" rhyme="E">ni quien a un hijo llore como un <w type="rhyme"
+                     >padre</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s041g_0068">
+            <head>Al sepulcro de don Juan Pérez de Montalbán</head>
+            <lg n="1" type="cuarteto">
+               <l met="-++-++-+-+-" rhyme="A">Aquí vive, aquí muere, aquí <w type="rhyme"
+                  >renace</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="B">aquí desmaya, y triunfa, aquí <w type="rhyme"
+                     >animado</w></l>
+               <l met="---+-+---+-" rhyme="B" enjamb="ex_dobj_verb">hasta los mismos Cielos <w
+                     type="rhyme">levantado</w></l>
+               <l met="+--+---+-+-" rhyme="A">este que humilde por la tierra <w type="rhyme"
+                     >yace</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A" enjamb="pb_verb_cprep">Aquí a la fiera muerte <w
+                     type="rhyme">satisface</w></l>
+               <l met="-+-+-+---+-" rhyme="B">de nueva vida, y gloria <w type="rhyme"
+                  >coronado</w>,</l>
+               <l met="+--+-+---+-" rhyme="B">este cadáver vivo <w type="rhyme">sepultado</w>,</l>
+               <l met="-+-+---+-+-" rhyme="A">que Sol fulgente de su sombra <w type="rhyme"
+                  >nace</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++---+---+-" rhyme="C">No llore pues el alma <w type="rhyme"
+                  >enternecida</w>,</l>
+               <l met="-+++--++-+-" rhyme="D">que no s justo llorar tan feliz <w type="rhyme"
+                     >muerte</w></l>
+               <l met="---+-+---+-" rhyme="C">en su gloriosa fama <w type="rhyme">divertida</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+-+--+-+-+-" rhyme="D">Cántese la victoria al Joven <w type="rhyme"
+                     >fuerte</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="C">que aquí la muerte, no venció a la <w type="rhyme"
+                     >vida</w>,</l>
+               <l met="---+-+-+-+-" rhyme="D">sino la vida aquí venció a la <w type="rhyme"
+                     >muerte</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s041g_0069">
+            <head>Al mismo tema</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A">Suspende el sentimiento, o <w type="rhyme"
+                     >Caminante</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">que el bronce más rebelde <w type="rhyme"
+                     >permitiera</w>,</l>
+               <l met="+----+-+-+-" rhyme="B">si alma para sentir aquí <w type="rhyme"
+                  >tuviera</w>,</l>
+               <l met="---+-+---+-" rhyme="A">y el corazón tuviera de <w type="rhyme"
+                  >diamante</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-++--+-+-" rhyme="A">Si ves por tierra este sublime <w type="rhyme"
+                     >Atlante</w>,</l>
+               <l met="--+--+-+-+-" rhyme="B">que de Apolo tocó la clara <w type="rhyme"
+                  >Esfera</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">que fue su muerte justa <w type="rhyme"
+                  >considera</w>,</l>
+               <l met="---+-+++-+-" rhyme="A">aunque la vida fue tan breve <w type="rhyme"
+                     >instante</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+-+---+-" rhyme="C" enjamb="pb_adj_prep">Toda la gloria tuvo <w
+                     type="rhyme">conseguida</w></l>
+               <l met="++-+----++-" rhyme="D">de un mundo sólo que ay, con feliz <w type="rhyme"
+                     >suerte</w></l>
+               <l met="-+---+---+-" rhyme="C">lo poco de su vida <w type="rhyme">esclarecida</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="++-+---+-+-" rhyme="D">No había otra Fama que ganara (<w type="rhyme"
+                     >advierte</w>)</l>
+               <l met="+--+-+--++-" rhyme="C">luego faltara premio a la más <w type="rhyme"
+                  >vida</w>,</l>
+               <l met="--+--+--++-" rhyme="D">pues la vida sin premio, que más <w type="rhyme"
+                     >muerte</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

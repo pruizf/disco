@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_395g">
+            <title property="dc:title">Sonetos de Francisco de Rojas Zorrilla</title>
+            <author property="dc:creator" resource="disco:395g" corresp="#disco_395g">Francisco de
+               Rojas Zorrilla</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">387</measure>
+            <measure unit="line">56</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_395g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_395g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_395g" about="disco:395g" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/22150620"/>
+                  <persName type="short">Rojas Zorrilla</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Francisco</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Rojas Zorrilla</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Francisco de Rojas
+                     Zorrilla</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Toledo</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1607" cert="high"/>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1648" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s395g_0880">
+                        <title property="dc:title">Soneto de los esposos aldeanos</title>
+                        <title type="incipit" property="dc:alternative">No quiere el segador el aura
+                           fría,</title>
+                     </bibl>
+                     <bibl resource="disco:s395g_0881">
+                        <title property="dc:title">La mujer</title>
+                        <title type="incipit" property="dc:alternative">De quince a veinte es niña;
+                           buena moza</title>
+                     </bibl>
+                     <bibl resource="disco:s395g_0882">
+                        <title property="dc:title">Al sepulcro de Lope de Vega</title>
+                        <title type="incipit" property="dc:alternative">Este que en decoroso
+                           monumento,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Francisco de Rojas Zorrilla</head>
+            <p>Toledo. 1607 - 1648</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s395g_0880">
+            <head>Soneto de los esposos aldeanos</head>
+            <lg n="1" type="cuarteto">
+               <l met="++---+-+-+-" rhyme="A">No quiere el segador el aura <w type="rhyme"
+                  >fría</w>,</l>
+               <l met="-----+---+-" rhyme="B">ni por abril el agua mis <w type="rhyme"
+                  >sembrados</w>,</l>
+               <l met="-+---+---+-" rhyme="B">ni yerba ni dehesa mis <w type="rhyme"
+                  >ganados</w>,</l>
+               <l met="---+---+-+-" rhyme="A">ni los pastores la estación <w type="rhyme"
+                  >umbría</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+-+-+-" rhyme="A">ni el enfermo la alegre luz del <w type="rhyme"
+                     >día</w>,</l>
+               <l met="-+---+---+-" rhyme="B">la noche los gañanes <w type="rhyme"
+                  >fatigados</w>,</l>
+               <l met="+--+---+-+-" rhyme="B">blandas corrientes los amenos <w type="rhyme"
+                     >prados</w>,</l>
+               <l met="+-++-+-+-+-" rhyme="A">más que te quiero, dulce esposa <w type="rhyme"
+                     >mía</w>:</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+-+----+-" rhyme="C" enjamb="pb_adj_noun">que si hasta hoy su amor desde el
+                     <w type="rhyme">primero</w></l>
+               <l met="+--+---+++-" rhyme="D">hombres juntaron, cuando así te <w type="rhyme"
+                     >ofreces</w></l>
+               <l met="-+-+-+-+-+-" rhyme="C">en un sujeto a todos los <w type="rhyme"
+                  >prefiero</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--++---+-+-" rhyme="D">y aunque sé, Blanca, que mi fe <w type="rhyme"
+                     >agradeces</w></l>
+               <l met="-++--++-++-" rhyme="C">y no puedo querer más que te <w type="rhyme"
+                     >quiero</w>,</l>
+               <l met="++++---+-+-" rhyme="D">aun no te quiero como tú <w type="rhyme"
+                  >mereces</w></l>
+            </lg>
+            <lg n="5" type="cuarteto">
+               <l met="++-+-+---+-" rhyme="E" enjamb="cc_crossclause">No quieren más las flores al
+                     <w type="rhyme">rocío</w></l>
+               <l met="---+-+--++-" rhyme="F">que en los fragantes vasos el sol <w type="rhyme"
+                     >bebe</w>,</l>
+               <l met="---+---+-+-" rhyme="F">las arboledas la deshecha <w type="rhyme"
+                  >nieve</w>,</l>
+               <l met="++---+--++-" rhyme="E">que es cima de cristal y después <w type="rhyme"
+                     >río</w>;</l>
+            </lg>
+            <lg n="6" type="cuarteto">
+               <l met="-+---+--+-+-" rhyme="E">el índice de piedra del Norte <w type="rhyme"
+                     >frío</w>,</l>
+               <l met="---+-+---+-" rhyme="F">el caminante al iris cuando <w type="rhyme"
+                  >llueve</w>,</l>
+               <l met="-+-+---+-+-" rhyme="F">la oscura noche la traición <w type="rhyme"
+                  >aleve</w>,</l>
+               <l met="+-++-+-+-+-" rhyme="E">más que te quiero, dulce esposo <w type="rhyme"
+                     >mío</w>;</l>
+            </lg>
+            <lg n="7" type="terceto">
+               <l met="-+-+++---+-" rhyme="G">porque es mi amor tan grande que a tu <w type="rhyme"
+                     >nombre</w></l>
+               <l met="--+--+---+-" rhyme="H" enjamb="pb_relword">como a cosa divina <w type="rhyme"
+                     >construyera</w></l>
+               <l met="+----+++++-" rhyme="G">aras donde adorarte; y no te <w type="rhyme"
+                     >asombre</w>,</l>
+            </lg>
+            <lg n="8" type="terceto">
+               <l met="---+-++--+-" rhyme="H">porque si el ser de Dios no <w type="rhyme"
+                     >conociera</w>,</l>
+               <l met="-+---++--+-" rhyme="G">dejara de adorarte como <w type="rhyme">hombre</w></l>
+               <l met="--++-+---+-" rhyme="H">y por Dios te adorara y te <w type="rhyme"
+                  >tuviera</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s395g_0881">
+            <head>La mujer</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+++-+-+-" rhyme="A" enjamb="pb_noun_prep">De quince a veinte es niña;
+                  buena <w type="rhyme">moza</w></l>
+               <l met="-+---+---+-" rhyme="B">de veinte a veinticinco, y por la <w type="rhyme"
+                     >cuenta</w>,</l>
+               <l met="+--+-+-+-+-" rhyme="-">buena mujer de veinte y cinco a treinta:</l>
+               <l met="-+-+-+-+++-" rhyme="A">¡dichoso aquel que en tal edad la <w type="rhyme"
+                     >goza</w>!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+-+-+-" rhyme="A">De treinta a treinta y cinco no <w type="rhyme"
+                     >alboroza</w></l>
+               <l met="--+--+---+-" rhyme="B">pero puede pasar con «<w type="rhyme"
+                  >sal-pimienta</w>»;</l>
+               <l met="-----+---+-" rhyme="B" enjamb="pb_relword">mas de los treinta y cinco a los
+                     <w type="rhyme">cuarenta</w></l>
+               <l met="+-+--+---+-" rhyme="A">cría niñas que labren su <w type="rhyme"
+                  >coroza</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+----++--+-" rhyme="C">Ya de cuarenta y cinco es <w type="rhyme"
+                     >bachillera</w>,</l>
+               <l met="+--+-+---+-" rhyme="D">habla gangoso y juega de <w type="rhyme"
+                  >vocablo</w>,</l>
+               <l met="--+--+-+-+-" rhyme="C">de cincuenta cerrados da en <w type="rhyme"
+                     >santera</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-----++--+-" rhyme="D">y a los cincuenta y cinco hecho el <w type="rhyme"
+                     >retablo</w>,</l>
+               <l met="+-+--++--+-" rhyme="C">niña, moza, mujer, vieja, <w type="rhyme"
+                     >hechicera</w>,</l>
+               <l met="+--+--++-+-" rhyme="D">bruja y santera se la lleve el <w type="rhyme"
+                     >diablo</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s395g_0882">
+            <head>Al sepulcro de Lope de Vega</head>
+            <lg n="1" type="cuarteto">
+               <l met="+----+---+-" rhyme="A">Este que en decoroso <w type="rhyme"
+                  >monumento</w>,</l>
+               <l met="+--+---+-+-" rhyme="B">siendo ceniza, se habilita <w type="rhyme"
+                  >llama</w>,</l>
+               <l met="-+--++---+-" rhyme="B">al peso que da luces a la <w type="rhyme"
+                  >fama</w>,</l>
+               <l met="-+---+---+-" rhyme="A">añade compasión al <w type="rhyme">sentimiento</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+-----+-" rhyme="A">Fue su accidente su <w type="rhyme"
+                  >merecimiento</w>,</l>
+               <l met="+-++-+--++-" rhyme="B">no el dolor fue el veneno que le <w type="rhyme"
+                     >inflama</w>,</l>
+               <l met="--+--+-+-+-" rhyme="B">que a quien grande la voz del orbe <w type="rhyme"
+                     >aclama</w>,</l>
+               <l met="-+---++--+-" rhyme="A">parece que el vivir dura <w type="rhyme"
+                  >violento</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++-+-+---+-" rhyme="C">Este es el mismo llanto y el <w type="rhyme"
+                     >llorado</w>;</l>
+               <l met="-+---+--++-" rhyme="D">sus méritos dirá su infeliz <w type="rhyme"
+                  >suerte</w>,</l>
+               <l met="++---+-+-+-" rhyme="C">no tuvo que envidiar, y fue <w type="rhyme"
+                     >envidiado</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+---+-" rhyme="D">Su admiración en llanto se <w type="rhyme"
+                     >convierte</w>,</l>
+               <l met="-+-+-+---+-" rhyme="C">de todos fue en la vida <w type="rhyme"
+                  >venerado</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="D">y nadie le premió, sino es la <w type="rhyme"
+                     >muerte</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

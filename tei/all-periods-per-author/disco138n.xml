@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_138n">
+            <title property="dc:title">Sonetos de E. Rebaque Thuillier</title>
+            <author property="dc:creator" resource="disco:138n" corresp="#disco_138n">E. Rebaque
+               Thuillier</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">370</measure>
+            <measure unit="line">56</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_138n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_138n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_138n" about="disco:138n" typeOf="foaf:Person">
+                  <persName type="short">Rebaque Thuillier</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">E.</forename>
+                     <surname property="foaf:familyName">Rebaque Thuillier</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">E. Rebaque Thuillier</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Argentina</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s138n_0398">
+                        <title property="dc:title">Rasgo</title>
+                        <title type="incipit" property="dc:alternative">Cuando la suerte adversa me
+                           fustiga</title>
+                     </bibl>
+                     <bibl resource="disco:s138n_0399">
+                        <title property="dc:title">El regreso</title>
+                        <title type="incipit" property="dc:alternative">Implorando el perdón de
+                           aquel desvío</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>E. Rebaque Thuillier</head>
+            <p>Argentina. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s138n_0398">
+            <head>Rasgo</head>
+            <lg n="1" type="cuarteto">
+               <l met="---+-+-+-+-" rhyme="A">Cuando la suerte adversa me <w type="rhyme"
+                     >fustiga</w></l>
+               <l met="-+---+---+-" rhyme="B">y me hiere a mansalva con <w type="rhyme"
+                  >fiereza</w>,</l>
+               <l met="-++--++--+-" rhyme="B" enjamb="ex_subj_verb">si bien suele abatirse mi <w
+                     type="rhyme">cabeza</w></l>
+               <l met="+-+--+-+-+-" rhyme="A">no demando jamás la mano <w type="rhyme">amiga</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-++--+---+-" rhyme="A">En sí mismo mi espíritu se <w type="rhyme"
+                  >abriga</w></l>
+               <l met="--++-+---+-" rhyme="B" enjamb="ex_subj_verb">y si exhala una queja en su <w
+                     type="rhyme">tristeza</w></l>
+               <l met="+-+--+---+-" rhyme="B">no es que busque su herida <w type="rhyme"
+                     >fortaleza</w></l>
+               <l met="+-+--+-+-+-" rhyme="A">un extraño sostén que no <w type="rhyme"
+                  >mendiga</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+-+---+-" rhyme="C">Me sitiará la Vida con sus <w type="rhyme"
+                  >males</w></l>
+               <l met="---+-+---+-" rhyme="C" enjamb="pb_adj_prep">y del dolor las heces <w
+                     type="rhyme">inmortales</w></l>
+               <l met="-+-+---+-+-" rhyme="D">por mano infiel amargarán mi <w type="rhyme"
+                  >vino</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+---+-" rhyme="E" enjamb="ex_subj_verb">Pero aunque el llanto brote de
+                  mis <w type="rhyme">ojos</w></l>
+               <l met="-++---+--+-" rhyme="E" enjamb="ex_subj_verb">jamás mi alma se pondrá de <w
+                     type="rhyme">hinojos</w></l>
+               <l met="+--+-+---+-" rhyme="D">no cederá a los golpes del <w type="rhyme"
+                  >Destino</w>!</l>
+            </lg>
+            <lg n="5" type="cuarteto">
+               <l met="--+--+---+-" rhyme="F" enjamb="cc_crossclause">En mi errar por el trágico <w
+                     type="rhyme">sendero</w></l>
+               <l met="---+---+-+-" rhyme="G">donde el dolor al peregrino <w type="rhyme"
+                  >acecha</w>,</l>
+               <l met="++-+-+-+-+-" rhyme="G">más de una vez mi fe cayó <w type="rhyme"
+                     >maltrecha</w></l>
+               <l met="---+-+-+-+-" rhyme="F">para irradiar después como un <w type="rhyme"
+                     >lucero</w></l>
+            </lg>
+            <lg n="6" type="cuarteto">
+               <l met="-+---+-+-+-" rhyme="F">Si el golpe de infortunio fue <w type="rhyme"
+                     >certero</w></l>
+               <l met="--+--+-+-+-" rhyme="G">mi tendencia estelar cerró la <w type="rhyme"
+                     >brecha</w></l>
+               <l met="--+--+-+-+-" rhyme="G">y donde una ilusión quedó <w type="rhyme"
+                  >deshecha</w></l>
+               <l met="--+--+-+-+-" rhyme="F">mi insaciable avidez halló un <w type="rhyme"
+                     >venero</w></l>
+            </lg>
+            <lg n="7" type="terceto">
+               <l met="-+-+---+-+-" rhyme="H" enjamb="ex_subj_verb">Y así, si bien mi corazón <w
+                     type="rhyme">herido</w></l>
+               <l met="-+-+-+-+-+-" rhyme="H">dejó escapar, doliente, algún <w type="rhyme"
+                     >gemido</w></l>
+               <l met="---+-+---+-" rhyme="I">bajo el airado azote de la <w type="rhyme"
+                  >suerte</w></l>
+            </lg>
+            <lg n="8" type="terceto">
+               <l met="-+---++--+-" rhyme="J">Templado en el dolor y hecho a su <w type="rhyme"
+                     >prueba</w>,</l>
+               <l met="---+---+-+-" rhyme="J" enjamb="pb_verb_chain">por el sendero que al Destino
+                     <w type="rhyme">lleva</w></l>
+               <l met="+-+--+---+-" rhyme="I">voy retando a la vida y a la <w type="rhyme"
+                     >muerte</w></l>
+            </lg>
+            <lg n="9" type="cuarteto">
+               <l met="---+-+---+-" rhyme="K" enjamb="ex_subj_verb">Por el amor mi alegre <w
+                     type="rhyme">Primavera</w></l>
+               <l met="-+---+---+-" rhyme="L" enjamb="ex_subj_verb">volvióse antes de tiempo <w
+                     type="rhyme">taciturna</w></l>
+               <l met="-+-+---+-+-" rhyme="L" enjamb="cc_crossclause">y fue mi pecho funeraria <w
+                     type="rhyme">urna</w></l>
+               <l met="---+---+-+-" rhyme="K">donde inhumé mi juvenil <w type="rhyme"
+                  >quimera</w></l>
+            </lg>
+            <lg n="10" type="cuarteto">
+               <l met="---+-+---+-" rhyme="K">Sobre mi clara vida <w type="rhyme">placentera</w></l>
+               <l met="-+-+---+-+-" rhyme="L">rendida al beso de la gloria <w type="rhyme"
+                     >diurna</w>,</l>
+               <l met="-+-+---+-+-" rhyme="L">cayó la densa lobreguez <w type="rhyme"
+                  >nocturna</w></l>
+               <l met="---+---+-+-" rhyme="K">para que el llanto en aluvión <w type="rhyme"
+                     >corriera</w></l>
+            </lg>
+            <lg n="11" type="terceto">
+               <l met="-+---++--+-" rhyme="M">Busqué por el amor luz y <w type="rhyme"
+                  >consuelo</w>;</l>
+               <l met="-+---+-+-+-" rhyme="M">el sol de la ilusión fulgió en mi <w type="rhyme"
+                     >cielo</w></l>
+               <l met="+----++--+-" rhyme="N">sólo por el amor puro y <w type="rhyme"
+                  >bendito</w></l>
+            </lg>
+            <lg n="12" type="terceto">
+               <l met="+-+--+---+-" enjamb="ex_subj_verb">Y es por él que en la forja de mi <w
+                     type="rhyme">canto</w></l>
+               <l met="+--+---+-+-" enjamb="pb_noun_prep">es mariposa hasta el doliente <w
+                     type="rhyme">llanto</w></l>
+               <l met="--+--+---+-" rhyme="N">en triunfal ascensión al <w type="rhyme"
+                  >infinito</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s138n_0399">
+            <head>El regreso</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--+-+-+-" rhyme="A" enjamb="cc_crossclause">Implorando el perdón de aquel
+                     <w type="rhyme">desvío</w></l>
+               <l met="-+-+-+-+-+-" rhyme="B">que abrió en mi pecho tan profunda <w type="rhyme"
+                     >herida</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">volviste a mí, cuitada y <w type="rhyme"
+                  >abatida</w></l>
+               <l met="--+--+---+-" rhyme="A">por los males, el mundo y el <w type="rhyme"
+                     >hastío</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+-+-+-" rhyme="A" enjamb="pb_adj_noun">Tu acento de dolor movió mi <w
+                     type="rhyme">pío</w></l>
+               <l met="-+---+---+-" rhyme="B">espíritu al perdón, y <w type="rhyme"
+                  >conmovida</w>,</l>
+               <l met="+--+-+---+-" rhyme="B" enjamb="pb_adj_adv">la honda ansiedad en tu alma <w
+                     type="rhyme">contenida</w></l>
+               <l met="-+-+---+-+-" rhyme="A">vertiste entonces sobre el pecho <w type="rhyme"
+                     >mío</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-----+-" rhyme="C">Y fue rotundo tu <w type="rhyme"
+                  >arrepentimiento</w></l>
+               <l met="---+---+-+-" rhyme="C" enjamb="pb_adj_noun">Sobre el miraje de ancestral <w
+                     type="rhyme">tormento</w></l>
+               <l met="--+--+---+-" rhyme="D">esparció claridad tu <w type="rhyme"
+                  >desagravio</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+------+-" rhyme="E">Y tu llanto, no obstante su <w type="rhyme"
+                     >amargura</w>,</l>
+               <l met="-+-+-+---+-" rhyme="E" enjamb="ex_subj_verb">como un licor de amor y de <w
+                     type="rhyme">ventura</w></l>
+               <l met="-+-+---+-+-" rhyme="D">gustó con loca exaltación mi <w type="rhyme"
+                  >labio</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

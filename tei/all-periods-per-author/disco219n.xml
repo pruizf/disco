@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_219n">
+            <title property="dc:title">Sonetos de Ángel Ganivet</title>
+            <author property="dc:creator" resource="disco:219n" corresp="#disco_219n">Ángel
+               Ganivet</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">264</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_219n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_219n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_219n" about="disco:219n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/76339208"/>
+                  <persName type="short">Ganivet</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ángel</forename>
+                     <surname property="foaf:familyName">Ganivet</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ángel Ganivet</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Granada</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1865" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1898" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s219n_0715">
+                        <title property="dc:title">A Numancia</title>
+                        <title type="incipit" property="dc:alternative">Numancia la inmortal
+                           lágrimas vierte</title>
+                     </bibl>
+                     <bibl resource="disco:s219n_0716">
+                        <title property="dc:title">La venus de nieve</title>
+                        <title type="incipit" property="dc:alternative">Los albos copos que al caer
+                           se mecen</title>
+                     </bibl>
+                     <bibl resource="disco:s219n_0717">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Su fino rostro en luz azul
+                           bañado</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Ángel Ganivet</head>
+            <p>Granada. 1865 - 1898</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s219n_0715">
+            <head>A Numancia</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---++--+-" rhyme="A">Numancia la inmortal lágrimas <w type="rhyme"
+                     >vierte</w></l>
+               <l met="--+----+-+-" rhyme="B">porque ve que a pesar del noble <w type="rhyme"
+                     >aliento</w></l>
+               <l met="--+--+---+-" rhyme="B" enjamb="ex_subj_verb">que a sus hijos anima, <w
+                     type="rhyme">acatamiento</w></l>
+               <l met="--+--+-+-+-" rhyme="A">ha de hacer al romano yugo <w type="rhyme"
+                  >fuerte</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+--++-+-+-" rhyme="A" enjamb="ex_subj_verb">Mas oye que le dice de esta <w
+                     type="rhyme">suerte</w></l>
+               <l met="-+---+---+-" rhyme="B">la voz del patriotismo y <w type="rhyme"
+                     >sentimiento</w>:</l>
+               <l met="-+---+---+-" rhyme="B" enjamb="ex_subj_verb">Numancia, el deshonroso <w
+                     type="rhyme">vencimiento</w></l>
+               <l met="+--+---+-+-" rhyme="A">vuelve en victoria con tu propia <w type="rhyme"
+                     >muerte</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---++--+-" rhyme="C">Y entonces se sonríe y se abre <w type="rhyme"
+                     >altiva</w></l>
+               <l met="-+---+---+-" rhyme="D" enjamb="ex_subj_verb">y todos sus heroicos <w
+                     type="rhyme">habitantes</w></l>
+               <l met="+--+-+-+-+-" rhyme="C">muerte se dan con hierro o llama <w type="rhyme"
+                     >viva</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+-+-+--+-+-" rhyme="D" enjamb="pb_verb_adv">A otro día el terror a la muerte
+                     <w type="rhyme">antes</w></l>
+               <l met="++-+---+-+-" rhyme="C">era un recuerdo que el valor <w type="rhyme"
+                  >aviva</w></l>
+               <l met="+-+--+---+-" rhyme="D">y un montón de cenizas <w type="rhyme"
+                  >humeantes</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s219n_0716">
+            <head>La venus de nieve</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A">Los albos copos que al caer se <w type="rhyme"
+                     >mecen</w></l>
+               <l met="--+--+---+-" rhyme="B" enjamb="pb_noun_prep">en el aire, por fuerzas <w
+                     type="rhyme">agitados</w></l>
+               <l met="---+-+---+-" rhyme="B" enjamb="pb_adj_noun">de misterioso amor, <w
+                     type="rhyme">arrebatados</w></l>
+               <l met="+----+---+-" rhyme="A">giran y en torbellino <w type="rhyme"
+                  >desparecen</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A">Los ámbitos se cierran y <w type="rhyme"
+                  >oscurecen</w></l>
+               <l met="-+---+---+-" rhyme="B">y escuchan los oídos <w type="rhyme"
+                  >angustiados</w></l>
+               <l met="---+-+---+-" rhyme="B" enjamb="cc_crossclause">en las tinieblas gritos <w
+                     type="rhyme">apagados</w></l>
+               <l met="--+--+-+-+-" rhyme="A">que, llegando hasta el alma, la <w type="rhyme"
+                     >estremecen</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+--++-" rhyme="C">La voz de la creación por el caos <w type="rhyme"
+                     >vuela</w></l>
+               <l met="+--+-+-+-+-" rhyme="D">y algo divino nace: blanca <w type="rhyme"
+                  >forma</w>,</l>
+               <l met="----++--+-+-" rhyme="E">fantástico ideal va <w type="rhyme"
+                     >contorneándose</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--+---+-" rhyme="D">que en mujer sobrehumana se <w type="rhyme"
+                     >transforma</w></l>
+               <l met="---++++--+-" rhyme="E">y mientras yo la invoco, ella, <w type="rhyme"
+                     >alejándose</w>,</l>
+               <l met="---+---+++-" rhyme="C">con su mirada el corazón me <w type="rhyme"
+                  >hiela</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s219n_0717">
+            <head>Soneto</head>
+            <lg n="1" type="unknown">
+               <l met="-+-+-+-+-+-" rhyme="A" enjamb="pb_verb_cprep">Su fino rostro en luz azul <w
+                     type="rhyme">bañado</w></l>
+               <l met="--+--+---+-" rhyme="B">de sus grandes pupilas <w type="rhyme"
+                  >luminosas</w>,</l>
+               <l met="--+--+---+-" rhyme="B" enjamb="pb_noun_prep">se recata en las ondas <w
+                     type="rhyme">caprichosas</w></l>
+               <l met="-+---+---+-" rhyme="-">del mar de sus cabellos encrespados.</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--++-+-+-+-" rhyme="A" enjamb="pb_adj_prep">Su mirar dulce, suave, está <w
+                     type="rhyme">velado</w></l>
+               <l met="-+---+---+-" rhyme="B">por plácidas visiones <w type="rhyme"
+                  >amorosas</w>,</l>
+               <l met="+-++-+---+-" rhyme="B" enjamb="ex_subj_verb">y un rumor leve de ansias <w
+                     type="rhyme">misteriosas</w></l>
+               <l met="--+--++--+-" rhyme="A">en su boca entreabierta ha <w type="rhyme"
+                     >aleteado</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+---+-" rhyme="C">Su talle esbelto, airoso se <w type="rhyme"
+                     >cimbrea</w>:</l>
+               <l met="---+-+---+-" rhyme="D">ora se yergue altivo, <w type="rhyme"
+                  >dominante</w>,</l>
+               <l met="---+-+---+-" rhyme="E">ora se mece en lánguido <w type="rhyme"
+                  >vaivén</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--++---+-+-" rhyme="C" enjamb="pb_noun_prep">cuando le arrulla la feliz <w
+                     type="rhyme">idea</w></l>
+               <l met="-+-++--+-+-" rhyme="D">de abrir su pecho a un corazón <w type="rhyme"
+                     >amante</w></l>
+               <l met="--++++-+-+-" rhyme="E">y decirle: estoy sola y triste, <w type="rhyme"
+                     >ven</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

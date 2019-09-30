@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_206n">
+            <title property="dc:title">Sonetos de Juan Justiniano</title>
+            <author property="dc:creator" resource="disco:206n" corresp="#disco_206n">Juan
+               Justiniano</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">198</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_206n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_206n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_206n" about="disco:206n" typeOf="foaf:Person">
+                  <idno cert="medium" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/18310167"/>
+                  <persName type="short">Justiniano</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Juan</forename>
+                     <surname property="foaf:familyName">Justiniano</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Juan Justiniano</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s206n_0689">
+                        <title property="dc:title">Al Santísimo Sacramento</title>
+                        <title type="incipit" property="dc:alternative">Y te niegan ¡mi Dios! cuando
+                           a tu acento</title>
+                     </bibl>
+                     <bibl resource="disco:s206n_0690">
+                        <title property="dc:title">A la Purísima Concepción</title>
+                        <title type="incipit" property="dc:alternative">De Dios en gracia a
+                           confundir naciste</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Juan Justiniano</head>
+            <p>España. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s206n_0689">
+            <head>Al Santísimo Sacramento</head>
+            <lg n="1" type="cuarteto">
+               <l met="-++--+---+-" rhyme="A">Y te niegan ¡mi Dios! cuando a tu <w type="rhyme"
+                     >acento</w></l>
+               <l met="+++--+---+-" rhyme="B">brota un mundo el abismo de la <w type="rhyme"
+                     >nada</w>,</l>
+               <l met="--+--+---+-" rhyme="B" enjamb="ex_subj_verb">y aparece de estrellas <w
+                     type="rhyme">esmaltada</w></l>
+               <l met="-+---+---+-" rhyme="A">la anchísima extensión del <w type="rhyme"
+                     >firmamento</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+-++-+-+-" rhyme="A">Hierve y rízase el mar, susurra el <w type="rhyme"
+                     >viento</w>,</l>
+               <l met="+-+--+---+-" rhyme="B">perlas vierte la aurora en la <w type="rhyme"
+                     >enramada</w>,</l>
+               <l met="+--+-+---+-" rhyme="B">brilla del sol la lumbre <w type="rhyme"
+                  >regalada</w>,</l>
+               <l met="--++-+---+-" rhyme="A">y la vida es el soplo de tu <w type="rhyme"
+                     >aliento</w>!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--++-+-+-+-" rhyme="C" enjamb="pb_adj_noun">¡Infinito es tu amor! Del orbe el
+                     <w type="rhyme">llanto</w></l>
+               <l met="-+---+---+-" rhyme="D" enjamb="pb_noun_prep">borrastes en la Cruz, y bajo el
+                     <w type="rhyme">velo</w></l>
+               <l met="--+-++-+-+-" rhyme="C">del misterio nos das tu Cuerpo <w type="rhyme"
+                     >santo</w>!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+---+-+-" rhyme="D">Hostia sagrada, divinal <w type="rhyme"
+                  >consuelo</w>,</l>
+               <l met="-+-+---+-+-" rhyme="C">salud del alma, del infierno <w type="rhyme"
+                     >espanto</w>,</l>
+               <l met="-++-+--+-+-" rhyme="D">en ti admiro y adoro al Rey del <w type="rhyme"
+                     >cielo</w>!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s206n_0690">
+            <head>A la Purísima Concepción</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-----+-+-" rhyme="A">De Dios en gracia a confundir <w type="rhyme"
+                     >naciste</w></l>
+               <l met="--+--+-+-+-" rhyme="B">del aliento infernal la saña <w type="rhyme"
+                     >impura</w>,</l>
+               <l met="-----+-+-+-" rhyme="B">y Madre de Jesús, de Virgen <w type="rhyme"
+                  >pura</w>,</l>
+               <l met="-+-+---+-+-" rhyme="A">jamás el brillo divinal <w type="rhyme"
+                  >perdiste</w>!</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--++--+-" rhyme="A" enjamb="pb_adj_noun">Es la lumbre del Sol pálido y <w
+                     type="rhyme">triste</w></l>
+               <l met="-+---+---+-" rhyme="B">destello del fulgor de tu <w type="rhyme"
+                     >hermosura</w>:</l>
+               <l met="-+-+---+-+-" rhyme="B">del cielo gozo, del mortal <w type="rhyme"
+                  >ventura</w>,</l>
+               <l met="++-+---+++-" rhyme="A">do el manto extiendes el dolor no <w type="rhyme"
+                     >existe</w>!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+++--+-+-+-" rhyme="C">Quién más gloria que tú, que el labio <w type="rhyme"
+                     >sellas</w></l>
+               <l met="--+--+---+-" rhyme="D">a la inmunda impiedad, y por <w type="rhyme"
+                     >corona</w></l>
+               <l met="-+--++---+-" rhyme="C">aureola inmortal ciñes de <w type="rhyme"
+                     >estrellas</w>!</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-++--++--+-" rhyme="D">Que te aclama la fe reina y <w type="rhyme"
+                     >matrona</w>,</l>
+               <l met="-+-+---++-" rhyme="C">y amor del justo! que la luna <w type="rhyme"
+                     >huellas</w>,</l>
+               <l met="-+---++--+-" rhyme="D">y el ángel a tus pies himnos <w type="rhyme"
+                     >entona</w>!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

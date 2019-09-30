@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_466n">
+            <title property="dc:title">Sonetos de Ambrosio Echemendia</title>
+            <author property="dc:creator" resource="disco:466n" corresp="#disco_466n">Ambrosio
+               Echemendia</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">164</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_466n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_466n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_466n" about="disco:466n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/108090009"/>
+                  <persName type="short">Echemendia</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ambrosio</forename>
+                     <surname property="foaf:familyName">Echemendia</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ambrosio Echemendia</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1843" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1893" cert="low"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s466n_1775">
+                        <title property="dc:title">Al Damují</title>
+                        <title type="incipit" property="dc:alternative">No ha mucho tiempo,
+                           caudaloso río,</title>
+                     </bibl>
+                     <bibl resource="disco:s466n_1776">
+                        <title property="dc:title">Un incrédulo de mis versos</title>
+                        <title type="incipit" property="dc:alternative">Tú, que a mis versos niegas
+                           despiadado,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Ambrosio Echemendia</head>
+            <p>Cuba. 1843 - 0</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s466n_1775">
+            <head>Al Damují</head>
+            <lg n="1" type="cuarteto">
+               <l met="++-+---+-+-" rhyme="A">No ha mucho tiempo, caudaloso <w type="rhyme"
+                  >río</w>,</l>
+               <l met="--+--+---+-" rhyme="B">murmuraban tus aguas <w type="rhyme"
+                  >quejumbrosas</w>,</l>
+               <l met="-+-+---+-+-" rhyme="-" enjamb="cc_crossclause">bañando tristes las pajizas
+                  chozas</l>
+               <l met="--+--+---+-" rhyme="A">que formaban tu pobre <w type="rhyme">caserío</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+---+-" rhyme="A">El Progreso escuchó tu <w type="rhyme"
+                  >murmurío</w>,</l>
+               <l met="---+-+---+-" rhyme="B">y en tus incultas márgenes <w type="rhyme"
+                  >hojosas</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B" enjamb="pb_adj_noun">brotó Cienfuegos, como en frescas
+                     <w type="rhyme">rosas</w></l>
+               <l met="-+-+---+-+-" rhyme="A">gentil capullo en el ardiente <w type="rhyme"
+                     >estío</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+---+-" rhyme="C" enjamb="cc_crossclause">¿Será cual tú mi genio <w
+                     type="rhyme">desgraciado</w></l>
+               <l met="---+---+-+-" rhyme="D">que en silencioso vegetal se <w type="rhyme"
+                     >inspira</w>?</l>
+               <l met="-+-+---+-+-" rhyme="C">¿Vendrá el Progreso a revocar su <w type="rhyme"
+                     >hado</w>?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="++---+---+-" rhyme="D">Si es cierto, Damují, ¡ay! en mi <w type="rhyme"
+                     >lira</w>,</l>
+               <l met="--+--+-+-+-" rhyme="C">al mudar cual tus linfas a otro <w type="rhyme"
+                     >estado</w></l>
+               <l met="+-+--+-+-+-" rhyme="D">¡te promete cantar quien hoy <w type="rhyme"
+                     >suspira</w>!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s466n_1776">
+            <head>Un incrédulo de mis versos</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A">Tú, que a mis versos niegas <w type="rhyme"
+                     >despiadado</w>,</l>
+               <l met="-+---+--++-" rhyme="B">su único valor, el que son <w type="rhyme"
+                  >míos</w>,</l>
+               <l met="--+--+---+-" rhyme="B">¿calmarás tus dudosos <w type="rhyme"
+                  >desvaríos</w>,</l>
+               <l met="--+--+---+-" rhyme="A">por mi rudo soneto <w type="rhyme"
+                  >improvisado</w>?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+-+-+-" rhyme="A">El cuarteto primero está <w type="rhyme"
+                  >formado</w>,</l>
+               <l met="--+--+---+-" rhyme="B">y siguiendo a Mendoza sin <w type="rhyme"
+                  >desvíos</w>,</l>
+               <l met="---+-+---+-" rhyme="B">con sentimientos crédulos y <w type="rhyme"
+                  >píos</w></l>
+               <l met="--+--++--+-" rhyme="A">el segundo (dirás) lo ha <w type="rhyme"
+                  >rematado</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+-+-+-" rhyme="C">Pobreza, esclavitud, dolor <w type="rhyme"
+                  >maldito</w></l>
+               <l met="-+-++--+-+-" rhyme="D">«terceto cruel de mi primer <w type="rhyme"
+                     >terceto</w>»</l>
+               <l met="--+--+---+-" rhyme="C">formaré de tu duda el <w type="rhyme"
+                  >requisito</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+-+-+-" rhyme="D">Pero al segundo muéstrame <w type="rhyme"
+                  >respeto</w></l>
+               <l met="--+--+-+-+-" rhyme="C">por que entonces sin dudas es <w type="rhyme"
+                     >prurito</w>,</l>
+               <l met="-+-+-+---+-" rhyme="D">o clávenme en la frente mi <w type="rhyme"
+                  >soneto</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

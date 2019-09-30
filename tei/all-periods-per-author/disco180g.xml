@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_180g">
+            <title property="dc:title">Sonetos de Luis de Torquemada</title>
+            <author property="dc:creator" resource="disco:180g" corresp="#disco_180g">Luis de
+               Torquemada</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">95</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_180g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_180g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_180g" about="disco:180g" typeOf="foaf:Person">
+                  <persName type="short">Torquemada</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Luis</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Torquemada</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Luis de Torquemada</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">15</date>
+                  </birth>
+                  <death>
+                     <date type="century">16</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s180g_0387">
+                        <title property="dc:title">Soneto a Juan de Arfe</title>
+                        <title type="incipit" property="dc:alternative">Tú que de las entrañas de
+                           las artes</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Luis de Torquemada</head>
+            <p>España. 15th century - 16th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s180g_0387">
+            <head>Soneto a Juan de Arfe</head>
+            <lg n="1" type="cuarteto">
+               <l met="+----+---+-" rhyme="A" enjamb="cc_crossclause">Tú que de las entrañas de las
+                     <w type="rhyme">artes</w></l>
+               <l met="---+-++--+-" rhyme="B" enjamb="ex_subj_verb">que al universo dan más <w
+                     type="rhyme">hermosura</w></l>
+               <l met="++---+---+-" rhyme="B">nos muestras con precepto, o con <w type="rhyme"
+                     >figura</w></l>
+               <l met="++-+-+-+-+-" rhyme="A">tan claro el todo, y tan distinto en <w type="rhyme"
+                     >partes</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--+---+-" rhyme="A">Tú que (docto Geómetra) <w type="rhyme"
+                  >compartes</w></l>
+               <l met="-+-------+-" rhyme="B">la Griega y la Romana <w type="rhyme"
+                  >Arquitectura</w></l>
+               <l met="-----+---+-" rhyme="B">y que la Anatomía, y la <w type="rhyme"
+                  >Escultura</w></l>
+               <l met="-+---++--+-" rhyme="A">con tanta claridad, formas y <w type="rhyme"
+                     >partes</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+---+-+-" rhyme="C" enjamb="ex_subj_verb">Vive seguro de que el tiempo <w
+                     type="rhyme">avaro</w></l>
+               <l met="+--+---+-+-" rhyme="D" enjamb="pb_verb_cprep">mengue la fama, ni el loor <w
+                     type="rhyme">consuma</w></l>
+               <l met="---+-+-+-+-" rhyme="C">de tu famoso nombre o Arphe <w type="rhyme"
+                  >raro</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+++-+-+-" rhyme="D" enjamb="ex_subj_verb">Que cuando hacerle injuria tal
+                     <w type="rhyme">presuma</w></l>
+               <l met="---+++-+-+-" rhyme="C" enjamb="ex_dobj_verb">a su pesar le harán eterno y <w
+                     type="rhyme">claro</w></l>
+               <l met="---+-+---+-" rhyme="D">tus milagrosas obras y tu <w type="rhyme"
+                  >pluma</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

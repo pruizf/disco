@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_009g">
+            <title property="dc:title">Sonetos de Camila Lucinda</title>
+            <author property="dc:creator" resource="disco:009g" corresp="#disco_009g">Camila
+               Lucinda</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">190</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_009g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_009g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_009g" about="disco:009g" typeOf="foaf:Person">
+                  <persName type="short">Lucinda</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Camila</forename>
+                     <surname property="foaf:familyName">Lucinda</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Camila Lucinda</persName>
+                  <sex property="foaf:gender" content="F"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <date type="century">16</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s009g_0017">
+                        <title property="dc:title">Al peregrino</title>
+                        <title type="incipit" property="dc:alternative">Mientras a un dulce
+                           epitalamio tiemplo</title>
+                     </bibl>
+                     <bibl resource="disco:s009g_0018">
+                        <title property="dc:title">A Lope de Vega</title>
+                        <title type="incipit" property="dc:alternative">Cuando como otra Eurídice,
+                           teñido</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Camila Lucinda</head>
+            <p>España. 16th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s009g_0017">
+            <head>Al peregrino</head>
+            <lg n="1" type="cuarteto">
+               <l met="--++---+-+-" rhyme="A">Mientras a un dulce epitalamio <w type="rhyme"
+                     >tiemplo</w></l>
+               <l met="-+-+---+-+-" rhyme="B">la lira humilde de tu canto <w type="rhyme"
+                  >indina</w>,</l>
+               <l met="+--+---+-+-" rhyme="B">goza a tu Nise celestial <w type="rhyme"
+                  >divina</w>,</l>
+               <l met="--+--++--+-" rhyme="A">peregrino de amor único <w type="rhyme"
+                  >ejemplo</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+++---+-+-" rhyme="A" enjamb="pb_relword">Si el centro es Nise, y de tu
+                  ardor <w type="rhyme">contemplo</w></l>
+               <l met="-+---+---+-" rhyme="B">la esfera en su hermosura <w type="rhyme"
+                     >peregrina</w>,</l>
+               <l met="+--+-+---+-" rhyme="B" enjamb="pb_noun_prep">cuelga el bordón, sombrero y <w
+                     type="rhyme">esclavina</w></l>
+               <l met="---+-+---+-" rhyme="A">en las sagradas aras de tu <w type="rhyme"
+                  >templo</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++-+-+--++-" rhyme="C">Pon una tabla, y di: Cuando me <w type="rhyme"
+                     >llama</w>,</l>
+               <l met="+--+-+---+-" rhyme="D">llego a su esfera -Lope con <w type="rhyme"
+                     >divinos</w></l>
+               <l met="+--+-+---+-" rhyme="C">versos, llegó también hasta la <w type="rhyme"
+                     >fama</w>-;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+++-+---+-" rhyme="D">aquí dio fin amor a mis <w type="rhyme"
+                  >caminos</w>,</l>
+               <l met="+--+---+++-" rhyme="C">Lope a su historia, y a los dos nos <w type="rhyme"
+                     >llama</w></l>
+               <l met="-+-+-+---+-" rhyme="D">el mundo en un sujeto <w type="rhyme"
+                  >peregrinos</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s009g_0018">
+            <head>A Lope de Vega</head>
+            <lg n="1" type="cuarteto">
+               <l met="---+-+---+-" rhyme="A" enjamb="pb_adj_prep">Cuando como otra Eurídice, <w
+                     type="rhyme">teñido</w></l>
+               <l met="-+-+-+-+-+-" rhyme="B" enjamb="pb_noun_prep">de sangre el blanco pie, mas no
+                  el <w type="rhyme">deseo</w></l>
+               <l met="---+-+---+-" rhyme="B">de las injustas quejas de <w type="rhyme"
+                  >Aristeo</w>,</l>
+               <l met="-+-+-+---+-" rhyme="A">pasado hubiera el agua del <w type="rhyme"
+                  >olvido</w>:</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A">al arco de tu lira <w type="rhyme">detenido</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B" enjamb="ex_subj_verb">y en blanda paz sus almas el <w
+                     type="rhyme">Leteo</w></l>
+               <l met="+--+---+-+-" rhyme="B">vieran mis ojos, español, <w type="rhyme"
+                  >Orfeo</w>,</l>
+               <l met="-+-+---+-+-" rhyme="A">segunda vez el resplandor <w type="rhyme"
+                  >perdido</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+-+-+-+-" rhyme="C">¡Oh clara luz de amor que el cielo <w type="rhyme"
+                     >inflama</w>!</l>
+               <l met="-+-+-+-+-+-" rhyme="D">Su curso el tiempo en estos versos <w type="rhyme"
+                     >mida</w>,</l>
+               <l met="+----+---+-" rhyme="C">sirvan de paralelos a su <w type="rhyme">llama</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+---+-+-" rhyme="D">Por ellos corra mi memoria <w type="rhyme"
+                  >asida</w>,</l>
+               <l met="--+--+---+-" rhyme="C">que si vive mi nombre con tu <w type="rhyme"
+                  >fama</w>,</l>
+               <l met="-+---+--++-" rhyme="D">del alma igualará la inmortal <w type="rhyme"
+                  >vida</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

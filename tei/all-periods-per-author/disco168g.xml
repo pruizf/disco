@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_168g">
+            <title property="dc:title">Sonetos de Maestro Burguillos</title>
+            <author property="dc:creator" resource="disco:168g" corresp="#disco_168g">Maestro
+               Burguillos</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">183</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_168g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_168g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_168g" about="disco:168g" typeOf="foaf:Person">
+                  <persName type="short">Burguillos</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Maestro</forename>
+                     <surname property="foaf:familyName">Burguillos</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Maestro Burguillos</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s168g_0332">
+                        <title property="dc:title">A San Isidro</title>
+                        <title type="incipit" property="dc:alternative">Los campos de Madrid, Isidro
+                           santo,</title>
+                     </bibl>
+                     <bibl resource="disco:s168g_0333">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">¿Al cielo os vais, IGNACIO,
+                           en mortal vuelo,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Maestro Burguillos</head>
+            <p>España. 17th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s168g_0332">
+            <head>A San Isidro</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+-+-+-" rhyme="A">Los campos de Madrid, Isidro <w type="rhyme"
+                  >santo</w>,</l>
+               <l met="---+-+-+-+-" rhyme="B">en vuestra pura edad estaban <w type="rhyme"
+                  >solos</w>,</l>
+               <l met="-+---+---+-" rhyme="B">jugaban los vecinos a los <w type="rhyme"
+                  >bolos</w></l>
+               <l met="---+-+---+-" rhyme="A">en su arenosa margen el <w type="rhyme"
+                  >disanto</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+-+-+-" rhyme="A">Pero después que los honrase <w type="rhyme"
+                  >tanto</w>,</l>
+               <l met="-+---+---+-" rhyme="B">parecen con Felipe y sus <w type="rhyme"
+                  >fillolos</w>,</l>
+               <l met="++-+-+-+-+-" rhyme="B">no campos ya de flor, de estrellas <w type="rhyme"
+                     >polos</w>,</l>
+               <l met="--+-+-+--+-" rhyme="A">a Aranjuez envidia, al Pardo <w type="rhyme"
+                     >espanto</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+---+-+-" rhyme="C">Otros, Isidro, sin arar el <w type="rhyme"
+                  >suelo</w>,</l>
+               <l met="++--++---+-" rhyme="D">le secan y le roban el <w type="rhyme"
+                  >tributo</w>,</l>
+               <l met="-+-+-+---+-" rhyme="C">que coge el diablo en forma de <w type="rhyme"
+                     >mochuelo</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--+-+-+-" rhyme="D" enjamb="ex_subj_verb">Pero nunca de vos el campo <w
+                     type="rhyme">enjuto</w></l>
+               <l met="-+---+---+-" rhyme="C">cogieron vuestros ojos en el <w type="rhyme"
+                  >cielo</w>,</l>
+               <l met="-+-+-+---+-" rhyme="D">sembrando aquí sus lágrimas el <w type="rhyme"
+                     >fruto</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s168g_0333">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+++-+--++-" rhyme="A">¿Al cielo os vais, IGNACIO, en mortal <w type="rhyme"
+                     >vuelo</w>,</l>
+               <l met="--+--+-+-+-" rhyme="B">y volvéis a la tierra? error <w type="rhyme"
+                     >notable</w>,</l>
+               <l met="-+---+---+-" rhyme="B" enjamb="pb_adj_noun">debióseos de olvidar el <w
+                     type="rhyme">miserable</w></l>
+               <l met="-+---+-+-+-" rhyme="A">estado de las cosas de este <w type="rhyme"
+                  >suelo</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+-++--+-" rhyme="A">Si os aguardaba acá tanto <w type="rhyme"
+                  >desvelo</w>,</l>
+               <l met="+-+--+---+-" rhyme="B">tanta envidia y trabajo <w type="rhyme"
+                     >incomportable</w>,</l>
+               <l met="+--+--+--+-" rhyme="B">¿no era mejor, o Patriarca <w type="rhyme"
+                  >amable</w>,</l>
+               <l met="+-+--+-+-+-" rhyme="A">no tener que buscar después el <w type="rhyme"
+                     >cielo</w>?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---------+-" rhyme="C">Mas si los siete días que <w type="rhyme"
+                     >comprendo</w>,</l>
+               <l met="-+---+-+-+-" rhyme="D" enjamb="pb_noun_prep">sin duda que se truecan estos <w
+                     type="rhyme">sietes</w></l>
+               <l met="-+--+--+-+-" rhyme="A">del cielo al suelo para bien del <w type="rhyme"
+                     >suelo</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+---+-+-" rhyme="C" enjamb="ex_dobj_verb">Y que estuviste con Jesús <w
+                     type="rhyme">haciendo</w></l>
+               <l met="-------+-+-" rhyme="D">en siete días siete mil <w type="rhyme"
+                  >bonetes</w>,</l>
+               <l met="-+-+---+-+-" rhyme="A">que el suelo cubren, y honrarán el <w type="rhyme"
+                     >cielo</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

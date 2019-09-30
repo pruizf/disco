@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_292g">
+            <title property="dc:title">Sonetos de Cristóbal de Castillejo</title>
+            <author property="dc:creator" resource="disco:292g" corresp="#disco_292g">Cristóbal de
+               Castillejo</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">3</measure>
+            <measure unit="tokens">262</measure>
+            <measure unit="line">42</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_292g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_292g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_292g" about="disco:292g" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/100165227"/>
+                  <persName type="short">Castillejo</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Cristóbal</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Castillejo</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Cristóbal de Castillejo</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Ciudad
+                              Rodrigo</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1492" cert="high"/>
+                     <date type="century">15</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Viena</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1550" cert="high"/>
+                     <date type="century">16</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s292g_0610">
+                        <title property="dc:title">Soneto de Boscán</title>
+                        <title type="incipit" property="dc:alternative">Si las penas que dais son
+                           verdaderas,</title>
+                     </bibl>
+                     <bibl resource="disco:s292g_0611">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Musas italianas y
+                           latinas,</title>
+                     </bibl>
+                     <bibl resource="disco:s292g_0612">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Garcilaso y Boscán, siendo
+                           llegados</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Cristóbal de Castillejo</head>
+            <p>Ciudad Rodrigo. 1492 - 1550</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s292g_0610">
+            <head>Soneto de Boscán</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--++--+-" rhyme="A">Si las penas que dais son <w type="rhyme"
+                     >verdaderas</w>,</l>
+               <l met="--++++-+-+-" rhyme="B">como muy bien lo sabe el alma <w type="rhyme"
+                  >mía</w>,</l>
+               <l met="-++++-+--+-" rhyme="B" enjamb="ex_subj_verb">¿por qué ya no me acaban? Y <w
+                     type="rhyme">sería</w></l>
+               <l met="-+---+++-+-" rhyme="A">sin ellas mi morir muy más de <w type="rhyme"
+                     >veras</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-++--+-" rhyme="A">Mas si por dicha son tan <w type="rhyme"
+                     >lisonjeras</w>,</l>
+               <l met="-+---+---+-" rhyme="B">que quieren retozar con mi <w type="rhyme"
+                  >alegría</w>,</l>
+               <l met="-+-+++-+-+-" rhyme="B">decid, ¿por qué me matan cada <w type="rhyme"
+                  >día</w></l>
+               <l met="-+---+-+-+-" rhyme="A">con muerte de dolor de mil <w type="rhyme"
+                  >maneras</w>?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-++--+-+-+-" rhyme="C">Mostradme este secreto ya, <w type="rhyme"
+                  >señora</w>,</l>
+               <l met="+-+-+--+-+-" rhyme="D">sepa yo por vos, pues por vos <w type="rhyme"
+                     >muero</w>,</l>
+               <l met="-+---+++-+-" rhyme="E">si aquesto que padezco es muerte o <w type="rhyme"
+                     >vida</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+---+-" rhyme="C">porque, siendo vos la <w type="rhyme"
+                  >matadora</w>,</l>
+               <l met="-++--+-+++-" rhyme="D" enjamb="ex_dobj_verb">mayor gloria de pena ya no <w
+                     type="rhyme">quiero</w></l>
+               <l met="--++-++--+-" rhyme="E">que poder yo tener tal <w type="rhyme"
+                  >homicida</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s292g_0611">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="+----+---+-" rhyme="A">Musas italianas y <w type="rhyme">latinas</w>,</l>
+               <l met="+--+-+-+-+-" rhyme="B">gentes en estas partes tan <w type="rhyme"
+                  >extraña</w>,</l>
+               <l met="+-+-+----+-" rhyme="B" enjamb="ex_dobj_verb">¿cómo habéis venido a nuestra <w
+                     type="rhyme">España</w></l>
+               <l met="++---+---+-" rhyme="A">tan nuevas y hermosas <w type="rhyme"
+                  >clavelinas</w>?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-++-+--+-+-" rhyme="A">O ¿quién os a traído a ser <w type="rhyme"
+                  >vecinas</w>?</l>
+               <l met="-+---+---+-" rhyme="B">del Tajo, de sus montes y <w type="rhyme"
+                  >campaña</w>?</l>
+               <l met="-++-++---+-" rhyme="B" enjamb="pb_verb_cprep">O ¿quién es el que os guía y <w
+                     type="rhyme">acompaña</w></l>
+               <l met="-+-+-+---+-" rhyme="A">de tierras tan ajenas <w type="rhyme"
+                  >peregrinas</w>?</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-----+---+-" rhyme="C" enjamb="ex_subj_verb">-Don Diego de Mendoza y <w
+                     type="rhyme">Garcilaso</w></l>
+               <l met="+-+---+---+-" rhyme="D">nos trujeron, y Boscán y Luis de <w type="rhyme"
+                     >Haro</w></l>
+               <l met="-+---+-+-+-" rhyme="E">por orden y favor del dios <w type="rhyme"
+                  >Apolo</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+-+-+-+-" rhyme="C">Los dos llevó la muerte paso a <w type="rhyme"
+                     >paso</w>,</l>
+               <l met="--+-+----+-" rhyme="D" enjamb="pb_adj_noun">Solimán el uno y por <w
+                     type="rhyme">amparo</w></l>
+               <l met="+-+--+-+-+-" rhyme="E">solo queda don Diego, y basta <w type="rhyme"
+                  >solo</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s292g_0612">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--++--+-" rhyme="A">Garcilaso y Boscán, siendo <w type="rhyme"
+                     >llegados</w></l>
+               <l met="--+--+---+-" rhyme="B" enjamb="cc_crossclause">al lugar donde están los <w
+                     type="rhyme">trovadores</w></l>
+               <l met="-+---+---+-" rhyme="B" enjamb="ex_subj_verb">que en esta nuestra lengua y sus
+                     <w type="rhyme">primores</w></l>
+               <l met="+--+-+---+-" rhyme="A">fueron en este siglo <w type="rhyme"
+                  >señalados</w>,</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+---+-" rhyme="A" enjamb="ex_subj_verb">los unos a los otros <w
+                     type="rhyme">alterados</w></l>
+               <l met="-+---+---+-" rhyme="B">se miran, con mudanza de <w type="rhyme"
+                  >colores</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">temiéndose que fuesen <w type="rhyme"
+                  >corredores</w></l>
+               <l met="-+---+---+-" rhyme="A">espías o enemigos <w type="rhyme">desmandados</w>;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+---+-" rhyme="C">y juzgando primero por el <w type="rhyme"
+                  >traje</w>,</l>
+               <l met="--+--+---+-" rhyme="D">pareciéronles ser, como <w type="rhyme">debía</w>,</l>
+               <l met="-+---+---+-" rhyme="E">gentiles españoles <w type="rhyme">caballeros</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+-++--+-" rhyme="C" enjamb="pb_adj_noun">y oyéndoles hablar nuevo <w
+                     type="rhyme">leguaje</w></l>
+               <l met="-+-+-+---+-" rhyme="D">mezclado de una extraña <w type="rhyme"
+                  >poesía</w>,</l>
+               <l met="-+---+---+-" rhyme="E">con ojos los miraban de <w type="rhyme"
+                     >extranjeros</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_386n">
+            <title property="dc:title">Sonetos de Clímaco Soto Borda</title>
+            <author property="dc:creator" resource="disco:386n" corresp="#disco_386n">Clímaco Soto
+               Borda</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">112</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_386n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_386n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_386n" about="disco:386n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso" resource="https://viaf.org/viaf/3841456"/>
+                  <persName type="short">Soto Borda</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Clímaco</forename>
+                     <surname property="foaf:familyName">Soto Borda</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Clímaco Soto Borda</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Colombia</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s386n_1480">
+                        <title property="dc:title">El soneto profético</title>
+                        <title type="incipit" property="dc:alternative">Esto pasa en el año tres del
+                           siglo presente:</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Clímaco Soto Borda</head>
+            <p>Colombia. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s386n_1480">
+            <head>El soneto profético</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+------+--+-" rhyme="A">Esto pasa en el año tres del siglo <w type="rhyme"
+                     >presente</w>:</l>
+               <l met="+--+-+---+--+-" rhyme="B">de una nevada esteárica a los rubios <w
+                     type="rhyme">reflejos</w>,</l>
+               <l met="---+-+--+---+-" rhyme="B">en descifrar se empeña sonetos suyos <w
+                     type="rhyme">viejos</w></l>
+               <l met="-+--++-++---+-" rhyme="A">y cojos, de tres años, un bardo <w type="rhyme"
+                     >decadente</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+++-+----+-+-" rhyme="A">¡Nada! ¡Ni él mismo sabe lo que soñó su <w
+                     type="rhyme">mente</w>!</l>
+               <l met="-+-+-+-+--+-+-" rhyme="B">Está perplejo el que antes a otros dejó <w
+                     type="rhyme">perplejos</w></l>
+               <l met="---+-+---+-+-+" rhyme="B">Como olvidó los símbolos y ve las claves lejos
+                  ,</l>
+               <l met="++-+-+-+--+-+-" rhyme="A">no entiende nada , nada , nada <w type="rhyme"
+                     >absolutamente</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+--+-+-----+-+" rhyme="C">Vuelve el antiguo oráculo por la explicable cifra
+                  ,</l>
+               <l met="--+--+----+--+" rhyme="C" enjamb="ex_dobj_verb">mas tampoco el oráculo sus
+                  enredos <w type="rhyme">descifra</w></l>
+               <l met="-+-+-+-+--+-+-" rhyme="D">y ordénale que a estrofas claras su afán <w
+                     type="rhyme">consagre</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+--+--+---+-" rhyme="E">¡Oh, poetas! Del numen el jugo <w type="rhyme"
+                     >cristalino</w></l>
+               <l met="-+-+-+---+-+-+" rhyme="E" enjamb="pb_noun_prep">verted en limpias ánforas, y
+                  así del genio el <w type="rhyme">vino</w></l>
+               <l met="-----+-+--+-+-" rhyme="D">sin mistificaciones nunca será <w type="rhyme"
+                     >vinagre</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

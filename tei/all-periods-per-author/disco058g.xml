@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_058g">
+            <title property="dc:title">Sonetos de Fernando de Zarate</title>
+            <author property="dc:creator" resource="disco:058g" corresp="#disco_058g">Fernando de
+               Zarate</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">186</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_058g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_058g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_058g" about="disco:058g" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso" resource="https://viaf.org/viaf/4929501"/>
+                  <persName type="short">Zarate</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Fernando</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Zarate</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Fernando de Zarate</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Cuenca</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1600" cert="high"/>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Sevilla</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1663" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s058g_0114">
+                        <title property="dc:title">De Los hermanos amantes y piedad por
+                           fuerza</title>
+                        <title type="incipit" property="dc:alternative">¡Qué caro ha de costarme el
+                           conocerte,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Fernando de Zarate</head>
+            <p>Cuenca. 1600 - 1663</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet-sequence" xml:id="s058g_0114">
+            <head>De Los hermanos amantes y piedad por fuerza</head>
+            <lg type="sonnet" xml:id="s058g_0114_01">
+               <head>Jornada primera - Margarita</head>
+               <lg n="1" type="cuarteto">
+                  <l met="+++--++--+-" rhyme="A">¡Qué caro ha de costarme el <w type="rhyme"
+                        >conocerte</w>,</l>
+                  <l met="-+-+++-+-+-" rhyme="B">molesto amor, qué caro el ser <w type="rhyme"
+                        >constante</w>,</l>
+                  <l met="----++--+-" rhyme="B">en despreciar un Rey por un <w type="rhyme"
+                        >Infante</w></l>
+                  <l met="+----+---+-" rhyme="A">necia resolución de <w type="rhyme"
+                     >obedecerte</w>!</l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+--+-+-+-+-" rhyme="A">Celos engendras tú, los celos <w type="rhyme"
+                        >muerte</w>,</l>
+                  <l met="--+--+---+-" rhyme="B" enjamb="pb_adj_noun">y en contienda de celos <w
+                        type="rhyme">semejante</w></l>
+                  <l met="-+-+-++--+-" rhyme="B">morir será la acción más <w type="rhyme"
+                        >arrogante</w>,</l>
+                  <l met="--+--+-+-+-" rhyme="A">porque siempre se vence de esta <w type="rhyme"
+                        >suerte</w></l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="--+--+-+-+-" rhyme="C">Que si puede matar cualquier <w type="rhyme"
+                        >celoso</w></l>
+                  <l met="--+--+---+-" rhyme="D">con engaños, con tracas y <w type="rhyme"
+                        >desvelos</w>,</l>
+                  <l met="--+-++---+-" rhyme="E">poderoso le alcanza mi <w type="rhyme"
+                     >ventura</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="+----+---+-" rhyme="C">Mate con el poder el <w type="rhyme"
+                     >poderoso</w>,</l>
+                  <l met="-+-+-+---+-" rhyme="D" enjamb="ex_subj_verb">que no es la vez primera que
+                     los <w type="rhyme">celos</w></l>
+                  <l met="-+---+---+-" rhyme="E">hicieron desdichada la <w type="rhyme"
+                        >hermosura</w></l>
+               </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s058g_0114_02">
+               <head>Jornada primera - Margarita</head>
+               <lg n="1" type="cuarteto">
+                  <l met="-+++-+-+-+-" rhyme="A">De vos me aparto, honor, en tal <w type="rhyme"
+                        >mudanza</w>,</l>
+                  <l met="-+---+-+-+-" rhyme="B">alegre de mi mal, mi infamia <w type="rhyme"
+                        >siento</w>,</l>
+                  <l met="-++--+-+-+-" rhyme="B">de qué me servirá tener <w type="rhyme"
+                        >contento</w>,</l>
+                  <l met="-++--+-+-+-" rhyme="A">si más ha de perder quien más <w type="rhyme"
+                        >alcanza</w></l>
+               </lg>
+               <lg n="2" type="cuarteto">
+                  <l met="+-++-+---+-" rhyme="A">Quíteme amor el bien de la <w type="rhyme"
+                        >esperanza</w>,</l>
+                  <l met="--+--+---+-" rhyme="B">que si van mis desdichas en <w type="rhyme"
+                        >aumento</w>,</l>
+                  <l met="-++--++--+-" rhyme="B" enjamb="ex_dobj_verb">por fuerza ha de dejarle a mi
+                        <w type="rhyme">tormento</w></l>
+                  <l met="--+--+--++-" rhyme="A" ana="seseo">la memoria por ser lo que más <w
+                        type="rhyme">cansa</w>.</l>
+               </lg>
+               <lg n="3" type="terceto">
+                  <l met="-+---++--+-" rhyme="C">Viviendo la memoria ha de <w type="rhyme"
+                        >matarme</w>;</l>
+                  <l met="-++--+++++-" rhyme="D">quitarme la esperanza es darme <w type="rhyme"
+                        >muerte</w>;</l>
+                  <l met="+-+--+-+-+-" rhyme="E">(leño en mar proceloso voy, y <w type="rhyme"
+                        >vengo)</w></l>
+               </lg>
+               <lg n="4" type="terceto">
+                  <l met="--+--+---+-" rhyme="C">Pero quiero en mis males <w type="rhyme"
+                        >consolarme</w>,</l>
+                  <l met="+---+-+-++-" rhyme="D">tengo esperanza, ¿no? Pues de qué <w type="rhyme"
+                        >suerte</w></l>
+                  <l met="+--+-+--++-" rhyme="E">me ha de quitar amor lo que no <w type="rhyme"
+                        >tengo</w></l>
+               </lg>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_169n">
+            <title property="dc:title">Sonetos de Ángel R. Chaves</title>
+            <author property="dc:creator" resource="disco:169n" corresp="#disco_169n">Ángel R.
+               Chaves</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">96</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_169n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_169n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_169n" about="disco:169n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/86569208"/>
+                  <persName type="short">Chaves</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Ángel R.</forename>
+                     <surname property="foaf:familyName">Chaves</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Ángel R. Chaves</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s169n_0536">
+                        <title property="dc:title">Para muestra...</title>
+                        <title type="incipit" property="dc:alternative">Juega hasta echar el pego
+                           algunas veces,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Ángel R. Chaves</head>
+            <p>España. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s169n_0536">
+            <head>Para muestra...</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A">Juega hasta echar el pego algunas <w type="rhyme"
+                     >veces</w>,</l>
+               <l met="--+--+---+-" rhyme="B">con bastante frecuencia se <w type="rhyme"
+                     >emborracha</w>,</l>
+               <l met="-++--+-+-+-" rhyme="B" enjamb="cc_crossclause">y tres leguas en torno no hay
+                     <w type="rhyme">muchacha</w></l>
+               <l met="-++--+---+-" rhyme="A">que no pierda con él sus <w type="rhyme"
+                     >esquiveces</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--+---+-" rhyme="A">Hace vil mercancía de sus <w type="rhyme"
+                  >preces</w>,</l>
+               <l met="-+---+-+++-" rhyme="B">su lengua de escorpión parece un <w type="rhyme"
+                     >hacha</w>,</l>
+               <l met="-+---+---+-" rhyme="B" enjamb="pb_noun_prep">y oculta en ocasiones la <w
+                     type="rhyme">bocacha</w></l>
+               <l met="-----+---+-" rhyme="A">de la sobrepelliz en los <w type="rhyme"
+                  >dobleces</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++---+---+-" rhyme="C" enjamb="ex_dobj_verb">Tal es el que en mi pueblo <w
+                     type="rhyme">representa</w></l>
+               <l met="-+---+---+-" rhyme="D">la santa religión de mis <w type="rhyme"
+                  >mayores</w>,</l>
+               <l met="--+--++--+-" rhyme="C">y como este ejemplar sé de <w type="rhyme"
+                     >cincuenta</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+---+-" rhyme="D" enjamb="ex_subj_verb">Mas de la sacra fe a los <w
+                     type="rhyme">resplandores</w></l>
+               <l met="++-+-+--+-" rhyme="C">¡qué importa, vive Dios! Tened en <w type="rhyme"
+                     >cuenta</w></l>
+               <l met="-++--+-++-" rhyme="D">que si hay curas así, los hay <w type="rhyme"
+                     >peores</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

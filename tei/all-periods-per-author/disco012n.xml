@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_012n">
+            <title property="dc:title">Sonetos de Anacleto Bermúdez</title>
+            <author property="dc:creator" resource="disco:012n" corresp="#disco_012n">Anacleto
+               Bermúdez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">183</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_012n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_012n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_012n" about="disco:012n" typeOf="foaf:Person">
+                  <persName type="short">Bermúdez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Anacleto</forename>
+                     <surname property="foaf:familyName">Bermúdez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Anacleto Bermúdez</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">La Habana</settlement>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1806" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1852" cert="high"/>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s012n_0033">
+                        <title property="dc:title">En una ausencia</title>
+                        <title type="incipit" property="dc:alternative">Duerme helada la musa con
+                           que un día</title>
+                     </bibl>
+                     <bibl resource="disco:s012n_0034">
+                        <title property="dc:title">El paseo por el Tínima</title>
+                        <title type="incipit" property="dc:alternative">Atormentado por la pena
+                           impía</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Anacleto Bermúdez</head>
+            <p>La Habana (Cuba). 1806 - 1852</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s012n_0033">
+            <head>En una ausencia</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+--+--++-" rhyme="A">Duerme helada la musa con que un <w type="rhyme"
+                     >día</w></l>
+               <l met="--+--+--++-" rhyme="B">al trinar de la lira canté <w type="rhyme"
+                  >amores</w>,</l>
+               <l met="-+--++---+-" rhyme="B">y ni de Abril la animan los <w type="rhyme"
+                     >primores</w></l>
+               <l met="-+-+---+-+-" rhyme="A">ni el sol brillante, ni la noche <w type="rhyme"
+                     >umbría</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+---+-+-" rhyme="A" enjamb="ex_subj_verb">Cuando Mirtila mi cantar <w
+                     type="rhyme">oía</w></l>
+               <l met="++-+---+-+-" rhyme="B">más bellas eran para mí las <w type="rhyme"
+                  >flores</w></l>
+               <l met="-++--+---+-" rhyme="B">Y más bellos del sol los <w type="rhyme"
+                     >resplandores</w>,</l>
+               <l met="--+-++---+-" rhyme="A">y la luna más bella <w type="rhyme">parecía</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+-+---+-" rhyme="C">En la tranquila orilla de <w type="rhyme"
+                     >Almendares</w></l>
+               <l met="+-+--+-+-+-" rhyme="D">fácil me era entonar la voz del <w type="rhyme"
+                     >canto</w>,</l>
+               <l met="-+-+---+-+-" rhyme="C">que todos sienten en sus patrios <w type="rhyme"
+                     >lares</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+---+-+-" rhyme="D">Dentro del pecho el entusiasmo <w type="rhyme"
+                     >santo</w>:</l>
+               <l met="+-+--+-+-+-" rhyme="E">ahora pulso las blandas cuerdas de <w type="rhyme"
+                     >oro</w>,</l>
+               <l met="+-+----++-" rhyme="E">voy a cantar, y en vez de cantar <w type="rhyme"
+                     >lloro</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s012n_0034">
+            <head>El paseo por el Tínima</head>
+            <lg n="1" type="cuarteto">
+               <l met="---+---+-+-" rhyme="A" enjamb="ex_dobj_verb">Atormentado por la pena <w
+                     type="rhyme">impía</w></l>
+               <l met="--+--+---+-" rhyme="B">a la orilla del Tínima <w type="rhyme">vagaba</w>,</l>
+               <l met="---+-+---+-" rhyme="B">y sus corrientes puras <w type="rhyme"
+                  >aumentaba</w></l>
+               <l met="---+-+---+-" rhyme="A">con el acerbo llanto que <w type="rhyme"
+                  >vertía</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+-+-+-" rhyme="A">«¿Adónde está Mirtila?» le <w type="rhyme"
+                  >decía</w></l>
+               <l met="-+-+-+---+-" rhyme="B">con débil voz que lenta <w type="rhyme"
+                  >resonaba</w>,</l>
+               <l met="-+--+-+--+-" rhyme="B">y el eco de lejos me <w type="rhyme"
+                  >escuchaba</w>,</l>
+               <l met="-+-+-+---+-" rhyme="A">«¿Adónde está Mirtila?» <w type="rhyme"
+                  >repetía</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+-+---+-" rhyme="C">De las serenas ondas de <w type="rhyme"
+                  >repente</w></l>
+               <l met="+-+--+-+-+-" rhyme="D">dando al aire las bellas hebras de <w type="rhyme"
+                     >oro</w>,</l>
+               <l met="+-+--+-+-+-" rhyme="C" enjamb="pb_verb_adv">una ninfa salió, que <w
+                     type="rhyme">blandamente</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--++---+-+-" rhyme="D">enjugar quiso mi angustiado <w type="rhyme"
+                  >lloro</w>:</l>
+               <l met="+++--+-+-+-" rhyme="E">La vi, no era Mirtila, odié su <w type="rhyme"
+                     >encanto</w>,</l>
+               <l met="-+-+---+-+-" rhyme="E">bajé los ojos y volví a mi <w type="rhyme"
+                  >llanto</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

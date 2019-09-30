@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_690n">
+            <title property="dc:title">Sonetos de Francisco Ruiz Estébez</title>
+            <author property="dc:creator" resource="disco:690n" corresp="#disco_690n">Francisco Ruiz
+               Estébez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">5</measure>
+            <measure unit="tokens">467</measure>
+            <measure unit="line">70</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_690n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_690n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_690n" about="disco:690n" typeOf="foaf:Person">
+                  <persName type="short">Ruiz Estébez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Francisco</forename>
+                     <surname property="foaf:familyName">Ruiz Estébez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Francisco Ruiz Estébez</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Sevilla</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s690n_2469">
+                        <title property="dc:title">A Colón</title>
+                        <title type="incipit" property="dc:alternative">Venció tu fe, la líquida
+                           llanura</title>
+                     </bibl>
+                     <bibl resource="disco:s690n_2470">
+                        <title property="dc:title">Hombres castrando un potro</title>
+                        <title type="incipit" property="dc:alternative">Apretaron las cinchas de la
+                           bestia indomable</title>
+                     </bibl>
+                     <bibl resource="disco:s690n_2471">
+                        <title property="dc:title">Aspiración prosaica</title>
+                        <title type="incipit" property="dc:alternative">Que al llegar el verano no
+                           sea pobre</title>
+                     </bibl>
+                     <bibl resource="disco:s690n_2472">
+                        <title property="dc:title">La trampa del cazador</title>
+                        <title type="incipit" property="dc:alternative">Después de que escondiera la
+                           violenta</title>
+                     </bibl>
+                     <bibl resource="disco:s690n_2473">
+                        <title property="dc:title">La trampa del cazador</title>
+                        <title type="incipit" property="dc:alternative">La trampa de metal brilló
+                           sangrienta</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Francisco Ruiz Estébez</head>
+            <p>Sevilla. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s690n_2469">
+            <head>A Colón</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A" enjamb="pb_adj_noun">Venció tu fe, la líquida <w
+                     type="rhyme">llanura</w></l>
+               <l met="+-++-++--+-" rhyme="B">paso te abrió, Colón, mansa a tu <w type="rhyme"
+                     >acento</w>,</l>
+               <l met="-+---+---+-" rhyme="B">y en lucha la ignorancia y el <w type="rhyme"
+                     >talento</w>,</l>
+               <l met="-+-+---+-+-" rhyme="A">ceñiste palma inmarcesible y <w type="rhyme"
+                  >pura</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A">Tu edad, esclava de calumnia <w type="rhyme"
+                     >impura</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">negó a tu nombre digno <w type="rhyme"
+                  >monumento</w>,</l>
+               <l met="--+--+---+-" rhyme="B">cuando alzaba tu claro <w type="rhyme"
+                  >pensamiento</w></l>
+               <l met="---+-+---+-" rhyme="A">hasta el nivel de Dios a la <w type="rhyme"
+                     >criatura</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+++---+-" rhyme="C" enjamb="ex_dobj_verb">¡Crear un mundo! Europa <w
+                     type="rhyme">rechazaba</w></l>
+               <l met="-+-+---+-+-" rhyme="D">problema tal de solución <w type="rhyme"
+                  >sombría</w>,</l>
+               <l met="-+---+---+-" rhyme="C">y loco tu cerebro <w type="rhyme">prejuzgaba</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+-+--++--+-" rhyme="D">y es que Europa, infeliz, no <w type="rhyme"
+                     >comprendía</w>,</l>
+               <l met="+-+--+---+-" rhyme="C">que otro mundo tu genio <w type="rhyme"
+                  >reclamaba</w>,</l>
+               <l met="---+-+-+-+-" rhyme="D">porque en el viejo mundo no <w type="rhyme"
+                  >cabía</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s690n_2470">
+            <head>Hombres castrando un potro</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--+---+--+-" rhyme="A" enjamb="pb_adj_noun">Apretaron las cinchas de la
+                  bestia <w type="rhyme">indomable</w></l>
+               <l met="+----+---+--+-" rhyme="B">ángeles que humillaron a la noche <w type="rhyme"
+                     >lasciva</w></l>
+               <l met="--+--+---+--+-" rhyme="B">y surgió, cual relincho de la fiera <w type="rhyme"
+                     >cautiva</w>,</l>
+               <l met="-+---+---+--+-" rhyme="A">el sol por el oriente como sangre <w type="rhyme"
+                     >intratable</w></l>
+            </lg>
+            <lg n="2" type="unknown">
+               <l met="--+--+--+---+-" rhyme="C">Derribada la noche, los ángeles <w type="rhyme"
+                     >sudando</w>,</l>
+               <l met="+-+--+--+---+-" rhyme="-">qué cuajados silencios al grito sucedieran,</l>
+               <l met="---+-+---+--+-" rhyme="C" enjamb="ex_dobj_verb">en la final estrella de
+                  occidente <w type="rhyme">temblando</w></l>
+               <l met="-+-+-+---+--+-" rhyme="-">la luz de aquel zodíaco purpurado perdiera.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-++---+--+---+" rhyme="D">Y ya manos el caballo, su furia <w type="rhyme"
+                     >dominada</w>,</l>
+               <l met="-+---+--+---+-" rhyme="E">estéril para siempre, sin bella <w type="rhyme"
+                     >descendencia</w>,</l>
+               <l met="+--+-+--+--+-" rhyme="F">sacro el cuchillo vil en la mano sin <w type="rhyme"
+                     >freno</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--+-+--+---+-" rhyme="D" enjamb="pb_noun_prep">sólo el silencio agudo, la
+                  música <w type="rhyme">apagada</w></l>
+               <l met="-+---+--+---+-" rhyme="E">del sol sobre los montes, y el acto de <w
+                     type="rhyme">violencia</w>,</l>
+               <l met="-+-+-+---+--+-" rhyme="F">terriblemente duro, sin dulzura, y <w type="rhyme"
+                     >obsceno</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s690n_2471">
+            <head>Aspiración prosaica</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--+-+++-" rhyme="A">Que al llegar el verano no sea <w type="rhyme"
+                     >pobre</w></l>
+               <l met="---+---+++-" rhyme="B">porque en Sevilla la calor te <w type="rhyme"
+                  >mata</w></l>
+               <l met="---+-+-+-+-" rhyme="B" enjamb="pb_noun_prep">y que en la playa esté con una
+                     <w type="rhyme">lata</w></l>
+               <l met="-+-+---+++-" rhyme="A">de coca cola, y que el money me <w type="rhyme"
+                     >sobre</w></l>
+            </lg>
+            <lg n="2" type="unknown">
+               <l met="+++--+-+++-" rhyme="C">Ya sé que este soneto no lo <w type="rhyme"
+                  >vale</w>,</l>
+               <l met="++-+-+---+-" rhyme="D">no me darán por él ni mil <w type="rhyme"
+                  >pesetas</w></l>
+               <l met="-+-+-+--++-" rhyme="C">y el alma ente verso se me <w type="rhyme"
+                  >sale</w></l>
+               <l met="--+--+---+-" rhyme="E">como inmenso geranio de <w type="rhyme">maceta</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++-+-----+-" rhyme="D">Doy este verso por cien mil <w type="rhyme"
+                     >pesetas</w>,</l>
+               <l met="+-++++---+-" rhyme="F">loco no estoy, tan sólo por diez <w type="rhyme"
+                     >mil</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="G">quizás por mil, ¿por cien, por diez, por <w
+                     type="rhyme">una</w>?</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+---+-+-" rhyme="E">Ay qué penar de desolado <w type="rhyme"
+                  >asceta</w>,</l>
+               <l met="-++--+++-+-" rhyme="F" enjamb="ex_subj_verb">y luego han de decir que es algo
+                     <w type="rhyme">vil</w></l>
+               <l met="-+-+-+---+-" rhyme="G">querer vender el brillo de la <w type="rhyme"
+                  >luna</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s690n_2472">
+            <head>La trampa del cazador</head>
+            <lg n="1" type="serventesio">
+               <l met="-----+---+-" rhyme="A" enjamb="pb_adj_noun">Después de que escondiera la <w
+                     type="rhyme">violenta</w></l>
+               <l met="+--+-+---+-" rhyme="B">forma de vil metal para la <w type="rhyme"
+                  >muerte</w>,</l>
+               <l met="-----+---+-" rhyme="A" enjamb="pb_noun_prep">después de que tomara de la <w
+                     type="rhyme">absenta</w></l>
+               <l met="--+--+-+-+-" rhyme="B">de la sombra del bosque más <w type="rhyme"
+                  >inerte</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+---+-" rhyme="C">acechó el animal <w type="rhyme">semidesnudo</w></l>
+               <l met="--+-+++--+-" rhyme="D">pretendiéndole el mal sólo por <w type="rhyme"
+                     >vicio</w></l>
+               <l met="-+-+---+++-" rhyme="C" enjamb="pb_verb_chain">y ya de vuelta el evitar no <w
+                     type="rhyme">pudo</w></l>
+               <l met="-+---+---+-" rhyme="D">caer sobre su propio <w type="rhyme"
+                  >precipicio</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+-+-+-" rhyme="E">De lirio y de metal brilló el <w type="rhyme"
+                     >acero</w></l>
+               <l met="++---+---+-" rhyme="F" enjamb="ex_subj_verb">más frío que moneda <w
+                     type="rhyme">despiadada</w></l>
+               <l met="-++--+-+-+-" rhyme="E" enjamb="ex_dobj_verb">llevó púrpura manto aquel <w
+                     type="rhyme">enero</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--++-+---+-" rhyme="F">y la luna una insignia <w type="rhyme"
+                     >ensangrentada</w></l>
+               <l met="--+--+-+-+-" rhyme="E">Con mi propia violencia me <w type="rhyme"
+                  >lacero</w>,</l>
+               <l met="-+-+-+---+-" rhyme="F">mi propio cepo me hace de <w type="rhyme"
+                  >almohada</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s690n_2473">
+            <head>La trampa del cazador</head>
+            <lg n="1" type="unknown">
+               <l met="-+---+-+-+-" rhyme="A">La trampa de metal brilló <w type="rhyme"
+                     >sangrienta</w></l>
+               <l met="---+---+-+-" rhyme="-">ay con la sangre de su propio dueño,</l>
+               <l met="++---+---+-" rhyme="A" enjamb="pb_adj_noun">no fue de hechicería su <w
+                     type="rhyme">violenta</w></l>
+               <l met="---+-+---+-" rhyme="-">ponzoñación de tigres y beleños.</l>
+            </lg>
+            <lg n="2" type="unknown">
+               <l met="--+--+---+-" rhyme="B">Olvidose el lascivo su <w type="rhyme">mordida</w></l>
+               <l met="--+--+---+-" rhyme="-">y su vil herramienta lacerante,</l>
+               <l met="---+-+-+-+-" rhyme="B" enjamb="ex_dobj_verb">y de su cruel lascivia fue <w
+                     type="rhyme">medida</w></l>
+               <l met="-+---+---+-" rhyme="-">su sangre de rubíes y diamantes.</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+-+---+-" rhyme="C">Por olvidar la trampa en la <w type="rhyme"
+                     >negrura</w></l>
+               <l met="-+---+---+-" rhyme="D">sufrió de su ignorancia su <w type="rhyme"
+                  >castigo</w>,</l>
+               <l met="-+---+---+-" rhyme="C">del mal que pretendió la <w type="rhyme"
+                  >mordedura</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+---+-" rhyme="-">nopales tenebrosos por amigos,</l>
+               <l met="--+-+----+-" rhyme="C">y locura terrible a su <w type="rhyme">locura</w></l>
+               <l met="-+--++---+-" rhyme="D">haciendo de sí mismo su <w type="rhyme"
+                  >enemigo</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

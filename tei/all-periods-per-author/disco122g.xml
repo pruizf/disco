@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_122g">
+            <title property="dc:title">Sonetos de Vicente Espinel</title>
+            <author property="dc:creator" resource="disco:122g" corresp="#disco_122g">Vicente
+               Espinel</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">179</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_122g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_122g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_122g" about="disco:122g" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso" resource="https://viaf.org/viaf/7514766"/>
+                  <persName type="short">Espinel</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Vicente</forename>
+                     <surname property="foaf:familyName">Espinel</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Vicente Espinel</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Ronda</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1550" cert="high"/>
+                     <date type="century">16</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1624" cert="high"/>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s122g_0247">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Blanco marfil, que del
+                           profundo centro</title>
+                     </bibl>
+                     <bibl resource="disco:s122g_0248">
+                        <title property="dc:title">A San Isidro</title>
+                        <title type="incipit" property="dc:alternative">Los campos de Madrid, Isidro
+                           santo,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Vicente Espinel</head>
+            <p>Ronda. 1550 - 1624</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s122g_0247">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A" enjamb="pb_noun_prep">Blanco marfil, que del profundo
+                     <w type="rhyme">centro</w></l>
+               <l met="-+---+-+-+-" rhyme="B">con fuerza natural, que en mí <w type="rhyme"
+                     >mostraste</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="B">la más subida prenda me <w type="rhyme"
+                  >arrancaste</w></l>
+               <l met="-+-+---+-+-" rhyme="A">que tiene el alma del sentido <w type="rhyme"
+                     >adentro</w>;</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--+-+-+-" rhyme="A">trasparente cristal que fuera y <w type="rhyme"
+                     >dentro</w></l>
+               <l met="---+---+-+-" rhyme="B" enjamb="ex_subj_verb">la compostura del divino <w
+                     type="rhyme">engaste</w></l>
+               <l met="+--+-+-+-+-" rhyme="B" enjamb="pb_verb_chain">tienes con tanta luz, o no hay
+                  quien <w type="rhyme">baste</w></l>
+               <l met="--+--+-+-+-" rhyme="A">a tener resistencia al vivo <w type="rhyme"
+                     >encuentro</w>;</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-+---+-+-" rhyme="C">nevada mano artificiosa y <w type="rhyme"
+                  >pura</w>,</l>
+               <l met="-+---+---+-" rhyme="D" enjamb="pb_adj_noun">del más purificado y <w
+                     type="rhyme">excelente</w></l>
+               <l met="-+-+-+-+-+-" rhyme="E">metal, del mundo en gran razón <w type="rhyme"
+                     >compuesta</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+----+---+-" rhyme="C" enjamb="pb_adj_noun">manos en quien las fuerzas de <w
+                     type="rhyme">ventura</w></l>
+               <l met="+--+-+-+-+-" rhyme="D" enjamb="ex_dobj_verb">puestas están, dichoso aquel que
+                     <w type="rhyme">siente</w></l>
+               <l met="-+-+---+-+-" rhyme="E">en tales manos su esperanza <w type="rhyme"
+                  >puesta</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s122g_0248">
+            <head>A San Isidro</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+-+-+-" rhyme="A">Los campos de Madrid, Isidro <w type="rhyme"
+                  >santo</w>,</l>
+               <l met="+--+-++--+-" rhyme="B">cielos parecen ya, luces sus <w type="rhyme"
+                     >flores</w>,</l>
+               <l met="-++-++---+-" rhyme="B">pues los aran tan nuevos <w type="rhyme"
+                     >labradores</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="A">que dan envidia al sol y al cielo <w type="rhyme"
+                     >espanto</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A" enjamb="pb_adj_noun">Con nueva escala de Jacob el <w
+                     type="rhyme">manto</w></l>
+               <l met="+--+-+---+-" rhyme="B">rompen de Juno en cándidos <w type="rhyme"
+                     >fulgores</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B" enjamb="pb_adj_noun">lucháis con Dios, y por llorar de
+                     <w type="rhyme">amores</w></l>
+               <l met="--+--+++-+-" rhyme="A">soberana Raquel os premia el <w type="rhyme"
+                     >llanto</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++-+---+-+-" rhyme="C">¡Qué bien trocó vuestro divino <w type="rhyme"
+                     >celo</w></l>
+               <l met="--+--++--+-" rhyme="D">por jardines de sol campos de <w type="rhyme"
+                  >luto</w>!</l>
+               <l met="++++---+-+-" rhyme="C">¡qué bien os llama vuestro patrio <w type="rhyme"
+                     >suelo</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="--+--+---+-" rhyme="D">Labrador celestial por <w type="rhyme"
+                  >atributo</w>!</l>
+               <l met="-+---+---+-" rhyme="C">Pues cogen vuestros ojos en el <w type="rhyme"
+                     >cielo</w>,</l>
+               <l met="-+-+-+---+-" rhyme="D">sembrando aquí sus lágrimas el <w type="rhyme"
+                     >fruto</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

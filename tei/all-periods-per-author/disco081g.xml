@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_081g">
+            <title property="dc:title">Sonetos de Bartolomé Sánchez</title>
+            <author property="dc:creator" resource="disco:081g" corresp="#disco_081g">Bartolomé
+               Sánchez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">171</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_081g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_081g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_081g" about="disco:081g" typeOf="foaf:Person">
+                  <idno cert="low" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/217144450"/>
+                  <persName type="short">Sánchez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Bartolomé</forename>
+                     <surname property="foaf:familyName">Sánchez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Bartolomé Sánchez</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s081g_0141">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Los que con gracia quieran
+                           ver y aviso</title>
+                     </bibl>
+                     <bibl resource="disco:s081g_0142">
+                        <title property="dc:title">Soneto</title>
+                        <title type="incipit" property="dc:alternative">Habéis echado el sello a
+                           nuestra ciencia</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Bartolomé Sánchez</head>
+            <p>Cuba. 17th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s081g_0141">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="---+-+-+-+-" rhyme="A" enjamb="ex_dobj_verb">Los que con gracia quieran ver y
+                     <w type="rhyme">aviso</w></l>
+               <l met="+-+--+---+-" rhyme="B">un Silvestre galán y <w type="rhyme"
+                  >cortesano</w>,</l>
+               <l met="+----+---+-" rhyme="B">vengan a Puerto Príncipe <w type="rhyme"
+                  >cristiano</w></l>
+               <l met="---+++---+-" rhyme="A">y gozarán de un nuevo <w type="rhyme">paraíso</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+---+-" rhyme="A" ana="seseo">De nuestro frágil vidrio <w type="rhyme"
+                     >quebradizo</w></l>
+               <l met="-+-+-+---+-" rhyme="B">verá un ejemplo raro y <w type="rhyme"
+                  >soberano</w></l>
+               <l met="---+-+---+-" rhyme="B">en la prisión del buen <w type="rhyme"
+                  >Altamirano</w>,</l>
+               <l met="---+-+--++-" rhyme="A">a quien con ella Dios regalar <w type="rhyme"
+                     >quiso</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+-----+-" rhyme="C">Gracias al buen Silvestre de <w type="rhyme"
+                     >Balboa</w>,</l>
+               <l met="--++-+-+-+-" rhyme="D" enjamb="pb_verb_cprep">que por tan dulce estilo nos <w
+                     type="rhyme">declara</w></l>
+               <l met="-+-+-+---+-" rhyme="E">de aqueste santo Obispo la <w type="rhyme"
+                     >paciencia</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+-+--+-+-+-" rhyme="C">Bien merece desde hoy eterna <w type="rhyme"
+                  >loa</w>,</l>
+               <l met="---+-+---+-" rhyme="D" enjamb="cc_crossclause">y el generoso Obispo de la <w
+                     type="rhyme">tiara</w></l>
+               <l met="-+-+---+-+-" rhyme="E">que tiene el mundo de mayor <w type="rhyme"
+                     >potencia</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s081g_0142">
+            <head>Soneto</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A">Habéis echado el sello a nuestra <w type="rhyme"
+                     >ciencia</w></l>
+               <l met="-+-+-+-+-+-" rhyme="B">con tal sublime obra, buen <w type="rhyme"
+                  >Silvano</w>,</l>
+               <l met="-+---+---+-" rhyme="B" enjamb="ex_dobj_verb">diciendo del ilustre <w
+                     type="rhyme">Altamirano</w></l>
+               <l met="--+--+---+-" rhyme="A">el valor, cristiandad y la <w type="rhyme"
+                     >paciencia</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--++--+-" rhyme="A" enjamb="cc_crossclause">Infalible verdad fue la <w
+                     type="rhyme">pendencia</w></l>
+               <l met="-+-+-----+-" rhyme="B">que Ramos tuvo con el <w type="rhyme"
+                  >luterano</w>;</l>
+               <l met="-+-+---+-+-" rhyme="B">vengó al Pastor la poderosa <w type="rhyme"
+                  >mano</w>,</l>
+               <l met="+-+--+---+-" rhyme="A">dándonos a entender su <w type="rhyme"
+                     >omnipotencia</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+-+++-" rhyme="C">Que al humilde levanta y le da <w type="rhyme"
+                  >loa</w>,</l>
+               <l met="--+--++--+-" rhyme="D">y al soberbio arrogante echa por <w type="rhyme"
+                     >tierra</w>;</l>
+               <l met="-+---++--+-" rhyme="E">estilo del Señor muy <w type="rhyme">ordinario</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+-+-+-" rhyme="C">Recibe de mi mano, buen <w type="rhyme"
+                  >Balboa</w>,</l>
+               <l met="+--+-+---+-" rhyme="D">este soneto criollo de la <w type="rhyme"
+                  >tierra</w>,</l>
+               <l met="-----+---+-" rhyme="E">en señal de que soy su <w type="rhyme"
+                  >tributario</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

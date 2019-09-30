@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_262n">
+            <title property="dc:title">Sonetos de Heliodoro María Jalón</title>
+            <author property="dc:creator" resource="disco:262n" corresp="#disco_262n">Heliodoro
+               María Jalón</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">186</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_262n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_262n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_262n" about="disco:262n" typeOf="foaf:Person">
+                  <persName type="short">Jalón</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Heliodoro María</forename>
+                     <surname property="foaf:familyName">Jalón</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Heliodoro María Jalón</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s262n_0850">
+                        <title property="dc:title">El cofrade</title>
+                        <title type="incipit" property="dc:alternative">De la gente de Iglesia busca
+                           el trato</title>
+                     </bibl>
+                     <bibl resource="disco:s262n_0851">
+                        <title property="dc:title">En el templo</title>
+                        <title type="incipit" property="dc:alternative">Allí está, en un rincón de
+                           la capilla;</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Heliodoro María Jalón</head>
+            <p>España. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s262n_0850">
+            <head>El cofrade</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+--+-+-+-" rhyme="A">De la gente de Iglesia busca el <w type="rhyme"
+                     >trato</w></l>
+               <l met="--+--+-+-+-" rhyme="B">y profunda adhesión demuestra al <w type="rhyme"
+                     >clero</w>,</l>
+               <l met="---+-+---+-" rhyme="B">hasta que al fin, hipócrita y <w type="rhyme"
+                     >artero</w>,</l>
+               <l met="--+--++--+-" rhyme="A">la cuchara meter logra en su <w type="rhyme"
+                  >plato</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A">De una hermandad entonces el <w type="rhyme"
+                  >beato</w></l>
+               <l met="-+---+---+-" rhyme="B">llegando a contador o <w type="rhyme">tesorero</w></l>
+               <l met="-+---+---+-" rhyme="B" enjamb="ex_dobj_verb">maneja de los fieles el <w
+                     type="rhyme">dinero</w></l>
+               <l met="-+-+-+---+-" rhyme="A">y triunfa, gasta y vive con <w type="rhyme"
+                  >boato</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+---+-+-" rhyme="C" enjamb="ex_subj_verb">Mas su misión con entusiasmo <w
+                     type="rhyme">llena</w></l>
+               <l met="--+--+++-+-" rhyme="D">y su santo fervor no tiene <w type="rhyme"
+                  >oculto</w>;</l>
+               <l met="-+---+---+-" rhyme="C">que en misa, en el rosario, en la <w type="rhyme"
+                     >novena</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+-+-+-" rhyme="D">en toda procesión haciendo <w type="rhyme"
+                  >bulto</w></l>
+               <l met="---+---+-+-" rhyme="C">y usufructuando la piedad <w type="rhyme"
+                  >ajena</w>,</l>
+               <l met="-++--+---+-" rhyme="D">se mira a ese parásito del <w type="rhyme"
+                  >culto</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s262n_0851">
+            <head>En el templo</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+++-+---+-" rhyme="A">Allí está, en un rincón de la <w type="rhyme"
+                     >capilla</w>;</l>
+               <l met="-++-+----+-" rhyme="B">sombrío se alza allí el <w type="rhyme"
+                     >confesionario</w>;</l>
+               <l met="-++--+---+-" rhyme="B">al pie el libro devoto y el <w type="rhyme"
+                     >rosario</w>,</l>
+               <l met="-+---+---+-" rhyme="A">tapando con el manto la <w type="rhyme"
+                  >rejilla</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="---+-+---+-" rhyme="A">Y con febril color en la <w type="rhyme"
+                  >mejilla</w></l>
+               <l met="-+---+++-+-" rhyme="B">recuerda que su historia es un <w type="rhyme"
+                     >calvario</w></l>
+               <l met="-+---++--+-" rhyme="B" enjamb="cc_crossclause">y que es su corazón un <w
+                     type="rhyme">tenebrario</w></l>
+               <l met="-+-+---+-+-" rhyme="A">donde aún la luz de la esperanza <w type="rhyme"
+                     >brilla</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="---+-+-+-+-" rhyme="C">Al confesor la enmienda le <w type="rhyme"
+                  >promete</w>;</l>
+               <l met="--+--+---+-" rhyme="D">pero pronto quebranta su <w type="rhyme"
+                  >promesa</w>,</l>
+               <l met="-++-++-+-+-" rhyme="C">y peca una vez más, y cinco y <w type="rhyme"
+                     >siete</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+-+-+-" rhyme="D">y lleva al confesor igual <w type="rhyme"
+                  >remesa</w>,</l>
+               <l met="--+--+---+-" rhyme="C">y confiesa el pecado que <w type="rhyme"
+                  >comete</w>,</l>
+               <l met="--+--+---+-" rhyme="D">y comete el pecado que <w type="rhyme"
+                  >confiesa</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_055n">
+            <title property="dc:title">Sonetos de Martina Pierra de Poo</title>
+            <author property="dc:creator" resource="disco:055n" corresp="#disco_055n">Martina Pierra
+               de Poo</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">178</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_055n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_055n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_055n" about="disco:055n" typeOf="foaf:Person">
+                  <persName type="short">Pierra de Poo</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Martina</forename>
+                     <surname property="foaf:familyName">Pierra de Poo</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Martina Pierra de Poo</persName>
+                  <sex property="foaf:gender" content="F"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Camagüey</settlement>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1833" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">La Habana</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1900" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s055n_0179">
+                        <title property="dc:title">Lucrecia</title>
+                        <title type="incipit" property="dc:alternative">De patrio ardor el corazón
+                           se inflama,</title>
+                     </bibl>
+                     <bibl resource="disco:s055n_0180">
+                        <title property="dc:title">Aulo Gelio</title>
+                        <title type="incipit" property="dc:alternative">Por caprichos de un César
+                           insolente,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Martina Pierra de Poo</head>
+            <p>Camagüey (Cuba). 1833 - 1900</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s055n_0179">
+            <head>Lucrecia</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A">De patrio ardor el corazón se <w type="rhyme"
+                     >inflama</w>,</l>
+               <l met="-+---+---+-" rhyme="B">y lucha en la batalla <w type="rhyme"
+                  >Colatino</w>:</l>
+               <l met="---+---+-+-" rhyme="B">mientras el hijo del feroz <w type="rhyme"
+                     >Tarquino</w>,</l>
+               <l met="+----+-+-+-" rhyme="A">urde contra su honor, horrible <w type="rhyme"
+                     >trama</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-++-+-+-+-" rhyme="A">Vuela aquel do su esposa le <w type="rhyme"
+                     >reclama</w>,</l>
+               <l met="+--+-+---+-" rhyme="B">y oye su acento, noble y <w type="rhyme"
+                  >argentino</w>,</l>
+               <l met="-++--++--+-" rhyme="B">que le dice morir es mi <w type="rhyme"
+                  >destino</w>,</l>
+               <l met="-+-+--+--+-" rhyme="A">manché mi honor, pero salve tu <w type="rhyme"
+                     >fama</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+-----+-+-" rhyme="C">Perdona, pues, si a nuestro amor <w type="rhyme"
+                     >esquiva</w>,</l>
+               <l met="---+---+-+-" rhyme="D" enjamb="pb_adj_prep">y de vergüenza y de dolor <w
+                     type="rhyme">cubierta</w></l>
+               <l met="+-+--+--++-" rhyme="C">un puñal en mi seno calvé <w type="rhyme"
+                  >altiva</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+--++--+-+-" rhyme="D">Ya la existencia es para mí <w type="rhyme"
+                     >desierta</w></l>
+               <l met="+--+---+++-" rhyme="C">Y antes que intentes perdonarme, <w type="rhyme"
+                     >viva</w>,</l>
+               <l met="-+-+--++-+-" rhyme="D">¡honrada quiero que me llores <w type="rhyme"
+                     >muerta</w>!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s055n_0180">
+            <head>Aulo Gelio</head>
+            <lg n="1" type="cuarteto">
+               <l met="--+-++---+-" rhyme="A">Por caprichos de un César <w type="rhyme"
+                     >insolente</w>,</l>
+               <l met="-+-+++---+-" rhyme="B">que humilde acata un pueblo <w type="rhyme"
+                     >corrompido</w>,</l>
+               <l met="-----+---+-" rhyme="B">en el Circo de Roma, <w type="rhyme"
+                  >envilecido</w>,</l>
+               <l met="-+---++--+-" rhyme="A">la inmensa multitud ruge <w type="rhyme"
+                     >impaciente</w></l>
+            </lg>
+            <lg n="2" type="unknown">
+               <l met="+-+---+--+-" rhyme="A">Salta el león sobre la arena <w type="rhyme"
+                     >ardiente</w>:</l>
+               <l met="-+---+---+-" rhyme="B">sacude su melena <w type="rhyme">enfurecido</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">arrójase a su víctima <w type="rhyme"
+                  >atrevido</w>,</l>
+               <l met="--+--+---+-" rhyme="A">y al llegar retrocede de <w type="rhyme"
+                  >repente</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--+-+-+-" rhyme="C">El esclavo infeliz, Androcles <w type="rhyme"
+                  >era</w></l>
+               <l met="+-+--++--+-" rhyme="D">le conoce el león, lame su <w type="rhyme"
+                  >mano</w></l>
+               <l met="-+-+---+-+-" rhyme="C">en prueba fiel de gratitud <w type="rhyme"
+                  >sincera</w>:</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+---+-+-" rhyme="D" enjamb="ex_dobj_verb">Acción hermosa que enseñó al <w
+                     type="rhyme">Romano</w></l>
+               <l met="+++--+---+-" rhyme="C" enjamb="cc_crossclause">que es más noble el instinto
+                  de la <w type="rhyme">fiera</w></l>
+               <l met="-+---+-+-+-" rhyme="D">que el alma despreciable de un <w type="rhyme"
+                     >tirano</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

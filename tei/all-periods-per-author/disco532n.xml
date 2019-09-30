@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_532n">
+            <title property="dc:title">Sonetos de Alejandro Tapia y Rivera</title>
+            <author property="dc:creator" resource="disco:532n" corresp="#disco_532n">Alejandro
+               Tapia y Rivera</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">163</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_532n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_532n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_532n" about="disco:532n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/10007370"/>
+                  <persName type="short">Tapia y Rivera</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Alejandro</forename>
+                     <surname property="foaf:familyName">Tapia y Rivera</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Alejandro Tapia y Rivera</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Puerto Rico</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">19</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s532n_1975">
+                        <title property="dc:title">Al digno y sabio intendente don Alejandro
+                           Ramírez</title>
+                        <title type="incipit" property="dc:alternative">Triste la hermosa Borinquen
+                           gemía</title>
+                     </bibl>
+                     <bibl resource="disco:s532n_1976">
+                        <title property="dc:title">Los ojos de...</title>
+                        <title type="incipit" property="dc:alternative">¿Me preguntas, pintor, que
+                           cómo quiero</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Alejandro Tapia y Rivera</head>
+            <p>Puerto Rico. 19th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s532n_1975">
+            <head>Al digno y sabio intendente don Alejandro Ramírez</head>
+            <lg n="1" type="cuarteto">
+               <l met="+--+--+--+-" rhyme="A" enjamb="pb_verb_chain">Triste la hermosa Borinquen <w
+                     type="rhyme">gemía</w></l>
+               <l met="--+--+---+-" rhyme="B">arrastrando la mísera <w type="rhyme">pobreza</w>,</l>
+               <l met="+--+---+-+-" rhyme="B" enjamb="ex_subj_verb">ella que el don de perenal <w
+                     type="rhyme">riqueza</w></l>
+               <l met="--+--+---+-" rhyme="A">en sus campos feraces <w type="rhyme">contenía</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+---+-+-+-" rhyme="A" enjamb="pb_verb_adv">El cielo que amoroso la <w
+                     type="rhyme">quería</w></l>
+               <l met="++---+---+-" rhyme="B">no pudo consentir en su <w type="rhyme"
+                  >terneza</w></l>
+               <l met="--+-++---+-" rhyme="B">que sufriese tan bárbara <w type="rhyme"
+                  >dureza</w>,</l>
+               <l met="--+--++--+-" rhyme="A">la que el yugo del mal no <w type="rhyme"
+                  >merecía</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+--+-+--+-" rhyme="C">De Power escuchó la alta <w type="rhyme"
+                  >plegaria</w></l>
+               <l met="--+--++--+-" rhyme="D">(del patriótico amor grato <w type="rhyme"
+                  >suspiro</w>)</l>
+               <l met="--+--++--+-" rhyme="C" enjamb="ex_dobj_verb">y ordenó que a cambiar la era <w
+                     type="rhyme">precaria</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---++--+-" rhyme="D" enjamb="ex_dobj_verb">en rico bienestar, fuese <w
+                     type="rhyme">Ramiro</w></l>
+               <l met="-+---+-+-+-" rhyme="E" enjamb="ex_subj_verb">Ramiro bienhechor, tu noble <w
+                     type="rhyme">historia</w></l>
+               <l met="--+--+---+-" rhyme="E">grabará Puerto Rico en su <w type="rhyme"
+                  >memoria</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s532n_1976">
+            <head>Los ojos de...</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-+--+-+-+-" rhyme="A" enjamb="ex_dobj_verb">¿Me preguntas, pintor, que cómo
+                     <w type="rhyme">quiero</w></l>
+               <l met="-+---+---+-" rhyme="B" enjamb="pb_noun_prep">que pintes el mirar y la <w
+                     type="rhyme">hermosura</w></l>
+               <l met="-+-+-+-+-+-" rhyme="B">de aquellos ojos do el Edén <w type="rhyme"
+                     >fulgura</w>,</l>
+               <l met="-+-+--++-+-" rhyme="A">de aquellos ojos por qué vivo y <w type="rhyme"
+                     >muero</w>?</l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+---+-+-" rhyme="A">Copia el fulgor de matinal <w type="rhyme"
+                  >lucero</w>,</l>
+               <l met="--+--+---+-" rhyme="B">de gacela apacible la <w type="rhyme">dulzura</w>,</l>
+               <l met="--+--+---+-" rhyme="B">de la tórtola amante la <w type="rhyme"
+                  >ternura</w>,</l>
+               <l met="-+---+---+-" rhyme="A">el brillo del diamante <w type="rhyme"
+                  >lisonjero</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--+--++--+-" rhyme="C" enjamb="cc_crossclause">Los habrás de pintar grandes y
+                     <w type="rhyme">vivos</w></l>
+               <l met="--+--+---+-" rhyme="D" enjamb="pb_noun_prep">donde luzca la antorcha <w
+                     type="rhyme">bendecida</w></l>
+               <l met="-+---++--+-" rhyme="C">del noble meditar, muy <w type="rhyme"
+                  >expresivos</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+---+-" rhyme="D">con dulce vaguedad <w type="rhyme">indefinida</w>;</l>
+               <l met="+-++-++--+-" rhyme="C" enjamb="pb_adj_prep">¿quieres darles aún más <w
+                     type="rhyme">atractivos</w></l>
+               <l met="---+-+++-+-" rhyme="D">de apasionado amor? dales la <w type="rhyme"
+                  >vida</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

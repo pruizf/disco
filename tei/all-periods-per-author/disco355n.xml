@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_355n">
+            <title property="dc:title">Sonetos de Manuel Martínez Barrionuevo</title>
+            <author property="dc:creator" resource="disco:355n" corresp="#disco_355n">Manuel
+               Martínez Barrionuevo</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">96</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_355n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_355n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_355n" about="disco:355n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso"
+                     resource="https://viaf.org/viaf/12046283"/>
+                  <persName type="short">Martínez Barrionuevo</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Manuel</forename>
+                     <surname property="foaf:familyName">Martínez Barrionuevo</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Manuel Martínez
+                     Barrionuevo</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Málaga</settlement>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1857" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:deathPlace" inlist="">Madrid</settlement>
+                        </placeName>
+                     </location>
+                     <date property="schema:deathDate" content="1917" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s355n_1243">
+                        <title property="dc:title">¡Madre!</title>
+                        <title type="incipit" property="dc:alternative">Siempre te miro, siempre,
+                           madre mía,</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Manuel Martínez Barrionuevo</head>
+            <p>Málaga. 1857 - 1917</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s355n_1243">
+            <head>¡Madre!</head>
+            <lg n="1" type="cuarteto">
+               <l met="+-++-+-+-+-" rhyme="A">Siempre te miro, siempre, madre <w type="rhyme"
+                     >mía</w>,</l>
+               <l met="--+--+-+-+-" rhyme="B" enjamb="ex_subj_verb">de tu vida llevar la triste <w
+                     type="rhyme">carga</w></l>
+               <l met="---+-+++-+-" rhyme="B">y por tu santo amor, es menos <w type="rhyme"
+                     >larga</w></l>
+               <l met="-+---+---+-" rhyme="A">y menos dolorosa mi <w type="rhyme">agonía</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+++-+-+--+-" rhyme="A" enjamb="pb_verb_chain">¡Qué no te quiero dices! ¿Quién
+                     <w type="rhyme">podría</w></l>
+               <l met="---+-+--++-" rhyme="B">asegurar la duda que te <w type="rhyme"
+                  >embarga</w>?</l>
+               <l met="-+-+---+-+-" rhyme="B">¡Si tú haces dulce mi existencia <w type="rhyme"
+                     >amarga</w>!</l>
+               <l met="--+--+-+-+-" rhyme="A">¡Si conviertes mi noche en claro <w type="rhyme"
+                     >día</w>!</l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++++-+---+-" rhyme="C">¿Qué no te beso nunca,? Lo <w type="rhyme"
+                     >confieso</w>,</l>
+               <l met="--+--+++-+-" rhyme="D">y que llegue a besarte nunca <w type="rhyme"
+                     >esperes</w></l>
+               <l met="---+---+-+-" rhyme="C">aunque dudaras de mi amor por <w type="rhyme"
+                  >eso</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+-+---+-+-" rhyme="D">¿Por qué mis besos y caricias <w type="rhyme"
+                     >quieres</w>,</l>
+               <l met="-+-+-+-+-+-" rhyme="C">si te pondrá una mancha a cada <w type="rhyme"
+                     >beso</w></l>
+               <l met="-+-+-++--+-" rhyme="D">la boca que ha besado otras <w type="rhyme"
+                     >mujeres</w>?</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

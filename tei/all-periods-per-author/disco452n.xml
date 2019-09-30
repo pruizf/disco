@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_452n">
+            <title property="dc:title">Sonetos de Amada Rosa Rodríguez</title>
+            <author property="dc:creator" resource="disco:452n" corresp="#disco_452n">Amada Rosa
+               Rodríguez</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">153</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_452n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_452n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_452n" about="disco:452n" typeOf="foaf:Person">
+                  <persName type="short">Rodríguez</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Amada Rosa</forename>
+                     <surname property="foaf:familyName">Rodríguez</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Amada Rosa Rodríguez</persName>
+                  <sex property="foaf:gender" content="F"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s452n_1733">
+                        <title property="dc:title">Vida campestre</title>
+                        <title type="incipit" property="dc:alternative">El céfiro ligero,
+                           suavemente</title>
+                     </bibl>
+                     <bibl resource="disco:s452n_1734">
+                        <title property="dc:title">Quisiera</title>
+                        <title type="incipit" property="dc:alternative">Quisiera yo dejar estos
+                           lugares</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Amada Rosa Rodríguez</head>
+            <p>Cuba. 19th century - 20th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s452n_1733">
+            <head>Vida campestre</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+---+-+-+-" rhyme="A" enjamb="ex_subj_verb">El céfiro ligero, <w
+                     type="rhyme">suavemente</w></l>
+               <l met="-+---+---+-" rhyme="B">las flores del jardín <w type="rhyme"
+                  >acariciando</w>,</l>
+               <l met="--+--+---+-" rhyme="B">a lo lejos el sol <w type="rhyme">agonizando</w></l>
+               <l met="---+-+---+-" rhyme="A">en su rosado lecho de <w type="rhyme"
+                  >occidente</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+--+-+---+-" rhyme="A">Cerca de aquí un arroyo <w type="rhyme"
+                     >transparente</w>,</l>
+               <l met="-++--+---+-" rhyme="B">al pie de una colina <w type="rhyme"
+                  >murmurando</w>;</l>
+               <l met="---+-+---+-" rhyme="B" enjamb="ex_dobj_verb">y los frondosos árboles <w
+                     type="rhyme">mirando</w></l>
+               <l met="--+--+---+-" rhyme="A">sus siluetas que copia la <w type="rhyme"
+                     >corriente</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++-+-+---+-" rhyme="C">No lejos una palma <w type="rhyme">majestuosa</w></l>
+               <l met="--+--+-+-+-" rhyme="D">sus penachos meciendo a gran <w type="rhyme"
+                     >altura</w>;</l>
+               <l met="-+---+---+-" rhyme="C">la noche, con su sombra <w type="rhyme"
+                  >misteriosa</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="-+---+---+-" rhyme="D">borrando los encantos de <w type="rhyme"
+                  >Natura</w>;</l>
+               <l met="-++--+---+-" rhyme="C">y yo sola, en mi alcoba <w type="rhyme"
+                  >silenciosa</w>,</l>
+               <l met="-+---+---+-" rhyme="D">buscando distracción en la <w type="rhyme"
+                  >lectura</w></l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s452n_1734">
+            <head>Quisiera</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-++--+-" rhyme="A">Quisiera yo dejar estos <w type="rhyme"
+                  >lugares</w></l>
+               <l met="-+---++--+-" rhyme="B">para ir a conocer otras <w type="rhyme"
+                  >naciones</w>,</l>
+               <l met="-----+---+-" rhyme="B" enjamb="pb_adj_noun">con nuestros juveniles <w
+                     type="rhyme">corazones</w></l>
+               <l met="+----+---+-" rhyme="A">libres de desengaños y <w type="rhyme">pesares</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A" enjamb="cc_crossclause">Dejara yo mi patria y mis <w
+                     type="rhyme">palmares</w></l>
+               <l met="--+--+---+-" rhyme="B">donde vivo sin necias <w type="rhyme"
+                  >ambiciones</w>,</l>
+               <l met="---+-++--+-" rhyme="B">por conocer el sol de otras <w type="rhyme"
+                     >regiones</w></l>
+               <l met="---+---+-+-" rhyme="A">y atravesar los insondables <w type="rhyme"
+                  >mares</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="-+---+-+-+-" rhyme="C" enjamb="ex_dobj_verb">Quisiera recorrer <w
+                     type="rhyme">alegremente</w></l>
+               <l met="+-+--+---+-" rhyme="D">un país para mí <w type="rhyme">desconocido</w>,</l>
+               <l met="--++-+-+-+-" rhyme="C">respirar otra atmósfera, otro <w type="rhyme"
+                     >ambiente</w>;</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+---+-" rhyme="D">y sin dejar a Cuba en el <w type="rhyme"
+                  >olvido</w>,</l>
+               <l met="-----+-+-+-" rhyme="C">como la golondrina, <w type="rhyme"
+                  >nuevamente</w>,</l>
+               <l met="---+---+-+-" rhyme="D">bajo su cielo fabricar mi <w type="rhyme">nido</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

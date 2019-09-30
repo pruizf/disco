@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_350n">
+            <title property="dc:title">Sonetos de Eliseo Giberga</title>
+            <author property="dc:creator" resource="disco:350n" corresp="#disco_350n">Eliseo
+               Giberga</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">2</measure>
+            <measure unit="tokens">193</measure>
+            <measure unit="line">28</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_350n"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XIX</hi> / editados por Ramón García González, <date when="2006"
+               >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc4q861"/>,
+                  <ref target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_350n" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_350n" about="disco:350n" typeOf="foaf:Person">
+                  <idno cert="high" property="rdfs:seeAlso" resource="https://viaf.org/viaf/6082684"/>
+                  <persName type="short">Giberga</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Eliseo</forename>
+                     <surname property="foaf:familyName">Giberga</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Eliseo Giberga</persName>
+                  <sex property="foaf:gender" content="M"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <settlement property="schema:birthPlace" inlist="">Matanzas</settlement>
+                           <country property="schema:birthPlace" inlist="">Cuba</country>
+                           <bloc property="schema:birthPlace" inlist="">América</bloc>
+                        </placeName>
+                     </location>
+                     <date property="schema:birthDate" content="1854" cert="high"/>
+                     <date type="century">19</date>
+                  </birth>
+                  <death>
+                     <date property="schema:deathDate" content="1916" cert="high"/>
+                     <date type="century">20</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s350n_1225">
+                        <title property="dc:title">En el segundo aniversario de la instalación de la
+                           república</title>
+                        <title type="incipit" property="dc:alternative">El breve tallo, que en labor
+                           paciente</title>
+                     </bibl>
+                     <bibl resource="disco:s350n_1226">
+                        <title property="dc:title">Los bueyes</title>
+                        <title type="incipit" property="dc:alternative">De Tejas vino aquel; este de
+                           Honduras;</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Eliseo Giberga</head>
+            <p>Matanzas (Cuba). 1854 - 1916</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s350n_1225">
+            <head>En el segundo aniversario de la instalación de la república</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+---+-+-" rhyme="A" enjamb="pb_adj_adv">El breve tallo, que en labor <w
+                     type="rhyme">paciente</w></l>
+               <l met="++---+-+-+-" rhyme="B">hoy empieza a romper la tierra <w type="rhyme"
+                     >dura</w>,</l>
+               <l met="+--+-+---+-" rhyme="B" enjamb="ex_subj_verb">árbol será mañana, cuya <w
+                     type="rhyme">altura</w></l>
+               <l met="---+---+-+-" rhyme="A">hasta los cielos llevará su <w type="rhyme"
+                  >frente</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="--+--++--+-" rhyme="A" enjamb="pb_verb_adv">Al cansado arador sombra <w
+                     type="rhyme">clemente</w></l>
+               <l met="-++---+--+-" rhyme="B">dará en su hojas y en su fruto <w type="rhyme"
+                     >hartura</w>;</l>
+               <l met="--+--++--+-" rhyme="B">a su pobre heredad cerca <w type="rhyme"
+                  >segura</w>;</l>
+               <l met="--+--+-+-+-" rhyme="A">a su humilde cocina brasa <w type="rhyme"
+                  >ardiente</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="++--+----+-" rhyme="C">Y una y otra, robusta y <w type="rhyme"
+                  >vividora</w>,</l>
+               <l met="+-+--+---+-" rhyme="D">luenga prole, sin término y sin <w type="rhyme"
+                     >cuento</w>,</l>
+               <l met="-+---+-+-+-" rhyme="C">verá en torno del árbol cada <w type="rhyme"
+                     >aurora</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+++--++--+-" rhyme="D">¡Tal, de un pueblo feliz gloria y <w type="rhyme"
+                     >sustento</w>,</l>
+               <l met="--+--+---+-" rhyme="C" enjamb="pb_noun_prep">la República dure <w
+                     type="rhyme">vencedora</w></l>
+               <l met="--+-++-+-+-" rhyme="D">de los tiempos, cien siglos y otros <w type="rhyme"
+                     >ciento</w>!</l>
+            </lg>
+         </lg>
+         <lg type="sonnet" xml:id="s350n_1226">
+            <head>Los bueyes</head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-++--+-" rhyme="A">De Tejas vino aquel; este de <w type="rhyme"
+                     >Honduras</w>;</l>
+               <l met="++--+--+-+-" rhyme="B">y hoy, en otra región, bajo otro <w type="rhyme"
+                     >dueño</w>,</l>
+               <l met="+-+--+---+-" rhyme="B" enjamb="pb_adj_noun">juntos rumian tejano y <w
+                     type="rhyme">hondureño</w></l>
+               <l met="--+--++--+-" rhyme="A">insensibles al cambio, otras <w type="rhyme"
+                     >verduras</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="+-+--+---+-" rhyme="A">Ora sueltos sin yugo en las <w type="rhyme"
+                     >llanuras</w>,</l>
+               <l met="++---+-+-+-" rhyme="B">ya uncidos del arado al santo <w type="rhyme"
+                  >leño</w>,</l>
+               <l met="++---+-+-+-" rhyme="B">ya en lenta digestión, o en largo <w type="rhyme"
+                     >sueño</w>,</l>
+               <l met="+-++-+---+-" rhyme="A">nunca amarga un recuerdo sus <w type="rhyme"
+                     >harturas</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="--++-+---+-" rhyme="C" enjamb="ex_dobj_verb">El establo es su patria Donde <w
+                     type="rhyme">quiera</w></l>
+               <l met="+-++-+--++-" rhyme="D" enjamb="ex_dobj_verb">que are el buey, ni otra tuvo,
+                  ni más <w type="rhyme">quiere</w></l>
+               <l met="-++--+---+-" rhyme="C">que buen pasto y sufrida <w type="rhyme"
+                  >compañera</w></l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="+-+--++--+-" rhyme="E" enjamb="ex_dobj_verb">Más que el hombre feliz, no ha
+                     <w type="rhyme">conocido</w></l>
+               <l met="--+--+-+-+-" rhyme="D">el amor que en el hombre nunca <w type="rhyme"
+                     >muere</w>;</l>
+               <l met="--+--+-+-+-" rhyme="E">el amor de la tierra en que ha <w type="rhyme"
+                     >nacido</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>

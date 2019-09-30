@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt about="disco:au_240g">
+            <title property="dc:title">Sonetos de Aurelia Antonia de Medrano</title>
+            <author property="dc:creator" resource="disco:240g" corresp="#disco_240g">Aurelia
+               Antonia de Medrano</author>
+            <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+            <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+            <principal xml:id="jct">José Calvo Tello</principal>
+            <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+            <respStmt>
+               <resp>Metrical annotation by</resp>
+               <name xml:id="bnc">Borja Navarro Colorado</name>
+            </respStmt>
+            <respStmt>
+               <resp>Rhyme annotation done with <ref
+                     target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed
+                  by</resp>
+               <name xml:id="pp">Petr Plecháč</name>
+            </respStmt>
+         </titleStmt>
+         <extent>
+            <measure unit="sonnets">1</measure>
+            <measure unit="tokens">86</measure>
+            <measure unit="line">14</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+            <availability status="free">
+               <p>The text is freely available</p>
+            </availability>
+            <date when="2019">2019</date>
+            <idno type="#disco" xml:id="file_au_240g"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl type="digital-source">Biblioteca Cervantes Virtual, <hi rend="italics">Sonetos del
+                  siglo XV al XVII</hi> / editados por Ramón García González, <date when="2006"
+                  >2006</date>, <ref target="http://www.cervantesvirtual.com/nd/ark:/59851/bmc2r439"
+               />, <ref
+                  target="http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xv-al-xvii--0/"
+               />.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="es" about="disco:au_240g" property="dc:language"
+               resource="dbpedia:Idioma_español">Spanish</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="disco_240g" about="disco:240g" typeOf="foaf:Person">
+                  <persName type="short">Medrano</persName>
+                  <persName type="full">
+                     <forename property="foaf:givenName">Aurelia Antonia</forename>
+                     <nameLink>de</nameLink>
+                     <surname property="foaf:familyName">Medrano</surname>
+                  </persName>
+                  <persName type="source" property="foaf:name">Aurelia Antonia de Medrano</persName>
+                  <sex property="foaf:gender" content="F"/>
+                  <birth>
+                     <location>
+                        <placeName>
+                           <country property="schema:birthPlace" inlist="">España</country>
+                           <bloc property="schema:birthPlace" inlist="">Europa</bloc>
+                        </placeName>
+                     </location>
+                     <date type="century">17</date>
+                  </birth>
+                  <death>
+                     <date type="century">17</date>
+                  </death>
+                  <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                     <bibl resource="disco:s240g_0502">
+                        <title property="dc:title">Al nunca bastantemente alabado ingenio del doctor </title>
+                        <title type="incipit" property="dc:alternative">Si viendo (o huésped) este
+                           monumento</title>
+                     </bibl>
+                  </listBibl>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+               replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+               replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+         </listPrefixDef>
+         <metDecl type="met" pattern="((\+|\-)+)*">
+            <metSym value="+">stressed syllable</metSym>
+            <metSym value="-">unstressed syllable</metSym>
+         </metDecl>
+         <metDecl type="met">
+            <p>The metrical patterns were extracted automatically using the <ref
+                  target="https://github.com/bncolorado/adsoScansionSystem">ADSO</ref> tool.</p>
+         </metDecl>
+         <metDecl type="enjamb">
+            <p>The values of the <att>enjamb</att> atributes were extracted automatically using the
+                  <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic
+                  eNJambment Analysis)</ref> tool. For more information about the types of
+               enjambment as defined in this corpus, read the <ref
+                  target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                  >documentation</ref>. In addition, a <att>cert</att> was added to express the
+               degree of certainty concerning the characterisation of the enjambment. The following
+                  <ref target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                  >report</ref> covers this feature in deep detail.</p>
+         </metDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age
+            version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
+         <change when="2019-03-14" who="#heb">Added rhyme schemes aided by <name corresp="#pp"
+               >Plecháč</name></change>
+         <change when="2019-03-16" who="#cimc #heb">Rhyme review and additional analyses</change>
+         <change when="2019-09-22" who="#prf #heb">New release</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Aurelia Antonia de Medrano</head>
+            <p>España. 17th century</p>
+         </div>
+      </front>
+      <body>
+         <lg type="sonnet" xml:id="s240g_0502">
+            <head>Al nunca bastantemente alabado ingenio del doctor </head>
+            <lg n="1" type="cuarteto">
+               <l met="-+-+-+---+-" rhyme="A" enjamb="pb_noun_prep">Si viendo (o huésped) este <w
+                     type="rhyme">monumento</w></l>
+               <l met="-+---+-+++-" rhyme="B">en mil veneraciones, no le <w type="rhyme"
+                  >admiras</w>,</l>
+               <l met="--+--+-+-+-" rhyme="B">y entre mares copiosos, no <w type="rhyme"
+                     >suspiras</w>,</l>
+               <l met="-++--+---+-" rhyme="A">o te falta atención, o <w type="rhyme"
+                  >sentimiento</w></l>
+            </lg>
+            <lg n="2" type="cuarteto">
+               <l met="++-++--+-+-" rhyme="A" enjamb="cc_crossclause">Es alma de esta Urna aquel <w
+                     type="rhyme">Portento</w></l>
+               <l met="++-+-+-+-+-" rhyme="B">que aun vida supo dar a heladas <w type="rhyme"
+                     >Piras</w>,</l>
+               <l met="---+-+-+-+-" rhyme="B" enjamb="ex_subj_verb">a cuya dulce voz las nueve <w
+                     type="rhyme">Liras</w></l>
+               <l met="-+---+-+-+-" rhyme="A">cedieron (elevándose) su <w type="rhyme"
+                  >acento</w></l>
+            </lg>
+            <lg n="3" type="terceto">
+               <l met="+-+--+---+-" rhyme="C" enjamb="pb_verb_chain">Siete lustros (apenas) si se <w
+                     type="rhyme">advierte</w></l>
+               <l met="--++++-+-+-" rhyme="D">permitírnosle quiso avara <w type="rhyme"
+                  >mano</w>,</l>
+               <l met="---+-+-+-+-" rhyme="C">cuando a lustrosa Esfera le <w type="rhyme"
+                     >divierte</w>,</l>
+            </lg>
+            <lg n="4" type="terceto">
+               <l met="---+-+--++-" rhyme="C" enjamb="pb_noun_prep">que como dio recelos de tal <w
+                     type="rhyme">suerte</w></l>
+               <l met="-+-+---+-+-" rhyme="D">de fiera en vida Montalbán, <w type="rhyme"
+                  >humano</w></l>
+               <l met="---+-+-+-+-" rhyme="C">el desengaño le buscó en su <w type="rhyme"
+                  >Muerte</w></l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>
