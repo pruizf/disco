@@ -4,7 +4,7 @@
 *Let's party*
 
 
-The Diachronic Spanish Sonnet Corpus (DISCO) contains sonnets in Spanish in XML-TEI, between the 15th and the 19th centuries (4087 sonnets by 1204 authors from 21 different countries). It includes well-known authors, but also less canonized ones. Texts and authors are enriched with identifiers and metadata.
+The Diachronic Spanish Sonnet Corpus (DISCO) contains sonnets in Spanish in XML-TEI, between the 15th and the 19th centuries (4080 sonnets by 1204 authors from xxx different countries). It includes well-known authors, but also less canonized ones. Texts and authors are enriched with identifiers and metadata.
 <br><br>
 
    * [Prior Collections of Texts in Spanish](#prior-collections-of-texts-in-spanish)
@@ -37,7 +37,7 @@ The Diachronic Spanish Sonnet Corpus (DISCO) contains sonnets in Spanish in XML-
 
 A fundamental difficulty for Digital Humanities studies on Spanish literature is a scarcity of digital resources (Agenjo, 2015). 
 
-Some resources do however exist. BiDTEA (Gago Jover et al, 2015),  ADMYTE (Marcos Marín and Faulhaber, 1992), ReMetCa (González-Blanco and Rodríguez, 2014) and PoeMetCa (Escribano, J. et al, 2016) have digitized Spanish Medieval texts. Navarro-Colorado et al. (2015) presented the "Corpus of Spanish Golden-Age Sonnets".
+Some resources do however exist. BiDTEA (Gago Jover et al, 2015),  ADMYTE (Marcos Marín and Faulhaber, 1992) and ReMetCa (González-Blanco and Rodríguez, 2014) have digitized Spanish Medieval texts. Navarro-Colorado et al. (2015) presented the *Corpus of Spanish Golden-Age Sonnets*.
 
 For later periods, available collections covering different genres are Textbox (Schöch et al., 2015), BETTE (Santa María Fernández, 2017), Aracne (Álvarez Mellado and Martín-Fuertes, 2015), and Revistas Culturales 2.0 (Ehrlicher and Rißler-Pipka, 2015). Nevertheless, none of these projects are working on poetry. 
 
@@ -83,11 +83,11 @@ Numbers in parentheses indicate authors which were probably active in Europe.
   </tr>
   <tr>
     <td rowspan="4"><b>19th</b></td>
-    <td rowspan="4">2676</td>
+    <td rowspan="4">2671</td>
     <td rowspan="4">685</td>
     <td>Female</td>
     <td>48</td>
-    <td rowspan="4">252,518</td>
+    <td rowspan="4">249,631</td>
   </tr>
   <tr>
     <td>Male</td>
@@ -103,11 +103,11 @@ Numbers in parentheses indicate authors which were probably active in Europe.
   </tr>
   <tr>
     <td rowspan="4"><b>18th</b></td>
-    <td rowspan="4">323</td>
+    <td rowspan="4">321</td>
     <td rowspan="4">42</td>
     <td>Female</td>
     <td>1</td>
-    <td rowspan="4">29,006</td>
+    <td rowspan="4">29,017</td>
   </tr>
   <tr>
     <td>Male</td>
@@ -156,7 +156,7 @@ The files' structure differs very little between the *per-author* and the *per-s
 Each poem is identified using ID-strings created by the project (since there is no authority file of reference for individual sonnets). Inside a sonnet, the following information has been encoded explicitly: 
 * Headings
 * Stanza number and type (*cuarteto, terceto*)
-* Line numbers
+* Prosodic information: metrical scheme (stress patterns), rhyme scheme, and enjambment
 
 The **order of sonnets** in the source edition has been respected in the per-author files, and can be recovered from the numeric part of file-ids in the per-sonnet files. 
 
@@ -212,42 +212,19 @@ In order to add the RDFa layer to the TEI-encoded documents, a small number of m
 We use the attribute *@typeOf* to declare the domain of the properties defined with the attribute *@property* (these properties are generally the predicates). A subject IRI reference is indicated using *@about*. The objects which are IRI references are represented using *@resource*, whilst objects that are literals are the textual node of the element. Please see below  simplified version of our encoding with its RDF-like visualization.
 
 ```xml
-<person xml:id="disco_100n" about="disco:100n" typeof="foaf:Person">
-    <idno cert="high"
-        property="rdfs:seeAlso"
-        resource="https://viaf.org/viaf/29108480"/>
-    <persName type="full">
-        <forename property="foaf:givenName">Antonia</forename>
-        <surname property="foaf:familyName">Díaz de Lamarque</surname>
-    </persName>
-    <sex property="foaf:gender" content="F"/>
-    <birth>
-        <location>
-            <placeName>
-                <settlement property="schema:birthPlace">Marchena (Sevilla)</settlement>
-            </placeName>
-        </location>
-        <date property="schema:birthDate" content="1837" cert="high"/>
-    </birth>
-    <death>
-        <date property="schema:deathDate" content="1892" cert="high"/>
-    </death>
-    <listBibl rel="blterms:hasCreated">
-        <bibl resource="disco:s100n_0335" typeof="schema:CreativeWork">
-            <title property="dc:title">A Dios en la Eucaristía</title>
-            <title type="incipit" property="dc:alternative">Tu infinito poder en la armonía</title>
-        </bibl>
-    </listBibl>
+<person property="dc:creator" typeOf="foaf:Person" resource="https://viaf.org/viaf/29108480">
+   <persName property="foaf:name">Antonia Díaz de Lamarque</persName>
+   <sex property="foaf:gender" xml:lang="en">female</gender>
 </person>
 ```
-![rdf-graph](https://sites.google.com/site/ancillaryfiles/files/pub-doc_graph.png?attredirects=0 "Visualisation of the structured data in a brief author entry")
+![rdf-graph](https://sites.google.com/site/ancillaryfiles/files/rdf-graph-example.png "Visualisation of the structured data in a brief author entry")
 
 We looked for the vocabularies that would translate more accurately the TEI semantics. To increase readability and to more easily combine different vocabularies, we used prefixes to shorten the IRIs to the appropriate term. In a similar way to our use of the RDFa attribute *@prefix*, we declared all the vocabularies inside element *listPrefixDef*, available in the TEIheader. We implemented the following vocabularies:
 
 * [Dublin Core vocabulary](http://dublincore.org/documents/dcmi-terms/)
 * [FOAF](http://xmlns.com/foaf/spec/)
 * [schema.org](http://schema.org/)
-* [British Library Terms](http://www.bl.uk/bibliographic/datafree.html)
+
 
 Furthermore, besides linking to the VIAF and, in a small number of cases, to the [Wikidata](https://www.wikidata.org) datasets for the identification of authors, we added some links to the [esDBpedia](http://es.dbpedia.org/) dataset, so as to refer to some metrical concepts that were available in this resource.
 
@@ -291,9 +268,7 @@ Metrical scansion (i.e. weak and strong metrical syllables) were annotated with 
 
 ### Rhyme-scheme
 
-We performed a simple analysis of the rhyme scheme in the quatrains (the tercets were not analyzed, but this could be useful as future work).
-
-The rhyme scheme in the quatrains in Spanish sonnets is generally ABBA (enclosed). However, alternate rhyme (ABAB) sometimes occurs. The rhyme scheme was detected using a heuristic, and encoded in the *@type* attribute of *lg* elements. The Spanish terminology was used (i.e. *cuarteto* for ABBA quatrains and *serventesio* for ABAB quatrains). 
+Each line element (*l*) includes a *@rhyme* attribute with the label that identifies the rhyme scheme. 
 
 ### Enjambment
 
@@ -330,30 +305,28 @@ The corpus is available under: CC-BY licence
 
 * Stanza type identification will be verified manually for some uncertain cases
 * For authors not present in VIAF, other datasets will be used instead to provide additional information (e.g. [Wikidata](https://www.wikidata.org) and [Bieses](http://www.bieses.net/)) 
-* Publication of the corpus in HTML5+RDFa
-* A search appliance for the corpus (search portal) will be considered
+* Validation of metrical and rhyme schemes
 
 # References
 
-* Agenjo, Xavier. 2015. ‘Las bibliotecas virtuales españolas y el tratamiento textual de los recursos bibliográficos.’ *Ínsula: revista de letras y ciencias humanas*, no. 822: 12–15.
+* Agenjo, Xavier (2015): ‘Las bibliotecas virtuales españolas y el tratamiento textual de los recursos bibliográficos.’ *Ínsula: revista de letras y ciencias humanas*, no. 822: 12–15.
 * Agirrezabal, Manex (2017): *Automatic Scansion of Poetry*. PhD Thesis. University of the Basque Country.
-* Álvarez Mellado, Elena, and Leticia Martín-Fuertes. 2015. *Aracne*. Madrid: Fundéu. <http://www.fundeu.es/aracne/>.
+* Álvarez Mellado, Elena, and Leticia Martín-Fuertes (2015): *Aracne*. Madrid: Fundéu. <http://www.fundeu.es/aracne/>.
 * Biblioteca Virtual Miguel de Cervantes (1999): *Biblioteca Virtual Miguel de Cervantes* <http://www.cervantesvirtual.com/>
 * Biblioteca Virtual Miguel de Cervantes (2007): Biblioteca del Soneto [Sonnet Library] <http://www.cervantesvirtual.com/bib/portal/bibliotecasoneto/>
-* Ehrlicher, Hanno, and Nanete Rißler-Pipka. 2015. *Revistas Culturales 2.0*. Augsburg: Universität Augsburg. <https://www.revistas-culturales.de/es>.
+* Ehrlicher, Hanno, and Nanete Rißler-Pipka (2015): *Revistas Culturales 2.0*. Augsburg: Universität Augsburg. <https://www.revistas-culturales.de/es>.
 * Elf Edition: Sonnet Archiv. <http://sonett-archiv.com>
-* Escribano, Juanjo, González-Blanco, Elena and Río Riande, Gimena del (2016). PoeMetCa—Recursos digitales para el estudio de la Poesía Medieval Castellana. <http://poemteca.linhd.es>
 * Gago Jover, Francisco (2015): “La biblioteca digital de textos del español antiguo (BiDTEA), in  *Scriptum Digital 4*: 5–36.
 * González-Blanco, Elena, Rodríguez, José Luis (2014): “ReMetCa: A Proposal for Integrating RDBMS and TEI-Verse”, in *Journal of the Text Encoding Initiative 8* <https://jtei.revues.org/1274>
-* Henny-Krahmer, Ulrike, and Frederike Neuber. 2017. ‘Criteria for Reviewing Digital Text Collections, Version 1.0.’ *A Review Journal for Digital Editions and Resources*, no. 6. <https://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0/>.
+* Henny-Krahmer, Ulrike, and Frederike Neuber (2017): ‘Criteria for Reviewing Digital Text Collections, Version 1.0.’ *A Review Journal for Digital Editions and Resources*, no. 6. <https://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0/>.
 * Marcos Marín, Francisco and Faulhaber, Charles B. (coord.) (1992): ADMYTE. Archivo Digital de Manuscritos y Textos Españoles, in <http://www.admyte.com/admyteonline/contenido.htm>
-* Moretti, Franco. 2005. *Graphs, Maps, Trees: Abstract Models for a Literary History*. Verso.
+* Moretti, Franco (2005): *Graphs, Maps, Trees: Abstract Models for a Literary History*. Verso.
 * Navarro-Colorado, Borja (2017): *ADSO project – Análisis distante del soneto castellano de los Siglos de Oro [Distant analysis of the Spanish Golden Age sonnet]* <http://adso.gplsi.es/index.php/es/proyecto-adso>
-* Navarro-Colorado, Borja, María Ribes Lafoz, and Noelia Sánchez. 2015. *Corpus of Spanish Golden-Age Sonnets*. Alicante: University of Alicante. <https://github.com/bncolorado/CorpusSonetosSigloDeOro>.
+* Navarro-Colorado, Borja, María Ribes Lafoz, and Noelia Sánchez (2015): *Corpus of Spanish Golden-Age Sonnets*. Alicante: University of Alicante. <https://github.com/bncolorado/CorpusSonetosSigloDeOro>.
 * Navarro-Colorado, Borja, María Ribes Lafoz and Noelia Sánchez (2016): “Metrical Annotation of a Large Corpus of Spanish Sonnets: Representation, Scansion and Evaluation”, in *Proceedings of the Language Resources and Evaluation Conference*. <http://www.lrec-conf.org/proceedings/lrec2016/pdf/453_Paper.pdf>
 * Navarro-Colorado, Borja (2017): “A metrical scansion system for fixed-metre Spanish poetry”, in *Digital Scholarship in the Humanities*. <https://doi.org/10.1093/llc/fqx009>
-* Ruiz Fabo, Pablo, Clara Martínez Cantón, Thierry Poibeau and Elena González-Blanco. (2017). Enjambment detection in a large diachronic corpus of Spanish sonnets. In *LaTeCH-CLFL 2017, Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature.* Vancouver, Canada: Association for Computational Linguistics. <https://aclweb.org/anthology/W/W17/W17-2204.pdf>
-* Quilis, Antonio (1964). *Estructura del encabalgamiento en la métrica española.* Consejo Superior de Investigaciones Científicas, Patronato Menendez y Pelayo, Instituto Miguel de Cervantes.
-* Santa María Fernández, María Teresa, Concepción María Jiménez Fernández, and José Calvo Tello. 2017. *Biblioteca Electrónica Textual Del Teatro Español, 1868-1936* (BETTE). Universidad Internacional de la Rioja. La Rioja. <https://github.com/GHEDI/BETTE>
-* Schöch, Christof, Ulrike Henny, José Calvo Tello, and Stefanie Popp. 2015. The CLiGS Textbox. Würzburg: University of Würzburg. <https://github.com/cligs/textbox>.
-* Spang, Kurt. (1983). *Ritmo y versificación: teoría y práctica del análisis métrico y rítmico.* Universidad de Murcia, Murcia.
+* Ruiz Fabo, Pablo, Clara Martínez Cantón, Thierry Poibeau and Elena González-Blanco (2017): Enjambment detection in a large diachronic corpus of Spanish sonnets. In *LaTeCH-CLFL 2017, Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature.* Vancouver, Canada: Association for Computational Linguistics. <https://aclweb.org/anthology/W/W17/W17-2204.pdf>
+* Quilis, Antonio (1964): *Estructura del encabalgamiento en la métrica española.* Consejo Superior de Investigaciones Científicas, Patronato Menendez y Pelayo, Instituto Miguel de Cervantes.
+* Santa María Fernández, María Teresa, Concepción María Jiménez Fernández, and José Calvo Tello (2017): *Biblioteca Electrónica Textual Del Teatro Español, 1868-1936* (BETTE). Universidad Internacional de la Rioja. La Rioja. <https://github.com/GHEDI/BETTE>
+* Schöch, Christof, Ulrike Henny, José Calvo Tello, and Stefanie Popp (2015): The CLiGS Textbox. Würzburg: University of Würzburg. <https://github.com/cligs/textbox>.
+* Spang, Kurt (1983): *Ritmo y versificación: teoría y práctica del análisis métrico y rítmico.* Universidad de Murcia, Murcia.
