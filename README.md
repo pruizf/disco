@@ -151,9 +151,9 @@ The corpus is offered as TEI-encoded files (*tei* directory) and as plain-text f
 
 Depending on the purpose of the research, the *per-author* or the *per-sonnet* directories will be more useful. For example, for stylometric methods or to compare the works of the same author in different genres, the researcher would prefer to work with the per-author files; but to analyse features in each poem, they would prefer the per-sonnet files. 
 
-Note that, in the TEI version, an extra directory was added, named *all-periods-per-author*. This contains all of the *per-author* TEI files regardless of period. For users who are confident with XML programming, this is likely the most efficient way to store the data, since such users can easily extract subcorpora per period, per author or according to other criteria, based on the TEI metadata.
+Note that, in the TEI version, an extra directory was added, named **all-periods-per-author**. This contains all of the *per-author* TEI files regardless of period. For users who are confident with XML programming, this is likely the most efficient way to store the data, since such users can easily extract subcorpora per period, per author or according to other criteria, based on the TEI metadata.
 
-In addition to the data partitions above, some users of the plain-text version requested that all sonnets by a given author be grouped in a single file. This grouping was created in a directory called *one-file-per-author*, which is located in each of the *per-author* directories for each period.
+In addition to the data partitions above, some users of the plain-text version requested that all sonnets by a given author be grouped in a single file. This file was created in a directory called *one-file-per-author*, which is located in each of the *per-author* directories for each period.
 
 ### TEI
 
