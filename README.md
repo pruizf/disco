@@ -243,7 +243,7 @@ The TEIheader also encodes additional information, unavailable in the sources:
 
 #### From [v3 release](https://github.com/pruizf/disco/releases) onwards
 
-In the plain-text version, an external [table](https://github.com/pruizf/disco/blob/master/author_metadata.tsv) can be used to access author-metadata (dates, origin, etc.). The table's fields are explained [here](https://github.com/pruizf/disco/blob/master/metadata_fields.md). Poems' IDs as well their author's ID in the corpus are also encoded in the file names. The metadata table matches those authors' IDs, so that the file names can be crossed with the table. 
+In the plain-text version, an external [table](https://github.com/pruizf/disco/blob/master/author_metadata.tsv) can be used to access author-metadata (dates, origin, etc.). The table's fields are explained [here](https://github.com/pruizf/disco/blob/master/metadata_fields.md). Poems' IDs as well their author's ID in the corpus are also encoded in the file names. The metadata table contains those authors' IDs, so that the file names can be crossed with the table. 
 
 Here are some examples of the way file names encode IDs:
 
@@ -255,7 +255,7 @@ For sonnets within a sonnet-sequence, an additional ID indicates the poem's posi
 
 ```
 Template: disco{AuthorID}_{PoemID}_{PositionInSequence}.txt
-Example: disco263n_0853_01.txt
+Example: disco633n_2331_03.txt
 ```
 
 #### For the v2 and v1 releases
