@@ -4,7 +4,9 @@
 *Let's party*
 
 
-The Diachronic Spanish Sonnet Corpus (DISCO) contains sonnets in Spanish in XML-TEI, between the 15th and the 19th centuries (4080 sonnets by 1204 authors from xxx different countries). It includes well-known authors, but also less canonized ones. Texts and authors are enriched with identifiers and metadata.
+The Diachronic Spanish Sonnet Corpus (DISCO) contains sonnets in Spanish in XML-TEI, between the 15th and the 19th centuries (4080 sonnets by 1204 authors from 21 different countries). It includes well-known authors, but also less canonized ones. Texts and authors are enriched with identifiers and metadata.
+
+The current version of the corpus is the October 2019 release. Work about the corpus presented or submitted before then refers to the [v2](https://github.com/pruizf/disco/tree/1350233c1af8409f34b727f5396de11d4a9a4cb9) release. 
 <br><br>
 
    * [Prior Collections of Texts in Spanish](#prior-collections-of-texts-in-spanish)
