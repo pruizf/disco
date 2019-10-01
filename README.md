@@ -63,7 +63,7 @@ The sonnet has had great importance in European poetry; the relevance of the cor
 
 We describe the sources and data distribution for each subcorpus, starting in reverse chronological order with the 19th century. A table below summarizes the information. 
 
-The **19th-century** subcorpus is based on [texts](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) of *Biblioteca Virtual Miguel de Cervantes* prepared by Ramón García González in 2006. It contains 2677 sonnets, written by 685 authors. Half of the texts were written by Spanish authors, half by Latin American authors, with Cuba as the best-represented country, followed at a large distances by Mexico, Argentina, Colombia and Puerto Rico. Some authors were born in non Spanish-speaking countries, such as Portugal, Brasil or Haiti. More than 90% of the authors are male.
+The **19th-century** subcorpus is based on [texts](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) of *Biblioteca Virtual Miguel de Cervantes* prepared by Ramón García González in 2006. It contains 2671 sonnets, written by 685 authors. Half of the texts were written by Spanish authors, half by Latin American authors, with Cuba as the best-represented country, followed at a large distances by Mexico, Argentina, Colombia and Puerto Rico. Some authors were born in non Spanish-speaking countries, such as Portugal, Brasil or Haiti. More than 90% of the authors are male.
 
 Note that the 19th-century subcorpus includes about 125 sonnets by 23 authors whose production took place in the early 20th century (with date of death prior to 1936). We kept these authors as they were part of the [19th-century anthology](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) mentioned above, which is our source for this subcorpus. We will consider creating a separate subcorpus for early 20th century literature if we more systematically collect material for the early 20th century.
 
@@ -150,6 +150,10 @@ Numbers in parentheses indicate authors which were probably active in Europe.
 The corpus is offered as TEI-encoded files (*tei* directory) and as plain-text files (*txt* directory). In either case, poems are first grouped by period. Within each period, sonnets are grouped by author in the **per-author** directories, where each file contains all sonnets for a given author. Sonnets are also presented individually, in the **per-sonnet** directories, where each sonnet is contained in a single file. In the plain-text version, in order to group poems per author, a directory for each author was created, which contains each of that author's poems as single files.
 
 Depending on the purpose of the research, the *per-author* or the *per-sonnet* directories will be more useful. For example, for stylometric methods or to compare the works of the same author in different genres, the researcher would prefer to work with the per-author files; but to analyse features in each poem, they would prefer the per-sonnet files. 
+
+Note that, in the TEI version, an extra directory was added, named *all-periods-per-author*. This contains all of the *per-author* TEI files regardless of period. For users who are confident with XML programming, this is likely the most efficient way to store the data, since such users can easily extract subcorpora per period, per author or according to other criteria, based on the TEI metadata.
+
+In addition to the data partitions above, some users of the plain-text version requested that all sonnets by a given author be grouped in a single file. This grouping was created in a directory called *one-file-per-author*, which is located in each of the *per-author* directories for each period.
 
 ### TEI
 
@@ -260,7 +264,11 @@ Example: disco633n_2331_03.txt
 
 #### For the v2 and v1 releases
 
-The file names also included the author names and the first characters of a poem's title; see [here](https://github.com/pruizf/disco/tree/1350233c1af8409f34b727f5396de11d4a9a4cb9) for the v2 documentation. This format gave problems for some XML editors. Accordingly, it was modified in v3, keeping only IDs rather than actual names or titles.
+The external metadata table mentioned above for v3 was already available in v1 and v2.
+
+However, in earlier releases, the file names also included the author names and the first characters of a poem's title; see [here](https://github.com/pruizf/disco/tree/1350233c1af8409f34b727f5396de11d4a9a4cb9) for the v2 documentation. This format gave problems for some XML editors. Accordingly, it was modified in v3, keeping only IDs rather than actual names or titles.
+
+In order to make author and poem search easier for users of the plain-text version, a mapping was created between poem IDs, their author ID, author name, poem title and incipit. See [poem_metadata.tsv](./poem_metadata.tsv)
 
 ## Literary Annotations
 
