@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -117,6 +117,12 @@
          </metDecl>
       </encodingDesc>
       <revisionDesc>
+         <change when="2017-11-02" who="#prf">Initial TEI version </change>
+         <change when="2017-11-27" who="#prf">Addition of metrical annotation</change>
+         <change when="2017-11-27" who="#heb">Review of authors’ metadata</change>
+         <change when="2017-12-01" who="#prf">Encoding of enjambment</change>
+         <change when="2017-12-01" who="#heb">Publication of 19th, 18th and Golden Age version</change>
+         <change when="2018-05-16" who="#heb">Revision of RDFa attributes</change>
          <change when="2019-09-22" who="#prf #heb">New release</change>
       </revisionDesc>
    </teiHeader>
@@ -125,26 +131,33 @@
          <lg type="sonnet" xml:id="s047e_0267">
             <head>Soneto</head>
             <lg n="1" type="cuarteto">
-               <l n="1" met="-+---+---+-">De Cíparis dejado el afligido</l>
-               <l n="2" met="-+-+---+-+-">Batilo yace en la desierta arena,</l>
-               <l n="3" met="-+-+---+-+-" enjamb="B-pb_verb_cprep" cert="medium">al cielo acusa y al amor condena</l>
-               <l n="4" met="-+-+---+-+-" enjamb="I-pb_verb_cprep" cert="medium">de sí olvidado y del dolor vencido.</l>
+               <l met="-+---+---+-" rhyme="A">De Cíparis dejado el <w type="rhyme">afligido</w>
+               </l>
+               <l met="-+-+---+-+-" rhyme="B">Batilo yace en la desierta <w type="rhyme">arena</w>,</l>
+               <l met="-+-+---+-+-" rhyme="B" enjamb="B-pb_verb_cprep">al cielo acusa y al amor <w type="rhyme">condena</w>
+               </l>
+               <l met="-+-+---+-+-" rhyme="A" enjamb="I-pb_verb_cprep">de sí olvidado y del dolor <w type="rhyme">vencido</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l n="5" met="-+-+---+-+-">Del triste caso a compasión movido</l>
-               <l n="6" met="-+-+---+-+-">el viejo Tormes la corriente enfrena,</l>
-               <l n="7" met="---+-+++-+-" enjamb="B-pb_adj_prep" cert="low">pero la esquiva ninfa aun huye ajena</l>
-               <l n="8" met="---+-+---+-" enjamb="I-pb_adj_prep" cert="low">a la piedad el pecho empedernido.</l>
+               <l met="-+-+---+-+-" rhyme="A">Del triste caso a compasión <w type="rhyme">movido</w>
+               </l>
+               <l met="-+-+---+-+-" rhyme="B">el viejo Tormes la corriente <w type="rhyme">enfrena</w>,</l>
+               <l met="---+-+++-+-" rhyme="B" enjamb="B-pb_adj_prep">pero la esquiva ninfa aun huye <w type="rhyme">ajena</w>
+               </l>
+               <l met="---+-+---+-" rhyme="A" enjamb="I-pb_adj_prep">a la piedad el pecho <w type="rhyme">empedernido</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l n="9" met="-+-+---+-+-">De helado mármol y templado acero</l>
-               <l n="10" met="---+-+++-+-" enjamb="B-cc_crossclause" cert="high">al encendido dardo un cerco priva</l>
-               <l n="11" met="+--+---+-+-" enjamb="I-cc_crossclause" cert="high">que abra al amor, por la piedad, entrada.</l>
+               <l met="-+-+---+-+-" rhyme="C">De helado mármol y templado <w type="rhyme">acero</w>
+               </l>
+               <l met="---+-+++-+-" rhyme="D" enjamb="B-cc_crossclause">al encendido dardo un cerco <w type="rhyme">priva</w>
+               </l>
+               <l met="+--+---+-+-" rhyme="E" enjamb="I-cc_crossclause">que abra al amor, por la piedad, <w type="rhyme">entrada</w>.</l>
             </lg>
             <lg n="4" type="terceto">
-               <l n="12" met="-+---+-+++-" enjamb="B-ex_subj_verb" cert="low">¡Ay mísero zagal!, rigor tan fiero</l>
-               <l n="13" met="++-+---+-+-" enjamb="I-ex_subj_verb" cert="low">te va acabando y tu beldad esquiva,</l>
-               <l n="14" met="+--++--+-+-">viendo su fin, aún se complace airada.</l>
+               <l met="-+---+-+++-" rhyme="C" enjamb="B-ex_subj_verb">¡Ay mísero zagal!, rigor tan <w type="rhyme">fiero</w>
+               </l>
+               <l met="++-+---+-+-" rhyme="D" enjamb="I-ex_subj_verb">te va acabando y tu beldad <w type="rhyme">esquiva</w>,</l>
+               <l met="+--++--+-+-" rhyme="E">viendo su fin, aún se complace <w type="rhyme">airada</w>.</l>
             </lg>
          </lg>
       </body>
