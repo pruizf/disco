@@ -3,10 +3,9 @@
 
 *Let's party*
 
+The Diachronic Spanish Sonnet Corpus (DISCO) contains sonnets in Spanish in XML-TEI, between the 15th and the 20th centuries (4303 sonnets by 1215 authors from 22 different countries). It includes well-known authors, but also less canonized ones. Texts and authors are enriched with identifiers and metadata.
 
-The Diachronic Spanish Sonnet Corpus (DISCO) contains sonnets in Spanish in XML-TEI, between the 15th and the 19th centuries (4080 sonnets by 1204 authors from 21 different countries). It includes well-known authors, but also less canonized ones. Texts and authors are enriched with identifiers and metadata.
-
-The current version of the corpus is the October 2019 release. Work about the corpus presented or submitted before then refers to the [v2](https://github.com/pruizf/disco/tree/1350233c1af8409f34b727f5396de11d4a9a4cb9) release. 
+The current version of the corpus is v3, published in October 2019. Work about the corpus presented or submitted before then refers to the [v2](https://github.com/pruizf/disco/tree/1350233c1af8409f34b727f5396de11d4a9a4cb9) or [v2.1]() releases. 
 <br><br>
 
    * [Prior Collections of Texts in Spanish](#prior-collections-of-texts-in-spanish)
@@ -49,7 +48,7 @@ DISCO complements this growing ecosystem by adding a meaningful representation o
 
 # Description of DISCO
 
-Our corpus currently offers a total of 4087 sonnets in Spanish: 2676 from the 19th century, 330 from the 18th century and 1088 from the so-called Spanish Golden Age (15th to 17th centuries). There are a total of 1204 authors (both from Spain and Latin America). It intends to provide a wide sample, inspired by distant reading approaches (Moretti, 2005). The raw texts were in most cases extracted from Biblioteca Virtual Miguel de Cervantes (1999), with some 18th-century texts coming from Wikisource. A table in section [Data Distribution](#data-distribution) below summarizes these data.
+Our corpus currently offers a total of 4303 sonnets in Spanish: 202 from the early-mid 20th century, 2692 from the 19th century, 321 from the 18th century and 1088 from the so-called Spanish Golden Age (15th to 17th centuries). There are a total of 1215 authors (from Spain, Latin America and the Philippines). It intends to provide a wide sample, inspired by distant reading approaches (Moretti, 2005). The raw texts were in most cases extracted from Biblioteca Virtual Miguel de Cervantes (1999), with some 18th-century texts coming from Wikisource. A table in section [Data Distribution](#data-distribution) below summarizes these data.
 
 The corpus is available in plain-text and in TEI formats; XML-TEI P5 was used given this standard’s benefits in terms of reuse, storage, and retrieval. Author metadata were extracted or inferred from unstructured content in the sources (year, place of birth and death, and gender), and placed in the TEIheader, or in a metadata table in the case of the plain-text version. For both TEI and plain-text formats, two versions of the texts are available: one collecting every sonnet per author, the other encoding a single sonnet per file. For corpus preparation, we closely followed the TEI guidelines and RIDE’s criteria for Digital Text Collections (Henny-Krahmer and Neuber, 2017).
 
@@ -63,7 +62,9 @@ The sonnet has had great importance in European poetry; the relevance of the cor
 
 We describe the sources and data distribution for each subcorpus, starting in reverse chronological order with the 19th century. A table below summarizes the information. 
 
-The **19th-century** subcorpus is based on [texts](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) of *Biblioteca Virtual Miguel de Cervantes* prepared by Ramón García González in 2006. It contains 2671 sonnets, written by 685 authors. Half of the texts were written by Spanish authors, half by Latin American authors, with Cuba as the best-represented country, followed at a large distances by Mexico, Argentina, Colombia and Puerto Rico. Some authors were born in non Spanish-speaking countries, such as Portugal, Brasil or Haiti. More than 90% of the authors are male.
+The **20th-century** subcorpus consists of sonnets in Spanish written by Filipino authors. This choice was made given our involvement in a project on Filipino literature in Spanish. It also responds to the corpus goal to cover a breadth of authors, including lesser-known ones. All sonnets found in *Biblioteca Virtual Miguel de Cervantes* poetry collections by Filipino authors were included in the corpus; the source volumes are specified in the corpus files. It contains 202 sonnets by 9 authors (2 female, 7 male).
+
+The **19th-century** subcorpus is based on [texts](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) of *Biblioteca Virtual Miguel de Cervantes* prepared by Ramón García González in 2006, as well as texts by Filipino authors at the same library. It contains 2692 sonnets, written by 687 authors. Approximately half of the texts were written by Spanish authors, and half by Latin American authors, with Cuba as the best-represented country, followed at a large distances by Mexico, Argentina, Colombia and Puerto Rico. Some authors were born in non Spanish-speaking countries, such as Portugal, Brasil or Haiti. Two Filipino authors are represented. More than 90% of the authors are male.
 
 Note that the 19th-century subcorpus includes about 125 sonnets by 23 authors whose production took place in the early 20th century (with date of death prior to 1936). We kept these authors as they were part of the [19th-century anthology](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) mentioned above, which is our source for this subcorpus. We will consider creating a separate subcorpus for early 20th century literature if we more systematically collect material for the early 20th century.
 
@@ -83,17 +84,33 @@ Numbers in parentheses indicate authors which were probably active in Europe.
     <th colspan="3">Nbr of Authors</th>
     <th>Tokens</th>
   </tr>
-  <tr>
-    <td rowspan="4"><b>19th</b></td>
-    <td rowspan="4">2671</td>
-    <td rowspan="4">685</td>
+    <tr>
+    <td rowspan="3"><b>20th</b></td>
+    <td rowspan="3">202</td>
+    <td rowspan="3">9</td>
     <td>Female</td>
-    <td>48</td>
-    <td rowspan="4">249,631</td>
+    <td>2</td>
+    <td rowspan="3">22,303</td>
   </tr>
   <tr>
     <td>Male</td>
-    <td>637</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Asia</td>
+    <td>9</td>
+  </tr>  
+  <tr>
+    <td rowspan="5"><b>19th</b></td>
+    <td rowspan="5">2692</td>
+    <td rowspan="5">687</td>
+    <td>Female</td>
+    <td>48</td>
+    <td rowspan="5">251,975</td>
+  </tr>
+  <tr>
+    <td>Male</td>
+    <td>639</td>
   </tr>
   <tr>
     <td>America</td>
@@ -103,6 +120,10 @@ Numbers in parentheses indicate authors which were probably active in Europe.
     <td>Europe</td>
     <td>348 (+3)</td>
   </tr>
+  <tr>
+    <td>Asia</td>
+    <td>2</td>
+  </tr>  
   <tr>
     <td rowspan="4"><b>18th</b></td>
     <td rowspan="4">321</td>
@@ -274,7 +295,11 @@ In order to make author and poem search easier for users of the plain-text versi
 
 ### Scansion
 
-Metrical scansion (i.e. weak and strong metrical syllables) were annotated with the [ADSO](https://github.com/bncolorado/adsoScansionSystem) tool (Navarro-Colorado, 2017), which specializes in Spanish fixed-meter forms, attaining a performance of 0.95 [F1](https://en.wikipedia.org/wiki/F1_score). The information was included in a *@met* attribute for each line (*l*) element. A **+** sign represents a stressed sylable and a **-** sign represents an unstressed syllable. 
+For Filipino sonnets, scansion was annotated with the [Rantanplan](https://github.com/linhd-postdata/rantanplan) tool (de la Rosa et al., 2020). This attains a performance of 0.96 [F1](https://en.wikipedia.org/wiki/F1_score); evaluation details are in the paper just cited.
+
+For all other cases, metrical scansion (i.e. weak and strong metrical syllables) was annotated with an earlier tool, the [ADSO](https://github.com/bncolorado/adsoScansionSystem) system (Navarro-Colorado, 2017), which specializes in Spanish fixed-meter forms. This attains a performance of 0.95 [F1](https://en.wikipedia.org/wiki/F1_score) on the same dataset as Rantanplan.
+
+Metrical information was included in a *@met* attribute for each line (*l*) element. A **+** sign represents a stressed sylable and a **-** sign represents an unstressed syllable. 
 
 ### Rhyme-scheme
 
@@ -324,6 +349,7 @@ The corpus is available under: CC-BY licence
 * Álvarez Mellado, Elena, and Leticia Martín-Fuertes (2015): *Aracne*. Madrid: Fundéu. <http://www.fundeu.es/aracne/>.
 * Biblioteca Virtual Miguel de Cervantes (1999): *Biblioteca Virtual Miguel de Cervantes* <http://www.cervantesvirtual.com/>
 * Biblioteca Virtual Miguel de Cervantes (2007): Biblioteca del Soneto [Sonnet Library] <http://www.cervantesvirtual.com/bib/portal/bibliotecasoneto/>
+* de la Rosa, Javier., Álvaro Pérez, Laura Hernández, Salvador Ros & Elena González-Blanco. (2020). Rantanplan, Fast and Accurate Syllabification and Scansion of Spanish Poetry. *Procesamiento del Lenguaje Natural*, 83–90. https://doi.org/10.26342/2020-65-10
 * Ehrlicher, Hanno, and Nanete Rißler-Pipka (2015): *Revistas Culturales 2.0*. Augsburg: Universität Augsburg. <https://www.revistas-culturales.de/es>.
 * Elf Edition: Sonnet Archiv. <http://sonett-archiv.com>
 * Gago Jover, Francisco (2015): “La biblioteca digital de textos del español antiguo (BiDTEA), in  *Scriptum Digital 4*: 5–36.
