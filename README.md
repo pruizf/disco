@@ -5,7 +5,7 @@
 
 The Diachronic Spanish Sonnet Corpus (DISCO) contains sonnets in Spanish in XML-TEI, between the 15th and the 20th centuries (4303 sonnets by 1215 authors from 22 different countries). It includes well-known authors, but also less canonized ones. Texts and authors are enriched with identifiers and metadata.
 
-The current version of the corpus is v3, published in October 2019. Work about the corpus presented or submitted before then refers to the [v2](https://github.com/pruizf/disco/tree/1350233c1af8409f34b727f5396de11d4a9a4cb9) or [v2.1]() releases. 
+The current version of the corpus is v4, published in December 2021 as the v4 branch (a v4 release has not been created yet). Work about the corpus presented or submitted before then refers to earlier releases, see the [release history](https://github.com/pruizf/disco/releases). 
 <br><br>
 
    * [Prior Collections of Texts in Spanish](#prior-collections-of-texts-in-spanish)
@@ -295,13 +295,15 @@ In order to make author and poem search easier for users of the plain-text versi
 
 ### Scansion
 
-For Filipino sonnets, scansion was annotated with the [Rantanplan](https://github.com/linhd-postdata/rantanplan) tool (de la Rosa et al., 2020). This attains a performance of 0.96 [F1](https://en.wikipedia.org/wiki/F1_score); evaluation details are in the paper just cited.
+For Filipino sonnets, metrical scansion (i.e. weak and strong metrical syllables) was annotated with the [Rantanplan](https://github.com/linhd-postdata/rantanplan) tool (de la Rosa et al., 2020). This attains a performance of 0.96 [F1](https://en.wikipedia.org/wiki/F1_score); evaluation details are in the paper just cited.
 
-For all other cases, metrical scansion (i.e. weak and strong metrical syllables) was annotated with an earlier tool, the [ADSO](https://github.com/bncolorado/adsoScansionSystem) system (Navarro-Colorado, 2017), which specializes in Spanish fixed-meter forms. This attains a performance of 0.95 [F1](https://en.wikipedia.org/wiki/F1_score) on the same dataset as Rantanplan.
+For all other cases, metrical scansion was annotated with an earlier tool, the [ADSO](https://github.com/bncolorado/adsoScansionSystem) system (Navarro-Colorado, 2017). This attains a performance of 0.95 [F1](https://en.wikipedia.org/wiki/F1_score) on the same dataset as Rantanplan.
 
 Metrical information was included in a *@met* attribute for each line (*l*) element. A **+** sign represents a stressed sylable and a **-** sign represents an unstressed syllable. 
 
 ### Rhyme-scheme
+
+Rhyme annotation was carried out with the [RhymeTagger](https://github.com/versotym/rhymetagger) tool (Plecháč, 2018).
 
 Each line element (*l*) includes a *@rhyme* attribute with the label that identifies the rhyme scheme. 
 
@@ -323,6 +325,8 @@ DISCO published in October 2017 its version 1.0 containing texts from the 19th C
 In December 2017 a second version was published, which additionally contains onnets between the 15th to the 18th Century, reinforcing the corpus' diachronic dimension. The second version also contains metadata in RDFa and literary annotations for metrics and enjambment. 
 
 Version 3 was published in October 2019. The main changes are the addition of rhyme-word and rhyme-scheme annotations, besides some text corrections and markup improvements, e.g. in dialogue poems.
+
+Version 4 was published in December 2021. Filipino sonnets written in Spanish from the 19th and early-mid 20th century were added.
 
 # Publication and Preservation
 
@@ -361,6 +365,7 @@ The corpus is available under: CC-BY licence
 * Navarro-Colorado, Borja, María Ribes Lafoz, and Noelia Sánchez (2015): *Corpus of Spanish Golden-Age Sonnets*. Alicante: University of Alicante. <https://github.com/bncolorado/CorpusSonetosSigloDeOro>.
 * Navarro-Colorado, Borja, María Ribes Lafoz and Noelia Sánchez (2016): “Metrical Annotation of a Large Corpus of Spanish Sonnets: Representation, Scansion and Evaluation”, in *Proceedings of the Language Resources and Evaluation Conference*. <http://www.lrec-conf.org/proceedings/lrec2016/pdf/453_Paper.pdf>
 * Navarro-Colorado, Borja (2017): “A metrical scansion system for fixed-metre Spanish poetry”, in *Digital Scholarship in the Humanities*. <https://doi.org/10.1093/llc/fqx009>
+* Plecháč, Petr. (2018). A Collocation-Driven Method of Discovering Rhymes (in Czech, English, and French Poetry). In *Taming the Corpus: From Inflection and Lexis to Interpretation*. Springer, Cham. <https://link.springer.com/book/10.1007/978-3-319-98017-1>
 * Ruiz Fabo, Pablo, Clara Martínez Cantón, Thierry Poibeau and Elena González-Blanco (2017): Enjambment detection in a large diachronic corpus of Spanish sonnets. In *LaTeCH-CLFL 2017, Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature.* Vancouver, Canada: Association for Computational Linguistics. <https://aclweb.org/anthology/W/W17/W17-2204.pdf>
 * Quilis, Antonio (1964): *Estructura del encabalgamiento en la métrica española.* Consejo Superior de Investigaciones Científicas, Patronato Menendez y Pelayo, Instituto Miguel de Cervantes.
 * Santa María Fernández, María Teresa, Concepción María Jiménez Fernández, and José Calvo Tello (2017): *Biblioteca Electrónica Textual Del Teatro Español, 1868-1936* (BETTE). Universidad Internacional de la Rioja. La Rioja. <https://github.com/GHEDI/BETTE>
