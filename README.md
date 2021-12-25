@@ -62,7 +62,7 @@ The sonnet has had great importance in European poetry; the relevance of the cor
 
 We describe the sources and data distribution for each subcorpus, starting in reverse chronological order with the 19th century. A table below summarizes the information. 
 
-The **20th-century** subcorpus consists of sonnets in Spanish written by Filipino authors. This choice was made given our involvement in a project on Philippino literature in Spanish. It also responds to the corpus goal to cover a breadth of authors, including lesser-known ones. All sonnets found in *Biblioteca Virtual Miguel de Cervantes* poetry collections by Filipino authors were included in the corpus; the source volumes are specified in the corpus files. It contains 202 sonnets by 9 authors (2 female, 7 male).
+The **20th-century** subcorpus consists of sonnets in Spanish written by Filipino authors. This choice was made given our involvement in a project on Filipino literature in Spanish. It also responds to the corpus goal to cover a breadth of authors, including lesser-known ones. All sonnets found in *Biblioteca Virtual Miguel de Cervantes* poetry collections by Filipino authors were included in the corpus; the source volumes are specified in the corpus files. It contains 202 sonnets by 9 authors (2 female, 7 male).
 
 The **19th-century** subcorpus is based on [texts](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) of *Biblioteca Virtual Miguel de Cervantes* prepared by Ramón García González in 2006, as well as texts by Filipino authors at the same library. It contains 2692 sonnets, written by 687 authors. Approximately half of the texts were written by Spanish authors, and half by Latin American authors, with Cuba as the best-represented country, followed at a large distances by Mexico, Argentina, Colombia and Puerto Rico. Some authors were born in non Spanish-speaking countries, such as Portugal, Brasil or Haiti. Two Filipino authors are represented. More than 90% of the authors are male.
 
@@ -194,8 +194,6 @@ More information about the metadata encoded in our TEI files is [below](#metadat
 ### RDFa
 
 As explained in more detail [below](#rdfa-attributes), extra attributes were added to our metadata following the [RDFa](https://rdfa.info) specification. RDFa is a way of expressing [RDF-style](https://www.w3.org/RDF/) relationships, that is, a subject--predicate--object model, using simple attributes in existing markup languages, in this case, XML-TEI. We used RDFa in order to enrich our dataset by linking to third-party ones (like [DBpedia](http://wiki.dbpedia.org/) and increase the semantic interoperability of TEI, with a view to allowing other applications to automatically use our data.
-
-The sonnets by Filipino authors do not yet (December 2021) contain RDFa annotations, but they will be added shortly.
 
 ### Plain-text
 
