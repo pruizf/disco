@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt about="disco:au_693n">
+                <title property="dc:title">Sonetos de José Rizal</title>
+                <author property="dc:creator" resource="disco:693n">José Rizal</author>
+                <principal xml:id="prf">Pablo Ruiz Fabo</principal>
+                <principal xml:id="heb">Helena Bermúdez Sabel</principal>
+                <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
+                <respStmt>
+                    <resp>Metrical annotation done with <ref
+                            target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>,
+                        developed by</resp>
+                    <name>Javier de la Rosa et al.</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Rhyme annotation done with <ref
+                            target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>,
+                        developed by</resp>
+                    <name>Petr Plecháč</name>
+                </respStmt>
+            </titleStmt>
+            <extent>
+                <measure unit="sonnets">2</measure>
+                <measure unit="lines">28</measure>
+                <measure unit="tokens">206</measure>
+            </extent>
+            <publicationStmt>
+                <publisher>Diachronic Spanish Sonnet Corpus</publisher>
+                <date when="2021">2021</date>
+                <idno type="#disco" xml:id="file_au_693n"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl type="digital-source">Alicante: Biblioteca Virtual Miguel de Cervantes <hi
+                        rend="italics">Poesías de Rizal / compilación hecha por Jaime C. de Veyra,
+                        con un estudio de la personalidad de Rizal por el mismo (formato PDF)</hi>,
+                        <date>2014</date>, <ref
+                        target="http://www.cervantesvirtual.com/nd/ark:/59851/bmcb29q3"/>.</bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <listPerson>
+                    <person xml:id="disco_693n" about="disco:693n" typeOf="foaf:Person">
+                        <idno cert="high">https://viaf.org/viaf/41845763</idno>
+                        <persName type="short">Rizal</persName>
+                        <persName type="full">
+                            <forename>José</forename>
+                            <surname>Rizal</surname>
+                        </persName>
+                        <persName type="source">Rizal, José</persName>
+                        <sex>M</sex>
+                        <birth>
+                            <location>
+                                <placeName>
+                                    <country>Filipinas</country>
+                                    <bloc>Asia</bloc>
+                                </placeName>
+                            </location>
+                            <date type="century">19</date>
+                        </birth>
+                        <death>
+                            <date type="century">19</date>
+                        </death>
+                        <listBibl inlist="" rel="blterms:hasCreated" typeOf="schema:CreativeWork">
+                            <bibl resource="disco:s693n_2494">
+                                <title property="dc:title">A FILIPINAS</title>
+                                <title type="incipit" property="dc:alternative"/>
+                            </bibl>
+                            <bibl resource="disco:s693n_2495">
+                                <title property="dc:title">A LA VIRGEN MARÍA</title>
+                                <title type="incipit" property="dc:alternative"/>
+                            </bibl>
+                        </listBibl>
+                    </person>
+                </listPerson>
+            </particDesc>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="foaf" matchPattern="([A-Za-z]+)"
+                    replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+                <prefixDef ident="dc" matchPattern="([A-Za-z]+)"
+                    replacementPattern="http://purl.org/dc/terms/$1"/>
+                <prefixDef ident="schema" matchPattern="([A-Za-z]+)"
+                    replacementPattern="http://schema.org/$1"/>
+                <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)"
+                    replacementPattern="http://es.dbpedia.org/page/"/>
+                <prefixDef ident="blterms" matchPattern="([A-Za-z]+)"
+                    replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+                <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)"
+                    replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+            </listPrefixDef>
+            <metDecl type="met" pattern="((\+|\-)+)*">
+                <metSym value="+">stressed syllable</metSym>
+                <metSym value="-">unstressed syllable</metSym>
+            </metDecl>
+            <metDecl type="met">
+                <p>The metrical patterns were extracted automatically using the <ref
+                        target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+                </p>
+            </metDecl>
+            <metDecl type="enjamb">
+                <p>The values of the <att>enjamb</att> atributes were extracted automatically using
+                    the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
+                        (Automatic eNJambment Analysis)</ref> tool. For more information about the
+                    types of enjambment as defined in this corpus, read the <ref
+                        target="https://sites.google.com/site/spanishenjambment/enjambment-types"
+                        >documentation</ref>. In addition, a <att>cert</att> was added to express
+                    the degree of certainty concerning the characterisation of the enjambment. The
+                    following <ref
+                        target="https://sites.google.com/site/spanishenjambment/tei-certitude-values"
+                        >report</ref> covers this feature in deep detail.</p>
+            </metDecl>
+        </encodingDesc>
+        <revisionDesc>
+            <change when="2021-12-10" who="#prf">Initial TEI version</change>
+            <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div>
+                <head>José Rizal</head>
+            </div>
+        </front>
+        <body>
+            <lg type="sonnet" xml:id="s693n_2494">
+                <head>A FILIPINAS</head>
+                <span type="context">[(En el Álbum de escultores filipinos)]</span>
+                <lg n="1" type="cuarteto">
+                    <l met="-+-+---+-+-" rhyme="A">Ardiente y bella cual hurí del <w type="rhyme"
+                            >cielo</w>,</l>
+                    <l met="-+-+---+-+-" rhyme="B">Graciosa y pura cual naciente <w type="rhyme"
+                            >aurora</w>
+                    </l>
+                    <l met="---+---+-+-" rhyme="B">Cuando las nubes de zafir <w type="rhyme"
+                            >colora</w>,</l>
+                    <l met="++-+---+-+-" rhyme="A">Duerme una diosa del indiano <w type="rhyme"
+                            >suelo</w>.</l>
+                </lg>
+                <lg n="2" type="cuarteto">
+                    <l met="+--+---+-+-" rhyme="A">Besa sus plantas con amante <w type="rhyme"
+                            >anhelo</w>,</l>
+                    <l met="-+-+---+-+-" rhyme="B">La leve espuma de la mar <w type="rhyme"
+                            >sonora</w>;</l>
+                    <l met="-+-+---+-+-" rhyme="B">El culto Ocaso su sonrisa <w type="rhyme"
+                            >adora</w>
+                    </l>
+                    <l met="-+-+---+-+-" rhyme="A">Y el cano Polo su florido <w type="rhyme"
+                            >velo</w>.</l>
+                </lg>
+                <lg n="3" type="terceto">
+                    <l met="-+--+---+-" rhyme="C">Mi Musa, albuciente, con <w type="rhyme"
+                            >ternura</w>,</l>
+                    <l met="-+---+---+-" rhyme="D">La canta entre las Náyades y <w type="rhyme"
+                            >Ondinas</w>;</l>
+                    <l met="+-+--+---+-" rhyme="C">Yo la ofrezco mi dicha y mi <w type="rhyme"
+                            >ventura</w>.</l>
+                </lg>
+                <lg n="4" type="terceto">
+                    <l met="-+-+-+---+-" rhyme="D">De verde mirto y rosas <w type="rhyme"
+                            >purpurinas</w>
+                    </l>
+                    <l met="--+--+-+-+-" rhyme="C">Y azucenas ceñid su frente <w type="rhyme"
+                            >pura</w>,</l>
+                    <l met="-+---+---+-" rhyme="D">Artistas, y ensalzad a <w type="rhyme"
+                            >Filipinas</w>!</l>
+                </lg>
+            </lg>
+            <lg type="sonnet" xml:id="s693n_2495">
+                <head>A LA VIRGEN MARÍA</head>
+                <lg n="1" type="cuarteto">
+                    <l met="-++-++--+-" rhyme="A" enjamb="pb_noun_prep">¡María, dulce paz, caro <w
+                            type="rhyme">consuelo</w>
+                    </l>
+                    <l met="--+--++--+-" rhyme="B">De afligido mortal! eres la <w type="rhyme"
+                            >fuente</w>
+                    </l>
+                    <l met="-+---+---+-" rhyme="B">Do mana de socorro la <w type="rhyme"
+                            >corriente</w>,</l>
+                    <l met="---+-+---+-" rhyme="A">Que sin cesar fecunda nuestro <w type="rhyme"
+                            >suelo</w>.</l>
+                </lg>
+                <lg n="2" type="cuarteto">
+                    <l met="---+---+-+-" rhyme="A">Desde tu solio, desde el alto <w type="rhyme"
+                            >cielo</w>,</l>
+                    <l met="+--+---+-+-" rhyme="B">¡Oye piadosa mi clamor <w type="rhyme"
+                            >doliente</w>!</l>
+                    <l met="--+--+---+-" rhyme="B">Y cobije tu manto <w type="rhyme">refulgente</w>
+                    </l>
+                    <l met="-+-+---+-+-" rhyme="A">Mi voz que sube con veloce <w type="rhyme"
+                            >vuelo</w>.</l>
+                </lg>
+                <lg n="3" type="terceto">
+                    <l met="+--+-+---+-" rhyme="C">Eres mi Madre, plácida <w type="rhyme"
+                        >María</w>;</l>
+                    <l met="+-+--+---+-" rhyme="D">Tú mi vida serás, mi <w type="rhyme"
+                            >fortaleza</w>;</l>
+                    <l met="++-+-+-+-+-" rhyme="C">Tú en este fiero mar serás mi <w type="rhyme"
+                            >guía</w>.</l>
+                </lg>
+                <lg n="4" type="terceto">
+                    <l met="-+---+---+-" rhyme="D">Si el vicio me persigue con <w type="rhyme"
+                            >fiereza</w>,</l>
+                    <l met="--+--+---+-" rhyme="C">Si la muerte me acosa en la <w type="rhyme"
+                            >agonía</w>,</l>
+                    <l met="-+---+---+-" rhyme="D">¡Socórreme, y disipa mi <w type="rhyme"
+                            >tristeza</w>!</l>
+                </lg>
+            </lg>
+        </body>
+    </text>
+</TEI>
