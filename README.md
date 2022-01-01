@@ -230,6 +230,8 @@ The name of the author was searched programmatically against [VIAF's REST API](h
 * authors that were not found in VIAF do not contain the *idno[@type="viaf"]* element. Some of these authors were manually searched later and whenever a result from VIAF was retrieved, it was introduced with a *@cert* value of *high*.
 * for the remaining cases, the VIAF ID for the best candidate returned by the API was added to the TEI file, and assigned a *@cert* value of *low* 
 
+Note: For Filipino authors, the VIAF ID was searched manually rather than programmatically. Certitude value is always *high*
+
 ### RDFa attributes
 
 For biographical metadata (and to some extent for literary annotations), extra attributes were added following the [RDFa](https://rdfa.info) specification. RDFa is a way of expressing [RDF-style](https://www.w3.org/RDF/) relationships, that is, a subject--predicate--object model, using simple attributes in existing markup languages, in this case, XML-TEI. Our motivation behind the use of RDFa is, on the one hand, to enrich our dataset by linking to third-party ones (as [DBpedia](http://wiki.dbpedia.org/)), providing additional resources to complement the corpus. On the other hand, by publishing our dataset openly using standard schemas, we increased the semantic interoperability of TEI allowing third-party applications to automatically use our data. 

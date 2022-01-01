@@ -27,8 +27,8 @@ The fields in the [author-metadata table](https://github.com/pruizf/disco/blob/m
 | vf_de_esti | 1 if the date of death for our VIAF candidate has question marks in VIAF, else 0 |  |
 | birth_diff | difference between birthdate in our sources and the one for our VIAF candidate |  |
 | death_diff | difference between date of death in our sources and the one for our VIAF candidate |  |
-| vf_cand_n | number of candidates returned by VIAF's API for our queries |  |
+| vf_cand_n | number of candidates returned by VIAF's API for our queries.  | Filipino authors were searched manually and this was not recorded for them |
 | auname_viaf | author name for the VIAF candidate we selected |  |
 | redo | project-internal information |  |
-| match_type | indicates how the author's name in our corpus compares to the VIAF candidate we selected: *exact* match, *contained* in the VIAF name using full-word matching or non-full-word match (*wordpart*) |  |
+| match_type | indicates how the author's name in our corpus compares to the VIAF candidate we selected: *exact* match, *contained* in the VIAF name using full-word matching or non-full-word match (*wordpart*).  | Filipino authors were searched manually; this is specified as *exact (manual query)* |
 | vf_validation | this is rendered in the TEI headers as the *@cert* value for *idno[@type="viaf"]* | Our estimated degree of certitude that the VIAF ID we selected corresponds to the author, see [here](https://github.com/pruizf/disco#viaf-ids) | |
