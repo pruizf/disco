@@ -332,7 +332,7 @@ Version 4 was published in December 2021. Filipino sonnets written in Spanish fr
 
 # Publication and Preservation
 
-The corpus has been published as a GitHub repository, which enables other researchers to clone, fork and keep track of changes. The data has been also kept in the [Zenodo](https://doi.org/10.5281/zenodo.1069844) project, with DOI: <https://doi.org/10.5281/zenodo.1069844>. 
+The corpus has been published as a GitHub repository, which enables other researchers to clone, fork and keep track of changes. The data has been also kept in the [Zenodo](https://doi.org/10.5281/zenodo.1069844) project, with DOI: <https://doi.org/10.5281/zenodo.1012567>. 
 
 # Licence and Citation
 
