@@ -3,9 +3,9 @@
 
 *Let's party*
 
-The Diachronic Spanish Sonnet Corpus (DISCO) contains sonnets in Spanish in XML-TEI, between the 15th and the 20th centuries (4303 sonnets by 1215 authors from 22 different countries). It includes well-known authors, but also less canonized ones. Texts and authors are enriched with identifiers and metadata.
+The Diachronic Spanish Sonnet Corpus (DISCO) contains sonnets in Spanish in XML-TEI, between the 15th and the 20th centuries (4530 sonnets by 1216 authors from 22 different countries). It includes well-known authors, but also less canonized ones. Texts and authors are enriched with identifiers and metadata.
 
-The current version of the corpus is v4.0. Its content was first published in December 2021 as the v4 branch, and later released as v4.0. Work about the corpus presented or submitted before then refers to earlier releases, see the [release history](https://github.com/pruizf/disco/releases). 
+The current version of the corpus is v5.0, published in February 2023. Work about the corpus presented or submitted before then refers to earlier releases, see the [release history](https://github.com/pruizf/disco/releases). 
 <br><br>
 
    * [Prior Collections of Texts in Spanish](#prior-collections-of-texts-in-spanish)
@@ -29,6 +29,7 @@ The current version of the corpus is v4.0. Its content was first published in De
    * [Versions](#versions)
    * [Publication and Preservation](#publication-and-preservation)
    * [Licence and Citation](#licence-and-citation)
+   * [Resources reusing DISCO](#resources-reusing-DISCO)
    * [Future Steps](#future-steps)
    * [References](#references)
 <br><br>
@@ -48,7 +49,7 @@ DISCO complements this growing ecosystem by adding a meaningful representation o
 
 # Description of DISCO
 
-Our corpus currently offers a total of 4303 sonnets in Spanish: 202 from the early-mid 20th century, 2692 from the 19th century, 321 from the 18th century and 1088 from the so-called Spanish Golden Age (15th to 17th centuries). There are a total of 1215 authors (from Spain, Latin America and the Philippines). It intends to provide a wide sample, inspired by distant reading approaches (Moretti, 2005). The raw texts were in most cases extracted from Biblioteca Virtual Miguel de Cervantes (1999), with some 18th-century texts coming from Wikisource. A table in section [Data Distribution](#data-distribution) below summarizes these data.
+Our corpus currently offers a total of 4530 sonnets in Spanish: 202 from the early-mid 20th century, 2919 from the 19th century, 321 from the 18th century and 1088 from the so-called Spanish Golden Age (15th to 17th centuries). There are a total of 1216 authors (from Spain, Latin America and the Philippines). It intends to provide a wide sample, inspired by distant reading approaches (Moretti, 2005). The raw texts were in most cases extracted from Biblioteca Virtual Miguel de Cervantes (1999), with some 18th-century texts coming from Wikisource. More specific sources were also consulted for some authors (the TEI headers always indicate the source). A table in section [Data Distribution](#data-distribution) below summarizes these data.
 
 The corpus is available in plain-text and in TEI formats; XML-TEI P5 was used given this standard’s benefits in terms of reuse, storage, and retrieval. Author metadata were extracted or inferred from unstructured content in the sources (year, place of birth and death, and gender), and placed in the TEIheader, or in a metadata table in the case of the plain-text version. For both TEI and plain-text formats, two versions of the texts are available: one collecting every sonnet per author, the other encoding a single sonnet per file. For corpus preparation, we closely followed the TEI guidelines and RIDE’s criteria for Digital Text Collections (Henny-Krahmer and Neuber, 2017).
 
@@ -62,11 +63,11 @@ The sonnet has had great importance in European poetry; the relevance of the cor
 
 We describe the sources and data distribution for each subcorpus, starting in reverse chronological order with the 19th century. A table below summarizes the information. 
 
-The **20th-century** subcorpus consists of sonnets in Spanish written by Filipino authors. This choice was made given our involvement in a project on Filipino literature in Spanish. It also responds to the corpus goal to cover a breadth of authors, including lesser-known ones. All sonnets found in *Biblioteca Virtual Miguel de Cervantes* poetry collections by Filipino authors were included in the corpus; the source volumes are specified in the corpus files. It contains 202 sonnets by 9 authors (2 female, 7 male).
+The **20th-century** subcorpus consists of sonnets in Spanish written by Filipino authors. This choice was made given our involvement in a project on Philippine literature in Spanish. It also responds to the corpus goal to cover a breadth of authors, including lesser-known ones. All sonnets found in *Biblioteca Virtual Miguel de Cervantes* poetry collections by Filipino authors were included in the corpus; the source volumes are specified in the corpus files. It contains 202 sonnets by 9 authors (2 female, 7 male).
 
-The **19th-century** subcorpus is based on [texts](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) of *Biblioteca Virtual Miguel de Cervantes* prepared by Ramón García González in 2006, as well as texts by Filipino authors at the same library. It contains 2692 sonnets, written by 687 authors. Approximately half of the texts were written by Spanish authors, and half by Latin American authors, with Cuba as the best-represented country, followed at a large distances by Mexico, Argentina, Colombia and Puerto Rico. Some authors were born in non Spanish-speaking countries, such as Portugal, Brasil or Haiti. Two Filipino authors are represented. More than 90% of the authors are male.
+The **19th-century** subcorpus contains 2919 sonnets, written by 688 authors. The main source for the corpus is the [texts](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) at digital library *Biblioteca Virtual Miguel de Cervantes* prepared by Ramón García González in 2006. The same library is the source for sonnets by Filipino authors, and for poems by Peruvian modernista author José Santos Chocano (*Poesías Completas* volumes [1](https://www.cervantesvirtual.com/obra/poesias-completas-tomo-primero-iras-santas-en-la-aldea-azahares-selva-virgen-poemas/) and [2](https://www.cervantesvirtual.com/obra/poesias-completas-tomo-segundo-iras-santas-en-la-aldea-azahares-selva-virgen-poemas/), besides the 19th century anthology by García González just cited). We also included all sonnets by another major modernista poet, Nicaraguan author Rubén Darío; sources are specified in the TEI headers. Approximately half of the texts were written by Spanish authors, and half by Latin American authors, with Cuba as the best-represented country, followed at a large distances by Mexico, Argentina, Colombia and Puerto Rico. Some authors were born in non Spanish-speaking countries, such as Portugal, Brasil or Haiti. Two Filipino authors are represented. More than 90% of the authors are male.
 
-Note that the 19th-century subcorpus includes about 125 sonnets by 23 authors whose production took place in the early 20th century (with date of death prior to 1936). We kept these authors as they were part of the [19th-century anthology](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) mentioned above, which is our source for this subcorpus. We will consider creating a separate subcorpus for early 20th century literature if we more systematically collect material for the early 20th century.
+Note that the 19th-century subcorpus includes about 125 sonnets by 23 authors whose production took place mainly in the early 20th century (with date of death prior to 1936). We kept these authors as they were part of the [19th-century anthology](http://www.cervantesvirtual.com/obra/sonetos-del-siglo-xix--0/) mentioned above, which is our source for this subcorpus. We will consider creating a separate subcorpus for early 20th century literature if we more systematically collect material for the early 20th century.
 
 The **18th century** subcorpus is based on [texts](http://www.cervantesvirtual.com/obra-visor/sonetos-del-siglo-xviii--0/html/) from *Biblioteca Virtual Miguel de Cervantes*, prepared by Ramón García González in 2005. Besides, some texts come from [Wikisource](https://es.wikisource.org/w/index.php?title=Categor%C3%ADa:Sonetos). 
 
@@ -90,7 +91,7 @@ Numbers in parentheses indicate authors which were probably active in Europe.
     <td rowspan="3">9</td>
     <td>Female</td>
     <td>2</td>
-    <td rowspan="3">22,303</td>
+    <td rowspan="3">22,300</td>
   </tr>
   <tr>
     <td>Male</td>
@@ -102,11 +103,11 @@ Numbers in parentheses indicate authors which were probably active in Europe.
   </tr>  
   <tr>
     <td rowspan="5"><b>19th</b></td>
-    <td rowspan="5">2692</td>
-    <td rowspan="5">687</td>
+    <td rowspan="5">2919</td>
+    <td rowspan="5">688</td>
     <td>Female</td>
     <td>48</td>
-    <td rowspan="5">251,975</td>
+    <td rowspan="5">280,332</td>
   </tr>
   <tr>
     <td>Male</td>
@@ -182,7 +183,7 @@ The files' structure differs very little between the *per-author* and the *per-s
 
 Each poem is identified using ID-strings created by the project (since there is no authority file of reference for individual sonnets). Inside a sonnet, the following information has been encoded explicitly: 
 * Headings
-* Stanza number and type (*cuarteto, terceto*)
+* Stanza number and type (*cuarteto, serventesio, terceto*)
 * Prosodic information: metrical scheme (stress patterns), rhyme scheme, and enjambment
 
 The **order of sonnets** in the source edition has been respected in the per-author files, and can be recovered from the numeric part of file-ids in the per-sonnet files. 
@@ -297,11 +298,17 @@ In order to make author and poem search easier for users of the plain-text versi
 
 ### Scansion
 
-For Filipino sonnets, metrical scansion (i.e. weak and strong metrical syllables) was annotated with the [Rantanplan](https://github.com/linhd-postdata/rantanplan) tool (de la Rosa et al., 2020). This attains a performance of 0.96 [F1](https://en.wikipedia.org/wiki/F1_score); evaluation details are in the paper just cited.
+For Filipino sonnets besides sonnets by Rubén Darío and José Santos Chocano, metrical scansion (i.e. weak and strong metrical syllables) was annotated with the [Jumper](https://github.com/grmarco/jumper) tool (Marco and Gonzalo, 2020). This attains an accuracy of 0.95. Evaluation details are in the paper just cited.
 
-For all other cases, metrical scansion was annotated with an earlier tool, the [ADSO](https://github.com/bncolorado/adsoScansionSystem) system (Navarro-Colorado, 2017). This attains a performance of 0.95 [F1](https://en.wikipedia.org/wiki/F1_score) on the same dataset as Rantanplan.
+For all other cases, metrical scansion was annotated with an earlier tool, the [ADSO](https://github.com/bncolorado/adsoScansionSystem) system (Navarro-Colorado, 2017). This attains an accuracy of 0.91 on the same dataset as Jumper (reported in Marco and Gonzalo, 2020).
 
 Metrical information was included in a *@met* attribute for each line (*l*) element. A **+** sign represents a stressed sylable and a **-** sign represents an unstressed syllable. 
+
+### Complex meter scansion
+
+Note that, in the v4 release, Philippine sonnets had been annotated with the [Rantanplan](https://github.com/linhd-postdata/rantanplan) tool (de la Rosa et al., 2020), whose performance on single-meter verse is similar to Jumper's (see evaluations in Marco and Gonzalo, 2020 and De la Rosa et al., 2020). However, in the case of complex-meter verse (potentially, any line of 12 or more metrical syllables in Spanish verse), Jumper performs better than Rantanplan: Marco and Gonzalo (2020) report a 17 percentage-point improvement in accuracy. Modernista verse (including the Philippine texts first added in v4, besides Rubén Darío and José Santos Chocano) does use complex meters. In order to improve their annotation, Philippine texts were reannotated with Jumper, and the same tool was used to annotate all Darío's and Chocano's sonnets.
+
+As future work, it would be relevant to reannotate any sonnets with lines having 12 or more metrical syllables with Jumper (perhaps the entire corpus given this newer tool's better performance overall according to the papers cited above).
 
 ### Rhyme-scheme
 
@@ -322,13 +329,15 @@ Details about the conventions used to represent enjambment types and the criteri
 
 # Versions
 
-DISCO published in October 2017 its version 1.0 containing texts from the 19th Century.
+DISCO published in October 2017 its **version 1.0** containing texts from the 19th Century.
 
-In December 2017 a second version was published, which additionally contains onnets between the 15th to the 18th Century, reinforcing the corpus' diachronic dimension. The second version also contains metadata in RDFa and literary annotations for metrics and enjambment. 
+In December 2017 a **second version** was published, which additionally contains onnets between the 15th to the 18th Century, reinforcing the corpus' diachronic dimension. The second version also contains metadata in RDFa and literary annotations for metrics and enjambment. 
 
-Version 3 was published in October 2019. The main changes are the addition of rhyme-word and rhyme-scheme annotations, besides some text corrections and markup improvements, e.g. in dialogue poems.
+**Version 3** was published in October 2019. The main changes are the addition of rhyme-word and rhyme-scheme annotations, besides some text corrections and markup improvements, e.g. in dialogue poems.
 
-Version 4 was published in December 2021. Filipino sonnets written in Spanish from the 19th and early-mid 20th century were added.
+**Version 4** was published in December 2021. Philippine sonnets written in Spanish from the 19th and early-mid 20th century were added.
+
+**Version 5** was published in February 2023. The focus of the release was Modernista authors from Latin America and the Philippines. Sonnets by two major Latin American Modernista authors were added: Rubén Darío (140 sonnets) and José Santos Chocano; the latter was already present in the corpus with 50 sonnets but 80 sonnets were added for him. Metrics for all these poems were annotated automatically with Jumper, and revised manually by one expert annotator.
 
 # Publication and Preservation
 
@@ -336,17 +345,30 @@ The corpus has been published as a GitHub repository, which enables other resear
 
 # Licence and Citation
 
-The corpus is available under: [CC-BY](https://creativecommons.org/licenses/by/4.0/) license
+The corpus is available under: [CC-BY](https://creativecommons.org/licenses/by/4.0/) license. It can be cited as follows.
 
 
 * Ruiz Fabo, Pablo, Helena Bermúdez Sabel, Clara Martínez Cantón, and José Calvo Tello. 2017. *Diachronic Spanish Sonnet Corpus* (DISCO). Madrid: UNED. <https://github.com/pruizf/disco>. [![DOI](https://zenodo.org/badge/103841064.svg)](https://zenodo.org/badge/latestdoi/103841064)
 
+A journal article describing the corpus at version 2.1, which may be cited besides the corpus itself, is the following:
+
+* Ruiz Fabo, Pablo, Helena Bermúdez Sabel, Clara Martínez Cantón, and Elena González-Blanco. (2021). The Diachronic Spanish Sonnet Corpus: TEI and linked open data encoding, data distribution, and metrical findings. Digital Scholarship in the Humanities, 36(Supplement_1), i68-i80. https://doi.org/10.1093/llc/fqaa035
+
+# Resources reusing DISCO
+
+The corpus is distributed under a [CC-BY](https://creativecommons.org/licenses/by/4.0/) license, using interoperable formats and rich metadata. This has facilitated the reuse of the corpus by several teams:
+
+* 2019: Petr Plecháč trained the Spanish model for his [RhymeTagger](https://github.com/versotym/rhymetagger) tool with it
+* 2021: Barbado et al. used a subset of DISCO to create the [DISCO PAL](https://github.com/AlbertoBarbado/poetry-spanish-semisupervised) dataset, featuring psychological and affect labels. Their related publication: [Barbado et al. (2021)](https://doi.org/10.1007/s10579-021-09557-1). 
+* 2022: The corpus was used at the NLP hackathon organized by the _Somos NLP_ group.
+  * Jorge Henao fine-tuned [GPT-2](https://huggingface.co/hackathon-pln-es/gpt2-small-spanish-disco-poetry) and [T5](https://huggingface.co/jorge-henao/spanish-t5-small-disco-poetry) models on the DISCO corpus in order to perform poetry generation in Spanish. He reformatted the dataset for hosting at Hugging Face, see [here](https://huggingface.co/datasets/hackathon-pln-es/disco_spanish_poetry). His poetry generator is [here](https://huggingface.co/spaces/hackathon-pln-es/sonnet-poetry-generator-spanish).
+  * Alberto Carmona used the fine-tuned [GPT-2](https://huggingface.co/hackathon-pln-es/gpt2-small-spanish-disco-poetry) model just mentioned for a further poetry [generator](https://huggingface.co/spaces/hackathon-pln-es/poem-generation-es), which outputs text based on a specific author and with a given sentiment
 
 # Future Steps
 
 * Stanza type identification will be verified manually for some uncertain cases
 * For authors not present in VIAF, other datasets will be used instead to provide additional information (e.g. [Wikidata](https://www.wikidata.org) and [Bieses](http://www.bieses.net/)) 
-* Validation of metrical and rhyme schemes
+* Validation of metrical and rhyme schemes. A manual validation of metrical schemes was already carried out (relase v5) for all Filipino poems, besides poems by Darío and José Santos Chocano.
 
 # References
 
@@ -361,6 +383,7 @@ The corpus is available under: [CC-BY](https://creativecommons.org/licenses/by/4
 * Gago Jover, Francisco (2015): “La biblioteca digital de textos del español antiguo (BiDTEA), in  *Scriptum Digital 4*: 5–36.
 * González-Blanco, Elena, Rodríguez, José Luis (2014): “ReMetCa: A Proposal for Integrating RDBMS and TEI-Verse”, in *Journal of the Text Encoding Initiative 8* <https://jtei.revues.org/1274>
 * Henny-Krahmer, Ulrike, and Frederike Neuber (2017): ‘Criteria for Reviewing Digital Text Collections, Version 1.0.’ *A Review Journal for Digital Editions and Resources*, no. 6. <https://www.i-d-e.de/publikationen/weitereschriften/criteria-text-collections-version-1-0/>.
+* Marco, Guillermo and Julio Gonzalo. (2020). Automatic Scansion of Spanish Poetry without Syllabification. arXiv:2012.12799 [cs]. http://arxiv.org/abs/2012.12799
 * Marcos Marín, Francisco and Faulhaber, Charles B. (coord.) (1992): ADMYTE. Archivo Digital de Manuscritos y Textos Españoles, in <http://www.admyte.com/admyteonline/contenido.htm>
 * Moretti, Franco (2005): *Graphs, Maps, Trees: Abstract Models for a Literary History*. Verso.
 * Navarro-Colorado, Borja (2017): *ADSO project – Análisis distante del soneto castellano de los Siglos de Oro [Distant analysis of the Spanish Golden Age sonnet]* <http://adso.gplsi.es/index.php/es/proyecto-adso>
@@ -369,6 +392,7 @@ The corpus is available under: [CC-BY](https://creativecommons.org/licenses/by/4
 * Navarro-Colorado, Borja (2017): “A metrical scansion system for fixed-metre Spanish poetry”, in *Digital Scholarship in the Humanities*. <https://doi.org/10.1093/llc/fqx009>
 * Plecháč, Petr. (2018). A Collocation-Driven Method of Discovering Rhymes (in Czech, English, and French Poetry). In *Taming the Corpus: From Inflection and Lexis to Interpretation*. Springer, Cham. <https://link.springer.com/book/10.1007/978-3-319-98017-1>
 * Ruiz Fabo, Pablo, Clara Martínez Cantón, Thierry Poibeau and Elena González-Blanco (2017): Enjambment detection in a large diachronic corpus of Spanish sonnets. In *LaTeCH-CLFL 2017, Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature.* Vancouver, Canada: Association for Computational Linguistics. <https://aclweb.org/anthology/W/W17/W17-2204.pdf>
+* Ruiz Fabo, Pablo, Helena Bermúdez Sabel, Clara Martínez Cantón, and Elena González-Blanco. (2021). The Diachronic Spanish Sonnet Corpus: TEI and linked open data encoding, data distribution, and metrical findings. Digital Scholarship in the Humanities, 36(Supplement_1), i68-i80. https://doi.org/10.1093/llc/fqaa035
 * Quilis, Antonio (1964): *Estructura del encabalgamiento en la métrica española.* Consejo Superior de Investigaciones Científicas, Patronato Menendez y Pelayo, Instituto Miguel de Cervantes.
 * Santa María Fernández, María Teresa, Concepción María Jiménez Fernández, and José Calvo Tello (2017): *Biblioteca Electrónica Textual Del Teatro Español, 1868-1936* (BETTE). Universidad Internacional de la Rioja. La Rioja. <https://github.com/GHEDI/BETTE>
 * Schöch, Christof, Ulrike Henny, José Calvo Tello, and Stefanie Popp (2015): The CLiGS Textbox. Würzburg: University of Würzburg. <https://github.com/cligs/textbox>.
