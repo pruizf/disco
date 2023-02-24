@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -116,24 +123,24 @@
             <head>ITE MISSA EST</head>
             <lg n="1" type="cuarteto">
                <l met="-+---+--++--+-" rhyme="A">El santo sacrificio de amor ha <w type="rhyme">terminado</w>.</l>
-               <l met="-+-+-+-+---+-" rhyme="B">Murió como un suspiro el rito <w type="rhyme">delirante</w>.</l>
-               <l met="--+--+---+-+-" rhyme="A">Y del templo desierto ante al altar <w type="rhyme">sagrado</w>,</l>
+               <l met="-+-+-+--+---+-" rhyme="B">Murió como un suspiro el rito <w type="rhyme">delirante</w>.</l>
+               <l met="--+--+----+-+-" rhyme="A">Y del templo desierto ante al altar <w type="rhyme">sagrado</w>,</l>
                <l met="+++--+----+-+-" rhyme="B">Ya no está de rodillas el sacerdote <w type="rhyme">amante</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="--+--+---+--+-" rhyme="C">En las altas ventanas de cristal de <w type="rhyme">colores</w>
                </l>
-               <l met="-+---+-+---+-" rhyme="D">Cesaron su batir las alas de las <w type="rhyme">aves</w>;</l>
+               <l met="-+---+--+---+-" rhyme="D">Cesaron su batir las alas de las <w type="rhyme">aves</w>;</l>
                <l met="+-+--+--+---+-" rhyme="C">Es la noche del templo, sin luna, sin <w type="rhyme">fervores</w>,</l>
                <l met="--+--+---+--+-" rhyme="D">Sin siquiera fantasmas de recuerdo en sus <w type="rhyme">naves</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-+-+-+-+-+-+-" rhyme="E">El templo está vacío. El ara está entre <w type="rhyme">sombras</w>.</l>
+               <l met="-+-+-+--+-+-+-" rhyme="E">El templo está vacío. El ara está entre <w type="rhyme">sombras</w>.</l>
                <l met="+--+++--+---+-" rhyme="E">Nadie deshoja un solo capullo en sus <w type="rhyme">alfombras</w>;</l>
-               <l met="+-+--+---+-+-" rhyme="F">Ni una sola campana en su silencio <w type="rhyme">canta</w>;</l>
+               <l met="+-+--+----+-+-" rhyme="F">Ni una sola campana en su silencio <w type="rhyme">canta</w>;</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-+---+---+-+-" rhyme="G">Y en lo alto del altar en el que ya ni <w type="rhyme">pienso</w>.</l>
+               <l met="-+---+----+-+-" rhyme="G">Y en lo alto del altar en el que ya ni <w type="rhyme">pienso</w>.</l>
                <l met="-+---+--+---+-" rhyme="G">Sin cánticos, sin flores, sin luces, sin <w type="rhyme">incienso</w>,</l>
                <l met="-+---+--+---+-" rhyme="F">Parece que me buscan los ojos de la <w type="rhyme">Santa</w>.</l>
             </lg>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -117,11 +124,11 @@
          <lg type="sonnet" xml:id="s009t_0168_01">
             <head>I</head>
             <lg n="1" type="cuarteto">
-               <l met="-+-++--+-+-+-" rhyme="A">soñé que había muerto. Mi lira muda y <w type="rhyme">quieta</w>,</l>
-               <l met="-+--+--+-+-+-" rhyme="B">al frío de mi invierno, se helaba en un <w type="rhyme">rincón</w>...</l>
-               <l met="-+---+--+-+-" rhyme="A" enjamb="ex_subj_verb">El cielo de la dicha y el dolor del <w type="rhyme">poeta</w>
+               <l met="-+-+-+--+-+-+-" rhyme="A">soñé que había muerto. Mi lira muda y <w type="rhyme">quieta</w>,</l>
+               <l met="-+---+--+-+-+-" rhyme="B">al frío de mi invierno, se helaba en un <w type="rhyme">rincón</w>...</l>
+               <l met="-+---+---+--+-" rhyme="A" enjamb="ex_subj_verb">El cielo de la dicha y el dolor del <w type="rhyme">poeta</w>
                </l>
-               <l met="++-+-+-+---+-" rhyme="B">ya no cantaba el ave azul de la <w type="rhyme">ilusión</w>.</l>
+               <l met="++-+-+--+---+-" rhyme="B">ya no cantaba el ave azul de la <w type="rhyme">ilusión</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="-+---+-+-+--+-" rhyme="B">Los perros de la envidia que á mi paso <w type="rhyme">ladraron</w>,</l>
@@ -132,13 +139,13 @@
             <lg n="3" type="terceto">
                <l met="++---+---+--+-" rhyme="D" enjamb="ex_dobj_verb">Junto á mi catafalco circundado de <w type="rhyme">cirios</w>
                </l>
-               <l met="+-+--+-+---+-" rhyme="E">una madre sufría la angustia de mis <w type="rhyme">males</w>,</l>
-               <l met="-++--+-+---+-" rhyme="D">igual que una María con todos sus <w type="rhyme">martirios</w>,</l>
+               <l met="+-+--+--+---+-" rhyme="E">una madre sufría la angustia de mis <w type="rhyme">males</w>,</l>
+               <l met="-++--+--+---+-" rhyme="D">igual que una María con todos sus <w type="rhyme">martirios</w>,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-++--+-+---+-" rhyme="E">igual que una María con todos sus <w type="rhyme">pulíales</w>,</l>
-               <l met="---+-+--+--+-" rhyme="F">mientras aun vanamente, en la sala <w type="rhyme">enlutada</w>,</l>
-               <l met="-+---+-+---+-" rhyme="F">inmóvil esperaba... el beso de mi <w type="rhyme">amada</w>!</l>
+               <l met="-++--+--+---+-" rhyme="E">igual que una María con todos sus <w type="rhyme">pulíales</w>,</l>
+               <l met="---+-+---+--+-" rhyme="F">mientras aun vanamente, en la sala <w type="rhyme">enlutada</w>,</l>
+               <l met="-+---+--+---+-" rhyme="F">inmóvil esperaba... el beso de mi <w type="rhyme">amada</w>!</l>
             </lg>
          </lg>
       </body>

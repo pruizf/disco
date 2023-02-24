@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -117,26 +124,26 @@
             <lg n="1" type="cuarteto">
                <l met="+-+--+--+---+-" rhyme="A">Ha sonado en los aires la trompa <w type="rhyme">lisonjera</w>,</l>
                <l met="+-+--+---+--+-" rhyme="B">que ha llenado a mi musa de fulgente <w type="rhyme">decoro</w>;</l>
-               <l met="---+-+----++-" rhyme="A">pero el mejor elogio de mi poesía <w type="rhyme">fuera</w>
+               <l met="----+-+----++-" rhyme="A">pero el mejor elogio de mi poesía <w type="rhyme">fuera</w>
                </l>
-               <l met="+-+-+-+--+-+-" rhyme="B">darme el nombre de hijo de esta ciudad que <w type="rhyme">adoro</w>.</l>
+               <l met="+-+-+-+--+--+-" rhyme="B">darme el nombre de hijo de esta ciudad que <w type="rhyme">adoro</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="+++--+---+--+-" rhyme="C">Ha siete años, dejando mi recóndito <w type="rhyme">asilo</w>,</l>
                <l met="-+-+-+--+---+-" rhyme="D">lancé a estas aguas santas mi nave de <w type="rhyme">ilusión</w>,</l>
-               <l met="---+-+--+--+-" rhyme="C">y desde entonces guardo la imagen de <w type="rhyme">Iloilo</w>,</l>
+               <l met="---+-+--+---+-" rhyme="C">y desde entonces guardo la imagen de <w type="rhyme">Iloilo</w>,</l>
                <l met="-++--+-+----+-" rhyme="D">como una hostia celeste dentro del <w type="rhyme">corazón</w>.</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="+-++-+-++---+-" rhyme="E">Madre, ¿qué vale el tiempo, qué importa la <w type="rhyme">distancia</w>?</l>
-               <l met="--++-++--+-+-" rhyme="E">Como en un frasco viejo una sutil <w type="rhyme">fragancia</w>,</l>
+               <l met="--++-+-+--+-+-" rhyme="E">Como en un frasco viejo una sutil <w type="rhyme">fragancia</w>,</l>
                <l met="--++-+---+--+-" rhyme="-">tu recuerdo ha alentado de mi vida al través,</l>
             </lg>
             <lg n="4" type="terceto">
                <l met="+-+--+--++--+-" rhyme="F">y esta noche de luna, que asisto a un <w type="rhyme">desafío</w>,</l>
-               <l met="-+---++--+-+-" rhyme="F" enjamb="ex_subj_verb">vencido o vencedor, quiero que el verso <w type="rhyme">mío</w>
+               <l met="-+---+-+--+-+-" rhyme="F" enjamb="ex_subj_verb">vencido o vencedor, quiero que el verso <w type="rhyme">mío</w>
                </l>
-               <l met="++--+----+-+-" rhyme="-">sea onda de incienso con que aromar tus pies.</l>
+               <l met="+-+--+----+-+-" rhyme="-">sea onda de incienso con que aromar tus pies.</l>
             </lg>
          </lg>
       </body>

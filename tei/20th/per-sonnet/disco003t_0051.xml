@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,28 +122,28 @@
          <lg type="sonnet" xml:id="s003t_0051">
             <head>VIR BONUS III</head>
             <lg n="1" type="cuarteto">
-               <l met="-+--+----+-+-" rhyme="A">Tenía las dulzuras de las calladas <w type="rhyme">fuentes</w>
+               <l met="-+---+----+-+-" rhyme="A">Tenía las dulzuras de las calladas <w type="rhyme">fuentes</w>
                </l>
                <l met="-+---+-++---+-" rhyme="B">y a veces el coraje de un fuerte <w type="rhyme">visionario</w>:</l>
-               <l met="--++-+---+-+-" rhyme="A">sin mover una pluma acaudilló a las <w type="rhyme">gentes</w>
+               <l met="--++-+----+-+-" rhyme="A">sin mover una pluma acaudilló a las <w type="rhyme">gentes</w>
                </l>
                <l met="--++-+--+---+-" rhyme="B">y cayó muchas veces, camino a su <w type="rhyme">calvario</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="---+-+-+---+-" rhyme="C">De la contienda «antigua extintos los <w type="rhyme">horrores</w>,</l>
-               <l met="---+-++----+-" rhyme="D">elaboró en silencio otra <w type="rhyme">revolución</w>;</l>
-               <l met="+-+-+--+---+-" rhyme="C">su hueste fué un puñado de locos <w type="rhyme">soñadores</w>,</l>
-               <l met="-+-+-+-+---+-" rhyme="D">quijotes todo ensueño y todo <w type="rhyme">corazón</w>.</l>
+               <l met="---+-+--+---+-" rhyme="C">De la contienda «antigua extintos los <w type="rhyme">horrores</w>,</l>
+               <l met="---+-+-+----+-" rhyme="D">elaboró en silencio otra <w type="rhyme">revolución</w>;</l>
+               <l met="-+-+-+--+---+-" rhyme="C">su hueste fué un puñado de locos <w type="rhyme">soñadores</w>,</l>
+               <l met="-+-+-+--+---+-" rhyme="D">quijotes todo ensueño y todo <w type="rhyme">corazón</w>.</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="-+---+---+--+-" rhyme="E">¡Hermanos! bendigamos nuestra santa <w type="rhyme">pobreza</w>,</l>
                <l met="---+-+--+---+-" rhyme="E">pero, también, alcemos al sol nuestra <w type="rhyme">cabeza</w>,</l>
-               <l met="-+---+-+---+-" rhyme="F">cuando "aves de rapiña" ultrajen nuestros <w type="rhyme">llanos</w>;</l>
+               <l met="-+---+-+----+-" rhyme="F">cuando "aves de rapiña" ultrajen nuestros <w type="rhyme">llanos</w>;</l>
             </lg>
             <lg n="4" type="terceto">
                <l met="-+---+--+-+-+-" rhyme="G">y ahora, entre los ritos y duelos de este <w type="rhyme">día</w>,</l>
-               <l met="+---+-+--+-+-" rhyme="G">seamos lo que fuimos siempre, cuando él <w type="rhyme">vivía</w>:</l>
-               <l met="+----+++-+-+-" rhyme="F">pobres, pero comiendo un mismo pan de <w type="rhyme">hermanos</w>.</l>
+               <l met="-+---+-+--+-+-" rhyme="G">seamos lo que fuimos siempre, cuando él <w type="rhyme">vivía</w>:</l>
+               <l met="+----+-++-+-+-" rhyme="F">pobres, pero comiendo un mismo pan de <w type="rhyme">hermanos</w>.</l>
             </lg>
          </lg>
       </body>

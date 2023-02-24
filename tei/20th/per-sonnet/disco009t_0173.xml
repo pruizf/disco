@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,31 +122,31 @@
          <lg type="sonnet" xml:id="s009t_0173">
             <head>FLOR DE LIS</head>
             <lg n="1" type="cuarteto">
-               <l met="-+--+--+--+-" rhyme="A">Despiertan en mi alma nostalgias de <w type="rhyme">Francia</w>.</l>
-               <l met="+---+-+--+-" rhyme="B">Una señorita arranca del <w type="rhyme">piano</w>
+               <l met="-+---+--+--+-" rhyme="A">Despiertan en mi alma nostalgias de <w type="rhyme">Francia</w>.</l>
+               <l met="+---+-+--+---" rhyme="B">Una señorita arranca del <w type="rhyme">piano</w>
                </l>
-               <l met="-+-++-+--+-" rhyme="A" enjamb="pb_noun_prep">las notas de un vals de seda <w type="rhyme">elegancia</w>
+               <l met="-+-++-+--+---" rhyme="A" enjamb="pb_noun_prep">las notas de un vals de seda <w type="rhyme">elegancia</w>
                </l>
-               <l met="--+-++--+-" rhyme="B">de Francisco Popy, el ritmo <w type="rhyme">lejano</w>...</l>
+               <l met="--+-+-+--+---" rhyme="B">de Francisco Popy, el ritmo <w type="rhyme">lejano</w>...</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="--+--+---+--+-" rhyme="B">¡Oh amiga romántica de lírica <w type="rhyme">mano</w>!</l>
-               <l met="++--+----++-" rhyme="-">tú avivas la llama de mi adormida ansia,</l>
-               <l met="+--+++++-+-" rhyme="B" enjamb="cc_crossclause">ansia que no sé si es un suelto <w type="rhyme">vano</w>
+               <l met="++--+--+--+--" rhyme="B">¡Oh amiga romántica de lírica <w type="rhyme">mano</w>!</l>
+               <l met="++--+----++--" rhyme="-">tú avivas la llama de mi adormida ansia,</l>
+               <l met="+--+++++-+---" rhyme="B" enjamb="cc_crossclause">ansia que no sé si es un suelto <w type="rhyme">vano</w>
                </l>
-               <l met="+--++--+--+-" rhyme="A">que ha de morir luego como una <w type="rhyme">fragancia</w>.</l>
+               <l met="+--++--+--+--" rhyme="A">que ha de morir luego como una <w type="rhyme">fragancia</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-++-+--+--+-" rhyme="C">Invita ésa música, invita a <w type="rhyme">París</w>;</l>
-               <l met="-++-+-++-+-" rhyme="D" enjamb="pb_adj_noun">invita á libar la miel de una <w type="rhyme">boca</w>
+               <l met="-++-+--+--+--" rhyme="C">Invita ésa música, invita a <w type="rhyme">París</w>;</l>
+               <l met="-++-+-++-+---" rhyme="D" enjamb="pb_adj_noun">invita á libar la miel de una <w type="rhyme">boca</w>
                </l>
-               <l met="--+-+---+-+-" rhyme="C">perfumada y roja, con rojez de <w type="rhyme">lis</w>.</l>
+               <l met="--+-+---+-+--" rhyme="C">perfumada y roja, con rojez de <w type="rhyme">lis</w>.</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="--+-+---+-+-" rhyme="D" enjamb="ex_dobj_verb">Pero no te enfermes, ilusión, si <w type="rhyme">evoca</w>
+               <l met="--+-+---+-+--" rhyme="D" enjamb="ex_dobj_verb">Pero no te enfermes, ilusión, si <w type="rhyme">evoca</w>
                </l>
-               <l met="--+-+--+-+-" rhyme="E">tus nostalgias Popy. Mientras, vive <w type="rhyme">ilesa</w>,</l>
-               <l met="-++-+-+-+-" rhyme="E">que al fin has de ver tu ideal <w type="rhyme">francesa</w>.</l>
+               <l met="--+-+--+-+---" rhyme="E">tus nostalgias Popy. Mientras, vive <w type="rhyme">ilesa</w>,</l>
+               <l met="-++-+--+-+---" rhyme="E">que al fin has de ver tu ideal <w type="rhyme">francesa</w>.</l>
             </lg>
          </lg>
       </body>

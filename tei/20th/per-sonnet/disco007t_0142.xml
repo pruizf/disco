@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -117,13 +124,13 @@
             <lg n="1" type="cuarteto">
                <l met="--++-+---+-" rhyme="A" enjamb="pb_noun_prep">General Roxas, hijo <w type="rhyme">favorito</w>
                </l>
-               <l met="--+-+---+-" rhyme="B">de la Patria: ¡loor a tu <w type="rhyme">coraje</w>!</l>
+               <l met="--+--+---+-" rhyme="B">de la Patria: ¡loor a tu <w type="rhyme">coraje</w>!</l>
                <l met="----++---+-" rhyme="B" enjamb="pb_noun_prep">Por tu salvación damos <w type="rhyme">homenaje</w>
                </l>
-               <l met="+---+-+--+-" rhyme="A">de honda gratitud al Ser <w type="rhyme">Infinito</w>.</l>
+               <l met="-+---+-+--+" rhyme="A">de honda gratitud al Ser <w type="rhyme">Infinito</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="-----+--+-" rhyme="A" enjamb="pb_adj_adv">Durante el cautiverio <w type="rhyme">inaudito</w>
+               <l met="-----+---+-" rhyme="A" enjamb="pb_adj_adv">Durante el cautiverio <w type="rhyme">inaudito</w>
                </l>
                <l met="+--+--+--+-" rhyme="B">no desmentiste tu heroico <w type="rhyme">linaje</w>.</l>
                <l met="--+----+-+-" rhyme="B" enjamb="ex_subj_verb">Ni al halago ni a la presión <w type="rhyme">salvaje</w>
@@ -135,10 +142,10 @@
                </l>
                <l met="--+--+---+-" rhyme="D" enjamb="ex_subj_verb">tus sublimes y límpidos <w type="rhyme">blasones</w>
                </l>
-               <l met="+--+---+-" rhyme="C">¡radian tras tu épica <w type="rhyme">odisea</w>.</l>
+               <l met="-+---+---+-" rhyme="C">¡radian tras tu épica <w type="rhyme">odisea</w>.</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-+-+---+-" rhyme="D" enjamb="ex_subj_verb">Tu nombre en tiempos de <w type="rhyme">pasiones</w>
+               <l met="-+---+---+-" rhyme="D" enjamb="ex_subj_verb">Tu nombre en tiempos de <w type="rhyme">pasiones</w>
                </l>
                <l met="+--+-+--++-" rhyme="C">prenda de amor y lazo de unión <w type="rhyme">sea</w>
                </l>

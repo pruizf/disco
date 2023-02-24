@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,27 +122,27 @@
          <lg type="sonnet" xml:id="s003t_0048">
             <head>MUJER MODERNA II</head>
             <lg n="1" type="cuarteto">
-               <l met="-++--+----+-" rhyme="A">Mujer, yo te bendigo por lo que tú <w type="rhyme">eres</w>,</l>
-               <l met="-+-+++--+---+-" rhyme="B">por tu alma que es un áureo surtido de <w type="rhyme">salud</w>,</l>
-               <l met="-+-+-+-+----+-" rhyme="A">e hilando siempre el lino santo de tus <w type="rhyme">deberes</w>,</l>
-               <l met="+--+-++----+-" rhyme="B">no llegarás a vieja: eres la <w type="rhyme">Juventud</w>.</l>
+               <l met="-++--+---+-" rhyme="A">Mujer, yo te bendigo por lo que tú <w type="rhyme">eres</w>,</l>
+               <l met="-+-+++--+---+" rhyme="B">por tu alma que es un áureo surtido de <w type="rhyme">salud</w>,</l>
+               <l met="-+-+-+-+----+" rhyme="A">e hilando siempre el lino santo de tus <w type="rhyme">deberes</w>,</l>
+               <l met="+--+-+-+----+" rhyme="B">no llegarás a vieja: eres la <w type="rhyme">Juventud</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="---+-+--+---+-" rhyme="C">Como el rocío humilde que nieva los <w type="rhyme">rosales</w>,</l>
-               <l met="+----+-++---+-" rhyme="D">tienen tus pensamientos tal luz de <w type="rhyme">honestidad</w>,</l>
-               <l met="-+-+-+--+---+-" rhyme="C">que no los quiebra el oro de ardientes <w type="rhyme">madrigales</w>,</l>
-               <l met="-+-+++-+---+-" rhyme="D">si en ellos no va un dulce aroma de <w type="rhyme">verdad</w>.</l>
+               <l met="---+-+--+---+" rhyme="C">Como el rocío humilde que nieva los <w type="rhyme">rosales</w>,</l>
+               <l met="+----+-++----+" rhyme="D">tienen tus pensamientos tal luz de <w type="rhyme">honestidad</w>,</l>
+               <l met="-+-+-+--+---+" rhyme="C">que no los quiebra el oro de ardientes <w type="rhyme">madrigales</w>,</l>
+               <l met="-+-+++--+---+" rhyme="D">si en ellos no va un dulce aroma de <w type="rhyme">verdad</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-++--+---++-" rhyme="E">Mujer: sigue tu senda, o como tú <w type="rhyme">quieras</w>.</l>
-               <l met="+----+--+---+-" rhyme="E">Tienes el sortilegio de todas las <w type="rhyme">quimeras</w>,</l>
-               <l met="--+--+--++--+-" rhyme="F">¡mariposas del alma que no pueden <w type="rhyme">morir</w>!</l>
+               <l met="-++--+----+-+" rhyme="E">Mujer: sigue tu senda, o como tú <w type="rhyme">quieras</w>.</l>
+               <l met="+----+--+---+" rhyme="E">Tienes el sortilegio de todas las <w type="rhyme">quimeras</w>,</l>
+               <l met="--+--+--++--+" rhyme="F">¡mariposas del alma que no pueden <w type="rhyme">morir</w>!</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-+--+---+---+-" rhyme="G">Como hiedra simbólica la Historia se te <w type="rhyme">enlaza</w>...</l>
-               <l met="+----+--+-+-+-" rhyme="G" enjamb="cc_crossclause">Eres el encantado compendio de una <w type="rhyme">raza</w>
+               <l met="--+--+--+---+" rhyme="G">Como hiedra simbólica la Historia se te <w type="rhyme">enlaza</w>...</l>
+               <l met="+----+--+-+-+" rhyme="G" enjamb="cc_crossclause">Eres el encantado compendio de una <w type="rhyme">raza</w>
                </l>
-               <l met="-+---+--+---+-" rhyme="F">que, atada a su pasado, conquista el <w type="rhyme">porvenir</w>.</l>
+               <l met="-+---+--+---+" rhyme="F">que, atada a su pasado, conquista el <w type="rhyme">porvenir</w>.</l>
             </lg>
          </lg>
       </body>

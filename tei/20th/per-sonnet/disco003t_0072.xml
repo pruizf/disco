@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,7 +122,7 @@
          <lg type="sonnet" xml:id="s003t_0072">
             <head>ELOGIO DE LA REINA II</head>
             <lg n="1" type="cuarteto">
-               <l met="--+--+--+-+-" rhyme="A" enjamb="cc_crossclause">Porque tú eres Cebú. En la sonrisa <w type="rhyme">varia</w>
+               <l met="--++--+---+-+-" rhyme="A" enjamb="cc_crossclause">Porque tú eres Cebú. En la sonrisa <w type="rhyme">varia</w>
                </l>
                <l met="--+--+--+---+-" rhyme="B">que repartes mostrando la hilera de tus <w type="rhyme">dientes</w>,</l>
                <l met="-+-+-+--+---+-" rhyme="A" enjamb="cc_crossclause">pareces esta dulce ciudad <w type="rhyme">hospitalaria</w>
@@ -126,18 +133,18 @@
                <l met="-+---+--+---+-" rhyme="C">Y así como cuando andas se aroman los <w type="rhyme">senderos</w>,</l>
                <l met="-+---+--+---+-" rhyme="D">el alma de tu tierra perfuma <w type="rhyme">voluntades</w>;</l>
                <l met="----++--+---+-" rhyme="C">y si cuando tú miras, enciendes los <w type="rhyme">luceros</w>,</l>
-               <l met="+--+++-++--+-" rhyme="D">esta ciudad es luz que alumbra otras <w type="rhyme">ciudades</w>.</l>
+               <l met="+--+++--++--+-" rhyme="D">esta ciudad es luz que alumbra otras <w type="rhyme">ciudades</w>.</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="+++--+--+---+-" rhyme="E">¡Dios guarde esa sonrisa, Princesa <w type="rhyme">encantadora</w>;</l>
                <l met="+++--+-+-+--+-" rhyme="E">Dios guarde esa mirada, que es el alba que <w type="rhyme">llora</w>,</l>
-               <l met="---+-++--+-+-" rhyme="F">de cuyo encanto va toda poesía en <w type="rhyme">pos</w>!</l>
+               <l met="---+-+-+--+-+-" rhyme="F">de cuyo encanto va toda poesía en <w type="rhyme">pos</w>!</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="++-+-+-+-+-+-" rhyme="F">Sé reina eternamente. ¡Loados sean tus <w type="rhyme">fallos</w>,</l>
+               <l met="++-+-+-+-+--+-" rhyme="F">Sé reina eternamente. ¡Loados sean tus <w type="rhyme">fallos</w>,</l>
                <l met="--+--+---+--+-" rhyme="F">porque tienes, señora, los mejores <w type="rhyme">vasallos</w>
                </l>
-               <l met="--+--+--+--+-" rhyme="F">los que saben morir por su Reina y su <w type="rhyme">Dios</w>!</l>
+               <l met="--+--+---+--+-" rhyme="F">los que saben morir por su Reina y su <w type="rhyme">Dios</w>!</l>
             </lg>
          </lg>
       </body>

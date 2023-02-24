@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,9 +122,9 @@
          <lg type="sonnet" xml:id="s002t_0022">
             <head>NUPCIAL</head>
             <lg n="1" type="cuarteto">
-               <l met="---+-++-+--+-" rhyme="A">Iluminó el idilio una lámpara <w type="rhyme">azul</w>,</l>
+               <l met="---+-+-+-+--+-" rhyme="A">Iluminó el idilio una lámpara <w type="rhyme">azul</w>,</l>
                <l met="--+--+-++---+-" rhyme="-">Nos velaron los ibis de un biombo japonés,</l>
-               <l met="--+--++-++-+-" rhyme="A" enjamb="cc_crossclause">Y sintió tu hermosura un diván de oro y <w type="rhyme">tul</w>
+               <l met="--+--+-+-++-+-" rhyme="A" enjamb="cc_crossclause">Y sintió tu hermosura un diván de oro y <w type="rhyme">tul</w>
                </l>
                <l met="---+-+----+-+-" rhyme="-">Donde besé el perfume de tus descalzos pies.</l>
             </lg>
@@ -127,18 +134,18 @@
                <l met="---+-+-+--+-+-" rhyme="C">Tu desnudez de perla, dulce como un <w type="rhyme">jazmín</w>,</l>
                <l met="-+---+--++--+-" rhyme="B" enjamb="ex_dobj_verb">En tanto despertaba como un verso <w type="rhyme">inmortal</w>
                </l>
-               <l met="-+---+-+---+-" rhyme="C">Tu carne virginal de aurora y de <w type="rhyme">jardín</w>.</l>
+               <l met="-+---+--+---+-" rhyme="C">Tu carne virginal de aurora y de <w type="rhyme">jardín</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-+++-+-+--+-" rhyme="D">¿ Acaso esto es amor ? decías sin <w type="rhyme">hablar</w>;</l>
-               <l met="-+++-+-+--+-" rhyme="D" enjamb="ex_dobj_verb">¿Acaso esto es amor? querían <w type="rhyme">preguntar</w>
+               <l met="-+++-+--+---+-" rhyme="D">¿ Acaso esto es amor ? decías sin <w type="rhyme">hablar</w>;</l>
+               <l met="-+++-+--+---+-" rhyme="D" enjamb="ex_dobj_verb">¿Acaso esto es amor? querían <w type="rhyme">preguntar</w>
                </l>
                <l met="-+---+----+-+-" rhyme="E">El llanto de tus ojos y tu temblor de <w type="rhyme">flor</w>.</l>
             </lg>
             <lg n="4" type="terceto">
                <l met="+++--+--+---+-" rhyme="-">Ya están lejos los ibis del biombo japonés</l>
-               <l met="--+--++--+-+-" rhyme="-">Y la lámpara azul. Vuelvo a besar tus pies</l>
-               <l met="---+-+-+++-+-" rhyme="E">Y te juró ante Dios, que sí, que esto es <w type="rhyme">amor</w>.</l>
+               <l met="--+--+-+--+-+-" rhyme="-">Y la lámpara azul. Vuelvo a besar tus pies</l>
+               <l met="---+-+--+++-+-" rhyme="E">Y te juró ante Dios, que sí, que esto es <w type="rhyme">amor</w>.</l>
             </lg>
          </lg>
       </body>

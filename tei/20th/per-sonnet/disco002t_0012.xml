@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -120,23 +127,23 @@
                <l met="---+-+--+---+-" rhyme="B">De la Estación de Radio, nimbada de <w type="rhyme">esplendor</w>,</l>
                <l met="+-+--+---++-+-" rhyme="A" enjamb="pb_noun_prep">Un puñado de rosas que te di fué el <w type="rhyme">preludio</w>
                </l>
-               <l met="+----+--+--+-" rhyme="B">De esta nuestra encantada opereta de amor ?</l>
+               <l met="+----+---+--+-" rhyme="B">De esta nuestra encantada opereta de amor ?</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="-+---+---+--+-" rhyme="C">Tus manos se llenaban con los pétalos <w type="rhyme">rojos</w>
                </l>
                <l met="--+--+---+--+-" rhyme="D">Y las verdes espinas de mi amante <w type="rhyme">oblación</w>;</l>
-               <l met="-++--+--+-" rhyme="C">Y reías, reías con tu boca y tus <w type="rhyme">ojos</w>,</l>
+               <l met="--+--+---+--+-" rhyme="C">Y reías, reías con tu boca y tus <w type="rhyme">ojos</w>,</l>
                <l met="--+--+-+----+-" rhyme="D">Sin saber que en las rosas iba mi <w type="rhyme">corazón</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="+-+--+--+--+-" rhyme="E">Han pasado los días como pasa la <w type="rhyme">brisa</w>
+               <l met="+-+--+---+--+-" rhyme="E">Han pasado los días como pasa la <w type="rhyme">brisa</w>
                </l>
                <l met="--+--+-+++--+-" rhyme="E">Deshojando las rosas. Ya no escucho tu <w type="rhyme">risa</w>,</l>
                <l met="--++-+---+--+-" rhyme="F">Porque Amor, más que a risa, nos empuja a <w type="rhyme">llorar</w>,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-+-+-+-+---+-" rhyme="G">Y tú aguardando vives, dulce y <w type="rhyme">enamorada</w>,</l>
+               <l met="-+-+-+-+----+-" rhyme="G">Y tú aguardando vives, dulce y <w type="rhyme">enamorada</w>,</l>
                <l met="+-+--+--+---+-" rhyme="G">Que otra noche cualquiera, la menos <w type="rhyme">esperada</w>.</l>
                <l met="-+-+-+--+---+-" rhyme="F">Mi amor, como a una rosa, te vaya a <w type="rhyme">deshojar</w>.</l>
             </lg>

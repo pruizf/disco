@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,31 +122,31 @@
          <lg type="sonnet" xml:id="s002t_0009">
             <head>BLASÓN</head>
             <lg n="1" type="cuarteto">
-               <l met="+++-+--+--+-" rhyme="A">Soy un bardo indo-hispano. En mi pecho <w type="rhyme">cristiano</w>
+               <l met="++---+---+--+-" rhyme="A">Soy un bardo indo-hispano. En mi pecho <w type="rhyme">cristiano</w>
                </l>
                <l met="---+++----+-+-" rhyme="B" enjamb="ex_subj_verb">Mi corazón es vaso donde mezclada <w type="rhyme">está</w>
                </l>
-               <l met="-+---+---+-+-" rhyme="A">La sangre de Legaspi, el Capitán <w type="rhyme">hispano</w>.</l>
+               <l met="-+---+----+-+-" rhyme="A">La sangre de Legaspi, el Capitán <w type="rhyme">hispano</w>.</l>
                <l met="--+--+--+---+-" rhyme="B">Con la sangre tagala de la hija del <w type="rhyme">Rajá</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="---+-+-+---+-" rhyme="C">Con el talón hundido en olas y en <w type="rhyme">espumas</w>,</l>
-               <l met="--+--+--+--+-" rhyme="D">Esperé sobre el mar el galeón <w type="rhyme">español</w>,</l>
+               <l met="---+-+--+---+-" rhyme="C">Con el talón hundido en olas y en <w type="rhyme">espumas</w>,</l>
+               <l met="--+---+--+--+-" rhyme="D">Esperé sobre el mar el galeón <w type="rhyme">español</w>,</l>
                <l met="-+---+--+-+-+-" rhyme="C">Y España, al encontrarme, besó las áureas <w type="rhyme">plumas</w>
                </l>
                <l met="--+--+---+--+-" rhyme="D">Que en mi frente temblaban como rayos de <w type="rhyme">sol</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="+-++-++-+--+-" rhyme="E">Era herniosa, era buena, era plena de <w type="rhyme">amores</w>;</l>
+               <l met="+-++-+-+-+--+-" rhyme="E">Era herniosa, era buena, era plena de <w type="rhyme">amores</w>;</l>
                <l met="+--+-+---+--+-" rhyme="E">Puse a sus pies mis lanzas, mis espigas, mis <w type="rhyme">flores</w>;</l>
-               <l met="-+---+-+--+-" rhyme="F">La di mi corazón salvaje y <w type="rhyme">oriental</w>;</l>
+               <l met="-+---+--+---+-" rhyme="F">La di mi corazón salvaje y <w type="rhyme">oriental</w>;</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="---+-+-+--+-" rhyme="G">Y desde entonces va en mi pecho <w type="rhyme">desnudo</w>
+               <l met="----+-+--+--+-" rhyme="G">Y desde entonces va en mi pecho <w type="rhyme">desnudo</w>
                </l>
                <l met="-+---+----+-+-" rhyme="G">Sirviéndome de férreo y de glorioso <w type="rhyme">escudo</w>
                </l>
-               <l met="--+--+--+--+-" rhyme="F">Con su idioma divino y su sangre <w type="rhyme">inmortal</w>.</l>
+               <l met="--+--+---+--+-" rhyme="F">Con su idioma divino y su sangre <w type="rhyme">inmortal</w>.</l>
             </lg>
          </lg>
       </body>

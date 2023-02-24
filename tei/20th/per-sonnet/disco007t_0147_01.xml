@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -117,9 +124,9 @@
          <lg type="sonnet" xml:id="s007t_0147_01">
             <head>1</head>
             <lg n="1" type="cuarteto">
-               <l met="--+-++--+-" rhyme="A">Bernabé: hubo real pena <w type="rhyme">fraterna</w>
+               <l met="--+--++--+-" rhyme="A">Bernabé: hubo real pena <w type="rhyme">fraterna</w>
                </l>
-               <l met="--+---+--+-" rhyme="B" enjamb="cc_crossclause">al saberse por tus <w type="rhyme">co</w>-<w type="rhyme">trovadores</w>
+               <l met="--+------+-" rhyme="B" enjamb="cc_crossclause">al saberse por tus <w type="rhyme">co</w>-<w type="rhyme">trovadores</w>
                </l>
                <l met="--+--++--+-" rhyme="B">que, viajero en bajel lleno de <w type="rhyme">flores</w>,</l>
                <l met="+-+--+-+-+-" rhyme="A">ya arribaste a la vasta orilla <w type="rhyme">eterna</w>.</l>
@@ -127,8 +134,8 @@
             <lg n="2" type="cuarteto">
                <l met="+-++--+--+-" rhyme="A">Fue tu gran lira de forma <w type="rhyme">moderna</w>
                </l>
-               <l met="--+--+--+-" rhyme="B">varonil combatiendo a <w type="rhyme">opresores</w>,</l>
-               <l met="---+-+--+-" rhyme="B">pero, al cantar insólitos <w type="rhyme">loores</w>
+               <l met="--+--+---+-" rhyme="B">varonil combatiendo a <w type="rhyme">opresores</w>,</l>
+               <l met="---+-+---+-" rhyme="B">pero, al cantar insólitos <w type="rhyme">loores</w>
                </l>
                <l met="-+-+--+-++-" rhyme="A">a Dios, la Patria y la Dama, fue <w type="rhyme">tierna</w>.</l>
             </lg>
@@ -137,14 +144,14 @@
                </l>
                <l met="--+-++---+-" rhyme="D">que hasta ahora no es cisne <w type="rhyme">moribundo</w>
                </l>
-               <l met="--+-+---+-" rhyme="E">en el país la lengua <w type="rhyme">cervantina</w>.</l>
+               <l met="---+-+---+-" rhyme="E">en el país la lengua <w type="rhyme">cervantina</w>.</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="+--+++-+-" rhyme="C">Da otra razón más tu obra <w type="rhyme">maestra</w>
+               <l met="+--++-+--+-" rhyme="C">Da otra razón más tu obra <w type="rhyme">maestra</w>
                </l>
                <l met="----+--+-+-" rhyme="D" enjamb="ex_dobj_verb">para preservar con afán <w type="rhyme">profundo</w>
                </l>
-               <l met="+--+-+---+-" rhyme="E">la alta cultura <w type="rhyme">hispano</w>-<w type="rhyme">filipina</w>.</l>
+               <l met="+--+-----+-" rhyme="E">la alta cultura <w type="rhyme">hispano</w>-<w type="rhyme">filipina</w>.</l>
             </lg>
          </lg>
       </body>

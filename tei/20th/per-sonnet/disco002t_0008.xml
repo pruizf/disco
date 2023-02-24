@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -117,9 +124,9 @@
             <lg n="1" type="cuarteto">
                <l met="---+-+-+--+-+-" rhyme="A" enjamb="pb_noun_prep">El Capitán Salcedo, preso en los dulces <w type="rhyme">ojos</w>
                </l>
-               <l met="---++--+---+-" rhyme="B">De la princesa india dormida en su <w type="rhyme">candor</w>,</l>
-               <l met="---+-+--+--+-" rhyme="A">Se desciñó la espada, y postrado de <w type="rhyme">hinojos</w>,</l>
-               <l met="+----++++-+-" rhyme="B">Puso sobre su sueño un beso y una <w type="rhyme">flor</w>.</l>
+               <l met="---++--+----+-" rhyme="B">De la princesa india dormida en su <w type="rhyme">candor</w>,</l>
+               <l met="---+-+---+--+-" rhyme="A">Se desciñó la espada, y postrado de <w type="rhyme">hinojos</w>,</l>
+               <l met="+----+-++-+-+-" rhyme="B">Puso sobre su sueño un beso y una <w type="rhyme">flor</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="-+---+--+-+-+-" rhyme="C">El seno de la tierra sintió una nueva <w type="rhyme">vida</w>;</l>
@@ -130,13 +137,13 @@
             </lg>
             <lg n="3" type="terceto">
                <l met="-+-+-+--+---+-" rhyme="D">Después, en otra noche romántica y <w type="rhyme">preclara</w>,</l>
-               <l met="---++----+-+-" rhyme="E">Como ninguna otra de luminosa y <w type="rhyme">bella</w>,</l>
+               <l met="---++----+--+-" rhyme="E">Como ninguna otra de luminosa y <w type="rhyme">bella</w>,</l>
                <l met="---+-+--+-+-+-" rhyme="F">Como si a más de estrella, tuviera luna y <w type="rhyme">sol</w>,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-+-+-+--+-++-" rhyme="D">Surgió de aquella noche de amor, María <w type="rhyme">Clara</w>,</l>
+               <l met="-+-+-+--+-+-+-" rhyme="D">Surgió de aquella noche de amor, María <w type="rhyme">Clara</w>,</l>
                <l met="+--+-+-+--+-+-" rhyme="E">Dulce como una rosa, blanca como una <w type="rhyme">estrella</w>,</l>
-               <l met="-+-+-+---+---+-" rhyme="F">¡Pulsando en su arpa indígena su cántico <w type="rhyme">español</w>!</l>
+               <l met="-+-+-+--+---+-" rhyme="F">¡Pulsando en su arpa indígena su cántico <w type="rhyme">español</w>!</l>
             </lg>
          </lg>
       </body>

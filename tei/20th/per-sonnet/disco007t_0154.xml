@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -118,17 +125,17 @@
                <l met="-+--+-+--+----+-" rhyme="A">España, inmortal España, floresta de los <w type="rhyme">claveles</w>,</l>
                <l met="+-+---+----+--+-" rhyme="B">vieja madre cariñosa de la Sultana de <w type="rhyme">Oriente</w>,</l>
                <l met="+--+--+-+--+--+-" rhyme="A">patria de bravos guerreros, patria de eternos <w type="rhyme">laureles</w>,</l>
-               <l met="+-----+--+----+-" rhyme="B">patria de nuestros amigos, oh gloria del <w type="rhyme">Occidente</w>:</l>
+               <l met="+-----+-++----+-" rhyme="B">patria de nuestros amigos, oh gloria del <w type="rhyme">Occidente</w>:</l>
             </lg>
             <lg n="2" type="terceto">
-               <l met="++----+-+--+-+-" rhyme="C">Yo te amo por tu armonioso y dulce lenguaje de <w type="rhyme">oro</w>»</l>
-               <l met="--+---+---+--+-" rhyme="C">por tus huellas en mi Patria y por tu nombre <w type="rhyme">sonoro</w>,</l>
-               <l met="+-+-+-+---+--+-" rhyme="A">y hoy mi Musa eterna y buena se arrodilla a tus <w type="rhyme">pies</w>:</l>
+               <l met="++----+--+--+-+-" rhyme="C">Yo te amo por tu armonioso y dulce lenguaje de <w type="rhyme">oro</w>»</l>
+               <l met="--+---+----+--+-" rhyme="C">por tus huellas en mi Patria y por tu nombre <w type="rhyme">sonoro</w>,</l>
+               <l met="+-+-+-+---+---+-" rhyme="A">y hoy mi Musa eterna y buena se arrodilla a tus <w type="rhyme">pies</w>:</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="-----++-+--+--+-" rhyme="D">Pero, al arrodillarse, ella, mi ángel en horas de <w type="rhyme">penas</w>,</l>
-               <l met="-+-+--+-+-+--+-" rhyme="D">que en parte lleva también tu regia sangre en sus <w type="rhyme">venas</w>,</l>
-               <l met="-+--+-+---+-++-" rhyme="A">te envidia, porque eres libre, y nuestra Patria no lo <w type="rhyme">es</w>!</l>
+               <l met="-+-+--+--+-+--+-" rhyme="D">que en parte lleva también tu regia sangre en sus <w type="rhyme">venas</w>,</l>
+               <l met="-+--+-+----+-++-" rhyme="A">te envidia, porque eres libre, y nuestra Patria no lo <w type="rhyme">es</w>!</l>
             </lg>
          </lg>
       </body>

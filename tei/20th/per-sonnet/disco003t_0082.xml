@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -117,25 +124,25 @@
             <lg n="1" type="cuarteto">
                <l met="-+---+----+-+-" rhyme="A" enjamb="ex_subj_verb">¡España, madrecita nuestra! Aunque estás <w type="rhyme">lejana</w>
                </l>
-               <l met="--+-+-+----+-" rhyme="B">te llevamos muy hondo dentro del <w type="rhyme">corazón</w>:</l>
+               <l met="--+-++-+----+-" rhyme="B">te llevamos muy hondo dentro del <w type="rhyme">corazón</w>:</l>
                <l met="-+---+-+--+-+-" rhyme="A">la fabla de Cervantes es tu mejor <w type="rhyme">guardiana</w>
                </l>
                <l met="--+--+----+-+-" rhyme="B">y la cruz del Calvario nuestro mejor <w type="rhyme">blasón</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="-+-+-+--+--+-" rhyme="A">… Señores: es la misa. Voltea la <w type="rhyme">campana</w>,</l>
+               <l met="+-+-+-+--+--+-" rhyme="A">… Señores: es la misa. Voltea la <w type="rhyme">campana</w>,</l>
                <l met="-----+--+---+-" rhyme="B">y las sacerdotisas preparan la <w type="rhyme">oración</w>:</l>
-               <l met="+----+-+---+-" rhyme="A">¿qué hora preferiréis? ¿la Noche, la <w type="rhyme">Mañana</w>?</l>
+               <l met="+----+--+---+-" rhyme="A">¿qué hora preferiréis? ¿la Noche, la <w type="rhyme">Mañana</w>?</l>
                <l met="-+---+----+-+-" rhyme="B">con ritmo de los pechos acompañad el <w type="rhyme">son</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="+--+-+-+-+-+-" rhyme="C">¿Ha de triunfar la negra noche o el claro <w type="rhyme">día</w>?</l>
+               <l met="+--+-+-+--+-+-" rhyme="C">¿Ha de triunfar la negra noche o el claro <w type="rhyme">día</w>?</l>
                <l met="++-+-+-+-+--+-" rhyme="C">¿Qué importa? Dios bendiga toda miel de <w type="rhyme">poesía</w>,</l>
-               <l met="-+---+-+--++-" rhyme="D">y anuncien los clarines esta verdad <w type="rhyme">aún</w>:</l>
+               <l met="-+---+-+--+-+-" rhyme="D">y anuncien los clarines esta verdad <w type="rhyme">aún</w>:</l>
             </lg>
             <lg n="4" type="terceto">
                <l met="+--+-+---+--+-" rhyme="E">Once millones de hombres, malferidos de <w type="rhyme">engaño</w>,</l>
-               <l met="+---+-+-+-+-" rhyme="E">no han de balbucear ningún idioma <w type="rhyme">extraño</w>,</l>
+               <l met="+----+--+-+-+-" rhyme="E">no han de balbucear ningún idioma <w type="rhyme">extraño</w>,</l>
                <l met="--++-+-+-+--+-" rhyme="D">tras de hablar cuatro siglos un idioma <w type="rhyme">común</w>.</l>
             </lg>
          </lg>

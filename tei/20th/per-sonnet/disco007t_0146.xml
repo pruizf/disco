@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -116,31 +123,31 @@
             <head>ANTONIO CLIMACO</head>
             <lg n="1" type="cuarteto">
                <l met="--+--++--+-" rhyme="A">Predilecto Toñing, bardo <w type="rhyme">cebuano</w>,</l>
-               <l met="-+---+--+-" rhyme="B">cantor de nuestra Patria y su <w type="rhyme">gloria</w>:</l>
+               <l met="-+---+--+--" rhyme="B">cantor de nuestra Patria y su <w type="rhyme">gloria</w>:</l>
                <l met="+--+--+--+-" rhyme="B" enjamb="pb_noun_prep">vence al Olvido tu grata <w type="rhyme">memoria</w>
                </l>
                <l met="--+--+---+-" rhyme="A">por los versos que hiciste en <w type="rhyme">castellano</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="-+--++-+-+-" rhyme="A">Tu estilo, al cantar flores, fué <w type="rhyme">galano</w>,</l>
-               <l met="+--++---+-" rhyme="B">y épico, al loar Héroes de la <w type="rhyme">Historia</w>.</l>
+               <l met="+---++---+-" rhyme="B">y épico, al loar Héroes de la <w type="rhyme">Historia</w>.</l>
                <l met="-++--+---+-" rhyme="B" enjamb="pb_noun_prep">Dejaste una brillante <w type="rhyme">ejecutoria</w>
                </l>
                <l met="--+--+---+-" rhyme="A">de gentil caballero <w type="rhyme">parnasiano</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-+--+-+-+-" rhyme="C" enjamb="cc_crossclause">En cambio del poema de alto <w type="rhyme">vuelo</w>
+               <l met="-+---+-+-+-" rhyme="C" enjamb="cc_crossclause">En cambio del poema de alto <w type="rhyme">vuelo</w>
                </l>
                <l met="-+---+-+-+-" rhyme="D" enjamb="pb_adj_noun">que tú me dedicaste, ya esta <w type="rhyme">breve</w>
                </l>
-               <l met="-+-+--+-" rhyme="E">poesía que afectos <w type="rhyme">encierra</w>.</l>
+               <l met="--+--+---+-" rhyme="E">poesía que afectos <w type="rhyme">encierra</w>.</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-++---+-+-" rhyme="E" enjamb="ex_subj_verb">¡Así un bardo que aun está en la <w type="rhyme">tierra</w>
+               <l met="-+++---+-+-" rhyme="E" enjamb="ex_subj_verb">¡Así un bardo que aun está en la <w type="rhyme">tierra</w>
                </l>
                <l met="+--+--+--+-" rhyme="D">paga con mora los versos que <w type="rhyme">debe</w>
                </l>
-               <l met="+-+--++-+-" rhyme="C">a otro poeta que ya está en el <w type="rhyme">cielo</w>!</l>
+               <l met="+--+--++-+-" rhyme="C">a otro poeta que ya está en el <w type="rhyme">cielo</w>!</l>
             </lg>
          </lg>
       </body>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -10,9 +10,7 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
-            </respStmt>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp><name>Guillermo Marco Remón</name></respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
                <name>Petr Plecháč</name>
@@ -127,24 +125,12 @@
       </profileDesc>
       <encodingDesc>
          <listPrefixDef>
-            <prefixDef ident="foaf"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
-            <prefixDef ident="dc"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://purl.org/dc/terms/$1"/>
-            <prefixDef ident="schema"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://schema.org/$1"/>
-            <prefixDef ident="dbpedia"
-                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
-                       replacementPattern="http://es.dbpedia.org/page/"/>
-            <prefixDef ident="blterms"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
-            <prefixDef ident="rdfs"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)" replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)" replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)" replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)" replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)" replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)" replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -152,10 +138,13 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
            </p>
-         </metDecl>
-         <metDecl type="enjamb">
+           <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
+           </p>
+         </metDecl><metDecl type="enjamb">
             <p>The values of the <att>enjamb</att> atributes were extracted automatically
              using the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic eNJambment Analysis)</ref> tool.
              For more information about the types of enjambment as defined in this corpus, read the
@@ -168,7 +157,7 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
-         </revisionDesc>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change><change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change></revisionDesc>
    </teiHeader>
    <text>
       <front>
@@ -184,53 +173,53 @@
                <lg n="1" type="cuarteto">
                   <l met="+--+--+-+-" rhyme="A">Una princesa de faz <w type="rhyme">doliente</w>,</l>
                   <l met="+-++--+-+-" rhyme="B">ojos muy negros y noble <w type="rhyme">rol</w>,</l>
-                  <l met="-+-+-+---+-" rhyme="-">nacida en áurea cuna de Orienté</l>
+                  <l met="---+-+--+-" rhyme="-">nacida en áurea cuna de Orienté</l>
                   <l met="---+----+-" rhyme="B">bajo las gasas del <w type="rhyme">arrebol</w>,</l>
                </lg>
                <lg n="2" type="cuarteto">
                   <l met="-+-+--+-+-" rhyme="A" enjamb="ex_subj_verb">sintió una noche pasión <w type="rhyme">ardiente</w>
                   </l>
-                  <l met="-+-+---+-+-" rhyme="B">y pronto súpolo su padre, el <w type="rhyme">Sol</w>.</l>
-                  <l met="-+-+---+-" rhyme="C" enjamb="ex_subj_verb">Amaba, amaba á las <w type="rhyme">estrellas</w>
+                  <l met="-+-+--+--+" rhyme="B">y pronto súpolo su padre, el <w type="rhyme">Sol</w>.</l>
+                  <l met="-+-+----+-" rhyme="C" enjamb="ex_subj_verb">Amaba, amaba á las <w type="rhyme">estrellas</w>
                   </l>
-                  <l met="--+-++-+-" rhyme="-">cual la heroína de un cuento azul...</l>
+                  <l met="---+-++-+-" rhyme="-">cual la heroína de un cuento azul...</l>
                </lg>
                <lg n="3" type="terceto">
-                  <l met="+--+-+--+-" rhyme="C">—Padre, tocarlas quiero, ¡qué <w type="rhyme">bellas</w>!</l>
+                  <l met="+--+-+-++-" rhyme="C">—Padre, tocarlas quiero, ¡qué <w type="rhyme">bellas</w>!</l>
                   <l met="++-+--+-+-" rhyme="-">- Hija, es prestada su hermosa luz.</l>
-                  <l met="-+-+--+-+-" rhyme="D">Mas, mira e-se árbol de sombra <w type="rhyme">amena</w>
+                  <l met="-+++--+-+-" rhyme="D">Mas, mira e-se árbol de sombra <w type="rhyme">amena</w>
                   </l>
                </lg>
                <lg n="4" type="terceto">
                   <l met="--++--+-+-" rhyme="E">y verás otras de dulce <w type="rhyme">olor</w>.</l>
-                  <l met="-+--+-+-+-" rhyme="D">Se llaman ilanff-ilang, <w type="rhyme">morena</w>...</l>
+                  <l met="-+----+-+-" rhyme="D">Se llaman ilanff-ilang, <w type="rhyme">morena</w>...</l>
                   <l met="-+-+--+-+-" rhyme="E">—¡Si en ellas, padre, solió mi <w type="rhyme">amor</w>!</l>
                </lg>
             </lg>
             <lg type="sonnet" xml:id="s009t_0167_02">
                <head>II CADENAS ROSAS DE AMOR</head>
                <lg n="1" type="cuarteto">
-                  <l met="-++-+-+-" rhyme="A">Se cree fuerte y así, <w type="rhyme">indiscreta</w>,</l>
-                  <l met="+-+----+-" rhyme="B">guiada solo por su <w type="rhyme">candor</w>,</l>
+                  <l met="-+-+----+-" rhyme="A">Se cree fuerte y así, <w type="rhyme">indiscreta</w>,</l>
+                  <l met="-+-+----+-" rhyme="B">guiada solo por su <w type="rhyme">candor</w>,</l>
                   <l met="---+-+--+-" rhyme="A">con la cabeza de ansias <w type="rhyme">repleta</w>,</l>
-                  <l met="---+---+-" rhyme="B">desconociendo aun el <w type="rhyme">dolor</w>,</l>
+                  <l met="---+----+-" rhyme="B">desconociendo aun el <w type="rhyme">dolor</w>,</l>
                </lg>
                <lg n="2" type="cuarteto">
-                  <l met="+--+---+-" rhyme="A" enjamb="pb_noun_prep">entra inconsciente en la <w type="rhyme">glorieta</w>
+                  <l met="+--+----+-" rhyme="A" enjamb="pb_noun_prep">entra inconsciente en la <w type="rhyme">glorieta</w>
                   </l>
                   <l met="---+-+-++-" rhyme="B">de mis cadenas rosas dé <w type="rhyme">amor</w>-.</l>
-                  <l met="-+++--+-+-" rhyme="C">Y aspira un suave perfume á <w type="rhyme">cielos</w>,</l>
-                  <l met="+--+-----+-" rhyme="D">cierra los párpados para <w type="rhyme">sofiar</w>
+                  <l met="-+++--+++-" rhyme="C">Y aspira un suave perfume á <w type="rhyme">cielos</w>,</l>
+                  <l met="+--+----+-" rhyme="D">cierra los párpados para <w type="rhyme">sofiar</w>
                   </l>
                </lg>
                <lg n="3" type="terceto">
-                  <l met="-+-+-+--+-" rhyme="C">y siente á poco nuevos <w type="rhyme">anhelos</w>
+                  <l met="-+++-+--+-" rhyme="C">y siente á poco nuevos <w type="rhyme">anhelos</w>
                   </l>
-                  <l met="--+--+-+-" rhyme="D">como oleajes de brava <w type="rhyme">mar</w>...</l>
-                  <l met="+--+---+-+-" rhyme="E">Lleva de súbito la mano al <w type="rhyme">pecho</w>:</l>
+                  <l met="---+--+-+-" rhyme="D">como oleajes de brava <w type="rhyme">mar</w>...</l>
+                  <l met="+--+----+-" rhyme="E">Lleva de súbito la mano al <w type="rhyme">pecho</w>:</l>
                </lg>
                <lg n="4" type="terceto">
-                  <l met="+-+-+--+-" rhyme="F">¡hay un agudo dardo <w type="rhyme">traidor</w>!</l>
+                  <l met="+--+----+-" rhyme="F">¡hay un agudo dardo <w type="rhyme">traidor</w>!</l>
                   <l met="+--+--+-+-" rhyme="E" enjamb="pb_relword">Huye, ¡y la prenden sin darle <w type="rhyme">trecho</w>
                   </l>
                   <l met="+--+-+--+-" rhyme="F">frescas cadenas rosas de <w type="rhyme">amor</w>.</l>
@@ -239,31 +228,31 @@
             <lg type="sonnet" xml:id="s009t_0167_03">
                <head>III VIOLETAS</head>
                <lg n="1" type="cuarteto">
-                  <l met="+-+--+-+-" rhyme="A">un momento de incierta <w type="rhyme">espera</w>,</l>
-                  <l met="+-+--+++-" rhyme="B">vi radiante venirse á <w type="rhyme">mí</w>.</l>
+                  <l met="+--+----+-" rhyme="A">un momento de incierta <w type="rhyme">espera</w>,</l>
+                  <l met="-+-+--+--+" rhyme="B">vi radiante venirse á <w type="rhyme">mí</w>.</l>
                   <l met="-+-+----+-" rhyme="A">llevaba suelta la <w type="rhyme">cabellera</w>
                   </l>
                   <l met="---+--+++-" rhyme="B">y mi boquita de fresa un <w type="rhyme">sí</w>.</l>
                </lg>
                <lg n="2" type="cuarteto">
-                  <l met="+-+----+-" rhyme="A">un encanto de <w type="rhyme">primavera</w>
+                  <l met="+--+----+-" rhyme="A">un encanto de <w type="rhyme">primavera</w>
                   </l>
-                  <l met="-+----+-" rhyme="B">en ascuas de <w type="rhyme">frenesí</w>!</l>
+                  <l met="-+-+----+-" rhyme="B">en ascuas de <w type="rhyme">frenesí</w>!</l>
                   <l met="-+-+-++-+-" rhyme="C">los dos cambiamos un largo <w type="rhyme">beso</w>
                   </l>
-                  <l met="++--+--+-+-" rhyme="D" enjamb="pb_adj_noun">V mitro las frondas de aquel <w type="rhyme">vergel</w>
+                  <l met="+--+--+-+-" rhyme="D" enjamb="pb_adj_noun">Y entre las frondas de aquel <w type="rhyme">vergel</w>
                   </l>
                </lg>
                <lg n="3" type="terceto">
-                  <l met="+--+-+-" rhyme="C">juntos en un <w type="rhyme">exceso</w>
+                  <l met="-+-+----+-" rhyme="C">juntos en un <w type="rhyme">exceso</w>
                   </l>
                   <l met="---+-+--+-" rhyme="D">intimidades plenas de <w type="rhyme">miel</w>....</l>
                   <l met="-+---+--+-" rhyme="E">Y miando nuestras almas <w type="rhyme">inquietas</w>
                   </l>
                </lg>
                <lg n="4" type="terceto">
-                  <l met="+----+-" rhyme="F">hecho su <w type="rhyme">comunión</w>,</l>
-                  <l met="+-++--+-" rhyme="E">un fragante haz de <w type="rhyme">violetas</w>
+                  <l met="-+-+----+-" rhyme="F">hecho su <w type="rhyme">comunión</w>,</l>
+                  <l met="+-+-+---+-" rhyme="E">un fragante haz de <w type="rhyme">violetas</w>
                   </l>
                   <l met="+-++----+-" rhyme="F">yo la di, en cambio, mi <w type="rhyme">corazón</w>!</l>
                </lg>
@@ -274,11 +263,11 @@
             <lg type="sonnet" xml:id="s009t_0168_01">
                <head>I</head>
                <lg n="1" type="cuarteto">
-                  <l met="-+-++--+-+-+-" rhyme="A">soñé que había muerto. Mi lira muda y <w type="rhyme">quieta</w>,</l>
-                  <l met="-+--+--+-+-+-" rhyme="B">al frío de mi invierno, se helaba en un <w type="rhyme">rincón</w>...</l>
-                  <l met="-+---+--+-+-" rhyme="A" enjamb="ex_subj_verb">El cielo de la dicha y el dolor del <w type="rhyme">poeta</w>
+                  <l met="-+-+-+--+-+-+-" rhyme="A">soñé que había muerto. Mi lira muda y <w type="rhyme">quieta</w>,</l>
+                  <l met="-+---+--+-+-+-" rhyme="B">al frío de mi invierno, se helaba en un <w type="rhyme">rincón</w>...</l>
+                  <l met="-+---+---+--+-" rhyme="A" enjamb="ex_subj_verb">El cielo de la dicha y el dolor del <w type="rhyme">poeta</w>
                   </l>
-                  <l met="++-+-+-+---+-" rhyme="B">ya no cantaba el ave azul de la <w type="rhyme">ilusión</w>.</l>
+                  <l met="++-+-+--+---+-" rhyme="B">ya no cantaba el ave azul de la <w type="rhyme">ilusión</w>.</l>
                </lg>
                <lg n="2" type="cuarteto">
                   <l met="-+---+-+-+--+-" rhyme="B">Los perros de la envidia que á mi paso <w type="rhyme">ladraron</w>,</l>
@@ -289,13 +278,13 @@
                <lg n="3" type="terceto">
                   <l met="++---+---+--+-" rhyme="D" enjamb="ex_dobj_verb">Junto á mi catafalco circundado de <w type="rhyme">cirios</w>
                   </l>
-                  <l met="+-+--+-+---+-" rhyme="E">una madre sufría la angustia de mis <w type="rhyme">males</w>,</l>
-                  <l met="-++--+-+---+-" rhyme="D">igual que una María con todos sus <w type="rhyme">martirios</w>,</l>
+                  <l met="+-+--+--+---+-" rhyme="E">una madre sufría la angustia de mis <w type="rhyme">males</w>,</l>
+                  <l met="-++--+--+---+-" rhyme="D">igual que una María con todos sus <w type="rhyme">martirios</w>,</l>
                </lg>
                <lg n="4" type="terceto">
-                  <l met="-++--+-+---+-" rhyme="E">igual que una María con todos sus <w type="rhyme">pulíales</w>,</l>
-                  <l met="---+-+--+--+-" rhyme="F">mientras aun vanamente, en la sala <w type="rhyme">enlutada</w>,</l>
-                  <l met="-+---+-+---+-" rhyme="F">inmóvil esperaba... el beso de mi <w type="rhyme">amada</w>!</l>
+                  <l met="-++--+--+---+-" rhyme="E">igual que una María con todos sus <w type="rhyme">pulíales</w>,</l>
+                  <l met="---+-+---+--+-" rhyme="F">mientras aun vanamente, en la sala <w type="rhyme">enlutada</w>,</l>
+                  <l met="-+---+--+---+-" rhyme="F">inmóvil esperaba... el beso de mi <w type="rhyme">amada</w>!</l>
                </lg>
             </lg>
             <lg type="sonnet" xml:id="s009t_0168_02">
@@ -303,7 +292,7 @@
                <lg n="1" type="cuarteto">
                   <l met="--+--+--+---+-" rhyme="A" enjamb="ex_subj_verb">Anunciaban mi triunfo las trompas de la <w type="rhyme">Fama</w>
                   </l>
-                  <l met="-----+-++--+-" rhyme="B">á la Posteridad. Ganada era la <w type="rhyme">cumbre</w>,</l>
+                  <l met="+----+--++--+-" rhyme="B">á la Posteridad. Ganada era la <w type="rhyme">cumbre</w>,</l>
                   <l met="-+---+----+-+-" rhyme="A" enjamb="pb_noun_prep">las rosas y laureles del sempiterno <w type="rhyme">drama</w>
                   </l>
                   <l met="-+-+-+-++---+-" rhyme="B">del Mundo. ¡Mío el culto de una eran <w type="rhyme">muchedumbre</w>
@@ -323,44 +312,44 @@
                <lg n="4" type="terceto">
                   <l met="-+-+-+----+-+-" rhyme="F">pasaron dos amantes en invisibles <w type="rhyme">alas</w>...</l>
                   <l met="+-+--+--+-+-+-" rhyme="G">¡y una lágrima al punto, como una estrella <w type="rhyme">fatua</w>,</l>
-                  <l met="--+--+----+--+-" rhyme="G">titiló en la mirada de la marmórea <w type="rhyme">estatua</w>!</l>
+                  <l met="--+--+----+-+-" rhyme="G">titiló en la mirada de la marmórea <w type="rhyme">estatua</w>!</l>
                </lg>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s009t_0169">
             <head>LA LÍNEA</head>
             <lg n="1" type="cuarteto">
-               <l met="-+-+-+-+--+-" rhyme="A" enjamb="ex_dobj_verb">Al fin se abrió mi cielo. Y vi <w type="rhyme">realizado</w>
+               <l met="-+--+-+-+---+-" rhyme="A" enjamb="ex_dobj_verb">Al fin se abrió mi cielo. Y vi <w type="rhyme">realizado</w>
                </l>
                <l met="-+-+-+---+-++-" rhyme="B">mi más hermoso sueño, mi esperanza más <w type="rhyme">bella</w>;</l>
-               <l met="-+-+-+------++-" rhyme="B">después vencí el escrúpulo de la candidez de <w type="rhyme">ella</w>...</l>
-               <l met="+--+-+++-++-" rhyme="A" enjamb="ex_dobj_verb">luego, inconscientemente, un paso había <w type="rhyme">dado</w>
+               <l met="-+-+-+-----++-" rhyme="B">después vencí el escrúpulo de la candidez de <w type="rhyme">ella</w>...</l>
+               <l met="+--+-+-++-+-+-" rhyme="A" enjamb="ex_dobj_verb">luego, inconscientemente, un paso había <w type="rhyme">dado</w>
                </l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="+-+--+-+---+-" rhyme="C" enjamb="ex_dobj_verb">cuánto mal ignoraba Creí que de mi <w type="rhyme">novia</w>
+               <l met="+-+--+--+---+-" rhyme="C" enjamb="ex_dobj_verb">cuánto mal ignoraba Creí que de mi <w type="rhyme">novia</w>
                </l>
                <l met="+-+--+---+--+-" rhyme="D">no se iría el hechizo, la inocencia <w type="rhyme">serena</w>,</l>
-               <l met="-+-+-+----+--+-" rhyme="D">y aquella risa tímida de impoluta <w type="rhyme">azucena</w>,</l>
-               <l met="-+-+-+--+--+-" rhyme="C">cuando un abrazo mío la marchita y la <w type="rhyme">agobia</w>!</l>
+               <l met="-+-+-+---+--+-" rhyme="D">y aquella risa tímida de impoluta <w type="rhyme">azucena</w>,</l>
+               <l met="-+-+-+---+--+-" rhyme="C">cuando un abrazo mío la marchita y la <w type="rhyme">agobia</w>!</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="+--+--+-+-+-+-" rhyme="E">ya fecundado el zureo, se va y se esfuma el <w type="rhyme">arte</w>...</l>
-               <l met="---+-+--+-+-+-" rhyme="E">¡Oh fugitivo ensuefio que escapas á otra <w type="rhyme">parte</w>
+               <l met="+--+-+--+-+-+-" rhyme="E">¡Oh fugitivo ensuefio que escapas á otra <w type="rhyme">parte</w>
                </l>
                <l met="--++-+--+---+-" rhyme="F">y sobre un alma dejas lo triste de tu <w type="rhyme">peso</w>!</l>
             </lg>
             <lg n="4" type="terceto">
                <l met="-+---+--+---+-" rhyme="G">la rítmica escultura de estética <w type="rhyme">apolínea</w>,</l>
                <l met="-+---+--+-+++-" rhyme="F">de labios que brindaban la rica miel de un <w type="rhyme">beso</w>,</l>
-               <l met="+-+--+-+---+-" rhyme="G">Ha perdido el glorioso encanto de la <w type="rhyme">línea</w>!</l>
+               <l met="+-+--+--+---+-" rhyme="G">Ha perdido el glorioso encanto de la <w type="rhyme">línea</w>!</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s009t_0170">
             <head>DESPEDIDA</head>
             <lg n="1" type="cuarteto">
                <l met="++---+-" rhyme="A">Es fuerza que me <w type="rhyme">aleje</w>,</l>
-               <l met="-+---+-" rhyme="B">oh nifia <w type="rhyme">angelical</w>!</l>
+               <l met="++---+-" rhyme="B">oh nifia <w type="rhyme">angelical</w>!</l>
                <l met="--+--+-" rhyme="B" enjamb="ex_subj_verb">El destino <w type="rhyme">fatal</w>
                </l>
                <l met="-+---+-" rhyme="A">me impone que te <w type="rhyme">deje</w>...</l>
@@ -374,14 +363,14 @@
                <l met="--+--+-" rhyme="C">y arrancarme la <w type="rhyme">calma</w>...</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="+-++--+-" rhyme="E">Dame tn último <w type="rhyme">beso</w>,</l>
+               <l met="+-+--+-" rhyme="E">Dame tn último <w type="rhyme">beso</w>,</l>
                <l met="+-+--+-" rhyme="-">dame tu último abrazo.</l>
                <l met="++---+-" rhyme="E" enjamb="pb_noun_prep">¡Quién sabe si tu <w type="rhyme">exceso</w>
                </l>
             </lg>
             <lg n="4" type="terceto">
                <l met="-++--+-" rhyme="-">de pena es mi fracaso!</l>
-               <l met="-+--+-" rhyme="F">Amor sin <w type="rhyme">egoísmo</w>,</l>
+               <l met="-+---+-" rhyme="F">Amor sin <w type="rhyme">egoísmo</w>,</l>
                <l met="+--+-+-" rhyme="F">¿siempre serás el <w type="rhyme">mismo</w>?</l>
             </lg>
          </lg>
@@ -389,7 +378,7 @@
             <head>CARTA BREVE</head>
             <note type="dedication">[A Pilar]</note>
             <lg n="1" type="cuarteto">
-               <l met="-+-+-++-+-" rhyme="A" enjamb="pb_adj_prep">Amada mía, aquí estoy, <w type="rhyme">alejado</w>
+               <l met="-+-+-+-+-+-" rhyme="A" enjamb="pb_adj_prep">Amada mía, aquí estoy, <w type="rhyme">alejado</w>
                </l>
                <l met="-+---+---+-" rhyme="B">del mundo de las locas <w type="rhyme">vanidades</w>,</l>
                <l met="--+-++---+-" rhyme="B" enjamb="ex_dobj_verb">reflejando en un libro de <w type="rhyme">verdades</w>
@@ -397,19 +386,19 @@
                <l met="-+---+---+-" rhyme="A">la esencia del presente y del <w type="rhyme">pasado</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="---++++-+-" rhyme="A">Por el amor que un día me has <w type="rhyme">jurado</w>,</l>
-               <l met="-+-++---+-" rhyme="B">vendrás conmigo a estas <w type="rhyme">soledades</w>,</l>
-               <l met="--+++---+-" rhyme="B">y en lugar de un ruido de <w type="rhyme">ciudades</w>,</l>
+               <l met="---+++-+-+-" rhyme="A">Por el amor que un día me has <w type="rhyme">jurado</w>,</l>
+               <l met="-+-+-+---+-" rhyme="B">vendrás conmigo a estas <w type="rhyme">soledades</w>,</l>
+               <l met="--+-++---+-" rhyme="B">y en lugar de un ruido de <w type="rhyme">ciudades</w>,</l>
                <l met="---+-+---+-" rhyme="A">escucharás los versos de tu <w type="rhyme">amado</w>.</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="+----+-+-+-" rhyme="C">Juntos bajo la sombra de un <w type="rhyme">florido</w>
                </l>
                <l met="-+-+++---+-" rhyme="D">Ilang ilang, de un monte en los <w type="rhyme">peldaños</w>,</l>
-               <l met="+---+---+-" rhyme="C">juntos miraremos nuestro <w type="rhyme">nido</w>...</l>
+               <l met="+---+--+-+-" rhyme="C">juntos miraremos nuestro <w type="rhyme">nido</w>...</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="--+---+---+-" rhyme="D">Y curados de mis grandes <w type="rhyme">desengaños</w>,</l>
+               <l met="--+---+---+" rhyme="D">Y curados de mis grandes <w type="rhyme">desengaños</w>,</l>
                <l met="---+-+---+-" rhyme="C">reviviré á tu vista el <w type="rhyme">colorido</w>
                </l>
                <l met="---+---+-+-" rhyme="D">de mis quimeras en los idos <w type="rhyme">años</w>.</l>
@@ -421,15 +410,15 @@
                <head>I</head>
                <lg n="1" type="cuarteto">
                   <l met="+++--+-" rhyme="-" enjamb="cc_crossclause">Cuán fuerte es el hechizo</l>
-                  <l met="--+-+-" rhyme="A">que subyuga al <w type="rhyme">poeta</w>!</l>
+                  <l met="--+--+-" rhyme="A">que subyuga al <w type="rhyme">poeta</w>!</l>
                   <l met="--+--+-" rhyme="A">Tu sonrisa, <w type="rhyme">coqueta</w>,</l>
-                  <l met="-+--+-" rhyme="-" enjamb="ex_subj_verb">que bello Paraíso</l>
+                  <l met="-+---+-" rhyme="-" enjamb="ex_subj_verb">que bello Paraíso</l>
                </lg>
                <lg n="2" type="cuarteto">
                   <l met="--+--+-" rhyme="B">de placeres me <w type="rhyme">brinda</w>,</l>
                   <l met="--+--+-" rhyme="C" enjamb="pb_adj_noun">que tan solo <w type="rhyme">ilusión</w>
                   </l>
-                  <l met="+---+-" rhyme="C">venia <w type="rhyme">corazón</w>?</l>
+                  <l met="-+---+-" rhyme="C">venia <w type="rhyme">corazón</w>?</l>
                   <l met="+--+-+-" rhyme="B">quieres que a tí me <w type="rhyme">rinda</w>
                   </l>
                </lg>
@@ -449,7 +438,7 @@
             <lg type="sonnet" xml:id="s009t_0172_02">
                <head>II</head>
                <lg n="1" type="cuarteto">
-                  <l met="-+++-" rhyme="A" enjamb="cc_crossclause">¡Aquí tú! i Y éso, <w type="rhyme">éso</w>
+                  <l met="-+++-+-" rhyme="A" enjamb="cc_crossclause">¡Aquí tú! i Y éso, <w type="rhyme">éso</w>
                   </l>
                   <l met="-+---+-" rhyme="B">que ocultas en la <w type="rhyme">falda</w>?</l>
                   <l met="+-+--+-" rhyme="B">—Míralo, una <w type="rhyme">guirnalda</w>.</l>
@@ -460,14 +449,14 @@
                   <l met="---+-+-" rhyme="D">—Si, y ceñiré tu <w type="rhyme">frente</w>
                   </l>
                   <l met="--+--+-" rhyme="D">de sampagas de <w type="rhyme">oriente</w>...</l>
-                  <l met="-+--++-" rhyme="C">—¡Qué lírica, qué <w type="rhyme">loca</w>!</l>
+                  <l met="++--++-" rhyme="C">—¡Qué lírica, qué <w type="rhyme">loca</w>!</l>
                </lg>
                <lg n="3" type="terceto">
                   <l met="+----+-" rhyme="E">—Loca cuando <w type="rhyme">adivino</w>
                   </l>
                   <l met="-+---+-" rhyme="F" enjamb="pb_noun_prep">que suenas en el <w type="rhyme">fin</w>
                   </l>
-                  <l met="--+---+-" rhyme="-">de tu electo caminó?</l>
+                  <l met="--+--+-" rhyme="-">de tu electo caminó?</l>
                </lg>
                <lg n="4" type="terceto">
                   <l met="++---+-" rhyme="F">¿No en mármol de <w type="rhyme">Bodín</w>
@@ -501,7 +490,7 @@
                </lg>
                <lg n="4" type="terceto">
                   <l met="---+-+-" rhyme="F">tras el vital <w type="rhyme">embate</w>,</l>
-                  <l met="-+++--+-" rhyme="E">así has dé ser, oh <w type="rhyme">Nhila</w>,</l>
+                  <l met="-+++++-" rhyme="E">así has dé ser, oh <w type="rhyme">Nhila</w>,</l>
                   <l met="---+++-" rhyme="F">¡para que no té <w type="rhyme">mate</w>!</l>
                </lg>
             </lg>
@@ -516,7 +505,7 @@
                   <l met="-+-+-+-" rhyme="A">el ave azul del <w type="rhyme">alma</w>.</l>
                </lg>
                <lg n="2" type="cuarteto">
-                  <l met="--+----" rhyme="C">Y ¡oh caprichos del <w type="rhyme">sino</w>!</l>
+                  <l met="+-+--+-" rhyme="C">Y ¡oh caprichos del <w type="rhyme">sino</w>!</l>
                   <l met="+-++-+-" rhyme="D">Lejos, muy lejos <w type="rhyme">ella</w>,</l>
                   <l met="--+--+-" rhyme="D" enjamb="cc_crossclause">se obscurece la <w type="rhyme">estrella</w>
                   </l>
@@ -534,88 +523,88 @@
                   <l met="-+-+-+-" rhyme="F">aquellos labios <w type="rhyme">rojos</w>,</l>
                   <l met="-+---+-" rhyme="E" enjamb="ex_dobj_verb">¡ vacía en el <w type="rhyme">pañuelo</w>
                   </l>
-                  <l met="-+--+-" rhyme="F">el río de sus <w type="rhyme">ojos</w>!</l>
+                  <l met="-+---+-" rhyme="F">el río de sus <w type="rhyme">ojos</w>!</l>
                </lg>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s009t_0173">
             <head>FLOR DE LIS</head>
             <lg n="1" type="cuarteto">
-               <l met="-+--+--+--+-" rhyme="A">Despiertan en mi alma nostalgias de <w type="rhyme">Francia</w>.</l>
-               <l met="+---+-+--+-" rhyme="B">Una señorita arranca del <w type="rhyme">piano</w>
+               <l met="-+---+--+--+-" rhyme="A">Despiertan en mi alma nostalgias de <w type="rhyme">Francia</w>.</l>
+               <l met="+---+-+--+---" rhyme="B">Una señorita arranca del <w type="rhyme">piano</w>
                </l>
-               <l met="-+-++-+--+-" rhyme="A" enjamb="pb_noun_prep">las notas de un vals de seda <w type="rhyme">elegancia</w>
+               <l met="-+-++-+--+---" rhyme="A" enjamb="pb_noun_prep">las notas de un vals de seda <w type="rhyme">elegancia</w>
                </l>
-               <l met="--+-++--+-" rhyme="B">de Francisco Popy, el ritmo <w type="rhyme">lejano</w>...</l>
+               <l met="--+-+-+--+---" rhyme="B">de Francisco Popy, el ritmo <w type="rhyme">lejano</w>...</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="--+--+---+--+-" rhyme="B">¡Oh amiga romántica de lírica <w type="rhyme">mano</w>!</l>
-               <l met="++--+----++-" rhyme="-">tú avivas la llama de mi adormida ansia,</l>
-               <l met="+--+++++-+-" rhyme="B" enjamb="cc_crossclause">ansia que no sé si es un suelto <w type="rhyme">vano</w>
+               <l met="++--+--+--+--" rhyme="B">¡Oh amiga romántica de lírica <w type="rhyme">mano</w>!</l>
+               <l met="++--+----++--" rhyme="-">tú avivas la llama de mi adormida ansia,</l>
+               <l met="+--+++++-+---" rhyme="B" enjamb="cc_crossclause">ansia que no sé si es un suelto <w type="rhyme">vano</w>
                </l>
-               <l met="+--++--+--+-" rhyme="A">que ha de morir luego como una <w type="rhyme">fragancia</w>.</l>
+               <l met="+--++--+--+--" rhyme="A">que ha de morir luego como una <w type="rhyme">fragancia</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-++-+--+--+-" rhyme="C">Invita ésa música, invita a <w type="rhyme">París</w>;</l>
-               <l met="-++-+-++-+-" rhyme="D" enjamb="pb_adj_noun">invita á libar la miel de una <w type="rhyme">boca</w>
+               <l met="-++-+--+--+--" rhyme="C">Invita ésa música, invita a <w type="rhyme">París</w>;</l>
+               <l met="-++-+-++-+---" rhyme="D" enjamb="pb_adj_noun">invita á libar la miel de una <w type="rhyme">boca</w>
                </l>
-               <l met="--+-+---+-+-" rhyme="C">perfumada y roja, con rojez de <w type="rhyme">lis</w>.</l>
+               <l met="--+-+---+-+--" rhyme="C">perfumada y roja, con rojez de <w type="rhyme">lis</w>.</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="--+-+---+-+-" rhyme="D" enjamb="ex_dobj_verb">Pero no te enfermes, ilusión, si <w type="rhyme">evoca</w>
+               <l met="--+-+---+-+--" rhyme="D" enjamb="ex_dobj_verb">Pero no te enfermes, ilusión, si <w type="rhyme">evoca</w>
                </l>
-               <l met="--+-+--+-+-" rhyme="E">tus nostalgias Popy. Mientras, vive <w type="rhyme">ilesa</w>,</l>
-               <l met="-++-+-+-+-" rhyme="E">que al fin has de ver tu ideal <w type="rhyme">francesa</w>.</l>
+               <l met="--+-+--+-+---" rhyme="E">tus nostalgias Popy. Mientras, vive <w type="rhyme">ilesa</w>,</l>
+               <l met="-++-+--+-+---" rhyme="E">que al fin has de ver tu ideal <w type="rhyme">francesa</w>.</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s009t_0174">
             <head>HELADA</head>
             <lg n="1" type="cuarteto">
-               <l met="-+++-+---+-+-" rhyme="A">La noche es de oro y plata. En el silencio <w type="rhyme">augusto</w>
+               <l met="-+++-+----+-+-" rhyme="A">La noche es de oro y plata. En el silencio <w type="rhyme">augusto</w>
                </l>
                <l met="--+--+---+--+-" rhyme="B">en que flota el aroma de las brisas <w type="rhyme">inquietas</w>,</l>
-               <l met="+-+--+---+-+-" rhyme="B" enjamb="cc_crossclause">hay románticas notas de armonías <w type="rhyme">secretas</w>
+               <l met="+-+--+---+--+-" rhyme="B" enjamb="cc_crossclause">hay románticas notas de armonías <w type="rhyme">secretas</w>
                </l>
                <l met="-+---+-+-+--+-" rhyme="A">que portan la nostalgia de un ensuefto <w type="rhyme">venusto</w>...</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="+--+-+---+-+-" rhyme="B">¡Mágica está la noche de los brunos <w type="rhyme">poetas</w>!</l>
-               <l met="-+-+-+--+--+-" rhyme="-">...Pero ésta noche llora mi espíritu infausto</l>
+               <l met="+--+-+---+--+-" rhyme="B">¡Mágica está la noche de los brunos <w type="rhyme">poetas</w>!</l>
+               <l met="-+-+-+--+---+-" rhyme="-">...Pero ésta noche llora mi espíritu infausto</l>
                <l met="---+-+----+-+-" rhyme="A">y entre los mudos nichos de mi pateón <w type="rhyme">adusto</w>
                </l>
                <l met="--+--+--+---+-" rhyme="B">me parezco al macabro fantasma de sus <w type="rhyme">grietas</w>...</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="+-+-+-+-+-++-" rhyme="C">Junto al frío cadáver de una virgen ya <w type="rhyme">inmoble</w>,</l>
+               <l met="+-+--+-+-+-++-" rhyme="C">Junto al frío cadáver de una virgen ya <w type="rhyme">inmoble</w>,</l>
                <l met="-+---+---+--+-" rhyme="D">de la hija postrimera que perdió mi <w type="rhyme">Esperanza</w>,</l>
                <l met="+-++-+----+-+-" rhyme="D">velo en un antro fúnebre en que la Muerte <w type="rhyme">danza</w>..,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="+-+--+--+--+-+-" rhyme="C">...Poco á poco paréceme que alza su busto <w type="rhyme">noble</w>
+               <l met="+++--+-+--+-+-" rhyme="C">...Poco á poco paréceme que alza su busto <w type="rhyme">noble</w>
                </l>
-               <l met="-+---++----+-" rhyme="E">la muerta del ataúd; ¡vive la <w type="rhyme">amortajada</w>!</l>
-               <l met="-+--+---+-++-" rhyme="E">La palpo y ¡oh delirio! ¡Mi ilusión está <w type="rhyme">helada</w>!</l>
+               <l met="-+----++----+-" rhyme="E">la muerta del ataúd; ¡vive la <w type="rhyme">amortajada</w>!</l>
+               <l met="-+---+---+--+-" rhyme="E">La palpo y ¡oh delirio! ¡Mi ilusión está <w type="rhyme">helada</w>!</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s009t_0175">
             <head>ALMAS ENFERMAS</head>
             <lg n="1" type="cuarteto">
-               <l met="++---+---+-+-" rhyme="A">Un joven decadente. En su mirada <w type="rhyme">obscura</w>
+               <l met="++---+----+-+-" rhyme="A">Un joven decadente. En su mirada <w type="rhyme">obscura</w>
                </l>
-               <l met="+-+-+---+--+-" rhyme="B" enjamb="pb_adj_noun">na adivina que una pesadilla en <w type="rhyme">asecho</w>
+               <l met="+--+-+---+--+-" rhyme="B" enjamb="pb_adj_noun">na adivina que una pesadilla en <w type="rhyme">asecho</w>
                </l>
-               <l met="+-+---+-+---+-" rhyme="A">ln oprime el corazón, lo anega de <w type="rhyme">amargura</w>...</l>
-               <l met="-+-+-+--+--+-" rhyme="B">Las tres, y en vano busca el reposo en su <w type="rhyme">lecho</w>.</l>
+               <l met="-+---+--+---+-" rhyme="A">ln oprime el corazón, lo anega de <w type="rhyme">amargura</w>...</l>
+               <l met="-+-+-+---+--+-" rhyme="B">Las tres, y en vano busca el reposo en su <w type="rhyme">lecho</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="+--+-+-+--+-+-" rhyme="A">-lista mujer, musita, no me será <w type="rhyme">perjura</w>?</l>
-               <l met="+---+++-+-+-+-" rhyme="B">ii Despreciará algún día el pacto que hemos <w type="rhyme">hecho</w>?</l>
-               <l met="+---+--++-+-" rhyme="A">\M nieve de su amor seguirá siendo <w type="rhyme">pura</w>?<w type="rhyme">—</w>
+               <l met="---+-+--+---+-" rhyme="B">ii Despreciará algún día el pacto que hemos <w type="rhyme">hecho</w>?</l>
+               <l met="+----+---++-++" rhyme="A">\M nieve de su amor seguirá siendo <w type="rhyme">pura</w>?—
                </l>
-               <l met="+--+-+--++-+-+-" rhyme="B">Pronto sintió la réplica de un dulce abrazo <w type="rhyme">estrecho</w>.</l>
+               <l met="+--+-+-++-+-+-" rhyme="B">Pronto sintió la réplica de un dulce abrazo <w type="rhyme">estrecho</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="++---+---+-+-" rhyme="C" enjamb="cc_crossclause">—No dudes. Cuando salves « maldecido <w type="rhyme">abismo</w>
+               <l met="++---+---+--+-" rhyme="C" enjamb="cc_crossclause">—No dudes. Cuando salves « maldecido <w type="rhyme">abismo</w>
                </l>
                <l met="--+--+-+----+-" rhyme="D">que .a los dos nos separa; cuándo de tu <w type="rhyme">existencia</w>
                </l>
@@ -623,7 +612,7 @@
             </lg>
             <lg n="4" type="terceto">
                <l met="+--+-+----+-+-" rhyme="D">nomo acompaña al viento la delicada <w type="rhyme">escencia</w>,</l>
-               <l met="-+-+-+-+---+-" rhyme="E">¡iré también contigo, ensueño de mi <w type="rhyme">vida</w>!</l>
+               <l met="-+-+-+--+---+-" rhyme="E">¡iré también contigo, ensueño de mi <w type="rhyme">vida</w>!</l>
                <l met="---+-+--+---+-" rhyme="E">¡imitaré tu gesto de trágico <w type="rhyme">suicida</w>!</l>
             </lg>
          </lg>
@@ -632,7 +621,7 @@
             <lg n="1" type="cuarteto">
                <l met="-+--+--+--+-" rhyme="A" enjamb="ex_dobj_verb">Desciende al sembrado que va á <w type="rhyme">sazonar</w>
                </l>
-               <l met="--+-+----+-" rhyme="B">la terrible nube <w type="rhyme">amenazadora</w>;</l>
+               <l met="--+-+-----+-" rhyme="B">la terrible nube <w type="rhyme">amenazadora</w>;</l>
                <l met="-+--+---+-+-" rhyme="A" enjamb="ex_subj_verb">y el pobre labriego que esperó <w type="rhyme">triunfar</w>
                </l>
                <l met="--+-+--++-+-" rhyme="B">de su gran miseria, como un niflo, <w type="rhyme">llora</w>...</l>
@@ -640,18 +629,18 @@
             <lg n="2" type="cuarteto">
                <l met="-+--+--+--+-" rhyme="A" enjamb="ex_subj_verb">Pensando en los seres del nato <w type="rhyme">solar</w>
                </l>
-               <l met="-+--+--+-+-" rhyme="B">invoca al Señor, su piedad <w type="rhyme">implora</w>...</l>
-               <l met="--+-+-+--+-" rhyme="A">Mas la plaga empieza el campo á <w type="rhyme">asolar</w>
+               <l met="-+--+-----+-" rhyme="B">invoca al Señor, su piedad <w type="rhyme">implora</w>...</l>
+               <l met="--+-+-+---+-" rhyme="A">Mas la plaga empieza el campo á <w type="rhyme">asolar</w>
                </l>
                <l met="-+--+-+---+-" rhyme="B">¡y nadie detiene su obra <w type="rhyme">destructora</w>!</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="-+--+-----+-" rhyme="C">¡Malditas langostas de la <w type="rhyme">Adversidad</w>!</l>
-               <l met="----+-+--+-" rhyme="D">¡de la Agricultura el bárbaro <w type="rhyme">azote</w>!</l>
+               <l met="----+--+--+-" rhyme="D">¡de la Agricultura el bárbaro <w type="rhyme">azote</w>!</l>
                <l met="--+-+-+---+-" rhyme="C">¡el castigo injusto de una <w type="rhyme">Humanidad</w>!</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="+++-+++--+-" rhyme="D">¡Ser un Dios quisiera o un otro <w type="rhyme">Quijote</w>,</l>
+               <l met="+++-+-----+-" rhyme="D">¡Ser un Dios quisiera o un otro <w type="rhyme">Quijote</w>,</l>
                <l met="-+--+---+-+-" rhyme="E">que arroje la muerte por sobre ése <w type="rhyme">emjambre</w>,</l>
                <l met="--+-+--+--+-" rhyme="E">portador maligno del drama del <w type="rhyme">Hambre</w>!</l>
             </lg>
@@ -673,13 +662,13 @@
                   <l met="--+--++--+-" rhyme="A">el aullido de algún perro <w type="rhyme">vagante</w>...</l>
                   <l met="++-+-+---+-" rhyme="B">Ya crece en un ruinoso <w type="rhyme">cementerio</w>,</l>
                   <l met="+-+--+---+-" rhyme="B">ya en las grietas de adusto <w type="rhyme">monasterio</w>,</l>
-                  <l met="+-+-++-----" rhyme="A" enjamb="pb_noun_prep">ya en los bordes de un antro <w type="rhyme">delatante</w>
+                  <l met="+-+-++---+-" rhyme="A" enjamb="pb_noun_prep">ya en los bordes de un antro <w type="rhyme">delatante</w>
                   </l>
                </lg>
                <lg n="3" type="terceto">
-                  <l met="---+---+-+-" rhyme="C">de tuFisanes ó vampiros <w type="rhyme">muertos</w>...</l>
+                  <l met="---+-+-+-+-" rhyme="C">de tuFisanes ó vampiros <w type="rhyme">muertos</w>...</l>
                   <l met="+----++--+-" rhyme="D">Vive en la soledad, gusta de <w type="rhyme">miasmas</w>,</l>
-                  <l met="+--+-+--+-" rhyme="C">y ama al baJiaw y al buho que <w type="rhyme">despiertos</w>,</l>
+                  <l met="+--+-+---+-" rhyme="C">y ama al baJiaw y al buho que <w type="rhyme">despiertos</w>,</l>
                </lg>
                <lg n="4" type="terceto">
                   <l met="-+-+---+-+-" rhyme="D">en medias noches de color de <w type="rhyme">prasmas</w>.</l>
@@ -694,7 +683,7 @@
                   </l>
                   <l met="+--+-+---+-" rhyme="B">ramas semejan cruces de <w type="rhyme">martirio</w>
                   </l>
-                  <l met="--++-+---+-" rhyme="B" enjamb="pb_adj_noun">á la luz tibia y roja del <w type="rhyme">delirio</w>
+                  <l met="+-++-+---+-" rhyme="B" enjamb="pb_adj_noun">á la luz tibia y roja del <w type="rhyme">delirio</w>
                   </l>
                   <l met="---+-+---+-" rhyme="A" enjamb="ex_subj_verb">crepuscular. Ovillos de sus <w type="rhyme">ruecas</w>
                   </l>
@@ -703,24 +692,24 @@
                   <l met="-+-+-+---+-" rhyme="A">regala al viento en la época de <w type="rhyme">secas</w>,</l>
                   <l met="-----+-+-+-" rhyme="B">y cuando en primavera se abre el <w type="rhyme">lirio</w>
                   </l>
-                  <l met="--+--+-++-" rhyme="B">y la luna clarea como un <w type="rhyme">cirio</w>,</l>
-                  <l met="-+---+--+-" rhyme="A" enjamb="ex_dobj_verb">convida á los murciélagos de <w type="rhyme">huecas</w>
+                  <l met="--+--+--++-" rhyme="B">y la luna clarea como un <w type="rhyme">cirio</w>,</l>
+                  <l met="-++--+---+-" rhyme="A" enjamb="ex_dobj_verb">convida á los murciélagos de <w type="rhyme">huecas</w>
                   </l>
                </lg>
                <lg n="3" type="terceto">
                   <l met="+--+---+-+-" rhyme="C" enjamb="cc_crossclause">piedras tumbales al festín del <w type="rhyme">fruto</w>
                   </l>
-                  <l met="-+---+-+-+-" rhyme="D" enjamb="ex_dobj_verb">que brota de sus rectos brazos <w type="rhyme">coli—</w>
+                  <l met="-+---+-+-+-" rhyme="D" enjamb="ex_dobj_verb">que brota de sus rectos brazos <w type="rhyme">coli</w>—
                   </l>
                   <l met="+-+--+---+-" rhyme="C">gados, libres del bárbaro y <w type="rhyme">poluto</w>
                   </l>
                </lg>
                <lg n="4" type="terceto">
-                  <l met="-+----+---+-" rhyme="D" enjamb="pb_noun_prep">cordel de los ahorcados, —que el <w type="rhyme">resoli</w>
+                  <l met="-+---+---+-" rhyme="D" enjamb="pb_noun_prep">cordel de los ahorcados, —que el <w type="rhyme">resoli</w>
                   </l>
-                  <l met="--++---+-+-" rhyme="C" enjamb="ex_dobj_verb">de la paz liban sin dolor ni <w type="rhyme">luto—</w>
+                  <l met="--++---+-+-" rhyme="C" enjamb="ex_dobj_verb">de la paz liban sin dolor ni <w type="rhyme">luto</w>—
                   </l>
-                  <l met="-+-+-+--+-" rhyme="D">aquellos parias héroes del <w type="rhyme">Noli</w>.</l>
+                  <l met="-+-+-+---+-" rhyme="D">aquellos parias héroes del <w type="rhyme">Noli</w>.</l>
                </lg>
             </lg>
             <lg type="sonnet" xml:id="s009t_0177_03">
@@ -766,7 +755,7 @@
                <l met="-+-+---+-+-" rhyme="B">batió el poeta sus bisofias <w type="rhyme">alas</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="--+---+---+-" rhyme="A" enjamb="pb_noun_prep">Mas ahora que descansan mis <w type="rhyme">vigores</w>
+               <l met="-+---+---+-" rhyme="A" enjamb="pb_noun_prep">Mas ahora que descansan mis <w type="rhyme">vigores</w>
                </l>
                <l met="---+--+--+-" rhyme="B">sobre la cumbre rispida de <w type="rhyme">Palas</w>,</l>
                <l met="-+-+-+---+-" rhyme="A">contemplo de éste Mundo los <w type="rhyme">fulgores</w>
@@ -795,22 +784,22 @@
                <l met="-+---+--+---+-" rhyme="B" enjamb="ex_subj_verb">La sangre envenenada de Judas <w type="rhyme">Izcariote</w>
                </l>
                <l met="-+---+---+--+-" rhyme="B">.se escurre por sus venas sin que nadie lo <w type="rhyme">note</w>;</l>
-               <l met="--+--+---+-+-" rhyme="A">ni los son los engendros de la Sombra y el <w type="rhyme">Crimen</w>.</l>
+               <l met="--+--+---+--+-" rhyme="A">ni los son los engendros de la Sombra y el <w type="rhyme">Crimen</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="++---+-+--+-+-" rhyme="A">Son prófugos bifrontes que abren la risa ó <w type="rhyme">gimen</w>
+               <l met="++---+-+--+++-" rhyme="A">Son prófugos bifrontes que abren la risa ó <w type="rhyme">gimen</w>
                </l>
-               <l met="---+-+----+++-" rhyme="B" enjamb="ex_subj_verb">—para cubrir sus vicios y la ruindad no <w type="rhyme">flote—</w>
+               <l met="---+-+----+++-" rhyme="B" enjamb="ex_subj_verb">—para cubrir sus vicios y la ruindad no <w type="rhyme">flote</w>—
                </l>
-               <l met="+--+---+--+-" rhyme="B" enjamb="pb_noun_prep">i-.uando hierven sus planes bajo el falso <w type="rhyme">añascóte</w>
+               <l met="+-+--+---+--+-" rhyme="B" enjamb="pb_noun_prep">i-.uando hierven sus planes bajo el falso <w type="rhyme">añascóte</w>
                </l>
                <l met="---+-----+--+-" rhyme="A">de la apariencia, mientras el instinto <w type="rhyme">comprimen</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="++---+---+---+-" rhyme="C">Yo vengo de los trágicos festejos de la <w type="rhyme">Vida</w>
+               <l met="++---+--+---+-" rhyme="C">Yo vengo de los trágicos festejos de la <w type="rhyme">Vida</w>
                </l>
-               <l met="-++--++--+-+-" rhyme="C">con un gran desencanto y una profunda <w type="rhyme">herida</w>...</l>
-               <l met="--+---+---+--+-" rhyme="D" enjamb="ex_subj_verb">Extenuado peregrino de senderos sin <w type="rhyme">luz</w>
+               <l met="-++--+-+--+-+-" rhyme="C">con un gran desencanto y una profunda <w type="rhyme">herida</w>...</l>
+               <l met="--+---+---+--+" rhyme="D" enjamb="ex_subj_verb">Extenuado peregrino de senderos sin <w type="rhyme">luz</w>
                </l>
             </lg>
             <lg n="4" type="terceto">
@@ -823,58 +812,58 @@
          <lg type="sonnet" xml:id="s009t_0180">
             <head>EL COLONIAJE</head>
             <lg n="1" type="cuarteto">
-               <l met="+---+-+--+-" rhyme="A">Todo lo abarcó su altiva <w type="rhyme">mirada</w>,</l>
-               <l met="--+-+---+-+-" rhyme="B">y afiló sus garras, sacudió sus <w type="rhyme">hombros</w>,</l>
-               <l met="----+----+-" rhyme="B" enjamb="ex_subj_verb">y mientras la fiera entre los <w type="rhyme">escombros</w>
+               <l met="+----+---+--+-" rhyme="A">Todo lo abarcó su altiva <w type="rhyme">mirada</w>,</l>
+               <l met="--+-+---+-+---" rhyme="B">y afiló sus garras, sacudió sus <w type="rhyme">hombros</w>,</l>
+               <l met="----+-----+---" rhyme="B" enjamb="ex_subj_verb">y mientras la fiera entre los <w type="rhyme">escombros</w>
                </l>
-               <l met="--+-+---+-+-" rhyme="A">profanaba el seno de la Patria <w type="rhyme">amada</w>,</l>
+               <l met="--+-+---+-+---" rhyme="A">profanaba el seno de la Patria <w type="rhyme">amada</w>,</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="-++-+-+---+-" rhyme="C" enjamb="ex_subj_verb">igual que una flecha, la águila <w type="rhyme">imprevista</w>
+               <l met="-++-+-+---+---" rhyme="C" enjamb="ex_subj_verb">igual que una flecha, la águila <w type="rhyme">imprevista</w>
                </l>
-               <l met="-+--+--+-+-" rhyme="D">cayó sobre el lomo del león de <w type="rhyme">Iberia</w>;</l>
-               <l met="+-+-+-++-+-" rhyme="D">li! acosó, le hirió, rompióle una <w type="rhyme">arteria</w>,</l>
-               <l met="---++-+---+-" rhyme="C">y le arrancó aquellos ojos de <w type="rhyme">conquista</w>.</l>
+               <l met="-+--+---+-+---" rhyme="D">cayó sobre el lomo del león de <w type="rhyme">Iberia</w>;</l>
+               <l met="+-+-+-+--+----" rhyme="D">li! acosó, le hirió, rompióle una <w type="rhyme">arteria</w>,</l>
+               <l met="---++-+---+---" rhyme="C">y le arrancó aquellos ojos de <w type="rhyme">conquista</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="+-+++---+-+-" rhyme="E">Hubo luego un lapso de bonanza y <w type="rhyme">paz</w>,</l>
-               <l met="-+--+--+-++-" rhyme="F">mas pronto en los lares se impuso el nuevo <w type="rhyme">amo</w>.</l>
-               <l met="--+--+--+--+-" rhyme="E">Itesuelta, indomable, con ánimo <w type="rhyme">audaz</w>,</l>
+               <l met="+-+++---+-+---" rhyme="E">Hubo luego un lapso de bonanza y <w type="rhyme">paz</w>,</l>
+               <l met="-+--+--+-++---" rhyme="F">mas pronto en los lares se impuso el nuevo <w type="rhyme">amo</w>.</l>
+               <l met="-+--+----+----" rhyme="E">Resuelta, indomable, con ánimo <w type="rhyme">audaz</w>,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="+---+---+-+-" rhyme="G">madre Filipinas protestó <w type="rhyme">indignada</w>...</l>
-               <l met="--+-+----+-+-" rhyme="F">pero al grito bélico que lanzó en <w type="rhyme">reclamo</w>
+               <l met="+---+---+-+---" rhyme="G">madre Filipinas protestó <w type="rhyme">indignada</w>...</l>
+               <l met="--+-+---+-+---" rhyme="F">pero al grito bélico que lanzó en <w type="rhyme">reclamo</w>
                </l>
-               <l met="+-+-+--+---+-" rhyme="G">¡solo oyó la réplica de una <w type="rhyme">carcajada</w>!</l>
+               <l met="+-+-+-+---+---" rhyme="G">¡solo oyó la réplica de una <w type="rhyme">carcajada</w>!</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s009t_0181">
             <head>ALIGAN</head>
             <lg n="1" type="cuarteto">
-               <l met="--+--+--+--+-" rhyme="A">Levantóse el Caudillo y miró hacia el <w type="rhyme">sendero</w>:</l>
-               <l met="-++-+-+----+-" rhyme="B">venían hombres blancos, hombres de la <w type="rhyme">metralla</w>,</l>
-               <l met="-+-++-+-+-+--+-" rhyme="B" enjamb="pb_noun_prep">la gente queá otras tribus ya humilló con su <w type="rhyme">tralla</w>
+               <l met="--+--+---+--+-" rhyme="A">Levantóse el Caudillo y miró hacia el <w type="rhyme">sendero</w>:</l>
+               <l met="-+-+-+-+----+-" rhyme="B">venían hombres blancos, hombres de la <w type="rhyme">metralla</w>,</l>
+               <l met="-+-+-+-+-+--+-" rhyme="B" enjamb="pb_noun_prep">la gente queá otras tribus ya humilló con su <w type="rhyme">tralla</w>
                </l>
                <l met="-----+-+--+-+-" rhyme="A" enjamb="pb_relword">de colonizadores. Y eran terribles, <w type="rhyme">yero</w>
                </l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="---+-+-+-+-+-" rhyme="A">el corazón del grande Aligan es de <w type="rhyme">acero</w>
+               <l met="---+-+--+-+-+-" rhyme="A">el corazón del grande Aligan es de <w type="rhyme">acero</w>
                </l>
-               <l met="+----+-+---+-" rhyme="B" enjamb="cc_crossclause">y antes preferirá morir en la <w type="rhyme">batalla</w>
+               <l met="+----+--+---+-" rhyme="B" enjamb="cc_crossclause">y antes preferirá morir en la <w type="rhyme">batalla</w>
                </l>
-               <l met="-+-+--+-+-+--+-" rhyme="B">que ser el ruin esclavo de una intrusa <w type="rhyme">canalla</w>...</l>
+               <l met="-+-+-+-+-+--+-" rhyme="B">que ser el ruin esclavo de una intrusa <w type="rhyme">canalla</w>...</l>
                <l met="--+--+--+--++-" rhyme="A">Y por eso se dijo: ¿«Me buscan? Aquí <w type="rhyme">espero</w>.»</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="+--+--+-" rhyme="C">—¿Qué quieren?—pregunta ál con marcada <w type="rhyme">altivez</w>.</l>
+               <l met="+---++---+--+-" rhyme="C">—¿Qué quieren?—pregunta ál con marcada <w type="rhyme">altivez</w>.</l>
                <l met="-+---+--+---+-" rhyme="D" enjamb="ex_subj_verb">—Que paguen el tributo los tuyos. (—Del <w type="rhyme">averno</w>
                </l>
-               <l met="+-++-+---+--+-" rhyme="-">debe ser esta raza de sentido burgués!—)</l>
+               <l met="+-++-+---+--+-" rhyme="C">debe ser esta raza de sentido <w type="rhyme">burgués</w>!—)</l>
             </lg>
             <lg n="4" type="terceto">
                <l met="+-+--+----+-+-" rhyme="D">dijo el indio indignado para su fuero <w type="rhyme">interno</w>.</l>
-               <l met="+-+----+-" rhyme="C">Y á la tropa extranjera:—Sabed lo de una <w type="rhyme">vez</w>:</l>
+               <l met="+-+-----+-+-+-" rhyme="C">Y á la tropa extranjera:—Sabed lo de una <w type="rhyme">vez</w>:</l>
                <l met="-+-+-+--+---+-" rhyme="D">¡nosotros no aceptamos el yugo del <w type="rhyme">gobierno</w>!</l>
             </lg>
          </lg>

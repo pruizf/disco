@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,22 +122,22 @@
          <lg type="sonnet" xml:id="s009t_0175">
             <head>ALMAS ENFERMAS</head>
             <lg n="1" type="cuarteto">
-               <l met="++---+---+-+-" rhyme="A">Un joven decadente. En su mirada <w type="rhyme">obscura</w>
+               <l met="++---+----+-+-" rhyme="A">Un joven decadente. En su mirada <w type="rhyme">obscura</w>
                </l>
-               <l met="+-+-+---+--+-" rhyme="B" enjamb="pb_adj_noun">na adivina que una pesadilla en <w type="rhyme">asecho</w>
+               <l met="+--+-+---+--+-" rhyme="B" enjamb="pb_adj_noun">na adivina que una pesadilla en <w type="rhyme">asecho</w>
                </l>
-               <l met="+-+---+-+---+-" rhyme="A">ln oprime el corazón, lo anega de <w type="rhyme">amargura</w>...</l>
-               <l met="-+-+-+--+--+-" rhyme="B">Las tres, y en vano busca el reposo en su <w type="rhyme">lecho</w>.</l>
+               <l met="-+---+--+---+-" rhyme="A">ln oprime el corazón, lo anega de <w type="rhyme">amargura</w>...</l>
+               <l met="-+-+-+---+--+-" rhyme="B">Las tres, y en vano busca el reposo en su <w type="rhyme">lecho</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="+--+-+-+--+-+-" rhyme="A">-lista mujer, musita, no me será <w type="rhyme">perjura</w>?</l>
-               <l met="+---+++-+-+-+-" rhyme="B">ii Despreciará algún día el pacto que hemos <w type="rhyme">hecho</w>?</l>
-               <l met="+---+--++-+-" rhyme="A">\M nieve de su amor seguirá siendo <w type="rhyme">pura</w>?<w type="rhyme">—</w>
+               <l met="---+-+--+---+-" rhyme="B">ii Despreciará algún día el pacto que hemos <w type="rhyme">hecho</w>?</l>
+               <l met="+----+---++-++" rhyme="A">\M nieve de su amor seguirá siendo <w type="rhyme">pura</w>?—
                </l>
-               <l met="+--+-+--++-+-+-" rhyme="B">Pronto sintió la réplica de un dulce abrazo <w type="rhyme">estrecho</w>.</l>
+               <l met="+--+-+-++-+-+-" rhyme="B">Pronto sintió la réplica de un dulce abrazo <w type="rhyme">estrecho</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="++---+---+-+-" rhyme="C" enjamb="cc_crossclause">—No dudes. Cuando salves « maldecido <w type="rhyme">abismo</w>
+               <l met="++---+---+--+-" rhyme="C" enjamb="cc_crossclause">—No dudes. Cuando salves « maldecido <w type="rhyme">abismo</w>
                </l>
                <l met="--+--+-+----+-" rhyme="D">que .a los dos nos separa; cuándo de tu <w type="rhyme">existencia</w>
                </l>
@@ -138,7 +145,7 @@
             </lg>
             <lg n="4" type="terceto">
                <l met="+--+-+----+-+-" rhyme="D">nomo acompaña al viento la delicada <w type="rhyme">escencia</w>,</l>
-               <l met="-+-+-+-+---+-" rhyme="E">¡iré también contigo, ensueño de mi <w type="rhyme">vida</w>!</l>
+               <l met="-+-+-+--+---+-" rhyme="E">¡iré también contigo, ensueño de mi <w type="rhyme">vida</w>!</l>
                <l met="---+-+--+---+-" rhyme="E">¡imitaré tu gesto de trágico <w type="rhyme">suicida</w>!</l>
             </lg>
          </lg>

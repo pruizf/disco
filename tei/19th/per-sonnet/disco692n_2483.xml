@@ -9,9 +9,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed
-            by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -93,7 +92,13 @@
             <metSym value="-">unstressed syllable</metSym>
          </metDecl>
          <metDecl type="met">
-            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool. </p>
+            <p>The metrical patterns were extracted automatically using the
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
+           </p>
          </metDecl>
          <metDecl type="enjamb">
             <p>The values of the <att>enjamb</att> atributes were extracted automatically using the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic eNJambment
@@ -105,6 +110,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -120,9 +127,9 @@
                <l met="--+--+--+---+-" rhyme="A">los que viven reclusos, en sórdidos <w type="rhyme">confines</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="+-+-+----+-+-" rhyme="A">Yo hago mía la senda por donde tú <w type="rhyme">camines</w>;</l>
-               <l met="-+-+-+-+---+-" rhyme="B">en pleno siglo XX proclamo tu <w type="rhyme">aventura</w>,</l>
-               <l met="-++-+--+---+-" rhyme="B" enjamb="cc_crossclause">y voy en ansia eterna de aquella <w type="rhyme">calentura</w>
+               <l met="+-+--+----+-+-" rhyme="A">Yo hago mía la senda por donde tú <w type="rhyme">camines</w>;</l>
+               <l met="-+-+-+--+---+-" rhyme="B">en pleno siglo XX proclamo tu <w type="rhyme">aventura</w>,</l>
+               <l met="-++-+---+---+-" rhyme="B" enjamb="cc_crossclause">y voy en ansia eterna de aquella <w type="rhyme">calentura</w>
                </l>
                <l met="--+--+--+---+-" rhyme="A">que te exalto por cima de osados <w type="rhyme">Palmerines</w>.</l>
             </lg>
@@ -133,10 +140,10 @@
                <l met="-+---+--+-+-+-" rhyme="D">llevando al Infinito la carga de una <w type="rhyme">idea</w>;</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-+-+-+-+---+-" rhyme="E">y toda noble diestra, asida a su <w type="rhyme">destino</w>,</l>
+               <l met="-+-+-+--+---+-" rhyme="E">y toda noble diestra, asida a su <w type="rhyme">destino</w>,</l>
                <l met="--+-++--++--+-" rhyme="E" enjamb="ex_dobj_verb">quebrará en las dos aspas del más alto <w type="rhyme">molino</w>
                </l>
-               <l met="-+---+--+---+-" rhyme="D">las lanzas de su esfuerzo vital por <w type="rhyme">Dulcinea…</w>
+               <l met="-+---+--+---+-" rhyme="D">las lanzas de su esfuerzo vital por <w type="rhyme">Dulcinea</w>…
                </l>
             </lg>
          </lg>

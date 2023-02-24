@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -10,10 +10,7 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>,
-                        developed by</resp>
-               <name>Javier de la Rosa et al.</name>
-            </respStmt>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp><name>Guillermo Marco Remón</name></respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>,
                         developed by</resp>
@@ -76,34 +73,26 @@
       </profileDesc>
       <encodingDesc>
          <listPrefixDef>
-            <prefixDef ident="foaf"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
-            <prefixDef ident="dc"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://purl.org/dc/terms/$1"/>
-            <prefixDef ident="schema"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://schema.org/$1"/>
-            <prefixDef ident="dbpedia"
-                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
-                       replacementPattern="http://es.dbpedia.org/page/"/>
-            <prefixDef ident="blterms"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
-            <prefixDef ident="rdfs"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)" replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)" replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)" replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)" replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)" replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)" replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
             <metSym value="-">unstressed syllable</metSym>
          </metDecl>
          <metDecl type="met">
-            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
-                </p>
-         </metDecl>
-         <metDecl type="enjamb">
+            <p>The metrical patterns were extracted automatically using the
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+           <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
+           </p>
+         </metDecl><metDecl type="enjamb">
             <p>The values of the <att>enjamb</att> atributes were extracted automatically using
                     the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA
                         (Automatic eNJambment Analysis)</ref> tool. For more information about the
@@ -115,7 +104,7 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
-         </revisionDesc>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change><change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change></revisionDesc>
    </teiHeader>
    <text>
       <front>
@@ -142,7 +131,7 @@
                <l met="-+-+---+-+-" rhyme="A">Y el cano Polo su florido <w type="rhyme">velo</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-+--+---+-" rhyme="C">Mi Musa, albuciente, con <w type="rhyme">ternura</w>,</l>
+               <l met="-+---+---+-" rhyme="C">Mi Musa, albuciente, con <w type="rhyme">ternura</w>,</l>
                <l met="-+---+---+-" rhyme="D">La canta entre las Náyades y <w type="rhyme">Ondinas</w>;</l>
                <l met="+-+--+---+-" rhyme="C">Yo la ofrezco mi dicha y mi <w type="rhyme">ventura</w>.</l>
             </lg>
@@ -156,7 +145,7 @@
          <lg type="sonnet" xml:id="s693n_2495">
             <head>A LA VIRGEN MARÍA</head>
             <lg n="1" type="cuarteto">
-               <l met="-++-++--+-" rhyme="A" enjamb="pb_noun_prep">¡María, dulce paz, caro <w type="rhyme">consuelo</w>
+               <l met="-+-+-++--+-" rhyme="A" enjamb="pb_noun_prep">¡María, dulce paz, caro <w type="rhyme">consuelo</w>
                </l>
                <l met="--+--++--+-" rhyme="B">De afligido mortal! eres la <w type="rhyme">fuente</w>
                </l>

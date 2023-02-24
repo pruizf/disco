@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -119,28 +126,28 @@
             <lg n="1" type="cuarteto">
                <l met="-+--+--+---+---+-" rhyme="A" enjamb="ex_dobj_verb">Periódico: sé como siempre de las fúlgidas <w type="rhyme">estrellas</w>
                </l>
-               <l met="-+--+-+---+---+-" rhyme="B">Que sirven de eternos faros a las siervas <w type="rhyme">muchedumbres</w>,</l>
-               <l met="++--+-+---+---+-" rhyme="A">No te hagan torcer el paso las espinas y <w type="rhyme">centellas</w>.</l>
-               <l met="-++-+-+---+---+-" rhyme="B">Sunsum Corda! Triunfo y gloria se conquistan en las <w type="rhyme">cumbres</w>.</l>
+               <l met="-+--+-+---+---+--" rhyme="B">Que sirven de eternos faros a las siervas <w type="rhyme">muchedumbres</w>,</l>
+               <l met="++--+-+---+---+--" rhyme="A">No te hagan torcer el paso las espinas y <w type="rhyme">centellas</w>.</l>
+               <l met="-++-+-+---+---+--" rhyme="B">Sunsum Corda! Triunfo y gloria se conquistan en las <w type="rhyme">cumbres</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="+---+-+----+---+-" rhyme="C">Hoy que, como rosas frágiles, cual banderas de <w type="rhyme">batallas</w>,</l>
-               <l met="+-+--+---+--+-" rhyme="D">Caen las mismas ideas ante los bárbaros <w type="rhyme">fines</w>,</l>
-               <l met="--+-+-+---+---+-" rhyme="C">Acumula más conquistas, para horror de las <w type="rhyme">canallas</w>,</l>
-               <l met="--+-+-+--+----+-" rhyme="D">Y honrarán tu heroico esfuerzo los mármoles y <w type="rhyme">clarines</w>.</l>
+               <l met="+---+-+---+---+--" rhyme="C">Hoy que, como rosas frágiles, cual banderas de <w type="rhyme">batallas</w>,</l>
+               <l met="+--+--+----+--+--" rhyme="D">Caen las mismas ideas ante los bárbaros <w type="rhyme">fines</w>,</l>
+               <l met="--+-+-+---+---+--" rhyme="C">Acumula más conquistas, para horror de las <w type="rhyme">canallas</w>,</l>
+               <l met="--+-+-+--+----+--" rhyme="D">Y honrarán tu heroico esfuerzo los mármoles y <w type="rhyme">clarines</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="+---+-+----+--+-" rhyme="E">Yo te felicito en versos. Y al celebrarlo en tus <w type="rhyme">fiestas</w>
+               <l met="+---+-+----+--+--" rhyme="E">Yo te felicito en versos. Y al celebrarlo en tus <w type="rhyme">fiestas</w>
                </l>
-               <l met="-+-+-++--+--+-+-" rhyme="E" enjamb="ex_subj_verb">Desea el bardo de esta época en que aún nuestras pobres <w type="rhyme">testas</w>
+               <l met="-+-+-++--+--+-+--" rhyme="E" enjamb="ex_subj_verb">Desea el bardo de esta época en que aún nuestras pobres <w type="rhyme">testas</w>
                </l>
-               <l met="+-+---+-+--+--+-" rhyme="E">No podemos ostentarlas libres, risueñas y <w type="rhyme">enhiestas</w>.</l>
+               <l met="+-+---+-+--+--+--" rhyme="E">No podemos ostentarlas libres, risueñas y <w type="rhyme">enhiestas</w>.</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="--+-++---+---+-" rhyme="F" enjamb="ex_subj_verb">Que repitas siempre a esos que con cautos de <w type="rhyme">sirenas</w>
+               <l met="--+-+-+---+---+--" rhyme="F" enjamb="ex_subj_verb">Que repitas siempre a esos que con cautos de <w type="rhyme">sirenas</w>
                </l>
-               <l met="--+-+-+---+---+-" rhyme="F">Profanaron esta tierra de las hiántidas <w type="rhyme">morenas</w>,</l>
-               <l met="--+---++++---+-" rhyme="F">¡Que el ensueño de mi Patria es ver rotas sus <w type="rhyme">cadenas</w>!</l>
+               <l met="--+-+-+---+---+--" rhyme="F">Profanaron esta tierra de las hiántidas <w type="rhyme">morenas</w>,</l>
+               <l met="--+---+-+++---+--" rhyme="F">¡Que el ensueño de mi Patria es ver rotas sus <w type="rhyme">cadenas</w>!</l>
             </lg>
          </lg>
       </body>

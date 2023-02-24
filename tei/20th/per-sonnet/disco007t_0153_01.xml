@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -117,7 +124,7 @@
          <lg type="sonnet" xml:id="s007t_0153_01">
             <head>I</head>
             <lg n="1" type="cuarteto">
-               <l met="+-+---+--+---+-" rhyme="A">Yo alzo mi ánfora de plata en honor de tus <w type="rhyme">honores</w>
+               <l met="+-+---+---+---+-" rhyme="A">Yo alzo mi ánfora de plata en honor de tus <w type="rhyme">honores</w>
                </l>
                <l met="---++-+---+---+-" rhyme="B">Y a tu salud bebo el vino que las sílfides <w type="rhyme">morenas</w>
                </l>
@@ -126,24 +133,24 @@
                <l met="-+----+---+---+-" rhyme="B">Con sangre de los ensueños y perfume de <w type="rhyme">azucenas</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="++---+---++--+-" rhyme="C">Soy el siervo de las Musas a quien diste alas y <w type="rhyme">alientos</w>
+               <l met="++---+---++---+-" rhyme="C">Soy el siervo de las Musas a quien diste alas y <w type="rhyme">alientos</w>
                </l>
-               <l met="--+++-+-+-+--+-" rhyme="D">¡Para verle hecho un Colón de nuevos mundos de <w type="rhyme">rosas</w>!</l>
-               <l met="+-+--+--+---+-" rhyme="C">Soy el que armaste de brios en mis célicos <w type="rhyme">momentos</w>
+               <l met="--+++-+--+-+--+-" rhyme="D">¡Para verle hecho un Colón de nuevos mundos de <w type="rhyme">rosas</w>!</l>
+               <l met="+---+--+--+---+-" rhyme="C">Soy el que armaste de brios en mis célicos <w type="rhyme">momentos</w>
                </l>
                <l met="---+--+----+--+-" rhyme="D">¡Para que yo alce las liras que me brindaron las <w type="rhyme">diosas</w>!</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="++-+-++----+--+-" rhyme="E">Tres liras. Una muy tierna para el amor en mis <w type="rhyme">tierras</w>,</l>
                <l met="+---+-+---+-+-+-" rhyme="E">Otra dedicada al pueblo, cuyo lema en tu alma <w type="rhyme">encierras</w>,</l>
-               <l met="--+++-+-+--+--+-" rhyme="E">Y con ser más fuerte la última, es para cantos de <w type="rhyme">guerras</w>.</l>
+               <l met="--+++--++--+--+-" rhyme="E">Y con ser más fuerte la última, es para cantos de <w type="rhyme">guerras</w>.</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="+---+---+-+--+-" rhyme="F" enjamb="pb_adj_noun">Suena la primera cuando en niñas dulces y <w type="rhyme">ardientes</w>
+               <l met="+---+----+-+--+-" rhyme="F" enjamb="pb_adj_noun">Suena la primera cuando en niñas dulces y <w type="rhyme">ardientes</w>
                </l>
                <l met="+---+-+----+--+-" rhyme="F">Sueño. La segunda en horas de patriotismos <w type="rhyme">fervientes</w>
                </l>
-               <l met="-+----+---++---+-" rhyme="F">¡Y la última cuando Césares me dan sueños de <w type="rhyme">serpientes</w>!</l>
+               <l met="-+----+--++---+-" rhyme="F">¡Y la última cuando Césares me dan sueños de <w type="rhyme">serpientes</w>!</l>
             </lg>
          </lg>
       </body>

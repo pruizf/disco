@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -10,9 +10,7 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
-            </respStmt>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp><name>Guillermo Marco Remón</name></respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
                <name>Petr Plecháč</name>
@@ -84,24 +82,12 @@
       </profileDesc>
       <encodingDesc>
          <listPrefixDef>
-            <prefixDef ident="foaf"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
-            <prefixDef ident="dc"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://purl.org/dc/terms/$1"/>
-            <prefixDef ident="schema"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://schema.org/$1"/>
-            <prefixDef ident="dbpedia"
-                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
-                       replacementPattern="http://es.dbpedia.org/page/"/>
-            <prefixDef ident="blterms"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
-            <prefixDef ident="rdfs"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)" replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)" replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)" replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)" replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)" replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)" replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -109,10 +95,13 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
            </p>
-         </metDecl>
-         <metDecl type="enjamb">
+           <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
+           </p>
+         </metDecl><metDecl type="enjamb">
             <p>The values of the <att>enjamb</att> atributes were extracted automatically
              using the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic eNJambment Analysis)</ref> tool.
              For more information about the types of enjambment as defined in this corpus, read the
@@ -125,7 +114,7 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
-         </revisionDesc>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change><change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change></revisionDesc>
    </teiHeader>
    <text>
       <front>
@@ -138,26 +127,26 @@
             <head>A ENRIQUE FERNANDEZ LUMBA</head>
             <lg n="1" type="cuarteto">
                <l met="+-+--+-+-+--+-" rhyme="A">Este gran caballero, fe y virtud <w type="rhyme">franciscanas</w>,</l>
-               <l met="-+-+-+-+---+-" rhyme="B">nos viene día a día, sus torres <w type="rhyme">levantando</w>
+               <l met="-+-+-+--+---+-" rhyme="B">nos viene día a día, sus torres <w type="rhyme">levantando</w>
                </l>
                <l met="---+-+--+---+-" rhyme="A">para cantar en lo alto, con voz de sus <w type="rhyme">campanas</w>,</l>
-               <l met="-+---+---" rhyme="B">del habla castellana, el ≪cómo≫, el ≪qué≫ y el <w type="rhyme">≪cuándo≫</w>.</l>
+               <l met="-+---+-+-+--+-" rhyme="B">del habla castellana, el ≪cómo≫, el ≪qué≫ y el <w type="rhyme">≪cuándo≫</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="----+--+-" rhyme="A">El ≪cómo≫, el ≪qué≫ y el ≪cuándo≫ de raíces <w type="rhyme">hispanas</w>:</l>
+               <l met="-+-+-+---+--+-" rhyme="A">El ≪cómo≫, el ≪qué≫ y el ≪cuándo≫ de raíces <w type="rhyme">hispanas</w>:</l>
                <l met="+-+--+--+---+-" rhyme="B">cómo en tierras malayas se fueron <w type="rhyme">arraigando</w>,</l>
                <l met="++-+-+---+--+-" rhyme="A">qué injertos dieron frutos a las flores <w type="rhyme">paganas</w>,</l>
                <l met="+-+--+--+---+-" rhyme="B">cuándo soles cristianos los fueron <w type="rhyme">madurando</w>.</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="+-+--+----+-+-" rhyme="C">Agua mansa, sin truenos, sobre reseco <w type="rhyme">ambiente</w>,</l>
-               <l met="-+---+--++-+-" rhyme="D" enjamb="cc_crossclause">el hilo de su verbo encarrila un <w type="rhyme">aliento</w>
+               <l met="-+---+---++-+-" rhyme="D" enjamb="cc_crossclause">el hilo de su verbo encarrila un <w type="rhyme">aliento</w>
                </l>
                <l met="-+---+--+---+-" rhyme="C">que quiebra indiferencias con voz de lo <w type="rhyme">silente</w>.</l>
             </lg>
             <lg n="4" type="terceto">
                <l met="+-+--+--+---+-" rhyme="C">Va horadando la roca su gota <w type="rhyme">persistente</w>:</l>
-               <l met="+-+--+-+--+-" rhyme="D">ya lo están escuchando el pájaro y el <w type="rhyme">viento</w>;</l>
+               <l met="+-+--+--+---+-" rhyme="D">ya lo están escuchando el pájaro y el <w type="rhyme">viento</w>;</l>
                <l met="-+--++--+---+-" rhyme="C">mañana será un pueblo la flor de su <w type="rhyme">simiente</w>.</l>
             </lg>
          </lg>
@@ -166,22 +155,22 @@
             <lg n="1" type="cuarteto">
                <l met="--+--+---+-" rhyme="A">Encerrada en mis tristes <w type="rhyme">soledades</w>
                </l>
-               <l met="+++--+--+-" rhyme="B">no pasa una sonrisa por mi <w type="rhyme">alma</w>;</l>
+               <l met="+++--+---+-" rhyme="B">no pasa una sonrisa por mi <w type="rhyme">alma</w>;</l>
                <l met="-+-+---+-+-" rhyme="B" enjamb="cc_crossclause">mi ser dormita en la profunda <w type="rhyme">calma</w>
                </l>
                <l met="-+-+-+---+-" rhyme="A">que engendra el tiempo y guardan las <w type="rhyme">edades</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="+---+---+-" rhyme="A" enjamb="cc_crossclause">¿Hay algo que me falta? Las <w type="rhyme">verdades</w>
+               <l met="++---+---+-" rhyme="A" enjamb="cc_crossclause">¿Hay algo que me falta? Las <w type="rhyme">verdades</w>
                </l>
                <l met="-+-+-+---+-" rhyme="B" enjamb="pb_noun_prep">que tarde vienen siempre con su <w type="rhyme">palma</w>
                </l>
-               <l met="---+---++-" rhyme="B" enjamb="pb_adj_noun">a coronar la fatigada <w type="rhyme">alma</w>
+               <l met="---+---+-+-" rhyme="B" enjamb="pb_adj_noun">a coronar la fatigada <w type="rhyme">alma</w>
                </l>
                <l met="-+---+---+-" rhyme="A">batida por las fuertes <w type="rhyme">tempestades</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="+---+-+-+-" rhyme="C">¿Hay algo que me falta? No lo <w type="rhyme">sé</w>.</l>
+               <l met="++---+-+-+-" rhyme="C">¿Hay algo que me falta? No lo <w type="rhyme">sé</w>.</l>
                <l met="+-++-+---+-" rhyme="D">Yo presiento unos ojos que me <w type="rhyme">miran</w>.</l>
                <l met="-+++-+---+-" rhyme="C">¿De quién son esos ojos que <w type="rhyme">soñé</w>?</l>
             </lg>
@@ -218,7 +207,7 @@
             </lg>
             <lg n="4" type="terceto">
                <l met="--+--+---+-" rhyme="D">su valor, su nobleza y sus <w type="rhyme">espinas</w>;</l>
-               <l met="+++-+----+-" rhyme="C" enjamb="pb_adj_noun">ella, ella es España con su <w type="rhyme">ingente</w>
+               <l met="++-+-+---+-" rhyme="C" enjamb="pb_adj_noun">ella, ella es España con su <w type="rhyme">ingente</w>
                </l>
                <l met="-+---+---+-" rhyme="D">mensaje de culturas y <w type="rhyme">doctrinas</w>.</l>
             </lg>
@@ -241,7 +230,7 @@
                <l met="+--+-+-+-+-" rhyme="A">huir y hallar contigo nueva <w type="rhyme">vía</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-+-+--+--+-" rhyme="C">Y hoy se postra la tierra ante tu <w type="rhyme">oro</w>,</l>
+               <l met="+-+--+---+-" rhyme="C">Y hoy se postra la tierra ante tu <w type="rhyme">oro</w>,</l>
                <l met="-+---+---+-" rhyme="D" enjamb="pb_noun_prep">y buscan los esclavos <w type="rhyme">libertad</w>
                </l>
                <l met="--+--+---+-" rhyme="C">en tus leyes, alivio de su <w type="rhyme">lloro</w>,</l>
@@ -273,16 +262,16 @@
                <l met="-+---+---+-" rhyme="A">ensueños de galán <w type="rhyme">enamorado</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-+---++-+-" rhyme="C">Por eso, desde días muy <w type="rhyme">remotos</w>
+               <l met="-+---+-+-+-" rhyme="C">Por eso, desde días muy <w type="rhyme">remotos</w>
                </l>
                <l met="+----+---+-" rhyme="D">fuiste de los monarcas <w type="rhyme">ambición</w>,</l>
-               <l met="---++---+-" rhyme="C" enjamb="ex_subj_verb">y de tu historia hábiles <w type="rhyme">pilotos</w>
+               <l met="---+-+---+-" rhyme="C" enjamb="ex_subj_verb">y de tu historia hábiles <w type="rhyme">pilotos</w>
                </l>
             </lg>
             <lg n="4" type="terceto">
                <l met="-+---+---+-" rhyme="D">te dieron, como premio y <w type="rhyme">galardón</w>,</l>
-               <l met="--+-+-+-+-" rhyme="C">como herencia y unión de lazos <w type="rhyme">rotos</w>,</l>
-               <l met="+--+--+---+-" rhyme="D">músculo América, y España <w type="rhyme">corazón</w>.</l>
+               <l met="--+--+-+-+-" rhyme="C">como herencia y unión de lazos <w type="rhyme">rotos</w>,</l>
+               <l met="+--+--+---+" rhyme="D">músculo América, y España <w type="rhyme">corazón</w>.</l>
             </lg>
          </lg>
       </body>

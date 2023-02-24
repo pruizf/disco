@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -116,19 +123,19 @@
             <head>DOS ENTIERROS</head>
             <lg n="1" type="cuarteto">
                <l met="--+--+---+-" rhyme="A">—Se los cirios al brillo <w type="rhyme">tremulante</w>.</l>
-               <l met="-+-+--+-+-" rhyme="B">Mi padre muerto en su ataúd <w type="rhyme">yacía…</w>
+               <l met="-+-+---+-+-" rhyme="B">Mi padre muerto en su ataúd <w type="rhyme">yacía</w>…
                </l>
-               <l met="+++-++--+-" rhyme="B">¡No era un sueño! Dos lágrimas <w type="rhyme">veía</w>
+               <l met="+++-++---+-" rhyme="B">¡No era un sueño! Dos lágrimas <w type="rhyme">veía</w>
                </l>
                <l met="-+---+---+-" rhyme="A">cuajadas en su lívido <w type="rhyme">semblante</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="--+--+---+-" rhyme="A">Le enterraron. Lloroso y <w type="rhyme">delirante</w>,</l>
-               <l met="---+--+-+-" rhyme="B" enjamb="ex_dobj_verb">a lo profundo de la huesa <w type="rhyme">fría</w>
+               <l met="---+---+-+-" rhyme="B" enjamb="ex_dobj_verb">a lo profundo de la huesa <w type="rhyme">fría</w>
                </l>
-               <l met="+-+-++--+-" rhyme="B" enjamb="ex_subj_verb">yo le vi como un fardo que <w type="rhyme">caía</w>
+               <l met="+-+-++---+-" rhyme="B" enjamb="ex_subj_verb">yo le vi como un fardo que <w type="rhyme">caía</w>
                </l>
-               <l met="---+-+-+-+-" rhyme="A">con apagado son… ¡qué horrible <w type="rhyme">instante</w>!</l>
+               <l met="---+-+++-+-" rhyme="A">con apagado son… ¡qué horrible <w type="rhyme">instante</w>!</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="++---+---+-" rhyme="C">Más tarde, del olvido al <w type="rhyme">camposanto</w>,</l>

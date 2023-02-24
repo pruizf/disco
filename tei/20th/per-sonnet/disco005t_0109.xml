@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -120,7 +127,7 @@
                <l met="--+--+---+-" rhyme="B">La que envuelve tu cuerpo <w type="rhyme">seductor</w>,</l>
                <l met="---+---+-+-" rhyme="A" enjamb="ex_subj_verb">Cuando en las fiesta; tu sonrisa <w type="rhyme">luce</w>
                </l>
-               <l met="+-+---+---+-" rhyme="B" enjamb="ex_subj_verb">Cou las galas de tu rostro <w type="rhyme">encantador</w>
+               <l met="+-+---+---+" rhyme="B" enjamb="ex_subj_verb">Con las galas de tu rostro <w type="rhyme">encantador</w>
                </l>
             </lg>
             <lg n="2" type="cuarteto">
@@ -129,19 +136,19 @@
                <l met="+----+---+-" rhyme="B">Dulces milagrerías del <w type="rhyme">amor</w>,</l>
                <l met="+-+--+---+-" rhyme="A" enjamb="ex_subj_verb">Es la Flor de Locura que <w type="rhyme">produce</w>
                </l>
-               <l met="--+--+---+-" rhyme="B">En la mente el veneno <w type="rhyme">embriagador</w>..</l>
+               <l met="--+--+---+-" rhyme="B">En la mente el veneno <w type="rhyme">embriagador</w>.</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="-+---+---+-" rhyme="C">La antítesis que inspira tu <w type="rhyme">presencia</w>
                </l>
                <l met="-+---+---+-" rhyme="C">En una singular <w type="rhyme">eflorescencia</w>,</l>
-               <l met="+----+---+-" rhyme="D">iíezcla de lo divino y lo <w type="rhyme">fatal</w>,</l>
+               <l met="+----+---+-" rhyme="D">Mezcla de lo divino y lo <w type="rhyme">fatal</w>,</l>
             </lg>
             <lg n="4" type="terceto">
                <l met="---+---+-+-" rhyme="E">Cuando la rosa que la vida <w type="rhyme">vierte</w>
                </l>
                <l met="---+---+-+-" rhyme="E">Para endulzar con el amor la <w type="rhyme">muerte</w>,</l>
-               <l met="--+--+---+-" rhyme="D">Se- insinúa en tu rostro <w type="rhyme">angelical…</w>
+               <l met="--+--+---+-" rhyme="D">Se insinúa en tu rostro <w type="rhyme">angelical</w>…
                </l>
             </lg>
          </lg>

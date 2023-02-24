@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,7 +122,7 @@
          <lg type="sonnet" xml:id="s003t_0046">
             <head>A LAONG - LAAN</head>
             <lg n="1" type="cuarteto">
-               <l met="++-+--+---+-" rhyme="A">¡LAONG-LAAN! Tu gloria, —la gloria de la <w type="rhyme">diestra—</w>
+               <l met="--+--+--+---+-" rhyme="A">¡LAONG-LAAN! Tu gloria, —la gloria de la <w type="rhyme">diestra</w>—
                </l>
                <l met="+--+-+--+---+-" rhyme="B">infla de orgullo el alma serena de los <w type="rhyme">bravos</w>.</l>
                <l met="-+---+--+---+-" rhyme="A" enjamb="ex_subj_verb">Los ídolos de barro, que en medio la <w type="rhyme">palestra</w>
@@ -123,7 +130,7 @@
                <l met="---+-+--+-+-+-" rhyme="B">se imaginaron reyes, apenas son <w type="rhyme">esclavos</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="+--+--++--++-" rhyme="C">¡SAN NICOLÁS! ¡SAMPALOK! Palta a mi loa <w type="rhyme">pauta</w>
+               <l met="---+--++--+-+-" rhyme="C">¡SAN NICOLÁS! ¡SAMPALOK! Palta a mi loa <w type="rhyme">pauta</w>
                </l>
                <l met="---+-+----+-+-" rhyme="D">para arrojar mis rosas sobre el ensueño <w type="rhyme">blanco</w>:</l>
                <l met="-+---+-+--+-+-" rhyme="C">la senda de los lauros es de la mano <w type="rhyme">cauta</w>;</l>
@@ -135,9 +142,9 @@
                <l met="+--+-+--+---+-" rhyme="F">granos de arcilla informan las vértebras del <w type="rhyme">Ande</w>.</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="++++---+-+-" rhyme="G" enjamb="ex_dobj_verb">¡LAONG-LAAN! Sé fuerte y silencioso. <w type="rhyme">Imita</w>
+               <l met="--+-++----+-+-" rhyme="G" enjamb="ex_dobj_verb">¡LAONG-LAAN! Sé fuerte y silencioso. <w type="rhyme">Imita</w>
                </l>
-               <l met="-+--+--+---+-" rhyme="G">al Taal, que desata la furia que <w type="rhyme">dormita</w>;</l>
+               <l met="--+--+--+---+-" rhyme="G">al Taal, que desata la furia que <w type="rhyme">dormita</w>;</l>
                <l met="---+------+-+-" rhyme="F">pero, de vez en cuando, cuando, se siente <w type="rhyme">grande</w>.</l>
             </lg>
          </lg>

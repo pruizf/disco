@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,11 +122,11 @@
          <lg type="sonnet" xml:id="s003t_0050">
             <head>VIR BONUS II</head>
             <lg n="1" type="cuarteto">
-               <l met="++--+----+-+-" rhyme="A">Un día, por la senda de mi vivir <w type="rhyme">complejo</w>,</l>
-               <l met="-+-+-+-----+-" rhyme="B">pasó un anciano noble entre la <w type="rhyme">muchedumbre</w>:</l>
-               <l met="+--+-++++-" rhyme="A">—Ese que ves—me dijo una voz,—es un <w type="rhyme">viejo</w>
+               <l met="++---+----+-+-" rhyme="A">Un día, por la senda de mi vivir <w type="rhyme">complejo</w>,</l>
+               <l met="-+-+-+------+-" rhyme="B">pasó un anciano noble entre la <w type="rhyme">muchedumbre</w>:</l>
+               <l met="+--+-+-+-+-++-" rhyme="A">—Ese que ves—me dijo una voz,—es un <w type="rhyme">viejo</w>
                </l>
-               <l met="-+---+-----+-" rhyme="B">Apóstol del Silencio y de la <w type="rhyme">Mansedumbre</w>.</l>
+               <l met="-+---+------+-" rhyme="B">Apóstol del Silencio y de la <w type="rhyme">Mansedumbre</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="---+++----+-+-" rhyme="C">Su corazón fué siempre como colmena <w type="rhyme">abierta</w>,</l>
@@ -129,12 +136,12 @@
                <l met="+-+--+--+---+-" rhyme="D">no volvió sin el oro de su arca y su <w type="rhyme">doctrina</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-+---+---+-+-" rhyme="E">Soldado y sembrador que trabajando <w type="rhyme">rueda</w>,</l>
+               <l met="-+---+----+-+-" rhyme="E">Soldado y sembrador que trabajando <w type="rhyme">rueda</w>,</l>
                <l met="-+---+---+--+-" rhyme="E">como agua de las manos se le fué la <w type="rhyme">moneda</w>:</l>
                <l met="----++-+--+-+-" rhyme="F">y cuando se vio pobre, ya la misión <w type="rhyme">cumplida</w>,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-+---+--+-+-" rhyme="C">la Pálida llegó a redimir su <w type="rhyme">suerte</w>;</l>
+               <l met="-+---+----+-+-" rhyme="C">la Pálida llegó a redimir su <w type="rhyme">suerte</w>;</l>
                <l met="--+--+-+-+--+-" rhyme="C" enjamb="ex_dobj_verb">¡porque Dios, justiciero, quiso darle en la <w type="rhyme">muerte</w>
                </l>
                <l met="---+-+--+---+-" rhyme="F">lo que jamás los hombres le dieron en la <w type="rhyme">vida</w>!</l>

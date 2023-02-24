@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,9 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed
-            by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -93,7 +93,13 @@
             <metSym value="-">unstressed syllable</metSym>
          </metDecl>
          <metDecl type="met">
-            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool. </p>
+            <p>The metrical patterns were extracted automatically using the
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
+           </p>
          </metDecl>
          <metDecl type="enjamb">
             <p>The values of the <att>enjamb</att> atributes were extracted automatically using the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic eNJambment
@@ -105,6 +111,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -112,31 +120,31 @@
          <lg type="sonnet" xml:id="s692n_2475">
             <head>LA ORGÍA</head>
             <lg n="1" type="cuarteto">
-               <l met="++-+++---+-" rhyme="A" enjamb="ex_subj_verb">Ya ha muerto el sol: cien lámparas <w type="rhyme">flameantes</w>
+               <l met="++--++-+----+-" rhyme="A" enjamb="ex_subj_verb">Ya ha muerto el sol: cien lámparas <w type="rhyme">flameantes</w>
                </l>
-               <l met="+--++--+-+-" rhyme="B">Tiñen de plata un cenador de <w type="rhyme">flores</w>,</l>
-               <l met="--+--+---+-" rhyme="B">Donde bullen, cubriendo sus <w type="rhyme">pudores</w>
+               <l met="+--++--+-+----" rhyme="B">Tiñen de plata un cenador de <w type="rhyme">flores</w>,</l>
+               <l met="--+--+---+----" rhyme="B">Donde bullen, cubriendo sus <w type="rhyme">pudores</w>
                </l>
-               <l met="-+-+-+---+-" rhyme="A">Como un jirón de niebla, las <w type="rhyme">bacantes</w>.</l>
+               <l met="-+-+-+---+----" rhyme="A">Como un jirón de niebla, las <w type="rhyme">bacantes</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="+--+-+---+-" rhyme="A">Rompe la orquesta en ritmos <w type="rhyme">ondulantes</w>
+               <l met="+--+-+---+----" rhyme="A">Rompe la orquesta en ritmos <w type="rhyme">ondulantes</w>
                </l>
-               <l met="---+-+---+-" rhyme="B">Como la voz de impúdicos <w type="rhyme">amores</w>,</l>
-               <l met="---+-+---+-" rhyme="B">Y del festín liviano a los <w type="rhyme">rumores</w>,</l>
-               <l met="+--+-+---+-" rhyme="A">Salta el licor en chorros <w type="rhyme">espumantes</w>.</l>
+               <l met="---+-+---+----" rhyme="B">Como la voz de impúdicos <w type="rhyme">amores</w>,</l>
+               <l met="---+-+---+----" rhyme="B">Y del festín liviano a los <w type="rhyme">rumores</w>,</l>
+               <l met="+--+-+---+----" rhyme="A">Salta el licor en chorros <w type="rhyme">espumantes</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="+--+---+-+-" rhyme="C">Hierve el cerebro, hipnotizado y <w type="rhyme">loco</w>;</l>
-               <l met="-+---+---+-" rhyme="D">La música y la danza <w type="rhyme">cadenciosas</w>
+               <l met="+--+---+-+----" rhyme="C">Hierve el cerebro, hipnotizado y <w type="rhyme">loco</w>;</l>
+               <l met="-+---+---+----" rhyme="D">La música y la danza <w type="rhyme">cadenciosas</w>
                </l>
-               <l met="++--+---+-" rhyme="E">Son tromba y huracán de <w type="rhyme">desenfreno</w>.,,</l>
+               <l met="++---+---+----" rhyme="E">Son tromba y huracán de <w type="rhyme">desenfreno</w>.,,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="--++-+-+-+-" rhyme="C">Mas cuando él ruido cesa poco a <w type="rhyme">poco</w>,</l>
-               <l met="+-+--+---+-" rhyme="D" enjamb="ex_subj_verb">Sólo quedan, de vírgenes y <w type="rhyme">esposas</w>
+               <l met="--++-+-+-+----" rhyme="C">Mas cuando él ruido cesa poco a <w type="rhyme">poco</w>,</l>
+               <l met="+-+--+---+----" rhyme="D" enjamb="ex_subj_verb">Sólo quedan, de vírgenes y <w type="rhyme">esposas</w>
                </l>
-               <l met="-+-+---+-+-" rhyme="E">Los blancos velos alfombrando el <w type="rhyme">cieno</w>.</l>
+               <l met="-+-+---+-+----" rhyme="E">Los blancos velos alfombrando el <w type="rhyme">cieno</w>.</l>
             </lg>
          </lg>
       </body>

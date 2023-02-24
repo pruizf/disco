@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,7 +122,7 @@
          <lg type="sonnet" xml:id="s003t_0070">
             <head>BRINDIS CARNAVALESCO II</head>
             <lg n="1" type="cuarteto">
-               <l met="+--+-+-+--++-" rhyme="A">Brindo también por estas Musas de carne y <w type="rhyme">hueso</w>,</l>
+               <l met="+--+-+-+--+-+-" rhyme="A">Brindo también por estas Musas de carne y <w type="rhyme">hueso</w>,</l>
                <l met="-+---+--+---+-" rhyme="B">que vierten tropicales esencias de <w type="rhyme">ilusiones</w>,</l>
                <l met="--+--+--++--+-" rhyme="A">cortesanas que flechan en un rapto <w type="rhyme">inconfeso</w>,</l>
                <l met="-+---+-+----+-" rhyme="B">como Eros sagitario, todos los <w type="rhyme">corazones</w>.</l>
@@ -123,19 +130,19 @@
             <lg n="2" type="cuarteto">
                <l met="-+---+---+--+-" rhyme="C">Parecen por lo raro de su culta <w type="rhyme">elegancia</w>
                </l>
-               <l met="-----+--+--+-" rhyme="D">y por la orfebrería de sus torsos de <w type="rhyme">luz</w>,</l>
-               <l met="---+-+----+--+-" rhyme="C">divinidades frívolas escapadas de <w type="rhyme">Francia</w>,</l>
+               <l met="-----+---+--+-" rhyme="D">y por la orfebrería de sus torsos de <w type="rhyme">luz</w>,</l>
+               <l met="---+-+---+--+-" rhyme="C">divinidades frívolas escapadas de <w type="rhyme">Francia</w>,</l>
                <l met="--+--+---+--+-" rhyme="D">o sultanas venidas de Golconda o de <w type="rhyme">Ormuz</w>.</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="+----+--+---+-" rhyme="B">Brindo por mis hermanos, los nuevos <w type="rhyme">Arlequines</w>,</l>
-               <l met="--+--+--+--+-" rhyme="B">con sus trajes de punta y sus mil <w type="rhyme">colorines</w>,</l>
-               <l met="--+--+----+--+-" rhyme="E">los jocundos y heráldicos caballeros de <w type="rhyme">honor</w>;</l>
+               <l met="--+--+---+--+-" rhyme="B">con sus trajes de punta y sus mil <w type="rhyme">colorines</w>,</l>
+               <l met="--+--+----+-+-" rhyme="E">los jocundos y heráldicos caballeros de <w type="rhyme">honor</w>;</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-+---++-+--+-" rhyme="F">Por esta juventud, flor y nata de <w type="rhyme">Oriente</w>,</l>
-               <l met="--+-++--+--+-" rhyme="F">por las dos cortés regias de Oriente y <w type="rhyme">Occidente</w>;</l>
-               <l met="-+---+-+--+-" rhyme="E">y al fin por la belleza, el arte y el <w type="rhyme">amor</w>.</l>
+               <l met="-+---+-+-+--+-" rhyme="F">Por esta juventud, flor y nata de <w type="rhyme">Oriente</w>,</l>
+               <l met="--+-++--+---+-" rhyme="F">por las dos cortés regias de Oriente y <w type="rhyme">Occidente</w>;</l>
+               <l met="-+---+--+---+-" rhyme="E">y al fin por la belleza, el arte y el <w type="rhyme">amor</w>.</l>
             </lg>
          </lg>
       </body>

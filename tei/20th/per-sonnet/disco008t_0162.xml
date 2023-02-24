@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -117,18 +124,18 @@
             <lg n="1" type="cuarteto">
                <l met="+--+-+--+---+-" rhyme="A">Canto a la madre España, la grande, la <w type="rhyme">gloriosa</w>
                </l>
-               <l met="-+---+---+-+-" rhyme="B" enjamb="ex_dobj_verb">Nación que al recorrer la redondez del <w type="rhyme">mundo</w>
+               <l met="-+---+----+-+-" rhyme="B" enjamb="ex_dobj_verb">Nación que al recorrer la redondez del <w type="rhyme">mundo</w>
                </l>
                <l met="-+---+---+--+-" rhyme="A">Llegó hasta Filipinas, do su fe <w type="rhyme">esplendorosa</w>
                </l>
-               <l met="--+--++-+--+-" rhyme="B">Despertara en mi pueblo un cariño <w type="rhyme">profundo</w>-</l>
+               <l met="--+--+-+-+--+-" rhyme="B">Despertara en mi pueblo un cariño <w type="rhyme">profundo</w>-</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="-+---+---+--+-" rhyme="B">De glorias españolas, el estruendo <w type="rhyme">rotundo</w>,</l>
                <l met="--+--+--+---+-" rhyme="A">Como el gran resultado de savia <w type="rhyme">generosa</w>,</l>
-               <l met="--+--+++---+-" rhyme="B" enjamb="ex_subj_verb">Imprimió en nuestro seno un júbilo <w type="rhyme">jocundo</w>
+               <l met="--+--+-++---+-" rhyme="B" enjamb="ex_subj_verb">Imprimió en nuestro seno un júbilo <w type="rhyme">jocundo</w>
                </l>
-               <l met="+----++-++-+-" rhyme="A">E hizo de nuestra patria, una gran tierra <w type="rhyme">hermosa</w>.</l>
+               <l met="+----+-+-++-+-" rhyme="A">E hizo de nuestra patria, una gran tierra <w type="rhyme">hermosa</w>.</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="-++--+-+----+-" rhyme="C">Por eso eres Iberia, madre de mis <w type="rhyme">amores</w>,</l>
@@ -138,7 +145,7 @@
             <lg n="4" type="terceto">
                <l met="-+---+--++--+-" rhyme="D" enjamb="pb_noun_prep">Pues, sé que en tu lenguaje provee todas las <w type="rhyme">mieles</w>
                </l>
-               <l met="---+-+----+--+-" rhyme="C" enjamb="ex_subj_verb">De la cultura hispánica, cuyos claros <w type="rhyme">fulgores</w>
+               <l met="---+-+---+--+-" rhyme="C" enjamb="ex_subj_verb">De la cultura hispánica, cuyos claros <w type="rhyme">fulgores</w>
                </l>
                <l met="--+--+---+--+-" rhyme="D">Todavía iluminan nuestros propios <w type="rhyme">vergeles</w>.</l>
             </lg>

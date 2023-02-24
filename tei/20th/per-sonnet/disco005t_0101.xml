@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,29 +122,29 @@
          <lg type="sonnet" xml:id="s005t_0101">
             <head>NUESTRO DON JUAN TENORIO</head>
             <lg n="1" type="cuarteto">
-               <l met="++---+-+---+-" rhyme="A">Es algo que deslustra el libro de la <w type="rhyme">gesta</w>,</l>
+               <l met="++---+--+---+-" rhyme="A">Es algo que deslustra el libro de la <w type="rhyme">gesta</w>,</l>
                <l met="+-+--+------+-" rhyme="-">ese espíritu inquieto de nuestra juventud,</l>
                <l met="--+--+----+-+-" rhyme="A" enjamb="ex_dobj_verb">cuando en noches de luna con el puñal se <w type="rhyme">apreste</w>
                </l>
-               <l met="+--+-+---+-+-" rhyme="-">íi desfacer entuertos en la mano el laud;</l>
+               <l met="+---+-+---+-+-" rhyme="-">íi desfacer entuertos en la mano el laud;</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="--+--+-+-+---+-" rhyme="-" enjamb="ex_dobj_verb">cuando en noches de luna, muy tranquilo y sin prisar</l>
+               <l met="--+--+-+-+--+-" rhyme="-" enjamb="ex_dobj_verb">cuando en noches de luna, muy tranquilo y sin prisar</l>
                <l met="+--+-+---+--+-" rhyme="B">canta Don Juan sus coplas desbordantes de <w type="rhyme">amor</w>,</l>
                <l met="+--+-+---+--+-" rhyme="-" enjamb="pb_noun_prep">¡presto a vender el alma por la dubia sonrisa</l>
-               <l met="-+---+-+--+-" rhyme="B">De Katty o de Eduvigís, de Esther o de <w type="rhyme">Elynor</w>.</l>
+               <l met="-+----+-+---+-" rhyme="B">De Katty o de Eduvigís, de Esther o de <w type="rhyme">Elynor</w>.</l>
             </lg>
             <lg n="3" type="terceto">
                <l met="---+---+--+-+-" rhyme="C">Despreocupado, nuestro joven Don Juan <w type="rhyme">Tenorio</w>
                </l>
-               <l met="+--+--+----+-" rhyme="C" enjamb="cc_crossclause">trepa las tapias del mismo <w type="rhyme">Reformatorio</w>
+               <l met="+---+--+----+-" rhyme="C" enjamb="cc_crossclause">trepa las tapias del mismo <w type="rhyme">Reformatorio</w>
                </l>
-               <l met="---++-+-+--+-" rhyme="D">que en su locura es como un castillo <w type="rhyme">feudal</w>,</l>
+               <l met="---++--+-+--+-" rhyme="D">que en su locura es como un castillo <w type="rhyme">feudal</w>,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="---+-+--+-+-" rhyme="-">con su ukalele llama a la inclusa y ufano</l>
+               <l met="---+-+---+--+-" rhyme="-">con su ukalele llama a la inclusa y ufano</l>
                <l met="--+--+----+-+-" rhyme="-">la corteja y la, besa, mientras en la otra mana,</l>
-               <l met="---+-++-+--+-" rhyme="D">tras las espaldas blande, un siniestro <w type="rhyme">puñal</w>...</l>
+               <l met="---+-+-+-+--+-" rhyme="D">tras las espaldas blande, un siniestro <w type="rhyme">puñal</w>...</l>
             </lg>
          </lg>
       </body>

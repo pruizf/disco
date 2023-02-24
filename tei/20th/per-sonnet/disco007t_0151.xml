@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -116,32 +123,32 @@
             <head>HONORIO VENTURA</head>
             <note type="context">[(Un Ejemplar Servidor Publico)]</note>
             <lg n="1" type="cuarteto">
-               <l met="---+-++--+-" rhyme="A">En su existencia fue Honorio <w type="rhyme">Ventura</w>
+               <l met="---+-++--+--" rhyme="A">En su existencia fue Honorio <w type="rhyme">Ventura</w>
                </l>
-               <l met="+--+-+---+-" rhyme="B">un funcionario público <w type="rhyme">modelo</w>;</l>
-               <l met="-+--+--+-+-" rhyme="B">cumplía el deber con ferviente <w type="rhyme">celo</w>,</l>
-               <l met="--+--+-+-+-" rhyme="A">denotando bondad y gran <w type="rhyme">cultura</w>.</l>
+               <l met="+--+-+---+--" rhyme="B">un funcionario público <w type="rhyme">modelo</w>;</l>
+               <l met="-+--+--+-+--" rhyme="B">cumplía el deber con ferviente <w type="rhyme">celo</w>,</l>
+               <l met="--+--+-+-+--" rhyme="A">denotando bondad y gran <w type="rhyme">cultura</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="---+-+-+-+-" rhyme="A">A su apellido fiel, trocó en <w type="rhyme">dulzura</w>
+               <l met="---+-+-+-+--" rhyme="A">A su apellido fiel, trocó en <w type="rhyme">dulzura</w>
                </l>
-               <l met="-+---+---+-" rhyme="B">lo amargo del ajeno <w type="rhyme">desconsuelo</w>
+               <l met="-+---+---+--" rhyme="B">lo amargo del ajeno <w type="rhyme">desconsuelo</w>
                </l>
-               <l met="+-+-+-+-+-" rhyme="B" enjamb="pb_noun_prep">dando aliento y ayuda al hoble <w type="rhyme">anhelo</w>
+               <l met="+-+--+-+-+--" rhyme="B" enjamb="pb_noun_prep">dando aliento y ayuda al hoble <w type="rhyme">anhelo</w>
                </l>
-               <l met="---+-----+-" rhyme="A">de los sumidos en la <w type="rhyme">desventura</w>.</l>
+               <l met="---+-----+--" rhyme="A">de los sumidos en la <w type="rhyme">desventura</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-+-+-+---+-" rhyme="C">Ventura: gloria a tí <w type="rhyme">imperecedera</w>!</l>
-               <l met="+---+-+-+-" rhyme="D">Dios galardonó tus obras <w type="rhyme">finas</w>.</l>
-               <l met="--+-++---+-" rhyme="E">Desde el cielo azul, mira, <w type="rhyme">alborozado</w>,</l>
+               <l met="-+-+-+---+--" rhyme="C">Ventura: gloria a tí <w type="rhyme">imperecedera</w>!</l>
+               <l met="+----+-+-+--" rhyme="D">Dios galardonó tus obras <w type="rhyme">finas</w>.</l>
+               <l met="--+-++---+--" rhyme="E">Desde el cielo azul, mira, <w type="rhyme">alborozado</w>,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="--+--++--+-" rhyme="E" enjamb="cc_crossclause">como aquel ejemplar joven <w type="rhyme">Diosdado</w>
+               <l met="--+--++--+--" rhyme="E" enjamb="cc_crossclause">como aquel ejemplar joven <w type="rhyme">Diosdado</w>
                </l>
-               <l met="--+--++--+-" rhyme="C">que ayudaste a tener una <w type="rhyme">carrera</w>
+               <l met="--+--++--+--" rhyme="C">que ayudaste a tener una <w type="rhyme">carrera</w>
                </l>
-               <l met="+--+-+---+-" rhyme="D">es Presidente actual de <w type="rhyme">Filipinas</w>!</l>
+               <l met="+--+-+---+--" rhyme="D">es Presidente actual de <w type="rhyme">Filipinas</w>!</l>
             </lg>
          </lg>
       </body>

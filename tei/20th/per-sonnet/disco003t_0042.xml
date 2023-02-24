@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,7 +122,7 @@
          <lg type="sonnet" xml:id="s003t_0042">
             <head>MORIR HABEMOS</head>
             <lg n="1" type="cuarteto">
-               <l met="+---+-+----+-" rhyme="A">¡Día de evocaciones tristes y <w type="rhyme">religiosas</w>
+               <l met="+----+-+----+-" rhyme="A">¡Día de evocaciones tristes y <w type="rhyme">religiosas</w>
                </l>
                <l met="---+-+---+--+-" rhyme="B">en que las almas vagan por los parques <w type="rhyme">desiertos</w>,</l>
                <l met="-----+---+-++-" rhyme="B">en que a las soledades de los seres ya <w type="rhyme">muertos</w>
@@ -126,18 +133,18 @@
                <l met="+-+--+---+--+-" rhyme="A">¡Mano, deja en sus tallos las olímpicas <w type="rhyme">rosas</w>
                </l>
                <l met="-+---+----+-+-" rhyme="B">y corta siemprevivas de los silentes <w type="rhyme">huertos</w>!</l>
-               <l met="--+--+---+-+-" rhyme="B" enjamb="ex_subj_verb">¡ Que la tarde recoja en sus fulgores <w type="rhyme">yertos</w>
+               <l met="--+--+----+-+-" rhyme="B" enjamb="ex_subj_verb">¡ Que la tarde recoja en sus fulgores <w type="rhyme">yertos</w>
                </l>
-               <l met="--+--+--+--+-" rhyme="A">la piadosa elegía de las madres y <w type="rhyme">esposas</w>!</l>
+               <l met="--+--+---+--+-" rhyme="A">la piadosa elegía de las madres y <w type="rhyme">esposas</w>!</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="++---+++---+-" rhyme="C">Es hora de rezar, es hora de <w type="rhyme">plañir</w>,</l>
-               <l met="++---+-+---+-" rhyme="C">es hora de pensar que habernos de <w type="rhyme">morir</w>.</l>
-               <l met="---+-+----+-+-" rhyme="D">; Oh, la piedad cristiana que por los muertos <w type="rhyme">llora</w>!</l>
+               <l met="++---+-++---+-" rhyme="C">Es hora de rezar, es hora de <w type="rhyme">plañir</w>,</l>
+               <l met="++---+--+---+-" rhyme="C">es hora de pensar que habernos de <w type="rhyme">morir</w>.</l>
+               <l met="+--+-+----+-+-" rhyme="D">; Oh, la piedad cristiana que por los muertos <w type="rhyme">llora</w>!</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-+--+++++-+-" rhyme="E">Y tú, corazón mío, vierte un río de <w type="rhyme">llanto</w>,</l>
-               <l met="-+-+-+---+-+-" rhyme="E">que aquel amor sublime a quien quisiste <w type="rhyme">tanto</w>,</l>
+               <l met="-+--++-+++--+-" rhyme="E">Y tú, corazón mío, vierte un río de <w type="rhyme">llanto</w>,</l>
+               <l met="-+-+-+----+-+-" rhyme="E">que aquel amor sublime a quien quisiste <w type="rhyme">tanto</w>,</l>
                <l met="-+---+--+-+-+-" rhyme="D">al pie de los cipreses eternamente <w type="rhyme">mora</w>.</l>
             </lg>
          </lg>

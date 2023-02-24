@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,29 +122,29 @@
          <lg type="sonnet" xml:id="s003t_0058">
             <head>CASTIDAD</head>
             <lg n="1" type="cuarteto">
-               <l met="-+-+---++-" rhyme="A">Mujer, ¿te acuerdas? Con la sien <w type="rhyme">caída</w>,</l>
+               <l met="-+-+---+-+-" rhyme="A">Mujer, ¿te acuerdas? Con la sien <w type="rhyme">caída</w>,</l>
                <l met="---+-+---+-" rhyme="B">en tu palor marmóreo de <w type="rhyme">azucena</w>,</l>
-               <l met="+-+-++-+-" rhyme="B">tú desleías, como un alma <w type="rhyme">buena</w>,</l>
+               <l met="+--+--++-+-" rhyme="B">tú desleías, como un alma <w type="rhyme">buena</w>,</l>
                <l met="+--++--+-+-" rhyme="A">todo el rosal de una ilusión <w type="rhyme">perdida</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="-+-+-+++-+-" rhyme="A">Aquella tarde fué. No sé si <w type="rhyme">herida</w>
                </l>
-               <l met="--+---+-+-" rhyme="B">en la raíz de tu virtud <w type="rhyme">serena</w>,</l>
+               <l met="---+---+-+-" rhyme="B">en la raíz de tu virtud <w type="rhyme">serena</w>,</l>
                <l met="-+-+---+-+-" rhyme="B">mi audacia fácil añadió otra <w type="rhyme">pena</w>
                </l>
                <l met="--+--+---+-" rhyme="A">al calvario de penas de tu <w type="rhyme">vida</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-+--+--+-" rhyme="C">Llorabas y reías. De tu <w type="rhyme">boca</w>,</l>
+               <l met="-+---+---+-" rhyme="C">Llorabas y reías. De tu <w type="rhyme">boca</w>,</l>
                <l met="+--+-+---+-" rhyme="D">rojo nidal de sierpes del <w type="rhyme">deseo</w>,</l>
-               <l met="+--+-+-+-" rhyme="E">fluían en suspiros mil <w type="rhyme">encantos</w>...</l>
+               <l met="-+---+-+-+-" rhyme="E">fluían en suspiros mil <w type="rhyme">encantos</w>...</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-+-+-+-" rhyme="C">—¡Qué loco eres!—dijiste. Y yo, ¡qué <w type="rhyme">loca</w>!<w type="rhyme">—</w>
+               <l met="++---+-+++-" rhyme="C">—¡Qué loco eres!—dijiste. Y yo, ¡qué <w type="rhyme">loca</w>!—
                </l>
                <l met="--+--+---+-" rhyme="D">Pero en medio de tanto <w type="rhyme">devaneo</w>,</l>
-               <l met="--+-++-" rhyme="E">—¿lo recuerdas aún?—fuimos dos <w type="rhyme">santos</w>.</l>
+               <l met="--+--+--++-" rhyme="E">—¿lo recuerdas aún?—fuimos dos <w type="rhyme">santos</w>.</l>
             </lg>
          </lg>
       </body>

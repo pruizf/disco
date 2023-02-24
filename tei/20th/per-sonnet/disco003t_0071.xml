@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,7 +122,7 @@
          <lg type="sonnet" xml:id="s003t_0071">
             <head>ELOGIO DE LA REINA I</head>
             <lg n="1" type="cuarteto">
-               <l met="+----+---+++-" rhyme="A">¡Reina de la hermosura! Cuando yo era aún <w type="rhyme">niño</w>,</l>
+               <l met="+----+---+-++-" rhyme="A">¡Reina de la hermosura! Cuando yo era aún <w type="rhyme">niño</w>,</l>
                <l met="-+-+-+--+---+-" rhyme="B">soñaba en unos lindos juguetes de <w type="rhyme">cartón</w>;</l>
                <l met="--+--+-+----+-" rhyme="A">en tener zapatitos blancos como el <w type="rhyme">armiño</w>
                </l>
@@ -129,19 +136,19 @@
                <l met="+-+--+-+-+--+-" rhyme="D">más luciente que estrella, más fragante que <w type="rhyme">flor</w>.</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="-+--++-+-+-+-" rhyme="E">Buscando me vio el día, me halló la noche en <w type="rhyme">sierras</w>,</l>
-               <l met="---+-++--+-+-" rhyme="E">pero mi ensueño azul no floreció en mis <w type="rhyme">tierras</w>,</l>
-               <l met="-----+---+-+-" rhyme="F">hasta que, navegando en el florido <w type="rhyme">abril</w>,</l>
+               <l met="-+--++--+-+-+-" rhyme="E">Buscando me vio el día, me halló la noche en <w type="rhyme">sierras</w>,</l>
+               <l met="---+-+-+--+-+-" rhyme="E">pero mi ensueño azul no floreció en mis <w type="rhyme">tierras</w>,</l>
+               <l met="-----+----+-+-" rhyme="F">hasta que, navegando en el florido <w type="rhyme">abril</w>,</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="+--+-+-++--+-" rhyme="G">yo te entreví dormida en un rayo de <w type="rhyme">luna</w>.</l>
+               <l met="+--+-+--++--+-" rhyme="G">yo te entreví dormida en un rayo de <w type="rhyme">luna</w>.</l>
                <l met="-++--+--+-+-+-" rhyme="G">¡Hermosa eres, Cecilia! ¡Bendita sea tu <w type="rhyme">cuna</w>,</l>
-               <l met="--+--+--+--+-" rhyme="F">y bendita tu madre y tu tierra <w type="rhyme">gentil</w>!</l>
+               <l met="--+--+---+--+-" rhyme="F">y bendita tu madre y tu tierra <w type="rhyme">gentil</w>!</l>
             </lg>
             <lg n="5" type="terceto">
-               <l met="+-+--+-" rhyme="H">¡Y es que en toda <w type="rhyme">Cebú</w>,</l>
+               <l met="+-+--+--------" rhyme="H">¡Y es que en toda <w type="rhyme">Cebú</w>,</l>
                <l met="-+---+--+---+-" rhyme="G">vergel maravilloso de sol y de <w type="rhyme">fortuna</w>,</l>
-               <l met="++++-+--+---+-" rhyme="H">Dios no creó una rosa tan linda como <w type="rhyme">tú</w>!</l>
+               <l met="++-+-+--+---+-" rhyme="H">Dios no creó una rosa tan linda como <w type="rhyme">tú</w>!</l>
             </lg>
          </lg>
       </body>

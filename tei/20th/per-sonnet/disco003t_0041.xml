@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -115,17 +122,17 @@
          <lg type="sonnet" xml:id="s003t_0041">
             <head>PAISAJE DE ABANICO</head>
             <lg n="1" type="cuarteto">
-               <l met="-+---+---+-+-" rhyme="A" enjamb="ex_subj_verb">Las eses transparentes de los ríos en <w type="rhyme">fuga</w>
+               <l met="-+---+---+--+-" rhyme="A" enjamb="ex_subj_verb">Las eses transparentes de los ríos en <w type="rhyme">fuga</w>
                </l>
                <l met="-+---+-+-+--+-" rhyme="A">arrastran la coraza de una enorme <w type="rhyme">tortuga</w>,</l>
-               <l met="---+++--+--+-" rhyme="B">mientras enseña un boa sus espiras de <w type="rhyme">escamas</w>
+               <l met="---+++---+--+-" rhyme="B">mientras enseña un boa sus espiras de <w type="rhyme">escamas</w>
                </l>
                <l met="---+-+--+---+-" rhyme="B">bajo del sol que lame los cielos con sus <w type="rhyme">llamas</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
                <l met="+--+-+--+---+-" rhyme="C" enjamb="ex_dobj_verb">Un caserón, al raso, dijérase que <w type="rhyme">surca</w>
                </l>
-               <l met="-+---+-+---+-" rhyme="D">la granja lugareña en grises <w type="rhyme">desnudeces</w>;</l>
+               <l met="-+---+--+---+-" rhyme="D">la granja lugareña en grises <w type="rhyme">desnudeces</w>;</l>
                <l met="-+---+---+--+-" rhyme="C" enjamb="ex_dobj_verb">y el agua en el regato torbellina y <w type="rhyme">bifurca</w>
                </l>
                <l met="--+--+--+---+-" rhyme="D">sus entrañas repletas de mimbres y de <w type="rhyme">peces</w>.</l>
@@ -133,7 +140,7 @@
             <lg n="3" type="terceto">
                <l met="-+---+---+--+-" rhyme="E">Camino de las trojes con sus perros <w type="rhyme">guardianes</w>,</l>
                <l met="+----+---+--+-" rhyme="E">van a las sementeras los nativos <w type="rhyme">gañanes</w>,</l>
-               <l met="-+---+----+-+-" rhyme="E">—los Cristos de la Raza, multiplicando <w type="rhyme">panes</w>.:<w type="rhyme">—</w>
+               <l met="-+---+----+-+-" rhyme="E">—los Cristos de la Raza, multiplicando <w type="rhyme">panes</w>.:
                </l>
             </lg>
             <lg n="4" type="terceto">
@@ -141,7 +148,7 @@
                </l>
                <l met="--+--+----+++-" rhyme="F" enjamb="pb_adj_noun">el palay, que en la regia fecundidad de una <w type="rhyme">hembra</w>
                </l>
-               <l met="--+--+-+---+-" rhyme="F">primeriza, madura el fruto de la <w type="rhyme">siembra</w>...</l>
+               <l met="--+--+--+---+-" rhyme="F">primeriza, madura el fruto de la <w type="rhyme">siembra</w>...</l>
             </lg>
          </lg>
       </body>

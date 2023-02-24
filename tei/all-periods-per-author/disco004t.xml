@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -10,9 +10,7 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
-            </respStmt>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp><name>Guillermo Marco Remón</name></respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
                <name>Petr Plecháč</name>
@@ -95,24 +93,12 @@
       </profileDesc>
       <encodingDesc>
          <listPrefixDef>
-            <prefixDef ident="foaf"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
-            <prefixDef ident="dc"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://purl.org/dc/terms/$1"/>
-            <prefixDef ident="schema"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://schema.org/$1"/>
-            <prefixDef ident="dbpedia"
-                       matchPattern="([A-Za-z]+(_[A-Za-z])*)"
-                       replacementPattern="http://es.dbpedia.org/page/"/>
-            <prefixDef ident="blterms"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
-            <prefixDef ident="rdfs"
-                       matchPattern="([A-Za-z]+)"
-                       replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
+            <prefixDef ident="foaf" matchPattern="([A-Za-z]+)" replacementPattern="http://xmlns.com/foaf/0.1/$1"/>
+            <prefixDef ident="dc" matchPattern="([A-Za-z]+)" replacementPattern="http://purl.org/dc/terms/$1"/>
+            <prefixDef ident="schema" matchPattern="([A-Za-z]+)" replacementPattern="http://schema.org/$1"/>
+            <prefixDef ident="dbpedia" matchPattern="([A-Za-z]+(_[A-Za-z])*)" replacementPattern="http://es.dbpedia.org/page/"/>
+            <prefixDef ident="blterms" matchPattern="([A-Za-z]+)" replacementPattern="http://www.bl.uk/schemas/bibliographic/blterms#$1"/>
+            <prefixDef ident="rdfs" matchPattern="([A-Za-z]+)" replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1"/>
          </listPrefixDef>
          <metDecl type="met" pattern="((\+|\-)+)*">
             <metSym value="+">stressed syllable</metSym>
@@ -120,10 +106,13 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
            </p>
-         </metDecl>
-         <metDecl type="enjamb">
+           <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
+           </p>
+         </metDecl><metDecl type="enjamb">
             <p>The values of the <att>enjamb</att> atributes were extracted automatically
              using the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic eNJambment Analysis)</ref> tool.
              For more information about the types of enjambment as defined in this corpus, read the
@@ -136,7 +125,7 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
-         </revisionDesc>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change><change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change></revisionDesc>
    </teiHeader>
    <text>
       <front>
@@ -209,7 +198,7 @@
             <lg n="1" type="cuarteto">
                <l met="-+---+---+-" rhyme="A" enjamb="ex_dobj_verb">Retornas a nosotros <w type="rhyme">coronando</w>
                </l>
-               <l met="-++-+---+-" rhyme="B">el más caro ideal de nuestras <w type="rhyme">almas</w>;</l>
+               <l met="-++--+---+-" rhyme="B">el más caro ideal de nuestras <w type="rhyme">almas</w>;</l>
                <l met="-+---+-+-+-" rhyme="A">tus glorias nuestras liras van <w type="rhyme">cantando</w>
                </l>
                <l met="--+--+-+-+-" rhyme="B">bajo el suave mecer de verdes <w type="rhyme">palmas</w>.</l>
@@ -238,15 +227,15 @@
          <lg type="sonnet" xml:id="s004t_0092">
             <head>PRELUDIO</head>
             <lg n="1" type="cuarteto">
-               <l met="--+--+--+-" rhyme="A">En el vaso sombrío de mis <w type="rhyme">penas</w>
+               <l met="--+--+---+-" rhyme="A">En el vaso sombrío de mis <w type="rhyme">penas</w>
                </l>
                <l met="-+-+-+-+-+-" rhyme="B">cayó la rosa ardiente de un <w type="rhyme">cariño</w>.</l>
                <l met="-+-+-+---+-" rhyme="A" enjamb="pb_noun_prep">Mis sueños eran castas <w type="rhyme">azucenas</w>
                </l>
-               <l met="--+-+---+-+-" rhyme="B">en aquel ingenuo corazón de <w type="rhyme">niño</w>.</l>
+               <l met="--+-+---+-+" rhyme="B">en aquel ingenuo corazón de <w type="rhyme">niño</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="-+---+-++-" rhyme="C" enjamb="ex_dobj_verb">La rueca de los años fue <w type="rhyme">urdiendo</w>
+               <l met="-+---+-+-+-" rhyme="C" enjamb="ex_dobj_verb">La rueca de los años fue <w type="rhyme">urdiendo</w>
                </l>
                <l met="--+--+---+-" rhyme="D">la implacable hojarasca del <w type="rhyme">olvido</w>
                </l>
@@ -272,7 +261,7 @@
             <head>¡NO ME QUIERAS!</head>
             <lg n="1" type="cuarteto">
                <l met="-+---+---+-" rhyme="A">Mi hogar, entre las cañas <w type="rhyme">escondido</w>,</l>
-               <l met="-++-+---+-" rhyme="B" enjamb="pb_noun_prep">turbó un día la música <w type="rhyme">divina</w>
+               <l met="-++--+---+-" rhyme="B" enjamb="pb_noun_prep">turbó un día la música <w type="rhyme">divina</w>
                </l>
                <l met="--+--+---+-" rhyme="A">de tu amor que, en el bosque <w type="rhyme">florecido</w>,</l>
                <l met="+-+--+---+-" rhyme="B">tuvo arrullos de enferma <w type="rhyme">golondrina</w>.</l>
@@ -293,7 +282,7 @@
             <lg n="4" type="terceto">
                <l met="---+---+-+-" rhyme="-">;En mi retiro, solitaria palma,</l>
                <l met="---+-+-+-+-" rhyme="E">resistirá a los años, siempre <w type="rhyme">inerme</w>,</l>
-               <l met="-+-+-+--+-" rhyme="F">el viejo amor que canta mi <w type="rhyme">laúd</w>!</l>
+               <l met="-+-+-+---+-" rhyme="F">el viejo amor que canta mi <w type="rhyme">laúd</w>!</l>
             </lg>
          </lg>
          <lg type="sonnet" xml:id="s004t_0094">
@@ -340,17 +329,17 @@
                </l>
                <l met="---+---+-+-" rhyme="A">para el cerebro que jamás <w type="rhyme">reposa</w>,</l>
                <l met="---+---+-+-" rhyme="C">y de tus sombras, como canto <w type="rhyme">alado</w>,</l>
-               <l met="+--+--+-+-" rhyme="A">surge la Idea, ¡la fecunda <w type="rhyme">rosa</w>!</l>
+               <l met="+--+---+-+-" rhyme="A">surge la Idea, ¡la fecunda <w type="rhyme">rosa</w>!</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="---+---++-" rhyme="D">De la existencia la ironía <w type="rhyme">triste</w>
+               <l met="---+---+-+-" rhyme="D">De la existencia la ironía <w type="rhyme">triste</w>
                </l>
                <l met="+--+---+-+-" rhyme="E">trémula borra tu azulada <w type="rhyme">lumbre</w>,</l>
                <l met="-+---+---+-" rhyme="F">y tiene el vacilante <w type="rhyme">corazón</w>
                </l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-+-+--+-+-" rhyme="D">que el día impío de ansiedades <w type="rhyme">viste</w>,</l>
+               <l met="-+-+---+-+-" rhyme="D">que el día impío de ansiedades <w type="rhyme">viste</w>,</l>
                <l met="-+-+---+-+-" rhyme="E">calor de llamas, altivez de <w type="rhyme">cumbre</w>,</l>
                <l met="---+-+---+-" rhyme="F">cuando en su vaso viertes la <w type="rhyme">Ilusión</w>.</l>
             </lg>
@@ -360,11 +349,11 @@
             <lg n="1" type="cuarteto">
                <l met="+--+---+-+-" rhyme="A">Han florecido en mi balcón las <w type="rhyme">rosas</w>,</l>
                <l met="--+--+---+-" rhyme="B">en promesa sutil de <w type="rhyme">primavera</w>.</l>
-               <l met="---+-+--+-" rhyme="A">En el cristal del día, <w type="rhyme">generosas</w>,</l>
+               <l met="---+-+---+-" rhyme="A">En el cristal del día, <w type="rhyme">generosas</w>,</l>
                <l met="+--+---+-+-" rhyme="B">vierten su dulce emanación <w type="rhyme">primera</w>.</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="+---+---+-" rhyme="C" enjamb="cc_crossclause">Hay honda laxitud en la <w type="rhyme">mañana</w>
+               <l met="++---+---+-" rhyme="C" enjamb="cc_crossclause">Hay honda laxitud en la <w type="rhyme">mañana</w>
                </l>
                <l met="--+--+---+-" rhyme="D">que me invade pereza <w type="rhyme">poseedora</w>;</l>
                <l met="---+-+---+-" rhyme="C" enjamb="ex_subj_verb">mientras flagela el viento en mi <w type="rhyme">ventana</w>
@@ -380,7 +369,7 @@
             <lg n="4" type="terceto">
                <l met="+--+---+-+-" rhyme="G">Han florecido en mi balcón las <w type="rhyme">rosas</w>.</l>
                <l met="+--+-+---+-" rhyme="G">nimban mi frente sombras <w type="rhyme">Iangorosas</w>,</l>
-               <l met="-+-+-++-+-" rhyme="F">¡me arrulla el día como un viejo <w type="rhyme">amor</w>!</l>
+               <l met="-+-+--++-+-" rhyme="F">¡me arrulla el día como un viejo <w type="rhyme">amor</w>!</l>
             </lg>
          </lg>
       </body>

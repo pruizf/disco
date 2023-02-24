@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/pruizf/disco/master/schema/tei_all_DISCO.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,8 +10,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -92,7 +93,11 @@
          </metDecl>
          <metDecl type="met">
             <p>The metrical patterns were extracted automatically using the
-             <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool.
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
            </p>
          </metDecl>
          <metDecl type="enjamb">
@@ -108,6 +113,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -119,26 +126,26 @@
                </l>
                <l met="---+--+---+---+-" rhyme="-">y para gloria de glorias, sobre mi alma y corazón.</l>
                <l met="+--+--+---+---+-" rhyme="A">Tú, sobre todos mis versos, sobre todos mis <w type="rhyme">dolores</w>,</l>
-               <l met="++--+-+---++-+-" rhyme="-">tú sola en mi mundo azul como si tú fueras Dios:</l>
+               <l met="++--+-+----++-+-" rhyme="-">tú sola en mi mundo azul como si tú fueras Dios:</l>
             </lg>
             <lg n="2" type="cuarteto">
-               <l met="-+-+-+++--+--+-" rhyme="B">Princesa mía, amor mío, rosa entre todas las <w type="rhyme">rosas</w>,</l>
-               <l met="+-++--+--+---+-" rhyme="-">seamos dos Cristos de pié sobre el duelo universal.</l>
+               <l met="-+-+-++-+--+--+-" rhyme="B">Princesa mía, amor mío, rosa entre todas las <w type="rhyme">rosas</w>,</l>
+               <l met="-+-++--+--+---+-" rhyme="-">seamos dos Cristos de pié sobre el duelo universal.</l>
                <l met="-+-+--+-++----+-" rhyme="B" enjamb="ex_subj_verb">Así mejor cantaremos. No temas que las <w type="rhyme">hermosas</w>
                </l>
                <l met="+--+--+---+---+-" rhyme="-">notas ahogue el tumulto de las olas de su mar:</l>
             </lg>
             <lg n="3" type="terceto">
-               <l met="--+-+-+----+-+-" rhyme="C">Que los dos, ¡oh vida mía! con nuestro cariño á <w type="rhyme">solas</w>,</l>
+               <l met="--+++-+-----+++-" rhyme="C">Que los dos, ¡oh vida mía! con nuestro cariño á <w type="rhyme">solas</w>,</l>
                <l met="---+--+-----+-+-" rhyme="C">dominaremos las furias de las restallantes <w type="rhyme">olas</w>
                </l>
                <l met="---+--+----+--+-" rhyme="-">con los acordes triunfales de nuestra fuerte canción;</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="-++-+-+--+---+-" rhyme="D" enjamb="ex_subj_verb">Que no importa que ese mar en sus sueños <w type="rhyme">delirantes</w>
+               <l met="-++-+-+---+---+-" rhyme="D" enjamb="ex_subj_verb">Que no importa que ese mar en sus sueños <w type="rhyme">delirantes</w>
                </l>
-               <l met="+--+--+-+--+--+-" rhyme="D">alce sus aguas á modo de unas montañas <w type="rhyme">gigantes</w>,</l>
-               <l met="--+---+--+-+++-" rhyme="-">que también nos alzaremos como una reina y un dios.</l>
+               <l met="+--+-++-+--+--+-" rhyme="D">alce sus aguas á modo de unas montañas <w type="rhyme">gigantes</w>,</l>
+               <l met="--+---+--+-+-++-" rhyme="-">que también nos alzaremos como una reina y un dios.</l>
             </lg>
          </lg>
       </body>

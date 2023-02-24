@@ -9,9 +9,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed
-            by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -93,7 +92,13 @@
             <metSym value="-">unstressed syllable</metSym>
          </metDecl>
          <metDecl type="met">
-            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool. </p>
+            <p>The metrical patterns were extracted automatically using the
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
+           </p>
          </metDecl>
          <metDecl type="enjamb">
             <p>The values of the <att>enjamb</att> atributes were extracted automatically using the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic eNJambment
@@ -105,6 +110,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -114,7 +121,7 @@
             <lg n="1" type="cuarteto">
                <l met="---+-+--+-+-+-" rhyme="A">En tu retiro augusto con hábil mano <w type="rhyme">tallas</w>
                </l>
-               <l met="-++--+-+---+-" rhyme="B" enjamb="cc_crossclause">como un Fidias del verso, el mármol de tu <w type="rhyme">estrofa</w>
+               <l met="-++--+--+---+-" rhyme="B" enjamb="cc_crossclause">como un Fidias del verso, el mármol de tu <w type="rhyme">estrofa</w>
                </l>
                <l met="-+++-+--+---+-" rhyme="B">que tiene un gesto heroico de labio que <w type="rhyme">apostrofa</w>
                </l>
@@ -124,7 +131,7 @@
                <l met="-+---+-+--+-+-" rhyme="A" enjamb="ex_subj_verb">Tus líricos arranques no han conocido <w type="rhyme">vallas</w>
                </l>
                <l met="-++--+--+-+-+-" rhyme="B">y siempre odio tu musa la idea inane y <w type="rhyme">fofa</w>.</l>
-               <l met="-+++-+---+-+-" rhyme="B">Tu verso es un navío desde cuya alta <w type="rhyme">cofa</w>
+               <l met="-+++-+----+-+-" rhyme="B">Tu verso es un navío desde cuya alta <w type="rhyme">cofa</w>
                </l>
                <l met="+--+-+---+--+-" rhyme="A">has descubierto la isla de quietud en que te <w type="rhyme">hallas</w>.</l>
             </lg>

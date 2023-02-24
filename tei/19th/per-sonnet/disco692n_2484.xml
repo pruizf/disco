@@ -9,9 +9,8 @@
             <principal xml:id="heb">Helena Bermúdez Sabel</principal>
             <principal xml:id="cimc">Clara Isabel Martínez Cantón</principal>
             <respStmt>
-               <resp>Metrical annotation done with <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref>, developed
-            by</resp>
-               <name>Javier de la Rosa et al.</name>
+               <resp>Metrical annotation done with <ref target="https://github.com/grmarco/jumper">Jumper</ref>, developed by</resp>
+               <name>Guillermo Marco Remón</name>
             </respStmt>
             <respStmt>
                <resp>Rhyme annotation done with <ref target="https://github.com/versotym/rhymeTagger">RhymeTagger</ref>, developed by</resp>
@@ -93,7 +92,13 @@
             <metSym value="-">unstressed syllable</metSym>
          </metDecl>
          <metDecl type="met">
-            <p>The metrical patterns were extracted automatically using the <ref target="https://github.com/linhd-postdata/rantanplan">Rantanplan</ref> tool. </p>
+            <p>The metrical patterns were extracted automatically using the
+             <ref target="https://github.com/grmarco/jumper">Jumper</ref> tool.
+           </p>
+            <p>The tool's output format is a series of numbers representing
+             the position of stressed syllables. This was converted to a +/-
+             notation to represent stressed and unstressed syllables.
+           </p>
          </metDecl>
          <metDecl type="enjamb">
             <p>The values of the <att>enjamb</att> atributes were extracted automatically using the <ref target="https://sites.google.com/site/spanishenjambment/">ANJA (Automatic eNJambment
@@ -105,6 +110,8 @@
       <revisionDesc>
          <change when="2021-12-10" who="#prf">Initial TEI version</change>
          <change when="2021-12-25" who="#heb">Added rhyme words and RDFa annotations</change>
+         <change when="2023-02-04" who="#prf">Automatic scansion reannotation with Jumper</change>
+         <change when="2023-02-10" who="#cimc">Manual corrections to automatic scansion</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -135,11 +142,11 @@
                <l met="---+---+-+-" rhyme="E">reveladores de tu fabla en <w type="rhyme">mengua</w>;</l>
             </lg>
             <lg n="4" type="terceto">
-               <l met="--+-+---+-" rhyme="F" enjamb="ex_subj_verb">pero ríete de ellos, pues la <w type="rhyme">Historia</w>
+               <l met="--+--+---+-" rhyme="F" enjamb="ex_subj_verb">pero ríete de ellos, pues la <w type="rhyme">Historia</w>
                </l>
                <l met="-+---+---+-" rhyme="F" enjamb="pb_adj_noun">te otorga en sus capítulos de <w type="rhyme">gloria</w>
                </l>
-               <l met="+---+-+-+-" rhyme="E">justa prioridad de tiempo y <w type="rhyme">lengua</w>.</l>
+               <l met="+----+-+-+-" rhyme="E">justa prioridad de tiempo y <w type="rhyme">lengua</w>.</l>
             </lg>
          </lg>
       </body>
