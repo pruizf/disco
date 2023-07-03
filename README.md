@@ -78,93 +78,87 @@ Although overall in the corpus we deliberately included less canonical writers, 
 **TABLE 1: Corpus data distribution per period, author gender and primary continent of literary activity**<br>
 Numbers in parentheses indicate authors which were probably active in Europe.
 
+
 <table>
   <tr>
-    <th>Period</th>
-    <th>Nbr of Sonnets</th>
-    <th colspan="3">Nbr of Authors</th>
-    <th>Tokens</th>
+    <th rowspan="2">Period</th>
+    <th rowspan="2">Nbr of Sonnets</th>
+    <th colspan="5">Nbr of Authors</th>
+    <th rowspan="2">Tokens</th>
+  </tr>
+  <tr>  
+    <th colspan="2">Gender</th>
+    <th colspan="2">Provenance</th>
+    <th>Total</th>
   </tr>
     <tr>
-    <td rowspan="3"><b>20th</b></td>
-    <td rowspan="3">202</td>
-    <td rowspan="3">9</td>
+    <td rowspan="2"><b>20th</b></td>
+    <td rowspan="2">202</td>  
     <td>Female</td>
-    <td>2</td>
-    <td rowspan="3">22,300</td>
+    <td>2</td>      
+    <td rowspan="2">Asia</td>
+    <td rowspan="2">9</td>
+    <td rowspan="2">9</td>
+    <td rowspan="2">22,300</td>
   </tr>
   <tr>
     <td>Male</td>
     <td>7</td>
-  </tr>
+  </tr> 
   <tr>
-    <td>Asia</td>
-    <td>9</td>
-  </tr>  
-  <tr>
-    <td rowspan="5"><b>19th</b></td>
-    <td rowspan="5">2919</td>
-    <td rowspan="5">688</td>
+    <td rowspan="3"><b>19th</b></td>
+    <td rowspan="3">2919</td>   
     <td>Female</td>
     <td>48</td>
-    <td rowspan="5">280,332</td>
+    <td>America</td>
+    <td>334</td>
+    <td rowspan="3">688</td>
+    <td rowspan="3">280,332</td>
   </tr>
   <tr>
     <td>Male</td>
     <td>639</td>
-  </tr>
-  <tr>
-    <td>America</td>
-    <td>334</td>
-  </tr>
-  <tr>
-    <td>Europe</td>
+     <td>Europe</td>
     <td>348 (+3)</td>
   </tr>
   <tr>
+    <td/>
+    <td/>
     <td>Asia</td>
     <td>2</td>
   </tr>  
   <tr>
-    <td rowspan="4"><b>18th</b></td>
-    <td rowspan="4">321</td>
-    <td rowspan="4">42</td>
+    <td rowspan="2"><b>18th</b></td>
+    <td rowspan="2">321</td>   
     <td>Female</td>
     <td>1</td>
-    <td rowspan="4">29,017</td>
+     <td>America</td>
+    <td>6</td>
+    <td rowspan="2">42</td>
+    <td rowspan="2">29,017</td>
   </tr>
   <tr>
     <td>Male</td>
-    <td>41</td>
-  </tr>
-  <tr>
-    <td>America</td>
-    <td>6</td>
-  </tr>
-  <tr>
+    <td>41</td>    
     <td>Europe</td>
     <td>36</td>
   </tr>
   <tr>
-    <td rowspan="4"><b>15th-17th</b><br>(Golden Age)</td>
-    <td rowspan="4">1088</td>
-    <td rowspan="4">477</td>
+    <td rowspan="2"><b>15th-17th</b><br>(Golden Age)</td>
+    <td rowspan="2">1088</td>   
     <td>Female</td>
     <td>31</td>
+    <td>America</td>
+    <td>12</td>
+     <td rowspan="2">477</td>
     <td rowspan="4">99,779</td>
   </tr>
   <tr>
     <td>Male</td>
     <td>446</td>
-  </tr>
-  <tr>
-    <td>America</td>
-    <td>12</td>
-  </tr>
-  <tr>
-    <td>Europe</td>
+     <td>Europe</td>
     <td>458 (+7)</td>
-  </tr>
+  </tr>   
 </table>
 
 ## Encoding
